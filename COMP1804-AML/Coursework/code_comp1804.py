@@ -14,7 +14,7 @@ from sklearn.preprocessing import LabelEncoder
 import pickle
 
 # Assuming necessary NLTK downloads are done
-file_path = 'C:/Users/muhammedazhar/Developer/MSc-DataScience/COMP1804-AML/Coursework/input/dataset.csv'
+file_path = 'dataset.csv'
 print(os.path.exists(file_path))
 df = pd.read_csv(file_path, usecols=['par_id', 'paragraph', 'has_entity', 'category'])
 df = df.dropna()
