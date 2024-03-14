@@ -1,0 +1,2 @@
+Topic classification is a ‘supervised’ machine learning technique, one that needs training before being able to automatically analyze texts.
+A topic classification model could also be used to determine what customers are talking about in customer reviews, open-ended survey responses, and on social media, to name just a few.
