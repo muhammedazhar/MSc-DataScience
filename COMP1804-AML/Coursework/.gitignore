@@ -3,3 +3,5 @@
 /WordEmbeddings
 *.txt
 *.bin
+*.pkl
+/Models
