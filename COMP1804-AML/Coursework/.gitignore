@@ -1,7 +1,0 @@
-*.zip
-*.tar.gz
-/WordEmbeddings
-*.txt
-*.bin
-*.pkl
-/Models
