@@ -3,8 +3,8 @@ pandas
 matplotlib
 seaborn
 numpy
-pylzma 
-pyarrow 
+pylzma
+pyarrow
 ipykernel
 jupyter
 gensim
