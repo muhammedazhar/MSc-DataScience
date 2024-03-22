@@ -11,6 +11,7 @@ gensim
 pandas
 nltk
 scikit-learn
+imbalanced-learn
 spacy
 swifter
 nltk
