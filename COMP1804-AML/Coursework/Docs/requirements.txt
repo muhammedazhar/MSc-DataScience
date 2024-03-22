@@ -1,18 +1,32 @@
-###### Requirements without Version Specifiers ######
-pandas
-matplotlib
-seaborn
-numpy
-pylzma
-pyarrow
-ipykernel
-jupyter
-gensim
-pandas
-nltk
-scikit-learn
-imbalanced-learn
-spacy
-swifter
-nltk
-textblob
+# Requirements.txt for COMP1804-AML Project - Specified with comments for clarity
+
+# Data Manipulation and Linear Algebra
+pandas  # Library for data manipulation and analysis
+numpy  # Package for scientific computing with Python
+
+# NLP - Natural Language Processing
+nltk  # Natural Language Toolkit, libraries for symbolic and statistical natural language processing
+spacy  # Industrial-strength Natural Language Processing in Python
+
+# Data Visualization
+matplotlib  # Library for creating static, interactive, and animated visualizations in Python
+seaborn  # Statistical data visualization library based on matplotlib
+
+# Text Processing Libraries
+gensim  # Library used to handle large text collections, perform topic modeling and document similarity
+
+# Machine Learning
+scikit-learn  # Machine learning library for Python
+imbalanced-learn  # Module to perform under sampling and over sampling with various techniques
+
+# Progress Monitoring
+tqdm  # Fast, extensible progress bar for loops and command-line programs
+
+# Utilities for data compression and Jupyter notebooks
+pylzma  # Python bindings for the LZMA library by Igor Pavlov
+pyarrow  # Python library for integration and interoperability with data analysis frameworks
+ipykernel  # IPython kernel for Jupyter
+jupyter  # Jupyter metapackage for installation, docs and chat
+
+# Text Processing
+textblob  # Library for processing textual data, provides a simple API for diving into common NLP tasks
