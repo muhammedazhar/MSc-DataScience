@@ -6,7 +6,7 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 
 # Load the training dataset
-df_train = pd.read_csv('train_dataset.csv')
+df_train = pd.read_csv('../Datasets/train_dataset.csv')
 
 # Separating features and labels
 df_train.dropna(inplace=True)
@@ -22,7 +22,7 @@ nb = MultinomialNB()
 nb.fit(X_train_values, y_train_values)
 
 # Load the testing dataset
-df_test = pd.read_csv('test_dataset.csv')
+df_test = pd.read_csv('../Datasets/test_dataset.csv')
 
 # Ensure the same correction is made for the testing dataset
 df_test.dropna(inplace=True)

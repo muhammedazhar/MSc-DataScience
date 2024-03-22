@@ -10,3 +10,5 @@ Identify Entities: The entities considered are organization (ORG), product (PROD
 Possible States: Each entity can either be present (YES) or absent (NO), resulting in 2 possible states for each entity.
 Total combinations = 2^3 = 8
 Total combinations = 2^{3} = 8
+
+Evaluation: https://youtu.be/LbX4X71-TFI?si=rcFn0sXIei3-FvCJ

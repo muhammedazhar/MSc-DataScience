@@ -37,8 +37,10 @@ Here is the structure of the dataset:
 
 I know you can't analyze the entire dataset and create a model for it. Therefore, I request that you provide the code or instructions one by one and wait. I will then provide you with the output I collect from my screen so you can validate your findings and follow along. If you understand it then start with the first input for me and wait.
 
-Dataset file path = C:\Users\muhammedazhar\Developer\MSc-DataScience\COMP1804-AML\Coursework\cleaned_dataset.csv
+Dataset file path = C:\\Users\\muhammedazhar\\Developer\\MSc-DataScience\\COMP1804-AML\\Coursework\\cleaned_dataset.csv
 ~/Developer/MSc-DataScience/COMP1804-AML/Coursework/cleaned_dataset.csv
 
 OPENAI_API_KEY=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
 # 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
+
+I want to build an ML model to predict the clarity of a given paragraph. I have it's lexicon counts, difficult words, has entity (whether the text contains a reference to a product (yes/no), an organisation (yes/no), or a person (yes/no).), and category. I also have a dataset which contains 109 data points already labelled its text clarity.
