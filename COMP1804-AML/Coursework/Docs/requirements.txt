@@ -1,0 +1,17 @@
+###### Requirements without Version Specifiers ######
+pandas
+matplotlib
+seaborn
+numpy
+pylzma 
+pyarrow 
+ipykernel
+jupyter
+gensim
+pandas
+nltk
+scikit-learn
+spacy
+swifter
+nltk
+textblob
