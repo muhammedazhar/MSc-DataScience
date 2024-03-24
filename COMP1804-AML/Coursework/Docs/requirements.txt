@@ -16,8 +16,11 @@ seaborn  # Statistical data visualization library based on matplotlib
 gensim  # Library used to handle large text collections, perform topic modeling and document similarity
 
 # Machine Learning
+keras  # Deep learning library for Python
+tensorflow  # Library for machine intelligence applications using the Google Brain framework
 scikit-learn  # Machine learning library for Python
 imbalanced-learn  # Module to perform under sampling and over sampling with various techniques
+xgboost  # Library for gradient boosted tree models
 
 # Progress Monitoring
 tqdm  # Fast, extensible progress bar for loops and command-line programs
@@ -30,3 +33,6 @@ jupyter  # Jupyter metapackage for installation, docs and chat
 
 # Text Processing
 textblob  # Library for processing textual data, provides a simple API for diving into common NLP tasks
+
+# Language Detection
+langdetect  # Library for detecting the language of the given text
