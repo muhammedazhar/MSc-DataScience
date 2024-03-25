@@ -1,3 +1,6 @@
 *.zip
 *.tar.gz
 *.pkl
+*.model
+*.joblib
+*.npy
