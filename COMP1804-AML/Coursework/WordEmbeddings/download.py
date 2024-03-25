@@ -1,12 +1,25 @@
-import gensim
-from gensim.models import KeyedVectors
+import os
+import logging
+import gensim.downloader as api
+from sentence_transformers import SentenceTransformer
 
-# Example: Downloading GoogleNews-vectors-negative300.bin.gz (300-dimensional Word2Vec on Google News)
-model_name = "GoogleNews-vectors-negative300.bin.gz"
-model_path = f"https://s3.amazonaws.com/dl4j-distribution/{model_name}"
+# Set up logging
+logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
-# Load the model
-model = KeyedVectors.load_word2vec_format(model_path, binary=True)
+# Get the directory of the current script
+script_dir = os.path.dirname(os.path.realpath(__file__))
 
-# Access word vectors using model["word"]
-word_vector = model["king"]  # Get the vector for "king"
+print("Downloading Word2Vec model...")
+w2v_model = api.load('word2vec-google-news-300')
+
+print("Downloading SentenceTransformer model...")
+MiniLM_model = SentenceTransformer('all-MiniLM-L6-v2')
+
+# Save the models for later use
+print("Saving word2vec model...")
+w2v_model.save(os.path.join(script_dir, "word2vec.model"))
+
+print("Saving SentenceTransformer model...")
+MiniLM_model.save(os.path.join(script_dir, 'MiniLM.model'))
+
+print("Done.")
