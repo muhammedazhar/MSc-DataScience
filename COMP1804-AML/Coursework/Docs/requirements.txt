@@ -3,6 +3,7 @@
 # Data Manipulation and Linear Algebra
 pandas  # Library for data manipulation and analysis
 numpy  # Package for scientific computing with Python
+scipy  # Library for scientific and numerical computing
 
 # NLP - Natural Language Processing
 nltk  # Natural Language Toolkit, libraries for symbolic and statistical natural language processing
@@ -14,6 +15,8 @@ seaborn  # Statistical data visualization library based on matplotlib
 
 # Text Processing Libraries
 gensim  # Library used to handle large text collections, perform topic modeling and document similarity
+textstat # Library for text statistics, such as readability, complexity and grade level
+sentence-transformers  # Sentence embeddings using BERT / RoBERTa / XLNet / XLM-RoBERTa from the transformer world
 
 # Machine Learning
 keras  # Deep learning library for Python
