@@ -2,5 +2,7 @@
 *.tar.gz
 *.pkl
 *.model
+*.keras
+*.h5
 *.joblib
 *.npy
