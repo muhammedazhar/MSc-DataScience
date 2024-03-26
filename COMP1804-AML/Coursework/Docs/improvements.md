@@ -1,4 +1,4 @@
-# Recommendations for Model Improvements
+# Recommendations for Prototype Model Improvements
 
 ## More Advanced Models
 Consider applying more advanced machine learning models such as RandomForest, SVM (Support Vector Machines), or DNNs (Deep Neural Networks).

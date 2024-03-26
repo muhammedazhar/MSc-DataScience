@@ -1,5 +1,4 @@
-You are an experienced Machine Learning engineer with over 20 years of experience. Your task is to help me build a Machine Learning model that can predict a topic of a paragraph of text, for some specific topics of interest. 
-I want to determine if a given piece of text falls into one of five categories: "artificial intelligence", "movies about artificial intelligence", "programming", "philosophy", or "biographies". Here's the scenario: You're consulting for a non-profit organization called NotTheRealWikipedia. They're interested in using machine learning to automatically analyze new content added to their site. They've provided a dataset with sample texts and their associated topics, as well as other potentially useful information. The organization is particularly interested in analyzing paragraph-sized texts, as new articles and edits on their website can be short.
+Here's the scenario: You're consulting for a non-profit organization called NotTheRealWikipedia. They're interested in using machine learning to automatically analyze new content added to their site. They've provided a dataset with sample texts and their associated topics, as well as other potentially useful information. The organization is particularly interested in analyzing paragraph-sized texts, as new articles and edits on their website can be short.
 
 They've tasked you with two main objectives:
 1. Firstly, they want to determine if machine learning can accurately identify the topic of a paragraph of text, specifically focusing on the topics mentioned earlier. They've also provided a feature indicating whether each paragraph contains references to a person, organization, and/or a product, which they believe could provide additional relevant information.
@@ -34,13 +33,3 @@ Here is the structure of the dataset:
 | last_editor_gender | The gender of the latest person to edit the text.                                           |
 | category           | The category into which the text should be classified.                                      |
 | text_clarity       | The clarity level of the text. Very few data points are labelled at first.                 |
-
-I know you can't analyze the entire dataset and create a model for it. Therefore, I request that you provide the code or instructions one by one and wait. I will then provide you with the output I collect from my screen so you can validate your findings and follow along. If you understand it then start with the first input for me and wait.
-
-Dataset file path = C:\\Users\\muhammedazhar\\Developer\\MSc-DataScience\\COMP1804-AML\\Coursework\\cleaned_dataset.csv
-~/Developer/MSc-DataScience/COMP1804-AML/Coursework/cleaned_dataset.csv
-
-OPENAI_API_KEY=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
-# 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
-
-I want to build an ML model to predict the clarity of a given paragraph. I have it's lexicon counts, difficult words, has entity (whether the text contains a reference to a product (yes/no), an organisation (yes/no), or a person (yes/no).), and category. I also have a dataset which contains 109 data points already labelled its text clarity.
