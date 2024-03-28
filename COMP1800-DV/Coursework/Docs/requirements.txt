@@ -8,6 +8,7 @@ matplotlib  # Data visualization library
 requests  # HTTP library for making requests
 
 seaborn  # Data visualization library
+plotly  # Data visualization library
 pyarrow  # Python library for integration and interoperability with data analysis frameworks
 ipykernel  # IPython kernel for Jupyter
 jupyter  # Jupyter notebook
