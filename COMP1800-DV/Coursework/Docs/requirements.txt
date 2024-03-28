@@ -1,0 +1,15 @@
+# Requirements.txt for COMP1800-DV Coursework - Specified with comments for clarity
+
+# Data Manipulation
+pandas  # Data manipulation library
+numpy  # Numerical computing library
+
+matplotlib  # Data visualization library
+requests  # HTTP library for making requests
+
+seaborn  # Data visualization library
+pyarrow  # Python library for integration and interoperability with data analysis frameworks
+ipykernel  # IPython kernel for Jupyter
+jupyter  # Jupyter notebook
+
+pytz  # World timezone definitions
