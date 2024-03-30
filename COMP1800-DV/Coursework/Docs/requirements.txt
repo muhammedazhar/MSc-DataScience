@@ -3,16 +3,19 @@
 # Data Manipulation
 pandas  # Data manipulation library
 numpy  # Numerical computing library
-
 matplotlib  # Data visualization library
 requests  # HTTP library for making requests
-
 seaborn  # Data visualization library
 plotly  # Data visualization library
 pyarrow  # Python library for integration and interoperability with data analysis frameworks
 ipykernel  # IPython kernel for Jupyter
+ipywidgets  # Jupyter widgets
 jupyter  # Jupyter notebook
-
 pytz  # World timezone definitions
-
 statsmodels  # Statistical models library
+hvplot  # Interactive plotting library
+panel  # Interactive plotting library
+bokeh  # Interactive plotting library
+jupyter_bokeh  # Jupyter notebook extension for Bokeh
+holoviews  # Interactive plotting library
+scikit-learn  # Machine learning library
