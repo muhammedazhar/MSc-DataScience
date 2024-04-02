@@ -20,3 +20,4 @@ jupyter_bokeh  # Jupyter notebook extension for Bokeh
 holoviews  # Interactive plotting library
 scikit-learn  # Machine learning library
 squarify  # Treemap layout library
+colorcet  # Color palettes library
