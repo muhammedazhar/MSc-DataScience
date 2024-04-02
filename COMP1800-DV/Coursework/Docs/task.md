@@ -42,3 +42,25 @@ Note: You don't have to download the datasets on your own. You can view it by us
 Before that, here is the code I have already run according to the task. Can you please check and verify this? Moreover, I want you to rewrite your code to match my variables. You also note that every time the code needs to create a visualisation, it should NOT manipulate the main data frames. Instead, it should create a copy of the main data frame for manipulation.
 
 You should utilize the compiled data (customer_df and summary_df): one containing customer data (one row for each date) and the other containing summary data (one row for each cinema), compiled from all of the .csv files, including the visitor data.
+
+Nah, it is not working. I will give you my datasets and code, which I used to create the customer_copy and summary_copy DataFrames. 
+
+Code:
+directory = '../Datasets/'
+age_df = pd.read_csv(f'{directory}CinemaAge.csv')
+capacity_df = pd.read_csv(f'{directory}CinemaCapacity.csv')
+marketing_df = pd.read_csv(f'{directory}CinemaMarketing.csv')
+overheads_df = pd.read_csv(f'{directory}CinemaOverheads.csv')
+spend_df = pd.read_csv(f'{directory}CinemaSpend.csv')
+weekly_visitors_df = pd.read_csv(f'{directory}CinemaWeeklyVisitors.csv')
+
+summary_df = pd.merge(age_df, capacity_df, on='Id', how='inner')
+summary_df = pd.merge(summary_df, marketing_df, on='Id', how='inner')
+summary_df = pd.merge(summary_df, overheads_df, on='Id', how='inner')
+summary_df = pd.merge(summary_df, spend_df, on='Id', how='inner')
+
+summary_df.columns = ['Cinema ID', 'Average Age (Years)', 'Seating Capacity', 'Marketing Spend (£000s)', 'Overheads (£000s)', 'Average Spend (£)']
+
+customer_df = weekly_visitors_df.melt(id_vars=["Date"], var_name="Cinema ID", value_name="Weekly Visitors")
+
+Please have a look, and then we will form an idea of how to tackle this.
