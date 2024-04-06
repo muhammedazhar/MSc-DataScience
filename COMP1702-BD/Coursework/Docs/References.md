@@ -1,0 +1,1 @@
+[Hive Tutorial #1 : Creating database in Apache Hive](https://youtu.be/-X5YsUjPJdI?si=BOczVIG-RFnj0OK8)

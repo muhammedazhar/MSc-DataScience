@@ -1,0 +1,51 @@
+ProductName,Price,Category,SupplierID,ProductID
+Shirt,419.29,Clothing,157,101
+Headphones,257.0,Electronics,108,102
+Book,53.79,Books,155,103
+Jeans,406.06,Clothing,152,104
+Wheelbarrow,350.64,Garden,179,105
+Smart Book,218.45,Books,165,106
+Sofa,271.38,Home,160,107
+Smart Book,189.22,Books,104,108
+Grill,28.74,Garden,109,109
+Shirt,11.23,Clothing,172,110
+Water Gun,111.33,Toys,108,111
+Watch,235.11,Clothing,127,112
+Jacket,249.0,Clothing,199,113
+Watch,293.23,Clothing,179,114
+Shirt,383.9,Clothing,114,115
+Advanced Book,379.85,Books,123,116
+Doll,134.13,Toys,179,117
+Shirt,265.06,Clothing,129,118
+Smart Watch,430.09,Electronics,122,119
+Kids Book,326.25,Books,139,120
+Garden Tools,216.81,Garden,137,121
+Water Gun,257.18,Toys,180,122
+Jeans,308.48,Clothing,139,123
+Laptop,158.89,Electronics,140,124
+Advanced Book,103.92,Books,192,125
+Lamp,379.58,Home,126,126
+Advanced Book,196.79,Books,127,127
+Sofa,405.38,Home,147,128
+Doll,310.0,Toys,176,129
+Advanced Book,85.46,Books,170,130
+Puzzle,227.79,Toys,170,131
+Laptop,480.4,Electronics,195,132
+Kids Book,461.9,Books,118,133
+Water Gun,67.41,Toys,137,134
+Smart Book,427.61,Books,146,135
+Book,355.16,Books,107,136
+Action Figure,252.47,Toys,192,137
+Headphones,327.74,Electronics,127,138
+Garden Tools,135.85,Garden,126,139
+Action Figure,379.46,Toys,140,140
+Chair,44.56,Home,189,141
+Book,158.93,Books,116,142
+Laptop,396.9,Electronics,173,143
+Patio Set,336.52,Garden,148,144
+Patio Set,423.62,Garden,149,145
+Kids Book,85.55,Books,134,146
+Smart Book,51.5,Books,147,147
+Doll,450.86,Toys,106,148
+Wheelbarrow,49.13,Garden,122,149
+Lamp,73.06,Home,192,150
