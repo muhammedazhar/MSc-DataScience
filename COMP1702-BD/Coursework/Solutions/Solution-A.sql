@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS `Task-A`;
+CREATE DATABASE IF NOT EXISTS `Task_A`;
 
-USE `Task-A`;
+USE `Task_A`;
 
 -- Table: Customers
 CREATE TABLE Customers (
