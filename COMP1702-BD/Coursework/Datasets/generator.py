@@ -14,7 +14,7 @@ names = {
         'first_names': ['Amir', 'Fatima', 'Omar', 'Aisha', 'Khalid', 'Layla', 'Ali', 'Salma', 'Tariq', 'Zara'],
         'last_names': ['Almasi', 'Said', 'Fakhoury', 'Nassar', 'Habib', 'Abadi', 'Maalouf', 'Ganim', 'Antoun', 'Qureshi']
     },
-    'IND': {  # Indian
+    'IN': {  # Indian
         'first_names': ['Arjun', 'Priya', 'Raj', 'Anjali', 'Sanjay', 'Deepika', 'Amit', 'Neha', 'Vijay', 'Rani'],
         'last_names': ['Sharma', 'Patel', 'Singh', 'Gupta', 'Kumar', 'Joshi', 'Iyer', 'Mehta', 'Desai', 'Chatterjee']
     },
@@ -85,9 +85,9 @@ sales_data = {
 sales_df = pd.DataFrame(sales_data)
 
 # File paths for the CSV files
-customers_file_path = 'Customers.csv'
-products_file_path = 'Products.csv'
-sales_file_path = 'Sales.csv'
+customers_file_path = './Customers.csv'
+products_file_path = './Products.csv'
+sales_file_path = './Sales.csv'
 
 # Saves the DataFrames to CSV files
 customers_df.to_csv(customers_file_path, index=False)
