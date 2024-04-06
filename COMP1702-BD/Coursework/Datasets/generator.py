@@ -52,12 +52,12 @@ def generate_products():
     product_list = []
     # Dictionary mapping categories to a list of product types
     product_mapping = {
-        'Electronics': ['Laptop', 'Headphones', 'Camera', 'Smart Watch', 'e-Reader'],
+        'Electronics': ['Laptop', 'Headphones', 'Camera', 'Smart_Watch', 'e_Reader'],
         'Clothing': ['Shirt', 'Shoes', 'Watch', 'Jacket', 'Jeans'],
         'Home': ['Sofa', 'Chair', 'Lamp', 'Rug'],
-        'Garden': ['Wheelbarrow', 'Garden Tools', 'Grill', 'Patio Set'],
-        'Toys': ['Game', 'Water Gun', 'Doll', 'Puzzle', 'Action Figure'],
-        'Books': ['Book', 'Smart Book', 'Advanced Book', 'Kids Book'],
+        'Garden': ['Wheelbarrow', 'Garden_Tools', 'Grill', 'Patio_Set'],
+        'Toys': ['Game', 'Water_Gun', 'Doll', 'Puzzle', 'Action_Figure'],
+        'Books': ['Book', 'Smart_Book', 'Advanced_Book', 'Kids_Book'],
     }
     
     for _ in range(50):  # Generates 50 products
@@ -85,9 +85,9 @@ sales_data = {
 sales_df = pd.DataFrame(sales_data)
 
 # File paths for the CSV files
-customers_file_path = './Customers.csv'
-products_file_path = './Products.csv'
-sales_file_path = './Sales.csv'
+customers_file_path = 'Customers.csv'
+products_file_path = 'Products.csv'
+sales_file_path = 'Sales.csv'
 
 # Saves the DataFrames to CSV files
 customers_df.to_csv(customers_file_path, index=False)

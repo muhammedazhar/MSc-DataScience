@@ -1,51 +1,51 @@
 ProductName,Price,Category,SupplierID,ProductID
-Shirt,419.29,Clothing,157,101
-Headphones,257.0,Electronics,108,102
-Book,53.79,Books,155,103
-Jeans,406.06,Clothing,152,104
-Wheelbarrow,350.64,Garden,179,105
-Smart Book,218.45,Books,165,106
-Sofa,271.38,Home,160,107
-Smart Book,189.22,Books,104,108
-Grill,28.74,Garden,109,109
-Shirt,11.23,Clothing,172,110
-Water Gun,111.33,Toys,108,111
-Watch,235.11,Clothing,127,112
-Jacket,249.0,Clothing,199,113
-Watch,293.23,Clothing,179,114
-Shirt,383.9,Clothing,114,115
-Advanced Book,379.85,Books,123,116
-Doll,134.13,Toys,179,117
-Shirt,265.06,Clothing,129,118
-Smart Watch,430.09,Electronics,122,119
-Kids Book,326.25,Books,139,120
-Garden Tools,216.81,Garden,137,121
-Water Gun,257.18,Toys,180,122
-Jeans,308.48,Clothing,139,123
-Laptop,158.89,Electronics,140,124
-Advanced Book,103.92,Books,192,125
-Lamp,379.58,Home,126,126
-Advanced Book,196.79,Books,127,127
-Sofa,405.38,Home,147,128
-Doll,310.0,Toys,176,129
-Advanced Book,85.46,Books,170,130
-Puzzle,227.79,Toys,170,131
-Laptop,480.4,Electronics,195,132
-Kids Book,461.9,Books,118,133
-Water Gun,67.41,Toys,137,134
-Smart Book,427.61,Books,146,135
-Book,355.16,Books,107,136
-Action Figure,252.47,Toys,192,137
-Headphones,327.74,Electronics,127,138
-Garden Tools,135.85,Garden,126,139
-Action Figure,379.46,Toys,140,140
-Chair,44.56,Home,189,141
-Book,158.93,Books,116,142
-Laptop,396.9,Electronics,173,143
-Patio Set,336.52,Garden,148,144
-Patio Set,423.62,Garden,149,145
-Kids Book,85.55,Books,134,146
-Smart Book,51.5,Books,147,147
-Doll,450.86,Toys,106,148
-Wheelbarrow,49.13,Garden,122,149
-Lamp,73.06,Home,192,150
+Water_Gun,450.98,Toys,164,101
+Wheelbarrow,167.36,Garden,126,102
+Jacket,208.13,Clothing,137,103
+Camera,253.5,Electronics,117,104
+Lamp,92.76,Home,132,105
+e_Reader,116.38,Electronics,164,106
+Water_Gun,141.48,Toys,189,107
+Kids_Book,427.58,Books,140,108
+Wheelbarrow,315.42,Garden,107,109
+Wheelbarrow,349.29,Garden,152,110
+Garden_Tools,318.94,Garden,171,111
+Sofa,213.35,Home,176,112
+Wheelbarrow,496.92,Garden,156,113
+Advanced_Book,83.48,Books,191,114
+Advanced_Book,78.71,Books,173,115
+e_Reader,162.59,Electronics,127,116
+Shirt,76.34,Clothing,185,117
+Jacket,426.14,Clothing,194,118
+Garden_Tools,33.65,Garden,161,119
+Chair,298.7,Home,139,120
+Lamp,346.69,Home,184,121
+Book,370.74,Books,183,122
+Laptop,30.56,Electronics,112,123
+Headphones,284.7,Electronics,187,124
+Watch,281.26,Clothing,125,125
+Shoes,255.25,Clothing,122,126
+Jacket,208.95,Clothing,170,127
+Wheelbarrow,397.7,Garden,142,128
+Laptop,332.35,Electronics,133,129
+Watch,30.5,Clothing,124,130
+Shoes,275.44,Clothing,174,131
+Chair,310.02,Home,131,132
+Water_Gun,316.9,Toys,104,133
+Doll,113.07,Toys,162,134
+Wheelbarrow,225.78,Garden,128,135
+Rug,228.86,Home,148,136
+Rug,19.25,Home,135,137
+Smart_Watch,20.51,Electronics,148,138
+Shoes,53.46,Clothing,137,139
+Puzzle,154.9,Toys,135,140
+Jacket,342.6,Clothing,178,141
+Water_Gun,260.79,Toys,122,142
+Rug,326.26,Home,196,143
+Rug,328.87,Home,108,144
+Camera,458.67,Electronics,130,145
+Doll,453.12,Toys,115,146
+Kids_Book,126.92,Books,103,147
+Wheelbarrow,119.49,Garden,123,148
+Grill,166.72,Garden,180,149
+Grill,27.54,Garden,154,150
