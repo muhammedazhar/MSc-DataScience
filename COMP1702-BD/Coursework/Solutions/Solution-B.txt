@@ -1,0 +1,28 @@
+Ian Goodfellow, Yoshua Bengio, Aaron Courville|Deep Learning|MIT Press|2016
+Arthur Samuel|Long Range Prediction of Probability Functions in Games of Perfect Information|IBM Journal of Research and Development|1959
+John McCarthy, Marvin Minsky, Nathaniel Rochester, Claude Shannon|A Proposal for the Development of Artificial Intelligence|Dartmouth Summer Research Project on Artificial Intelligence|1955
+Marvin Minsky|Matter, Mind, and Models|Proceedings of the IFIP Congress|1968
+Edsger W. Dijkstra|A Discipline of Programming|Computing Surveys|1972
+Donald E. Knuth|The Art of Computer Programming|Addison-Wesley|1968
+C.A.R. Hoare|An Axiomatic Basis for Computer Programming|Communications of the ACM|1969
+John Backus|Can Programming Be Liberated from the von Neumann Machine?|Proceedings of the ACM SIGPLAN Symposium on Programming Languages|1978
+Grace Hopper|Unary Computer Representations of Numbers|The Journal of the ACM|1949
+Alan Turing|On Computable Numbers, with an Application to the Entscheidungsproblem|Proceedings of the London Mathematical Society|1936
+John von Neumann|First Draft of a Report on the EDVAC|University of Pennsylvania|1945
+Claude Shannon|A Mathematical Theory of Communication|The Bell System Technical Journal|1948
+Kenneth H. Thompson|Reflections on Trusting Systems|Communications of the ACM|1984
+Dennis M. Ritchie|The C Programming Language|Bell Labs|1978
+Bjarne Stroustrup|The C++ Programming Language|Addison-Wesley|1986
+James Gosling, Bill Joy, Guy Steele, Gilad Bracha, Jonathan Buckley|The Java Language Specification|Addison-Wesley|1996
+Guido van Rossum|Python Tutorial|Python Software Foundation|2009
+Yukihiro Matsumoto|RIN: A Language for Object-Oriented Programming|Proceedings of the ACM SIGPLAN Conference on Object-Oriented Programming Systems, Languages, and Applications|1995
+Rob Pike|Go: A Language for Programming in the Age of Networks|Google Research|2009
+Brendan Eich|JavaScript: The Definitive Guide|O'Reilly Media|2011
+Tim Berners-Lee|Information Management: A Proposal|CERN|1989
+Vint Cerf, Robert Kahn|A Protocol for Packet Network Interconnection|IEEE Transactions on Communications|1974
+Leslie Lamport|Time, Clocks, and the Ordering of Events in a Distributed System|Communications of the ACM|1978
+Salomon Kullback, Richard Leibler|On Information and Sufficiency|Annals of Mathematical Statistics|1951
+Vladimir Vapnik|The Nature of Statistical Learning Theory|Springer Science & Business Media|1995
+Yann LeCun, Yoshua Bengio, Geoffrey Hinton|Deep Learning|Nature|2015
+Andrew Ng, Michael Jordan|On Discriminative vs. Generative Models|Proceedings of the International Conference on Artificial Intelligence and Statistics|2002
+David Silver, Julian Schrittwieszer, Karen Simonyan|Mastering the Game of Go with Deep Neural Networks and Tree Search|Nature|2016
