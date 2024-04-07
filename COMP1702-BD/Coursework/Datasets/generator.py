@@ -50,27 +50,28 @@ customers_df = generate_customers()
 # Function to generate product data with categories
 def generate_products():
     product_list = []
-    # Dictionary mapping categories to a list of product types
     product_mapping = {
-        'Electronics': ['Laptop', 'Headphones', 'Camera', 'Smart_Watch', 'e_Reader'],
+        'Electronics': ['Laptop', 'Headphones', 'Camera', 'SmartWatch', 'e-Reader'],
         'Clothing': ['Shirt', 'Shoes', 'Watch', 'Jacket', 'Jeans'],
         'Home': ['Sofa', 'Chair', 'Lamp', 'Rug'],
-        'Garden': ['Wheelbarrow', 'Garden_Tools', 'Grill', 'Patio_Set'],
-        'Toys': ['Game', 'Water_Gun', 'Doll', 'Puzzle', 'Action_Figure'],
-        'Books': ['Book', 'Smart_Book', 'Advanced_Book', 'Kids_Book'],
+        'Garden': ['Wheelbarrow', 'GardenTools', 'Grill', 'PatioSet'],
+        'Toys': ['Game', 'WaterGun', 'Doll', 'Puzzle', 'ActionFigure'],
+        'Books': ['Book', 'SmartBook', 'AdvancedBook', 'KidsBook'],
     }
-    
-    for _ in range(50):  # Generates 50 products
+
+    for product_id in range(101, 151):  # Ensures unique ProductID for each entry
         category = choice(list(product_mapping.keys()))  # Selects a category
         product_type = choice(product_mapping[category])  # Selects a product type within that category
-        product_name = product_type  # Uses the product type as the product name
+        product_name = product_type
         price = round(uniform(10.0, 500.0), 2)  # Random price between $10 and $500
         supplier_id = np.random.randint(100, 200)  # Random supplier ID between 100 and 200
-        product_list.append([product_name, price, category, supplier_id])
-    # Converts the product list to a DataFrame
-    return pd.DataFrame(product_list, columns=['ProductName', 'Price', 'Category', 'SupplierID'])
+        # Append data with columns in the correct order as per HiveQL table structure
+        product_list.append([product_id, product_name, price, category, supplier_id])
+    
+    # Create DataFrame with specified column order
+    return pd.DataFrame(product_list, columns=['ProductID', 'ProductName', 'Price', 'Category', 'SupplierID'])
 
-# Generates the product DataFrame
+# Generates the product DataFrame and saves to CSV
 products_df = generate_products()
 
 # Generates sales data with randomized values
