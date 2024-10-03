@@ -56,6 +56,17 @@ The module follows a structured schedule throughout the term, providing weekly l
 
 Each lecture is followed by a two-hour lab session where students can apply the concepts learned during the lecture. Lab activities are designed to further reinforce learning through hands-on experience with Python and machine learning libraries.
 
+## Datasets
+
+The following table provides a list of recommended datasets for students to practice with or use for their projects. Each repository offers a variety of data suitable for different machine learning tasks.
+
+| Repository                | Reason                                                                                                                                                  | Access URL                                             |
+|---------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
+| Kaggle                    | Kaggle is a popular source that contains numerous datasets used for data science competitions. Users should confirm the terms and conditions before utilizing any data: [Kaggle Terms](https://www.kaggle.com/terms). | [Kaggle Datasets](https://www.kaggle.com/datasets)     |
+| scikit-learn              | The scikit-learn library is a widely-used Python library that comes with several built-in datasets, making it a convenient source for practice.          | [scikit-learn Datasets](https://scikit-learn.org/stable/datasets.html) |
+| UCI Machine Learning Repository | The UCI Machine Learning Repository is a well-known source for datasets that can be used with various machine learning algorithms. Users should adhere to the repository's citation policy: [UCI Citation Policy](https://archive.ics.uci.edu/citation). | [UCI Repository](https://archive.ics.uci.edu/) |
+| London Datastore          | The London Datastore contains data about London that has been released by the Greater London Authority (GLA). This repository is useful for projects involving real-world data about London. | [London Datastore](https://data.london.gov.uk/dataset/) |
+
 ## Assessment
 
 ### Assessment Structure
