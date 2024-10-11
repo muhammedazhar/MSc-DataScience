@@ -5,3 +5,7 @@ matplotlib  # Matplotlib is a plotting library for creating static, animated, an
 scikit-learn  # Scikit-learn is a machine learning library for Python.
 seaborn  # Seaborn is a Python data visualization library based on matplotlib.
 requests  # Requests is a Python library for making HTTP requests.
+
+# TODO: Install Graphviz on the system along with the Python package.
+# Use `brew install graphviz` to install Graphviz on macOS.
+graphviz  # Graphviz is a graph visualization software.
