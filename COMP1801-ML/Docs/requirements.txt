@@ -3,3 +3,5 @@ numpy  # NumPy is a fundamental package for scientific computing in Python.
 pandas  # Pandas is a library for data manipulation and analysis.
 matplotlib  # Matplotlib is a plotting library for creating static, animated, and interactive visualizations in Python.
 scikit-learn  # Scikit-learn is a machine learning library for Python.
+seaborn  # Seaborn is a Python data visualization library based on matplotlib.
+requests  # Requests is a Python library for making HTTP requests.
