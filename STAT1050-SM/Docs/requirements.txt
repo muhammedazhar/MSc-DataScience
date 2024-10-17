@@ -1,0 +1,1 @@
+ipykernel  # This package is required for the kernel to be used in Jupyter notebooks.
