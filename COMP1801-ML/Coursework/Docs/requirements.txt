@@ -1,0 +1,6 @@
+# Requirements.txt for COMP1801-ML Coursework - Specified with comments for clarity
+
+pandas
+numpy
+matplotlib
+seaborn
