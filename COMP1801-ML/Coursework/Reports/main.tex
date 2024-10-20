@@ -1,0 +1,133 @@
+%%%%%%%% COMP1801 Coursework Template File %%%%%%%%%%%%%%%%%
+% This template and document is based on \href{https://media.icml.cc/Conferences/ICML2021/Styles/icml2021\_style.zip}{ICML 2021 LaTeX style file} (\url{https://media.icml.cc/Conferences/ICML2021/Styles/icml2021\_style.zip})
+% Modified from a template file originally constructed by Atsushi Suzuki and Jing Wang
+% Copyright (the body text): Peter Soar, 2022-2024.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% This document is the template for the COMP1801 Machine learning coursework. Please make a copy to your own overleaf account so you can start editing it.
+
+%Please do not change any part of the layout (font, margins, extra sections (you can add subsections if you like) or anything else that involves editing the .sty files
+
+% I do not think you should need to include any packages other than the ones I have included already, but you may do so if you feel it necessary.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Header Information and Packages
+% Scroll down to the main document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{article}
+% Recommended, but optional, packages for figures and better typesetting:
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{subcaption}
+\usepackage{booktabs} % for professional tables
+
+% Uncomment the following two lines if you intend to use references
+\usepackage[style=authoryear,backend=biber]{biblatex}
+\addbibresource{ref.bib}% Syntax for version >= 1.2
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{fancyvrb}
+\usepackage{caption}
+% hyperref makes hyperlinks in the resulting PDF.
+\usepackage{xurl}
+\usepackage{hyperref}
+
+% Attempt to make hyperref and algorithmic work together better:
+\newcommand{\theHalgorithm}{\arabic{algorithm}}
+
+\usepackage{accessibility}
+
+\usepackage{cw}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Main document begins
+% From here onward contains the actual document contents that will be seen in the compiled PDF
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is the Coursework title - Do not change
+\cwtitle{COMP1801 - Machine Learning Coursework Report}
+
+
+\begin{cwauthorlist}
+% Please provide your details on this line
+\cwauthor{Azhar Muhammed - 001364857}
+
+% Please provide your final word count
+\cwauthor{Word Count:}
+\end{cwauthorlist}
+
+% Below will be the main body of your document. Please do not change the headings for the sections. You may add subsections if you feel it appropriate, but this is not required.
+
+% If you are struggling with Latex and do not know how to include figures, tables and/or equations, please see my example document provided in week 1 on moodle and at: https://www.overleaf.com/project/6330ba64217dc3332f06fb4c
+% Also other resources such as: https://v1.overleaf.com/latex/templates/a-quick-guide-to-latex/fghqpfgnxggz.pdf
+
+% I have included the brief for each section of the report as comments, feel free to delete these comments in your final version
+% If there is any inconsistency between the instructions in these comments and the instructions in the Coursework Specification pdf, then the CW specification pdf should **always** be assumed as being the correct document, but if there is ever any doubt please contact me at p.soar@gre.ac.uk.
+
+\section{Executive Summary}
+
+% This should be a summary of what the report contains – the problem you are solving, why it's important, the ML methods you have used and a summary of your results and conclusions. Avoid generic statements about machine learning, A.I., data processing etc., and keep to the specifics of the coursework.
+
+
+\section{Data Exploration}
+%Describe how you loaded the dataset, then perform a concise exploration of the data and comment on any patterns or relationships in the data that you think may be relevant for creating a model and predicting the part lifespan. It is advisable to provide plots and visualizations to better highlight these regions of interest. 
+%Considering this data exploration, identify the features you will use in your models and discuss why you believe they will be the best predictors of metal part longevity.
+
+%Finally, with reference to patterns/relationships found in the exploration and (if relevant) theoretical justification, provide a brief additional discussion outlining your expectations of which approach (i.e. regression or classification) and specific ML model will be most appropriate for providing an accurate solution to the company's requirements.
+
+
+\section{Regression Implementation}
+\subsection{Methodology}
+%The task for this section is to create a regression model methodology to predict the lifetime of a metal part using machine learning methods. 
+%Firstly, choose two model types appropriate for this task, for example Linear Regression and Artificial Neural Network. Both models chosen should be supported with a brief justification explaining why it is an appropriate choice for the problem.
+%Secondly, describe and implement an appropriate pre-processing routine to be used in all following experimentations and evaluations of this section only (Part 3). This can include, but is not limited to: categorical feature encoding, feature scaling and splitting the data into training and test sets, data balancing, etc.
+%Thirdly, provide and justify the hyper-parameter tuning framework you will use to obtain your final models in the experiments in section 3.2. Describe which hyper-parameters you will tune for each model type chosen, how they work and why they are essential to the optimization of that architecture.   
+
+\subsection{Evaluation}
+%For this sub-section you should perform and describe the experiments done to obtain your final regression model version for each chosen architecture type, by adhering to the hyper-parameter tuning framework outlined above. These experiments should be a rigorous model optimization process including comparisons between the different versions via a table or otherwise detailed description. All choices should be justified using theory, experiments and/or references. 
+%The final model versions of both chosen types should be described in all detail – summarizing all relevant final hyperparameters chosen.
+%You should evaluate these final model versions using a test portion of the dataset not used in the prior training stages, using appropriate regression performance metrics. You should explain how these chosen metrics work, why they are appropriate to the task and provide a written interpretation of how well your model is performing at the given task according to these metrics. 
+%Finally, compare the best performing version of both model types using your chosen performance metrics. Provide your final recommendation of which model is superior to deploy for this regression task, supporting this choice with a brief discussion of your results.  
+
+\subsection{Critical Review}
+%For this sub-section critically review your overall methodology used for this task only (Part 3), considering the results obtained in your experiments in section 3.2. Cover areas of strengths and areas where improvement might be needed. Offer an alternative approach from the choices not utilized in your experimentations that future investigations could explore. These can include untrialled model architectures, alternate pre-processing routines, different hyper-parameter tuning schemes, etc.  
+
+\section{Classification Implementation}
+\subsection{Feature Crafting}
+%Your line manager has decided that beyond the exact lifetime of a part, it is also important to know whether a part has a lifetime above 1500 hours (determined by the company as the minimum lifetime before a part is considered defective).
+
+%Before choosing any potential model architectures, first create an additional feature (a column named "1500_labels" for example) representing a binary output label for this lifespan threshold that may be used to predict whether a part is defective or not. Populate this feature with a positive binary output if the hourly threshold is met. 
+%However, your line manager thinks that splitting the data into only two groups may be naïve, and hence predictions made by a binary classification model may not be suitable for finding the best processing parameters for manufacture. Currently, it is unclear how many groups the data should be split into and why.
+%nstead of using the provided threshold of 1500 to create a binary class, you can (for higher marks) perform and utilize alternate grouping methods on the records based on the lifespan and potentially relationships with the other features, while providing justifications for doing so. The type of this grouping can range from a more complex thresholding technique (such as a statistical outlier function) to the application of an unsupervised learning algorithm, such as clustering, to separate the inputs into different groups (which can result in three or more groups.) More complex and/or better-justified methods will earn higher marks for this section than simpler ones, but must be researched by the student on their own. 
+
+\subsection{Methodology}
+%The task for this section is to create a classification model methodology to predict the output class of a metal part using machine learning methods.
+%Firstly, once your output labels are created, choose two model types appropriate for this task, for example Logistic Regression and Artificial Neural Network. Both models chosen should be supported with a brief justification explaining why it is an appropriate choice for the problem.
+%Secondly, describe and implement an appropriate pre-processing routine to be used in all following experimentations and evaluations of this section only (Part 4). This can include, but is not limited to: categorical feature encoding, feature scaling and splitting the data into training and test sets, data balancing, etc.
+%Thirdly, provide and justify the hyper-parameter tuning framework you will use to obtain your final models in the experiments in section 4.3. Describe which hyper-parameters you will tune for each model type chosen, how they work and why they are essential to the optimization of that architecture.   
+
+\subsection{Evaluation}
+%For this sub-section you should perform and describe the experiments done to obtain your final classification model version for each chosen model type, by adhering to the hyper-parameter tuning framework outlined above. These experiments should be a rigorous model optimization process including comparisons between the different versions via a table or an otherwise detailed description. All choices should be justified using theory, experiments and/or references. 
+%The final model versions of both chosen types should be described in all detail – summarizing all relevant final hyperparameters chosen.
+%You should evaluate your final model versions using a test portion of the dataset not used in the prior training stages, using appropriate classification performance metrics. You should explain how these chosen metrics work, why they are appropriate to the task and provide a written interpretation of how well your model is performing at the given task according to these metrics. 
+%Finally, compare the best performing version of both model types using your chosen performance metrics. Provide your final recommendation of which model is superior to deploy for this classification task, supporting this choice with a brief discussion of your results.
+
+\subsection{Critical Review}
+%For this sub-section critically review your overall methodology used for this task only (Part 4) considering the results obtained in your experiments. Cover areas of strengths and areas where improvement might be needed. Offer an alternative approach for future investigations to explore from the choices not utilized in your experimentations. These can include untrialled model architectures, alternate pre-processing routines, different hyper-parameter tuning schemes, etc.  
+
+
+\section{Conclusions}
+% Provide a final recommendation to your manager for which model to use between the Regression (Part 3) or Binary Classification (Part 4) implementation for the task of predicting the lifetime of metal parts, providing a reasoned justification for this recommendation considering aspects such as (but not limited to) model accuracy, the clustering results, and the outside context of the task. 
+% Considering the final CNN model chosen for classifying the defects of metal parts (Part 5), you should briefly discuss if you think the model is good enough to be deployed and used in practice (justifying why) and provide your top suggestion to improve it.
+
+
+% The command below will create a reference list for you. 
+\printbibliography
+
+\end{document}
