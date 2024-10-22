@@ -1,4 +1,4 @@
-# `COMP1832` Programming Fundamentals for Data Science
+# COMP1832 - Programming Fundamentals
 
 **Institution:** University of Greenwich  
 **Faculty:** Faculty of Engineering and Science  
@@ -46,30 +46,47 @@ The portfolio will include various problems to solve, focusing on data transform
 **Submission Deadline:**  
 Portfolio submission: 29th November 2024
 
-## Suggested Reading
+## Reading Resources
+
+The following resources are suggested to support learning in the module:
 
 1. **Programming in Python 3** by Mark Summerfield (ISBN: 978-0-321-68056-3)
 2. **Python Data Science Handbook** by Jake VanderPlas (ISBN: 978-1-491-91205-8)
 3. **R for Data Science, 2nd Edition** by Hadley Wickham & Garrett Grolemund (Online: [r4ds.hadley.nz](https://r4ds.hadley.nz/))
 4. **Introductory Statistics with R** by Peter Dalgaard (ISBN: 978-0-387-79054-1)
 
-## Course Structure
+Additional resources, including pre-recorded lectures and quizzes, will be made available on Moodle. These materials will aid in reinforcing learning and providing practical guidance.
 
-*Week numbering is aligned with the week number on the timetable.*
+## Schedule of Teaching and Learning Activities
 
-- Week 3: Introduction to Python
-- Week 4: Data Types and Data Structures
-- Week 5: Advanced Data Processing
-- Week 6: Statistics with Python
-- Week 7: Data Visualization with Python
-- Week 8: Introduction to R
-- Week 9: Skills Week (no teaching)
-- Week 10: Data Manipulation in R
-- Week 11: Statistics and Visualization using R
-- Week 12: Revision Week
-- Week 13: Advanced Data Science using Python
-- Week 14: Data Science in Practice (Guest Talk)
+The module follows a structured schedule throughout the term, providing weekly lectures and corresponding lab sessions to reinforce the theoretical and practical concepts. The teaching activities are outlined as follows:
+
+| Week | Date (Week Beginning) | Activity                               |
+|------|-----------------------|----------------------------------------|
+| 1    | 27/09/2023            | Introduction to Python                 |
+| 2    | 04/10/2024            | Data Types and Data Structures         |
+| 3    | 11/10/2024            | Advanced Data Processing               |
+| 4    | 18/10/2024            | Statistics with Python                 |
+| 5    | 25/10/2024            | Data Visualization with Python         |
+| 6    | 01/11/2024            | Introduction to R                      |
+| 7    | 08/11/2024            | Skills Week (no teaching)              |
+| 8    | 15/11/2024            | Data Manipulation in R                 |
+| 9    | 22/11/2024            | Statistics and Visualization using R   |
+| 10   | 29/11/2024            | Revision Week                          |
+| 11   | 06/12/2024            | Advanced Data Science using Python     |
+| 12   | 13/12/2024            | Data Science in Practice (Guest Talk)  |
 
 ## Additional Information
 
 Students are encouraged to actively participate in lectures and tutorials to receive continuous feedback and support. Formative assessments will be offered throughout the course to guide students in developing their portfolios.
+
+## Python and R Environment Setup
+
+To ensure a smooth learning experience, students are encouraged to set up their Python and R environments before the start of the module.
+
+**Python Environment Setup:**
+
+```bash
+conda create --name COMP1832-PF python=3.10.10
+conda activate COMP1832-PF
+```
