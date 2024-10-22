@@ -45,9 +45,9 @@ void guessGame(void) {
         puts(
             "\nExcellent! You guessed the number!\n"
             "Would you like to play again?");
-        printf("You took %d guesses\n", count);
+        printf("You took %d guesses, the answer was %d\n", count, answer);
         printf("%s", "Please type ( y=yes, n=no )? ");
-        scanf("%d", &response);
+        scanf("%s", &response);
 
         puts("");
     } while (response == 'y');
