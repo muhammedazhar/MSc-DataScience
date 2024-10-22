@@ -1,2 +1,1 @@
-# Graph and Modern Databases
-*COMP1835*
+# `COMP1835` Graph and Modern Databases

@@ -1,5 +1,4 @@
-# Applied Machine Learning
-*COMP1804*
+# `COMP1804` Applied Machine Learning
 
 Applied Machine Learning refers to the practical application of machine learning algorithms and models to solve real-world problems. It involves selecting appropriate data, preparing and cleaning the data, choosing suitable algorithms, training and validating models, and interpreting and communicating results.
 
