@@ -48,3 +48,11 @@ In this subject we will be using Jupyter Notebook and we will also be running R 
     The second command will make the R kernel available to Jupyter. Using `user = FALSE` will install it system-wide, making it available to all users.
 
 3. Exit the R console by running `q()` command and type `y` to save changes. After that, restart the Jupyter Notebook server and the R kernel should be available in drropdown list.
+
+## Runing R scripts
+
+Use the `Rscript` command along with `.R` file to run R scripts:
+
+```bash
+Rscript your_filename.R
+```
