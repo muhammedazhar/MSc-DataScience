@@ -56,3 +56,19 @@ Use the `Rscript` command along with `.R` file to run R scripts:
 ```bash
 Rscript your_filename.R
 ```
+
+## Setting default options for R
+
+To set the default options for R, create a file named `.Rprofile` in your home directory (`/home/username` or `~/`) and add the following lines:
+
+To do that, run the following `code` command by VS Code or Unix-based `nano` command:
+
+```bash
+code ~/.Rprofile
+```
+
+Then paste the following lines with new line break:
+
+```R
+options(repos = c(CRAN = "http://cran.us.r-project.org"))
+```
