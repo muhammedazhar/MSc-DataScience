@@ -1,0 +1,22 @@
+# Ignore all files
+*
+
+# But don't ignore these types of files
+!*/
+!*.c
+!*.cpp
+!*.css
+!*.db
+!*.h
+!*.html
+!*.java
+!*.js
+!*.md
+!*.py
+!*.sql
+!*.ts
+!*.txt
+!*.md
+!*.sh
+!Makefile
+!.gitignore
