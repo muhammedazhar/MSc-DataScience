@@ -1,0 +1,8 @@
+# Requirements.txt for COMP1832-PF Project - Specified with comments for clarity
+
+ipykernel  # Jupyter Notebook kernel for Python
+
+# Data Visualization
+matplotlib  # Library for creating static, interactive, and animated visualizations in Python
+networkx  # Library for creating, manipulating, and studying complex networks
+seaborn  # Statistical data visualization library based on matplotlib
