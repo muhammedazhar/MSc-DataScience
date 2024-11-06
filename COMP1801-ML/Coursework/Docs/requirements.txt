@@ -5,3 +5,8 @@ numpy
 matplotlib
 seaborn
 statsmodels
+
+# For testing
+optuna
+torch
+ipywidgets
