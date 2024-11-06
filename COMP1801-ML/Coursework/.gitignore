@@ -1,0 +1,4 @@
+# Ignore files for Coursework
+
+# Model files
+*.pkl
