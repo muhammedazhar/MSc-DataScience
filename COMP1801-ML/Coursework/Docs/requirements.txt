@@ -6,6 +6,10 @@ matplotlib
 seaborn
 statsmodels
 
+# Neural Network Libraries
+tensorflow
+tensorflow-metal  # Accelerated training on Apple Silicon
+
 # For testing
 optuna
 torch
