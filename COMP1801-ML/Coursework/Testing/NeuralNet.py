@@ -1,17 +1,21 @@
-import os
-import glob
-import numpy as np
-import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
-import tensorflow as tf
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Dropout, BatchNormalization, Input
-from tensorflow.keras.optimizers import Adam
-from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau
-from sklearn.preprocessing import MinMaxScaler, OneHotEncoder
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import mean_squared_error, mean_absolute_error, explained_variance_score
+try:
+    import os
+    import glob
+    import numpy as np
+    import pandas as pd
+    import seaborn as sns
+    import matplotlib.pyplot as plt
+    import tensorflow as tf
+    from tensorflow.keras.models import Sequential
+    from tensorflow.keras.layers import Dense, Dropout, BatchNormalization, Input
+    from tensorflow.keras.optimizers import Adam
+    from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau
+    from sklearn.preprocessing import MinMaxScaler, OneHotEncoder
+    from sklearn.model_selection import train_test_split
+    from sklearn.metrics import mean_squared_error, mean_absolute_error, explained_variance_score
+
+except Exception as e:
+    print(f"Error : {e}")
 
 # Set random seeds for reproducibility
 np.random.seed(42)
@@ -111,7 +115,7 @@ def train_model(X_train, X_test, y_train, y_test):
         X_train, y_train,
         validation_data=(X_test, y_test),
         epochs=400,
-        batch_size=42,
+        batch_size=38,
         callbacks=[early_stopping, reduce_lr],
         verbose=1
     )
@@ -237,7 +241,7 @@ if __name__ == "__main__":
         print(f"{metric_name}: {value:.4f}")
 
     # Plot results
-    plot_results(history, y_test, predictions)
+    # plot_results(history, y_test, predictions)
 
     # Display prediction for first part
     print("\nPrediction for first part:")
