@@ -6,10 +6,10 @@ try:
     import seaborn as sns
     import matplotlib.pyplot as plt
     import tensorflow as tf
-    from tensorflow.keras.models import Sequential
-    from tensorflow.keras.layers import Dense, Dropout, BatchNormalization, Input
-    from tensorflow.keras.optimizers import Adam
-    from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau
+    from tensorflow.keras.models import Sequential # type: ignore
+    from tensorflow.keras.layers import Dense, Dropout, BatchNormalization, Input # type: ignore
+    from tensorflow.keras.optimizers import Adam # type: ignore
+    from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau # type: ignore
     from sklearn.preprocessing import MinMaxScaler, OneHotEncoder
     from sklearn.model_selection import train_test_split
     from sklearn.metrics import mean_squared_error, mean_absolute_error, explained_variance_score
