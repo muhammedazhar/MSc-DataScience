@@ -9,8 +9,12 @@ statsmodels
 # Neural Network Libraries
 tensorflow
 tensorflow-metal  # Accelerated training on Apple Silicon
+keras-tuner
 
-# For testing
+# Feature Crafting
+kneed
+
+# Experimental Libraries
 optuna
 torch
 ipywidgets
