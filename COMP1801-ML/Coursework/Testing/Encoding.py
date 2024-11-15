@@ -2,7 +2,7 @@ try:
     import glob
     import pandas as pd
     import numpy as np
-    from sklearn.preprocessing import LabelEncoder, OneHotEncoder
+    from sklearn.preprocessing import LabelEncoder, OneHotEncoder, StandardScaler
     from sklearn.model_selection import train_test_split
     from sklearn.ensemble import RandomForestRegressor
     from sklearn.metrics import (
@@ -174,10 +174,11 @@ def main():
     le = LabelEncoder()
 
     # Define feature categories
+    target = 'Lifespan'
+    numerical_features = [col for col in df.columns if df[col].dtype in ['int64', 'float64'] and col != target]
     categorical_features = df.select_dtypes(include=['object']).columns.tolist()
     onehot_features = ['microstructure', 'seedLocation', 'castType']
     label_features = 'partType'
-    target = 'Lifespan'
     n_iterations = 10
 
     # Base model creator
