@@ -1,6 +1,3 @@
-from matplotlib.pyplot import sca
-
-
 try:
     import glob
     import pandas as pd
@@ -184,14 +181,12 @@ def main():
     # Define encoders
     ohe = OneHotEncoder(sparse_output=False, dtype=int, drop=None)
     le = LabelEncoder()
-    scaler = StandardScaler()
 
     # Define feature categories
     target = 'Lifespan'
-    numerical_features = [col for col in df.columns if df[col].dtype in ['int64', 'float64'] and col != target]
     categorical_features = df.select_dtypes(include=['object']).columns.tolist()
-    onehot_features = ['microstructure', 'seedLocation', 'castType']
     label_features = 'partType'
+    onehot_features = [col for col in df.select_dtypes(include=['object']).columns if col != label_features]
     n_iterations = 10
 
     # Base model creator
