@@ -1,3 +1,6 @@
+from matplotlib.pyplot import sca
+
+
 try:
     import glob
     import pandas as pd
@@ -109,9 +112,18 @@ def iterative_evaluation(X, y, model_creator, encoding_type, n_iterations):
         X_train, X_test, y_train, y_test = train_test_split(
             X_shuffled, y_shuffled, test_size=0.2, random_state=None
         )
+        scaler = StandardScaler()
+        # Fit the scaler on the training data and transform both training and test data
+        X_train_scaled = scaler.fit_transform(X_train)
+        X_test_scaled = scaler.transform(X_test)
+
+        # Since scaling returns a NumPy array, convert it back to DataFrame for consistency
+        X_train_scaled = pd.DataFrame(X_train_scaled, columns=X.columns)
+        X_test_scaled = pd.DataFrame(X_test_scaled, columns=X.columns)
+
         model = model_creator()
-        model.fit(X_train, y_train)
-        y_pred = model.predict(X_test)
+        model.fit(X_train_scaled, y_train)
+        y_pred = model.predict(X_test_scaled)
 
         iteration_metrics = evaluate_model(y_test, y_pred, f"{encoding_type} Iteration")
         for metric, value in iteration_metrics.items():
@@ -172,6 +184,7 @@ def main():
     # Define encoders
     ohe = OneHotEncoder(sparse_output=False, dtype=int, drop=None)
     le = LabelEncoder()
+    scaler = StandardScaler()
 
     # Define feature categories
     target = 'Lifespan'
