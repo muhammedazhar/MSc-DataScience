@@ -4,24 +4,28 @@ COMP1801-ML Coursework T1-Regression Implementation
 XGBoost Hyperparameter Tuning Pipeline
 """
 
-import pandas as pd
-import numpy as np
-from pathlib import Path
-from sklearn.compose import ColumnTransformer
-from sklearn.preprocessing import OneHotEncoder, StandardScaler
-from sklearn.model_selection import (
-    train_test_split,
-    RandomizedSearchCV,
-    GridSearchCV
-)
-from sklearn.pipeline import Pipeline
-from sklearn.metrics import (
-    root_mean_squared_error,
-    r2_score,
-    mean_absolute_error
-)
-from xgboost import XGBRegressor
-from scipy.stats import uniform, randint
+try:
+    import pandas as pd
+    import numpy as np
+    from pathlib import Path
+    from sklearn.compose import ColumnTransformer
+    from sklearn.preprocessing import OneHotEncoder, StandardScaler
+    from sklearn.model_selection import (
+        train_test_split,
+        RandomizedSearchCV,
+        GridSearchCV
+    )
+    from sklearn.pipeline import Pipeline
+    from sklearn.metrics import (
+        root_mean_squared_error,
+        r2_score,
+        mean_absolute_error
+    )
+    from xgboost import XGBRegressor
+    from scipy.stats import uniform, randint
+
+except Exception as e:
+    print(f"Error: {e}")
 
 
 class XGBoostTuner:
