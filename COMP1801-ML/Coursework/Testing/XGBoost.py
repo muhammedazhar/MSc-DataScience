@@ -1,152 +1,162 @@
-# Import required libraries
-import os
-import glob
-from idna import encode
+"""
+COMP1801-ML Coursework T1-Regression Implementation
+---------------------------------------------------
+XGBoost Pipeline for Metal Parts Lifespan Prediction
+"""
+
 import pandas as pd
-import random
+import numpy as np
+from pathlib import Path
+from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.pipeline import Pipeline
-from xgboost import XGBRegressor
 from sklearn.metrics import (
     root_mean_squared_error,
     r2_score,
     mean_absolute_error,
     make_scorer
 )
-from sklearn.compose import ColumnTransformer
+from xgboost import XGBRegressor
 
-# Function to make random predictions
-def make_random_predictions(model, X_test, y_test, n_predictions=5):
-    test_indices = random.sample(range(len(X_test)), n_predictions)
 
-    print("\n=== Random Predictions from Test Set ===")
-    print("\nFormat: Feature Name: Value")
-    print("=" * 50)
+class MetalPartsPredictor:
+    def __init__(self, random_state=42):
+        self.random_state = random_state
+        self.model = None
+        self.preprocessor = None
 
-    for idx in test_indices:
-        sample = X_test.iloc[[idx]]
-        true_value = y_test.iloc[idx]
-        prediction = model.predict(sample)[0]
+    def load_data(self, filepath):
+        """Load and prepare the dataset."""
+        df = pd.read_csv(filepath)
+        print(f"Loaded dataset with shape: {df.shape}")
+        return df
 
-        error = abs(prediction - true_value)
-        error_percentage = (error / true_value) * 100 if true_value != 0 else 0
+    def prepare_pipeline(self, df, target='Lifespan'):
+        """Create preprocessing and model pipeline."""
+        # Separate features and target
+        X = df.drop(columns=[target])
+        y = df[target]
 
-        print("\nSample Features:")
-        for feature, value in sample.iloc[0].items():
-            print(f"{feature}: {value}")
+        # Identify column types
+        categorical_cols = df.select_dtypes(include=['object']).columns.tolist()
+        numeric_cols = [col for col in X.select_dtypes(include=['int64', 'float64']).columns
+                       if col not in categorical_cols]
 
-        print(f"\n{'=' * 50}")
-        print("Prediction Results:")
-        print(f"Predicted Lifespan: {prediction:.2f} hours")
-        print(f"Actual Lifespan: {true_value:.2f} hours")
-        print(f"Absolute Error: {error:.2f} hours")
-        print(f"Error Percentage: {error_percentage:.2f}%")
-        print("=" * 50)
+        # Create preprocessor
+        self.preprocessor = ColumnTransformer(
+            transformers=[
+                ('num', StandardScaler(), numeric_cols),
+                ('cat', OneHotEncoder(handle_unknown='ignore', sparse_output=False), categorical_cols)
+            ]
+        )
 
-# Set up paths and directories
-data_path = '../Datasets/*.csv'
-destination = '../Models/'
-os.makedirs(destination, exist_ok=True)
+        # Create pipeline
+        self.model = Pipeline([
+            ('preprocessor', self.preprocessor),
+            ('regressor', XGBRegressor(
+                max_depth=10,
+                n_estimators=200,
+                learning_rate=0.1,
+                random_state=self.random_state,
+                n_jobs=-1
+            ))
+        ])
 
-# Load the dataset
-file_list = glob.glob(data_path)
-if len(file_list) == 1:
-    df = pd.read_csv(file_list[0])
-    print(f"Loaded dataset: {file_list[0]}")
-else:
-    raise FileNotFoundError("No CSV file found or multiple CSV files found in the Datasets directory.")
+        return X, y
 
-# Identify categorical columns
-categorical_cols = df.select_dtypes(include=['object']).columns.tolist()
-print(f"\nCategorical columns: {categorical_cols}\n")
+    def train_and_evaluate(self, X, y, test_size=0.2):
+        """Train the model and evaluate performance."""
+        # Split data
+        X_train, X_test, y_train, y_test = train_test_split(
+            X, y, test_size=test_size, random_state=self.random_state
+        )
 
-# Define target variable
-target = 'Lifespan'
+        # Train model
+        self.model.fit(X_train, y_train)
 
-# Split the dataset
-X = df.drop(columns=[target])
-y = df[target]
+        # Make predictions
+        predictions = self.model.predict(X_test)
 
-X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.2, random_state=42
-)
+        # Calculate metrics
+        metrics = {
+            'RMSE': root_mean_squared_error(y_test, predictions),
+            'R²': r2_score(y_test, predictions),
+            'MAE': mean_absolute_error(y_test, predictions)
+        }
 
-# Preprocessing pipelines
-numeric_features = X.select_dtypes(include=['int64', 'float64']).columns.tolist()
-numeric_features = [col for col in numeric_features if col not in categorical_cols]
+        # Perform cross-validation
+        scorer = make_scorer(mean_absolute_error, greater_is_better=False)
+        cv_scores = cross_val_score(
+            self.model, X_train, y_train, cv=5, scoring=scorer
+        )
 
-encoder_name = "One-Hot"
-numeric_transformer = StandardScaler()
-categorical_transformer = OneHotEncoder(handle_unknown='ignore', dtype=int, drop=None)
+        metrics.update({
+            'CV_MAE_mean': -cv_scores.mean(),
+            'CV_MAE_std': cv_scores.std()
+        })
 
-preprocessor = ColumnTransformer(
-    transformers=[
-        ('num', numeric_transformer, numeric_features),
-        ('cat', categorical_transformer, categorical_cols)
-    ]
-)
+        return metrics, (X_train, X_test, y_train, y_test)
 
-# Create the pipeline
-model = Pipeline(steps=[
-    ('preprocessor', preprocessor),
-    ('regressor', XGBRegressor(
-        max_depth=10,
-        n_estimators=200,
-        learning_rate=0.1,
-        random_state=42,
-        n_jobs=-1
-    ))
-])
+    def make_random_predictions(self, X_test, y_test, n_predictions=5):
+        """Generate random predictions from test set."""
+        test_indices = np.random.choice(len(X_test), n_predictions, replace=False)
 
-# Train the model
-model.fit(X_train, y_train)
+        print("\n=== Random Predictions from Test Set ===")
 
-# Predict on the test set
-predictions = model.predict(X_test)
+        for idx in test_indices:
+            sample = X_test.iloc[[idx]]
+            true_value = y_test.iloc[idx]
+            prediction = self.model.predict(sample)[0]
 
-# Make random predictions
-print("\nGenerating random predictions from test set...")
-make_random_predictions(model, X_test, y_test)
+            error = abs(prediction - true_value)
+            error_percentage = (error / true_value) * 100 if true_value != 0 else 0
 
-# Fit the preprocessor on the training data
-preprocessor.fit(X_train)
+            print("\n" + "="*50)
+            print("Sample Features:")
+            for feature, value in sample.iloc[0].items():
+                print(f"{feature}: {value}")
 
-# Transform the training and test data
-X_train_transformed = preprocessor.transform(X_train)
-X_test_transformed = preprocessor.transform(X_test)
+            print(f"\nPrediction Results:")
+            print(f"Predicted Lifespan: {prediction:.2f} hours")
+            print(f"Actual Lifespan: {true_value:.2f} hours")
+            print(f"Absolute Error: {error:.2f} hours")
+            print(f"Error Percentage: {error_percentage:.2f}%")
+            print("="*50)
 
-# Get feature names after transformation
-numeric_feature_names = preprocessor.named_transformers_['num'].get_feature_names_out(numeric_features)
-categorical_feature_names = preprocessor.named_transformers_['cat'].get_feature_names_out()
 
-# Combine feature names
-transformed_feature_names = list(numeric_feature_names) + list(categorical_feature_names)
+def main():
+    # Initialize predictor
+    predictor = MetalPartsPredictor()
 
-# Create DataFrames with transformed data
-X_train_transformed_df = pd.DataFrame(X_train_transformed, columns=transformed_feature_names)
-X_test_transformed_df = pd.DataFrame(X_test_transformed, columns=transformed_feature_names)
+    # Load data
+    data_path = Path('../Datasets').glob('*.csv')
+    try:
+        filepath = next(data_path)
+    except StopIteration:
+        raise FileNotFoundError("No CSV file found in the Datasets directory.")
 
-# Inspect the shapes
-print("\nOriginal 'X_train' shape   :", X_train.shape)
-print("Transformed 'X_train' shape:", X_train_transformed_df.shape)
+    df = predictor.load_data(filepath)
 
-# Calculate metrics
-rmse = root_mean_squared_error(y_test, predictions)
-r2 = r2_score(y_test, predictions)
-mae = mean_absolute_error(y_test, predictions)
+    # Prepare and train model
+    X, y = predictor.prepare_pipeline(df)
+    metrics, (X_train, X_test, y_train, y_test) = predictor.train_and_evaluate(X, y)
 
-print(f"\n--- Performance of XGBoost with Pipeline ---\n")
-print(f"RMSE: {rmse:.2f}")
-print(f"R²  : {r2:.2f}")
-print(f"MAE : {mae:.2f}")
+    # Generate random predictions
+    predictor.make_random_predictions(X_test, y_test)
 
-# Perform cross-validation
-scorer = make_scorer(mean_absolute_error, greater_is_better=False)
-cv_scores = cross_val_score(
-    model, X_train, y_train, cv=5, scoring=scorer
-)
+    # Print metrics
+    print("\n--- Performance of XGBoost with Pipeline ---")
+    print(f"RMSE: {metrics['RMSE']:.2f}")
+    print(f"R²  : {metrics['R²']:.2f}")
+    print(f"MAE : {metrics['MAE']:.2f}")
 
-print("\nCross-Validation Results:")
-print(f"Mean CV MAE: {-cv_scores.mean():.2f}")
-print(f"Standard Deviation of CV MAE: {cv_scores.std():.2f}")
+    print("\nCross-Validation Results:")
+    print(f"Mean CV MAE: {metrics['CV_MAE_mean']:.2f}")
+    print(f"Standard Deviation of CV MAE: {metrics['CV_MAE_std']:.2f}")
+
+if __name__ == "__main__":
+    try:
+        main()
+    except Exception as e:
+        print(f"Error: {e}")
