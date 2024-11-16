@@ -1,31 +1,32 @@
-try:
-    import glob
-    import numpy as np
-    import pandas as pd
-    import seaborn as sns
-    import tensorflow as tf
-    import matplotlib.pyplot as plt
+import glob
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import tensorflow as tf
+import matplotlib.pyplot as plt
 
-    import torch
-    import keras
-    from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
-    from sklearn.model_selection import train_test_split
-    from sklearn.preprocessing import MinMaxScaler, OneHotEncoder
-    from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau       # type: ignore
-    from tensorflow.keras.layers import BatchNormalization, Dense, Dropout, Input # type: ignore
-    from tensorflow.keras.models import Sequential                                # type: ignore
-    from tensorflow.keras.optimizers import Adam                                  # type: ignore
-    from typing import Dict, Tuple
+import torch
+import keras
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import MinMaxScaler, OneHotEncoder
+from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau  # type: ignore
+from tensorflow.keras.layers import BatchNormalization, Dense, Dropout, Input  # type: ignore
+from tensorflow.keras.models import Sequential  # type: ignore
+from tensorflow.keras.optimizers import Adam  # type: ignore
+from typing import Dict, Tuple
 
-except Exception as e:
-    print(f"Error : {e}")
+import keras_tuner as kt  # Import Keras Tuner
+
 
 # Device configuration
 def get_device():
     if torch.backends.mps.is_available():
         device = torch.device("mps")
         print("Using Apple Silicon MPS!")
-        print(f"Is Apple MPS (Metal Performance Shader) built? {torch.backends.mps.is_built()}")
+        print(
+            f"Is Apple MPS (Metal Performance Shader) built? {torch.backends.mps.is_built()}"
+        )
         print(f"Is Apple MPS available? {torch.backends.mps.is_available()}\n")
     elif torch.cuda.is_available():
         device = torch.device("cuda")
@@ -35,7 +36,9 @@ def get_device():
         print("Using CPU.")
     return device
 
+
 device = get_device()
+
 
 def load_and_preprocess_data(data_path: str) -> pd.DataFrame:
     """
@@ -74,88 +77,106 @@ def load_and_preprocess_data(data_path: str) -> pd.DataFrame:
     return processed_df
 
 
-def create_model(input_dim: int) -> Sequential:
+def build_model(hp: kt.HyperParameters) -> keras.Sequential:
     """
-    Create a neural network model.
+    Build a neural network model with hyperparameters.
 
     Args:
-        input_dim (int): The number of input features.
+        hp (kt.HyperParameters): Hyperparameters for tuning.
 
     Returns:
-        Sequential: The compiled Keras Sequential model.
+        keras.Sequential: The compiled Keras Sequential model.
     """
-    model = keras.Sequential(
-        [
-            Input(shape=(input_dim,)),
-            Dense(64, activation="relu"),
-            BatchNormalization(),
-            Dropout(0.3),
-            Dense(32, activation="relu"),
-            BatchNormalization(),
-            Dropout(0.2),
-            Dense(16, activation="relu"),
-            BatchNormalization(),
-            Dropout(0.1),
-            Dense(1),
-        ]
-    )
+    model = keras.Sequential()
+    model.add(Input(shape=(input_dim,)))
+
+    # Tune the number of units in each Dense layer
+    for i in range(hp.Int("num_layers", 1, 3)):
+        units = hp.Int(f"units_{i}", min_value=16, max_value=128, step=16)
+        model.add(Dense(units=units, activation="relu"))
+        model.add(BatchNormalization())
+        dropout_rate = hp.Float(f"dropout_{i}", min_value=0.1, max_value=0.5, step=0.1)
+        model.add(Dropout(rate=dropout_rate))
+
+    # Output layer
+    model.add(Dense(1))
 
     # Compile the model
-    optimizer = Adam(learning_rate=0.001)
-    model.compile(optimizer=optimizer, loss="mse")
-
-    # Print model summary for verification
-    model.summary()
+    learning_rate = hp.Choice("learning_rate", [1e-2, 1e-3, 1e-4])
+    optimizer = Adam(learning_rate=learning_rate)
+    model.compile(optimizer=optimizer, loss="mse", metrics=["mae"])
 
     return model
 
 
-def train_model(
+def train_tuned_model(
     X_train: np.ndarray,
     X_test: np.ndarray,
     y_train: np.ndarray,
     y_test: np.ndarray,
-) -> Tuple[Sequential, tf.keras.callbacks.History]:
+) -> Tuple[keras.Sequential, tf.keras.callbacks.History]:
     """
-    Train the model with early stopping and learning rate reduction.
+    Train the model using hyperparameter tuning.
 
     Args:
         X_train (np.ndarray): Training features.
-        X_test (np.ndarray): Test features.
+        X_test (np.ndarray): Validation features.
         y_train (np.ndarray): Training targets.
-        y_test (np.ndarray): Test targets.
+        y_test (np.ndarray): Validation targets.
 
     Returns:
-        Tuple[Sequential, tf.keras.callbacks.History]: The trained model and training history.
+        Tuple[keras.Sequential, tf.keras.callbacks.History]: The best model and training history.
     """
-    # Create callbacks
-    early_stopping = EarlyStopping(
-        monitor="val_loss", patience=20, restore_best_weights=True
+    tuner = kt.RandomSearch(
+        build_model,
+        objective="val_loss",
+        max_trials=150,
+        executions_per_trial=1,
+        directory="TuningLogs",
+        project_name="Regression-NN",
     )
 
-    reduce_lr = ReduceLROnPlateau(
-        monitor="val_loss", factor=0.2, patience=10, min_lr=1e-5
+    stop_early = EarlyStopping(monitor="val_loss", patience=5)
+
+    tuner.search(
+        X_train,
+        y_train,
+        epochs=100,
+        validation_data=(X_test, y_test),
+        callbacks=[stop_early],
+        verbose=1,
     )
 
-    # Create and train model
-    input_dim = X_train.shape[1]
-    model = create_model(input_dim)
+    best_hps = tuner.get_best_hyperparameters(num_trials=1)[0]
 
+    # Build the model with the best hyperparameters
+    model = tuner.hypermodel.build(best_hps)
+
+    # Retrain the model
     history = model.fit(
         X_train,
         y_train,
         validation_data=(X_test, y_test),
-        epochs=450,
-        batch_size=38,
-        callbacks=[early_stopping, reduce_lr],
+        epochs=100,
+        callbacks=[stop_early],
         verbose=1,
     )
+
+    print(f"\n"+"-"*65+"\nBest Hyperparameters:")
+    print(f"Number of Layers: {best_hps.get('num_layers')}")
+    for i in range(best_hps.get("num_layers")):
+        print(
+            f"Units in Layer {i+1}: {best_hps.get(f'units_{i}')}, "
+            f"Dropout Rate: {best_hps.get(f'dropout_{i}')}"
+        )
+    print(f"Learning Rate: {best_hps.get('learning_rate')}")
+    print("-"*65)
 
     return model, history
 
 
 def evaluate_model(
-    model: Sequential, X_test: np.ndarray, y_test: np.ndarray
+    model: keras.Sequential, X_test: np.ndarray, y_test: np.ndarray
 ) -> Tuple[Dict[str, float], np.ndarray]:
     """
     Evaluate model performance with multiple metrics.
@@ -177,57 +198,6 @@ def evaluate_model(
     }
 
     return metrics, predictions
-
-
-def plot_results(
-    history: tf.keras.callbacks.History, y_test: np.ndarray, predictions: np.ndarray
-) -> None:
-    """
-    Create comprehensive visualization of model performance.
-
-    Args:
-        history (tf.keras.callbacks.History): The training history.
-        y_test (np.ndarray): True target values.
-        predictions (np.ndarray): Predicted target values.
-    """
-    # Create subplots
-    fig, axes = plt.subplots(2, 2, figsize=(20, 15))
-
-    # Plot 1: Training History
-    losses = pd.DataFrame(history.history)
-    sns.lineplot(data=losses, ax=axes[0, 0], lw=2)
-    axes[0, 0].set_title("Training and Validation Loss")
-    axes[0, 0].set_xlabel("Epochs")
-    axes[0, 0].set_ylabel("Loss")
-
-    # Plot 2: Prediction vs Actual
-    axes[0, 1].scatter(y_test, predictions, alpha=0.5)
-    axes[0, 1].plot(
-        [y_test.min(), y_test.max()],
-        [y_test.min(), y_test.max()],
-        "r--",
-        lw=2,
-    )
-    axes[0, 1].set_title("Predictions vs Actual Values")
-    axes[0, 1].set_xlabel("Actual Values")
-    axes[0, 1].set_ylabel("Predicted Values")
-
-    # Plot 3: Error Distribution
-    errors = y_test - predictions
-    sns.histplot(errors, kde=True, ax=axes[1, 0])
-    axes[1, 0].set_title("Error Distribution")
-    axes[1, 0].set_xlabel("Error")
-    axes[1, 0].set_ylabel("Count")
-
-    # Plot 4: Residuals
-    axes[1, 1].scatter(predictions, errors, alpha=0.5)
-    axes[1, 1].axhline(y=0, color="r", linestyle="--")
-    axes[1, 1].set_title("Residual Plot")
-    axes[1, 1].set_xlabel("Predicted Values")
-    axes[1, 1].set_ylabel("Residuals")
-
-    plt.tight_layout()
-    plt.show()
 
 
 def display_single_prediction(
@@ -279,6 +249,7 @@ def display_single_prediction(
     print(f"\nAbsolute Error: {error:.2f}")
     print(f"Error Percentage: {error_percentage:.2f}%")
 
+
 def main():
     # Set random seeds for reproducibility
     np.random.seed(42)
@@ -293,6 +264,9 @@ def main():
     X = df.drop(columns=target)
     y = df[target]
 
+    global input_dim
+    input_dim = X.shape[1]
+
     # Train-test split
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=0.2, random_state=42
@@ -303,8 +277,8 @@ def main():
     X_train_scaled = scaler.fit_transform(X_train)
     X_test_scaled = scaler.transform(X_test)
 
-    # Train model
-    model, history = train_model(
+    # Train model with hyperparameter tuning
+    model, history = train_tuned_model(
         X_train_scaled, X_test_scaled, y_train.values, y_test.values
     )
 
@@ -312,22 +286,20 @@ def main():
     metrics, predictions = evaluate_model(model, X_test_scaled, y_test.values)
 
     # Print metrics
-
-    print(f"\n"+"-"*65+"\nModel Performance Metrics:")
+    print(f"\n{'-'*65}\nModel Performance Metrics:")
     for metric_name, value in metrics.items():
         print(f"{metric_name}: {value:.2f}")
-    print("-"*65)
-    # Plot results
-    # plot_results(history, y_test.values, predictions)
+    print("-" * 65)
 
     # Create test DataFrame with unscaled features and target
     test_df = X_test.copy()
     test_df[target] = y_test.values
     test_df.reset_index(drop=True, inplace=True)
 
-    # Display prediction for first sample
+    # Display prediction for a sample
     print("\nPrediction for a sample:")
     display_single_prediction(model, test_df, scaler, target, index=0)
+
 
 if __name__ == "__main__":
     try:
