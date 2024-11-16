@@ -180,7 +180,7 @@ def display_single_prediction(model, df, scaler, index=0):
     Display features and make prediction for a single part
     """
     # Get features of specified part type
-    single_partType = df.drop('Lifespan', axis=1).iloc[index]
+    single_partType = df.drop(target, axis=1).iloc[np.random.randint(0, len(df))]
 
     # Display features with proper formatting
     print('Features of new part type:')
@@ -198,16 +198,16 @@ def display_single_prediction(model, df, scaler, index=0):
     prediction = model.predict(single_partType_scaled, verbose=1)[0,0]
 
     # Get original lifespan
-    original = df.iloc[index]['Lifespan']
+    original = df.iloc[index][target]
 
     # Display results
-    print(f'\nPrediction Lifespan: {prediction:.4f}')
-    print(f'\nOriginal Lifespan: {original:.2f}')
+    print(f'\nPrediction Lifespan: {prediction:.2f}')
+    print(f'Original Lifespan  : {original:.2f}')
 
     # Calculate and display prediction error
     error = abs(prediction - original)
     error_percentage = (error / original) * 100
-    print(f'\nAbsolute Error: {error:.4f}')
+    print(f'\nAbsolute Error: {error:.2f}')
     print(f'Error Percentage: {error_percentage:.2f}%')
 
 # Main execution
@@ -215,9 +215,10 @@ if __name__ == "__main__":
     # Load and preprocess data
     df = load_and_preprocess_data('../Datasets/*.csv')
 
+    target = 'Lifespan'
     # Split features and target
-    X = df.drop('Lifespan', axis=1)
-    y = df['Lifespan']
+    X = df.drop(target, axis=1)
+    y = df[target]
 
     # Train-test split
     X_train, X_test, y_train, y_test = train_test_split(
@@ -238,11 +239,16 @@ if __name__ == "__main__":
     # Print metrics
     print("\nModel Performance Metrics:")
     for metric_name, value in metrics.items():
-        print(f"{metric_name}: {value:.4f}")
+        print(f"{metric_name}: {value:.2f}")
 
-    # Plot results
-    # plot_results(history, y_test, predictions)
+    # The dataframe `tps` simply means test prediction set
+    tps = X_test.copy()
+    copy = y_test.copy()
 
+    tps[target] = copy
+
+    tps.reset_index(drop=True, inplace=True)
+    
     # Display prediction for first part
     print("\nPrediction for first part:")
-    display_single_prediction(model, df, scaler, index=0)
+    display_single_prediction(model, tps, scaler, index=0)
