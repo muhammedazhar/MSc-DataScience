@@ -8,6 +8,7 @@ statsmodels
 
 # Neural Network Libraries
 tensorflow
+tensorflow-macos  # Accelerated training on Apple Silicon
 tensorflow-metal  # Accelerated training on Apple Silicon
 keras-tuner
 
