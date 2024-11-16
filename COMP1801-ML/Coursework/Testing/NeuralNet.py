@@ -6,6 +6,8 @@ try:
     import tensorflow as tf
     import matplotlib.pyplot as plt
 
+    import torch
+    import keras
     from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
     from sklearn.model_selection import train_test_split
     from sklearn.preprocessing import MinMaxScaler, OneHotEncoder
@@ -17,6 +19,23 @@ try:
 
 except Exception as e:
     print(f"Error : {e}")
+
+# Device configuration
+def get_device():
+    if torch.backends.mps.is_available():
+        device = torch.device("mps")
+        print("Using Apple Silicon MPS!")
+        print(f"Is Apple MPS (Metal Performance Shader) built? {torch.backends.mps.is_built()}")
+        print(f"Is Apple MPS available? {torch.backends.mps.is_available()}\n")
+    elif torch.cuda.is_available():
+        device = torch.device("cuda")
+        print("Using CUDA device!")
+    else:
+        device = torch.device("cpu")
+        print("Using CPU.")
+    return device
+
+device = get_device()
 
 def load_and_preprocess_data(data_path: str) -> pd.DataFrame:
     """
@@ -65,7 +84,7 @@ def create_model(input_dim: int) -> Sequential:
     Returns:
         Sequential: The compiled Keras Sequential model.
     """
-    model = Sequential(
+    model = keras.Sequential(
         [
             Input(shape=(input_dim,)),
             Dense(64, activation="relu"),
@@ -126,7 +145,7 @@ def train_model(
         X_train,
         y_train,
         validation_data=(X_test, y_test),
-        epochs=400,
+        epochs=450,
         batch_size=38,
         callbacks=[early_stopping, reduce_lr],
         verbose=1,
@@ -152,9 +171,9 @@ def evaluate_model(
     predictions = model.predict(X_test, verbose=0).flatten()
 
     metrics = {
-        "MAE": mean_absolute_error(y_test, predictions),
         "RMSE": np.sqrt(mean_squared_error(y_test, predictions)),
-        "R-squared": r2_score(y_test, predictions),
+        "R²": r2_score(y_test, predictions),
+        "MAE": mean_absolute_error(y_test, predictions),
     }
 
     return metrics, predictions
@@ -212,7 +231,7 @@ def plot_results(
 
 
 def display_single_prediction(
-    model: Sequential,
+    model: keras.Sequential,
     df: pd.DataFrame,
     scaler: MinMaxScaler,
     target: str,
@@ -293,10 +312,11 @@ def main():
     metrics, predictions = evaluate_model(model, X_test_scaled, y_test.values)
 
     # Print metrics
-    print("\nModel Performance Metrics:")
+
+    print(f"\n"+"-"*65+"\nModel Performance Metrics:")
     for metric_name, value in metrics.items():
         print(f"{metric_name}: {value:.2f}")
-
+    print("-"*65)
     # Plot results
     # plot_results(history, y_test.values, predictions)
 
