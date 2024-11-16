@@ -51,13 +51,16 @@ class MetalPartsPredictor:
             ]
         )
 
-        # Create pipeline
+        # Create pipeline with optimized parameters from grid search
         self.model = Pipeline([
             ('preprocessor', self.preprocessor),
             ('regressor', XGBRegressor(
-                max_depth=10,
-                n_estimators=200,
-                learning_rate=0.1,
+                max_depth=3,              # Updated from grid search
+                n_estimators=300,         # Updated from grid search
+                learning_rate=0.1,        # From grid search
+                min_child_weight=5,       # Added from grid search
+                subsample=0.6,            # Added from grid search
+                colsample_bytree=1.0,     # Added from grid search
                 random_state=self.random_state,
                 n_jobs=-1
             ))
