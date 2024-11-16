@@ -35,18 +35,18 @@ def load_and_preprocess_data(data_path):
         print(f"Loaded dataset from: {file_list[0]}")
 
         # Define categorical columns
-        categorical_cols = ['partType', 'microstructure', 'seedLocation', 'castType']
+        categorical_features = df.select_dtypes(include=['object']).columns.tolist()
 
         # One-hot encode categorical variables
         encoder = OneHotEncoder(sparse_output=False, drop=None)
-        encoded_data = encoder.fit_transform(df[categorical_cols])
+        encoded_data = encoder.fit_transform(df[categorical_features])
         encoded_df = pd.DataFrame(
             encoded_data,
-            columns=encoder.get_feature_names_out(categorical_cols)
+            columns=encoder.get_feature_names_out(categorical_features)
         )
 
         # Combine with numerical columns
-        processed_df = pd.concat([df.drop(columns=categorical_cols), encoded_df], axis=1)
+        processed_df = pd.concat([df.drop(columns=categorical_features), encoded_df], axis=1)
 
         return processed_df
 
