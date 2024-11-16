@@ -2,6 +2,7 @@
 
 # Model files
 *.pkl
+*.joblib
 
 # Compiled Python files
 *.pyc

@@ -253,7 +253,6 @@ def display_single_prediction(
     # Display features with proper formatting
     print("Features of the random sample:")
     print(sample_features.to_string())
-    print()
 
     # Convert to DataFrame with feature names
     sample_features_df = pd.DataFrame(
