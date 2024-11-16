@@ -260,8 +260,7 @@ def display_single_prediction(
     print(f"\nAbsolute Error: {error:.2f}")
     print(f"Error Percentage: {error_percentage:.2f}%")
 
-
-if __name__ == "__main__":
+def main():
     # Set random seeds for reproducibility
     np.random.seed(42)
     tf.random.set_seed(42)
@@ -309,3 +308,9 @@ if __name__ == "__main__":
     # Display prediction for first sample
     print("\nPrediction for a sample:")
     display_single_prediction(model, test_df, scaler, target, index=0)
+
+if __name__ == "__main__":
+    try:
+        main()
+    except Exception as e:
+        print(f"Error: {e}")
