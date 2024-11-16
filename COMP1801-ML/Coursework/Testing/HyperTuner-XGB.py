@@ -1,12 +1,13 @@
 """
 COMP1801-ML Coursework T1-Regression Implementation
 ---------------------------------------------------
-XGBoost Hyperparameter Tuning Pipeline
+XGBoost Hyperparameter Tuning Pipeline with Command Line Arguments
 """
 
 try:
     import pandas as pd
     import numpy as np
+    import argparse
     from pathlib import Path
     from sklearn.compose import ColumnTransformer
     from sklearn.preprocessing import OneHotEncoder, StandardScaler
@@ -26,7 +27,6 @@ try:
 
 except Exception as e:
     print(f"Error: {e}")
-
 
 class XGBoostTuner:
     def __init__(self, random_state=42):
@@ -158,30 +158,107 @@ class XGBoostTuner:
             print(f"Error Percentage: {error_percentage:.2f}%")
             print("="*50)
 
+def parse_arguments():
+    """Parse command line arguments."""
+    parser = argparse.ArgumentParser(
+        description='XGBoost Hyperparameter Tuning Pipeline',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+  python HyperTuner-XGB.py --method random --iterations 100
+  python HyperTuner-XGB.py --method grid
+  python HyperTuner-XGB.py --method random --iterations 50 --seed 123
+        """
+    )
+    
+    parser.add_argument(
+        '--method',
+        type=str,
+        choices=['random', 'grid'],
+        help='Search method (random or grid)'
+    )
+    
+    parser.add_argument(
+        '--iterations',
+        type=int,
+        default=100,
+        help='Number of iterations for random search (default: 100)'
+    )
+    
+    parser.add_argument(
+        '--seed',
+        type=int,
+        default=42,
+        help='Random seed for reproducibility (default: 42)'
+    )
+    
+    parser.add_argument(
+        '--data',
+        type=str,
+        help='Path to the dataset (default: ../Datasets/*.csv)'
+    )
+
+    parser.add_argument(
+        '--verbose',
+        action='store_true',
+        help='Enable verbose output'
+    )
+
+    return parser
 
 def main():
-    # Initialize tuner
-    tuner = XGBoostTuner()
+    # Set up argument parser
+    parser = parse_arguments()
+    args = parser.parse_args()
+
+    # If no arguments provided, show help
+    if not any(vars(parser.parse_args([])).values()):
+        parser.print_help()
+        print("\nNo arguments provided. Please enter the search method:")
+        args.method = input("Enter search method (random/grid): ").lower()
+        if args.method == 'random':
+            try:
+                args.iterations = int(input("Enter number of iterations (default 100): ") or "100")
+            except ValueError:
+                print("Invalid input. Using default value of 100 iterations.")
+                args.iterations = 100
+
+    # Validate search method
+    if args.method not in ['random', 'grid']:
+        print("Invalid method. Defaulting to random search.")
+        args.method = 'random'
+
+    # Initialize tuner with specified seed
+    tuner = XGBoostTuner(random_state=args.seed)
 
     # Load data
-    data_path = Path('../Datasets').glob('*.csv')
+    data_path = args.data if args.data else '../Datasets/*.csv'
     try:
-        filepath = next(data_path)
+        filepath = next(Path().glob(data_path))
     except StopIteration:
-        raise FileNotFoundError("No CSV file found in the Datasets directory.")
+        raise FileNotFoundError(f"No CSV file found at {data_path}")
 
     df = tuner.load_data(filepath)
 
     # Prepare pipeline
     X, y = tuner.create_pipeline(df)
 
-    # Perform hyperparameter tuning
-    search_method = input("Enter search method (random/grid): ").lower()
-    if search_method not in ['random', 'grid']:
-        print("Invalid method. Defaulting to random search.")
-        search_method = 'random'
+    # Show configuration if verbose
+    if args.verbose:
+        print("\nConfiguration:")
+        print(f"Search Method: {args.method}")
+        print(f"Random Seed: {args.seed}")
+        if args.method == 'random':
+            print(f"Number of Iterations: {args.iterations}")
+        print(f"Data Path: {filepath}")
+        print()
 
-    metrics, (X_train, X_test, y_train, y_test) = tuner.tune_hyperparameters(X, y, method=search_method)
+    # Perform hyperparameter tuning
+    metrics, (X_train, X_test, y_train, y_test) = tuner.tune_hyperparameters(
+        X, y, 
+        method=args.method,
+        n_iter=args.iterations
+    )
 
     # Print best parameters
     print("\nBest Parameters Found:")
