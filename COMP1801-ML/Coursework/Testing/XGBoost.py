@@ -3,22 +3,24 @@ COMP1801-ML Coursework T1-Regression Implementation
 ---------------------------------------------------
 XGBoost Pipeline for Metal Parts Lifespan Prediction
 """
+try:
+    import pandas as pd
+    import numpy as np
+    from pathlib import Path
+    from sklearn.compose import ColumnTransformer
+    from sklearn.preprocessing import OneHotEncoder, StandardScaler
+    from sklearn.model_selection import train_test_split, cross_val_score
+    from sklearn.pipeline import Pipeline
+    from sklearn.metrics import (
+        root_mean_squared_error,
+        r2_score,
+        mean_absolute_error,
+        make_scorer
+    )
+    from xgboost import XGBRegressor
 
-import pandas as pd
-import numpy as np
-from pathlib import Path
-from sklearn.compose import ColumnTransformer
-from sklearn.preprocessing import OneHotEncoder, StandardScaler
-from sklearn.model_selection import train_test_split, cross_val_score
-from sklearn.pipeline import Pipeline
-from sklearn.metrics import (
-    root_mean_squared_error,
-    r2_score,
-    mean_absolute_error,
-    make_scorer
-)
-from xgboost import XGBRegressor
-
+except Exception as e:
+    print(f"Error: {e}")
 
 class MetalPartsPredictor:
     def __init__(self, random_state=42):
