@@ -10,3 +10,6 @@
 
 # Hyperparameter Tuning Log Files
 TuningLogs/
+
+# Testing scripts
+Test.*
