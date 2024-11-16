@@ -17,10 +17,10 @@ try:
         r2_score,
         mean_absolute_error
     )
-    from tensorflow.keras.models import Sequential
-    from tensorflow.keras.layers import Dense, Dropout, BatchNormalization, Input
-    from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau
-    from tensorflow.keras.optimizers import Adam
+    from tensorflow.keras.models import Sequential                                 # type: ignore
+    from tensorflow.keras.layers import Dense, Dropout, BatchNormalization, Input  # type: ignore
+    from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau        # type: ignore
+    from tensorflow.keras.optimizers import Adam                                   # type: ignore
 
 except Exception as e:
     print(f"Error: {e}")
