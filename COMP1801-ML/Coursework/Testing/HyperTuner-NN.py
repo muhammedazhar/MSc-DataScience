@@ -1,304 +1,347 @@
-import glob
-import numpy as np
-import pandas as pd
-import seaborn as sns
-import tensorflow as tf
-import matplotlib.pyplot as plt
+"""
+COMP1801-ML Coursework T1-Regression Implementation
+---------------------------------------------------
+Neural Network Hyperparameter Tuning Pipeline with Command Line Arguments
+"""
 
-import torch
-import keras
-from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import MinMaxScaler, OneHotEncoder
-from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau  # type: ignore
-from tensorflow.keras.layers import BatchNormalization, Dense, Dropout, Input  # type: ignore
-from tensorflow.keras.models import Sequential  # type: ignore
-from tensorflow.keras.optimizers import Adam  # type: ignore
-from typing import Dict, Tuple
+try:
+    import pandas as pd
+    import numpy as np
+    import argparse
+    from pathlib import Path
+    import tensorflow as tf
+    from sklearn.compose import ColumnTransformer
+    from sklearn.preprocessing import OneHotEncoder, MinMaxScaler
+    from sklearn.model_selection import train_test_split
+    from sklearn.metrics import (
+        root_mean_squared_error,
+        r2_score,
+        mean_absolute_error
+    )
+    from tensorflow.keras.models import Sequential        # type: ignore
+    from tensorflow.keras.layers import (                 # type: ignore
+        Dense, Dropout, BatchNormalization, Input
+    )
+    from tensorflow.keras.callbacks import EarlyStopping  # type: ignore
+    from tensorflow.keras.optimizers import Adam          # type: ignore
+    import keras_tuner as kt
 
-import keras_tuner as kt  # Import Keras Tuner
+except Exception as e:
+    print(f"Error: {e}")
 
 
-# Device configuration
-def get_device():
-    if torch.backends.mps.is_available():
-        device = torch.device("mps")
-        print("Using Apple Silicon MPS!")
-        print(
-            f"Is Apple MPS (Metal Performance Shader) built? {torch.backends.mps.is_built()}"
+class NeuralNetTuner:
+    def __init__(self, random_state=42):
+        self.random_state = random_state
+        self.model = None
+        self.preprocessor = None
+        self.best_params = None
+        self.input_dim = None
+        
+        # Set random seeds for reproducibility
+        np.random.seed(self.random_state)
+        tf.random.set_seed(self.random_state)
+        
+        # Define parameter grids
+        self.grid_params = {
+            'num_layers': [1, 2, 3],
+            'units_per_layer': [32, 64, 128],
+            'dropout_rate': [0.1, 0.3, 0.5],
+            'learning_rate': [1e-2, 1e-3, 1e-4]
+        }
+
+    def load_data(self, filepath):
+        """Load and prepare the dataset."""
+        df = pd.read_csv(filepath)
+        print(f"Loaded dataset with shape: {df.shape}")
+        return df
+
+    def create_pipeline(self, df, target='Lifespan'):
+        """Create preprocessing and model pipeline."""
+        # Separate features and target
+        X = df.drop(columns=[target])
+        y = df[target]
+
+        # Identify column types
+        categorical_cols = df.select_dtypes(include=['object']).columns.tolist()
+        numeric_cols = [col for col in X.select_dtypes(include=['int64', 'float64']).columns
+                       if col not in categorical_cols]
+
+        # Create preprocessor
+        self.preprocessor = ColumnTransformer(
+            transformers=[
+                ('num', MinMaxScaler(), numeric_cols),
+                ('cat', OneHotEncoder(handle_unknown='ignore', sparse_output=False), categorical_cols)
+            ]
         )
-        print(f"Is Apple MPS available? {torch.backends.mps.is_available()}\n")
-    elif torch.cuda.is_available():
-        device = torch.device("cuda")
-        print("Using CUDA device!")
-    else:
-        device = torch.device("cpu")
-        print("Using CPU.")
-    return device
 
+        self.input_dim = len(numeric_cols) + sum(len(df[col].unique()) for col in categorical_cols)
+        return X, y
 
-device = get_device()
+    def build_model(self, hp, method='random'):
+        """Build neural network model with specified hyperparameters."""
+        model = Sequential()
+        model.add(Input(shape=(self.input_dim,)))
+        
+        if method == 'random':
+            # Random search hyperparameters
+            n_layers = hp.Int('num_layers', 1, 3)
+            for i in range(n_layers):
+                units = hp.Int(f'units_{i}', min_value=32, max_value=128, step=32)
+                model.add(Dense(units=units, activation='relu'))
+                model.add(BatchNormalization())
+                dropout_rate = hp.Float(f'dropout_{i}', min_value=0.1, max_value=0.5, step=0.1)
+                model.add(Dropout(rate=dropout_rate))
+        else:
+            # Grid search hyperparameters
+            n_layers = hp['num_layers']
+            units = hp['units_per_layer']
+            dropout_rate = hp['dropout_rate']
+            for _ in range(n_layers):
+                model.add(Dense(units=units, activation='relu'))
+                model.add(BatchNormalization())
+                model.add(Dropout(rate=dropout_rate))
 
+        model.add(Dense(1))
+        
+        learning_rate = hp['learning_rate'] if method == 'grid' else hp.Choice('learning_rate', [1e-2, 1e-3, 1e-4])
+        optimizer = Adam(learning_rate=learning_rate)
+        model.compile(optimizer=optimizer, loss='mse', metrics=['mae'])
+        
+        return model
 
-def load_and_preprocess_data(data_path: str) -> pd.DataFrame:
-    """
-    Load and preprocess the dataset.
-
-    Args:
-        data_path (str): The glob pattern to match CSV files.
-
-    Returns:
-        pd.DataFrame: The preprocessed DataFrame.
-    """
-    # Find and load the CSV file
-    file_list = glob.glob(data_path)
-    if len(file_list) != 1:
-        raise FileNotFoundError(
-            f"Expected exactly one CSV file, found {len(file_list)} files."
+    def tune_hyperparameters(self, X, y, method='random', n_iter=100):
+        """Tune hyperparameters using specified search method."""
+        X_train, X_test, y_train, y_test = train_test_split(
+            X, y, test_size=0.2, random_state=self.random_state
         )
-    df = pd.read_csv(file_list[0])
-    print(f"Loaded dataset from: {file_list[0]}")
 
-    # Identify categorical features
-    categorical_features = df.select_dtypes(include=["object"]).columns.tolist()
+        # Preprocess the data
+        X_train_processed = self.preprocessor.fit_transform(X_train)
+        X_test_processed = self.preprocessor.transform(X_test)
 
-    # One-hot encode categorical variables
-    encoder = OneHotEncoder(sparse_output=False, drop=None)
-    encoded_data = encoder.fit_transform(df[categorical_features])
-    encoded_df = pd.DataFrame(
-        encoded_data, columns=encoder.get_feature_names_out(categorical_features)
+        early_stopping = EarlyStopping(monitor='val_loss', patience=10, restore_best_weights=True)
+
+        if method.lower() == 'random':
+            tuner = kt.RandomSearch(
+                lambda hp: self.build_model(hp, 'random'),
+                objective='val_loss',
+                max_trials=n_iter,
+                directory="TuningLogs",
+                project_name="Regression-NN",
+                overwrite=True
+            )
+            
+            tuner.search(
+                X_train_processed, y_train,
+                validation_data=(X_test_processed, y_test),
+                epochs=100,
+                callbacks=[early_stopping],
+                verbose=1
+            )
+            
+            self.best_params = tuner.get_best_hyperparameters(1)[0]
+            self.model = tuner.get_best_models(1)[0]
+            
+        else:  # grid search
+            best_val_loss = float('inf')
+            best_model = None
+            best_params = None
+            
+            # Iterate through all combinations
+            for n_layers in self.grid_params['num_layers']:
+                for units in self.grid_params['units_per_layer']:
+                    for dropout in self.grid_params['dropout_rate']:
+                        for lr in self.grid_params['learning_rate']:
+                            current_params = {
+                                'num_layers': n_layers,
+                                'units_per_layer': units,
+                                'dropout_rate': dropout,
+                                'learning_rate': lr
+                            }
+                            
+                            model = self.build_model(current_params, 'grid')
+                            history = model.fit(
+                                X_train_processed, y_train,
+                                validation_data=(X_test_processed, y_test),
+                                epochs=100,
+                                callbacks=[early_stopping],
+                                verbose=0
+                            )
+                            
+                            val_loss = min(history.history['val_loss'])
+                            if val_loss < best_val_loss:
+                                best_val_loss = val_loss
+                                best_model = model
+                                best_params = current_params
+            
+            self.model = best_model
+            self.best_params = best_params
+
+        # Make predictions and calculate metrics
+        y_pred = self.model.predict(X_test_processed, verbose=0).flatten()
+        
+        metrics = {
+            'RMSE': root_mean_squared_error(y_test, y_pred),
+            'R²': r2_score(y_test, y_pred),
+            'MAE': mean_absolute_error(y_test, y_pred)
+        }
+
+        return metrics, (X_train, X_test, y_train, y_test)
+
+    def make_random_predictions(self, X_test, y_test, n_predictions=5):
+        """Generate random predictions from test set."""
+        X_test_processed = self.preprocessor.transform(X_test)
+        test_indices = np.random.choice(len(X_test), n_predictions, replace=False)
+
+        print("\n=== Random Predictions from Test Set ===")
+
+        for idx in test_indices:
+            sample = X_test.iloc[[idx]]
+            sample_processed = self.preprocessor.transform(sample)
+            true_value = y_test.iloc[idx]
+            prediction = self.model.predict(sample_processed, verbose=0)[0][0]
+
+            error = abs(prediction - true_value)
+            error_percentage = (error / true_value) * 100 if true_value != 0 else 0
+
+            print("\n" + "="*50)
+            print("Sample Features:")
+            for feature, value in sample.iloc[0].items():
+                print(f"{feature}: {value}")
+
+            print(f"\nPrediction Results:")
+            print(f"Predicted Lifespan: {prediction:.2f} hours")
+            print(f"Actual Lifespan: {true_value:.2f} hours")
+            print(f"Absolute Error: {error:.2f} hours")
+            print(f"Error Percentage: {error_percentage:.2f}%")
+            print("="*50)
+
+
+def parse_arguments():
+    """Parse command line arguments."""
+    parser = argparse.ArgumentParser(
+        description='Neural Network Hyperparameter Tuning Pipeline',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+  python HyperTuner-NN.py --method random --iterations 100
+  python HyperTuner-NN.py --method grid
+  python HyperTuner-NN.py --method random --iterations 50 --seed 123
+        """
+    )
+    
+    parser.add_argument(
+        '--method',
+        type=str,
+        choices=['random', 'grid'],
+        help='Search method (random or grid)'
+    )
+    
+    parser.add_argument(
+        '--iterations',
+        type=int,
+        default=100,
+        help='Number of iterations for random search (default: 100)'
+    )
+    
+    parser.add_argument(
+        '--seed',
+        type=int,
+        default=42,
+        help='Random seed for reproducibility (default: 42)'
+    )
+    
+    parser.add_argument(
+        '--data',
+        type=str,
+        help='Path to the dataset (default: ../Datasets/*.csv)'
     )
 
-    # Combine with numerical columns
-    processed_df = pd.concat(
-        [df.drop(columns=categorical_features), encoded_df], axis=1
+    parser.add_argument(
+        '--verbose',
+        action='store_true',
+        help='Enable verbose output'
     )
 
-    return processed_df
-
-
-def build_model(hp: kt.HyperParameters) -> keras.Sequential:
-    """
-    Build a neural network model with hyperparameters.
-
-    Args:
-        hp (kt.HyperParameters): Hyperparameters for tuning.
-
-    Returns:
-        keras.Sequential: The compiled Keras Sequential model.
-    """
-    model = keras.Sequential()
-    model.add(Input(shape=(input_dim,)))
-
-    # Tune the number of units in each Dense layer
-    for i in range(hp.Int("num_layers", 1, 3)):
-        units = hp.Int(f"units_{i}", min_value=16, max_value=128, step=16)
-        model.add(Dense(units=units, activation="relu"))
-        model.add(BatchNormalization())
-        dropout_rate = hp.Float(f"dropout_{i}", min_value=0.1, max_value=0.5, step=0.1)
-        model.add(Dropout(rate=dropout_rate))
-
-    # Output layer
-    model.add(Dense(1))
-
-    # Compile the model
-    learning_rate = hp.Choice("learning_rate", [1e-2, 1e-3, 1e-4])
-    optimizer = Adam(learning_rate=learning_rate)
-    model.compile(optimizer=optimizer, loss="mse", metrics=["mae"])
-
-    return model
-
-
-def train_tuned_model(
-    X_train: np.ndarray,
-    X_test: np.ndarray,
-    y_train: np.ndarray,
-    y_test: np.ndarray,
-) -> Tuple[keras.Sequential, tf.keras.callbacks.History]:
-    """
-    Train the model using hyperparameter tuning.
-
-    Args:
-        X_train (np.ndarray): Training features.
-        X_test (np.ndarray): Validation features.
-        y_train (np.ndarray): Training targets.
-        y_test (np.ndarray): Validation targets.
-
-    Returns:
-        Tuple[keras.Sequential, tf.keras.callbacks.History]: The best model and training history.
-    """
-    tuner = kt.RandomSearch(
-        build_model,
-        objective="val_loss",
-        max_trials=150,
-        executions_per_trial=1,
-        directory="TuningLogs",
-        project_name="Regression-NN",
-    )
-
-    stop_early = EarlyStopping(monitor="val_loss", patience=5)
-
-    tuner.search(
-        X_train,
-        y_train,
-        epochs=100,
-        validation_data=(X_test, y_test),
-        callbacks=[stop_early],
-        verbose=1,
-    )
-
-    best_hps = tuner.get_best_hyperparameters(num_trials=1)[0]
-
-    # Build the model with the best hyperparameters
-    model = tuner.hypermodel.build(best_hps)
-
-    # Retrain the model
-    history = model.fit(
-        X_train,
-        y_train,
-        validation_data=(X_test, y_test),
-        epochs=100,
-        callbacks=[stop_early],
-        verbose=1,
-    )
-
-    print(f"\n"+"-"*65+"\nBest Hyperparameters:")
-    print(f"Number of Layers: {best_hps.get('num_layers')}")
-    for i in range(best_hps.get("num_layers")):
-        print(
-            f"Units in Layer {i+1}: {best_hps.get(f'units_{i}')}, "
-            f"Dropout Rate: {best_hps.get(f'dropout_{i}')}"
-        )
-    print(f"Learning Rate: {best_hps.get('learning_rate')}")
-    print("-"*65)
-
-    return model, history
-
-
-def evaluate_model(
-    model: keras.Sequential, X_test: np.ndarray, y_test: np.ndarray
-) -> Tuple[Dict[str, float], np.ndarray]:
-    """
-    Evaluate model performance with multiple metrics.
-
-    Args:
-        model (Sequential): The trained Keras model.
-        X_test (np.ndarray): Test features.
-        y_test (np.ndarray): Test targets.
-
-    Returns:
-        Tuple[Dict[str, float], np.ndarray]: A dictionary of evaluation metrics and predictions.
-    """
-    predictions = model.predict(X_test, verbose=0).flatten()
-
-    metrics = {
-        "RMSE": np.sqrt(mean_squared_error(y_test, predictions)),
-        "R²": r2_score(y_test, predictions),
-        "MAE": mean_absolute_error(y_test, predictions),
-    }
-
-    return metrics, predictions
-
-
-def display_single_prediction(
-    model: keras.Sequential,
-    test_df: pd.DataFrame,
-    scaler: MinMaxScaler,
-    target: str,
-    index: int = 0,
-) -> None:
-    """
-    Display features and make prediction for a single sample.
-
-    Args:
-        model (Sequential): The trained Keras model.
-        df (pd.DataFrame): DataFrame containing features and target.
-        scaler (MinMaxScaler): The scaler used to scale features.
-        target (str): The name of the target column.
-        index (int): The index of the sample to predict.
-    """
-    # Get features of a random sample
-    sample_features = test_df.drop(columns=target).iloc[np.random.randint(0, len(test_df))]
-
-    # Display features with proper formatting
-    print("Features of the random sample:")
-    print(sample_features.to_string())
-    print()
-
-    # Convert to DataFrame with feature names
-    sample_features_df = pd.DataFrame(
-        [sample_features.values], columns=sample_features.index
-    )
-
-    # Scale the features
-    sample_features_scaled = scaler.transform(sample_features_df)
-
-    # Make prediction
-    prediction = model.predict(sample_features_scaled, verbose=0)[0, 0]
-
-    # Get original target value
-    original = test_df.iloc[index][target]
-
-    # Display results
-    print(f"\nPredicted {target} : {prediction:.2f}")
-    print(f"Actual {target}    : {original:.2f}")
-
-    # Calculate and display prediction error
-    error = abs(prediction - original)
-    error_percentage = (error / original) * 100 if original != 0 else 0
-    print(f"\nAbsolute Error: {error:.2f}")
-    print(f"Error Percentage: {error_percentage:.2f}%")
+    return parser
 
 
 def main():
-    # Set random seeds for reproducibility
-    np.random.seed(42)
-    tf.random.set_seed(42)
+    # Set up argument parser
+    parser = parse_arguments()
+    args = parser.parse_args()
 
-    # Load and preprocess data
-    df = load_and_preprocess_data("../Datasets/*.csv")
+    # If no arguments provided, show help
+    if not any(vars(parser.parse_args([])).values()):
+        parser.print_help()
+        print("\nNo arguments provided. Please enter the search method:")
+        args.method = input("Enter search method (random/grid): ").lower()
+        if args.method == 'random':
+            try:
+                args.iterations = int(input("Enter number of iterations (default 100): ") or "100")
+            except ValueError:
+                print("Invalid input. Using default value of 100 iterations.")
+                args.iterations = 100
 
-    target = "Lifespan"
+    # Validate search method
+    if args.method not in ['random', 'grid']:
+        print("Invalid method. Defaulting to random search.")
+        args.method = 'random'
 
-    # Split features and target
-    X = df.drop(columns=target)
-    y = df[target]
+    # Initialize tuner with specified seed
+    tuner = NeuralNetTuner(random_state=args.seed)
 
-    global input_dim
-    input_dim = X.shape[1]
+    # Load data
+    data_path = args.data if args.data else '../Datasets/*.csv'
+    try:
+        filepath = next(Path().glob(data_path))
+    except StopIteration:
+        raise FileNotFoundError(f"No CSV file found at {data_path}")
 
-    # Train-test split
-    X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=0.2, random_state=42
+    df = tuner.load_data(filepath)
+
+    # Prepare pipeline
+    X, y = tuner.create_pipeline(df)
+
+    # Show configuration if verbose
+    if args.verbose:
+        print("\nConfiguration:")
+        print(f"Search Method: {args.method}")
+        print(f"Random Seed: {args.seed}")
+        if args.method == 'random':
+            print(f"Number of Iterations: {args.iterations}")
+        print(f"Data Path: {filepath}")
+        print()
+
+    # Perform hyperparameter tuning
+    metrics, (X_train, X_test, y_train, y_test) = tuner.tune_hyperparameters(
+        X, y, 
+        method=args.method,
+        n_iter=args.iterations
     )
 
-    # Scale features
-    scaler = MinMaxScaler()
-    X_train_scaled = scaler.fit_transform(X_train)
-    X_test_scaled = scaler.transform(X_test)
+    # Print best parameters
+    print("\nBest Parameters Found:")
+    if args.method == 'random':
+        print("Number of Layers:", tuner.best_params.get('num_layers'))
+        for i in range(tuner.best_params.get('num_layers')):
+            print(f"Layer {i+1}:")
+            print(f"  Units: {tuner.best_params.get(f'units_{i}')}")
+            print(f"  Dropout Rate: {tuner.best_params.get(f'dropout_{i}')}")
+        print(f"Learning Rate: {tuner.best_params.get('learning_rate')}")
+    else:
+        for param, value in tuner.best_params.items():
+            print(f"{param}: {value}")
 
-    # Train model with hyperparameter tuning
-    model, history = train_tuned_model(
-        X_train_scaled, X_test_scaled, y_train.values, y_test.values
-    )
-
-    # Evaluate model
-    metrics, predictions = evaluate_model(model, X_test_scaled, y_test.values)
+    # Generate random predictions
+    tuner.make_random_predictions(X_test, y_test)
 
     # Print metrics
-    print(f"\n{'-'*65}\nModel Performance Metrics:")
-    for metric_name, value in metrics.items():
-        print(f"{metric_name}: {value:.2f}")
-    print("-" * 65)
-
-    # Create test DataFrame with unscaled features and target
-    test_df = X_test.copy()
-    test_df[target] = y_test.values
-    test_df.reset_index(drop=True, inplace=True)
-
-    # Display prediction for a sample
-    print("\nPrediction for a sample:")
-    display_single_prediction(model, test_df, scaler, target, index=0)
+    print("\n--- Performance of Tuned Neural Network ---")
+    print(f"RMSE: {metrics['RMSE']:.2f}")
+    print(f"R²  : {metrics['R²']:.2f}")
+    print(f"MAE : {metrics['MAE']:.2f}")
 
 
 if __name__ == "__main__":

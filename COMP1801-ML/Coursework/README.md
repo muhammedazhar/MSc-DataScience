@@ -17,4 +17,22 @@ python HyperTuner-XGB.py --method random --verbose
 
 # Run with custom data path
 python HyperTuner-XGB.py --method random --data "/path/to/data.csv"
+
+# Show help
+python HyperTuner-RF.py -h
+
+# Run with random search
+python HyperTuner-RF.py --method random --iterations 100
+
+# Run with grid search
+python HyperTuner-RF.py --method grid --verbose
+
+# Show help
+python HyperTuner-NN.py -h
+
+# Run with random search
+python HyperTuner-NN.py --method random --iterations 100
+
+# Run with grid search
+python HyperTuner-NN.py --method grid --verbose
 ```
