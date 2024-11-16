@@ -13,6 +13,7 @@ keras-tuner
 
 # Feature Crafting
 kneed
+imbalanced-learn  # For Imbalanced Learning
 
 # Experimental Libraries
 optuna
