@@ -123,20 +123,11 @@ def make_random_predictions(model, X_test, y_test, n_predictions=5):
 if __name__ == "__main__":
     # Apply one-hot encoding
     onehot_encoded_df, ohe = apply_onehot_encoding(df)
-    
-    # Important features based on analysis
-    # important_features = [
-    #     'partType_Blade', 'partType_Block', 'partType_Nozzle', 
-    #     'partType_Valve', 'coolingRate', 'Nickel%', 'HeatTreatTime', 
-    #     'Chromium%', 'quenchTime'
-    # ]
 
-    important_features = list(onehot_encoded_df.columns)
-    
-    # Prepare data with important features only
-    reduced_df = onehot_encoded_df[important_features]
-    X = reduced_df
-    y = onehot_encoded_df['Lifespan']
+    target = 'Lifespan'
+
+    X = onehot_encoded_df
+    y = onehot_encoded_df[target]
     
     # Split the dataset
     X_train, X_test, y_train, y_test = train_test_split(
