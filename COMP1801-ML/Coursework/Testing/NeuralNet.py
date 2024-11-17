@@ -10,7 +10,7 @@ try:
     from pathlib import Path
     import tensorflow as tf
     from sklearn.compose import ColumnTransformer
-    from sklearn.preprocessing import OneHotEncoder, MinMaxScaler
+    from sklearn.preprocessing import OneHotEncoder, StandardScaler
     from sklearn.model_selection import train_test_split
     from sklearn.metrics import (
         root_mean_squared_error,
@@ -81,7 +81,7 @@ class MetalPartsPredictor:
         # Create preprocessor
         self.preprocessor = ColumnTransformer(
             transformers=[
-                ('num', MinMaxScaler(), numeric_cols),
+                ('num', StandardScaler(), numeric_cols),
                 ('cat', OneHotEncoder(handle_unknown='ignore', sparse_output=False), categorical_cols)
             ]
         )
