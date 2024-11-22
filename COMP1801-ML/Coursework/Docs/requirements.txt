@@ -7,6 +7,7 @@ seaborn
 statsmodels
 
 # Neural Network Libraries
+scikeras         # Keras Wrapper for Scikit-Learn
 tensorflow
 tensorflow-macos  # Accelerated training on Apple Silicon
 tensorflow-metal  # Accelerated training on Apple Silicon
