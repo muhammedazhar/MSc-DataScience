@@ -68,7 +68,6 @@ This repository contains the machine learning coursework for COMP1801, focused o
 2. Install the required dependencies:
 
    ```bash
-   cd Docs
    pip install -r Docs/requirements.txt
    ```
 
