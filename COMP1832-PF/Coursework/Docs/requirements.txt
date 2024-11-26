@@ -6,3 +6,6 @@ ipykernel  # Jupyter Notebook kernel for Python
 matplotlib  # Library for creating static, interactive, and animated visualizations in Python
 networkx  # Library for creating, manipulating, and studying complex networks
 seaborn  # Statistical data visualization library based on matplotlib
+
+# Environment Variables
+python-dotenv  # Library for loading environment variables from a .env file
