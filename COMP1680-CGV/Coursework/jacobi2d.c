@@ -44,6 +44,12 @@ int main(int argc, char *argv[]) {
         t[m + 1][j] = 60.0;    // Bottom boundary set to 60°C
     }
 
+    // Set corner values as the average of their adjacent boundary values
+    t[0][0] = (15.0 + 47.0) / 2.0;          // Top-left corner
+    t[0][n + 1] = (15.0 + 100.0) / 2.0;     // Top-right corner
+    t[m + 1][0] = (60.0 + 47.0) / 2.0;      // Bottom-left corner
+    t[m + 1][n + 1] = (60.0 + 100.0) / 2.0; // Bottom-right corner
+
     // Main loop
     int iter = 0;
     double difmax = 1000000.0;
