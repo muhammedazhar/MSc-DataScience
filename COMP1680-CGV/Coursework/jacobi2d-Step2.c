@@ -4,14 +4,21 @@
 #include <omp.h>     // Added OpenMP library for parallel execution
 
 int main(int argc, char *argv[]) {
-    if (argc != 4) {
-        printf("Usage: %s m n tolerance\n", argv[0]);
+    if (argc != 5) {
+        printf("Usage: %s m n tolerance num_threads\n", argv[0]);
         return 1;
     }
 
     int m = atoi(argv[1]);
     int n = atoi(argv[2]);
     double tol = atof(argv[3]);
+    int num_threads = atoi(argv[4]);
+    
+    // Set number of threads
+    omp_set_num_threads(num_threads);
+    
+    // Output the number of threads being used
+    printf("Number of threads being used: %d\n", num_threads);
     
     // Start timing
     double start_time, end_time;
@@ -26,7 +33,7 @@ int main(int argc, char *argv[]) {
         tnew[i] = (double *)malloc((n + 2) * sizeof(double));
     }
 
-    printf("%d %d %lf\n", m, n, tol);
+    printf("%d %d %lf %d\n", m, n, tol, num_threads);
 
     // Initialize temperature array
     #pragma omp parallel for collapse(2)
@@ -87,6 +94,7 @@ int main(int argc, char *argv[]) {
 
     // Print results
     printf("iter = %d  difmax = %9.11lf\n", iter, difmax);
+    // Uncomment the following lines for smaller problem sizes to print the grid
     // for (int i = 0; i <= m + 1; i++) {
     //     for (int j = 0; j <= n + 1; j++) {
     //         printf("%3.5lf ", t[i][j]);
