@@ -81,12 +81,14 @@ int main(int argc, char *argv[]) {
 
     // Print results
     printf("iter = %d  difmax = %9.11lf\n", iter, difmax);
-    // for (int i = 0; i <= m + 1; i++) {
-    //     for (int j = 0; j <= n + 1; j++) {
-    //         printf("%3.5lf ", t[i][j]);
-    //     }
-    //     printf("\n");
-    // }
+    if (m <= 10 && n <= 10) {
+        for (int i = 0; i <= m + 1; i++) {
+            for (int j = 0; j <= n + 1; j++) {
+                printf("%3.5lf ", t[i][j]);
+            }
+            printf("\n");
+        }
+    }
     printf("Execution time: %f seconds\n", cpu_time_used);  // Added to display execution time
 
     // Free allocated memory
