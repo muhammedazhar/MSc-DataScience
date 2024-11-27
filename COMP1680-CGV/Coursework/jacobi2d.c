@@ -13,6 +13,10 @@ int main(int argc, char *argv[]) {
     int n = atoi(argv[2]);
     double tol = atof(argv[3]);
     
+    // Start timing
+    double start_time, end_time;
+    start_time = omp_get_wtime();
+    
     // Dynamically allocate 2D arrays
     double **t = (double **)malloc((m + 2) * sizeof(double *));
     double **tnew = (double **)malloc((m + 2) * sizeof(double *));
@@ -77,8 +81,14 @@ int main(int argc, char *argv[]) {
         }
     }
 
+    // End timing
+    end_time = omp_get_wtime();
+    double exec_time = end_time - start_time;
+
     // Print results
     printf("iter = %d  difmax = %9.11lf\n", iter, difmax);
+    printf("Total execution time: %f milliseconds\n", exec_time*1000); // Convert to milliseconds
+
     for (int i = 0; i <= m + 1; i++) {
         for (int j = 0; j <= n + 1; j++) {
             printf("%3.5lf ", t[i][j]);
