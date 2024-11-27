@@ -1,12 +1,14 @@
 #!/bin/bash
-#
-#SBATCH --job-name=Jacobi2D_serial
-#SBATCH --output=./Jacobi2D_serial.txt
-#
-#SBATCH --cpus-per-task=1
+#SBATCH --job-name=Coursework
+#SBATCH --output=./Coursework.txt
+#SBATCH --cpus-per-task=8
 #SBATCH --ntasks=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --nodes=1
-#SBATCH --partition=COMP1680-dev
+#SBATCH --partition=COMP1680-omp
 
-./jacobi2d.out 10 10 0.0001
+# Setting OpenMP threading environment variables
+export OMP_NUM_THREADS=8
+
+# Run the Jacobi 2D program with 0.0001 tolerance
+./jacobi2d-Step3 100 100 0.0001
