@@ -1,6 +1,7 @@
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>  // Added for timing
 
 int main(int argc, char *argv[]) {
     if (argc != 4) {
@@ -11,11 +12,11 @@ int main(int argc, char *argv[]) {
     int m = atoi(argv[1]);
     int n = atoi(argv[2]);
     double tol = atof(argv[3]);
-    
+
     // Dynamically allocate 2D arrays
     double **t = (double **)malloc((m + 2) * sizeof(double *));
     double **tnew = (double **)malloc((m + 2) * sizeof(double *));
-    
+
     for (int i = 0; i < m + 2; i++) {
         t[i] = (double *)malloc((n + 2) * sizeof(double));
         tnew[i] = (double *)malloc((n + 2) * sizeof(double));
@@ -30,20 +31,29 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    // Fix boundary conditions
+    // Fix boundary conditions to match Step 1 requirements
     for (int i = 1; i <= m; i++) {
-        t[i][0] = 40.0;
-        t[i][n + 1] = 90.0;
+        t[i][0] = 47.0;       // Left boundary set to 47°C
+        t[i][n + 1] = 100.0;   // Right boundary set to 100°C
     }
     for (int j = 1; j <= n; j++) {
-        t[0][j] = 30.0;
-        t[m + 1][j] = 50.0;
+        t[0][j] = 15.0;       // Top boundary set to 15°C
+        t[m + 1][j] = 60.0;    // Bottom boundary set to 60°C
     }
+
+    // Set corner values as the average of their adjacent boundary values
+    t[0][0] = (15.0 + 47.0) / 2.0;          // Top-left corner
+    t[0][n + 1] = (15.0 + 100.0) / 2.0;     // Top-right corner
+    t[m + 1][0] = (60.0 + 47.0) / 2.0;      // Bottom-left corner
+    t[m + 1][n + 1] = (60.0 + 100.0) / 2.0; // Bottom-right corner
+
+    // Start timing
+    clock_t start = clock();
 
     // Main loop
     int iter = 0;
     double difmax = 1000000.0;
-    
+
     while (difmax > tol) {
         iter++;
         difmax = 0.0;
@@ -51,7 +61,7 @@ int main(int argc, char *argv[]) {
         // Update temperature for next iteration
         for (int i = 1; i <= m; i++) {
             for (int j = 1; j <= n; j++) {
-                tnew[i][j] = (t[i-1][j] + t[i+1][j] + t[i][j-1] + t[i][j+1]) / 4.0;
+                tnew[i][j] = (t[i - 1][j] + t[i + 1][j] + t[i][j - 1] + t[i][j + 1]) / 4.0;
             }
         }
 
@@ -65,14 +75,19 @@ int main(int argc, char *argv[]) {
         }
     }
 
+    // End timing
+    clock_t end = clock();
+    double cpu_time_used = ((double)(end - start)) / CLOCKS_PER_SEC;
+
     // Print results
     printf("iter = %d  difmax = %9.11lf\n", iter, difmax);
-    for (int i = 0; i <= m + 1; i++) {
-        for (int j = 0; j <= n + 1; j++) {
-            printf("%3.5lf ", t[i][j]);
-        }
-        printf("\n");
-    }
+    // for (int i = 0; i <= m + 1; i++) {
+    //     for (int j = 0; j <= n + 1; j++) {
+    //         printf("%3.5lf ", t[i][j]);
+    //     }
+    //     printf("\n");
+    // }
+    printf("Execution time: %f seconds\n", cpu_time_used);  // Added to display execution time
 
     // Free allocated memory
     for (int i = 0; i < m + 2; i++) {
