@@ -4,36 +4,29 @@
 #include <omp.h>     // Added OpenMP library for parallel execution
 
 int main(int argc, char *argv[]) {
-    if (argc != 5) {
-        printf("Usage: %s m n tolerance num_threads\n", argv[0]);
+    if (argc != 4) {
+        printf("Usage: %s m n tolerance\n", argv[0]);
         return 1;
     }
 
     int m = atoi(argv[1]);
     int n = atoi(argv[2]);
     double tol = atof(argv[3]);
-    int num_threads = atoi(argv[4]);
-    
-    // Set number of threads
-    omp_set_num_threads(num_threads);
-    
-    // Output the number of threads being used
-    printf("Number of threads being used: %d\n", num_threads);
-    
+
     // Start timing
     double start_time, end_time;
     start_time = omp_get_wtime();
-    
+
     // Dynamically allocate 2D arrays
     double **t = (double **)malloc((m + 2) * sizeof(double *));
     double **tnew = (double **)malloc((m + 2) * sizeof(double *));
-    
+
     for (int i = 0; i < m + 2; i++) {
         t[i] = (double *)malloc((n + 2) * sizeof(double));
         tnew[i] = (double *)malloc((n + 2) * sizeof(double));
     }
 
-    printf("%d %d %lf %d\n", m, n, tol, num_threads);
+    printf("%d %d %lf\n", m, n, tol);
 
     // Initialize temperature array
     #pragma omp parallel for collapse(2)
@@ -43,7 +36,7 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    // Fix boundary conditions to match Step 1 requirements
+    // Fix boundary conditions to match coursework requirements
     #pragma omp parallel for
     for (int i = 1; i <= m; i++) {
         t[i][0] = 47.0;        // Left boundary set to 47°C
@@ -64,7 +57,7 @@ int main(int argc, char *argv[]) {
     // Main loop
     int iter = 0;
     double difmax = 1000000.0;
-    
+
     while (difmax > tol) {
         iter++;
         difmax = 0.0;
@@ -94,13 +87,14 @@ int main(int argc, char *argv[]) {
 
     // Print results
     printf("iter = %d  difmax = %9.11lf\n", iter, difmax);
-    // Uncomment the following lines for smaller problem sizes to print the grid
-    // for (int i = 0; i <= m + 1; i++) {
-    //     for (int j = 0; j <= n + 1; j++) {
-    //         printf("%3.5lf ", t[i][j]);
-    //     }
-    //     printf("\n");
-    // }
+    if (m <= 10 && n <= 10) {
+        for (int i = 0; i <= m + 1; i++) {
+            for (int j = 0; j <= n + 1; j++) {
+                printf("%3.5lf ", t[i][j]);
+            }
+            printf("\n");
+        }
+    }
     printf("Execution time: %f seconds\n", exec_time);
 
     // Free allocated memory
