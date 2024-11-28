@@ -1,6 +1,6 @@
 /*
  * COMP1680-CGV Coursework Step 1 - Sequential Implementation
- * -------------------------------------------------------
+ * ----------------------------------------------------------
  * Sequential Programming for Jacobi 2D grid problem
  */
 

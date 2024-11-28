@@ -1,6 +1,6 @@
 /*
  * COMP1680-CGV Coursework Step 3 - OpenMP Implementation
- * ---------------------------------------------------
+ * ------------------------------------------------------
  * OpenMP Parallel Programming for Jacobi 2D grid problem
  */
 
