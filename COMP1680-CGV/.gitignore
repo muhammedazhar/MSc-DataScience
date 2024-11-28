@@ -20,3 +20,10 @@
 !*.sh
 !Makefile
 !.gitignore
+
+# But don't ignore report files
+!*.tex
+!*.pdf
+!*.bib
+!*.sty
+!*.png
