@@ -1,0 +1,134 @@
+\documentclass{article}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage[style=authoryear,backend=biber]{biblatex}
+\addbibresource{References.bib}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{fancyvrb}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{xurl}
+\usepackage{hyperref}
+\newcommand{\theHalgorithm}{\arabic{algorithm}}
+\usepackage{accessibility}
+\usepackage{Coursework}
+
+% Define GitHub-like colors
+\definecolor{githubtext}{RGB}{36,41,46}
+\definecolor{githubgreen}{RGB}{87,138,73}
+\definecolor{githubpurple}{RGB}{111,66,193}
+\definecolor{githubblue}{RGB}{0,92,197}
+\definecolor{githubgray}{RGB}{149,157,165}
+\definecolor{githubback}{RGB}{246,248,250}
+\definecolor{githubnumber}{RGB}{149,157,165}
+
+% Enhanced C code style with GitHub theme
+\lstdefinestyle{CStyle}{
+    language=C,
+    backgroundcolor=\color{githubback},
+    commentstyle=\color{githubgreen},
+    keywordstyle=\color{githubpurple},
+    numberstyle=\fontfamily{pcr}\small\color{githubnumber},
+    stringstyle=\color{githubblue},
+    basicstyle=\ttfamily\footnotesize\color{githubtext},
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=16pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=4,
+    frame=single,
+    rulecolor=\color{githubgray!40},
+    framesep=6pt,
+    framexleftmargin=6pt,
+    framexrightmargin=6pt,
+    framextopmargin=6pt,
+    framexbottommargin=6pt,
+    xleftmargin=20pt,
+    xrightmargin=6pt,
+    aboveskip=2em,
+    belowskip=2em,
+    morekeywords={include, define, void},
+    emph={int,char,double,float,unsigned,bool},
+    emphstyle={\color{githubpurple}},
+    columns=flexible,
+    basewidth={0.5em,0.45em},
+    linewidth=\linewidth
+}
+
+\begin{document}
+\cwtitle{COMP1680 - Clouds, Grids and Virtualisation Coursework Report}
+\begin{cwauthorlist}
+\cwauthor{Azhar Muhammed - 001364857}
+\cwauthor{Word Count: }
+\end{cwauthorlist}
+
+\section{Executive Summary}
+
+\section{Part 1: Parallel Processing using Cloud Computing}
+
+\subsection{Analysis}
+
+\subsection{Comparison}
+
+\subsection{Recommendation}
+
+\section{Part 2: Parallel Programming Exercise}
+
+\subsection{Step 1}
+
+Here's an example of the Jacobi code with GitHub-style formatting:
+
+\begin{lstlisting}[style=CStyle, caption={Example of Jacobi 2D Implementation}]
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <sys/time.h>
+
+#define TOP_TEMP    15.0
+#define BOTTOM_TEMP 60.0
+#define LEFT_TEMP   47.0
+#define RIGHT_TEMP  100.0
+
+void initialize_grid(double **grid, int n, int m) {
+    int i, j;
+    
+    // Initialize interior points to 0
+    for (i = 1; i < n-1; i++) {
+        for (j = 1; j < m-1; j++) {
+            grid[i][j] = 0.0;
+        }
+    }
+    
+    // Set boundary conditions
+    for (i = 0; i < n; i++) {
+        grid[i][0] = LEFT_TEMP;      // Left boundary
+        grid[i][m-1] = RIGHT_TEMP;   // Right boundary
+    }
+    for (j = 0; j < m; j++) {
+        grid[0][j] = TOP_TEMP;       // Top boundary
+        grid[n-1][j] = BOTTOM_TEMP;  // Bottom boundary
+    }
+}
+\end{lstlisting}
+
+\subsection{Step 2}
+
+\subsection{Step 3}
+
+\section{Conclusions}
+
+% \printbibliography
+
+\end{document}
