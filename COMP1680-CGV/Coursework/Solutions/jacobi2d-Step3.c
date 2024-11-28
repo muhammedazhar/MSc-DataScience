@@ -86,9 +86,10 @@ int main(int argc, char *argv[]) {
         iter++;
         difmax = 0.0;
 
+        // Using OpenMP to parallelize the following array operations
         #pragma omp parallel
         {
-            // Calculate new temperatures using Jacobi method
+            // Parallelizes the loop with OpenMP, using static scheduling and no wait clause
             #pragma omp for private(j) schedule(static) nowait
             for (i = 1; i <= m; i++) {
                 for (j = 1; j <= n; j++) {
@@ -96,7 +97,7 @@ int main(int argc, char *argv[]) {
                 }
             }
 
-            // Update temperatures and calculate maximum difference
+            // Parallelizes the loop with OpenMP, using private variables j and diff, and a max reduction on difmax
             #pragma omp for private(j, diff) reduction(max:difmax)
             for (i = 1; i <= m; i++) {
                 for (j = 1; j <= n; j++) {

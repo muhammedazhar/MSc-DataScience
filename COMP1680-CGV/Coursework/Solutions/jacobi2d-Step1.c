@@ -1,7 +1,7 @@
 /*
  * COMP1680-CGV Coursework Step 1 - Sequential Implementation
  * -------------------------------------------------------
- * Sequential Programming for Jacobi 20x20 grid problem
+ * Sequential Programming for Jacobi 2D grid problem
  */
 
 #include <math.h>
