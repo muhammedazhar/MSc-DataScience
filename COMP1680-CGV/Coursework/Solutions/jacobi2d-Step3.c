@@ -1,60 +1,84 @@
+/*
+ * COMP1680-CGV Coursework Step 3 - OpenMP Implementation
+ * ---------------------------------------------------
+ * OpenMP Parallel Programming for Jacobi 2D grid problem
+ */
+
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <omp.h>     // Added OpenMP library for parallel execution
+#include <omp.h>
+
+// Boundary temperatures for the 2D grid
+#define TOP_TEMP 15.0    // Top boundary temperature
+#define BOTTOM_TEMP 60.0 // Bottom boundary temperature
+#define LEFT_TEMP 47.0   // Left boundary temperature
+#define RIGHT_TEMP 100.0 // Right boundary temperature
 
 int main(int argc, char *argv[]) {
+    // Check command line arguments
     if (argc != 4) {
         printf("Usage: %s m n tolerance\n", argv[0]);
         return 1;
     }
 
+    // Get grid dimensions and tolerance from command line
     int m = atoi(argv[1]);
     int n = atoi(argv[2]);
     double tol = atof(argv[3]);
+    int i, j;
+    double diff;
+    
+    // Start timing the execution
+    double start_time = omp_get_wtime();
 
-    // Start timing
-    double start_time, end_time;
-    start_time = omp_get_wtime();
-
-    // Dynamically allocate 2D arrays
+    // Allocate memory for temperature grids
+    // Using contiguous memory layout for better cache performance
+    double *t_data = (double *)malloc((m + 2) * (n + 2) * sizeof(double));
+    double *tnew_data = (double *)malloc((m + 2) * (n + 2) * sizeof(double));
     double **t = (double **)malloc((m + 2) * sizeof(double *));
     double **tnew = (double **)malloc((m + 2) * sizeof(double *));
 
-    for (int i = 0; i < m + 2; i++) {
-        t[i] = (double *)malloc((n + 2) * sizeof(double));
-        tnew[i] = (double *)malloc((n + 2) * sizeof(double));
+    // Setup 2D array pointers
+    for (i = 0; i < m + 2; i++) {
+        t[i] = &t_data[i * (n + 2)];
+        tnew[i] = &tnew_data[i * (n + 2)];
     }
 
-    printf("%d %d %lf\n", m, n, tol);
+    // Initialize parallel region for setting up initial conditions
+    #pragma omp parallel
+    {
+        // Initialize interior points to 30.0
+        #pragma omp for collapse(2) schedule(static) nowait
+        for (i = 0; i <= m + 1; i++) {
+            for (j = 0; j <= n + 1; j++) {
+                t[i][j] = 30.0;
+                tnew[i][j] = 30.0;
+            }
+        }
 
-    // Initialize temperature array
-    #pragma omp parallel for collapse(2)
-    for (int i = 0; i <= m + 1; i++) {
-        for (int j = 0; j <= n + 1; j++) {
-            t[i][j] = 30.0;
+        // Set left and right boundary temperatures
+        #pragma omp for schedule(static) nowait
+        for (i = 1; i <= m; i++) {
+            t[i][0] = LEFT_TEMP;
+            t[i][n + 1] = RIGHT_TEMP;
+        }
+
+        // Set top and bottom boundary temperatures
+        #pragma omp for schedule(static)
+        for (j = 1; j <= n; j++) {
+            t[0][j] = TOP_TEMP;
+            t[m + 1][j] = BOTTOM_TEMP;
         }
     }
 
-    // Fix boundary conditions to match coursework requirements
-    #pragma omp parallel for
-    for (int i = 1; i <= m; i++) {
-        t[i][0] = 47.0;        // Left boundary set to 47°C
-        t[i][n + 1] = 100.0;   // Right boundary set to 100°C
-    }
-    #pragma omp parallel for
-    for (int j = 1; j <= n; j++) {
-        t[0][j] = 15.0;        // Top boundary set to 15°C
-        t[m + 1][j] = 60.0;    // Bottom boundary set to 60°C
-    }
+    // Set corner temperatures as average of adjacent boundaries
+    t[0][0] = (TOP_TEMP + LEFT_TEMP) / 2.0;
+    t[0][n + 1] = (TOP_TEMP + RIGHT_TEMP) / 2.0;
+    t[m + 1][0] = (BOTTOM_TEMP + LEFT_TEMP) / 2.0;
+    t[m + 1][n + 1] = (BOTTOM_TEMP + RIGHT_TEMP) / 2.0;
 
-    // Set corner values as the average of their adjacent boundary values
-    t[0][0] = (15.0 + 47.0) / 2.0;          // Top-left corner
-    t[0][n + 1] = (15.0 + 100.0) / 2.0;     // Top-right corner
-    t[m + 1][0] = (60.0 + 47.0) / 2.0;      // Bottom-left corner
-    t[m + 1][n + 1] = (60.0 + 100.0) / 2.0; // Bottom-right corner
-
-    // Main loop
+    // Main iteration loop
     int iter = 0;
     double difmax = 1000000.0;
 
@@ -62,34 +86,36 @@ int main(int argc, char *argv[]) {
         iter++;
         difmax = 0.0;
 
-        // Update temperature for next iteration in parallel
-        #pragma omp parallel for collapse(2) shared(t, tnew)
-        for (int i = 1; i <= m; i++) {
-            for (int j = 1; j <= n; j++) {
-                tnew[i][j] = (t[i-1][j] + t[i+1][j] + t[i][j-1] + t[i][j+1]) / 4.0;
+        #pragma omp parallel
+        {
+            // Calculate new temperatures using Jacobi method
+            #pragma omp for private(j) schedule(static) nowait
+            for (i = 1; i <= m; i++) {
+                for (j = 1; j <= n; j++) {
+                    tnew[i][j] = (t[i-1][j] + t[i+1][j] + t[i][j-1] + t[i][j+1]) / 4.0;
+                }
             }
-        }
 
-        // Calculate maximum difference in parallel
-        #pragma omp parallel for collapse(2) reduction(max: difmax)
-        for (int i = 1; i <= m; i++) {
-            for (int j = 1; j <= n; j++) {
-                double diff = fabs(tnew[i][j] - t[i][j]);
-                difmax = (diff > difmax) ? diff : difmax;
-                t[i][j] = tnew[i][j];
+            // Update temperatures and calculate maximum difference
+            #pragma omp for private(j, diff) reduction(max:difmax)
+            for (i = 1; i <= m; i++) {
+                for (j = 1; j <= n; j++) {
+                    diff = fabs(tnew[i][j] - t[i][j]);
+                    difmax = (diff > difmax) ? diff : difmax;
+                    t[i][j] = tnew[i][j];
+                }
             }
         }
     }
 
-    // End timing
-    end_time = omp_get_wtime();
-    double exec_time = end_time - start_time;
+    // Calculate and print execution time and results
+    double exec_time = omp_get_wtime() - start_time;
 
-    // Print results
     printf("iter = %d  difmax = %9.11lf\n", iter, difmax);
-    if (m <= 10 && n <= 10) {
-        for (int i = 0; i <= m + 1; i++) {
-            for (int j = 0; j <= n + 1; j++) {
+    // Print grid values for small grids (20x20 or smaller)
+    if (m <= 20 && n <= 20) {
+        for (i = 0; i <= m + 1; i++) {
+            for (j = 0; j <= n + 1; j++) {
                 printf("%3.5lf ", t[i][j]);
             }
             printf("\n");
@@ -98,10 +124,8 @@ int main(int argc, char *argv[]) {
     printf("Execution time: %f seconds\n", exec_time);
 
     // Free allocated memory
-    for (int i = 0; i < m + 2; i++) {
-        free(t[i]);
-        free(tnew[i]);
-    }
+    free(t_data);
+    free(tnew_data);
     free(t);
     free(tnew);
 
