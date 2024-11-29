@@ -1,8 +1,15 @@
 #!/bin/bash
 
+# Determine the compiler to use
+if command -v gcc-14 &> /dev/null; then
+    COMPILER=gcc-14
+else
+    COMPILER=gcc
+fi
+
 # Compile the code with optimization
-echo -e "Compiling 'jacobi2d-Step2.c' OpenMP C program with C99 standard...\n"
-gcc -std=c99 -fopenmp jacobi2d-Step2.c -o jacobi2d-Step2
+echo "Compiling 'jacobi2d-Step1.c' with C99 standard and different optimizations using $COMPILER..."
+$COMPILER -std=c99 -fopenmp jacobi2d-Step2.c -o jacobi2d-Step2
 
 if [ $? -ne 0 ]; then
     echo "Compilation failed!"
@@ -10,18 +17,18 @@ if [ $? -ne 0 ]; then
 fi
 
 echo "Starting performance tests..."
-echo "-----------------------------"
+echo "--------------------------------------" >> jacobi2d-Step2.txt
 
 # Loop over different matrix sizes
-for size in 150 200 250; do
+for size in 20; do
     # Loop over different thread counts
     for threads in 1 2 4 8; do
         # Print test configuration
-        echo "Testing grid size of ${size}x${size} with ${threads} threads"
+        echo "Testing grid size of ${size}x${size} with ${threads} threads" >> jacobi2d-Step2.txt
         # Run the program with specified size and threads
-        OMP_NUM_THREADS=$threads ./jacobi2d-Step2 $size $size 0.000100
+        OMP_NUM_THREADS=$threads ./jacobi2d-Step2 $size $size 0.000100 >> jacobi2d-Step2.txt
         # Separator for readability
-        echo "--------------------------------------"
+        echo "--------------------------------------" >> jacobi2d-Step2.txt
     done
 done
 
