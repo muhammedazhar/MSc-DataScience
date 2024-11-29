@@ -1,0 +1,49 @@
+--------------------------------------
+Testing grid size of 150x150 with 1 threads
+iter = 20763  difmax = 0.00009999041
+Execution time: 6.823984 seconds
+--------------------------------------
+Testing grid size of 150x150 with 2 threads
+iter = 20028  difmax = 0.00009999062
+Execution time: 3.478909 seconds
+--------------------------------------
+Testing grid size of 150x150 with 4 threads
+iter = 19602  difmax = 0.00009987131
+Execution time: 1.943516 seconds
+--------------------------------------
+Testing grid size of 150x150 with 8 threads
+iter = 19403  difmax = 0.00009999299
+Execution time: 1.268807 seconds
+--------------------------------------
+Testing grid size of 200x200 with 1 threads
+iter = 32108  difmax = 0.00009999248
+Execution time: 17.983774 seconds
+--------------------------------------
+Testing grid size of 200x200 with 2 threads
+iter = 30811  difmax = 0.00009998081
+Execution time: 8.991890 seconds
+--------------------------------------
+Testing grid size of 200x200 with 4 threads
+iter = 29752  difmax = 0.00009999490
+Execution time: 4.849675 seconds
+--------------------------------------
+Testing grid size of 200x200 with 8 threads
+iter = 29367  difmax = 0.00009999389
+Execution time: 2.818227 seconds
+--------------------------------------
+Testing grid size of 250x250 with 1 threads
+iter = 44398  difmax = 0.00009999424
+Execution time: 38.797998 seconds
+--------------------------------------
+Testing grid size of 250x250 with 2 threads
+iter = 42381  difmax = 0.00009999884
+Execution time: 18.960634 seconds
+--------------------------------------
+Testing grid size of 250x250 with 4 threads
+iter = 42366  difmax = 0.00009995415
+Execution time: 10.666419 seconds
+--------------------------------------
+Testing grid size of 250x250 with 8 threads
+iter = 41846  difmax = 0.00009999333
+Execution time: 6.186029 seconds
+--------------------------------------

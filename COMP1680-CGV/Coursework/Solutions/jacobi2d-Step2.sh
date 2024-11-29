@@ -7,8 +7,8 @@ else
     COMPILER=gcc
 fi
 
-# Compile the code with optimization
-echo "Compiling 'jacobi2d-Step1.c' with C99 standard and different optimizations using $COMPILER..."
+# Compile the code with different thread counts
+echo "Compiling 'jacobi2d-Step2.c' with C99 standard and different threads counts using $COMPILER..."
 $COMPILER -std=c99 -fopenmp jacobi2d-Step2.c -o jacobi2d-Step2
 
 if [ $? -ne 0 ]; then

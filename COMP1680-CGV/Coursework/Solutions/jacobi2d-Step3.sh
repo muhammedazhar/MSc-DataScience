@@ -7,6 +7,7 @@
 #SBATCH --nodes=1                      # Number of nodes
 #SBATCH --partition=COMP1680-omp       # Partition name
 
+echo "--------------------------------------"
 # Loop over different matrix sizes
 for size in 150 200 250; do
     # Loop over different thread counts
@@ -14,7 +15,7 @@ for size in 150 200 250; do
         # Print test configuration
         echo "Testing grid size of ${size}x${size} with ${threads} threads"
         # Run the program with specified size and threads
-        OMP_NUM_THREADS=$threads ./jacobi2d-Step2 $size $size 0.000100
+        OMP_NUM_THREADS=$threads ./jacobi2d-Step3 $size $size 0.000100
         # Separator for readability
         echo "--------------------------------------"
     done
