@@ -348,7 +348,7 @@ the offending package(s), or layout-changing commands and try again.
    %check whether @icmltitlerunning exists
    % if not \icmltitle is used as running head
    \ifx\undefined\@icmltitlerunning%
-	\gdef\@icmltitlerunning{#1}
+  \gdef\@icmltitlerunning{#1}
    \fi
 
    %add it to pdf information
@@ -364,29 +364,29 @@ the offending package(s), or layout-changing commands and try again.
 
    % running title too long
    \ifdim\wd\titrun>\textwidth%
-	  {\gdef\@runningtitleerror{1}}%
+    {\gdef\@runningtitleerror{1}}%
    % running title breaks a line
    \else\ifdim\ht\titrun>6.25pt
-	   {\gdef\@runningtitleerror{2}}%
-	\fi
+     {\gdef\@runningtitleerror{2}}%
+  \fi
    \fi
 
    % if there is somthing wrong with the running title
    \ifnum\@runningtitleerror>0
-	   \typeout{}%
+     \typeout{}%
            \typeout{}%
            \typeout{*******************************************************}%
            \typeout{Title exceeds size limitations for running head.}%
            \typeout{Please supply a shorter form for the running head}
            \typeout{with \string\icmltitlerunning{...}\space prior to \string\begin{document}}%
            \typeout{*******************************************************}%
- 	    \typeout{}%
+       \typeout{}%
            \typeout{}%
            % set default running title
-	   \chead{\small\bf Title Suppressed Due to Excessive Size}%
+     \chead{\small\bf Title Suppressed Due to Excessive Size}%
     \else
-	   % 'everything' fine, set provided running title
-  	   \chead{\small\bf\@icmltitlerunning}%
+     % 'everything' fine, set provided running title
+       \chead{\small\bf\@icmltitlerunning}%
     \fi
 
   % no running title on the first page of the paper
@@ -761,4 +761,23 @@ the offending package(s), or layout-changing commands and try again.
     columns=flexible,
     basewidth={0.5em,0.45em},
     linewidth=\linewidth
+}
+
+\lstdefinestyle{BashStyle}{
+    language=bash,
+    basicstyle=\ttfamily\footnotesize\color{githubtext},
+    keywordstyle=\color{githubpurple}\bfseries,
+    commentstyle=\color{githubgreen}\slshape,
+    stringstyle=\color{githubblue},
+    backgroundcolor=\color{githubback},
+    numberstyle=\fontfamily{pcr}\small\color{githubnumber},
+    numbers=left,
+    frame=single,
+    rulecolor=\color{githubgray!40},
+    showstringspaces=false,
+    breaklines=true,
+    tabsize=4,
+    morekeywords={|,>,<,;&,&&,||,$,[[,]],function},
+    columns=fullflexible,
+    keepspaces=true
 }

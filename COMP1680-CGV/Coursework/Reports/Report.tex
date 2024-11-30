@@ -1,11 +1,13 @@
 \documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[style=authoryear,backend=biber]{biblatex}
+\addbibresource{References.bib}
+\newcommand{\theHalgorithm}{\arabic{algorithm}}
 \usepackage{microtype}
 \usepackage{graphicx}
 \usepackage{subfigure}
 \usepackage{subcaption}
 \usepackage{booktabs}
-\usepackage[style=authoryear,backend=biber]{biblatex}
-\addbibresource{References.bib}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amsthm}
@@ -17,7 +19,6 @@
 \usepackage{xurl}
 \usepackage{url}
 \usepackage{hyperref}
-\newcommand{\theHalgorithm}{\arabic{algorithm}}
 \usepackage{accessibility}
 \usepackage{Coursework}
 
@@ -30,7 +31,7 @@
 
 \section{Parallel Processing using Cloud Computing}
 
-In the contemporary landscape of computational technologies, small consultancy firms face critical decisions regarding their computational infrastructure. The choice between adopting cloud computing services or investing in an onsite High-Performance Computing (HPC) system significantly impacts operational efficiency, scalability, and financial expenditure. This report evaluates these options for a consultancy company comprising 30 consultants utilizing approximately 1,400 CPU hours each month. The analysis focuses on the advantages and disadvantages of leading cloud service providers---Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP)---compared to an onsite HPC system for multicore workloads using batch processing. A comprehensive financial cost comparison is provided, culminating in a recommendation that aligns with the company's strategic objectives.
+In the contemporary landscape of computational technologies, small consultancy firms face critical decisions regarding their computational infrastructure. The choice between adopting cloud computing services or investing in an onsite High-Performance Computing (HPC) system significantly impacts operational efficiency, scalability, and financial expenditure. This report evaluates these options for a consultancy company comprising 30 consultants utilizing approximately 1,400 CPU hours each month. The analysis focuses on the advantages and disadvantages of leading cloud service providers such as Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP) when compared to an onsite HPC system for multicore workloads using batch processing. A comprehensive financial cost comparison is provided, culminating in a recommendation that aligns with the company's strategic objectives.
 
 \subsection{Analysis of Cloud Providers vs. Onsite HPC for Multicore Workloads}
 
@@ -203,7 +204,7 @@ While all three major cloud providers offer services that meet the company's nee
     \item \textbf{Azure:} For firms already utilizing Microsoft products, Azure offers seamless integration and may provide operational efficiencies.
     \item \textbf{GCP:} Companies interested in advanced analytics and machine learning capabilities may prefer GCP due to its strengths in these areas.
 \end{itemize}
-Given the consultancy's size and requirements, any of these providers could be appropriate. A detailed assessment of existing partnerships, staff expertise, and specific service offerings should guide the final selection. the final selection. The consultancy should also consider any existing vendor relationships or preferred ecosystems when making the final decision.
+Given the consultancy's size and requirements, any of these providers could be appropriate. A detailed assessment of existing partnerships, staff expertise, and specific service offerings should guide the final selection. The consultancy should also consider any existing vendor relationships or preferred ecosystems when making the final decision.
 
 \subsubsection{Implementation Considerations}
 To maximize the benefits of cloud computing, the company should take the following steps during the implementation phase:
@@ -238,6 +239,8 @@ To maximize the benefits of cloud computing, the company should take the followi
 \subsubsection{Conclusion}
 Transitioning to cloud computing is a strategic decision that aligns with the consultancy company's operational needs and financial objectives. The substantial cost savings, coupled with enhanced scalability and reduced maintenance burdens, make cloud services the optimal choice over an onsite HPC system. By adopting cloud computing, the company positions itself to leverage advanced technologies, respond agilely to market demands, and focus its resources on delivering value to clients.
 
+\newpage
+
 \section{Parallel Programming Exercise}
 
 \subsection{Step 1}
@@ -247,22 +250,23 @@ The C program was adapted to simulate the temperature distribution in a rectangu
 In the code, after initializing the entire grid to an initial temperature (e.g., 30°C), the boundary conditions are applied:
 
 \begin{lstlisting}[style=CStyle, caption={Setting Boundary Conditions}]
-// Set boundary conditions
-for (int i = 1; i <= m; i++) {
-    t[i][0] = LEFT_TEMP;      // Left boundary set to 47°C
-    t[i][n + 1] = RIGHT_TEMP; // Right boundary set to 100°C
-}
-for (int j = 1; j <= n; j++) {
-    t[0][j] = TOP_TEMP;        // Top boundary set to 15°C
-    t[m + 1][j] = BOTTOM_TEMP; // Bottom boundary set to 60°C
-}
-
-// Set corner temperatures as average of adjacent boundaries
-t[0][0] = (TOP_TEMP + LEFT_TEMP) / 2.0;             // Top-left corner
-t[0][n + 1] = (TOP_TEMP + RIGHT_TEMP) / 2.0;        // Top-right corner
-t[m + 1][0] = (BOTTOM_TEMP + LEFT_TEMP) / 2.0;      // Bottom-left corner
-t[m + 1][n + 1] = (BOTTOM_TEMP + RIGHT_TEMP) / 2.0; // Bottom-right corner
-\end{lstlisting}
+    // Set boundary conditions
+    for (int i = 1; i <= m; i++) {
+    t[i][0] = LEFT_TEMP; // Left boundary set to 47C
+    t[i][n + 1] = RIGHT_TEMP; // Right boundary set to 100C
+    }
+    for (int j = 1; j <= n; j++) {
+    t[0][j] = TOP_TEMP; // Top boundary set to 15C
+    t[m + 1][j] = BOTTOM_TEMP; // Bottom boundary set to 60C
+    }
+    
+    
+    // Set corner temperatures as average of adjacent boundaries
+    t[0][0] = (TOP_TEMP + LEFT_TEMP) / 2.0; // Top-left corner
+    t[0][n + 1] = (TOP_TEMP + RIGHT_TEMP) / 2.0; // Top-right corner
+    t[m + 1][0] = (BOTTOM_TEMP + LEFT_TEMP) / 2.0; // Bottom-left corner
+    t[m + 1][n + 1] = (BOTTOM_TEMP + RIGHT_TEMP) / 2.0; // Bottom-right corner
+    \end{lstlisting}
 
 These code snippets ensure that the boundary temperatures are correctly set according to the problem's specifications. The corners are handled separately by averaging the temperatures of the adjacent boundaries to avoid anomalies at those points.
 
@@ -314,7 +318,7 @@ The provided Bash script automates the compilation and execution of the program 
 
    The script checks for the availability of \texttt{gcc-14}; if not found, it defaults to \texttt{gcc}:
 
-   \begin{lstlisting}[style=CStyle, caption={Setting Boundary Conditions}]
+   \begin{lstlisting}[style=BashStyle, caption={Setting Boundary Conditions}]
    if command -v gcc-14 &> /dev/null; then
        COMPILER=gcc-14
    else
@@ -326,7 +330,7 @@ The provided Bash script automates the compilation and execution of the program 
 
    The program is compiled multiple times with different optimization flags:
 
-   \begin{lstlisting}[style=CStyle, caption={Setting Boundary Conditions}]
+   \begin{lstlisting}[style=BashStyle, caption={Setting Boundary Conditions}]
    for optmlvl in 0 1 2 3; do
        $COMPILER -std=c99 -O${optmlvl} jacobi2d-Step1.c -o jacobi2d-Step1-O${optmlvl}
        # Error checking omitted for brevity
@@ -337,7 +341,7 @@ The provided Bash script automates the compilation and execution of the program 
 
    The script runs the compiled programs for each combination of grid size and optimization level, capturing the output:
 
-   \begin{lstlisting}[style=CStyle, caption={Setting Boundary Conditions}]
+   \begin{lstlisting}[style=BashStyle, caption={Setting Boundary Conditions}]
    for size in 150 200 250; do
        for optmlvl in 0 1 2 3; do
            echo "Testing grid size of ${size}x${size} with optimization level -O${optmlvl}" >> jacobi2d-Step1.txt
@@ -359,11 +363,11 @@ It is noted that aggressive compiler optimizations can potentially alter the pro
 
 \begin{table}[H]
     \centering
-    \caption{Execution Times for Different Grid Sizes and Optimization Levels}
+    \caption{Execution Times for Different Grid Sizes and Optimization Levels (\texttt{-O}N)}
     \label{tab:execution_times}
     \begin{tabular}{lrrcccc}
     \toprule
-    \textbf{Grid Size} & \textbf{Iterations} & \textbf{Maximum Difference ($difmax$)} & \textbf{-O0 (s)} & \textbf{-O1 (s)} & \textbf{-O2 (s)} & \textbf{-O3 (s)} \\
+    \textbf{Grid Size} & \textbf{Iterations} & \textbf{Maximum Difference ($difmax$)} & \textbf{\texttt{-O}0 (s)} & \textbf{\texttt{-O}1 (s)} & \textbf{\texttt{-O}2 (s)} & \textbf{\texttt{-O}3 (s)} \\
     \midrule
     150x150 & 20,763 & $9.9990 \times 10^{-5}$ & 2.492 & 0.468 & 0.443 & 0.413 \\
     200x200 & 32,108 & $9.9992 \times 10^{-5}$ & 6.879 & 1.254 & 1.150 & 1.062 \\
@@ -375,6 +379,8 @@ It is noted that aggressive compiler optimizations can potentially alter the pro
 \subsubsection{Conclusion}
 
 The modifications to the program successfully implemented the specified boundary conditions and enabled the measurement of execution time. The use of a Bash script to automate testing across different grid sizes and optimization levels provided valuable insights into the program's performance characteristics. These results form a solid foundation for further analysis and optimization in subsequent steps of the coursework.
+
+\rule{\linewidth}{0.5pt}
 
 \subsection{Step 2}
 
@@ -401,25 +407,14 @@ The original sequential code was adapted to leverage OpenMP for parallel process
    {
        // Initialize interior points to 30.0
        #pragma omp for collapse(2) schedule(static) nowait
-       for (i = 0; i <= m + 1; i++) {
-           for (j = 0; j <= n + 1; j++) {
-               t[i][j] = 30.0;
-               tnew[i][j] = 30.0;
-           }
-       }
+       // ... [Initialize interior points] ...
 
        // Set boundary temperatures
        #pragma omp for schedule(static) nowait
-       for (i = 1; i <= m; i++) {
-           t[i][0] = LEFT_TEMP;
-           t[i][n + 1] = RIGHT_TEMP;
-       }
+       // ... [Set left and right boundary temperatures] ...
 
        #pragma omp for schedule(static)
-       for (j = 1; j <= n; j++) {
-           t[0][j] = TOP_TEMP;
-           t[m + 1][j] = BOTTOM_TEMP;
-       }
+       // ... [Set top and bottom boundary temperatures] ...
    }
    \end{lstlisting}
 
@@ -506,7 +501,7 @@ To systematically test the parallel program across different thread counts, a Ba
 
    The script runs the program for a grid size of 20x20 using 1, 2, 4, and 8 threads:
 
-   \begin{lstlisting}[style=CStyle, caption={}]
+   \begin{lstlisting}[style=BashStyle, caption={}]
    for size in 20; do
        for threads in 1 2 4 8; do
            echo "Testing grid size of ${size}x${size} with ${threads} threads" >> jacobi2d-Step2.txt
@@ -549,7 +544,7 @@ The output obtained from running the tests demonstrates the correctness and perf
 
 \textbf{Diminishing Returns:} The speedup from 4 to 8 threads is less significant than from 2 to 4 threads, which may be due to overheads associated with thread management and the small problem size.
 
-For grids of size 20x20 or smaller, the program prints the final temperature distribution. An example of the output grid (truncated for brevity) is as follows:
+For grids of size 20x20 or smaller, the program prints the final temperature distribution. Here are the of the output grids produced by the Jacobi program is as follows:
 
 \begin{figure}[H]
     \centering
@@ -593,11 +588,15 @@ This outputs confirm that the temperature distribution conforms to the specified
 
 The OpenMP parallelization of the Jacobi 2D grid problem successfully leveraged multiple threads to reduce execution time while maintaining correct results. The modifications to the code focused on parallelizing the initialization and main computation loops, utilizing OpenMP directives and clauses to manage data dependencies and reductions. The automated testing script facilitated consistent performance measurements across different thread counts, and the results demonstrate both the correctness and scalability of the parallel implementation.
 
+\rule{\linewidth}{0.5pt}
+
 \subsection{Step 3}
 
 
 
 \printbibliography
+
+\hrule
 
 \textit{Due to space constraints, only relevant portions of the code have been included in the main report. The full code is provided in the attached files.}
 
