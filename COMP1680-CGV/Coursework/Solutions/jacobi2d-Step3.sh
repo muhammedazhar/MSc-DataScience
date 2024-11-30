@@ -26,9 +26,9 @@ done
 echo "--------------------------------------"
 # Loop over different matrix sizes
 for size in 150 200 250; do
-    # Loop over different optimization counts
+    # Loop over different optimization levels
     for optmlvl in 0 1 2 3; do
-        # Loop over different thread levels
+        # Loop over different thread counts
         for threads in 1 2 4 8; do
             # Print test configuration
             echo "Testing grid size of ${size}x${size} with ${threads} threads and optimization level -O${optmlvl}"

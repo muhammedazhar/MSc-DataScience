@@ -29,11 +29,11 @@
 \cwauthor{Word Count: }
 \end{cwauthorlist}
 
-\section{Parallel Processing using Cloud Computing}
+\part{Parallel Processing using Cloud Computing}
 
 In the contemporary landscape of computational technologies, small consultancy firms face critical decisions regarding their computational infrastructure. The choice between adopting cloud computing services or investing in an onsite High-Performance Computing (HPC) system significantly impacts operational efficiency, scalability, and financial expenditure. This report evaluates these options for a consultancy company comprising 30 consultants utilizing approximately 1,400 CPU hours each month. The analysis focuses on the advantages and disadvantages of leading cloud service providers such as Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP) when compared to an onsite HPC system for multicore workloads using batch processing. A comprehensive financial cost comparison is provided, culminating in a recommendation that aligns with the company's strategic objectives.
 
-\subsection{Analysis of Cloud Providers vs. Onsite HPC for Multicore Workloads}
+\section{Analysis of Cloud Providers vs. Onsite HPC for Multicore Workloads}
 
 Cloud computing has revolutionized the way businesses handle computational workloads, offering scalable resources and flexible pricing models. In contrast, onsite HPC systems provide dedicated resources but require substantial initial investments and ongoing maintenance.
 
@@ -65,7 +65,7 @@ Cloud computing has revolutionized the way businesses handle computational workl
     \end{tabular}
     \end{table}
 
-\subsubsection{Advantages of Cloud Computing Over Onsite HPC}
+\subsection{Advantages of Cloud Computing Over Onsite HPC}
 
 Cloud computing offers several advantages over onsite HPC systems, particularly for small consultancies:
 \begin{itemize}
@@ -75,7 +75,7 @@ Cloud computing offers several advantages over onsite HPC systems, particularly 
     \item \textbf{Access to Advanced Technologies:} Cloud platforms frequently update their offerings, providing access to the latest hardware and software innovations without additional costs \parencite{dillon2010cloud}.
 \end{itemize}
 
-\subsubsection{Disadvantages of Cloud Computing}
+\subsection{Disadvantages of Cloud Computing}
 
 Despite these advantages, cloud computing presents certain challenges:
 \begin{itemize}
@@ -84,7 +84,7 @@ Despite these advantages, cloud computing presents certain challenges:
     \item \textbf{Potential for Unexpected Costs:} Without proper management, costs can escalate due to factors like data egress fees and underutilized resources \parencite{rehman2018cloud}.
 \end{itemize}
 
-\subsection{Comparison of Leading Cloud Providers}
+\section{Comparison of Leading Cloud Providers}
 
 \textbf{Amazon Web Services (AWS):}
 AWS offers a broad range of services suitable for batch processing, such as AWS Batch and EC2 compute-optimized instances. It provides robust scalability and a variety of pricing models, including on-demand, reserved, and spot instances \parencite{awspricing}. AWS's global infrastructure ensures high availability and low latency.
@@ -116,7 +116,7 @@ GCP's Compute Engine and preemptible virtual machines offer cost-effective solut
     \end{tabular}
     \end{table}
 
-\subsubsection{Comparison Between Cloud Providers}
+\subsection{Comparison Between Cloud Providers}
 While all three providers offer similar core services, differences exist in pricing models, discount structures, and additional services:
 \begin{itemize}
     \item \textbf{Pricing Models:} AWS and Azure offer reserved instances for long-term commitments, while GCP provides sustained use discounts without upfront commitments.
@@ -124,10 +124,10 @@ While all three providers offer similar core services, differences exist in pric
     \item \textbf{Specialized Services:} GCP excels in machine learning and big data analytics services, which could be beneficial depending on the consultancy's focus.
 \end{itemize}
 
-\subsubsection{Advantages of Onsite HPC}
+\subsection{Advantages of Onsite HPC}
 Onsite HPC systems offer complete control over hardware and software configurations. They may provide performance benefits due to dedicated resources and reduced latency \parencite{stergiou2018iot}. Additionally, data remains on-premises, which can alleviate certain security and compliance concerns.
 
-\subsubsection{Disadvantages of Onsite HPC}
+\subsection{Disadvantages of Onsite HPC}
 
 The primary drawbacks of onsite HPC include:
 
@@ -137,7 +137,7 @@ The primary drawbacks of onsite HPC include:
     \item \textbf{Lack of Scalability:} Scaling up requires additional hardware purchases, leading to potential underutilization during periods of low demand.
 \end{itemize}
 
-\subsubsection{Financial Cost Comparison}
+\subsection{Financial Cost Comparison}
 A detailed financial analysis over a five-year period highlights the cost implications of both options.
 
 \begin{table}[H]
@@ -159,7 +159,7 @@ A detailed financial analysis over a five-year period highlights the cost implic
     \end{table}
 
 
-\subsubsection{Onsite HPC Costs}
+\subsection{Onsite HPC Costs}
 \textbf{Initial Setup Costs:}
 The purchase of HPC hardware, including high-performance servers, networking equipment, and storage systems, is estimated between \$80,000 and \$120,000. Infrastructure costs, encompassing cooling systems, power supplies, and additional networking equipment, add another \$20,000 to \$40,000. Thus, the total initial setup cost ranges from \$100,000 to \$160,000.
 
@@ -172,7 +172,7 @@ Upgrades are anticipated every 4-5 years, costing 50-70\% of the initial hardwar
 \textbf{Total Five-Year Cost:}
 Combining the initial setup, operating costs over five years, and hardware upgrades, the total expenditure ranges from \$453,780 to \$700,780.
 
-\subsubsection{Cloud Computing Costs}
+\subsection{Cloud Computing Costs}
 \textbf{Amazon Web Services (AWS):}
 To fulfill the requirement of 1,400 CPU hours per month, AWS offers the c6a.large instance at \$0.085 per hour. The monthly compute cost is \$119, with additional storage and data transfer costs estimated at \$30 per month. The total monthly cost is \$149, leading to an annual cost of \$1,788 and a five-year cost of \$8,940. Potential discounts through reserved instances or spot instances can further reduce expenses.
 
@@ -182,10 +182,10 @@ Azure's F2s\_v2 instance, also priced at approximately \$0.085 per hour, results
 \textbf{Google Cloud Platform (GCP):}
 GCP's n2-standard-2 instance costs \$0.084 per hour, leading to a monthly compute cost of \$117.60. Including storage and data transfer, the total monthly cost is \$147.60. The annual cost is \$1,771.20, and the five-year cost is \$8,856. Sustained use discounts may reduce costs by up to 30\%.
 
-\subsubsection{Total Cost Comparison}
+\subsection{Total Cost Comparison}
 Over five years, the total cost for cloud computing ranges from \$8,856 to \$8,940, significantly lower than the onsite HPC cost of \$453,780 to \$700,780. The cost savings with cloud computing amount to \$444,924 to \$691,924 over five years.
 
-\subsection{Recommendation}
+\section{Recommendation}
 
 Based on the analysis of operational and financial factors, it is recommended that the consultancy company adopts a cloud computing solution for its parallel processing needs.
 
@@ -197,7 +197,7 @@ Based on the analysis of operational and financial factors, it is recommended th
 
 \textbf{Risk Mitigation:} Cloud computing eliminates risks associated with hardware failures and obsolescence. Providers offer high availability and disaster recovery solutions, ensuring business continuity.
 
-\subsubsection{Platform Selection}
+\subsection{Platform Selection}
 While all three major cloud providers offer services that meet the company's needs, slight distinctions may influence the decision:
 \begin{itemize}
     \item \textbf{AWS:} With its extensive range of services and mature ecosystem, AWS is suitable for companies seeking a broad array of tools and global infrastructure.
@@ -206,7 +206,7 @@ While all three major cloud providers offer services that meet the company's nee
 \end{itemize}
 Given the consultancy's size and requirements, any of these providers could be appropriate. A detailed assessment of existing partnerships, staff expertise, and specific service offerings should guide the final selection. The consultancy should also consider any existing vendor relationships or preferred ecosystems when making the final decision.
 
-\subsubsection{Implementation Considerations}
+\subsection{Implementation Considerations}
 To maximize the benefits of cloud computing, the company should take the following steps during the implementation phase:
 
 \begin{itemize}
@@ -236,41 +236,41 @@ To maximize the benefits of cloud computing, the company should take the followi
     \end{tabular}
     \end{table}
 
-\subsubsection{Conclusion}
+\subsection{Conclusion}
 Transitioning to cloud computing is a strategic decision that aligns with the consultancy company's operational needs and financial objectives. The substantial cost savings, coupled with enhanced scalability and reduced maintenance burdens, make cloud services the optimal choice over an onsite HPC system. By adopting cloud computing, the company positions itself to leverage advanced technologies, respond agilely to market demands, and focus its resources on delivering value to clients.
 
 \newpage
 
-\section{Parallel Programming Exercise}
+\part{Parallel Programming Exercise}
 
-\subsection{Step 1}
+\section{Step 1}
 
 The C program was adapted to simulate the temperature distribution in a rectangular 2D grid with specific boundary conditions: the top boundary at 15°C, the bottom at 60°C, the left at 47°C, and the right at 100°C. These conditions were implemented by setting the corresponding edges of the grid to the specified temperatures.
 
 In the code, after initializing the entire grid to an initial temperature (e.g., 30°C), the boundary conditions are applied:
 
-\begin{lstlisting}[style=CStyle, caption={Setting Boundary Conditions}]
-    // Set boundary conditions
-    for (int i = 1; i <= m; i++) {
-    t[i][0] = LEFT_TEMP; // Left boundary set to 47C
-    t[i][n + 1] = RIGHT_TEMP; // Right boundary set to 100C
-    }
-    for (int j = 1; j <= n; j++) {
-    t[0][j] = TOP_TEMP; // Top boundary set to 15C
-    t[m + 1][j] = BOTTOM_TEMP; // Bottom boundary set to 60C
-    }
-    
-    
-    // Set corner temperatures as average of adjacent boundaries
-    t[0][0] = (TOP_TEMP + LEFT_TEMP) / 2.0; // Top-left corner
-    t[0][n + 1] = (TOP_TEMP + RIGHT_TEMP) / 2.0; // Top-right corner
-    t[m + 1][0] = (BOTTOM_TEMP + LEFT_TEMP) / 2.0; // Bottom-left corner
-    t[m + 1][n + 1] = (BOTTOM_TEMP + RIGHT_TEMP) / 2.0; // Bottom-right corner
-    \end{lstlisting}
+\begin{lstlisting}[style=CStyle, caption={}]
+// Set boundary conditions
+for (int i = 1; i <= m; i++) {
+t[i][0] = LEFT_TEMP; // Left boundary set to 47C
+t[i][n + 1] = RIGHT_TEMP; // Right boundary set to 100C
+}
+for (int j = 1; j <= n; j++) {
+t[0][j] = TOP_TEMP; // Top boundary set to 15C
+t[m + 1][j] = BOTTOM_TEMP; // Bottom boundary set to 60C
+}
+
+
+// Set corner temperatures as average of adjacent boundaries
+t[0][0] = (TOP_TEMP + LEFT_TEMP) / 2.0; // Top-left corner
+t[0][n + 1] = (TOP_TEMP + RIGHT_TEMP) / 2.0; // Top-right corner
+t[m + 1][0] = (BOTTOM_TEMP + LEFT_TEMP) / 2.0; // Bottom-left corner
+t[m + 1][n + 1] = (BOTTOM_TEMP + RIGHT_TEMP) / 2.0; // Bottom-right corner
+\end{lstlisting}
 
 These code snippets ensure that the boundary temperatures are correctly set according to the problem's specifications. The corners are handled separately by averaging the temperatures of the adjacent boundaries to avoid anomalies at those points.
 
-\subsubsection{Execution Time}
+\subsection{Execution Time}
 
 To measure the execution time of the program, the \texttt{time.h} library is included, and timing functions are used:
 
@@ -292,7 +292,7 @@ printf("Execution time: %f seconds\n", cpu_time_used);
 
 The \texttt{clock()} function records the processor time consumed by the program. By capturing the time before and after the main computation loop and calculating the difference, the execution time is obtained. This measurement is crucial for comparing performance across different grid sizes and compiler optimization levels.
 
-\subsubsection{Adjustments for Realistic Execution Time Measurements}
+\subsection{Adjustments for Realistic Execution Time Measurements}
 
 To obtain accurate execution time measurements, it is important to prevent the program from printing large amounts of data, which can significantly affect performance. In the code, the grid values are only printed if the grid size is small (e.g., 10x10 or smaller):
 
@@ -310,7 +310,7 @@ if (m <= 10 && n <= 10) {
 
 By restricting the output for larger grids, the program avoids the overhead associated with I/O operations, leading to more accurate timing of the computational aspects.
 
-\subsubsection{Automation of Testing with Bash Script}
+\subsection{Automation of Testing with Bash Script}
 
 The provided Bash script automates the compilation and execution of the program across different optimization levels (\texttt{-O0} to \texttt{-O3}) and grid sizes (150x150, 200x200, 250x250). The script performs the following tasks:
 
@@ -318,46 +318,46 @@ The provided Bash script automates the compilation and execution of the program 
 
    The script checks for the availability of \texttt{gcc-14}; if not found, it defaults to \texttt{gcc}:
 
-   \begin{lstlisting}[style=BashStyle, caption={Setting Boundary Conditions}]
-   if command -v gcc-14 &> /dev/null; then
-       COMPILER=gcc-14
-   else
-       COMPILER=gcc
-   fi
-   \end{lstlisting}
+\begin{lstlisting}[style=BashStyle, caption={Compiler Selection}]
+if command -v gcc-14 &> /dev/null; then
+    COMPILER=gcc-14
+else
+    COMPILER=gcc
+fi
+\end{lstlisting}
 
 2. \textbf{Compilation with Different Optimization Levels:}
 
    The program is compiled multiple times with different optimization flags:
 
-   \begin{lstlisting}[style=BashStyle, caption={Setting Boundary Conditions}]
-   for optmlvl in 0 1 2 3; do
-       $COMPILER -std=c99 -O${optmlvl} jacobi2d-Step1.c -o jacobi2d-Step1-O${optmlvl}
-       # Error checking omitted for brevity
-   done
-   \end{lstlisting}
+\begin{lstlisting}[style=BashStyle, caption={Compilation with Different Optimization Levels}]
+for optmlvl in 0 1 2 3; do
+    $COMPILER -std=c99 -O${optmlvl} jacobi2d-Step1.c -o jacobi2d-Step1-O${optmlvl}
+    # Error checking omitted for brevity
+done
+\end{lstlisting}
 
 3. \textbf{Execution Across Grid Sizes and Optimization Levels:}
 
    The script runs the compiled programs for each combination of grid size and optimization level, capturing the output:
 
-   \begin{lstlisting}[style=BashStyle, caption={Setting Boundary Conditions}]
-   for size in 150 200 250; do
-       for optmlvl in 0 1 2 3; do
-           echo "Testing grid size of ${size}x${size} with optimization level -O${optmlvl}" >> jacobi2d-Step1.txt
-           ./jacobi2d-Step1-O${optmlvl} $size $size 0.000100 >> jacobi2d-Step1.txt
-           echo "--------------------------------------" >> jacobi2d-Step1.txt
-       done
-   done
-    \end{lstlisting}
+\begin{lstlisting}[style=BashStyle, caption={Automated Testing Loop for Grid Sizes and Optimization Levels}]
+for size in 150 200 250; do
+    for optmlvl in 0 1 2 3; do
+        echo "Testing grid size of ${size}x${size} with optimization level -O${optmlvl}" >> jacobi2d-Step1.txt
+        ./jacobi2d-Step1-O${optmlvl} $size $size 0.000100 >> jacobi2d-Step1.txt
+        echo "--------------------------------------" >> jacobi2d-Step1.txt
+    done
+done
+\end{lstlisting}
 
 This automated approach ensures consistency and efficiency in data collection, facilitating the analysis of how different optimization levels impact execution time for various grid sizes.
 
-\subsubsection{Results and Observations}
+\subsection{Results and Observations}
 
 The output collected demonstrates how compiler optimization levels affect the program's performance. Generally, higher optimization levels \texttt{-O1}, \texttt{-O2}, \texttt{-O3}) result in reduced execution times compared to no optimization (\texttt{-O0}). The data also shows that as the grid size increases, the execution time increases, which is expected due to the larger computational workload.
 
-\subsubsection{Considerations Regarding Compiler Optimizations}
+\subsection{Considerations Regarding Compiler Optimizations}
 
 It is noted that aggressive compiler optimizations can potentially alter the program's behavior. In this case, the program was tested across all optimization levels without any observed issues. However, caution is advised, and validation checks should be included to ensure that the optimizations do not introduce unintended side effects.
 
@@ -369,24 +369,24 @@ It is noted that aggressive compiler optimizations can potentially alter the pro
     \toprule
     \textbf{Grid Size} & \textbf{Iterations} & \textbf{Maximum Difference ($difmax$)} & \textbf{\texttt{-O}0 (s)} & \textbf{\texttt{-O}1 (s)} & \textbf{\texttt{-O}2 (s)} & \textbf{\texttt{-O}3 (s)} \\
     \midrule
-    150x150 & 20,763 & $9.9990 \times 10^{-5}$ & 2.492 & 0.468 & 0.443 & 0.413 \\
-    200x200 & 32,108 & $9.9992 \times 10^{-5}$ & 6.879 & 1.254 & 1.150 & 1.062 \\
-    250x250 & 44,398 & $9.9994 \times 10^{-5}$ & 14.678 & 2.697 & 2.489 & 2.361 \\
+    150x150 & 20,763 & $9.999041 \times 10^{-5}$ & 5.250 & 1.570 & 1.090 & 1.060 \\
+    200x200 & 32,108 & $9.999248 \times 10^{-5}$ & 11.840 & 4.290 & 2.610 & 2.840 \\
+    250x250 & 44,398 & $9.999424 \times 10^{-5}$ & 25.720 & 9.420 & 6.290 & 6.050 \\
     \bottomrule
     \end{tabular}
 \end{table}
 
-\subsubsection{Conclusion}
+\subsection{Conclusion}
 
 The modifications to the program successfully implemented the specified boundary conditions and enabled the measurement of execution time. The use of a Bash script to automate testing across different grid sizes and optimization levels provided valuable insights into the program's performance characteristics. These results form a solid foundation for further analysis and optimization in subsequent steps of the coursework.
 
 \rule{\linewidth}{0.5pt}
 
-\subsection{Step 2}
+\section{Step 2}
 
 The Jacobi 2D grid problem was extended from its sequential implementation to a parallel version using OpenMP. The primary objective was to modify the existing code to incorporate OpenMP directives for parallel execution, compile it with OpenMP support, and test its correctness using multiple threads. The performance was compared across different thread counts to observe the scalability and correctness of the parallel implementation.
 
-\subsubsection{Code Modifications for Parallel Execution}
+\subsection{Code Modifications for Parallel Execution}
 
 The original sequential code was adapted to leverage OpenMP for parallel processing. Key modifications were made to parallelize the computation-intensive sections while ensuring thread safety and correctness.
 
@@ -394,29 +394,29 @@ The original sequential code was adapted to leverage OpenMP for parallel process
 
    The OpenMP library was included by adding the header file:
 
-   \begin{lstlisting}[style=CStyle, caption={OpenMP Header Inclusion}]
-   #include <omp.h> // Added OpenMP library for parallel execution
-   \end{lstlisting}
+\begin{lstlisting}[style=CStyle, caption={OpenMP Header Inclusion}]
+#include <omp.h> // Added OpenMP library for parallel execution
+\end{lstlisting}
 
 2. \textbf{Parallel Initialization}
 
     The initialization of the temperature grids was parallelized using OpenMP directives \parencite{chapman2007openmp}. The \texttt{\#pragma omp parallel} directive was used to define a parallel region, and loops were parallelized using \texttt{\#pragma omp for} with appropriate scheduling:
 
-   \begin{lstlisting}[style=CStyle, caption={Parallel Initialization}]
-   #pragma omp parallel
-   {
-       // Initialize interior points to 30.0
-       #pragma omp for collapse(2) schedule(static) nowait
-       // ... [Initialize interior points] ...
+\begin{lstlisting}[style=CStyle, caption={Parallel Initialization}]
+#pragma omp parallel
+{
+    // Initialize interior points to 30.0
+    #pragma omp for collapse(2) schedule(static) nowait
+    // ... [Initialize interior points] ...
 
-       // Set boundary temperatures
-       #pragma omp for schedule(static) nowait
-       // ... [Set left and right boundary temperatures] ...
+    // Set boundary temperatures
+    #pragma omp for schedule(static) nowait
+    // ... [Set left and right boundary temperatures] ...
 
-       #pragma omp for schedule(static)
-       // ... [Set top and bottom boundary temperatures] ...
-   }
-   \end{lstlisting}
+    #pragma omp for schedule(static)
+    // ... [Set top and bottom boundary temperatures] ...
+}
+\end{lstlisting}
 
     \begin{itemize}
         \item \textbf{Use of \texttt{collapse(2)}:} This clause was used to collapse the two nested loops into a single loop for parallel execution \parencite{openmp}, enhancing load balancing among threads.
@@ -427,23 +427,23 @@ The original sequential code was adapted to leverage OpenMP for parallel process
 
    The main computation loop, which performs the Jacobi iteration, was parallelized:
 
-   \begin{lstlisting}[style=CStyle, caption={Parallel Main Iteration Loop}]
-   while (difmax > tol) {
-       iter++;
-       difmax = 0.0;
+\begin{lstlisting}[style=CStyle, caption={Parallel Main Iteration Loop}]
+while (difmax > tol) {
+    iter++;
+    difmax = 0.0;
 
-       #pragma omp parallel
-       {
-           // Compute new temperature values
-           #pragma omp for private(j) schedule(static) nowait
-           // ... [Compute new temperature values] ...
+    #pragma omp parallel
+    {
+        // Compute new temperature values
+        #pragma omp for private(j) schedule(static) nowait
+        // ... [Compute new temperature values] ...
 
-           // Update temperatures and compute maximum difference
-           #pragma omp for private(j, diff) reduction(max:difmax)
-           // ... [Update temperatures and compute maximum difference] ...
-       }
-   }
-   \end{lstlisting}
+        // Update temperatures and compute maximum difference
+        #pragma omp for private(j, diff) reduction(max:difmax)
+        // ... [Update temperatures and compute maximum difference] ...
+    }
+}
+\end{lstlisting}
 
     \begin{itemize}
         \item \textbf{Private Variables:} Variables \texttt{j} and \texttt{diff} were declared as private to ensure thread safety.
@@ -455,12 +455,12 @@ The original sequential code was adapted to leverage OpenMP for parallel process
 
     The execution time was measured using OpenMP's timing functions \parencite{openmp}:
 
-   \begin{lstlisting}[style=CStyle, caption={Timing with OpenMP Functions}]
-   double start_time = omp_get_wtime();
-   // ... [computation] ...
-   double exec_time = omp_get_wtime() - start_time;
-   printf("Execution time: %f seconds\n", exec_time);
-   \end{lstlisting}
+\begin{lstlisting}[style=CStyle, caption={Timing with OpenMP Functions}]
+double start_time = omp_get_wtime();
+// ... [computation] ...
+double exec_time = omp_get_wtime() - start_time;
+printf("Execution time: %f seconds\n", exec_time);
+\end{lstlisting}
 
    The use of \texttt{omp\_get\_wtime()} provides high-resolution wall-clock timing suitable for parallel regions.
 
@@ -468,22 +468,22 @@ The original sequential code was adapted to leverage OpenMP for parallel process
 
    The arrays were allocated using contiguous memory blocks to improve cache performance:
 
-   \begin{lstlisting}[style=CStyle, caption={Memory Allocation Optimization}]
-   double *t_data = (double *)malloc((m + 2) * (n + 2) * sizeof(double));
-   double *tnew_data = (double *)malloc((m + 2) * (n + 2) * sizeof(double));
-   double **t = (double **)malloc((m + 2) * sizeof(double *));
-   double **tnew = (double **)malloc((m + 2) * sizeof(double *));
+\begin{lstlisting}[style=CStyle, caption={Memory Allocation Optimization}]
+double *t_data = (double *)malloc((m + 2) * (n + 2) * sizeof(double));
+double *tnew_data = (double *)malloc((m + 2) * (n + 2) * sizeof(double));
+double **t = (double **)malloc((m + 2) * sizeof(double *));
+double **tnew = (double **)malloc((m + 2) * sizeof(double *));
 
-   // Setup 2D array pointers
-   for (i = 0; i < m + 2; i++) {
-       t[i] = &t_data[i * (n + 2)];
-       tnew[i] = &tnew_data[i * (n + 2)];
-   }
-   \end{lstlisting}
+// Setup 2D array pointers
+for (i = 0; i < m + 2; i++) {
+    t[i] = &t_data[i * (n + 2)];
+    tnew[i] = &tnew_data[i * (n + 2)];
+}
+\end{lstlisting}
 
    This approach reduces memory fragmentation and enhances data locality, which is beneficial for parallel execution.
 
-\subsubsection{Automation of Testing with Bash Script}
+\subsection{Automation of Testing with Bash Script}
 
 To systematically test the parallel program across different thread counts, a Bash script was employed. The script automates the compilation and execution process, ensuring consistent and repeatable tests.
 
@@ -491,15 +491,15 @@ To systematically test the parallel program across different thread counts, a Ba
 
    The script runs the program for a grid size of 20x20 using 1, 2, 4, and 8 threads:
 
-   \begin{lstlisting}[style=BashStyle, caption={}]
-   for size in 20; do
-       for threads in 1 2 4 8; do
-           echo "Testing grid size of ${size}x${size} with ${threads} threads" >> jacobi2d-Step2.txt
-           OMP_NUM_THREADS=$threads ./jacobi2d-Step2 $size $size 0.000100 >> jacobi2d-Step2.txt
-           echo "--------------------------------------" >> jacobi2d-Step2.txt
-       done
-   done
-   \end{lstlisting}
+\begin{lstlisting}[style=BashStyle, caption={Execution Across Thread Counts}]
+for size in 20; do
+    for threads in 1 2 4 8; do
+        echo "Testing grid size of ${size}x${size} with ${threads} threads" >> jacobi2d-Step2.txt
+        OMP_NUM_THREADS=$threads ./jacobi2d-Step2 $size $size 0.000100 >> jacobi2d-Step2.txt
+        echo "--------------------------------------" >> jacobi2d-Step2.txt
+    done
+done
+\end{lstlisting}
 
     \begin{itemize}
         \item \textbf{Environment Variable \texttt{OMP\_NUM\_THREADS}:} This variable sets the number of threads for OpenMP at runtime.
@@ -507,7 +507,7 @@ To systematically test the parallel program across different thread counts, a Ba
     \end{itemize}
 
 
-\subsubsection{Results and Observations}
+\subsection{Results and Observations}
 
 The output obtained from running the tests demonstrates the correctness and performance of the parallel implementation. For a grid size of 20x20, the program was executed using 1, 2, 4, and 8 threads. The iteration counts, maximum differences, and execution times were recorded.
 
@@ -566,7 +566,7 @@ For grids of size 20x20 or smaller, the program prints the final temperature dis
 
 This outputs confirm that the temperature distribution conforms to the specified boundary conditions, and the program functions correctly for different thread counts.
 
-\subsubsection{Recommendations for Further Work}
+\subsection{Recommendations for Further Work}
 
 \begin{itemize}
     \item \textbf{Larger Problem Sizes:} Testing with larger grids would provide more insight into the scalability and efficiency of the parallel implementation.
@@ -574,15 +574,122 @@ This outputs confirm that the temperature distribution conforms to the specified
     \item \textbf{Hardware Considerations:} Running the program on hardware with more cores or different architectures may yield different performance characteristics.
 \end{itemize}
 
-\subsubsection{Conclusion}
+\subsection{Conclusion}
 
 The OpenMP parallelization of the Jacobi 2D grid problem successfully leveraged multiple threads to reduce execution time while maintaining correct results. The modifications to the code focused on parallelizing the initialization and main computation loops, utilizing OpenMP directives and clauses to manage data dependencies and reductions. The automated testing script facilitated consistent performance measurements across different thread counts, and the results demonstrate both the correctness and scalability of the parallel implementation.
 
 \rule{\linewidth}{0.5pt}
 
-\subsection{Step 3}
+\section{Step 3}
 
+\begin{table}[H]
+    \centering
+    \caption{Performance Metrics for Grid Size 150x150}
+    \label{tab:performance_150}
+    \begin{tabular}{l r r r r}
+    \toprule
+    \textbf{Optimization Level} & \textbf{Threads} & \textbf{Iterations} & \textbf{Maximum Difference ($difmax$)} & \textbf{Time (s)} \\
+    \midrule
+    \textbf{\texttt{-O}0} & 1 & 20,763 & $9.999041 \times 10^{-5}$ & 6.834 \\
+        & 2 & 20,036 & $9.999421 \times 10^{-5}$ & 3.642 \\
+        & 4 & 19,412 & $9.990420 \times 10^{-5}$ & 1.974 \\
+        & 8 & 19,558 & $9.998308 \times 10^{-5}$ & 1.173 \\
+    \midrule
+    \textbf{\texttt{-O}1} & 1 & 20,763 & $9.999041 \times 10^{-5}$ & 1.761 \\
+        & 2 & 20,034 & $9.999776 \times 10^{-5}$ & 1.154 \\
+        & 4 & 19,423 & $9.999817 \times 10^{-5}$ & 0.635 \\
+        & 8 & 19,404 & $9.999061 \times 10^{-5}$ & 0.381 \\
+    \midrule
+    \textbf{\texttt{-O}2} & 1 & 20,763 & $9.999041 \times 10^{-5}$ & 0.926 \\
+        & 2 & 20,032 & $9.999765 \times 10^{-5}$ & 0.668 \\
+        & 4 & 19,423 & $9.999867 \times 10^{-5}$ & 0.357 \\
+        & 8 & 19,387 & $9.996107 \times 10^{-5}$ & 0.226 \\
+    \midrule
+    \textbf{\texttt{-O}3} & 1 & 20,763 & $9.999041 \times 10^{-5}$ & 0.869 \\
+        & 2 & 20,033 & $9.999972 \times 10^{-5}$ & 0.633 \\
+        & 4 & 19,424 & $9.999856 \times 10^{-5}$ & 0.339 \\
+        & 8 & 19,730 & $9.999910 \times 10^{-5}$ & 0.221 \\
+    \bottomrule
+    \end{tabular}
+\end{table}
 
+\begin{table}[H]
+    \centering
+    \caption{Performance Metrics for Grid Size 200x200}
+    \label{tab:performance_200}
+    \begin{tabular}{l r r r r}
+    \toprule
+    \textbf{Optimization Level} & \textbf{Threads} & \textbf{Iterations} & \textbf{Maximum Difference ($difmax$)} & \textbf{Time (s)} \\
+    \midrule
+    \textbf{\texttt{-O}0} & 1 & 32,108 & $9.999248 \times 10^{-5}$ & 18.041 \\
+        & 2 & 30,807 & $9.999068 \times 10^{-5}$ & 9.308 \\
+        & 4 & 29,749 & $9.998986 \times 10^{-5}$ & 4.915 \\
+        & 8 & 30,392 & $9.998702 \times 10^{-5}$ & 2.917 \\
+    \midrule
+    \textbf{\texttt{-O}1} & 1 & 32,108 & $9.999248 \times 10^{-5}$ & 4.719 \\
+        & 2 & 30,799 & $9.999040 \times 10^{-5}$ & 2.571 \\
+        & 4 & 29,717 & $9.999629 \times 10^{-5}$ & 1.529 \\
+        & 8 & 29,989 & $9.998269 \times 10^{-5}$ & 0.903 \\
+    \midrule
+    \textbf{\texttt{-O}2} & 1 & 32,108 & $9.999248 \times 10^{-5}$ & 2.560 \\
+        & 2 & 30,802 & $9.999834 \times 10^{-5}$ & 1.451 \\
+        & 4 & 29,705 & $9.998981 \times 10^{-5}$ & 0.933 \\
+        & 8 & 31,783 & $9.999760 \times 10^{-5}$ & 0.539 \\
+    \midrule
+    \textbf{\texttt{-O}3} & 1 & 32,108 & $9.999248 \times 10^{-5}$ & 2.423 \\
+        & 2 & 30,811 & $9.998999 \times 10^{-5}$ & 1.367 \\
+        & 4 & 30,818 & $9.992472 \times 10^{-5}$ & 0.829 \\
+        & 8 & 29,988 & $9.998336 \times 10^{-5}$ & 0.484 \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Performance Metrics for Grid Size 250x250}
+    \label{tab:performance_250}
+    \begin{tabular}{l r r r r}
+    \toprule
+    \textbf{Optimization Level} & \textbf{Threads} & \textbf{Iterations} & \textbf{Maximum Difference ($difmax$)} & \textbf{Time (s)} \\
+    \midrule
+    \textbf{\texttt{-O}0} & 1 & 44,398 & $9.999424 \times 10^{-5}$ & 38.671 \\
+        & 2 & 42,381 & $9.999290 \times 10^{-5}$ & 19.026 \\
+        & 4 & 42,321 & $9.988293 \times 10^{-5}$ & 10.781 \\
+        & 8 & 42,684 & $9.999864 \times 10^{-5}$ & 6.312 \\
+    \midrule
+    \textbf{\texttt{-O}1} & 1 & 44,398 & $9.999424 \times 10^{-5}$ & 10.183 \\
+        & 2 & 42,372 & $9.999710 \times 10^{-5}$ & 5.149 \\
+        & 4 & 42,295 & $9.999975 \times 10^{-5}$ & 3.203 \\
+        & 8 & 44,204 & $9.999342 \times 10^{-5}$ & 1.934 \\
+    \midrule
+    \textbf{\texttt{-O}2} & 1 & 44,398 & $9.999424 \times 10^{-5}$ & 5.311 \\
+        & 2 & 42,383 & $9.999860 \times 10^{-5}$ & 2.955 \\
+        & 4 & 42,328 & $9.999459 \times 10^{-5}$ & 1.809 \\
+        & 8 & 41,784 & $9.999386 \times 10^{-5}$ & 0.981 \\
+    \midrule
+    \textbf{\texttt{-O}3} & 1 & 44,398 & $9.999424 \times 10^{-5}$ & 5.051 \\
+        & 2 & 42,314 & $9.999638 \times 10^{-5}$ & 2.718 \\
+        & 4 & 40,698 & $9.999491 \times 10^{-5}$ & 1.722 \\
+        & 8 & 40,087 & $9.999116 \times 10^{-5}$ & 0.883 \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{Images/Plot1.png}
+    \caption{Execution Time Comparison for Different Grid Sizes and Optimization Levels}
+    \label{fig:plot1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{Images/Plot2.png}
+    \caption{Speedup Comparison for Different Grid Sizes and Optimization Levels}
+    \label{fig:plot2}
+\end{figure}
+
+\rule{\linewidth}{0.5pt}
 
 \printbibliography
 
