@@ -2,60 +2,60 @@
 Testing grid size of 150x150 with optimization level -O0
 150 150 0.000100
 iter = 20763  difmax = 0.00009999041
-Execution time: 2.492412 seconds
+Execution time: 5.250000 seconds
 --------------------------------------
 Testing grid size of 150x150 with optimization level -O1
 150 150 0.000100
 iter = 20763  difmax = 0.00009999041
-Execution time: 0.467803 seconds
+Execution time: 1.570000 seconds
 --------------------------------------
 Testing grid size of 150x150 with optimization level -O2
 150 150 0.000100
 iter = 20763  difmax = 0.00009999041
-Execution time: 0.442542 seconds
+Execution time: 1.090000 seconds
 --------------------------------------
 Testing grid size of 150x150 with optimization level -O3
 150 150 0.000100
 iter = 20763  difmax = 0.00009999041
-Execution time: 0.412969 seconds
+Execution time: 1.060000 seconds
 --------------------------------------
 Testing grid size of 200x200 with optimization level -O0
 200 200 0.000100
 iter = 32108  difmax = 0.00009999248
-Execution time: 6.878762 seconds
+Execution time: 11.840000 seconds
 --------------------------------------
 Testing grid size of 200x200 with optimization level -O1
 200 200 0.000100
 iter = 32108  difmax = 0.00009999248
-Execution time: 1.254380 seconds
+Execution time: 4.290000 seconds
 --------------------------------------
 Testing grid size of 200x200 with optimization level -O2
 200 200 0.000100
 iter = 32108  difmax = 0.00009999248
-Execution time: 1.149828 seconds
+Execution time: 2.610000 seconds
 --------------------------------------
 Testing grid size of 200x200 with optimization level -O3
 200 200 0.000100
 iter = 32108  difmax = 0.00009999248
-Execution time: 1.061674 seconds
+Execution time: 2.840000 seconds
 --------------------------------------
 Testing grid size of 250x250 with optimization level -O0
 250 250 0.000100
 iter = 44398  difmax = 0.00009999424
-Execution time: 14.678323 seconds
+Execution time: 25.720000 seconds
 --------------------------------------
 Testing grid size of 250x250 with optimization level -O1
 250 250 0.000100
 iter = 44398  difmax = 0.00009999424
-Execution time: 2.697449 seconds
+Execution time: 9.420000 seconds
 --------------------------------------
 Testing grid size of 250x250 with optimization level -O2
 250 250 0.000100
 iter = 44398  difmax = 0.00009999424
-Execution time: 2.488718 seconds
+Execution time: 6.290000 seconds
 --------------------------------------
 Testing grid size of 250x250 with optimization level -O3
 250 250 0.000100
 iter = 44398  difmax = 0.00009999424
-Execution time: 2.361111 seconds
+Execution time: 6.050000 seconds
 --------------------------------------

@@ -7,7 +7,7 @@
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <omp.h>
+#include <omp.h>    // Added OpenMP library for parallel execution
 
 // Boundary temperatures for the 2D grid
 #define TOP_TEMP 15.0    // Top boundary temperature

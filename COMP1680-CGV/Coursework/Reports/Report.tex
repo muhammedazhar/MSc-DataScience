@@ -395,7 +395,7 @@ The original sequential code was adapted to leverage OpenMP for parallel process
    The OpenMP library was included by adding the header file:
 
    \begin{lstlisting}[style=CStyle, caption={OpenMP Header Inclusion}]
-   #include <omp.h>
+   #include <omp.h> // Added OpenMP library for parallel execution
    \end{lstlisting}
 
 2. \textbf{Parallel Initialization}
@@ -436,21 +436,11 @@ The original sequential code was adapted to leverage OpenMP for parallel process
        {
            // Compute new temperature values
            #pragma omp for private(j) schedule(static) nowait
-           for (i = 1; i <= m; i++) {
-               for (j = 1; j <= n; j++) {
-                   tnew[i][j] = (t[i-1][j] + t[i+1][j] + t[i][j-1] + t[i][j+1]) / 4.0;
-               }
-           }
+           // ... [Compute new temperature values] ...
 
            // Update temperatures and compute maximum difference
            #pragma omp for private(j, diff) reduction(max:difmax)
-           for (i = 1; i <= m; i++) {
-               for (j = 1; j <= n; j++) {
-                   diff = fabs(tnew[i][j] - t[i][j]);
-                   difmax = (diff > difmax) ? diff : difmax;
-                   t[i][j] = tnew[i][j];
-               }
-           }
+           // ... [Update temperatures and compute maximum difference] ...
        }
    }
    \end{lstlisting}
