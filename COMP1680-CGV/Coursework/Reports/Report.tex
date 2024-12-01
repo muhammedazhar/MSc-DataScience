@@ -243,9 +243,9 @@ Transitioning to cloud computing is a strategic decision that aligns with the co
 
 \part{Parallel Programming Exercise}
 
-\section{Step 1}
+\section{Step 1: Implementation and Optimization of Sequential Code}
 
-The C program was adapted to simulate the temperature distribution in a rectangular 2D grid with specific boundary conditions: the top boundary at 15°C, the bottom at 60°C, the left at 47°C, and the right at 100°C. These conditions were implemented by setting the corresponding edges of the grid to the specified temperatures.
+The C program was adapted to simulate the temperature distribution in a rectangular 2D grid with specific boundary conditions: the top boundary at 15°C, the bottom at 60°C, the left at 47°C, and the right at 100°C. The updated code uses a global preprocessor directive, \texttt{\#define} keyword that creates a constant macro. These macros allow the program to use meaningful names throughout the code instead of magic numbers, making the code more readable and maintainable. When the code is compiled, the preprocessor replaces every occurrence of these macro names with their corresponding numerical values. These conditions were implemented by setting the corresponding edges of the grid to the specified temperatures.
 
 In the code, after initializing the entire grid to an initial temperature (e.g., 30°C), the boundary conditions are applied:
 
@@ -381,8 +381,8 @@ It is noted that aggressive compiler optimizations can potentially alter the pro
 The modifications to the program successfully implemented the specified boundary conditions and enabled the measurement of execution time. The use of a Bash script to automate testing across different grid sizes and optimization levels provided valuable insights into the program's performance characteristics. These results form a solid foundation for further analysis and optimization in subsequent steps of the coursework.
 
 \rule{\linewidth}{0.5pt}
-
-\section{Step 2}
+\newpage
+\section{Step 2: OpenMP Parallelization}
 
 The Jacobi 2D grid problem was extended from its sequential implementation to a parallel version using OpenMP. The primary objective was to modify the existing code to incorporate OpenMP directives for parallel execution, compile it with OpenMP support, and test its correctness using multiple threads. The performance was compared across different thread counts to observe the scalability and correctness of the parallel implementation.
 
@@ -407,14 +407,14 @@ The original sequential code was adapted to leverage OpenMP for parallel process
 {
     // Initialize interior points to 30.0
     #pragma omp for collapse(2) schedule(static) nowait
-    // ... [Initialize interior points] ...
+    // ... [initializing interior points] ...
 
     // Set boundary temperatures
     #pragma omp for schedule(static) nowait
-    // ... [Set left and right boundary temperatures] ...
+    // ... [setting left and right boundary temperatures] ...
 
     #pragma omp for schedule(static)
-    // ... [Set top and bottom boundary temperatures] ...
+    // ... [setting top and bottom boundary temperatures] ...
 }
 \end{lstlisting}
 
@@ -534,7 +534,15 @@ The output obtained from running the tests demonstrates the correctness and perf
 
 \textbf{Diminishing Returns:} The speedup from 4 to 8 threads is less significant than from 2 to 4 threads, which may be due to overheads associated with thread management and the small problem size.
 
-For grids of size 20x20 or smaller, the program prints the final temperature distribution. Here are the of the output grids produced by the Jacobi program is as follows:
+For grids of size 20x20 or smaller, the program prints the final temperature distribution. This way, the program can be used to visualize the temperature distribution for small grids while maintaining performance for larger grids.
+
+\begin{lstlisting}[style=CStyle, caption={Conditional Printing of Grid Values}]
+if (m <= 20 && n <= 20) {
+    // .. [print grid] ...
+}
+\end{lstlisting}
+
+Here are the of the output grids produced by the Jacobi program is as follows:
 
 \begin{figure}[H]
     \centering
@@ -579,8 +587,30 @@ This outputs confirm that the temperature distribution conforms to the specified
 The OpenMP parallelization of the Jacobi 2D grid problem successfully leveraged multiple threads to reduce execution time while maintaining correct results. The modifications to the code focused on parallelizing the initialization and main computation loops, utilizing OpenMP directives and clauses to manage data dependencies and reductions. The automated testing script facilitated consistent performance measurements across different thread counts, and the results demonstrate both the correctness and scalability of the parallel implementation.
 
 \rule{\linewidth}{0.5pt}
+\newpage
 
-\section{Step 3}
+\section{Step 3: Performance Analysis of OpenMP Implementation}
+
+The objective of this step is to evaluate the performance of the OpenMP implementation of the Jacobi method for solving partial differential equations. The analysis focuses on measuring the execution times and speedup achieved by varying the number of threads, optimization levels, and problem sizes. The experiments were conducted on the University's High-Performance Computing (HPC) system using the SLURM workload manager. This report presents the testing methodology, performance analysis, key findings, and recommendations based on the results obtained.
+
+\subsection{Testing Methodology}
+
+To comprehensively assess the performance, a systematic testing approach was adopted. A Bash script was developed to automate the compilation and execution of the program across different configurations. The script varied the following parameters:
+
+
+\textbf{Optimization Level:} The program was compiled with different optimization levels (-O0, -O1, -O2, -O3) to assess the impact of compiler optimizations on performance.
+
+\textbf{Thread Counts:} The number of threads was varied from 1 to 8 to evaluate the scalability of the parallel implementation.
+
+\textbf{Grid Sizes:} The program was executed on grids of varying sizes (10x10, 50x50, 100x100, 150x150) to evaluate the impact of problem size on performance.
+
+\textbf{Execution Time Measurement:} The execution times were recorded for each configuration to analyze the performance metrics.
+
+The OpenMP directives were used to parallelize the computational loops, and the texttt{omp\_get\_wtime()} function was utilized to measure execution times accurately. Print statements were minimized to reduce I/O overhead, especially for larger grid sizes. Each test case was executed, and the iteration counts, maximum difference (texttt{difmax}), and execution times were recorded.
+
+\subsection{Performance Analysis}
+
+Here are the performance metrics for the different configurations:
 
 \begin{table}[H]
     \centering
@@ -675,12 +705,63 @@ The OpenMP parallelization of the Jacobi 2D grid problem successfully leveraged 
     \end{tabular}
 \end{table}
 
+\subsubsection{Impact of Problem Size}
+
+The execution times increased with the grid size due to the quadratic complexity of the Jacobi method. For single-threaded execution at optimization level -O0, the following base execution times were observed:
+
+\begin{itemize}
+    \item $150\times150$ Grid: Approximately 6.83 seconds.
+    \item $200\times200$ Grid: Approximately 18.04 seconds.
+    \item $250\times250$ Grid: Approximately 38.67 seconds.
+\end{itemize}
+
+This increase aligns with the theoretical expectation that doubling the grid dimension results in a fourfold increase in computational work. The larger problem sizes provided more computational workload, which is beneficial for observing the effects of parallelization and optimization.
+
+\subsubsection{Impact of Compiler Optimization Levels}
+
+Compiler optimizations significantly affected performance. The optimization levels provided the following improvements over the baseline (-O0):
+
+\begin{itemize}
+    \item -O1: Achieved a speedup of approximately 3 to 4 times compared to -O0.
+    \item -O2: Further improved performance, yielding a speedup of approximately 5 to 7 times over -O0.
+    \item -O3: Offered marginal improvements over -O2, typically around 5\% to 10\% faster.
+\end{itemize}
+
+The diminishing returns at higher optimization levels suggest that most beneficial optimizations occur at the -O2 level. The optimizations included loop unrolling, vectorization, and efficient memory access patterns, which are crucial for numerical computations.
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{Images/Plot1.png}
     \caption{Execution Time Comparison for Different Grid Sizes and Optimization Levels}
     \label{fig:plot1}
 \end{figure}
+
+\subsubsection{Parallel Scaling Analysis}
+
+The parallel performance was evaluated by measuring the speedup achieved with increasing thread counts. Speedup is defined as the ratio of the execution time with one thread to the execution time with multiple threads.
+
+\begin{itemize}
+    \item \textbf{150$\times$150 Grid:}
+    \begin{itemize}
+        \item At -O0, an 8-thread execution achieved a speedup of approximately 5.8 times.
+        \item At -O3, the speedup reduced to approximately 3.9 times with 8 threads.
+        \item Diminishing returns were observed beyond 4 threads, likely due to insufficient workload per thread.
+    \end{itemize}
+    
+    \item \textbf{200$\times$200 Grid:}
+    \begin{itemize}
+        \item At -O0, an 8-thread execution achieved a speedup of approximately 6.2 times.
+        \item At -O3, the speedup was approximately 5.0 times with 8 threads.
+        \item Better scaling was observed compared to the smaller grid due to increased computational work.
+    \end{itemize}
+    
+    \item \textbf{250$\times$250 Grid:}
+    \begin{itemize}
+        \item At -O0, an 8-thread execution achieved a speedup of approximately 6.1 times.
+        \item At -O3, the speedup increased to approximately 5.7 times with 8 threads.
+        \item The highest parallel efficiency was noted for this grid size, attributed to a higher computation-to-communication ratio.
+    \end{itemize}
+\end{itemize}
 
 \begin{figure}[H]
     \centering
