@@ -388,5 +388,10 @@ def main():
     else:
         logger.error("Failed to build network")
 
+
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+        logger.info("Program completed successfully")
+    except Exception as e:
+        logger.error(f"An error occurred: {e}")
