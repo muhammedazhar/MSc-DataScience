@@ -1,0 +1,494 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   University of Greenwich, London, UK
+%----------------------------------------------------------------------------------
+%   Coursework Report LaTeX Style File
+%
+%   Muhammed Azhar 2024 (am7759c@gre.ac.uk)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Coursework.sty - LaTeX style file for Coursework Reports
+% Based on icml2021.sty and modified by various contributors over the years.
+
+% Original File: ml2k.sty (LaTeX style file for ICML-2000)
+% Created by P. Langley on 12/23/99
+
+% Modifications:
+
+% 2003 - Terran Lane:
+% - Updated to use LaTeX2e style conventions (ProvidesPackage, etc.).
+% - Added an "appearing in" block at the base of the first column.
+% - Added a package option [accepted] for final versions.
+
+% 2005 - Kristian Kersting (based on Jennifer Dy's 2004 version):
+% - Implemented running titles using \icmltitlerunning{...} in the preamble.
+% - Added fancyhdr package for running heads.
+% - Updated to store the page size for pdflatex compatibility.
+
+% 2007 - Ricardo Silva:
+% - Updated the ifpdf verification.
+
+% 2008 - Sam Roweis:
+% - Changed years.
+
+% 2009 - Kiri Wagstaff:
+% - Changed years.
+
+% 2010 - Hal Daume III:
+% - Changed years.
+% - Added hyperlinks.
+
+% 2011 - Christoph Sawade and Tobias Scheffer:
+% - Added line numbers.
+% - Changed years.
+
+% 2012 - Francesco Figari:
+% - Changed years and location.
+
+% 2013 - Sanjoy Dasgupta:
+% - Changed years and location.
+
+% 2013 - Fei Sha:
+% - 4/24/2013:
+%   - Removed extra whitespace after the first author's email address in the camera-ready version.
+%   - Updated Proceedings of ICML 2010 to 2014 for correct PDF metadata.
+% - 9/2/2013:
+%   - Changed year and location from the previous template for ICML 2013.
+
+% 2013 - Percy Liang:
+% - Changed year and location from the previous template for ICML 2014.
+
+% 2017 - Daniel Roy:
+% - Changed byline to use footnotes for affiliations.
+% - Removed emails.
+
+% 2018 - Iain Murray:
+% - Changed years and location.
+% - Removed affiliation notes when anonymous.
+% - Moved times dependency from .tex to .sty.
+
+% 2020 - Atsushi Suzuki and Jing Wang:
+% - Modified Coursework.sty (previously cw.sty) based on icml2021.sty (version of 2020-11-18).
+
+% 2024 - Muhammed Azhar:
+% - Modified from University of Greenwich, London, UK COMP1801 Coursework Report Template.
+% - Added GitHub-like code styling for C, Python, and R programming languages.
+
+% Notes:
+% - This file contains LaTeX formatting parameters for a two-column conference proceedings (8.5 x 11 inches).
+% - Supports both a "review" version and a "final/accepted" version.
+%   - Default behavior prints an "Under review" notice.
+%   - For "Appearing in" notice, change \usepackage{icml2021} to \usepackage[accepted]{icml2021}.
+% ---------------------------------------------------------------------
+
+% Coursework.sty - LaTeX style file for Coursework Reports
+% Version: 2024.10.24 v1.0
+% Modified by Muhammed Azhar (am7759c@gre.ac.uk)
+
+%----------------------------------------------------------------------------------
+% Package Declaration and Requirements
+%----------------------------------------------------------------------------------
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{Coursework}[2021.10.01 v1.0 Coursework Style File]
+
+% Required Packages
+\RequirePackage{times}           % Times font
+\RequirePackage{fancyhdr}        % Custom headers and footers
+\RequirePackage{color}           % Color definitions
+\RequirePackage{algorithm}       % Algorithms
+\RequirePackage{algorithmic}     % Algorithmic pseudo-code
+\RequirePackage{eso-pic}         % Background pictures
+\RequirePackage{forloop}         % Loop constructs
+
+%----------------------------------------------------------------------------------
+% Package Options
+%----------------------------------------------------------------------------------
+\DeclareOption{accepted}{%
+  \renewcommand{\Notice@String}{\ICML@appearing}
+  \gdef\isaccepted{1}
+}
+\DeclareOption{nohyperref}{%
+  \gdef\nohyperref{1}
+}
+\ProcessOptions\relax
+
+%----------------------------------------------------------------------------------
+% Hyperref Setup
+%----------------------------------------------------------------------------------
+\ifdefined\nohyperref\else
+  \ifdefined\hypersetup
+    \definecolor{mydarkblue}{rgb}{0,0.08,0.45}
+    \hypersetup{%
+      pdftitle={},
+      pdfauthor={},
+      pdfsubject={Coursework Report},
+      pdfkeywords={},
+      pdfborder=0 0 0,
+      pdfpagemode=UseNone,
+      colorlinks=true,
+      linkcolor=mydarkblue,
+      citecolor=mydarkblue,
+      filecolor=mydarkblue,
+      urlcolor=mydarkblue,
+      pdfview=FitH
+    }
+    \ifdefined\isaccepted\else
+      \hypersetup{pdfauthor={Anonymous Submission}}
+    \fi
+  \fi
+\fi
+
+%----------------------------------------------------------------------------------
+% Notice Strings
+%----------------------------------------------------------------------------------
+\newcommand{\ICML@appearing}{%
+  \textit{Proceedings of the $\mathit{38}^{th}$ International Conference on Machine Learning}, PMLR 139, 2021.\\
+  Copyright 2021 by the author(s).
+}
+\newcommand{\Notice@String}{%
+  Preliminary work. Under review by the International Conference on Machine Learning (ICML). Do not distribute.
+}
+
+%----------------------------------------------------------------------------------
+% Page Dimensions Setup
+%----------------------------------------------------------------------------------
+\paperwidth=8.5in
+\paperheight=11in
+
+% Check if compiling with PDFLaTeX
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+\else
+  \ifx\pdfoutput\relax
+  \else
+    \ifcase\pdfoutput
+    \else
+      \pdftrue
+    \fi
+  \fi
+\fi
+
+% Set PDF page dimensions if compiling with PDFLaTeX
+\ifpdf
+  \setlength{\pdfpagewidth}{\paperwidth}
+  \setlength{\pdfpageheight}{\paperheight}
+\fi
+
+%----------------------------------------------------------------------------------
+% Page Layout Settings
+%----------------------------------------------------------------------------------
+\setlength{\evensidemargin}{-0.23in}
+\setlength{\oddsidemargin}{-0.23in}
+\setlength{\textheight}{9.0in}
+\setlength{\textwidth}{6.75in}
+\setlength{\columnsep}{0.25in}
+\setlength{\headheight}{10pt}
+\setlength{\headsep}{10pt}
+\addtolength{\topmargin}{-20pt}
+\addtolength{\topmargin}{-0.29in}
+
+%----------------------------------------------------------------------------------
+% Prevent Page Layout Changes by Users
+%----------------------------------------------------------------------------------
+\AtBeginDocument{%
+  \newif\ifmarginsmessedwith
+  \marginsmessedwithfalse
+  % Placeholders for page layout checks (omitted for brevity)
+  % ...
+  \ifmarginsmessedwith
+    \textbf{\large \em The page layout violates the ICML style.}
+
+    Please do not change the page layout, or include packages like geometry,
+    savetrees, or fullpage, which change it for you.
+  \fi
+}
+
+%----------------------------------------------------------------------------------
+% Footer and Header Configuration
+%----------------------------------------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{1pt}
+
+%----------------------------------------------------------------------------------
+% Title and Author Formatting
+%----------------------------------------------------------------------------------
+% Box to check the size of the running head
+\newbox\titrun
+
+% Running title definition
+\def\cwrunning#1{\gdef\@icmltitlerunning{#1}}
+
+% Title formatting
+\long\def\cwtitle#1{%
+  % Check if running title is defined
+  \ifx\undefined\@icmltitlerunning%
+    \gdef\@icmltitlerunning{#1}
+  \fi
+
+  % Add title to PDF metadata
+  \ifdefined\nohyperref\else
+    \ifdefined\hypersetup
+      \hypersetup{pdftitle={#1}}
+    \fi
+  \fi
+
+  % Check the size of the running title
+  \global\setbox\titrun=\vbox{\small\bf\@icmltitlerunning}
+  \gdef\@runningtitleerror{0}
+  \ifdim\wd\titrun>\textwidth%
+    \gdef\@runningtitleerror{1}%
+  \else
+    \ifdim\ht\titrun>6.25pt
+      \gdef\@runningtitleerror{2}%
+    \fi
+  \fi
+
+  % Handle running title errors
+  \ifnum\@runningtitleerror>0
+    \typeout{}
+    \typeout{}
+    \typeout{*******************************************************}
+    \typeout{Title exceeds size limitations for running head.}
+    \typeout{Please supply a shorter form for the running head}
+    \typeout{with \string\icmltitlerunning{...}\space prior to \string\begin{document}}
+    \typeout{*******************************************************}
+    \typeout{}
+    \typeout{}
+    \chead{\small\bf Title Suppressed Due to Excessive Size}%
+  \else
+    \chead{\small\bf\@icmltitlerunning}%
+  \fi
+
+  % No running title on the first page
+  \thispagestyle{empty}
+
+  % Display the title
+  {\center\baselineskip 18pt
+    \toptitlebar{\Large\bf #1}\bottomtitlebar}
+}
+
+%----------------------------------------------------------------------------------
+% Author List Management
+%----------------------------------------------------------------------------------
+\gdef\icmlfullauthorlist{}
+\newcommand\addstringtofullauthorlist{\g@addto@macro\icmlfullauthorlist}
+\newcommand\addtofullauthorlist[1]{%
+  \ifdefined\icmlanyauthors%
+    \addstringtofullauthorlist{, #1}%
+  \else%
+    \addstringtofullauthorlist{#1}%
+    \gdef\icmlanyauthors{1}%
+  \fi%
+  \ifdefined\nohyperref\else
+    \ifdefined\hypersetup%
+      \hypersetup{pdfauthor=\icmlfullauthorlist}%
+    \fi
+  \fi
+}
+
+% Author formatting
+\newcommand{\cwauthor}[1]{%
+  \mbox{\bf #1}
+}
+
+%----------------------------------------------------------------------------------
+% Keywords Handling
+%----------------------------------------------------------------------------------
+\def\cwkeywords#1{%
+  \ifdefined\nohyperref\else
+    \ifdefined\hypersetup
+      \hypersetup{pdfkeywords={#1}}
+    \fi
+  \fi
+}
+
+%----------------------------------------------------------------------------------
+% Abstract Environment
+%----------------------------------------------------------------------------------
+\renewenvironment{abstract}{%
+  \centerline{\large\bf Abstract}
+  \vspace{-0.12in}\begin{quote}
+}{%
+  \par\end{quote}\vskip 0.12in
+}
+
+%----------------------------------------------------------------------------------
+% Section Heading Formats
+%----------------------------------------------------------------------------------
+\def\thesection{\arabic{section}}
+\def\thesubsection{\thesection.\arabic{subsection}}
+
+% Section styles
+\def\section{\@startsection{section}{1}{\z@}{-0.12in}{0.02in}{\large\bf\raggedright}}
+\def\subsection{\@startsection{subsection}{2}{\z@}{-0.10in}{0.01in}{\normalsize\bf\raggedright}}
+\def\subsubsection{\@startsection{subsubsection}{3}{\z@}{-0.08in}{0.01in}{\normalsize\sc\raggedright}}
+
+%----------------------------------------------------------------------------------
+% Footnotes Setup
+%----------------------------------------------------------------------------------
+\footnotesep 6.65pt
+\skip\footins 9pt
+\def\footnoterule{\kern-3pt \hrule width 0.8in \kern 2.6pt}
+\setcounter{footnote}{0}
+
+%----------------------------------------------------------------------------------
+% Lists and Paragraphs Formatting
+%----------------------------------------------------------------------------------
+\parindent 0pt
+\topsep 4pt plus 1pt minus 2pt
+\partopsep 1pt plus 0.5pt minus 0.5pt
+\itemsep 2pt plus 1pt minus 0.5pt
+\parsep 2pt plus 1pt minus 0.5pt
+\parskip 6pt
+
+% List levels
+\leftmargin 2em
+\leftmargini \leftmargin
+\leftmarginii 2em
+\leftmarginiii 1.5em
+\leftmarginiv 1.0em
+\leftmarginv 0.5em
+\leftmarginvi 0.5em
+
+% Display skips
+\abovedisplayskip 7pt plus2pt minus5pt%
+\belowdisplayskip \abovedisplayskip
+\abovedisplayshortskip 0pt plus3pt%
+\belowdisplayshortskip 4pt plus3pt minus3pt%
+
+%----------------------------------------------------------------------------------
+% Font Sizes
+%----------------------------------------------------------------------------------
+\def\@normalsize{\@setsize\normalsize{11pt}\xpt\@xpt}
+\def\small{\@setsize\small{10pt}\ixpt\@ixpt}
+\def\footnotesize{\@setsize\footnotesize{10pt}\ixpt\@ixpt}
+\def\scriptsize{\@setsize\scriptsize{8pt}\viipt\@viipt}
+\def\tiny{\@setsize\tiny{7pt}\vipt\@vipt}
+\def\large{\@setsize\large{14pt}\xiipt\@xiipt}
+\def\Large{\@setsize\Large{16pt}\xivpt\@xivpt}
+\def\LARGE{\@setsize\LARGE{20pt}\xviipt\@xviipt}
+\def\huge{\@setsize\huge{23pt}\xxpt\@xxpt}
+\def\Huge{\@setsize\Huge{28pt}\xxvpt\@xxvpt}
+
+%----------------------------------------------------------------------------------
+% Figure and Table Captions
+%----------------------------------------------------------------------------------
+\newsavebox\newcaptionbox
+\newdimen\newcaptionboxwid
+
+\long\def\@makecaption#1#2{%
+  \vskip 10pt
+  \baselineskip 11pt
+  \setbox\@tempboxa\hbox{#1. #2}
+  \ifdim \wd\@tempboxa >\hsize
+    \sbox{\newcaptionbox}{\small\sl #1.~}
+    \newcaptionboxwid=\wd\newcaptionbox
+    \usebox\newcaptionbox{\footnotesize #2}
+  \else
+    \centerline{{\small\sl #1.} {\small #2}}
+  \fi
+}
+
+\def\fnum@figure{Figure \thefigure}
+\def\fnum@table{Table \thetable}
+
+%----------------------------------------------------------------------------------
+% GitHub-Like Code Styling
+%----------------------------------------------------------------------------------
+% Define GitHub-like colors
+\definecolor{githubtext}{RGB}{36,41,46}
+\definecolor{githubgreen}{RGB}{87,138,73}
+\definecolor{githubpurple}{RGB}{111,66,193}
+\definecolor{githubblue}{RGB}{0,92,197}
+\definecolor{githubgray}{RGB}{149,157,165}
+\definecolor{githubback}{RGB}{246,248,250}
+\definecolor{githubnumber}{RGB}{149,157,165}
+
+% Enhanced C code style
+\lstdefinestyle{CStyle}{%
+  language=C,
+  backgroundcolor=\color{githubback},
+  commentstyle=\color{githubgreen},
+  keywordstyle=\color{githubpurple},
+  numberstyle=\fontfamily{pcr}\small\color{githubnumber},
+  stringstyle=\color{githubblue},
+  basicstyle=\ttfamily\footnotesize\color{githubtext},
+  breaklines=true,
+  numbers=left,
+  frame=single,
+  rulecolor=\color{githubgray!40},
+  xleftmargin=20pt,
+  linewidth=\linewidth,
+  morekeywords={include, define, void},
+  emph={int,char,double,float,unsigned,bool},
+  emphstyle={\color{githubpurple}},
+}
+
+% Enhanced Python code style
+\lstdefinestyle{PythonStyle}{%
+  language=Python,
+  backgroundcolor=\color{githubback},
+  commentstyle=\color{githubgreen},
+  keywordstyle=\color{githubpurple},
+  numberstyle=\fontfamily{pcr}\small\color{githubnumber},
+  stringstyle=\color{githubblue},
+  basicstyle=\ttfamily\footnotesize\color{githubtext},
+  breaklines=true,
+  numbers=left,
+  frame=single,
+  rulecolor=\color{githubgray!40},
+  xleftmargin=20pt,
+  linewidth=\linewidth,
+  morekeywords={import,from,as,def,class,return,yield,lambda,
+                if,else,elif,try,except,finally,for,while,with,
+                in,is,not,and,or,True,False,None},
+  emphstyle={\color{githubpurple}},
+}
+
+% Enhanced R code style
+\lstdefinestyle{RStyle}{%
+  language=R,
+  backgroundcolor=\color{githubback},
+  commentstyle=\color{githubgreen},
+  keywordstyle=\color{githubpurple},
+  numberstyle=\fontfamily{pcr}\small\color{githubnumber},
+  stringstyle=\color{githubblue},
+  basicstyle=\ttfamily\footnotesize\color{githubtext},
+  breaklines=true,
+  numbers=left,
+  frame=single,
+  rulecolor=\color{githubgray!40},
+  xleftmargin=20pt,
+  linewidth=\linewidth,
+  morekeywords={function,if,else,for,while,repeat,in,next,break,return,switch,
+                library,require,attach,detach,source,setwd,options,
+                TRUE,FALSE,NULL,Inf,NaN,NA,NA_integer_,NA_real_,NA_complex_,NA_character_},
+  emphstyle={\color{githubpurple}},
+}
+
+% Enhanced Bash code style
+% Enhanced Bash code style with GitHub theme
+\lstdefinestyle{BashStyle}{%
+  language=Bash,
+  backgroundcolor=\color{githubback},
+  commentstyle=\color{githubgreen},
+  keywordstyle=\color{githubpurple},
+  numberstyle=\fontfamily{pcr}\small\color{githubnumber},
+  stringstyle=\color{githubblue},
+  basicstyle=\ttfamily\footnotesize\color{githubtext},
+  breaklines=true,
+  numbers=left,
+  frame=single,
+  rulecolor=\color{githubgray!40},
+  xleftmargin=20pt,
+  linewidth=\linewidth,
+  morekeywords={if,then,else,elif,fi,for,in,do,done,case,esac,while,until,function,
+                select,continue,break,return,exit,echo,eval,exec,source,
+                sudo,cd,pwd,ls,mv,cp,rm}, % Bash keywords
+  emphstyle={\color{githubpurple}},
+}
+
+%----------------------------------------------------------------------------------
