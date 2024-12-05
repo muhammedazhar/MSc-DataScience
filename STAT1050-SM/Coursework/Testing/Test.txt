@@ -1,0 +1,590 @@
+Code block 1:
+```
+# Step 1: Install and Load Required Libraries
+# Install and load the necessary packages
+required_packages <- c("quantmod", "tidyverse", "lubridate", "tseries",
+                       "forecast", "parallel", "RcppParallel", "foreach",
+                       "doParallel", "iterators", "future")
+new_packages <- required_packages[!(required_packages %in%
+                                      installed.packages()[, "Package"])]
+if (length(new_packages)) install.packages(new_packages)
+invisible(lapply(required_packages, library, character.only = TRUE))```
+
+Code block 2:
+```
+# Step 2: Data Import and Inspection
+# Load S&P 500 Index data
+start_date <- as.Date("2000-01-01")
+end_date <- as.Date("2023-12-31")
+
+# Get S&P 500 data
+getSymbols("^GSPC", src = "yahoo", from = start_date, to = end_date)
+
+# View first few rows of the dataset
+head(GSPC)
+```
+Code block 3:
+```
+# Step 3: Data Inspection and Cleaning
+# Inspect the dataset for NA values
+summary(GSPC)
+
+# Check if there are any missing values
+any_na <- any(is.na(GSPC))
+cat("Are there any missing values? ", any_na, sep="", "\n")
+
+# Replace or interpolate missing values (if any)
+if (any_na) {
+  GSPC <- na.approx(GSPC) # Interpolates missing values linearly # nolint
+  cat("Missing values have been interpolated.")
+}
+
+# Identify potential outliers based on adjusted closing price
+# We will use IQR to detect potential outliers
+q1 <- quantile(GSPC$GSPC.Adjusted, 0.25)
+q3 <- quantile(GSPC$GSPC.Adjusted, 0.75)
+iqr <- q3 - q1
+
+# Define thresholds for outlier detection
+lower_bound <- q1 - 1.5 * iqr
+upper_bound <- q3 + 1.5 * iqr
+
+# Filter potential outliers
+potential_outliers <- GSPC$GSPC.Adjusted[GSPC$GSPC.Adjusted < lower_bound | GSPC$GSPC.Adjusted > upper_bound] # nolint
+cat(paste("Number of potential outliers detected: ", length(potential_outliers))) # nolint
+```
+Code block 4:
+```
+# Add trading day continuity check
+trading_days <- index(GSPC)
+gaps <- diff(trading_days)
+suspicious_gaps <- which(gaps > 3)
+if (length(suspicious_gaps) > 0) {
+  cat("Warning: Unusual gaps in trading days detected\n")
+}
+
+# Add price movement validation
+daily_returns <- diff(log(GSPC$GSPC.Adjusted))
+suspicious_moves <- which(abs(daily_returns) > 0.1)
+if (length(suspicious_moves) > 0) {
+  cat("Warning: Large price movements detected")
+}
+```
+Code block 5:
+```
+outlier_analysis <- function(data, dates, threshold_dates) {
+  # Identify outliers around key events
+  key_events <- data.frame( # nolint
+    date = threshold_dates,
+    description = c("2008 Financial Crisis", "COVID-19 Pandemic"),
+    window = c(30, 30)  # Days to check around each event
+  )
+
+  outlier_distribution <- data.frame( # nolint
+    period = c("Pre-2008", "2008-Crisis", "Post-2008-Pre-COVID", "COVID-Period", "Post-COVID"), # nolint
+    count = numeric(5),
+    percentage = numeric(5)
+  )
+
+  # cat outlier analysis
+  cat("Outlier Analysis Summary:\n")
+  cat(sprintf("Total outliers detected: %d\n", length(potential_outliers))) # nolint
+  cat(sprintf("Percentage of total observations: %.2f%%\n",
+              100 * length(potential_outliers) / length(data))) # nolint
+}
+
+outlier_analysis(GSPC$GSPC.Adjusted, index(GSPC), c("2008-09-15", "2020-02-19"))
+```
+Code block 6:
+```
+# Step 4: Visualization of Time Series
+# Extract the Adjusted Closing Prices for visualization
+gspc_close <- GSPC[, "GSPC.Adjusted"]
+
+# Plotting the time series with additional context
+gspc_close %>%
+  as_tibble(rownames = "Date") %>%
+  mutate(Date = as.Date(Date)) %>%
+  ggplot(aes(x = Date, y = GSPC.Adjusted)) +
+  geom_line(color = "green") +
+  geom_vline(xintercept = as.Date("2008-09-15"), linetype = "dashed", color = "red") + # nolint
+  annotate("text", x = as.Date("2008-09-15"), y = 3000, label = "Financial Crisis 2008", color = "red", angle = 90, vjust = 1) + # nolint
+  geom_vline(xintercept = as.Date("2020-03-11"), linetype = "dashed", color = "blue") + # nolint
+  annotate("text", x = as.Date("2020-03-11"), y = 3000, label = "COVID-19 Declared Pandemic", color = "blue", angle = 90, vjust = 1) + # nolint
+  labs(title = "S&P 500 Adjusted Closing Price (2000 - 2023)",
+       x = "Year",
+       y = "Adjusted Closing Price (USD)") +
+  theme_minimal()
+```
+Code block 7:
+```
+# Step 5: Summary Statistics of Adjusted Closing Price
+summary_stats <- GSPC[, "GSPC.Adjusted"] %>%
+  as_tibble(rownames = "Date") %>%
+  summarise(
+    Min = min(GSPC.Adjusted, na.rm = TRUE),
+    Max = max(GSPC.Adjusted, na.rm = TRUE),
+    Mean = mean(GSPC.Adjusted, na.rm = TRUE),
+    Median = median(GSPC.Adjusted, na.rm = TRUE)
+  )
+
+print(summary_stats)
+```
+Code block 8:
+```
+# Step 1.1: Check for Stationarity Using ADF Test
+
+# Augmented Dickey-Fuller Test to check stationarity
+adf_result <- adf.test(GSPC$GSPC.Adjusted, alternative = "stationary")
+cat("p-value = ", adf_result$p.value, sep = "", "\n")
+
+# Interpretation
+if (adf_result$p.value > 0.05) {
+  cat("The data is non-stationary. Transformation required.")
+} else {
+  cat("The data is stationary.")
+}
+```
+Code block 9:
+```
+# Step 1.2: Apply Log Transformation and Differencing
+if (adf_result$p.value > 0.05) {
+  # Apply log transformation
+  gspc_log <- log(GSPC$GSPC.Adjusted)
+
+  # Plot the log-transformed series
+  gspc_log %>%
+    as_tibble(rownames = "Date") %>%
+    mutate(Date = as.Date(Date)) %>%
+    ggplot(aes(x = Date, y = value)) +
+    geom_line(color = "darkblue") +
+    labs(title = "Log Transformed S&P 500 Adjusted Closing Price (2000 - 2023)",
+         x = "Year",
+         y = "Log Adjusted Closing Price") +
+    theme_minimal()
+
+  # Apply differencing to make the data stationary
+  gspc_diff <- diff(gspc_log, differences = 1)
+
+  # Remove NA values from the differenced series
+  gspc_diff <- gspc_diff[!is.na(gspc_diff)]
+
+  # Plot the differenced series
+  gspc_diff %>%
+    as_tibble() %>%
+    ggplot(aes(x = row_number(), y = value)) +
+    geom_line(color = "purple") +
+    labs(title = "Differenced Log Transformed Series of S&P 500 (First Difference)", # nolint
+         x = "Observation Index",
+         y = "Differenced Log Value") +
+    theme_minimal()
+
+  # ADF test on the differenced series (after removing NA values)
+  adf_diff_result <- adf.test(gspc_diff, alternative = "stationary")
+  cat("p-value = ", adf_diff_result$p.value, sep = "", "\n")
+
+  if (adf_diff_result$p.value < 0.05) {
+    cat("The differenced log-transformed series is now stationary.")
+  } else {
+    cat("The data is still non-stationary. Further differencing may be required.") # nolint
+  }
+}
+```
+Code block 10:
+```
+# Step 2: ACF and PACF Analysis for Differenced Series
+# Plot ACF and PACF to identify AR and MA orders
+par(bg = "white", mfrow = c(1, 2))
+
+# ACF plot
+acf(gspc_diff, main = "ACF of Differenced Series", lag.max = 40)
+
+# PACF plot
+pacf(gspc_diff, main = "PACF of Differenced Series", lag.max = 40)
+
+# Reset plot layout
+par(mfrow = c(1, 1))
+```
+Code block 11:
+```
+# Step 3: Model Selection Using auto.arima()
+auto_model <- auto.arima(GSPC$GSPC.Adjusted, seasonal = FALSE)
+print(auto_model)
+
+# Display the ARIMA order selected
+best_order <- c(auto_model$arma[1], auto_model$arma[6], auto_model$arma[2])
+cat(paste("\nSelected ARIMA Order: p = ", best_order[1], ", d = ", best_order[2], ", q = ", best_order[3])) # nolint
+```
+Code block 12:
+```
+# Step 4: Check for Seasonal Elements
+# Seasonal ACF and PACF analysis
+par(bg = "white", mfrow = c(1, 2))  # Set layout for side-by-side plots
+
+# Seasonal ACF and PACF plots
+acf(gspc_diff, lag.max = 100, main = "ACF (Seasonal Check)")
+pacf(gspc_diff, lag.max = 100, main = "PACF (Seasonal Check)")
+
+# Reset layout
+par(mfrow = c(1, 1))
+```
+Code block 13:
+```
+# Step 1.1: Fit Multiple ARIMA Models
+
+# Fit ARIMA models
+model_1 <- Arima(GSPC$GSPC.Adjusted, order = c(1, 2, 0))
+model_2 <- Arima(GSPC$GSPC.Adjusted, order = c(1, 1, 1))
+model_3 <- Arima(GSPC$GSPC.Adjusted, order = c(2, 1, 2))
+
+# Collect model summaries
+models <- list(model_1, model_2, model_3)
+model_names <- c("ARIMA(1, 2, 0)", "ARIMA(1, 1, 1)", "ARIMA(2, 1, 2)")
+
+# Collect AIC, BIC, RMSE, and Residual Standard Error (sigma^2)
+model_metrics <- tibble(
+  Model = model_names,
+  AIC = sapply(models, AIC),
+  BIC = sapply(models, BIC),
+  RMSE = sapply(models, function(model) {
+    residuals <- residuals(model)
+    sqrt(mean(residuals^2))
+  }),
+  Sigma2 = sapply(models, function(model) {
+    model$sigma2
+  })
+)
+
+print(model_metrics)
+
+# Adding Commentary
+best_model_index <- which.min(model_metrics$AIC)
+best_model_name <- model_metrics$Model[best_model_index]
+cat(paste("\nThe model with the lowest AIC is:", best_model_name))
+```
+Code block 14:
+```
+# Step 1.2: Visual Evaluation of Residuals
+par(bg = "white", mfrow = c(3, 2))  # Set up a 3x2 plotting layout
+
+# Loop to plot residuals and ACF for each model
+for (i in seq_along(models)) {  # Extract residuals
+  residuals <- residuals(models[[i]])
+
+  # Plot residuals
+  plot(residuals, main = paste("Residuals of", model_names[i]), ylab = "Residuals", xlab = "Time Index") # nolint
+
+  # Plot ACF of residuals
+  acf(residuals, main = paste("ACF of Residuals for", model_names[i]), lag.max = 40) # nolint
+}
+
+# Reset plot layout
+par(mfrow = c(1, 1))
+```
+Code block 15:
+```
+# Find the model with the lowest AIC, BIC, and RMSE
+best_model_index <- which.min(model_metrics$AIC)
+best_model_name <- model_metrics$Model[best_model_index]
+cat(paste("The model with the lowest AIC is:", best_model_name))
+
+# Select model for further diagnostics
+best_model <- models[[best_model_index]]
+```
+Code block 16:
+```
+# Step 2.1: Residual Diagnostics for the Selected ARIMA Model (ARIMA(2, 1, 2))
+
+# Extract residuals from the best model
+best_model <- model_3  # Assuming ARIMA(2, 1, 2) is stored in model_3
+best_model_residuals <- residuals(best_model)
+
+# Plotting the residuals
+par(bg = "white", mfrow = c(1, 2))
+plot(best_model_residuals, main = "Residuals of ARIMA(2, 1, 2)", ylab = "Residuals", xlab = "Time Index") # nolint
+acf(best_model_residuals, main = "ACF of Residuals for ARIMA(2, 1, 2)", lag.max = 40) # nolint
+par(mfrow = c(1, 1))
+```
+Code block 17:
+```
+# Step 2.2: Ljung-Box Test on Residuals
+lb_test_result <- Box.test(best_model_residuals, lag = 20, type = "Ljung-Box")
+print(lb_test_result)
+
+# Interpretation
+if (lb_test_result$p.value > 0.05) {
+  cat("The p-value is greater than 0.05, indicating no significant autocorrelation in residuals.") # nolint
+} else {
+  cat("The p-value is less than or equal to 0.05, indicating significant autocorrelation. Model refinement may be needed.") # nolint
+}
+```
+Code block 18:
+```
+# Configure parallel processing
+# Add seed setting for reproducibility
+set.seed(123)
+plan(multisession)
+num_cores <- parallel::detectCores() - 1
+cat("Number of cores available:", num_cores, "\n")
+registerDoParallel(cores = num_cores)
+
+# Restructure cross-validation for better parallelization
+perform_cross_validation <- function(model_order, data, h) {
+  # Split data into chunks for parallel processing
+  n <- length(data)
+  chunk_size <- floor(n/num_cores)
+
+  # Parallel processing of chunks
+  results <- foreach(i = 1:num_cores, .combine = c) %dopar% { # nolint
+    start_idx <- (i - 1) * chunk_size + 1 # nolint
+    end_idx <- min(i * chunk_size, n) # nolint
+    subset_data <- data[start_idx:end_idx]
+
+    model_func <- function(y, h) {
+      fitted_model <- Arima(y, order = model_order) # nolint
+      forecast(fitted_model, h = h) # nolint
+    }
+
+    errors <- tsCV(subset_data, model_func, h = h) # nolint
+    sqrt(mean(errors^2, na.rm = TRUE))
+  }
+
+  return(mean(results))
+}
+```
+Code block 19:
+```
+# Define model orders
+model_orders <- list(c(1, 2, 0), c(1, 1, 1), c(2, 1, 2))
+
+# Execute cross-validation for each model
+cv_results <- foreach(order = model_orders, .combine = c) %dopar% {
+  perform_cross_validation(order, GSPC$GSPC.Adjusted, h = 10)
+}
+
+# Update model metrics table
+model_metrics <- model_metrics %>%
+  mutate(CV_RMSE = cv_results)
+
+# Display results
+print(model_metrics)
+
+# Clean up
+stopImplicitCluster()
+```
+Code block 20:
+```
+# Step 3: Fit Seasonal ARIMA Model if Seasonality Detected
+# Attempt a SARIMA model with seasonal order (P, D, Q) based on visual analysis
+sarima_model <- auto.arima(GSPC$GSPC.Adjusted, seasonal = TRUE)
+summary(sarima_model)
+
+# Compare the SARIMA model with the previously fitted ARIMA models
+sarima_metrics <- tibble(
+  Model = "SARIMA",
+  AIC = AIC(sarima_model),
+  BIC = BIC(sarima_model),
+  RMSE = sqrt(mean(residuals(sarima_model)^2)),
+  Sigma2 = sarima_model$sigma2
+)
+
+# Add SARIMA metrics to the existing model metrics
+model_metrics <- bind_rows(model_metrics, sarima_metrics)
+print(model_metrics)
+```
+Code block 21:
+```
+library(foreach)
+library(doParallel)
+library(future)
+library(forecast)
+library(iterators)
+
+# Configure parallel processing
+plan(multisession)
+num_cores <- parallel::detectCores() - 1
+registerDoParallel(cores = num_cores)
+
+# Fit SARIMA Model
+sarima_model <- auto.arima(GSPC$GSPC.Adjusted, seasonal = TRUE)
+summary(sarima_model)
+
+# Extract metrics
+sarima_aic <- AIC(sarima_model)
+sarima_bic <- BIC(sarima_model)
+sarima_rmse <- sqrt(mean(residuals(sarima_model)^2))
+sarima_sigma2 <- sarima_model$sigma2
+
+# Enhanced parallel cross-validation for SARIMA
+perform_sarima_cv <- function(data, seasonal_order, h) {
+  n <- length(data)
+  chunk_size <- floor(n/num_cores)
+
+  results <- foreach(i = 1:num_cores, .combine = c) %dopar% {
+    start_idx <- (i - 1) * chunk_size + 1 # nolint
+    end_idx <- min(i * chunk_size, n) # nolint
+    subset_data <- data[start_idx:end_idx]
+
+    model_func <- function(y, h) {
+      fitted_model <- Arima(y, seasonal = seasonal_order)
+      forecast(fitted_model, h = h)
+    }
+
+    errors <- tsCV(subset_data, model_func, h = h)
+    sqrt(mean(errors^2, na.rm = TRUE))
+  }
+
+  return(mean(results))
+}
+
+# Execute parallel cross-validation
+seasonal_order <- sarima_model$seasonal$order
+sarima_cv_rmse <- perform_sarima_cv(
+  GSPC$GSPC.Adjusted,
+  seasonal_order = seasonal_order,
+  h = 10
+)
+
+# Update metrics table
+sarima_metrics <- tibble(
+  Model = "SARIMA",
+  AIC = sarima_aic,
+  BIC = sarima_bic,
+  RMSE = sarima_rmse,
+  Sigma2 = sarima_sigma2,
+  CV_RMSE = sarima_cv_rmse
+)
+
+# Update model metrics table
+model_metrics <- model_metrics %>%
+  filter(Model != "SARIMA") %>%
+  bind_rows(sarima_metrics)
+
+print(model_metrics)
+
+# Clean up
+stopImplicitCluster()
+```
+Code block 22:
+```
+# Step 3: Forecasting Future Values Using the Selected ARIMA Model
+
+# Forecasting the next 12 months (or any suitable period)
+forecast_horizon <- 12
+forecast_result <- forecast(best_model, h = forecast_horizon)
+
+# Plot the forecast
+par(bg = "white")
+plot(forecast_result, main = "Forecast of S&P 500 Index Using ARIMA(2, 1, 2)",
+     xlab = "Year", ylab = "S&P 500 Index Value")
+```
+Code block 23:
+```
+# Step 1: Plot Residuals of the Selected Model (ARIMA(2, 1, 2))
+
+# Plotting the residuals to evaluate if they are randomly distributed
+par(bg = "white")
+plot(best_model_residuals, main = "Residuals of ARIMA(2, 1, 2)", 
+     ylab = "Residuals", xlab = "Time Index", col = "blue")
+abline(h = 0, col = "red", lty = 2)
+```
+Code block 24:
+```
+# Step 2: Q-Q Plot for Residuals
+
+# Q-Q plot to assess normality of residuals
+par(bg = "white")
+qqnorm(best_model_residuals, main = "Q-Q Plot of Residuals for ARIMA(2, 1, 2)")
+qqline(best_model_residuals, col = "red")
+```
+Code block 25:
+```
+# Step 3: ACF of Residuals
+
+# Plotting the ACF of residuals to evaluate autocorrelation
+par(bg = "white")
+acf(best_model_residuals, main = "ACF of Residuals for ARIMA(2, 1, 2)", lag.max = 40) # nolint
+```
+Code block 26:
+```
+# Step 4.1: Ljung-Box Test for Residuals
+
+lb_test_result <- Box.test(best_model_residuals, lag = 20, type = "Ljung-Box")
+print(lb_test_result)
+```
+Code block 27:
+```
+# Step 4.2: Shapiro-Wilk Test for Normality of Residuals (Sampling Method)
+
+# Sample 5000 residuals
+set.seed(123)  # Set seed for reproducibility
+sample_residuals <- sample(best_model_residuals, 5000)
+
+# Perform Shapiro-Wilk Test on the sample
+shapiro_test_result <- shapiro.test(sample_residuals)
+print(shapiro_test_result)
+```
+Code block 28:
+```
+# Display the model metrics for comparison
+print(model_metrics)
+
+# Interpretation of Metrics
+best_model_index <- which.min(model_metrics$AIC)
+best_model_name <- model_metrics$Model[best_model_index]
+cat(paste("\nThe model with the lowest AIC is:", best_model_name))
+```
+Code block 29:
+```
+# Configure parallel processing
+set.seed(123)
+plan(multisession)
+num_cores <- parallel::detectCores() - 1
+cat("Number of cores available:", num_cores, "\n")
+registerDoParallel(cores = num_cores)
+
+# Enhanced parallel rolling window cross-validation
+cv_horizon <- 12
+window_size <- 252  # One trading year
+
+rolling_cv <- function(data, window_size, horizon) {
+  data_numeric <- as.numeric(data)
+  n <- length(data_numeric) - horizon - window_size + 1
+  chunk_size <- floor(n / num_cores)
+
+  # Parallel processing of chunks
+  results <- foreach(i = 1:num_cores, .combine = c) %dopar% { # nolint
+    start_idx <- window_size + (i - 1) * chunk_size # nolint
+    end_idx <- min(window_size + i * chunk_size - 1, # nolint
+                   length(data_numeric) - horizon)
+    chunk_errors <- numeric()
+
+    for (j in start_idx:end_idx) {
+      train <- data_numeric[1:j]
+      test <- data_numeric[(j + 1):(j + horizon)]
+
+      model <- Arima(train, order = c(2, 1, 2)) # nolint
+      pred <- forecast(model, h = horizon) # nolint
+
+      pred_means <- as.numeric(pred$mean)
+      chunk_errors <- c(chunk_errors, test - pred_means)
+    }
+
+    sqrt(mean(chunk_errors^2, na.rm = TRUE))
+  }
+
+  return(mean(results))
+}
+
+# Apply parallel rolling window cross-validation
+rolling_cv_rmse <- rolling_cv(GSPC$GSPC.Adjusted, window_size, cv_horizon)
+
+# Display results
+cat(sprintf("Rolling Window Cross-Validation Results:\n"))
+cat(sprintf("Window Size: %d days (1 trading year)\n", window_size))
+cat(sprintf("Forecast Horizon: %d periods\n", cv_horizon))
+cat(sprintf("RMSE for ARIMA(2,1,2): %.2f\n", rolling_cv_rmse))
+
+# Clean up
+stopImplicitCluster()
+```
