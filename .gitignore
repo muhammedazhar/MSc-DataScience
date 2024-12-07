@@ -18,3 +18,9 @@ test/
 # R files
 .RData
 .Rhistory
+
+# Datasets
+*.zip
+*.xsd
+# Sentinel-2 datasets are too large to be uploaded to GitHub
+Sentinel-2/
