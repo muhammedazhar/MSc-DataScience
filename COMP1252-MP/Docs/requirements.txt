@@ -29,3 +29,6 @@ pyproj==3.6.1
 pyogrio==0.9.0
 shapely==2.0.6
 geopandas==1.0.1
+
+# Dataset for the project
+kaggle  # Kaggle API
