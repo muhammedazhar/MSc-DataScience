@@ -1,0 +1,730 @@
+# %%
+try:
+    # Essential imports
+    import os
+    import sys
+    import glob
+    import h5py
+    import rasterio
+    import numpy as np
+    import pandas as pd
+    import geopandas as gpd
+    from collections import defaultdict
+    from pprint import pprint
+    import torch
+    import matplotlib.pyplot as plt
+    import seaborn as sns
+    from PIL import Image
+    from datetime import datetime
+    import json
+    from pathlib import Path
+    from rasterio.mask import mask
+    from shapely.geometry import mapping, Polygon, MultiPolygon
+    from tqdm import tqdm
+except Exception as e:
+    print(f"Error : {e}")
+
+# %%
+# Print the PyTorch version
+print(f"PyTorch version: {torch.__version__}")
+
+# Check if running in Google Colab
+if "google.colab" in str(get_ipython()):
+    if torch.cuda.is_available():
+        device = "cuda"
+    else:
+        device = 'cpu'
+        print("GPU not available in Colab, consider enabling a GPU runtime.")
+# Running on a local machine
+else:
+    if torch.backends.mps.is_available():
+        device = 'mps'
+        print(f"Is Apple MPS (Metal Performance Shader) built? {torch.backends.mps.is_built()}")
+        print(f"Is Apple MPS available? {torch.backends.mps.is_available()}")
+    elif torch.cuda.is_available():
+        device = 'cuda'
+    else:
+        device = 'cpu'
+
+# TODO: Add support for AMD ROCm GPU if needed
+
+# Print the device being used
+print(f"Using device: {device}")
+
+# %%
+# Load the GeoJSON file
+geojson_path = 'Combined.geojson'
+gdf = gpd.read_file(geojson_path)
+
+# Display basic information
+print(gdf.info())
+print(gdf.head())
+
+# %%
+# Plot the geospatial data
+gdf.plot()
+plt.title('Areas in Kerala')
+plt.xlabel('Longitude')
+plt.ylabel('Latitude')
+plt.show()
+
+# %%
+# Load the GeoJSON file
+geojson_path = '../Datasets/Sentinel-2/deforestation_labels.geojson'
+gdf = gpd.read_file(geojson_path)
+base_path = "../Datasets/Sentinel-2"
+base_path = Path(base_path)
+
+# Display basic information
+print(gdf.info())
+print(gdf.head())
+
+# %%
+# Plot the geospatial data
+gdf.plot()
+plt.title('Areas in Ukraine')
+plt.xlabel('Longitude')
+plt.ylabel('Latitude')
+plt.show()
+
+# %%
+# Ensure the GeoDataFrame has a projected coordinate system
+gdf = gdf.to_crs(epsg=32635)  # UTM zone 35N, suitable for Ukraine
+
+# Calculate area in square meters
+gdf['area_sqm'] = gdf['geometry'].area
+
+# Display the areas
+print(gdf[['geometry', 'area_sqm']])
+
+# %%
+def collect_jp2_files(base_dir):
+    jp2_files = defaultdict(list)
+    for root, _, files in os.walk(base_dir):
+        for file in files:
+            if file.endswith(".jp2"):
+                jp2_files[os.path.basename(root)].append(os.path.join(root, file))
+    return jp2_files
+
+jp2_mapping = collect_jp2_files(base_path)
+
+# Use pprint to print the defaultdict nicely
+pprint(jp2_mapping)
+
+# %%
+example = "../Datasets/Sentinel-2/S2B_MSIL1C_20190611T083609_N0207_R064_T36UYA_20190611T122426/S2B_MSIL1C_20190611T083609_N0207_R064_T36UYA_20190611T122426.SAFE/GRANULE/L1C_T36UYA_A011816_20190611T084501/IMG_DATA/T36UYA_20190611T083609_B02.jp2"
+
+# %%
+def visualize_band(jp2_path):
+    with rasterio.open(jp2_path) as src:
+        band = src.read(1)  # Read the first band
+        plt.imshow(band, cmap="gray")
+        plt.title(jp2_path)
+        plt.show()
+
+visualize_band(example)
+
+# %%
+# Open the .jp2 file
+with rasterio.open(example) as dataset:
+    # Read the dataset's data as a numpy array
+    band_data = dataset.read(1)
+    # Access metadata
+    metadata = dataset.meta
+
+print(metadata)
+
+# %%
+# Get all SAFE directories
+safe_dirs = list(base_path.glob("*/*.SAFE"))
+
+# Print some basic information
+print(f"Number of Sentinel-2 images found: {len(safe_dirs)}")
+print("\nExample directory structure:")
+print(safe_dirs[0])
+
+# %%
+# Create a list to store metadata
+metadata_list = []
+
+for safe_dir in safe_dirs:
+    # Parse directory name
+    dir_parts = safe_dir.name.split('_')
+    
+    metadata = {
+        'satellite': dir_parts[0],  # S2A or S2B
+        'processing_level': dir_parts[1],  # MSIL1C
+        'timestamp': datetime.strptime(dir_parts[2], '%Y%m%dT%H%M%S'),
+        'relative_orbit': dir_parts[4],  # R064
+        'tile_id': dir_parts[5],  # T36UYA
+        'path': safe_dir
+    }
+    metadata_list.append(metadata)
+
+# Create DataFrame
+df_metadata = pd.DataFrame(metadata_list)
+
+# Basic analysis
+print("Dataset Summary:")
+print("-" * 50)
+print(f"Date range: {df_metadata['timestamp'].min()} to {df_metadata['timestamp'].max()}")
+print(f"Number of unique tiles: {df_metadata['tile_id'].nunique()}")
+print(f"Number of satellites: {df_metadata['satellite'].nunique()}")
+print("\nSatellite distribution:")
+print(df_metadata['satellite'].value_counts())
+print("\nTile distribution:")
+print(df_metadata['tile_id'].value_counts())
+
+# Visualize temporal distribution
+plt.figure(figsize=(15, 6))
+plt.hist(df_metadata['timestamp'], bins=20, edgecolor='black')
+plt.title('Temporal Distribution of Satellite Images')
+plt.xlabel('Date')
+plt.ylabel('Number of Images')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+
+# Monthly distribution
+df_metadata['month'] = df_metadata['timestamp'].dt.month
+monthly_counts = df_metadata['month'].value_counts().sort_index()
+
+plt.figure(figsize=(12, 5))
+monthly_counts.plot(kind='bar')
+plt.title('Monthly Distribution of Images')
+plt.xlabel('Month')
+plt.ylabel('Number of Images')
+plt.xticks(rotation=0)
+plt.tight_layout()
+plt.show()
+
+# %%
+# Get the first image directory to analyze bands
+first_image = safe_dirs[0]
+img_data_path = list((first_image / "GRANULE").glob("*"))[0] / "IMG_DATA"
+band_files = list(img_data_path.glob("*.jp2"))
+
+# Extract band information
+band_info = []
+for band_file in band_files:
+    band_name = band_file.name.split('_')[-1].split('.')[0]
+    
+    # Open the band file to get metadata
+    with rasterio.open(band_file) as src:
+        band_info.append({
+            'band': band_name,
+            'width': src.width,
+            'height': src.height,
+            'dtype': src.dtypes[0],
+            'resolution': src.res[0]  # pixel size in meters
+        })
+
+# Create DataFrame with band information
+df_bands = pd.DataFrame(band_info)
+print("Band Information:")
+print("-" * 50)
+print(df_bands.sort_values('band'))
+
+# Count number of files per image
+print("\nNumber of files per image:")
+print(len(band_files))
+
+# Print list of unique bands
+print("\nAvailable bands:")
+unique_bands = sorted(list(df_bands['band'].unique()))
+print(unique_bands)
+
+# %%
+# Let's load one image using key bands for vegetation analysis
+# B04 (RED), B08 (NIR), B12 (SWIR)
+sample_image = safe_dirs[0]
+img_data_path = list((sample_image / "GRANULE").glob("*"))[0] / "IMG_DATA"
+
+# Function to load and normalize band
+def load_band(band_path):
+    with rasterio.open(band_path) as src:
+        band_data = src.read(1)
+        # Normalize to 0-1 range
+        band_data = band_data.astype(float)
+        band_data = (band_data - band_data.min()) / (band_data.max() - band_data.min())
+        return band_data
+
+# Load the bands
+red_band = load_band(list(img_data_path.glob(f"*_B04.jp2"))[0])
+nir_band = load_band(list(img_data_path.glob(f"*_B08.jp2"))[0])
+swir_band = load_band(list(img_data_path.glob(f"*_B12.jp2"))[0])
+
+# Calculate NDVI (Normalized Difference Vegetation Index)
+ndvi = (nir_band - red_band) / (nir_band + red_band)
+
+# Visualize the bands and NDVI
+fig, axes = plt.subplots(2, 2, figsize=(15, 15))
+axes[0,0].imshow(red_band, cmap='RdYlBu')
+axes[0,0].set_title('Red Band (B04)')
+axes[0,1].imshow(nir_band, cmap='RdYlBu')
+axes[0,1].set_title('NIR Band (B08)')
+axes[1,0].imshow(swir_band, cmap='RdYlBu')
+axes[1,0].set_title('SWIR Band (B12)')
+im = axes[1,1].imshow(ndvi, cmap='RdYlGn')
+axes[1,1].set_title('NDVI')
+
+# Add colorbar for NDVI
+plt.colorbar(im, ax=axes[1,1], label='NDVI Value')
+
+plt.tight_layout()
+plt.show()
+
+# Print some statistics about NDVI
+print("NDVI Statistics:")
+print("-" * 50)
+print(f"Mean NDVI: {ndvi.mean():.3f}")
+print(f"Median NDVI: {np.median(ndvi):.3f}")
+print(f"Min NDVI: {ndvi.min():.3f}")
+print(f"Max NDVI: {ndvi.max():.3f}")
+
+# %%
+# Let's select two images from different time periods
+sorted_images = sorted(safe_dirs, key=lambda x: x.name)
+early_image = sorted_images[0]  # First image
+late_image = sorted_images[-1]  # Last image
+
+# Print the dates we're comparing
+print(f"Comparing images from:")
+print(f"Early date: {early_image.name.split('_')[2]}")
+print(f"Late date: {late_image.name.split('_')[2]}")
+
+def calculate_ndvi(image_path):
+    img_data_path = list((image_path / "GRANULE").glob("*"))[0] / "IMG_DATA"
+    
+    # Load RED and NIR bands
+    red_band = load_band(list(img_data_path.glob(f"*_B04.jp2"))[0])
+    nir_band = load_band(list(img_data_path.glob(f"*_B08.jp2"))[0])
+    
+    # Calculate NDVI
+    ndvi = (nir_band - red_band) / (nir_band + red_band)
+    return ndvi
+
+# Calculate NDVI for both dates
+ndvi_early = calculate_ndvi(early_image)
+ndvi_late = calculate_ndvi(late_image)
+
+# Calculate NDVI difference
+ndvi_diff = ndvi_late - ndvi_early
+
+# Visualize the changes
+fig, axes = plt.subplots(1, 3, figsize=(20, 6))
+
+# Early NDVI
+im1 = axes[0].imshow(ndvi_early, cmap='RdYlGn', vmin=-1, vmax=1)
+axes[0].set_title('Early NDVI')
+plt.colorbar(im1, ax=axes[0])
+
+# Late NDVI
+im2 = axes[1].imshow(ndvi_late, cmap='RdYlGn', vmin=-1, vmax=1)
+axes[1].set_title('Late NDVI')
+plt.colorbar(im2, ax=axes[1])
+
+# NDVI Difference
+im3 = axes[2].imshow(ndvi_diff, cmap='RdBu', vmin=-0.5, vmax=0.5)
+axes[2].set_title('NDVI Difference\n(Red = Decrease, Blue = Increase)')
+plt.colorbar(im3, ax=axes[2])
+
+plt.tight_layout()
+plt.show()
+
+# Calculate statistics of changes
+print("NDVI Change Statistics:")
+print("-" * 50)
+print(f"Mean change: {ndvi_diff.mean():.3f}")
+print(f"Standard deviation: {ndvi_diff.std():.3f}")
+print(f"Max decrease: {ndvi_diff.min():.3f}")
+print(f"Max increase: {ndvi_diff.max():.3f}")
+
+# Calculate potential deforestation areas
+threshold = -0.2  # Significant NDVI decrease
+deforested_pixels = np.sum(ndvi_diff < threshold)
+total_pixels = ndvi_diff.size
+deforested_percentage = (deforested_pixels / total_pixels) * 100
+
+print(f"\nPotential deforestation (NDVI decrease > {abs(threshold)}):")
+print(f"Area affected: {deforested_percentage:.2f}% of total area")
+
+# %%
+# Filter for summer images (June, July, August)
+summer_images = []
+for img_path in safe_dirs:
+    date_str = img_path.name.split('_')[2]
+    date = datetime.strptime(date_str, '%Y%m%dT%H%M%S')
+    if date.month in [6, 7, 8]:  # Summer months
+        summer_images.append((date, img_path))
+
+# Sort by date
+summer_images.sort(key=lambda x: x[0])
+
+# Select earliest and latest summer images
+early_summer = summer_images[0]
+late_summer = summer_images[-1]
+
+print(f"Comparing summer images from:")
+print(f"Early date: {early_summer[0].strftime('%Y-%m-%d')}")
+print(f"Late date: {late_summer[0].strftime('%Y-%m-%d')}")
+
+# Modified code with proper handling of invalid values
+def calculate_ndvi_masked(image_path):
+    img_data_path = list((image_path / "GRANULE").glob("*"))[0] / "IMG_DATA"
+    
+    # Load RED and NIR bands
+    red_band = load_band(list(img_data_path.glob(f"*_B04.jp2"))[0])
+    nir_band = load_band(list(img_data_path.glob(f"*_B08.jp2"))[0])
+    
+    # Create mask for valid pixels
+    valid_mask = (red_band + nir_band) != 0
+    
+    # Calculate NDVI with masking
+    ndvi = np.zeros_like(red_band)
+    ndvi[valid_mask] = (nir_band[valid_mask] - red_band[valid_mask]) / (nir_band[valid_mask] + red_band[valid_mask])
+    
+    # Mask invalid values
+    ndvi = np.ma.masked_array(ndvi, ~valid_mask)
+    return ndvi, valid_mask
+
+# Calculate NDVI for both dates with masks
+ndvi_early, mask_early = calculate_ndvi_masked(early_summer[1])
+ndvi_late, mask_late = calculate_ndvi_masked(late_summer[1])
+
+# Combined mask for valid pixels in both images
+valid_mask = mask_early & mask_late
+
+# Calculate NDVI difference only for valid pixels
+ndvi_diff = np.ma.masked_array(ndvi_late - ndvi_early, ~valid_mask)
+
+# Visualize the changes
+fig, axes = plt.subplots(1, 3, figsize=(20, 6))
+
+# Early NDVI
+im1 = axes[0].imshow(ndvi_early, cmap='RdYlGn', vmin=-1, vmax=1)
+axes[0].set_title(f'NDVI {early_summer[0].strftime("%Y-%m-%d")}')
+plt.colorbar(im1, ax=axes[0])
+
+# Late NDVI
+im2 = axes[1].imshow(ndvi_late, cmap='RdYlGn', vmin=-1, vmax=1)
+axes[1].set_title(f'NDVI {late_summer[0].strftime("%Y-%m-%d")}')
+plt.colorbar(im2, ax=axes[1])
+
+# NDVI Difference
+im3 = axes[2].imshow(ndvi_diff, cmap='RdBu', vmin=-0.5, vmax=0.5)
+axes[2].set_title('NDVI Difference\n(Red = Decrease, Blue = Increase)')
+plt.colorbar(im3, ax=axes[2])
+
+plt.tight_layout()
+plt.show()
+
+# Calculate statistics of changes for valid pixels only
+print("NDVI Change Statistics (Summer to Summer):")
+print("-" * 50)
+print(f"Mean change: {np.ma.mean(ndvi_diff):.3f}")
+print(f"Standard deviation: {np.ma.std(ndvi_diff):.3f}")
+print(f"Max decrease: {np.ma.min(ndvi_diff):.3f}")
+print(f"Max increase: {np.ma.max(ndvi_diff):.3f}")
+
+# Calculate potential deforestation areas with valid mask
+threshold = -0.2
+deforested_pixels = np.sum((ndvi_diff < threshold) & valid_mask)
+total_valid_pixels = np.sum(valid_mask)
+deforested_percentage = (deforested_pixels / total_valid_pixels) * 100 if total_valid_pixels > 0 else 0
+
+print(f"\nPotential deforestation (NDVI decrease > {abs(threshold)}):")
+print(f"Area affected: {deforested_percentage:.2f}% of valid area")
+
+# Additional statistics for valid regions
+print("\nNDVI Distribution Statistics (valid regions only):")
+print("-" * 50)
+print(f"Early summer mean NDVI: {np.ma.mean(ndvi_early):.3f}")
+print(f"Late summer mean NDVI: {np.ma.mean(ndvi_late):.3f}")
+print(f"Early summer median NDVI: {np.ma.median(ndvi_early):.3f}")
+print(f"Late summer median NDVI: {np.ma.median(ndvi_late):.3f}")
+print(f"Percentage of valid pixels: {(total_valid_pixels/ndvi_diff.size*100):.1f}%")
+
+# %%
+# Display first few directories to verify
+for safe_dir in safe_dirs[:3]:
+    print(safe_dir.name)
+
+# %%
+# Display GeoJSON information
+print("GeoJSON Information:")
+print("-" * 50)
+print(gdf.info())
+print("\nFirst few records:")
+print(gdf.head())
+
+# Get the bounding box coordinates
+bbox = gdf.total_bounds
+print("\nBounding Box (minx, miny, maxx, maxy):")
+print(bbox)
+
+# %%
+# Read the GeoJSON file
+deforestation_data = gpd.read_file(geojson_path)
+
+# Basic information about the dataset
+print("Number of deforestation polygons:", len(deforestation_data))
+print("\nDataset information:")
+print(deforestation_data.info())
+print("\nFirst few records:")
+print(deforestation_data.head())
+
+# %%
+# Analyze temporal distribution
+deforestation_data['year'] = deforestation_data['img_date'].dt.year
+deforestation_data['month'] = deforestation_data['img_date'].dt.month
+
+# Create year-month summary
+temporal_dist = deforestation_data.groupby(['year', 'month']).size().unstack(fill_value=0)
+print("Deforestation events by year and month:")
+print(temporal_dist)
+
+# Distribution by tile
+print("\nDeforestation events by tile:")
+print(deforestation_data['tile'].value_counts())
+
+# Create a monthly summary plot
+plt.figure(figsize=(12, 6))
+temporal_dist.T.plot(kind='bar', stacked=True)
+plt.title('Deforestation Events by Month and Year')
+plt.xlabel('Month')
+plt.ylabel('Number of Events')
+plt.legend(title='Year')
+plt.tight_layout()
+plt.show()
+
+# %%
+# Calculate area of each polygon in square meters
+# Converting to UTM projection for accurate area and perimeter calculation
+deforestation_data['area'] = deforestation_data.geometry.to_crs({'proj':'utm', 'zone':36, 'ellps':'WGS84'}).area
+deforestation_data['perimeter'] = deforestation_data.geometry.to_crs({'proj':'utm', 'zone':36, 'ellps':'WGS84'}).length
+
+# Basic statistics of polygon sizes
+print("Polygon area statistics (square meters):")
+print(deforestation_data['area'].describe())
+
+# Create histogram of polygon sizes
+plt.figure(figsize=(10, 6))
+plt.hist(deforestation_data['area'], bins=50, edgecolor='black')
+plt.title('Distribution of Deforestation Polygon Sizes')
+plt.xlabel('Area (square meters)')
+plt.ylabel('Count')
+plt.yscale('log')  # Using log scale for better visualization
+plt.grid(True, alpha=0.3)
+plt.show()
+
+# Calculate basic shape metrics
+deforestation_data['complexity'] = deforestation_data['perimeter'] / (4 * np.sqrt(deforestation_data['area']))
+
+print("Shape complexity statistics (1.0 = perfect square):")
+print(deforestation_data['complexity'].describe())
+
+# %%
+# Create a date-based index of available images
+image_dates = defaultdict(dict)
+
+for safe_dir in safe_dirs:
+    # Parse directory name components
+    parts = safe_dir.name.split('_')
+    date_str = parts[2]  # Get the date string
+    tile = parts[5]      # Get the tile ID
+    date = datetime.strptime(date_str, '%Y%m%dT%H%M%S').date()
+    
+    image_dates[tile][date] = safe_dir
+
+# Create a list of all dates for analysis
+all_dates = []
+for tile_dates in image_dates.values():
+    all_dates.extend(tile_dates.keys())
+all_dates = sorted(list(set(all_dates)))
+
+print("Total number of unique dates:", len(all_dates))
+if all_dates:
+    print("\nDate range of available images:")
+    print("Start:", min(all_dates))
+    print("End:", max(all_dates))
+    
+    # Print sample dates for each tile
+    for tile in image_dates:
+        dates = sorted(list(image_dates[tile].keys()))
+        print(f"\nDates for tile {tile} (first 5):")
+        for date in dates[:5]:
+            print(date)
+else:
+    print("\nNo images found in the specified directory")
+
+# %%
+# Create a function to standardize tile IDs
+def standardize_tile_id(tile_id):
+    # Remove 'T' prefix if it exists
+    return tile_id.replace('T', '')
+
+for safe_dir in safe_dirs:
+    # Parse directory name components
+    parts = safe_dir.name.split('_')
+    date_str = parts[2]  # Get the date string
+    tile = standardize_tile_id(parts[5])  # Get the tile ID and standardize it
+    date = datetime.strptime(date_str, '%Y%m%dT%H%M%S').date()
+    
+    image_dates[tile][date] = safe_dir
+
+# Create a function to find the closest images before and after an event
+def find_closest_images(event_date, tile, image_dates, max_days=30):
+    if tile not in image_dates:
+        return None, None
+        
+    available_dates = sorted(list(image_dates[tile].keys()))
+    before_dates = [d for d in available_dates if d < event_date]
+    after_dates = [d for d in available_dates if d > event_date]
+    
+    before_image = max(before_dates) if before_dates else None
+    after_image = min(after_dates) if after_dates else None
+    
+    # Check if the images are within max_days
+    if before_image and (event_date - before_image).days > max_days:
+        before_image = None
+    if after_image and (after_image - event_date).days > max_days:
+        after_image = None
+        
+    return before_image, after_image
+
+# Add columns for before/after images
+deforestation_data['event_date'] = deforestation_data['img_date'].dt.date
+deforestation_data['before_image'] = None
+deforestation_data['after_image'] = None
+deforestation_data['time_diff_before'] = None
+deforestation_data['time_diff_after'] = None
+
+# Find matching images for each deforestation event
+for idx, row in deforestation_data.iterrows():
+    before_date, after_date = find_closest_images(
+        row['event_date'], 
+        row['tile'],  # No need to standardize as GeoJSON already uses format without 'T'
+        image_dates
+    )
+    
+    deforestation_data.at[idx, 'before_image'] = before_date
+    deforestation_data.at[idx, 'after_image'] = after_date
+    
+    if before_date:
+        deforestation_data.at[idx, 'time_diff_before'] = (row['event_date'] - before_date).days
+    if after_date:
+        deforestation_data.at[idx, 'time_diff_after'] = (after_date - row['event_date']).days
+
+# Print statistics about the matches
+print("Matching Statistics:")
+print("-" * 50)
+print(f"Total deforestation events: {len(deforestation_data)}")
+print(f"Events with before images: {deforestation_data['before_image'].notna().sum()}")
+print(f"Events with after images: {deforestation_data['after_image'].notna().sum()}")
+print(f"Events with both images: {(deforestation_data['before_image'].notna() & deforestation_data['after_image'].notna()).sum()}")
+
+# Print time difference statistics
+print("\nTime Difference Statistics (days):")
+print("-" * 50)
+print("Before images:")
+print(deforestation_data['time_diff_before'].describe())
+print("\nAfter images:")
+print(deforestation_data['time_diff_after'].describe())
+
+# Print some example matches
+print("\nExample Matches (first 5):")
+print("-" * 50)
+print(deforestation_data[['tile', 'event_date', 'before_image', 'after_image', 'time_diff_before', 'time_diff_after']].head())
+
+# %%
+# Add analysis of matches by tile and year
+deforestation_data['year'] = deforestation_data['event_date'].apply(lambda x: x.year)
+
+# Print statistics by tile and year
+print("Coverage by Tile and Year:")
+print("-" * 50)
+for tile in deforestation_data['tile'].unique():
+    tile_data = deforestation_data[deforestation_data['tile'] == tile]
+    print(f"\nTile: {tile}")
+    for year in sorted(tile_data['year'].unique()):
+        year_data = tile_data[tile_data['year'] == year]
+        matched = year_data[year_data['before_image'].notna() & year_data['after_image'].notna()]
+        print(f"Year {year}:")
+        print(f"  Total events: {len(year_data)}")
+        print(f"  Matched events: {len(matched)} ({len(matched)/len(year_data)*100:.1f}%)")
+
+# Show some examples of successful matches
+print("\nExample Successful Matches:")
+print("-" * 50)
+successful_matches = deforestation_data[
+    deforestation_data['before_image'].notna() & 
+    deforestation_data['after_image'].notna()
+].head(5)
+
+print("\nFirst 5 successful matches:")
+print(successful_matches[['tile', 'event_date', 'before_image', 'after_image', 'time_diff_before', 'time_diff_after']])
+
+# Distribution of time differences
+print("\nTime Difference Distribution (Before Images):")
+print(deforestation_data['time_diff_before'].value_counts().sort_index())
+
+print("\nTime Difference Distribution (After Images):")
+print(deforestation_data['time_diff_after'].value_counts().sort_index())
+
+# %%
+import rasterio
+from rasterio.windows import Window
+import numpy as np
+from pathlib import Path
+
+# Constants for image patches
+PATCH_SIZE = 224  # AlexNet standard input size
+CHANNELS = ['B02', 'B03', 'B04', 'B08']  # RGB + NIR bands
+
+def load_sentinel_bands(safe_dir, date, channels=CHANNELS):
+    """Load specified bands from Sentinel-2 image"""
+    img_data_path = list(Path(safe_dir).glob("GRANULE/*/IMG_DATA"))[0]
+    bands = {}
+    transform = None  # Initialize transform
+
+    for idx, channel in enumerate(channels):
+        # Find and load the band file
+        band_file = list(img_data_path.glob(f"*_{channel}.jp2"))[0]
+        with rasterio.open(band_file) as src:
+            if transform is None:
+                transform = src.transform  # Store transform from the first band
+            bands[channel] = src.read(1)
+
+        # Normalize the band
+        band_data = bands[channel].astype(float)
+        band_data = (band_data - band_data.min()) / (band_data.max() - band_data.min())
+        bands[channel] = band_data
+
+    return bands, transform
+
+print("Ready to start processing. Example call:")
+print(successful_matches[['tile', 'event_date', 'before_image', 'after_image']].iloc[0])
+
+# %%
+# Get one example of a successful match
+example_match = successful_matches[['tile', 'event_date', 'before_image', 'after_image']].iloc[0]
+print("Example match details:")
+print(example_match)
+
+# Get the SAFE directory paths for before and after images
+before_safe_dir = list(Path("../Datasets/Sentinel-2").glob(f"*/*{example_match['before_image'].strftime('%Y%m%d')}*.SAFE"))[0]
+after_safe_dir = list(Path("../Datasets/Sentinel-2").glob(f"*/*{example_match['after_image'].strftime('%Y%m%d')}*.SAFE"))[0]
+
+print("\nProcessing directories:")
+print(f"Before image: {before_safe_dir}")
+print(f"After image: {after_safe_dir}")
+
+# Load bands for both images
+before_bands, before_transform = load_sentinel_bands(before_safe_dir, example_match['before_image'])
+after_bands, after_transform = load_sentinel_bands(after_safe_dir, example_match['after_image'])
+
+# Print the shapes of loaded bands
+print("\nBand shapes:")
+for band in CHANNELS:
+    print(f"{band} - Before: {before_bands[band].shape}, After: {after_bands[band].shape}")
