@@ -1,0 +1,17 @@
+{
+  "total_samples": 66,
+  "temporal_range": {
+    "start": "2018-07-21 00:00:00",
+    "end": "2018-09-14 00:00:00"
+  },
+  "size_distribution": {
+    "small": 50,
+    "medium": 15,
+    "large": 1
+  },
+  "area_statistics": {
+    "mean": 0.4418558033066743,
+    "median": 0.23873177255071132,
+    "std": 0.5212269206232449
+  }
+}
