@@ -169,6 +169,10 @@ cython_debug/
 *.h5
 *.hdf
 *.tif
+*.npy
+
+# Project Sample Data
+sampled_events*
 
 # macOS specific files
 .DS_Store
