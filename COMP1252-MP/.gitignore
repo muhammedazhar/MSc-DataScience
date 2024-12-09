@@ -173,6 +173,7 @@ cython_debug/
 
 # Project Sample Data
 sampled_events*
+*Structure.txt
 
 # macOS specific files
 .DS_Store
