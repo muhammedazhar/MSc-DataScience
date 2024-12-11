@@ -170,6 +170,7 @@ cython_debug/
 *.hdf
 *.tif
 *.npy
+*.bak
 
 # Project Sample Data
 sampled_events*
