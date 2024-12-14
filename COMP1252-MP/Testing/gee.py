@@ -8,7 +8,7 @@ import zipfile
 import io
 
 # Load environment variables from the .env file
-load_dotenv('../Solutions/.env')
+load_dotenv('../Keys/.env')
 
 # Set up authentication using the service account credentials
 service_account_file = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')

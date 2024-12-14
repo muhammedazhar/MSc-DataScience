@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 import os
 
 # Load the environment variables from the .env file
-load_dotenv('../Solutions/.env')
+load_dotenv('../Keys/.env')
 
 # Replace with your USGS credentials
 username = os.getenv('USGS_USERNAME')
