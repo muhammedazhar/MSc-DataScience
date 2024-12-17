@@ -1,40 +1,61 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+Extractor Functions
+-------------------
+This script contains functions to extract bounding boxes and search parameters
+from files. It includes functions to extract bounding boxes from GeoJSON files
+and search parameters from JSON files.
+
+Author: Azhar Muhammed
+Date: July 2024
+"""
+
 import sys
 import logging
 import json
 import geojson
 
 # GeoJSON extractor function
-def extract_bbox(geojson_path):
+def extract_bboxes(geojson_path):
     """
-    Extract the bounding box and "code" property from a GeoJSON file.
+    Extract bounding boxes and properties from a GeoJSON file containing multiple polygons.
     
     Args:
         geojson_path (str): Path to the GeoJSON file.
     
     Returns:
-        tuple: Bounding box as (min_lon, min_lat, max_lon, max_lat), and the "code" property.
+        list: A list of tuples, each containing (bbox, code, status)
     """
     try:
         with open(geojson_path, 'r') as geojson_file:
             data = geojson.load(geojson_file)
             
-            # Assuming that the first feature contains the Polygon we are interested in
-            feature = data['features'][0]
-            coordinates = feature['geometry']['coordinates'][0]
-            code = feature['properties']['code']
-            status = feature['properties']['status']
+            bboxes = []
+
+            for feature in data['features']:
+                geometry = feature['geometry']
+                if geometry['type'] != 'Polygon':
+                    continue  # Skip if not a polygon
+                coordinates = geometry['coordinates'][0]
+                code = feature['properties'].get('code', '')
+                status = feature['properties'].get('status', '')
+                
+                # Extracting all longitude and latitude values
+                lons = [coord[0] for coord in coordinates]
+                lats = [coord[1] for coord in coordinates]
+                
+                # Calculate the bounding box
+                min_lon = min(lons)
+                max_lon = max(lons)
+                min_lat = min(lats)
+                max_lat = max(lats)
+                
+                bbox = (min_lon, min_lat, max_lon, max_lat)
+                bboxes.append((bbox, code, status))
             
-            # Extracting all longitude and latitude values
-            lons = [coord[0] for coord in coordinates]
-            lats = [coord[1] for coord in coordinates]
-            
-            # Calculate the bounding box
-            min_lon = min(lons)
-            max_lon = max(lons)
-            min_lat = min(lats)
-            max_lat = max(lats)
-            
-            return (min_lon, min_lat, max_lon, max_lat), code, status
+            return bboxes
     except (FileNotFoundError, KeyError, IndexError) as e:
         logging.error(f"Error reading or parsing GeoJSON file: {str(e)}")
         sys.exit(1)

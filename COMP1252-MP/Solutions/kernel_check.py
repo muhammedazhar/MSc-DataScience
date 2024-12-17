@@ -1,3 +1,16 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+Kernel Checker
+--------------
+This script checks the installed kernelspecs and displays the kernel name and
+display name.
+
+Author: Azhar Muhammed
+Date: July 2024
+"""
+
 import json
 import os
 from jupyter_client.kernelspec import KernelSpecManager

@@ -1,9 +1,24 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+Helper Functions
+----------------
+This script contains helper functions for the Earth Data API. It includes
+functions for setting up logging, checking environment variables, and
+formatting search results.
+
+Author: Azhar Muhammed
+Date: July 2024
+"""
+
 import os
 import sys
 import logging
 from dotenv import load_dotenv
 
 def setup_logging():
+    # Main logger with both handlers
     logging.basicConfig(
         level=logging.INFO,
         format='%(asctime)s - %(levelname)s - %(message)s',
@@ -12,6 +27,17 @@ def setup_logging():
             logging.StreamHandler()
         ]
     )
+
+    # File-only logger
+    file_logger = logging.getLogger('file_only')
+    file_logger.setLevel(logging.INFO)
+    file_handler = logging.FileHandler('../Docs/Logs/processing.log')
+    file_logger.addHandler(file_handler)
+
+    # Prevent messages from propagating to the root logger
+    file_logger.propagate = False
+
+    return file_logger
 
 # Load the environment variables from the .env file
 load_dotenv("../Keys/.env")
