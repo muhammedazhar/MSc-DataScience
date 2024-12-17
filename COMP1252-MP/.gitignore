@@ -171,6 +171,7 @@ cython_debug/
 *.tif
 *.npy
 *.bak
+stack_info.json
 
 # Project Sample Data
 sampled_events*
