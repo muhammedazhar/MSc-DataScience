@@ -9,7 +9,7 @@ based on GeoJSON geometries. It handles band loading, resampling, and index
 computation.
 
 Author: Azhar Muhammed
-Date: December 2024
+Date: October 2024
 """
 
 import os
