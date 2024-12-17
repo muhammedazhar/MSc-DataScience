@@ -8,19 +8,28 @@ from helper import *
 from extractor import *
 
 # Set up logging configuration
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+setup_logging()
+
+# Get full path of current script
+current_file = __file__
+# Extract just the filename
+filename = os.path.basename(current_file)
+# Filename without extension
+filename_no_ext = os.path.splitext(filename)[0]
+logging.info(f"Running {filename_no_ext} script...")
 
 # Get the current directory of this script
 path = os.path.dirname(os.path.realpath(__file__))
 
 dataset = "../Datasets"
+input_path = "../Datasets/BoundingBox"
 system = "NASA-Earthdata"
 directory = os.path.join(dataset, system)
 
 # Path to the bbox.geojson file
-bbox_file_path = os.path.join(path, dataset, "bbox.geojson")
+bbox_file_path = os.path.join(path, input_path, "bbox.geojson")
 logging.info(f"Path to GeoJSON file: {bbox_file_path}")
-search_file_path = os.path.join(path, dataset, "search.json")
+search_file_path = os.path.join(path, input_path, "search.json")
 logging.info(f"Path to search.json file: {search_file_path}")
 
 # Extract the bounding box and "code" property from the GeoJSON file
@@ -97,4 +106,4 @@ except Exception as e:
     logging.error("Please check your NASA credentials and ensure they are correctly set in your environment variables.")
 
 # Log the completion of the script execution
-logging.info("Script execution completed.")
+logging.info(f"The {filename_no_ext} script execution completed.")

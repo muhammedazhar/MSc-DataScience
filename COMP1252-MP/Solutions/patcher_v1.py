@@ -25,15 +25,11 @@ from shapely.geometry import box
 from PIL import Image
 from tqdm import tqdm
 
+# Local imports
+from helper import setup_logging
+
 # Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler('../Docs/Logs/patcher.log'),
-        logging.StreamHandler()
-    ]
-)
+setup_logging()
 
 class SentinelPatchProcessor:
     def __init__(self, patch_size=224):
@@ -316,6 +312,13 @@ class SentinelPatchProcessor:
 
 def main():
     """Main execution function"""
+    # Get full path of current script
+    current_file = __file__
+    # Extract just the filename
+    filename = os.path.basename(current_file)
+    # Filename without extension
+    filename_no_ext = os.path.splitext(filename)[0]
+    logging.info(f"Running {filename_no_ext} script...")
     try:
         # Initialize processor
         processor = SentinelPatchProcessor(patch_size=224)

@@ -22,7 +22,7 @@ def extract_bbox(geojson_path):
             feature = data['features'][0]
             coordinates = feature['geometry']['coordinates'][0]
             code = feature['properties']['code']
-            name = feature['properties']['name']
+            status = feature['properties']['status']
             
             # Extracting all longitude and latitude values
             lons = [coord[0] for coord in coordinates]
@@ -34,7 +34,7 @@ def extract_bbox(geojson_path):
             min_lat = min(lats)
             max_lat = max(lats)
             
-            return (min_lon, min_lat, max_lon, max_lat), code, name
+            return (min_lon, min_lat, max_lon, max_lat), code, status
     except (FileNotFoundError, KeyError, IndexError) as e:
         logging.error(f"Error reading or parsing GeoJSON file: {str(e)}")
         sys.exit(1)

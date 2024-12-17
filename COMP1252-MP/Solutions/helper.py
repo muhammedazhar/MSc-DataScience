@@ -3,8 +3,18 @@ import sys
 import logging
 from dotenv import load_dotenv
 
+def setup_logging():
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(asctime)s - %(levelname)s - %(message)s',
+        handlers=[
+            logging.FileHandler('../Docs/Logs/processing.log'),
+            logging.StreamHandler()
+        ]
+    )
+
 # Load the environment variables from the .env file
-load_dotenv()
+load_dotenv("../Keys/.env")
 
 def env_check(var_name, placeholder):
     """
