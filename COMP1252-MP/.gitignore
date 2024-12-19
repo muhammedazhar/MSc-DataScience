@@ -173,6 +173,9 @@ cython_debug/
 stack_info.json
 stage1_*
 
+# Project models
+*.pth
+
 # Log files
 *.log
 *.v2
