@@ -4,8 +4,9 @@
 """
 Mask Generator Script
 ---------------------
-This script generates raster masks from GeoJSON features for forest change detection.
-It processes temporal geometric data and creates corresponding mask files in GeoTIFF format.
+This script generates raster masks from GeoJSON features for forest change
+detection. It processes temporal geometric data and creates corresponding mask
+files in GeoTIFF format.
 
 Author: Azhar Muhammed
 Date: October 2024
