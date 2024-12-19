@@ -48,56 +48,76 @@ class ConvBlock(nn.Module):
         return self.conv(x)
 
 class UNetDiff(nn.Module):
+    """U-Net with ResNet-50 backbone for deforestation detection."""
     def __init__(self):
         super().__init__()
-
-        # Load ResNet-50 backbone with proper weights
+        
+        # Load ResNet-50 backbone
         resnet = models.resnet50(weights=models.ResNet50_Weights.DEFAULT)
-
-        # Encoder (modified ResNet-18)
+        
+        # Modify first conv to accept 27 channels
         self.encoder1 = nn.Sequential(
             nn.Conv2d(27, 64, kernel_size=7, stride=2, padding=3, bias=False),
             resnet.bn1,
             resnet.relu
         )
         self.pool = resnet.maxpool
-        self.encoder2 = resnet.layer1
-        self.encoder3 = resnet.layer2
-
-        # Decoder
-        self.upconv3 = nn.ConvTranspose2d(128, 64, kernel_size=2, stride=2)
-        self.decoder3 = ConvBlock(128, 64)
-
-        self.upconv2 = nn.ConvTranspose2d(64, 32, kernel_size=2, stride=2)
-        self.decoder2 = ConvBlock(96, 32)
-
-        self.upconv1 = nn.ConvTranspose2d(32, 16, kernel_size=2, stride=2)
-        self.decoder1 = ConvBlock(80, 16)
-
-        self.final_conv = nn.Conv2d(16, 1, kernel_size=1)
+        
+        # Encoder blocks (from ResNet)
+        self.encoder2 = resnet.layer1  # 256 channels
+        self.encoder3 = resnet.layer2  # 512 channels
+        self.encoder4 = resnet.layer3  # 1024 channels
+        self.encoder5 = resnet.layer4  # 2048 channels
+        
+        # Decoder blocks with correct channel sizes
+        self.upconv5 = nn.ConvTranspose2d(2048, 1024, kernel_size=2, stride=2)
+        self.decoder5 = ConvBlock(2048, 1024)  # 1024 + 1024 input channels
+        
+        self.upconv4 = nn.ConvTranspose2d(1024, 512, kernel_size=2, stride=2)
+        self.decoder4 = ConvBlock(1024, 512)   # 512 + 512 input channels
+        
+        self.upconv3 = nn.ConvTranspose2d(512, 256, kernel_size=2, stride=2)
+        self.decoder3 = ConvBlock(512, 256)    # 256 + 256 input channels
+        
+        self.upconv2 = nn.ConvTranspose2d(256, 64, kernel_size=2, stride=2)
+        self.decoder2 = ConvBlock(128, 64)     # 64 + 64 input channels
+        
+        self.upconv1 = nn.ConvTranspose2d(64, 32, kernel_size=2, stride=2)
+        self.decoder1 = ConvBlock(59, 32)      # 32 + 27 input channels
+        
+        self.final_conv = nn.Conv2d(32, 1, kernel_size=1)
 
     def forward(self, x):
         # Encoder
-        enc1 = self.encoder1(x)  # 64 channels
+        enc1 = self.encoder1(x)       # Save for skip connection
         pool1 = self.pool(enc1)
-
-        enc2 = self.encoder2(pool1)  # 64 channels
-        enc3 = self.encoder3(enc2)  # 128 channels
-
+        
+        enc2 = self.encoder2(pool1)   # Save for skip connection
+        enc3 = self.encoder3(enc2)    # Save for skip connection
+        enc4 = self.encoder4(enc3)    # Save for skip connection
+        enc5 = self.encoder5(enc4)
+        
         # Decoder with skip connections
-        dec3 = self.upconv3(enc3)
+        dec5 = self.upconv5(enc5)
+        dec5 = torch.cat([dec5, enc4], dim=1)
+        dec5 = self.decoder5(dec5)
+        
+        dec4 = self.upconv4(dec5)
+        dec4 = torch.cat([dec4, enc3], dim=1)
+        dec4 = self.decoder4(dec4)
+        
+        dec3 = self.upconv3(dec4)
         dec3 = torch.cat([dec3, enc2], dim=1)
         dec3 = self.decoder3(dec3)
-
+        
         dec2 = self.upconv2(dec3)
         dec2 = torch.cat([dec2, enc1], dim=1)
         dec2 = self.decoder2(dec2)
-
+        
         dec1 = self.upconv1(dec2)
         dec1 = torch.cat([dec1, x], dim=1)
         dec1 = self.decoder1(dec1)
-
-        # Final 1x1 convolution
+        
         out = self.final_conv(dec1)
         return torch.sigmoid(out)
 
