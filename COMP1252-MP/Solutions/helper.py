@@ -14,30 +14,35 @@ Date: July 2024
 
 import os
 import sys
+import torch
 import logging
 from dotenv import load_dotenv
 
-def setup_logging():
-    # Main logger with both handlers
+def setup_logging(log_level=logging.INFO, file='None'):
+    # Configure root logger with console and file handlers
     logging.basicConfig(
-        level=logging.INFO,
-        format='%(asctime)s - %(levelname)s - %(message)s',
+        level=log_level,
+        format='[%(asctime)s] [%(levelname)s] [%(name)s] %(message)s',
         handlers=[
             logging.FileHandler('../Docs/Logs/processing.log'),
             logging.StreamHandler()
         ]
     )
 
-    # File-only logger
+    # Get module-specific logger
+    logger = logging.getLogger(file)
+    logger.setLevel(log_level)
+
+    # Create file-only logger for specific needs
     file_logger = logging.getLogger('file_only')
-    file_logger.setLevel(logging.INFO)
+    file_logger.setLevel(log_level)
     file_handler = logging.FileHandler('../Docs/Logs/processing.log')
     file_logger.addHandler(file_handler)
-
-    # Prevent messages from propagating to the root logger
     file_logger.propagate = False
 
-    return file_logger
+    return logger, file_logger
+
+logger, file_logger = setup_logging()
 
 # Load the environment variables from the .env file
 load_dotenv("../Keys/.env")
@@ -45,14 +50,14 @@ load_dotenv("../Keys/.env")
 def env_check(var_name, placeholder):
     """
     Check if the environment variable is correctly set.
-    
+
     Args:
         var_name (str): Name of the environment variable.
         placeholder (str): Default placeholder value to check against.
-    
+
     Returns:
         str: Value of the environment variable.
-    
+
     Raises:
         SystemExit: If the variable is not set or set to the default placeholder.
     """
@@ -62,9 +67,48 @@ def env_check(var_name, placeholder):
         sys.exit(1)
     return value
 
+def get_device(pretty='silent'):
+    """
+    Get PyTorch device information with optional output control.
+    Args:
+        pretty (str): Output mode - 'print', 'log', or 'silent' (default)
+    Returns:
+        str: Device type ('mps', 'cuda', or 'cpu')
+    """
+    device_info = []
+    device_info.append(f"PyTorch version: {torch.__version__}")
+
+    # Running on a local machine
+    if torch.backends.mps.is_available():
+        device = 'mps'
+        message = "Apple Silicon Metal Performance Shader (MPS) Support"
+        device_info.extend([
+            f"\n{message}",
+            f"{'-' * len(message)}",
+            f"Apple MPS built status : {torch.backends.mps.is_built()}",
+            f"Apple MPS availability : {torch.backends.mps.is_available()}",
+            f"{'-' * len(message)}"
+        ])
+    elif torch.cuda.is_available():
+        device = 'cuda'
+    else:
+        device = 'cpu'
+
+    device_info.append(f"Using device: {device.upper()}\n")
+
+    # Handle output based on pretty parameter
+    if pretty == 'print':
+        for line in device_info:
+            print(line)
+    elif pretty == 'log':
+        for line in device_info:
+            logger.info(line)
+
+    return device
+
 def format(results):
     formatted_results = []
-    
+
     for idx, result in enumerate(results, start=1):
         # Use .get() to safely access dictionary keys
         collection = result.get('Collection', {})
