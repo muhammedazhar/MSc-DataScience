@@ -9,6 +9,7 @@ from tqdm import tqdm
 from skimage.io import imread
 from skimage.transform import resize
 import matplotlib.pyplot as plt
+import time
 
 # Local imports
 from helper import *
@@ -162,13 +163,32 @@ def calculate_metrics(pred, target):
 
     return accuracy.item(), iou.item()
 
+def calculate_pixel_accuracy(pred, target):
+    pred = (pred > 0.5).float()
+    correct = (pred == target).float()
+    accuracy = correct.sum() / correct.numel()
+    return accuracy
+
+def calculate_iou(pred, target, eps=1e-7):
+    pred = (pred > 0.5).float()
+    target = target.float()
+    intersection = (pred * target).sum()
+    union = pred.sum() + target.sum() - intersection
+    iou = (intersection + eps) / (union + eps)
+    return iou
+
 # Training function
 def train_model(model, train_loader, val_loader, criterion, optimizer, num_epochs=25):
     best_val_loss = float('inf')
+    best_epoch = 0
+    best_val_acc = 0
+    best_val_iou = 0
     history = {
         'train_loss': [], 'train_acc': [], 'train_iou': [],
         'val_loss': [], 'val_acc': [], 'val_iou': []
     }
+
+    start_training_time = time.time()
 
     for epoch in range(num_epochs):
         text = f'Epoch {epoch+1}/{num_epochs}'
@@ -191,10 +211,11 @@ def train_model(model, train_loader, val_loader, criterion, optimizer, num_epoch
             optimizer.step()
 
             # Calculate metrics
-            acc, iou = calculate_metrics(outputs, masks)
+            acc = calculate_pixel_accuracy(outputs, masks)
+            iou = calculate_iou(outputs, masks)
             train_loss += loss.item()
-            train_acc += acc
-            train_iou += iou
+            train_acc += acc.item()
+            train_iou += iou.item()
 
         # Average metrics over batches
         train_loss /= len(train_loader)
@@ -208,7 +229,7 @@ def train_model(model, train_loader, val_loader, criterion, optimizer, num_epoch
         val_iou = 0
 
         with torch.no_grad():
-            for inputs, masks in tqdm(val_loader, desc='Validation'):
+            for inputs, masks in val_loader:
                 inputs = inputs.to(DEVICE)
                 masks = masks.to(DEVICE)
 
@@ -216,10 +237,11 @@ def train_model(model, train_loader, val_loader, criterion, optimizer, num_epoch
                 loss = criterion(outputs, masks)
 
                 # Calculate metrics
-                acc, iou = calculate_metrics(outputs, masks)
+                acc = calculate_pixel_accuracy(outputs, masks)
+                iou = calculate_iou(outputs, masks)
                 val_loss += loss.item()
-                val_acc += acc
-                val_iou += iou
+                val_acc += acc.item()
+                val_iou += iou.item()
 
             # Average metrics over batches
             val_loss /= len(val_loader)
@@ -229,6 +251,9 @@ def train_model(model, train_loader, val_loader, criterion, optimizer, num_epoch
             # Save best model
             if val_loss < best_val_loss:
                 best_val_loss = val_loss
+                best_val_acc = val_acc
+                best_val_iou = val_iou
+                best_epoch = epoch + 1
                 torch.save(model.state_dict(), '../Models/Testing-Model.pth')
 
         # Store metrics in history
@@ -243,8 +268,15 @@ def train_model(model, train_loader, val_loader, criterion, optimizer, num_epoch
         print(f'Train Loss : {train_loss:.4f} - Train Acc : {train_acc:.4f} - Train IoU : {train_iou:.4f}')
         print(f'Val Loss   : {val_loss:.4f} - Val Acc   : {val_acc:.4f} - Val IoU   : {val_iou:.4f}')
 
-    return model, history
+    total_training_time = time.time() - start_training_time
+    print('\nTraining completed!')
+    print('Best Model Performance:')
+    print(f'- Validation Loss: {best_val_loss:.4f}')
+    print(f'- Validation Accuracy: {best_val_acc:.4f}')
+    print(f'- Validation IoU: {best_val_iou:.4f}\n')
+    print(f'Best epoch: {best_epoch}')
 
+    return model, history, total_training_time
 
 def main():
     """Main execution function"""
@@ -268,6 +300,7 @@ def main():
     Y_train = np.zeros((len(train_ids), IMG_HEIGHT, IMG_WIDTH, 1), dtype=bool)
 
     print('Loading training images and masks')
+    loading_time = time.time()
     for n, id_ in tqdm(enumerate(train_ids), total=len(train_ids)):
         path = TRAIN_PATH + id_
         img = imread(path + '/images/' + id_ + '.png')[:,:,:IMG_CHANNELS]
@@ -282,6 +315,7 @@ def main():
             mask = np.maximum(mask, mask_)
         Y_train[n] = mask
 
+    loading_time = time.time() - loading_time
     # Create datasets and dataloaders
     train_size = int(0.9 * len(X_train))
     train_dataset = NucleiDataset(X_train[:train_size], Y_train[:train_size])
@@ -296,9 +330,35 @@ def main():
     optimizer = optim.Adam(model.parameters())
 
     # Train model and get history
-    model, history = train_model(model, train_loader, val_loader, criterion, optimizer)
+    model, history, training_time = train_model(model, train_loader, val_loader, criterion, optimizer)
 
-    # Plot training history
+    # Print time metrics
+    print(f'Training Time: {int(training_time // 60)}m {int(training_time % 60)}s')
+    print(f'Loading Time: {int(loading_time // 60)}m {int(loading_time % 60)}s')
+
+    # Visualize results
+    save_dir='../Docs/Diagrams/'
+    file_prefix=f'{filename_no_ext}'
+
+    # Make predictions
+    model.eval()
+    test_dataset = NucleiDataset(X_train[train_size:], Y_train[train_size:])  # Include masks
+    test_loader = DataLoader(test_dataset, batch_size=16)
+
+    predictions = []
+    with torch.no_grad():
+        for batch in test_loader:
+            # Unpack the batch - since we included masks in test_dataset
+            inputs, _ = batch
+            inputs = inputs.to(DEVICE)
+            outputs = model(inputs)
+            predictions.extend(outputs.cpu().numpy())
+
+
+    predictions = np.array(predictions)
+    predictions = (predictions > 0.5).astype(np.uint8)
+
+    # Visualize results
     plt.figure(figsize=(15, 5))
 
     # Plot Loss
@@ -329,23 +389,10 @@ def main():
     plt.legend()
 
     plt.tight_layout()
-    plt.show()
-    # Make predictions
-    model.eval()
-    test_dataset = NucleiDataset(X_train[train_size:])
-    test_loader = DataLoader(test_dataset, batch_size=16)
+    plt.savefig(os.path.join(save_dir, f'{file_prefix}_performance_metrics.png'))
+    plt.close()
 
-    predictions = []
-    with torch.no_grad():
-        for inputs in test_loader:
-            inputs = inputs.to(DEVICE)
-            outputs = model(inputs)
-            predictions.extend(outputs.cpu().numpy())
-
-    predictions = np.array(predictions)
-    predictions = (predictions > 0.5).astype(np.uint8)
-
-    # Visualize results
+    # Visualize sample predictions
     idx = random.randint(0, len(predictions) - 1)
     plt.figure(figsize=(15, 5))
 
@@ -361,7 +408,9 @@ def main():
     plt.imshow(np.squeeze(predictions[idx]), cmap='gray')
     plt.title('Predicted Mask')
 
-    plt.show()
+    plt.tight_layout()
+    plt.savefig(os.path.join(save_dir, f'{file_prefix}_sample_prediction.png'))
+    plt.close()
 
 if __name__ == "__main__":
     try:
