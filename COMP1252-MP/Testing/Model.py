@@ -17,7 +17,7 @@ if torch.backends.mps.is_available():
     message = "Apple Silicon Metal Performance Shader (MPS) Support"
     print(f"\n{message} \n{'-' * len(message)}")
     print(f"Apple MPS built status : {torch.backends.mps.is_built()}")
-    print(f"Apple MPS available    : {torch.backends.mps.is_available()}")
+    print(f"Apple MPS availability : {torch.backends.mps.is_available()}")
     print(f"{'-' * len(message)}")
 elif torch.cuda.is_available():
     device = 'cuda'
