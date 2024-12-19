@@ -1,4 +1,6 @@
-# Essential imports
+# ------------------------------------------------------------
+# Essential Imports
+# ------------------------------------------------------------
 import cv2
 import shutil
 import rasterio
@@ -10,28 +12,28 @@ import numpy as np
 from pathlib import Path
 from PIL import Image
 from skimage import exposure
+import albumentations as A
+from tqdm import tqdm
 
-# Print the PyTorch version
-print(f"PyTorch version: {torch.__version__}")
+# ------------------------------------------------------------
+# Local Imports
+# ------------------------------------------------------------
+from helper import *
 
-# Running on a local machine
-if torch.backends.mps.is_available():
-    device = 'mps'
-    message = "Apple Silicon Metal Performance Shader (MPS) Support"
-    print(f"\n{message} \n{'-' * len(message)}")
-    print(f"Apple MPS built status : {torch.backends.mps.is_built()}")
-    print(f"Apple MPS availability : {torch.backends.mps.is_available()}")
-    print(f"{'-' * len(message)}")
-elif torch.cuda.is_available():
-    device = 'cuda'
-else:
-    device = 'cpu'
+# ------------------------------------------------------------
+# Logging and device configuration using helper script
+# ------------------------------------------------------------
+# Set to logging.DEBUG for more detailed output (image shapes, transforms).
+# Set to logging.INFO or logging.WARNING to reduce output noise.
+current_file = __file__
+filename = os.path.basename(current_file)
+filename_no_ext = os.path.splitext(filename)[0]
+logger, file_logger = setup_logging(file=filename)
+device = get_device()
 
-# TODO: Add support for AMD ROCm GPU if needed
-
-# Print the device being used
-print(f"Using device: {device.upper()}\n")
-
+# ------------------------------------------------------------
+# Model Components
+# ------------------------------------------------------------
 class ConvBlock(nn.Module):
     def __init__(self, in_channels, out_channels):
         super().__init__()
@@ -89,12 +91,12 @@ class UNetDiff(nn.Module):
 
     def forward(self, x):
         # Encoder
-        enc1 = self.encoder1(x)       # Save for skip connection
+        enc1 = self.encoder1(x)       
         pool1 = self.pool(enc1)
         
-        enc2 = self.encoder2(pool1)   # Save for skip connection
-        enc3 = self.encoder3(enc2)    # Save for skip connection
-        enc4 = self.encoder4(enc3)    # Save for skip connection
+        enc2 = self.encoder2(pool1)   
+        enc3 = self.encoder3(enc2)    
+        enc4 = self.encoder4(enc3)    
         enc5 = self.encoder5(enc4)
         
         # Decoder with skip connections
@@ -121,6 +123,9 @@ class UNetDiff(nn.Module):
         out = self.final_conv(dec1)
         return torch.sigmoid(out)
 
+# ------------------------------------------------------------
+# Loss Functions
+# ------------------------------------------------------------
 class DiceLoss(nn.Module):
     def __init__(self, smooth=1e-6):
         super().__init__()
@@ -149,33 +154,32 @@ class CombinedLoss(nn.Module):
         dice = self.dice_loss(predictions, targets)
         return self.bce_weight * bce + self.dice_weight * dice
 
-def create_optimizer_and_scheduler(model):
-    optimizer = torch.optim.Adam(model.parameters(), lr=1e-2)
-
+def create_optimizer_and_scheduler(model, config):
+    optimizer = torch.optim.Adam(model.parameters(), lr=config['learning_rate'])
     scheduler = torch.optim.lr_scheduler.MultiStepLR(
         optimizer,
-        milestones=[10, 40, 80, 150],
-        gamma=0.1
+        milestones=config['lr_milestones'],
+        gamma=config['lr_gamma']
     )
-
     return optimizer, scheduler
 
-import albumentations as A
-from torch.utils.data import Dataset, DataLoader
-
+# ------------------------------------------------------------
 # Configuration
+# ------------------------------------------------------------
 TRAIN_CONFIG = {
     'batch_size': 8,
     'num_epochs': 200,
     'learning_rate': 1e-2,
     'dataset_dir': '../Datasets/Testing/TemporalStacks',
-    'device': 'mps' if torch.backends.mps.is_available() else 'cpu',
+    'device': device,
     'num_workers': 4,
     'lr_milestones': [10, 40, 80, 150],
     'lr_gamma': 0.1
 }
 
-# Augmentations for training
+# ------------------------------------------------------------
+# Data Augmentations
+# ------------------------------------------------------------
 train_transform = A.Compose([
     A.RandomCrop(int(224 * 0.7), int(224 * 0.7)),
     A.Resize(224, 224),
@@ -183,76 +187,75 @@ train_transform = A.Compose([
     A.ElasticTransform(p=0.5),
     A.GridDistortion(p=0.5),
     A.CoarseDropout(max_holes=8, max_height=20, max_width=20, p=0.5)
-], is_check_shapes=False)  # Disable shape checking temporarily
+], is_check_shapes=False)
 
-# Validation transform - only resize if needed
 val_transform = A.Compose([
     A.Resize(224, 224)
-], is_check_shapes=False)  # Disable shape checking temporarily
+], is_check_shapes=False)
 
+# ------------------------------------------------------------
+# Training Function
+# ------------------------------------------------------------
 def train_model(model, train_loader, val_loader, config):
+    """Train and validate the model."""
     model = model.to(config['device'])
     criterion = CombinedLoss(bce_weight=0.2, dice_weight=0.8)
-    optimizer = torch.optim.Adam(model.parameters(), lr=config['learning_rate'])
-    scheduler = torch.optim.lr_scheduler.MultiStepLR(
-        optimizer,
-        milestones=config['lr_milestones'],
-        gamma=config['lr_gamma']
-    )
+    optimizer, scheduler = create_optimizer_and_scheduler(model, config)
 
     best_val_loss = float('inf')
 
     for epoch in range(config['num_epochs']):
-        # Training phase
         model.train()
-        train_loss = 0
+        train_loss = 0.0
 
-        for batch_idx, (data, target) in enumerate(train_loader):
-            data = data.to(config['device'])
-            target = target.to(config['device'])
-
+        # Training loop with progress bar
+        train_pbar = tqdm(train_loader, desc=f"Epoch {epoch+1}/{config['num_epochs']} [Train]", leave=False)
+        for data, target in train_pbar:
+            data, target = data.to(config['device']), target.to(config['device'])
             optimizer.zero_grad()
+
             output = model(data)
             loss = criterion(output, target)
-
             loss.backward()
             optimizer.step()
 
             train_loss += loss.item()
-
-            if batch_idx % 10 == 0:
-                print(f'Epoch {epoch}, Batch {batch_idx}, Loss: {loss.item():.4f}')
+            train_pbar.set_postfix({"Train Loss": f"{loss.item():.4f}"})
 
         # Validation phase
         model.eval()
-        val_loss = 0
-
+        val_loss = 0.0
         with torch.no_grad():
-            for data, target in val_loader:
-                data = data.to(config['device'])
-                target = target.to(config['device'])
+            val_pbar = tqdm(val_loader, desc=f"Epoch {epoch+1}/{config['num_epochs']} [Val]", leave=False)
+            for data, target in val_pbar:
+                data, target = data.to(config['device']), target.to(config['device'])
                 output = model(data)
-                val_loss += criterion(output, target).item()
+                v_loss = criterion(output, target).item()
+                val_loss += v_loss
+                val_pbar.set_postfix({"Val Loss": f"{v_loss:.4f}"})
 
         scheduler.step()
 
-        # Print epoch results
+        # Compute average losses
         train_loss /= len(train_loader)
         val_loss /= len(val_loader)
 
-        print(f'Epoch {epoch+1}/{config["num_epochs"]}:')
-        print(f'Training Loss: {train_loss:.4f}')
-        print(f'Validation Loss: {val_loss:.4f}')
+        # Print epoch results (concise)
+        logger.info(f"Epoch {epoch+1}/{config['num_epochs']}: Train Loss: {train_loss:.4f} | Val Loss: {val_loss:.4f}")
 
         # Save best model
         if val_loss < best_val_loss:
             best_val_loss = val_loss
-            torch.save(model.state_dict(), 'best_unet_diff.pth')
+            torch.save(model.state_dict(), '../Models/best_unet_diff.pth')
+            logger.info("Model improved and saved.")
 
-import numpy as np
-from pathlib import Path
-
+# ------------------------------------------------------------
+# Dataset Definition
+# ------------------------------------------------------------
 class TemporalStackDataset(Dataset):
+    """
+    A dataset class for loading temporal stack data (pre-event, post-event, and mask).
+    """
     def __init__(self, root_dir, transform=None, split='train'):
         self.root_dir = Path(root_dir)
         self.transform = transform
@@ -279,10 +282,11 @@ class TemporalStackDataset(Dataset):
         return Path(filepath).stem.split('T')[0]
 
     def _get_temporal_pairs(self):
+        """Find valid temporal pairs of pre-event and post-event images based on time difference."""
         pairs = []
         plot_dirs = sorted([d for d in self.root_dir.iterdir() if d.is_dir()])
 
-        # Split into train/val
+        # Split into train/val sets
         split_idx = int(0.8 * len(plot_dirs))
         plot_dirs = plot_dirs[:split_idx] if self.split == 'train' else plot_dirs[split_idx:]
 
@@ -309,70 +313,69 @@ class TemporalStackDataset(Dataset):
                         if mask_file.exists():
                             pairs.append((pre_file, post_file, mask_file))
                             break
-
         return pairs
 
     def __getitem__(self, idx):
         pre_file, post_file, mask_file = self.pairs[idx]
 
         try:
-            # Load data
-            pre_img = np.load(pre_file).astype(np.float32) / 10000.0  # Shape: (C, H, W)
-            post_img = np.load(post_file).astype(np.float32) / 10000.0  # Shape: (C, H, W)
+            pre_img = np.load(pre_file).astype(np.float32) / 10000.0  # (C, H, W)
+            post_img = np.load(post_file).astype(np.float32) / 10000.0
 
             # Transpose to (H, W, C) for processing
-            pre_img = np.transpose(pre_img, (1, 2, 0))  # Shape: (H, W, C)
-            post_img = np.transpose(post_img, (1, 2, 0))  # Shape: (H, W, C)
+            pre_img = np.transpose(pre_img, (1, 2, 0))
+            post_img = np.transpose(post_img, (1, 2, 0))
 
-            print(f"Pre-image shape after transpose: {pre_img.shape}")
-            print(f"Post-image shape after transpose: {post_img.shape}")
+            logger.debug(f"Pre-image shape after transpose: {pre_img.shape}")
+            logger.debug(f"Post-image shape after transpose: {post_img.shape}")
 
-            # Load and binarize mask
             with rasterio.open(mask_file) as src:
                 mask = src.read(1)
                 mask = (mask > 0).astype(np.float32)
-                print(f"Mask shape: {mask.shape}")
+                logger.debug(f"Mask shape: {mask.shape}")
 
-            # Apply histogram matching
+            # Histogram match post-event to pre-event
             matched_post = self._histogram_match(post_img, pre_img)
 
             # Compute difference image
             diff_img = matched_post - pre_img
 
-            # Stack channels: [pre (9), post (9), diff (9)]
-            x = np.concatenate([pre_img, matched_post, diff_img], axis=-1)  # Shape: (H, W, 27)
-            print(f"Stacked input shape: {x.shape}")
+            # Stack channels: [pre (9), post (9), diff (9)] => 27 channels total
+            x = np.concatenate([pre_img, matched_post, diff_img], axis=-1)
+            logger.debug(f"Stacked input shape: {x.shape}")
 
             if self.transform:
-                # Ensure mask shape matches image shape before transform
-                if mask.shape != x.shape[:2]:  # Compare spatial dimensions only
-                    print(f"Reshaping mask from {mask.shape} to {x.shape[:2]}")
+                # Ensure mask shape matches image
+                if mask.shape != x.shape[:2]:
                     mask = cv2.resize(mask, (x.shape[1], x.shape[0]), interpolation=cv2.INTER_NEAREST)
 
                 transformed = self.transform(image=x, mask=mask)
                 x = transformed['image']
                 mask = transformed['mask']
-                print(f"Transformed input shape: {x.shape}")
-                print(f"Transformed mask shape: {mask.shape}")
 
-            # Convert to torch tensors and transpose back to (C, H, W)
-            x = torch.from_numpy(x).float()  # Shape: (H, W, C)
-            x = x.permute(2, 0, 1)  # Shape: (C, H, W)
-            mask = torch.from_numpy(mask).float().unsqueeze(0)  # Shape: (1, H, W)
+                logger.debug(f"Transformed input shape: {x.shape}")
+                logger.debug(f"Transformed mask shape: {mask.shape}")
+
+            # Convert to torch tensors (C, H, W)
+            x = torch.from_numpy(x).float().permute(2, 0, 1)
+            mask = torch.from_numpy(mask).float().unsqueeze(0)
 
             return x, mask
 
         except Exception as e:
-            print(f"Error processing files:")
-            print(f"Pre-event: {pre_file}")
-            print(f"Post-event: {post_file}")
-            print(f"Mask: {mask_file}")
+            logger.error("Error processing files:")
+            logger.error(f"Pre-event: {pre_file}")
+            logger.error(f"Post-event: {post_file}")
+            logger.error(f"Mask: {mask_file}")
             raise e
 
+# ------------------------------------------------------------
+# Utility Functions
+# ------------------------------------------------------------
 def remove_incomplete_plots(root_dir):
+    """Remove plots that do not have required pre and post-event data."""
     root = Path(root_dir)
     plot_dirs = list(root.glob('PLOT-*'))
-
     for plot_dir in plot_dirs:
         pre_event_dir = plot_dir / 'Pre-event'
         post_event_dir = plot_dir / 'Post-event'
@@ -381,46 +384,43 @@ def remove_incomplete_plots(root_dir):
         post_files = list(post_event_dir.glob('*.npy'))
 
         if not pre_files or not post_files:
-            print(f"Removing {plot_dir} due to missing data.")
+            logger.info(f"Removing {plot_dir} due to missing data.")
             shutil.rmtree(plot_dir)
 
 def inspect_data_shapes(root_dir):
+    """Inspect shapes of datasets for debugging and ensure consistency."""
     root = Path(root_dir)
     plot_dirs = list(root.glob('PLOT-*'))
-    # Sort plot directories numerically
     plot_dirs.sort(key=lambda x: int(x.name.split('-')[-1]))
     for plot_dir in plot_dirs:
-        print(f"\nInspecting {plot_dir.name}")
-
-        # Check masks
+        logger.debug(f"Inspecting {plot_dir.name}")
         mask_dir = plot_dir / 'Masks'
         mask_files = list(mask_dir.glob('*.tif'))
         if mask_files:
             mask_img = Image.open(mask_files[0])
             mask_shape = np.array(mask_img).shape
-            print(f"Mask shape       : {mask_shape}")
+            logger.debug(f"Mask shape: {mask_shape}")
 
-        # Check pre-event
         pre_dir = plot_dir / 'Pre-event'
         pre_files = list(pre_dir.glob('*.npy'))
         if pre_files:
             pre_shape = np.load(pre_files[0]).shape
-            print(f"Pre-event shape  : {pre_shape}")
+            logger.debug(f"Pre-event shape: {pre_shape}")
 
-        # Check post-event
         post_dir = plot_dir / 'Post-event'
         post_files = list(post_dir.glob('*.npy'))
         if post_files:
             post_shape = np.load(post_files[0]).shape
-            print(f"Post-event shape : {post_shape}")
+            logger.debug(f"Post-event shape: {post_shape}")
 
-# Call the function before data inspection
-remove_incomplete_plots('../Datasets/Testing/TemporalStacks')
-
-# Run inspection
-inspect_data_shapes('../Datasets/Testing/TemporalStacks')
-
+# ------------------------------------------------------------
+# Main Execution
+# ------------------------------------------------------------
 if __name__ == "__main__":
+    device = get_device(pretty='print')  # Print environment info once
+    remove_incomplete_plots(TRAIN_CONFIG['dataset_dir'])
+    inspect_data_shapes(TRAIN_CONFIG['dataset_dir'])
+
     # Create datasets
     train_dataset = TemporalStackDataset(
         root_dir=TRAIN_CONFIG['dataset_dir'],
@@ -449,8 +449,6 @@ if __name__ == "__main__":
         num_workers=TRAIN_CONFIG['num_workers']
     )
 
-    # Create model
+    # Create and train model
     model = UNetDiff()
-
-    # Train model
     train_model(model, train_loader, val_loader, TRAIN_CONFIG)
