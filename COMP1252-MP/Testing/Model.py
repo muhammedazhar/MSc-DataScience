@@ -1,5 +1,7 @@
 # Essential imports
+import cv2
 import shutil
+import rasterio
 import torch
 import torch.nn as nn
 import torchvision.models as models
@@ -7,6 +9,7 @@ from torch.utils.data import Dataset, DataLoader
 import numpy as np
 from pathlib import Path
 from PIL import Image
+from skimage import exposure
 
 # Print the PyTorch version
 print(f"PyTorch version: {torch.__version__}")
@@ -48,8 +51,8 @@ class UNetDiff(nn.Module):
     def __init__(self):
         super().__init__()
 
-        # ResNet-18 backbone
-        resnet = models.resnet18(pretrained=True)
+        # Load ResNet-50 backbone with proper weights
+        resnet = models.resnet50(weights=models.ResNet50_Weights.DEFAULT)
 
         # Encoder (modified ResNet-18)
         self.encoder1 = nn.Sequential(
@@ -140,7 +143,19 @@ def create_optimizer_and_scheduler(model):
 import albumentations as A
 from torch.utils.data import Dataset, DataLoader
 
-# Define augmentations
+# Configuration
+TRAIN_CONFIG = {
+    'batch_size': 8,
+    'num_epochs': 200,
+    'learning_rate': 1e-2,
+    'dataset_dir': '../Datasets/Testing/TemporalStacks',
+    'device': 'mps' if torch.backends.mps.is_available() else 'cpu',
+    'num_workers': 4,
+    'lr_milestones': [10, 40, 80, 150],
+    'lr_gamma': 0.1
+}
+
+# Augmentations for training
 train_transform = A.Compose([
     A.RandomCrop(int(224 * 0.7), int(224 * 0.7)),
     A.Resize(224, 224),
@@ -148,24 +163,33 @@ train_transform = A.Compose([
     A.ElasticTransform(p=0.5),
     A.GridDistortion(p=0.5),
     A.CoarseDropout(max_holes=8, max_height=20, max_width=20, p=0.5)
-])
+], is_check_shapes=False)  # Disable shape checking temporarily
 
-def train_model(model, train_loader, val_loader, num_epochs=200):
-    model.summary()
-    model = model.to(device)
+# Validation transform - only resize if needed
+val_transform = A.Compose([
+    A.Resize(224, 224)
+], is_check_shapes=False)  # Disable shape checking temporarily
 
-    criterion = CombinedLoss()
-    optimizer, scheduler = create_optimizer_and_scheduler(model)
+def train_model(model, train_loader, val_loader, config):
+    model = model.to(config['device'])
+    criterion = CombinedLoss(bce_weight=0.2, dice_weight=0.8)
+    optimizer = torch.optim.Adam(model.parameters(), lr=config['learning_rate'])
+    scheduler = torch.optim.lr_scheduler.MultiStepLR(
+        optimizer,
+        milestones=config['lr_milestones'],
+        gamma=config['lr_gamma']
+    )
 
     best_val_loss = float('inf')
 
-    for epoch in range(num_epochs):
+    for epoch in range(config['num_epochs']):
         # Training phase
         model.train()
         train_loss = 0
 
         for batch_idx, (data, target) in enumerate(train_loader):
-            data, target = data.to(device), target.to(device)
+            data = data.to(config['device'])
+            target = target.to(config['device'])
 
             optimizer.zero_grad()
             output = model(data)
@@ -176,13 +200,17 @@ def train_model(model, train_loader, val_loader, num_epochs=200):
 
             train_loss += loss.item()
 
+            if batch_idx % 10 == 0:
+                print(f'Epoch {epoch}, Batch {batch_idx}, Loss: {loss.item():.4f}')
+
         # Validation phase
         model.eval()
         val_loss = 0
 
         with torch.no_grad():
             for data, target in val_loader:
-                data, target = data.to(device), target.to(device)
+                data = data.to(config['device'])
+                target = target.to(config['device'])
                 output = model(data)
                 val_loss += criterion(output, target).item()
 
@@ -192,7 +220,7 @@ def train_model(model, train_loader, val_loader, num_epochs=200):
         train_loss /= len(train_loader)
         val_loss /= len(val_loader)
 
-        print(f'Epoch {epoch+1}/{num_epochs}:')
+        print(f'Epoch {epoch+1}/{config["num_epochs"]}:')
         print(f'Training Loss: {train_loss:.4f}')
         print(f'Validation Loss: {val_loss:.4f}')
 
@@ -209,58 +237,117 @@ class TemporalStackDataset(Dataset):
         self.root_dir = Path(root_dir)
         self.transform = transform
         self.split = split
+        self.pairs = self._get_temporal_pairs()
 
-        # Get all plot directories
-        plot_dirs = sorted([d for d in self.root_dir.iterdir() if d.is_dir()])
-
-        # Split train/val
-        split_idx = int(0.8 * len(plot_dirs))
-        self.plot_dirs = plot_dirs[:split_idx] if split == 'train' else plot_dirs[split_idx:]
+    @staticmethod
+    def _histogram_match(source, reference):
+        """Apply histogram matching channel-wise."""
+        matched = np.zeros_like(source)
+        for c in range(source.shape[-1]):
+            matched[..., c] = exposure.match_histograms(
+                source[..., c],
+                reference[..., c]
+            )
+        return matched
 
     def __len__(self):
-        return len(self.plot_dirs)
+        return len(self.pairs)
 
-    def load_temporal_stack(self, stack_dir):
-        npy_files = sorted(list(stack_dir.glob('*.npy')))
-        if not npy_files:
-            raise ValueError(f"No .npy files found in {stack_dir}")
-        return np.concatenate([np.load(f) for f in npy_files], axis=-1)
+    @staticmethod
+    def _extract_date(filepath):
+        """Extract date from filename (YYYYMMDDTHHMMSS)."""
+        return Path(filepath).stem.split('T')[0]
+
+    def _get_temporal_pairs(self):
+        pairs = []
+        plot_dirs = sorted([d for d in self.root_dir.iterdir() if d.is_dir()])
+
+        # Split into train/val
+        split_idx = int(0.8 * len(plot_dirs))
+        plot_dirs = plot_dirs[:split_idx] if self.split == 'train' else plot_dirs[split_idx:]
+
+        for plot_dir in plot_dirs:
+            pre_dir = plot_dir / 'Pre-event'
+            post_dir = plot_dir / 'Post-event'
+            mask_dir = plot_dir / 'Masks'
+
+            if not all(p.exists() for p in [pre_dir, post_dir, mask_dir]):
+                continue
+
+            # Get temporal pairs (5-30 days apart)
+            for pre_file in sorted(pre_dir.glob('*.npy')):
+                pre_date = self._extract_date(pre_file)
+                pre_dt = np.datetime64(pre_date)
+
+                for post_file in sorted(post_dir.glob('*.npy')):
+                    post_date = self._extract_date(post_file)
+                    post_dt = np.datetime64(post_date)
+
+                    delta = (post_dt - pre_dt).astype(int)
+                    if 5 <= delta <= 30:
+                        mask_file = mask_dir / f"{post_date}.tif"
+                        if mask_file.exists():
+                            pairs.append((pre_file, post_file, mask_file))
+                            break
+
+        return pairs
 
     def __getitem__(self, idx):
-        plot_dir = self.plot_dirs[idx]
-
-        # Load stacks
-        pre_event_dir = plot_dir / 'Pre-event'
-        post_event_dir = plot_dir / 'Post-event'
+        pre_file, post_file, mask_file = self.pairs[idx]
 
         try:
-            pre_stack = self.load_temporal_stack(pre_event_dir)
-            post_stack = self.load_temporal_stack(post_event_dir)
+            # Load data
+            pre_img = np.load(pre_file).astype(np.float32) / 10000.0  # Shape: (C, H, W)
+            post_img = np.load(post_file).astype(np.float32) / 10000.0  # Shape: (C, H, W)
 
-            # Concatenate pre and post stacks along the time/channel dimension
-            x = np.concatenate([pre_stack, post_stack], axis=0)  # Shape: (channels, height, width)
+            # Transpose to (H, W, C) for processing
+            pre_img = np.transpose(pre_img, (1, 2, 0))  # Shape: (H, W, C)
+            post_img = np.transpose(post_img, (1, 2, 0))  # Shape: (H, W, C)
 
-            # Transpose to (height, width, channels) for Albumentations
-            x = np.transpose(x, (1, 2, 0))  # Now x.shape is (height, width, channels)
+            print(f"Pre-image shape after transpose: {pre_img.shape}")
+            print(f"Post-image shape after transpose: {post_img.shape}")
 
-            # Create dummy mask with the same spatial dimensions
-            h, w, _ = x.shape
-            mask = np.zeros((h, w, 1), dtype=np.float32)
+            # Load and binarize mask
+            with rasterio.open(mask_file) as src:
+                mask = src.read(1)
+                mask = (mask > 0).astype(np.float32)
+                print(f"Mask shape: {mask.shape}")
+
+            # Apply histogram matching
+            matched_post = self._histogram_match(post_img, pre_img)
+
+            # Compute difference image
+            diff_img = matched_post - pre_img
+
+            # Stack channels: [pre (9), post (9), diff (9)]
+            x = np.concatenate([pre_img, matched_post, diff_img], axis=-1)  # Shape: (H, W, 27)
+            print(f"Stacked input shape: {x.shape}")
 
             if self.transform:
+                # Ensure mask shape matches image shape before transform
+                if mask.shape != x.shape[:2]:  # Compare spatial dimensions only
+                    print(f"Reshaping mask from {mask.shape} to {x.shape[:2]}")
+                    mask = cv2.resize(mask, (x.shape[1], x.shape[0]), interpolation=cv2.INTER_NEAREST)
+
                 transformed = self.transform(image=x, mask=mask)
                 x = transformed['image']
                 mask = transformed['mask']
+                print(f"Transformed input shape: {x.shape}")
+                print(f"Transformed mask shape: {mask.shape}")
 
-            # Convert to torch tensors
-            x = torch.from_numpy(x).float().permute(2, 0, 1)  # Shape: (channels, height, width)
-            mask = torch.from_numpy(mask).float().permute(2, 0, 1)
+            # Convert to torch tensors and transpose back to (C, H, W)
+            x = torch.from_numpy(x).float()  # Shape: (H, W, C)
+            x = x.permute(2, 0, 1)  # Shape: (C, H, W)
+            mask = torch.from_numpy(mask).float().unsqueeze(0)  # Shape: (1, H, W)
 
             return x, mask
 
         except Exception as e:
-            print(f"Error loading data from {plot_dir}: {str(e)}")
-            raise
+            print(f"Error processing files:")
+            print(f"Pre-event: {pre_file}")
+            print(f"Post-event: {post_file}")
+            print(f"Mask: {mask_file}")
+            raise e
 
 def remove_incomplete_plots(root_dir):
     root = Path(root_dir)
@@ -313,37 +400,37 @@ remove_incomplete_plots('../Datasets/Testing/TemporalStacks')
 # Run inspection
 inspect_data_shapes('../Datasets/Testing/TemporalStacks')
 
-# Initialize datasets with fewer workers for debugging
-train_dataset = TemporalStackDataset(
-    root_dir='../Datasets/Testing/TemporalStacks',
-    transform=train_transform,
-    split='train'
-)
+if __name__ == "__main__":
+    # Create datasets
+    train_dataset = TemporalStackDataset(
+        root_dir=TRAIN_CONFIG['dataset_dir'],
+        transform=train_transform,
+        split='train'
+    )
 
-val_dataset = TemporalStackDataset(
-    root_dir='../Datasets/Testing/TemporalStacks',
-    transform=None,
-    split='val'
-)
+    val_dataset = TemporalStackDataset(
+        root_dir=TRAIN_CONFIG['dataset_dir'],
+        transform=val_transform,
+        split='val'
+    )
 
-# Create data loaders with fewer workers
-train_loader = DataLoader(
-    train_dataset,
-    batch_size=8,
-    shuffle=True,
-    num_workers=0  # Start with 0 for debugging
-)
+    # Create dataloaders
+    train_loader = DataLoader(
+        train_dataset,
+        batch_size=TRAIN_CONFIG['batch_size'],
+        shuffle=True,
+        num_workers=TRAIN_CONFIG['num_workers']
+    )
 
-val_loader = DataLoader(
-    val_dataset,
-    batch_size=8,
-    shuffle=False,
-    num_workers=0  # Start with 0 for debugging
-)
+    val_loader = DataLoader(
+        val_dataset,
+        batch_size=TRAIN_CONFIG['batch_size'],
+        shuffle=False,
+        num_workers=TRAIN_CONFIG['num_workers']
+    )
 
-# Test loading one batch
-try:
-    test_batch = next(iter(train_loader))
-    print("Test batch shape:", test_batch[0].shape)
-except Exception as e:
-    print("Error loading test batch:", str(e))
+    # Create model
+    model = UNetDiff()
+
+    # Train model
+    train_model(model, train_loader, val_loader, TRAIN_CONFIG)
