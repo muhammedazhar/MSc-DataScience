@@ -40,6 +40,7 @@ Date: December 2024
 """
 
 import os
+import cv2
 import glob
 import json
 from pathlib import Path
@@ -47,6 +48,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
+import albumentations as A
 import torchvision.models as models
 import rasterio
 from skimage import exposure
@@ -151,32 +153,55 @@ class UNetDiff(nn.Module):
         return torch.sigmoid(out)
 
 class DeforestationDataset(Dataset):
-    """Dataset for loading temporal image pairs for deforestation detection."""
+    """
+    Dataset for loading temporal image pairs for deforestation detection.
 
-    def __init__(self,
-                 dataset_dir: str,
-                 plot_range: range,
-                 img_size: Tuple[int, int] = (224, 224),
-                 cloud_threshold: float = 0.7):
+    This dataset pairs pre-event and post-event images based on the deforestation mask date.
+    Each pair consists of:
+        - Pre-event image (closest before the mask date)
+        - Post-event image (closest after the mask date within a 5-30 day window)
+        - Deforestation mask corresponding to the mask date
+    """
+
+    def __init__(
+        self,
+        dataset_dir: str,
+        plot_range: range,
+        img_size: Tuple[int, int] = (224, 224),
+        cloud_threshold: float = 0.7,
+        transform: Optional[A.Compose] = None,
+        split: str = 'test'  # Assuming 'test' split for inference
+    ):
         """
         Initialize the dataset.
 
         Args:
-            dataset_dir: Root directory containing plot folders
-            plot_range: Range of plot numbers to process
-            img_size: Target image size (height, width)
-            cloud_threshold: Maximum allowed cloud coverage
+            dataset_dir (str): Root directory containing plot folders.
+            plot_range (range): Range of plot numbers to process.
+            img_size (Tuple[int, int], optional): Target image size (height, width). Defaults to (224, 224).
+            cloud_threshold (float, optional): Maximum allowed cloud coverage. Defaults to 0.7.
+            transform (Optional[A.Compose], optional): Albumentations transforms to apply. Defaults to None.
+            split (str, optional): Dataset split ('train', 'val', 'test'). Defaults to 'test'.
         """
         self.dataset_dir = Path(dataset_dir)
         self.plot_range = plot_range
         self.img_size = img_size
         self.cloud_threshold = cloud_threshold
+        self.transform = transform
+        self.split = split
 
-        # Get valid temporal pairs
+        # Get valid temporal pairs based on mask dates
         self.pairs = self._get_temporal_pairs()
 
+        logging.info(f"Total number of samples in dataset '{self.split}': {len(self.pairs)}")
+
     def _get_temporal_pairs(self):
-        """Get all valid temporal pairs across plots."""
+        """
+        Get all valid temporal pairs across plots based on mask dates.
+
+        Returns:
+            List[Tuple[Path, Path, Path]]: List of tuples containing (pre_file, post_file, mask_file).
+        """
         pairs = []
 
         for plot_id in self.plot_range:
@@ -184,6 +209,7 @@ class DeforestationDataset(Dataset):
             plot_dir = self.dataset_dir / plot_name
 
             if not plot_dir.exists():
+                logging.warning(f"Plot directory does not exist: {plot_dir}")
                 continue
 
             pre_dir = plot_dir / "Pre-event"
@@ -191,6 +217,7 @@ class DeforestationDataset(Dataset):
             mask_dir = plot_dir / "Masks"
 
             if not all(d.exists() for d in [pre_dir, post_dir, mask_dir]):
+                logging.warning(f"Missing subdirectories in plot {plot_name}. Skipping.")
                 continue
 
             plot_pairs = self._get_plot_temporal_pairs(pre_dir, post_dir, mask_dir)
@@ -198,93 +225,121 @@ class DeforestationDataset(Dataset):
 
         return pairs
 
-    def _get_plot_temporal_pairs(self, pre_dir, post_dir, mask_dir):
+    def _get_plot_temporal_pairs(self, pre_dir: Path, post_dir: Path, mask_dir: Path):
+        """
+        Get valid temporal pairs for a single plot based on mask dates.
+
+        Args:
+            pre_dir (Path): Directory containing pre-event images.
+            post_dir (Path): Directory containing post-event images.
+            mask_dir (Path): Directory containing mask images.
+
+        Returns:
+            List[Tuple[Path, Path, Path]]: List of tuples containing (pre_file, post_file, mask_file).
+        """
         pairs = []
-        # Assume one mask per plot for the deforestation event
-        mask_files = list(mask_dir.glob("*.tif"))
+        mask_files = sorted(mask_dir.glob("*.tif"))
+
         if not mask_files:
+            logging.warning(f"No mask files found in {mask_dir}. Skipping plot.")
             return pairs
 
-        mask_file = mask_files[0]
-        mask_date_str = mask_file.stem  # e.g., '20180731'
-        mask_dt = np.datetime64(mask_date_str)
+        for mask_file in mask_files:
+            mask_date_str = mask_file.stem  # Extract 'YYYYMMDD' from 'YYYYMMDD.tif'
+            try:
+                mask_dt = np.datetime64(mask_date_str)
+            except ValueError as e:
+                logging.error(f"Invalid mask date format in file: {mask_file}. Error: {e}")
+                continue
 
-        pre_files = sorted(pre_dir.glob("*.npy"))
-        post_files = sorted(post_dir.glob("*.npy"))
+            # Find the pre-event image closest to but before the mask date
+            pre_files = sorted(pre_dir.glob("*.npy"))
+            suitable_pre = None
+            for pre_file in pre_files:
+                pre_date = self._extract_date(pre_file)
+                try:
+                    pre_dt = np.datetime64(pre_date)
+                except ValueError as e:
+                    logging.error(f"Invalid pre-event date format in file: {pre_file}. Error: {e}")
+                    continue
 
-        # Find a suitable pre_file (before mask_dt)
-        suitable_pre = None
-        for p in pre_files:
-            p_date = np.datetime64(self._extract_date(p))
-            if p_date <= mask_dt:
-                suitable_pre = p
+                if pre_dt <= mask_dt:
+                    suitable_pre = pre_file
+                else:
+                    break  # Since pre_files are sorted, no need to check further
+
+            # Find the post-event image closest to but after the mask date within 5-30 days
+            post_files = sorted(post_dir.glob("*.npy"))
+            suitable_post = None
+            for post_file in post_files:
+                post_date = self._extract_date(post_file)
+                try:
+                    post_dt = np.datetime64(post_date)
+                except ValueError as e:
+                    logging.error(f"Invalid post-event date format in file: {post_file}. Error: {e}")
+                    continue
+
+                delta_days = (post_dt - mask_dt).astype(int)
+                if 5 <= delta_days <= 30:
+                    suitable_post = post_file
+                    break  # Take the first post-event within the window
+
+            if suitable_pre and suitable_post:
+                pairs.append((suitable_pre, suitable_post, mask_file))
+                logging.debug(f"Pair added: Pre={suitable_pre.name}, Post={suitable_post.name}, Mask={mask_file.name}")
             else:
-                # Once we pass mask_dt, no need to continue
-                break
-
-        # Find a suitable post_file (after mask_dt, within 5–30 days)
-        suitable_post = None
-        for p in post_files:
-            p_date = np.datetime64(self._extract_date(p))
-            delta = (p_date - mask_dt).astype(int)
-            if 5 <= delta <= 30:
-                suitable_post = p
-                break
-
-        if suitable_pre is not None and suitable_post is not None:
-            pairs.append((suitable_pre, suitable_post, mask_file))
+                logging.warning(
+                    f"Could not find suitable pre/post images for mask {mask_file.name} in plot {mask_file.parent.parent.name}."
+                )
 
         return pairs
 
     @staticmethod
-    def _extract_date(filepath):
-        """Extract date from filename (YYYYMMDDTHHMMSS)."""
-        return Path(filepath).stem.split('T')[0]
+    def _extract_date(filepath: Path) -> str:
+        """
+        Extract date from filename (YYYYMMDDTHHMMSS).
 
-    def __len__(self):
-        return len(self.pairs)
+        Args:
+            filepath (Path): Path to the file.
 
-    def __getitem__(self, idx):
-        pre_file, post_file, mask_file = self.pairs[idx]
-
-        # Load and preprocess images
-        pre_img = np.load(pre_file)
-        post_img = np.load(post_file)
-        mask = self._load_mask(mask_file)
-
-        # Scale images
-        pre_img = pre_img.astype(np.float32) / 10000.0
-        post_img = post_img.astype(np.float32) / 10000.0
-
-        # Apply histogram matching
-        post_matched = self._histogram_match(post_img, pre_img)
-
-        # Compute difference
-        diff_img = post_matched - pre_img
-
-        # Stack channels
-        combined = np.concatenate([pre_img, post_matched, diff_img], axis=-1)
-
-        # Convert to tensors
-        combined = torch.from_numpy(combined).float()
-        mask = torch.from_numpy(mask).float()
-
-        # Move channels first
-        combined = combined.permute(2, 0, 1)
-        mask = mask.unsqueeze(0)  # Add channel dimension
-
-        return combined, mask, pre_file.parent.parent.name
+        Returns:
+            str: Extracted date string in 'YYYYMMDD' format.
+        """
+        # Assumes filename format 'YYYYMMDDTHHMMSS.npy'
+        stem = filepath.stem  # 'YYYYMMDDTHHMMSS'
+        if 'T' in stem:
+            return stem.split('T')[0]
+        else:
+            # If 'T' is not present, assume the entire stem is the date
+            return stem
 
     @staticmethod
-    def _load_mask(mask_file):
-        """Load and preprocess mask."""
+    def _load_mask(mask_file: Path) -> np.ndarray:
+        """
+        Load and preprocess mask.
+
+        Args:
+            mask_file (Path): Path to the mask file.
+
+        Returns:
+            np.ndarray: Binary mask array.
+        """
         with rasterio.open(mask_file) as src:
             mask = src.read(1)
             return (mask > 0).astype(np.float32)
 
     @staticmethod
-    def _histogram_match(source, reference):
-        """Apply histogram matching channel-wise."""
+    def _histogram_match(source: np.ndarray, reference: np.ndarray) -> np.ndarray:
+        """
+        Apply histogram matching channel-wise.
+
+        Args:
+            source (np.ndarray): Source image array (H, W, C).
+            reference (np.ndarray): Reference image array (H, W, C).
+
+        Returns:
+            np.ndarray: Histogram matched image array (H, W, C).
+        """
         matched = np.zeros_like(source)
         for c in range(source.shape[-1]):
             matched[..., c] = exposure.match_histograms(
@@ -292,6 +347,60 @@ class DeforestationDataset(Dataset):
                 reference[..., c]
             )
         return matched
+
+    def __len__(self):
+        return len(self.pairs)
+
+    def __getitem__(self, idx):
+        pre_file, post_file, mask_file = self.pairs[idx]
+
+        try:
+            # Load and preprocess images
+            pre_img = np.load(pre_file).astype(np.float32) / 10000.0  # Shape: (C, H, W)
+            post_img = np.load(post_file).astype(np.float32) / 10000.0  # Shape: (C, H, W)
+
+            # Transpose to (H, W, C) for processing
+            pre_img = np.transpose(pre_img, (1, 2, 0))  # (H, W, C)
+            post_img = np.transpose(post_img, (1, 2, 0))  # (H, W, C)
+
+            # Load mask
+            mask = self._load_mask(mask_file)  # (H, W)
+
+            # Histogram match post-event to pre-event
+            matched_post = self._histogram_match(post_img, pre_img)
+
+            # Compute difference image
+            diff_img = matched_post - pre_img
+
+            # Stack channels: [pre (9), post (9), diff (9)] => 27 channels total
+            x = np.concatenate([pre_img, matched_post, diff_img], axis=-1)  # (H, W, 27)
+
+            # Apply transforms if any
+            if self.transform:
+                # Ensure mask shape matches image
+                if mask.shape != x.shape[:2]:
+                    mask = cv2.resize(mask, (x.shape[1], x.shape[0]), interpolation=cv2.INTER_NEAREST)
+
+                transformed = self.transform(image=x, mask=mask)
+                x = transformed['image']
+                mask = transformed['mask']
+
+            # Convert to torch tensors (C, H, W)
+            x = torch.from_numpy(x).float().permute(2, 0, 1)  # (27, H, W)
+            mask = torch.from_numpy(mask).float().unsqueeze(0)  # (1, H, W)
+
+            # Optionally, include plot name for saving predictions
+            plot_name = pre_file.parent.parent.name  # Assuming structure: PLOT-XXXXX/Pre-event/...
+
+            return x, mask, plot_name
+
+        except Exception as e:
+            logging.error(f"Error processing files:")
+            logging.error(f"Pre-event: {pre_file}")
+            logging.error(f"Post-event: {post_file}")
+            logging.error(f"Mask: {mask_file}")
+            logging.error(f"Error: {e}")
+            raise e
 
 class MetricTracker:
     """Track multiple metrics during inference."""
