@@ -42,7 +42,7 @@ TRAIN_CONFIG = {
     'learning_rate': 1e-2,
     'dataset_dir': '../Datasets/Testing/TemporalStacks',
     'device': device,
-    'num_workers': 4,
+    'num_workers': 2,      # Adjust based on the system's load
     'lr_milestones': [10, 40, 80, 150],
     'lr_gamma': 0.1
 }
