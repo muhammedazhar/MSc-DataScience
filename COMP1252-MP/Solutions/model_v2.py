@@ -455,7 +455,7 @@ def main():
     # Create and train model
     model = UNetDiff()
 
-    # Display model summary - add these lines
+    # Display model summary
     batch_size = TRAIN_CONFIG['batch_size']
     summary(model, input_size=(batch_size, 27, 224, 224))
 
