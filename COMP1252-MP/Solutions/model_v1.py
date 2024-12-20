@@ -9,7 +9,7 @@ from tqdm import tqdm
 from skimage.io import imread
 from skimage.transform import resize
 import matplotlib.pyplot as plt
-import time
+import time # type: ignore
 
 # Local imports
 from helper import *
