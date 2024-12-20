@@ -51,6 +51,8 @@ TRAIN_CONFIG = {
 # ------------------------------------------------------------
 # Model Components
 # ------------------------------------------------------------
+
+
 class ConvBlock(nn.Module):
     def __init__(self, in_channels, out_channels):
         super().__init__()
@@ -66,8 +68,10 @@ class ConvBlock(nn.Module):
     def forward(self, x):
         return self.conv(x)
 
+
 class UNetDiff(nn.Module):
     """U-Net with ResNet-50 backbone for deforestation detection."""
+
     def __init__(self):
         super().__init__()
 
@@ -143,6 +147,8 @@ class UNetDiff(nn.Module):
 # ------------------------------------------------------------
 # Loss Functions
 # ------------------------------------------------------------
+
+
 class DiceLoss(nn.Module):
     def __init__(self, smooth=1e-6):
         super().__init__()
@@ -158,6 +164,7 @@ class DiceLoss(nn.Module):
         )
         return 1 - dice
 
+
 class CombinedLoss(nn.Module):
     def __init__(self, bce_weight=0.2, dice_weight=0.8):
         super().__init__()
@@ -171,14 +178,17 @@ class CombinedLoss(nn.Module):
         dice = self.dice_loss(predictions, targets)
         return self.bce_weight * bce + self.dice_weight * dice
 
+
 def create_optimizer_and_scheduler(model, config):
-    optimizer = torch.optim.Adam(model.parameters(), lr=config['learning_rate'])
+    optimizer = torch.optim.Adam(
+        model.parameters(), lr=config['learning_rate'])
     scheduler = torch.optim.lr_scheduler.MultiStepLR(
         optimizer,
         milestones=config['lr_milestones'],
         gamma=config['lr_gamma']
     )
     return optimizer, scheduler
+
 
 # ------------------------------------------------------------
 # Data Augmentations
@@ -199,6 +209,8 @@ val_transform = A.Compose([
 # ------------------------------------------------------------
 # Training Function
 # ------------------------------------------------------------
+
+
 def train_model(model, train_loader, val_loader, config):
     """Train and validate the model."""
     model = model.to(config['device'])
@@ -212,9 +224,11 @@ def train_model(model, train_loader, val_loader, config):
         train_loss = 0.0
 
         # Training loop with progress bar
-        train_pbar = tqdm(train_loader, desc=f"Epoch {epoch+1}/{config['num_epochs']} [Train]", leave=False)
+        train_pbar = tqdm(
+            train_loader, desc=f"Epoch {epoch+1}/{config['num_epochs']} [Train]", leave=False)
         for data, target in train_pbar:
-            data, target = data.to(config['device']), target.to(config['device'])
+            data, target = data.to(
+                config['device']), target.to(config['device'])
             optimizer.zero_grad()
 
             output = model(data)
@@ -229,9 +243,11 @@ def train_model(model, train_loader, val_loader, config):
         model.eval()
         val_loss = 0.0
         with torch.no_grad():
-            val_pbar = tqdm(val_loader, desc=f"Epoch {epoch+1}/{config['num_epochs']} [Val]", leave=False)
+            val_pbar = tqdm(
+                val_loader, desc=f"Epoch {epoch+1}/{config['num_epochs']} [Val]", leave=False)
             for data, target in val_pbar:
-                data, target = data.to(config['device']), target.to(config['device'])
+                data, target = data.to(
+                    config['device']), target.to(config['device'])
                 output = model(data)
                 v_loss = criterion(output, target).item()
                 val_loss += v_loss
@@ -244,7 +260,8 @@ def train_model(model, train_loader, val_loader, config):
         val_loss /= len(val_loader)
 
         # Print epoch results (concise)
-        logger.info(f"Epoch {epoch+1}/{config['num_epochs']}: Train Loss: {train_loss:.4f} | Val Loss: {val_loss:.4f}")
+        logger.info(
+            f"Epoch {epoch+1}/{config['num_epochs']}: Train Loss: {train_loss:.4f} | Val Loss: {val_loss:.4f}")
 
         # Save best model
         if val_loss < best_val_loss:
@@ -255,10 +272,13 @@ def train_model(model, train_loader, val_loader, config):
 # ------------------------------------------------------------
 # Dataset Definition
 # ------------------------------------------------------------
+
+
 class TemporalStackDataset(Dataset):
     """
     A dataset class for loading temporal stack data (pre-event, post-event, and mask).
     """
+
     def __init__(self, root_dir, transform=None, split='train'):
         self.root_dir = Path(root_dir)
         self.transform = transform
@@ -322,7 +342,8 @@ class TemporalStackDataset(Dataset):
         pre_file, post_file, mask_file = self.pairs[idx]
 
         try:
-            pre_img = np.load(pre_file).astype(np.float32) / 10000.0  # (C, H, W)
+            pre_img = np.load(pre_file).astype(
+                np.float32) / 10000.0  # (C, H, W)
             post_img = np.load(post_file).astype(np.float32) / 10000.0
 
             # Transpose to (H, W, C) for processing
@@ -350,7 +371,8 @@ class TemporalStackDataset(Dataset):
             if self.transform:
                 # Ensure mask shape matches image
                 if mask.shape != x.shape[:2]:
-                    mask = cv2.resize(mask, (x.shape[1], x.shape[0]), interpolation=cv2.INTER_NEAREST)
+                    mask = cv2.resize(
+                        mask, (x.shape[1], x.shape[0]), interpolation=cv2.INTER_NEAREST)
 
                 transformed = self.transform(image=x, mask=mask)
                 x = transformed['image']
@@ -375,6 +397,8 @@ class TemporalStackDataset(Dataset):
 # ------------------------------------------------------------
 # Utility Functions
 # ------------------------------------------------------------
+
+
 def remove_incomplete_plots(root_dir):
     """Remove plots that do not have required pre and post-event data."""
     root = Path(root_dir)
@@ -389,6 +413,7 @@ def remove_incomplete_plots(root_dir):
         if not pre_files or not post_files:
             logger.info(f"Removing {plot_dir} due to missing data.")
             shutil.rmtree(plot_dir)
+
 
 def inspect_data_shapes(root_dir):
     """Inspect shapes of datasets for debugging and ensure consistency."""
@@ -419,6 +444,8 @@ def inspect_data_shapes(root_dir):
 # ------------------------------------------------------------
 # Main Function
 # ------------------------------------------------------------
+
+
 def main():
     get_device(pretty='print')  # Print environment info once
     remove_incomplete_plots(TRAIN_CONFIG['dataset_dir'])
@@ -460,6 +487,7 @@ def main():
     summary(model, input_size=(batch_size, 27, 224, 224))
 
     train_model(model, train_loader, val_loader, TRAIN_CONFIG)
+
 
 # ------------------------------------------------------------
 # Main Execution
