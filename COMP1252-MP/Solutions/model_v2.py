@@ -8,6 +8,7 @@ import torch
 import torch.nn as nn
 import torchvision.models as models
 import torch.multiprocessing as mp
+from torchinfo import summary
 from torch.utils.data import Dataset, DataLoader
 import numpy as np
 from pathlib import Path
@@ -453,6 +454,11 @@ def main():
 
     # Create and train model
     model = UNetDiff()
+
+    # Display model summary - add these lines
+    batch_size = TRAIN_CONFIG['batch_size']
+    summary(model, input_size=(batch_size, 27, 224, 224))
+
     train_model(model, train_loader, val_loader, TRAIN_CONFIG)
 
 # ------------------------------------------------------------
