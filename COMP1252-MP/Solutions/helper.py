@@ -17,27 +17,79 @@ import sys
 import torch
 import logging
 from dotenv import load_dotenv
+from rich.logging import RichHandler
+from rich.console import Console
+from rich.theme import Theme
+from colorlog import ColoredFormatter
 
 def setup_logging(log_level=logging.INFO, file='None'):
-    # Configure root logger with console and file handlers
-    logging.basicConfig(
-        level=log_level,
-        format='[%(asctime)s] [%(levelname)s] [%(name)s] %(message)s',
-        handlers=[
-            logging.FileHandler('../Docs/Logs/processing.log'),
-            logging.StreamHandler()
-        ]
+    # Create logs directory if it doesn't exist
+    log_dir = '../Docs/Logs'
+    os.makedirs(log_dir, exist_ok=True)
+    
+    # Configure rich console with custom theme
+    custom_theme = Theme({
+        "info": "cyan",
+        "warning": "yellow",
+        "error": "red",
+        "critical": "red reverse",
+        "debug": "green",
+    })
+    console = Console(theme=custom_theme)
+
+    # Configure color formatter for console output
+    console_formatter = ColoredFormatter(
+        "%(log_color)s[%(asctime)s] [%(levelname)s] [%(name)s] %(message)s%(reset)s",
+        datefmt="%Y-%m-%d %H:%M:%S",
+        log_colors={
+            'DEBUG':    'green',
+            'INFO':     'cyan',
+            'WARNING':  'yellow',
+            'ERROR':    'red',
+            'CRITICAL': 'red,bg_white',
+        },
+        secondary_log_colors={},
+        style='%'
     )
 
-    # Get module-specific logger
+    # File formatter (without colors)
+    file_formatter = logging.Formatter(
+        '[%(asctime)s] [%(levelname)s] [%(name)s] %(message)s',
+        datefmt="%Y-%m-%d %H:%M:%S"
+    )
+
+    # Create and configure handlers
+    console_handler = logging.StreamHandler()
+    console_handler.setFormatter(console_formatter)
+    
+    file_handler = logging.FileHandler(os.path.join(log_dir, 'processing.log'))
+    file_handler.setFormatter(file_formatter)
+
+    # Configure rich handler for enhanced console output
+    rich_handler = RichHandler(
+        console=console,
+        enable_link_path=True,
+        markup=True,
+        rich_tracebacks=True,
+        tracebacks_show_locals=True
+    )
+
+    # Configure root logger
+    root_logger = logging.getLogger()
+    root_logger.setLevel(log_level)
+    root_logger.addHandler(file_handler)
+    root_logger.addHandler(rich_handler)
+
+    # Module-specific logger
     logger = logging.getLogger(file)
     logger.setLevel(log_level)
 
-    # Create file-only logger for specific needs
+    # File-only logger
     file_logger = logging.getLogger('file_only')
     file_logger.setLevel(log_level)
-    file_handler = logging.FileHandler('../Docs/Logs/processing.log')
-    file_logger.addHandler(file_handler)
+    file_only_handler = logging.FileHandler(os.path.join(log_dir, 'processing.log'))
+    file_only_handler.setFormatter(file_formatter)
+    file_logger.addHandler(file_only_handler)
     file_logger.propagate = False
 
     return logger, file_logger
