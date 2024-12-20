@@ -77,11 +77,12 @@ class ConvBlock(nn.Module):
 
 class UNetDiff(nn.Module):
     """U-Net with ResNet-50 backbone for deforestation detection."""
+
     def __init__(self):
         super().__init__()
 
         # Load ResNet-50 backbone
-        resnet = models.resnet50(pretrained=True)
+        resnet = models.resnet50(weights=models.ResNet50_Weights.DEFAULT)
 
         # Modify first conv to accept 27 channels
         self.encoder1 = nn.Sequential(
@@ -95,33 +96,42 @@ class UNetDiff(nn.Module):
         self.encoder2 = resnet.layer1  # 256 channels
         self.encoder3 = resnet.layer2  # 512 channels
         self.encoder4 = resnet.layer3  # 1024 channels
+        self.encoder5 = resnet.layer4  # 2048 channels
 
-        # Decoder blocks
+        # Decoder blocks with correct channel sizes
+        self.upconv5 = nn.ConvTranspose2d(2048, 1024, kernel_size=2, stride=2)
+        self.decoder5 = ConvBlock(2048, 1024)  # 1024 + 1024 input channels
+
         self.upconv4 = nn.ConvTranspose2d(1024, 512, kernel_size=2, stride=2)
-        self.decoder4 = ConvBlock(1024, 512)  # 512 + 512 input channels
+        self.decoder4 = ConvBlock(1024, 512)   # 512 + 512 input channels
 
         self.upconv3 = nn.ConvTranspose2d(512, 256, kernel_size=2, stride=2)
-        self.decoder3 = ConvBlock(512, 256)   # 256 + 256 input channels
+        self.decoder3 = ConvBlock(512, 256)    # 256 + 256 input channels
 
-        self.upconv2 = nn.ConvTranspose2d(256, 128, kernel_size=2, stride=2)
-        self.decoder2 = ConvBlock(192, 128)   # 128 + 64 input channels
+        self.upconv2 = nn.ConvTranspose2d(256, 64, kernel_size=2, stride=2)
+        self.decoder2 = ConvBlock(128, 64)     # 64 + 64 input channels
 
-        self.upconv1 = nn.ConvTranspose2d(128, 64, kernel_size=2, stride=2)
-        self.decoder1 = ConvBlock(91, 64)     # 64 + 27 input channels
+        self.upconv1 = nn.ConvTranspose2d(64, 32, kernel_size=2, stride=2)
+        self.decoder1 = ConvBlock(59, 32)      # 32 + 27 input channels
 
-        self.final_conv = nn.Conv2d(64, 1, kernel_size=1)
+        self.final_conv = nn.Conv2d(32, 1, kernel_size=1)
 
     def forward(self, x):
         # Encoder
-        enc1 = self.encoder1(x)       # Save for skip connection
+        enc1 = self.encoder1(x)
         pool1 = self.pool(enc1)
 
-        enc2 = self.encoder2(pool1)   # Save for skip connection
-        enc3 = self.encoder3(enc2)    # Save for skip connection
+        enc2 = self.encoder2(pool1)
+        enc3 = self.encoder3(enc2)
         enc4 = self.encoder4(enc3)
+        enc5 = self.encoder5(enc4)
 
         # Decoder with skip connections
-        dec4 = self.upconv4(enc4)
+        dec5 = self.upconv5(enc5)
+        dec5 = torch.cat([dec5, enc4], dim=1)
+        dec5 = self.decoder5(dec5)
+
+        dec4 = self.upconv4(dec5)
         dec4 = torch.cat([dec4, enc3], dim=1)
         dec4 = self.decoder4(dec4)
 
@@ -189,27 +199,40 @@ class DeforestationDataset(Dataset):
         return pairs
 
     def _get_plot_temporal_pairs(self, pre_dir, post_dir, mask_dir):
-        """Get valid temporal pairs for a single plot."""
         pairs = []
+        # Assume one mask per plot for the deforestation event
+        mask_files = list(mask_dir.glob("*.tif"))
+        if not mask_files:
+            return pairs
+
+        mask_file = mask_files[0]
+        mask_date_str = mask_file.stem  # e.g., '20180731'
+        mask_dt = np.datetime64(mask_date_str)
 
         pre_files = sorted(pre_dir.glob("*.npy"))
         post_files = sorted(post_dir.glob("*.npy"))
 
-        for pre_file in pre_files:
-            pre_date = self._extract_date(pre_file)
-            pre_dt = np.datetime64(pre_date)
+        # Find a suitable pre_file (before mask_dt)
+        suitable_pre = None
+        for p in pre_files:
+            p_date = np.datetime64(self._extract_date(p))
+            if p_date <= mask_dt:
+                suitable_pre = p
+            else:
+                # Once we pass mask_dt, no need to continue
+                break
 
-            for post_file in post_files:
-                post_date = self._extract_date(post_file)
-                post_dt = np.datetime64(post_date)
+        # Find a suitable post_file (after mask_dt, within 5–30 days)
+        suitable_post = None
+        for p in post_files:
+            p_date = np.datetime64(self._extract_date(p))
+            delta = (p_date - mask_dt).astype(int)
+            if 5 <= delta <= 30:
+                suitable_post = p
+                break
 
-                delta = (post_dt - pre_dt).astype(int)
-                if 5 <= delta <= 30:
-                    mask_file = mask_dir / f"{post_date}.tif"
-                    if mask_file.exists():
-                        # TODO: Add cloud coverage check here
-                        pairs.append((pre_file, post_file, mask_file))
-                        break
+        if suitable_pre is not None and suitable_post is not None:
+            pairs.append((suitable_pre, suitable_post, mask_file))
 
         return pairs
 
@@ -354,7 +377,12 @@ def run_inference(
                 logging.info(f"Saved prediction: {output_path}")
 
     # Compute and return final metrics
-    return metrics.compute()
+    if len(dataset) == 0:
+        logging.warning("No samples found in dataset. Metrics cannot be computed.")
+        metrics = {'dice': 0.0, 'f1': 0.0}
+    else:
+        metrics = metrics.compute()
+    return metrics
 
 if __name__ == "__main__":
     # Configuration
@@ -367,9 +395,15 @@ if __name__ == "__main__":
         'num_workers': 4,
         'threshold': 0.5  # Configurable threshold for binary prediction
     }
-
+    dataset = DeforestationDataset(CONFIG['dataset_dir'], range(1, 67))
+    print("Number of samples in dataset:", len(dataset))  # Debug line
+    # Set device
+    device = get_device(pretty=print)
     # Load model
-    model = torch.load(CONFIG['model_path'])
+    model = UNetDiff()
+    model.load_state_dict(torch.load(CONFIG['model_path'], map_location=device))
+    model.to(device)
+    model.eval()
 
     # Run inference and get metrics
     metrics = run_inference(
