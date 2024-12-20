@@ -7,6 +7,7 @@ import rasterio
 import torch
 import torch.nn as nn
 import torchvision.models as models
+import torch.multiprocessing as mp
 from torch.utils.data import Dataset, DataLoader
 import numpy as np
 from pathlib import Path
@@ -25,6 +26,7 @@ from helper import *
 # ------------------------------------------------------------
 # Set to logging.DEBUG for more detailed output (image shapes, transforms).
 # Set to logging.INFO or logging.WARNING to reduce output noise.
+mp.set_sharing_strategy('file_system')
 current_file = __file__
 filename = os.path.basename(current_file)
 filename_no_ext = os.path.splitext(filename)[0]
