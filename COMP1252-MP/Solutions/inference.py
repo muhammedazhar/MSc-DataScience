@@ -296,7 +296,7 @@ def run_inference(
     model: torch.nn.Module,
     dataset_dir: str,
     output_dir: str,
-    device: str = 'cuda',
+    device: str = 'mps',
     batch_size: int = 8,
     num_workers: int = 4,
     threshold: float = 0.5
@@ -361,7 +361,7 @@ if __name__ == "__main__":
     CONFIG = {
         'dataset_dir': '../Datasets/Testing/TemporalStack/',
         'output_dir': '../Predictions/',
-        'model_path': '../Models/unet_diff_model.pth',
+        'model_path': '../Models/best_unet_diff.pth',
         'device': 'mps' if torch.backends.mps.is_available() else 'cpu',
         'batch_size': 8,
         'num_workers': 4,
