@@ -48,11 +48,10 @@ TRAIN_CONFIG = {
     'lr_gamma': 0.1
 }
 
+
 # ------------------------------------------------------------
 # Model Components
 # ------------------------------------------------------------
-
-
 class ConvBlock(nn.Module):
     def __init__(self, in_channels, out_channels):
         super().__init__()
@@ -144,11 +143,10 @@ class UNetDiff(nn.Module):
         out = self.final_conv(dec1)
         return torch.sigmoid(out)
 
+
 # ------------------------------------------------------------
 # Loss Functions
 # ------------------------------------------------------------
-
-
 class DiceLoss(nn.Module):
     def __init__(self, smooth=1e-6):
         super().__init__()
@@ -206,11 +204,10 @@ val_transform = A.Compose([
     A.Resize(224, 224)
 ], is_check_shapes=False)
 
+
 # ------------------------------------------------------------
 # Training Function
 # ------------------------------------------------------------
-
-
 def train_model(model, train_loader, val_loader, config):
     """Train and validate the model."""
     model = model.to(config['device'])
@@ -269,11 +266,10 @@ def train_model(model, train_loader, val_loader, config):
             torch.save(model.state_dict(), '../Models/best_unet_diff.pth')
             logger.info("Model improved and saved.")
 
+
 # ------------------------------------------------------------
 # Dataset Definition
 # ------------------------------------------------------------
-
-
 class TemporalStackDataset(Dataset):
     """
     A dataset class for loading temporal stack data (pre-event, post-event, and mask).
@@ -394,11 +390,10 @@ class TemporalStackDataset(Dataset):
             logger.error(f"Mask: {mask_file}")
             raise e
 
+
 # ------------------------------------------------------------
 # Utility Functions
 # ------------------------------------------------------------
-
-
 def remove_incomplete_plots(root_dir):
     """Remove plots that do not have required pre and post-event data."""
     root = Path(root_dir)
@@ -441,11 +436,10 @@ def inspect_data_shapes(root_dir):
             post_shape = np.load(post_files[0]).shape
             logger.debug(f"Post-event shape: {post_shape}")
 
+
 # ------------------------------------------------------------
 # Main Function
 # ------------------------------------------------------------
-
-
 def main():
     get_device(pretty='print')  # Print environment info once
     remove_incomplete_plots(TRAIN_CONFIG['dataset_dir'])
