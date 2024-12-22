@@ -12,6 +12,9 @@ Author: Azhar Muhammed
 Date: October 2024
 """
 
+# ------------------------------------------------------------
+# Essential Imports
+# ------------------------------------------------------------
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -23,48 +26,31 @@ from tqdm import tqdm
 from skimage.io import imread
 from skimage.transform import resize
 import matplotlib.pyplot as plt
-import time # type: ignore
+import time  # type: ignore
 
+# ------------------------------------------------------------
 # Local imports
+# ------------------------------------------------------------
 from helper import *
 
-# Configure logging
-setup_logging()
-
-# Set random seed
+# ------------------------------------------------------------
+# Constants and Configuration
+# ------------------------------------------------------------
 seed = 42
 torch.manual_seed(seed)
 np.random.seed(seed)
 random.seed(seed)
 
-# Print the PyTorch version
-print(f"PyTorch version: {torch.__version__}")
+setup_logging()
 
-# Running on a local machine
-if torch.backends.mps.is_available():
-    device = 'mps'
-    message = "Apple Silicon Metal Performance Shader (MPS) Support"
-    print(f"\n{message} \n{'-' * len(message)}")
-    print(f"Apple MPS built status : {torch.backends.mps.is_built()}")
-    print(f"Apple MPS availability : {torch.backends.mps.is_available()}")
-    print(f"{'-' * len(message)}")
-elif torch.cuda.is_available():
-    device = 'cuda'
-else:
-    device = 'cpu'
-
-# TODO: Add support for AMD ROCm GPU if needed
-
-# Print the device being used
-print(f"Using device: {device.upper()}\n")
-
-# Constants
 IMG_WIDTH = 128
 IMG_HEIGHT = 128
 IMG_CHANNELS = 3
-DEVICE = device
+DEVICE = get_device(pretty='print')
 
-# Custom Dataset
+# ------------------------------------------------------------
+# Custom Dataset Definition
+# ------------------------------------------------------------
 class NucleiDataset(Dataset):
     def __init__(self, images, masks=None, transform=None):
         self.images = images
@@ -84,7 +70,9 @@ class NucleiDataset(Dataset):
             return image, mask
         return image
 
-# U-Net Model
+# ------------------------------------------------------------
+# U-Net Model Definition
+# ------------------------------------------------------------
 class UNet(nn.Module):
     def __init__(self):
         super(UNet, self).__init__()
@@ -163,7 +151,9 @@ class UNet(nn.Module):
 
         return out
 
-# Evaluation metrics
+# ------------------------------------------------------------
+# Evaluation Metrics
+# ------------------------------------------------------------
 def calculate_metrics(pred, target):
     pred = (pred > 0.5).float()
 
@@ -191,7 +181,9 @@ def calculate_iou(pred, target, eps=1e-7):
     iou = (intersection + eps) / (union + eps)
     return iou
 
-# Training function
+# ------------------------------------------------------------
+# Training Function
+# ------------------------------------------------------------
 def train_model(model, train_loader, val_loader, criterion, optimizer, num_epochs=25):
     best_val_loss = float('inf')
     best_epoch = 0
@@ -292,6 +284,9 @@ def train_model(model, train_loader, val_loader, criterion, optimizer, num_epoch
 
     return model, history, total_training_time
 
+# ------------------------------------------------------------
+# Main Function
+# ------------------------------------------------------------
 def main():
     """Main execution function"""
     # Get full path of current script
@@ -302,7 +297,7 @@ def main():
     filename_no_ext = os.path.splitext(filename)[0]
     logging.info(f"Running {filename_no_ext} script...")
 
-    # Load and preprocess data (using your existing data loading code)
+    # Load and preprocess data (using existing data loading code)
     TRAIN_PATH = '../Datasets/Testing/Test-UNetModel/stage1_train/'
     TEST_PATH = '../Datasets/Testing/Test-UNetModel/stage1_test/'
 
@@ -317,7 +312,7 @@ def main():
     loading_time = time.time()
     for n, id_ in tqdm(enumerate(train_ids), total=len(train_ids)):
         path = TRAIN_PATH + id_
-        img = imread(path + '/images/' + id_ + '.png')[:,:,:IMG_CHANNELS]
+        img = imread(path + '/images/' + id_ + '.png')[:, :, :IMG_CHANNELS]
         img = resize(img, (IMG_HEIGHT, IMG_WIDTH), mode='constant', preserve_range=True)
         X_train[n] = img
 
@@ -325,7 +320,7 @@ def main():
         for mask_file in next(os.walk(path + '/masks/'))[2]:
             mask_ = imread(path + '/masks/' + mask_file)
             mask_ = np.expand_dims(resize(mask_, (IMG_HEIGHT, IMG_WIDTH), mode='constant',
-                                        preserve_range=True), axis=-1)
+                                          preserve_range=True), axis=-1)
             mask = np.maximum(mask, mask_)
         Y_train[n] = mask
 
@@ -351,8 +346,8 @@ def main():
     print(f'Loading Time: {int(loading_time // 60)}m {int(loading_time % 60)}s')
 
     # Visualize results
-    save_dir='../Docs/Diagrams/'
-    file_prefix=f'{filename_no_ext}'
+    save_dir = '../Docs/Diagrams/'
+    file_prefix = f'{filename_no_ext}'
 
     # Make predictions
     model.eval()
@@ -367,7 +362,6 @@ def main():
             inputs = inputs.to(DEVICE)
             outputs = model(inputs)
             predictions.extend(outputs.cpu().numpy())
-
 
     predictions = np.array(predictions)
     predictions = (predictions > 0.5).astype(np.uint8)
@@ -426,6 +420,10 @@ def main():
     plt.savefig(os.path.join(save_dir, f'{file_prefix}_sample_prediction.png'))
     plt.close()
 
+
+# ------------------------------------------------------------
+# Main Execution
+# ------------------------------------------------------------
 if __name__ == "__main__":
     try:
         main()

@@ -6,7 +6,7 @@ import os
 # Load the environment variables from the .env file
 load_dotenv('../Keys/.env')
 
-# Replace with your USGS credentials
+# Setting USGS credentials
 username = os.getenv('USGS_USERNAME')
 password = os.getenv('USGS_PASSWORD')
 
