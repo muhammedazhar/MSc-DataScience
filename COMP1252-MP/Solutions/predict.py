@@ -1,3 +1,19 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+Prediction Script for Deforestation Detection
+---------------------------------------------
+This script loads a trained model and uses it to make predictions on a set of
+of input images. It also provides visualization of the predictions.
+
+Author: Azhar Muhammed
+Date: December 2024
+"""
+
+# ------------------------------------------------------------
+# Essential Imports
+# ------------------------------------------------------------
 import torch
 import numpy as np
 import matplotlib.pyplot as plt
@@ -5,13 +21,18 @@ from pathlib import Path
 from skimage import exposure
 from datetime import datetime
 import rasterio
-from tabulate import tabulate  # For pretty printing metrics
+from tabulate import tabulate
 from sklearn.metrics import precision_score, recall_score, f1_score
 
+# ------------------------------------------------------------
+# Local Imports
+# ------------------------------------------------------------
 from helper import *
-# Import the model architecture from model_v2
 from model_v2 import UNetDiff
 
+# ------------------------------------------------------------
+# Data Loading and Preprocessing Functions
+# ------------------------------------------------------------
 def load_and_preprocess_data(pre_file, post_file):
     """Load and preprocess image pairs."""
     # Load numpy arrays
@@ -46,6 +67,9 @@ def load_mask(mask_file):
         mask = src.read(1)
         return (mask > 0).astype(np.float32)
 
+# ------------------------------------------------------------
+# Evaluation Metrics
+# ------------------------------------------------------------
 def calculate_metrics(true_mask, pred_mask):
     """Calculate comprehensive metrics for the prediction."""
     # Flatten masks for metric calculation
@@ -71,7 +95,11 @@ def calculate_metrics(true_mask, pred_mask):
         'F1 Score': f1
     }
 
+# ------------------------------------------------------------
+# Main Prediction and Visualization Pipeline
+# ------------------------------------------------------------
 def predict_and_visualize():
+    """Main function for deforestation detection and visualization."""
     text = "Deforestation Detection Analysis"
     print(f"\n{text}\n{'-' * len(text)}")
 
@@ -188,5 +216,8 @@ def predict_and_visualize():
     print(f"\nVisualization saved to: {save_path}")
     print("\nAnalysis complete!")
 
+# ------------------------------------------------------------
+# Script Entry Point
+# ------------------------------------------------------------
 if __name__ == "__main__":
     predict_and_visualize()

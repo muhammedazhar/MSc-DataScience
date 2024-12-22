@@ -12,10 +12,12 @@ Author: Azhar Muhammed
 Date: October 2024
 """
 
+# ------------------------------------------------------------
+# Essential Imports
+# ------------------------------------------------------------
 import os
 import sys
 from glob import glob
-
 import geopandas as gpd
 import rasterio
 from rasterio import features
@@ -23,27 +25,25 @@ from rasterio import features
 # Local imports
 from helper import *
 
-# Configure logging
+# ------------------------------------------------------------
+# Logging Setup
+# ------------------------------------------------------------
 setup_logging()
 
+# ------------------------------------------------------------
 # Constants
+# ------------------------------------------------------------
 RASTER_WIDTH = 224
 RASTER_HEIGHT = 224
 MASK_VALUE = 255
 MASK_DTYPE = 'uint8'
 
+# ------------------------------------------------------------
+# Mask Creation Function
+# ------------------------------------------------------------
 def create_mask(geometry, width=RASTER_WIDTH, height=RASTER_HEIGHT, crs=None):
     """
     Create a raster mask from geometry.
-
-    Args:
-        geometry: Shapely geometry object
-        width (int): Output raster width
-        height (int): Output raster height
-        crs: Coordinate reference system
-
-    Returns:
-        tuple: (mask array, transform)
     """
     try:
         minx, miny, maxx, maxy = geometry.bounds
@@ -64,18 +64,12 @@ def create_mask(geometry, width=RASTER_WIDTH, height=RASTER_HEIGHT, crs=None):
         logging.error(f"Error creating mask: {str(e)}")
         raise
 
+# ------------------------------------------------------------
+# Metadata Generation Function
+# ------------------------------------------------------------
 def get_output_metadata(height, width, crs, transform):
     """
     Generate raster metadata for output files.
-
-    Args:
-        height (int): Raster height
-        width (int): Raster width
-        crs: Coordinate reference system
-        transform: Raster transform
-
-    Returns:
-        dict: Raster metadata
     """
     return {
         'driver': 'GTiff',
@@ -87,13 +81,12 @@ def get_output_metadata(height, width, crs, transform):
         'transform': transform
     }
 
+# ------------------------------------------------------------
+# GeoJSON Processing Function
+# ------------------------------------------------------------
 def process_geojson(samples_data_dir, base_dir):
     """
     Process GeoJSON files and generate masks.
-
-    Args:
-        samples_data_dir (str): Directory containing sample GeoJSON files
-        base_dir (str): Base directory for output masks
     """
     try:
         # Find most recent GeoJSON file
@@ -130,9 +123,12 @@ def process_geojson(samples_data_dir, base_dir):
         logging.error(f"Error processing GeoJSON: {str(e)}")
         raise
 
+# ------------------------------------------------------------
+# Main Execution Function
+# ------------------------------------------------------------
 def main():
     """Main execution function"""
-        # Get full path of current script
+    # Get full path of current script
     current_file = __file__
     # Extract just the filename
     filename = os.path.basename(current_file)
@@ -145,13 +141,16 @@ def main():
     base_dir = '../Datasets/Testing/TemporalStacks'
 
     try:
-        process_geojson(samples_data_dir, base_dir,)
+        process_geojson(samples_data_dir, base_dir)
         logging.info("Mask generation completed successfully")
 
     except Exception as e:
         logging.error(f"Fatal error: {str(e)}")
         sys.exit(1)
 
+# ------------------------------------------------------------
+# Script Entry Point
+# ------------------------------------------------------------
 if __name__ == "__main__":
     try:
         main()

@@ -1,3 +1,17 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+U-Net Model for Deforestation Detection
+---------------------------------------
+The model is designed to be trained on satellite imagery to detect
+deforestation. It uses a U-Net architecture with a ResNet-50 backbone to
+process the input images.
+
+Author: Azhar Muhammed
+Date: December 2024
+"""
+
 # ------------------------------------------------------------
 # Essential Imports
 # ------------------------------------------------------------

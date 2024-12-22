@@ -12,6 +12,9 @@ Author: Azhar Muhammed
 Date: July 2024
 """
 
+# ------------------------------------------------------------
+# Essential Imports
+# ------------------------------------------------------------
 import os
 import sys
 import torch
@@ -22,6 +25,9 @@ from rich.console import Console
 from rich.theme import Theme
 from colorlog import ColoredFormatter
 
+# ------------------------------------------------------------
+# Logging Setup Function
+# ------------------------------------------------------------
 def setup_logging(log_level=logging.INFO, file='None'):
     # Create logs directory if it doesn't exist
     log_dir = '../Docs/Logs'
@@ -96,9 +102,9 @@ def setup_logging(log_level=logging.INFO, file='None'):
 
 logger, file_logger = setup_logging()
 
-# Load the environment variables from the .env file
-load_dotenv("../Keys/.env")
-
+# ------------------------------------------------------------
+# Environment Variable Check Function
+# ------------------------------------------------------------
 def env_check(var_name, placeholder):
     """
     Check if the environment variable is correctly set.
@@ -119,6 +125,9 @@ def env_check(var_name, placeholder):
         sys.exit(1)
     return value
 
+# ------------------------------------------------------------
+# Device Information Function
+# ------------------------------------------------------------
 def get_device(pretty='silent'):
     """
     Get PyTorch device information with optional output control.
@@ -158,6 +167,9 @@ def get_device(pretty='silent'):
 
     return device
 
+# ------------------------------------------------------------
+# Results Formatting Function
+# ------------------------------------------------------------
 def format(results):
     formatted_results = []
 
@@ -191,3 +203,8 @@ def format(results):
                                  f"Data URLs:\n" + "\n".join(f" - {url}" for url in data_urls) + "\n")
 
     return "\n".join(formatted_results)
+
+# ------------------------------------------------------------
+# Environment Setup
+# ------------------------------------------------------------
+load_dotenv("../Keys/.env")

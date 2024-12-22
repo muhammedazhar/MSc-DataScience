@@ -9,36 +9,13 @@ a 27-channel input (9 pre-event channels, 9 post-event channels, and 9 differenc
 applies histogram matching, normalizes the data, and runs inference using a U-Net model.
 It outputs a binary change detection mask representing deforestation areas.
 
-Dataset Structure:
-../Datasets/Testing/TemporalStack/
-    PLOT-00001/
-        Masks/
-            YYYYMMDD.tif
-        Pre-event/
-            YYYYMMDDTHHMMSS.npy
-            stack_info.json
-        Post-event/
-            YYYYMMDDTHHMMSS.npy
-            stack_info.json
-    PLOT-00002/
-    ...
-    PLOT-00066/
-
-Requirements:
-- Proper temporal alignment (5-30 days difference)
-- 27-channel input:
-  [0:9]   -> Pre-event (RGB, NIR/SWIR, NDVI, NDMI)
-  [9:18]  -> Post-event (RGB, NIR/SWIR, NDVI, NDMI)
-  [18:27] -> Difference (post - pre)
-- Each image scaled by 1/10000
-- Apply histogram matching between pre- and post-event images
-- Model input: 224x224 patches
-- Outputs a binary mask (thresholded from model's sigmoid output)
-
 Author: Azhar Muhammed
 Date: December 2024
 """
 
+# ------------------------------------------------------------
+# Essential Imports
+# ------------------------------------------------------------
 import os
 import cv2
 import glob
@@ -58,9 +35,16 @@ from torchmetrics import Dice, F1Score
 
 # Local imports
 from helper import *
-# Configure logging
-setup_logging()
 
+# ------------------------------------------------------------
+# Logging Setup
+# ------------------------------------------------------------
+setup_logging()
+device = get_device()
+
+# ------------------------------------------------------------
+# Model Definition
+# ------------------------------------------------------------
 class ConvBlock(nn.Module):
     """Basic convolutional block for U-Net."""
     def __init__(self, in_channels: int, out_channels: int):
@@ -152,37 +136,14 @@ class UNetDiff(nn.Module):
         out = self.final_conv(dec1)
         return torch.sigmoid(out)
 
+# ------------------------------------------------------------
+# Dataset Definition
+# ------------------------------------------------------------
 class DeforestationDataset(Dataset):
     """
     Dataset for loading temporal image pairs for deforestation detection.
-
-    This dataset pairs pre-event and post-event images based on the deforestation mask date.
-    Each pair consists of:
-        - Pre-event image (closest before the mask date)
-        - Post-event image (closest after the mask date within a 5-30 day window)
-        - Deforestation mask corresponding to the mask date
     """
-
-    def __init__(
-        self,
-        dataset_dir: str,
-        plot_range: range,
-        img_size: Tuple[int, int] = (224, 224),
-        cloud_threshold: float = 0.7,
-        transform: Optional[A.Compose] = None,
-        split: str = 'test'  # Assuming 'test' split for inference
-    ):
-        """
-        Initialize the dataset.
-
-        Args:
-            dataset_dir (str): Root directory containing plot folders.
-            plot_range (range): Range of plot numbers to process.
-            img_size (Tuple[int, int], optional): Target image size (height, width). Defaults to (224, 224).
-            cloud_threshold (float, optional): Maximum allowed cloud coverage. Defaults to 0.7.
-            transform (Optional[A.Compose], optional): Albumentations transforms to apply. Defaults to None.
-            split (str, optional): Dataset split ('train', 'val', 'test'). Defaults to 'test'.
-        """
+    def __init__(self, dataset_dir: str, plot_range: range, img_size: Tuple[int, int] = (224, 224), cloud_threshold: float = 0.7, transform: Optional[A.Compose] = None, split: str = 'test'):
         self.dataset_dir = Path(dataset_dir)
         self.plot_range = plot_range
         self.img_size = img_size
@@ -196,12 +157,6 @@ class DeforestationDataset(Dataset):
         logging.info(f"Total number of samples in dataset '{self.split}': {len(self.pairs)}")
 
     def _get_temporal_pairs(self):
-        """
-        Get all valid temporal pairs across plots based on mask dates.
-
-        Returns:
-            List[Tuple[Path, Path, Path]]: List of tuples containing (pre_file, post_file, mask_file).
-        """
         pairs = []
 
         for plot_id in self.plot_range:
@@ -226,17 +181,6 @@ class DeforestationDataset(Dataset):
         return pairs
 
     def _get_plot_temporal_pairs(self, pre_dir: Path, post_dir: Path, mask_dir: Path):
-        """
-        Get valid temporal pairs for a single plot based on mask dates.
-
-        Args:
-            pre_dir (Path): Directory containing pre-event images.
-            post_dir (Path): Directory containing post-event images.
-            mask_dir (Path): Directory containing mask images.
-
-        Returns:
-            List[Tuple[Path, Path, Path]]: List of tuples containing (pre_file, post_file, mask_file).
-        """
         pairs = []
         mask_files = sorted(mask_dir.glob("*.tif"))
 
@@ -296,16 +240,6 @@ class DeforestationDataset(Dataset):
 
     @staticmethod
     def _extract_date(filepath: Path) -> str:
-        """
-        Extract date from filename (YYYYMMDDTHHMMSS).
-
-        Args:
-            filepath (Path): Path to the file.
-
-        Returns:
-            str: Extracted date string in 'YYYYMMDD' format.
-        """
-        # Assumes filename format 'YYYYMMDDTHHMMSS.npy'
         stem = filepath.stem  # 'YYYYMMDDTHHMMSS'
         if 'T' in stem:
             return stem.split('T')[0]
@@ -315,31 +249,12 @@ class DeforestationDataset(Dataset):
 
     @staticmethod
     def _load_mask(mask_file: Path) -> np.ndarray:
-        """
-        Load and preprocess mask.
-
-        Args:
-            mask_file (Path): Path to the mask file.
-
-        Returns:
-            np.ndarray: Binary mask array.
-        """
         with rasterio.open(mask_file) as src:
             mask = src.read(1)
             return (mask > 0).astype(np.float32)
 
     @staticmethod
     def _histogram_match(source: np.ndarray, reference: np.ndarray) -> np.ndarray:
-        """
-        Apply histogram matching channel-wise.
-
-        Args:
-            source (np.ndarray): Source image array (H, W, C).
-            reference (np.ndarray): Reference image array (H, W, C).
-
-        Returns:
-            np.ndarray: Histogram matched image array (H, W, C).
-        """
         matched = np.zeros_like(source)
         for c in range(source.shape[-1]):
             matched[..., c] = exposure.match_histograms(
@@ -402,6 +317,9 @@ class DeforestationDataset(Dataset):
             logging.error(f"Error: {e}")
             raise e
 
+# ------------------------------------------------------------
+# Metric Tracking
+# ------------------------------------------------------------
 class MetricTracker:
     """Track multiple metrics during inference."""
     def __init__(self, device):
@@ -424,11 +342,14 @@ class MetricTracker:
             'f1': self.f1.compute().item()
         }
 
+# ------------------------------------------------------------
+# Inference Routine
+# ------------------------------------------------------------
 def run_inference(
     model: torch.nn.Module,
     dataset_dir: str,
     output_dir: str,
-    device: str = 'mps',
+    device: str = device,
     batch_size: int = 8,
     num_workers: int = 4,
     threshold: float = 0.5
@@ -493,21 +414,22 @@ def run_inference(
         metrics = metrics.compute()
     return metrics
 
+# ------------------------------------------------------------
+# Main Inference Execution
+# ------------------------------------------------------------
 if __name__ == "__main__":
     # Configuration
     CONFIG = {
         'dataset_dir': '../Datasets/Testing/TemporalStack/',
         'output_dir': '../Predictions/',
         'model_path': '../Models/best_unet_diff.pth',
-        'device': 'mps' if torch.backends.mps.is_available() else 'cpu',
+        'device': device,
         'batch_size': 8,
         'num_workers': 4,
         'threshold': 0.5  # Configurable threshold for binary prediction
     }
     dataset = DeforestationDataset(CONFIG['dataset_dir'], range(1, 67))
     print("Number of samples in dataset:", len(dataset))  # Debug line
-    # Set device
-    device = get_device(pretty=print)
     # Load model
     model = UNetDiff()
     model.load_state_dict(torch.load(CONFIG['model_path'], map_location=device))

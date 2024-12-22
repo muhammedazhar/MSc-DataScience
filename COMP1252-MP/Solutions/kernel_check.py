@@ -11,10 +11,16 @@ Author: Azhar Muhammed
 Date: July 2024
 """
 
+# ------------------------------------------------------------
+# Essential Imports
+# ------------------------------------------------------------
 import json
 import os
 from jupyter_client.kernelspec import KernelSpecManager
 
+# ------------------------------------------------------------
+# Kernel Checking and Display
+# ------------------------------------------------------------
 ksm = KernelSpecManager()
 kernels = ksm.find_kernel_specs()
 

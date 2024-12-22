@@ -12,6 +12,9 @@ Author: Azhar Muhammed
 Date: October 2024
 """
 
+# ------------------------------------------------------------
+# Essential Imports
+# ------------------------------------------------------------
 import os
 import gc
 import re
@@ -25,12 +28,17 @@ from shapely.geometry import box
 from PIL import Image
 from tqdm import tqdm
 
+# ------------------------------------------------------------
 # Local imports
+# ------------------------------------------------------------
 from helper import setup_logging
 
 # Configure logging
 setup_logging()
 
+# ------------------------------------------------------------
+# Sentinel Patch Processor Class
+# ------------------------------------------------------------
 class SentinelPatchProcessor:
     def __init__(self, patch_size=224):
         """
@@ -41,6 +49,9 @@ class SentinelPatchProcessor:
         """
         self.patch_size = patch_size
 
+    # ------------------------------------------------------------
+    # Tile Processing Methods
+    # ------------------------------------------------------------
     def get_tile_id(self, sentinel_path):
         """Extract tile ID from Sentinel path"""
         match = re.search(r'T\d{2}[A-Z]{3}', str(sentinel_path))
@@ -79,6 +90,9 @@ class SentinelPatchProcessor:
         logging.debug(f"Tile {tile_id} has {len(tile_geometries)} intersecting geometries")
         return tile_geometries
 
+    # ------------------------------------------------------------
+    # Band Loading and Processing Methods
+    # ------------------------------------------------------------
     def load_bands(self, sentinel_path):
         """Load and stack Sentinel-2 bands"""
         band_paths = list(Path(sentinel_path).glob('GRANULE/*/IMG_DATA/*.jp2'))
@@ -156,6 +170,9 @@ class SentinelPatchProcessor:
             logging.error(f"Error in _resample_array: {str(e)}")
             raise
 
+    # ------------------------------------------------------------
+    # Index Computation Methods
+    # ------------------------------------------------------------
     def compute_indices(self, band_data):
         """
         Compute NDVI and NDMI indices from Sentinel-2 bands with safe division
@@ -207,6 +224,9 @@ class SentinelPatchProcessor:
             logging.error(f"Error computing indices: {str(e)}")
             raise
 
+    # ------------------------------------------------------------
+    # Patch Creation Methods
+    # ------------------------------------------------------------
     def create_patches(self, stacked_bands, geometries, output_dir):
         """
         Create and save image patches for each geometry using the 'name' property.
@@ -310,8 +330,11 @@ class SentinelPatchProcessor:
             logging.error(f"Error processing tile {tile_id}: {str(e)}")
             raise
 
+# ------------------------------------------------------------
+# Main Function
+# ------------------------------------------------------------
 def main():
-    """Main execution function"""
+    """Main function"""
     # Get full path of current script
     current_file = __file__
     # Extract just the filename
@@ -388,6 +411,10 @@ def main():
         logging.error(f"Main execution failed: {str(e)}", exc_info=True)
         raise
 
+
+# ------------------------------------------------------------
+# Main Execution
+# ------------------------------------------------------------
 if __name__ == "__main__":
     try:
         main()

@@ -1,3 +1,17 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+U-Net Model for Image Segmentation
+----------------------------------
+This script implements a U-Net model for image segmentation using PyTorch. It
+defines a U-Net architecture with skip connections and batch normalization. The
+model is designed for semantic segmentation tasks.
+
+Author: Azhar Muhammed
+Date: October 2024
+"""
+
 import torch
 import torch.nn as nn
 import torch.optim as optim

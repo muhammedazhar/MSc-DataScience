@@ -12,12 +12,17 @@ Author: Azhar Muhammed
 Date: July 2024
 """
 
+# ------------------------------------------------------------
+# Essential Imports
+# ------------------------------------------------------------
 import sys
 import logging
 import json
 import geojson
 
-# GeoJSON extractor function
+# ------------------------------------------------------------
+# GeoJSON Extraction Function
+# ------------------------------------------------------------
 def extract_bboxes(geojson_path):
     """
     Extract bounding boxes and properties from a GeoJSON file containing multiple polygons.
@@ -60,11 +65,20 @@ def extract_bboxes(geojson_path):
         logging.error(f"Error reading or parsing GeoJSON file: {str(e)}")
         sys.exit(1)
 
-# JSON extractor function
+# ------------------------------------------------------------
+# JSON Extraction Function
+# ------------------------------------------------------------
 def extract_search(json_path):
-    # Open and read the JSON file
+    """
+    Extract search parameters from a JSON file.
+    
+    Args:
+        json_path (str): Path to the JSON file.
+    
+    Returns:
+        dict: A dictionary containing search parameters.
+    """
     with open(json_path, 'r') as file:
         search = json.load(file)
 
-    # Return values as a dictionary
     return search
