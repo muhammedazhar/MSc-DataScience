@@ -1,0 +1,726 @@
+.
+└── Testing
+    ├── Processed
+    ├── Samples
+    │   └── sampled_events_20241216_153135.geojson
+    └── Tiles
+        ├── S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233
+        │   ├── PLOT-00001.npy
+        │   ├── PLOT-00002.npy
+        │   ├── PLOT-00003.npy
+        │   ├── PLOT-00004.npy
+        │   ├── PLOT-00005.npy
+        │   ├── PLOT-00006.npy
+        │   ├── PLOT-00007.npy
+        │   ├── PLOT-00008.npy
+        │   ├── PLOT-00009.npy
+        │   ├── PLOT-00011.npy
+        │   ├── PLOT-00012.npy
+        │   ├── PLOT-00014.npy
+        │   ├── PLOT-00015.npy
+        │   ├── PLOT-00016.npy
+        │   ├── PLOT-00017.npy
+        │   ├── PLOT-00019.npy
+        │   ├── PLOT-00020.npy
+        │   ├── PLOT-00021.npy
+        │   ├── PLOT-00023.npy
+        │   ├── PLOT-00024.npy
+        │   ├── PLOT-00025.npy
+        │   ├── PLOT-00026.npy
+        │   ├── PLOT-00027.npy
+        │   ├── PLOT-00028.npy
+        │   ├── PLOT-00029.npy
+        │   ├── PLOT-00030.npy
+        │   ├── PLOT-00032.npy
+        │   ├── PLOT-00033.npy
+        │   ├── PLOT-00034.npy
+        │   ├── PLOT-00035.npy
+        │   ├── PLOT-00036.npy
+        │   ├── PLOT-00037.npy
+        │   ├── PLOT-00038.npy
+        │   ├── PLOT-00039.npy
+        │   ├── PLOT-00040.npy
+        │   ├── PLOT-00041.npy
+        │   ├── PLOT-00042.npy
+        │   ├── PLOT-00043.npy
+        │   ├── PLOT-00044.npy
+        │   ├── PLOT-00045.npy
+        │   ├── PLOT-00046.npy
+        │   ├── PLOT-00047.npy
+        │   ├── PLOT-00048.npy
+        │   ├── PLOT-00050.npy
+        │   ├── PLOT-00052.npy
+        │   ├── PLOT-00053.npy
+        │   ├── PLOT-00054.npy
+        │   ├── PLOT-00055.npy
+        │   ├── PLOT-00056.npy
+        │   ├── PLOT-00057.npy
+        │   ├── PLOT-00058.npy
+        │   ├── PLOT-00059.npy
+        │   ├── PLOT-00060.npy
+        │   ├── PLOT-00061.npy
+        │   ├── PLOT-00062.npy
+        │   ├── PLOT-00063.npy
+        │   ├── PLOT-00064.npy
+        │   ├── PLOT-00065.npy
+        │   └── PLOT-00066.npy
+        ├── S2A_MSIL1C_20180810T083601_N0206_R064_T36UXA_20180810T124435
+        │   ├── PLOT-00001.npy
+        │   ├── PLOT-00002.npy
+        │   ├── PLOT-00003.npy
+        │   ├── PLOT-00004.npy
+        │   ├── PLOT-00005.npy
+        │   ├── PLOT-00006.npy
+        │   ├── PLOT-00007.npy
+        │   ├── PLOT-00008.npy
+        │   ├── PLOT-00009.npy
+        │   ├── PLOT-00011.npy
+        │   ├── PLOT-00012.npy
+        │   ├── PLOT-00014.npy
+        │   ├── PLOT-00015.npy
+        │   ├── PLOT-00016.npy
+        │   ├── PLOT-00017.npy
+        │   ├── PLOT-00019.npy
+        │   ├── PLOT-00020.npy
+        │   ├── PLOT-00021.npy
+        │   ├── PLOT-00023.npy
+        │   ├── PLOT-00024.npy
+        │   ├── PLOT-00025.npy
+        │   ├── PLOT-00026.npy
+        │   ├── PLOT-00027.npy
+        │   ├── PLOT-00028.npy
+        │   ├── PLOT-00029.npy
+        │   ├── PLOT-00030.npy
+        │   ├── PLOT-00032.npy
+        │   ├── PLOT-00033.npy
+        │   ├── PLOT-00034.npy
+        │   ├── PLOT-00035.npy
+        │   ├── PLOT-00036.npy
+        │   ├── PLOT-00037.npy
+        │   ├── PLOT-00038.npy
+        │   ├── PLOT-00039.npy
+        │   ├── PLOT-00040.npy
+        │   ├── PLOT-00041.npy
+        │   ├── PLOT-00042.npy
+        │   ├── PLOT-00043.npy
+        │   ├── PLOT-00044.npy
+        │   ├── PLOT-00045.npy
+        │   ├── PLOT-00046.npy
+        │   ├── PLOT-00047.npy
+        │   ├── PLOT-00048.npy
+        │   ├── PLOT-00050.npy
+        │   ├── PLOT-00052.npy
+        │   ├── PLOT-00053.npy
+        │   ├── PLOT-00054.npy
+        │   ├── PLOT-00055.npy
+        │   ├── PLOT-00056.npy
+        │   ├── PLOT-00057.npy
+        │   ├── PLOT-00058.npy
+        │   ├── PLOT-00059.npy
+        │   ├── PLOT-00060.npy
+        │   ├── PLOT-00061.npy
+        │   ├── PLOT-00062.npy
+        │   ├── PLOT-00063.npy
+        │   ├── PLOT-00064.npy
+        │   ├── PLOT-00065.npy
+        │   └── PLOT-00066.npy
+        ├── S2A_MSIL1C_20180820T083601_N0206_R064_T36UXA_20180820T105651
+        │   ├── PLOT-00001.npy
+        │   ├── PLOT-00002.npy
+        │   ├── PLOT-00003.npy
+        │   ├── PLOT-00004.npy
+        │   ├── PLOT-00005.npy
+        │   ├── PLOT-00006.npy
+        │   ├── PLOT-00007.npy
+        │   ├── PLOT-00008.npy
+        │   ├── PLOT-00009.npy
+        │   ├── PLOT-00011.npy
+        │   ├── PLOT-00012.npy
+        │   ├── PLOT-00014.npy
+        │   ├── PLOT-00015.npy
+        │   ├── PLOT-00016.npy
+        │   ├── PLOT-00017.npy
+        │   ├── PLOT-00019.npy
+        │   ├── PLOT-00020.npy
+        │   ├── PLOT-00021.npy
+        │   ├── PLOT-00023.npy
+        │   ├── PLOT-00024.npy
+        │   ├── PLOT-00025.npy
+        │   ├── PLOT-00026.npy
+        │   ├── PLOT-00027.npy
+        │   ├── PLOT-00028.npy
+        │   ├── PLOT-00029.npy
+        │   ├── PLOT-00030.npy
+        │   ├── PLOT-00032.npy
+        │   ├── PLOT-00033.npy
+        │   ├── PLOT-00034.npy
+        │   ├── PLOT-00035.npy
+        │   ├── PLOT-00036.npy
+        │   ├── PLOT-00037.npy
+        │   ├── PLOT-00038.npy
+        │   ├── PLOT-00039.npy
+        │   ├── PLOT-00040.npy
+        │   ├── PLOT-00041.npy
+        │   ├── PLOT-00042.npy
+        │   ├── PLOT-00043.npy
+        │   ├── PLOT-00044.npy
+        │   ├── PLOT-00045.npy
+        │   ├── PLOT-00046.npy
+        │   ├── PLOT-00047.npy
+        │   ├── PLOT-00048.npy
+        │   ├── PLOT-00050.npy
+        │   ├── PLOT-00052.npy
+        │   ├── PLOT-00053.npy
+        │   ├── PLOT-00054.npy
+        │   ├── PLOT-00055.npy
+        │   ├── PLOT-00056.npy
+        │   ├── PLOT-00057.npy
+        │   ├── PLOT-00058.npy
+        │   ├── PLOT-00059.npy
+        │   ├── PLOT-00060.npy
+        │   ├── PLOT-00061.npy
+        │   ├── PLOT-00062.npy
+        │   ├── PLOT-00063.npy
+        │   ├── PLOT-00064.npy
+        │   ├── PLOT-00065.npy
+        │   └── PLOT-00066.npy
+        ├── S2A_MSIL1C_20180830T083601_N0206_R064_T36UXA_20180830T105527
+        │   ├── PLOT-00001.npy
+        │   ├── PLOT-00002.npy
+        │   ├── PLOT-00003.npy
+        │   ├── PLOT-00004.npy
+        │   ├── PLOT-00005.npy
+        │   ├── PLOT-00006.npy
+        │   ├── PLOT-00007.npy
+        │   ├── PLOT-00008.npy
+        │   ├── PLOT-00009.npy
+        │   ├── PLOT-00011.npy
+        │   ├── PLOT-00012.npy
+        │   ├── PLOT-00014.npy
+        │   ├── PLOT-00015.npy
+        │   ├── PLOT-00016.npy
+        │   ├── PLOT-00017.npy
+        │   ├── PLOT-00019.npy
+        │   ├── PLOT-00020.npy
+        │   ├── PLOT-00021.npy
+        │   ├── PLOT-00023.npy
+        │   ├── PLOT-00024.npy
+        │   ├── PLOT-00025.npy
+        │   ├── PLOT-00026.npy
+        │   ├── PLOT-00027.npy
+        │   ├── PLOT-00028.npy
+        │   ├── PLOT-00029.npy
+        │   ├── PLOT-00030.npy
+        │   ├── PLOT-00032.npy
+        │   ├── PLOT-00033.npy
+        │   ├── PLOT-00034.npy
+        │   ├── PLOT-00035.npy
+        │   ├── PLOT-00036.npy
+        │   ├── PLOT-00037.npy
+        │   ├── PLOT-00038.npy
+        │   ├── PLOT-00039.npy
+        │   ├── PLOT-00040.npy
+        │   ├── PLOT-00041.npy
+        │   ├── PLOT-00042.npy
+        │   ├── PLOT-00043.npy
+        │   ├── PLOT-00044.npy
+        │   ├── PLOT-00045.npy
+        │   ├── PLOT-00046.npy
+        │   ├── PLOT-00047.npy
+        │   ├── PLOT-00048.npy
+        │   ├── PLOT-00050.npy
+        │   ├── PLOT-00052.npy
+        │   ├── PLOT-00053.npy
+        │   ├── PLOT-00054.npy
+        │   ├── PLOT-00055.npy
+        │   ├── PLOT-00056.npy
+        │   ├── PLOT-00057.npy
+        │   ├── PLOT-00058.npy
+        │   ├── PLOT-00059.npy
+        │   ├── PLOT-00060.npy
+        │   ├── PLOT-00061.npy
+        │   ├── PLOT-00062.npy
+        │   ├── PLOT-00063.npy
+        │   ├── PLOT-00064.npy
+        │   ├── PLOT-00065.npy
+        │   └── PLOT-00066.npy
+        ├── S2A_MSIL1C_20180919T083621_N0206_R064_T36UXA_20180919T105540
+        │   ├── PLOT-00001.npy
+        │   ├── PLOT-00002.npy
+        │   ├── PLOT-00003.npy
+        │   ├── PLOT-00004.npy
+        │   ├── PLOT-00005.npy
+        │   ├── PLOT-00006.npy
+        │   ├── PLOT-00007.npy
+        │   ├── PLOT-00008.npy
+        │   ├── PLOT-00009.npy
+        │   ├── PLOT-00011.npy
+        │   ├── PLOT-00012.npy
+        │   ├── PLOT-00014.npy
+        │   ├── PLOT-00015.npy
+        │   ├── PLOT-00016.npy
+        │   ├── PLOT-00017.npy
+        │   ├── PLOT-00019.npy
+        │   ├── PLOT-00020.npy
+        │   ├── PLOT-00021.npy
+        │   ├── PLOT-00023.npy
+        │   ├── PLOT-00024.npy
+        │   ├── PLOT-00025.npy
+        │   ├── PLOT-00026.npy
+        │   ├── PLOT-00027.npy
+        │   ├── PLOT-00028.npy
+        │   ├── PLOT-00029.npy
+        │   ├── PLOT-00030.npy
+        │   ├── PLOT-00032.npy
+        │   ├── PLOT-00033.npy
+        │   ├── PLOT-00034.npy
+        │   ├── PLOT-00035.npy
+        │   ├── PLOT-00036.npy
+        │   ├── PLOT-00037.npy
+        │   ├── PLOT-00038.npy
+        │   ├── PLOT-00039.npy
+        │   ├── PLOT-00040.npy
+        │   ├── PLOT-00041.npy
+        │   ├── PLOT-00042.npy
+        │   ├── PLOT-00043.npy
+        │   ├── PLOT-00044.npy
+        │   ├── PLOT-00045.npy
+        │   ├── PLOT-00046.npy
+        │   ├── PLOT-00047.npy
+        │   ├── PLOT-00048.npy
+        │   ├── PLOT-00050.npy
+        │   ├── PLOT-00052.npy
+        │   ├── PLOT-00053.npy
+        │   ├── PLOT-00054.npy
+        │   ├── PLOT-00055.npy
+        │   ├── PLOT-00056.npy
+        │   ├── PLOT-00057.npy
+        │   ├── PLOT-00058.npy
+        │   ├── PLOT-00059.npy
+        │   ├── PLOT-00060.npy
+        │   ├── PLOT-00061.npy
+        │   ├── PLOT-00062.npy
+        │   ├── PLOT-00063.npy
+        │   ├── PLOT-00064.npy
+        │   ├── PLOT-00065.npy
+        │   └── PLOT-00066.npy
+        ├── S2A_MSIL1C_20190427T083601_N0207_R064_T36UXA_20190427T100851
+        │   ├── PLOT-00001.npy
+        │   ├── PLOT-00002.npy
+        │   ├── PLOT-00003.npy
+        │   ├── PLOT-00004.npy
+        │   ├── PLOT-00005.npy
+        │   ├── PLOT-00006.npy
+        │   ├── PLOT-00007.npy
+        │   ├── PLOT-00008.npy
+        │   ├── PLOT-00009.npy
+        │   ├── PLOT-00011.npy
+        │   ├── PLOT-00012.npy
+        │   ├── PLOT-00014.npy
+        │   ├── PLOT-00015.npy
+        │   ├── PLOT-00016.npy
+        │   ├── PLOT-00017.npy
+        │   ├── PLOT-00019.npy
+        │   ├── PLOT-00020.npy
+        │   ├── PLOT-00021.npy
+        │   ├── PLOT-00023.npy
+        │   ├── PLOT-00024.npy
+        │   ├── PLOT-00025.npy
+        │   ├── PLOT-00026.npy
+        │   ├── PLOT-00027.npy
+        │   ├── PLOT-00028.npy
+        │   ├── PLOT-00029.npy
+        │   ├── PLOT-00030.npy
+        │   ├── PLOT-00032.npy
+        │   ├── PLOT-00033.npy
+        │   ├── PLOT-00034.npy
+        │   ├── PLOT-00035.npy
+        │   ├── PLOT-00036.npy
+        │   ├── PLOT-00037.npy
+        │   ├── PLOT-00038.npy
+        │   ├── PLOT-00039.npy
+        │   ├── PLOT-00040.npy
+        │   ├── PLOT-00041.npy
+        │   ├── PLOT-00042.npy
+        │   ├── PLOT-00043.npy
+        │   ├── PLOT-00044.npy
+        │   ├── PLOT-00045.npy
+        │   ├── PLOT-00046.npy
+        │   ├── PLOT-00047.npy
+        │   ├── PLOT-00048.npy
+        │   ├── PLOT-00050.npy
+        │   ├── PLOT-00052.npy
+        │   ├── PLOT-00053.npy
+        │   ├── PLOT-00054.npy
+        │   ├── PLOT-00055.npy
+        │   ├── PLOT-00056.npy
+        │   ├── PLOT-00057.npy
+        │   ├── PLOT-00058.npy
+        │   ├── PLOT-00059.npy
+        │   ├── PLOT-00060.npy
+        │   ├── PLOT-00061.npy
+        │   ├── PLOT-00062.npy
+        │   ├── PLOT-00063.npy
+        │   ├── PLOT-00064.npy
+        │   ├── PLOT-00065.npy
+        │   └── PLOT-00066.npy
+        ├── S2A_MSIL1C_20190606T083601_N0207_R064_T36UXA_20190606T104250
+        │   ├── PLOT-00001.npy
+        │   ├── PLOT-00002.npy
+        │   ├── PLOT-00003.npy
+        │   ├── PLOT-00004.npy
+        │   ├── PLOT-00005.npy
+        │   ├── PLOT-00006.npy
+        │   ├── PLOT-00007.npy
+        │   ├── PLOT-00008.npy
+        │   ├── PLOT-00009.npy
+        │   ├── PLOT-00011.npy
+        │   ├── PLOT-00012.npy
+        │   ├── PLOT-00014.npy
+        │   ├── PLOT-00015.npy
+        │   ├── PLOT-00016.npy
+        │   ├── PLOT-00017.npy
+        │   ├── PLOT-00019.npy
+        │   ├── PLOT-00020.npy
+        │   ├── PLOT-00021.npy
+        │   ├── PLOT-00023.npy
+        │   ├── PLOT-00024.npy
+        │   ├── PLOT-00025.npy
+        │   ├── PLOT-00026.npy
+        │   ├── PLOT-00027.npy
+        │   ├── PLOT-00028.npy
+        │   ├── PLOT-00029.npy
+        │   ├── PLOT-00030.npy
+        │   ├── PLOT-00032.npy
+        │   ├── PLOT-00033.npy
+        │   ├── PLOT-00034.npy
+        │   ├── PLOT-00035.npy
+        │   ├── PLOT-00036.npy
+        │   ├── PLOT-00037.npy
+        │   ├── PLOT-00038.npy
+        │   ├── PLOT-00039.npy
+        │   ├── PLOT-00040.npy
+        │   ├── PLOT-00041.npy
+        │   ├── PLOT-00042.npy
+        │   ├── PLOT-00043.npy
+        │   ├── PLOT-00044.npy
+        │   ├── PLOT-00045.npy
+        │   ├── PLOT-00046.npy
+        │   ├── PLOT-00047.npy
+        │   ├── PLOT-00048.npy
+        │   ├── PLOT-00050.npy
+        │   ├── PLOT-00052.npy
+        │   ├── PLOT-00053.npy
+        │   ├── PLOT-00054.npy
+        │   ├── PLOT-00055.npy
+        │   ├── PLOT-00056.npy
+        │   ├── PLOT-00057.npy
+        │   ├── PLOT-00058.npy
+        │   ├── PLOT-00059.npy
+        │   ├── PLOT-00060.npy
+        │   ├── PLOT-00061.npy
+        │   ├── PLOT-00062.npy
+        │   ├── PLOT-00063.npy
+        │   ├── PLOT-00064.npy
+        │   ├── PLOT-00065.npy
+        │   └── PLOT-00066.npy
+        ├── S2B_MSIL1C_20180726T084009_N0206_R064_T36UXA_20180726T104227
+        │   ├── PLOT-00001.npy
+        │   ├── PLOT-00002.npy
+        │   ├── PLOT-00003.npy
+        │   ├── PLOT-00004.npy
+        │   ├── PLOT-00005.npy
+        │   ├── PLOT-00006.npy
+        │   ├── PLOT-00007.npy
+        │   ├── PLOT-00008.npy
+        │   ├── PLOT-00009.npy
+        │   ├── PLOT-00011.npy
+        │   ├── PLOT-00012.npy
+        │   ├── PLOT-00014.npy
+        │   ├── PLOT-00015.npy
+        │   ├── PLOT-00016.npy
+        │   ├── PLOT-00017.npy
+        │   ├── PLOT-00019.npy
+        │   ├── PLOT-00020.npy
+        │   ├── PLOT-00021.npy
+        │   ├── PLOT-00023.npy
+        │   ├── PLOT-00024.npy
+        │   ├── PLOT-00025.npy
+        │   ├── PLOT-00026.npy
+        │   ├── PLOT-00027.npy
+        │   ├── PLOT-00028.npy
+        │   ├── PLOT-00029.npy
+        │   ├── PLOT-00030.npy
+        │   ├── PLOT-00032.npy
+        │   ├── PLOT-00033.npy
+        │   ├── PLOT-00034.npy
+        │   ├── PLOT-00035.npy
+        │   ├── PLOT-00036.npy
+        │   ├── PLOT-00037.npy
+        │   ├── PLOT-00038.npy
+        │   ├── PLOT-00039.npy
+        │   ├── PLOT-00040.npy
+        │   ├── PLOT-00041.npy
+        │   ├── PLOT-00042.npy
+        │   ├── PLOT-00043.npy
+        │   ├── PLOT-00044.npy
+        │   ├── PLOT-00045.npy
+        │   ├── PLOT-00046.npy
+        │   ├── PLOT-00047.npy
+        │   ├── PLOT-00048.npy
+        │   ├── PLOT-00050.npy
+        │   ├── PLOT-00052.npy
+        │   ├── PLOT-00053.npy
+        │   ├── PLOT-00054.npy
+        │   ├── PLOT-00055.npy
+        │   ├── PLOT-00056.npy
+        │   ├── PLOT-00057.npy
+        │   ├── PLOT-00058.npy
+        │   ├── PLOT-00059.npy
+        │   ├── PLOT-00060.npy
+        │   ├── PLOT-00061.npy
+        │   ├── PLOT-00062.npy
+        │   ├── PLOT-00063.npy
+        │   ├── PLOT-00064.npy
+        │   ├── PLOT-00065.npy
+        │   └── PLOT-00066.npy
+        ├── S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757
+        │   ├── PLOT-00001.npy
+        │   ├── PLOT-00002.npy
+        │   ├── PLOT-00003.npy
+        │   ├── PLOT-00004.npy
+        │   ├── PLOT-00005.npy
+        │   ├── PLOT-00006.npy
+        │   ├── PLOT-00007.npy
+        │   ├── PLOT-00008.npy
+        │   ├── PLOT-00009.npy
+        │   ├── PLOT-00011.npy
+        │   ├── PLOT-00012.npy
+        │   ├── PLOT-00014.npy
+        │   ├── PLOT-00015.npy
+        │   ├── PLOT-00016.npy
+        │   ├── PLOT-00017.npy
+        │   ├── PLOT-00019.npy
+        │   ├── PLOT-00020.npy
+        │   ├── PLOT-00021.npy
+        │   ├── PLOT-00023.npy
+        │   ├── PLOT-00024.npy
+        │   ├── PLOT-00025.npy
+        │   ├── PLOT-00026.npy
+        │   ├── PLOT-00027.npy
+        │   ├── PLOT-00028.npy
+        │   ├── PLOT-00029.npy
+        │   ├── PLOT-00030.npy
+        │   ├── PLOT-00032.npy
+        │   ├── PLOT-00033.npy
+        │   ├── PLOT-00034.npy
+        │   ├── PLOT-00035.npy
+        │   ├── PLOT-00036.npy
+        │   ├── PLOT-00037.npy
+        │   ├── PLOT-00038.npy
+        │   ├── PLOT-00039.npy
+        │   ├── PLOT-00040.npy
+        │   ├── PLOT-00041.npy
+        │   ├── PLOT-00042.npy
+        │   ├── PLOT-00043.npy
+        │   ├── PLOT-00044.npy
+        │   ├── PLOT-00045.npy
+        │   ├── PLOT-00046.npy
+        │   ├── PLOT-00047.npy
+        │   ├── PLOT-00048.npy
+        │   ├── PLOT-00050.npy
+        │   ├── PLOT-00052.npy
+        │   ├── PLOT-00053.npy
+        │   ├── PLOT-00054.npy
+        │   ├── PLOT-00055.npy
+        │   ├── PLOT-00056.npy
+        │   ├── PLOT-00057.npy
+        │   ├── PLOT-00058.npy
+        │   ├── PLOT-00059.npy
+        │   ├── PLOT-00060.npy
+        │   ├── PLOT-00061.npy
+        │   ├── PLOT-00062.npy
+        │   ├── PLOT-00063.npy
+        │   ├── PLOT-00064.npy
+        │   ├── PLOT-00065.npy
+        │   └── PLOT-00066.npy
+        ├── S2B_MSIL1C_20180815T084009_N0206_R064_T36UXA_20180815T123155
+        │   ├── PLOT-00001.npy
+        │   ├── PLOT-00002.npy
+        │   ├── PLOT-00003.npy
+        │   ├── PLOT-00004.npy
+        │   ├── PLOT-00005.npy
+        │   ├── PLOT-00006.npy
+        │   ├── PLOT-00007.npy
+        │   ├── PLOT-00008.npy
+        │   ├── PLOT-00009.npy
+        │   ├── PLOT-00011.npy
+        │   ├── PLOT-00012.npy
+        │   ├── PLOT-00014.npy
+        │   ├── PLOT-00015.npy
+        │   ├── PLOT-00016.npy
+        │   ├── PLOT-00017.npy
+        │   ├── PLOT-00019.npy
+        │   ├── PLOT-00020.npy
+        │   ├── PLOT-00021.npy
+        │   ├── PLOT-00023.npy
+        │   ├── PLOT-00024.npy
+        │   ├── PLOT-00025.npy
+        │   ├── PLOT-00026.npy
+        │   ├── PLOT-00027.npy
+        │   ├── PLOT-00028.npy
+        │   ├── PLOT-00029.npy
+        │   ├── PLOT-00030.npy
+        │   ├── PLOT-00032.npy
+        │   ├── PLOT-00033.npy
+        │   ├── PLOT-00034.npy
+        │   ├── PLOT-00035.npy
+        │   ├── PLOT-00036.npy
+        │   ├── PLOT-00037.npy
+        │   ├── PLOT-00038.npy
+        │   ├── PLOT-00039.npy
+        │   ├── PLOT-00040.npy
+        │   ├── PLOT-00041.npy
+        │   ├── PLOT-00042.npy
+        │   ├── PLOT-00043.npy
+        │   ├── PLOT-00044.npy
+        │   ├── PLOT-00045.npy
+        │   ├── PLOT-00046.npy
+        │   ├── PLOT-00047.npy
+        │   ├── PLOT-00048.npy
+        │   ├── PLOT-00050.npy
+        │   ├── PLOT-00052.npy
+        │   ├── PLOT-00053.npy
+        │   ├── PLOT-00054.npy
+        │   ├── PLOT-00055.npy
+        │   ├── PLOT-00056.npy
+        │   ├── PLOT-00057.npy
+        │   ├── PLOT-00058.npy
+        │   ├── PLOT-00059.npy
+        │   ├── PLOT-00060.npy
+        │   ├── PLOT-00061.npy
+        │   ├── PLOT-00062.npy
+        │   ├── PLOT-00063.npy
+        │   ├── PLOT-00064.npy
+        │   ├── PLOT-00065.npy
+        │   └── PLOT-00066.npy
+        ├── S2B_MSIL1C_20180825T083549_N0206_R064_T36UXA_20180825T124942
+        │   ├── PLOT-00001.npy
+        │   ├── PLOT-00002.npy
+        │   ├── PLOT-00003.npy
+        │   ├── PLOT-00004.npy
+        │   ├── PLOT-00005.npy
+        │   ├── PLOT-00006.npy
+        │   ├── PLOT-00007.npy
+        │   ├── PLOT-00008.npy
+        │   ├── PLOT-00009.npy
+        │   ├── PLOT-00011.npy
+        │   ├── PLOT-00012.npy
+        │   ├── PLOT-00014.npy
+        │   ├── PLOT-00015.npy
+        │   ├── PLOT-00016.npy
+        │   ├── PLOT-00017.npy
+        │   ├── PLOT-00019.npy
+        │   ├── PLOT-00020.npy
+        │   ├── PLOT-00021.npy
+        │   ├── PLOT-00023.npy
+        │   ├── PLOT-00024.npy
+        │   ├── PLOT-00025.npy
+        │   ├── PLOT-00026.npy
+        │   ├── PLOT-00027.npy
+        │   ├── PLOT-00028.npy
+        │   ├── PLOT-00029.npy
+        │   ├── PLOT-00030.npy
+        │   ├── PLOT-00032.npy
+        │   ├── PLOT-00033.npy
+        │   ├── PLOT-00034.npy
+        │   ├── PLOT-00035.npy
+        │   ├── PLOT-00036.npy
+        │   ├── PLOT-00037.npy
+        │   ├── PLOT-00038.npy
+        │   ├── PLOT-00039.npy
+        │   ├── PLOT-00040.npy
+        │   ├── PLOT-00041.npy
+        │   ├── PLOT-00042.npy
+        │   ├── PLOT-00043.npy
+        │   ├── PLOT-00044.npy
+        │   ├── PLOT-00045.npy
+        │   ├── PLOT-00046.npy
+        │   ├── PLOT-00047.npy
+        │   ├── PLOT-00048.npy
+        │   ├── PLOT-00050.npy
+        │   ├── PLOT-00052.npy
+        │   ├── PLOT-00053.npy
+        │   ├── PLOT-00054.npy
+        │   ├── PLOT-00055.npy
+        │   ├── PLOT-00056.npy
+        │   ├── PLOT-00057.npy
+        │   ├── PLOT-00058.npy
+        │   ├── PLOT-00059.npy
+        │   ├── PLOT-00060.npy
+        │   ├── PLOT-00061.npy
+        │   ├── PLOT-00062.npy
+        │   ├── PLOT-00063.npy
+        │   ├── PLOT-00064.npy
+        │   ├── PLOT-00065.npy
+        │   └── PLOT-00066.npy
+        └── S2B_MSIL1C_20180904T083549_N0206_R064_T36UXA_20180904T123955
+            ├── PLOT-00001.npy
+            ├── PLOT-00002.npy
+            ├── PLOT-00003.npy
+            ├── PLOT-00004.npy
+            ├── PLOT-00005.npy
+            ├── PLOT-00006.npy
+            ├── PLOT-00007.npy
+            ├── PLOT-00008.npy
+            ├── PLOT-00009.npy
+            ├── PLOT-00011.npy
+            ├── PLOT-00012.npy
+            ├── PLOT-00014.npy
+            ├── PLOT-00015.npy
+            ├── PLOT-00016.npy
+            ├── PLOT-00017.npy
+            ├── PLOT-00019.npy
+            ├── PLOT-00020.npy
+            ├── PLOT-00021.npy
+            ├── PLOT-00023.npy
+            ├── PLOT-00024.npy
+            ├── PLOT-00025.npy
+            ├── PLOT-00026.npy
+            ├── PLOT-00027.npy
+            ├── PLOT-00028.npy
+            ├── PLOT-00029.npy
+            ├── PLOT-00030.npy
+            ├── PLOT-00032.npy
+            ├── PLOT-00033.npy
+            ├── PLOT-00034.npy
+            ├── PLOT-00035.npy
+            ├── PLOT-00036.npy
+            ├── PLOT-00037.npy
+            ├── PLOT-00038.npy
+            ├── PLOT-00039.npy
+            ├── PLOT-00040.npy
+            ├── PLOT-00041.npy
+            ├── PLOT-00042.npy
+            ├── PLOT-00043.npy
+            ├── PLOT-00044.npy
+            ├── PLOT-00045.npy
+            ├── PLOT-00046.npy
+            ├── PLOT-00047.npy
+            ├── PLOT-00048.npy
+            ├── PLOT-00050.npy
+            ├── PLOT-00052.npy
+            ├── PLOT-00053.npy
+            ├── PLOT-00054.npy
+            ├── PLOT-00055.npy
+            ├── PLOT-00056.npy
+            ├── PLOT-00057.npy
+            ├── PLOT-00058.npy
+            ├── PLOT-00059.npy
+            ├── PLOT-00060.npy
+            ├── PLOT-00061.npy
+            ├── PLOT-00062.npy
+            ├── PLOT-00063.npy
+            ├── PLOT-00064.npy
+            ├── PLOT-00065.npy
+            └── PLOT-00066.npy
