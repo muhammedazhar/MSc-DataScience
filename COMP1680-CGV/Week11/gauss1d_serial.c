@@ -1,0 +1,63 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+int max_size=100000;
+
+int main(int argc, char *argv[])
+{
+double told[max_size], t[max_size], tol=0.0001, diff, difmax;
+int i, iter, n=1000;
+
+if (argc==3){
+		n=atoi(argv[1]);
+		tol=atof(argv[2]);
+	}
+else{
+	printf("Number of cells and tolerance expected defaulting to 1000 and 0.0001 \n");
+	}
+
+// initialise temperature array
+for (i=1; i <= n; i++) {
+   t[i] = 20.0;
+   }
+// fix end points as cold and hot
+t[0] = 0.0;
+t[n+1] = 100.0;
+
+iter = 0;
+difmax = 1000000.0;
+
+while (difmax > tol) {
+
+iter=iter+1;
+
+//populate tnew array to keep old values for calculating residual
+for (i=1;i <=n ; i++ )
+{
+	told[i]= t[i];
+}
+// update temperature for next iteration
+for (i=1; i <= n; i++) {
+   t[i] = (t[i-1]+t[i+1])/2.0;
+   }
+// work out maximum difference between old and new temperatures
+difmax=0.0;
+for (i=1; i <= n; i++) {
+   diff = fabs(t[i]-told[i]);
+   if (diff > difmax) {
+      difmax = diff;
+      }
+   }
+
+}//while (difmax > tol)
+
+
+
+   for (i=1; i <= n; i++) {
+      printf("t[%d] = %-5.7lf  \n", i, told[i]);
+      }
+   printf("iterations = %d  maximum difference = %-5.7lf  \n", iter, difmax);
+   
+}
+
