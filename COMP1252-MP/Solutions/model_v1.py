@@ -12,9 +12,9 @@ Author: Azhar Muhammed
 Date: October 2024
 """
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Essential Imports
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -28,29 +28,31 @@ from skimage.transform import resize
 import matplotlib.pyplot as plt
 import time  # type: ignore
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Local imports
-# ------------------------------------------------------------
-from helper import *
+# -----------------------------------------------------------------------------
+from helper import setup_logging, get_device
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Constants and Configuration
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 seed = 42
 torch.manual_seed(seed)
 np.random.seed(seed)
 random.seed(seed)
 
-setup_logging()
+filename = os.path.splitext(os.path.basename(__file__))[0]
+# Set up logger using the imported function
+logger, file_logger = setup_logging(file=filename)
 
 IMG_WIDTH = 128
 IMG_HEIGHT = 128
 IMG_CHANNELS = 3
 DEVICE = get_device(pretty='print')
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Custom Dataset Definition
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 class NucleiDataset(Dataset):
     def __init__(self, images, masks=None, transform=None):
         self.images = images
@@ -70,9 +72,9 @@ class NucleiDataset(Dataset):
             return image, mask
         return image
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # U-Net Model Definition
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 class UNet(nn.Module):
     def __init__(self):
         super(UNet, self).__init__()
@@ -151,9 +153,9 @@ class UNet(nn.Module):
 
         return out
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Evaluation Metrics
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 def calculate_metrics(pred, target):
     pred = (pred > 0.5).float()
 
@@ -181,9 +183,9 @@ def calculate_iou(pred, target, eps=1e-7):
     iou = (intersection + eps) / (union + eps)
     return iou
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Training Function
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 def train_model(model, train_loader, val_loader, criterion, optimizer, num_epochs=25):
     best_val_loss = float('inf')
     best_epoch = 0
@@ -284,19 +286,11 @@ def train_model(model, train_loader, val_loader, criterion, optimizer, num_epoch
 
     return model, history, total_training_time
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Main Function
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 def main():
     """Main execution function"""
-    # Get full path of current script
-    current_file = __file__
-    # Extract just the filename
-    filename = os.path.basename(current_file)
-    # Filename without extension
-    filename_no_ext = os.path.splitext(filename)[0]
-    logging.info(f"Running {filename_no_ext} script...")
-
     # Load and preprocess data (using existing data loading code)
     TRAIN_PATH = '../Datasets/Testing/Test-UNetModel/stage1_train/'
     TEST_PATH = '../Datasets/Testing/Test-UNetModel/stage1_test/'
@@ -347,7 +341,7 @@ def main():
 
     # Visualize results
     save_dir = '../Docs/Diagrams/'
-    file_prefix = f'{filename_no_ext}'
+    file_prefix = f'{filename}'
 
     # Make predictions
     model.eval()
@@ -421,12 +415,12 @@ def main():
     plt.close()
 
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Main Execution
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 if __name__ == "__main__":
     try:
         main()
     except Exception as e:
-        logging.error(f"Unhandled exception: {str(e)}", exc_info=True)
+        logger.error(f"Unhandled exception: {str(e)}", exc_info=True)
         raise

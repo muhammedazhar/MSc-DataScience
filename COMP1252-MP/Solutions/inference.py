@@ -13,9 +13,9 @@ Author: Azhar Muhammed
 Date: December 2024
 """
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Essential Imports
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 import os
 import cv2
 import glob
@@ -29,22 +29,25 @@ import albumentations as A
 import torchvision.models as models
 import rasterio
 from skimage import exposure
-import logging
 from typing import Tuple, Optional, Dict
 from torchmetrics import Dice, F1Score
 
-# Local imports
+# -----------------------------------------------------------------------------
+# Local Imports
+# -----------------------------------------------------------------------------
 from helper import *
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Logging Setup
-# ------------------------------------------------------------
-setup_logging()
+# -----------------------------------------------------------------------------
+filename = os.path.splitext(os.path.basename(__file__))[0]
+# Set up logger using the imported function
+logger, file_logger = setup_logging(file=filename)
 device = get_device()
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Model Definition
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 class ConvBlock(nn.Module):
     """Basic convolutional block for U-Net."""
     def __init__(self, in_channels: int, out_channels: int):
@@ -136,9 +139,9 @@ class UNetDiff(nn.Module):
         out = self.final_conv(dec1)
         return torch.sigmoid(out)
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Dataset Definition
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 class DeforestationDataset(Dataset):
     """
     Dataset for loading temporal image pairs for deforestation detection.
@@ -154,7 +157,7 @@ class DeforestationDataset(Dataset):
         # Get valid temporal pairs based on mask dates
         self.pairs = self._get_temporal_pairs()
 
-        logging.info(f"Total number of samples in dataset '{self.split}': {len(self.pairs)}")
+        logger.info(f"Total number of samples in dataset '{self.split}': {len(self.pairs)}")
 
     def _get_temporal_pairs(self):
         pairs = []
@@ -164,7 +167,7 @@ class DeforestationDataset(Dataset):
             plot_dir = self.dataset_dir / plot_name
 
             if not plot_dir.exists():
-                logging.warning(f"Plot directory does not exist: {plot_dir}")
+                logger.warning(f"Plot directory does not exist: {plot_dir}")
                 continue
 
             pre_dir = plot_dir / "Pre-event"
@@ -172,7 +175,7 @@ class DeforestationDataset(Dataset):
             mask_dir = plot_dir / "Masks"
 
             if not all(d.exists() for d in [pre_dir, post_dir, mask_dir]):
-                logging.warning(f"Missing subdirectories in plot {plot_name}. Skipping.")
+                logger.warning(f"Missing subdirectories in plot {plot_name}. Skipping.")
                 continue
 
             plot_pairs = self._get_plot_temporal_pairs(pre_dir, post_dir, mask_dir)
@@ -185,7 +188,7 @@ class DeforestationDataset(Dataset):
         mask_files = sorted(mask_dir.glob("*.tif"))
 
         if not mask_files:
-            logging.warning(f"No mask files found in {mask_dir}. Skipping plot.")
+            logger.warning(f"No mask files found in {mask_dir}. Skipping plot.")
             return pairs
 
         for mask_file in mask_files:
@@ -193,7 +196,7 @@ class DeforestationDataset(Dataset):
             try:
                 mask_dt = np.datetime64(mask_date_str)
             except ValueError as e:
-                logging.error(f"Invalid mask date format in file: {mask_file}. Error: {e}")
+                logger.error(f"Invalid mask date format in file: {mask_file}. Error: {e}")
                 continue
 
             # Find the pre-event image closest to but before the mask date
@@ -204,7 +207,7 @@ class DeforestationDataset(Dataset):
                 try:
                     pre_dt = np.datetime64(pre_date)
                 except ValueError as e:
-                    logging.error(f"Invalid pre-event date format in file: {pre_file}. Error: {e}")
+                    logger.error(f"Invalid pre-event date format in file: {pre_file}. Error: {e}")
                     continue
 
                 if pre_dt <= mask_dt:
@@ -220,7 +223,7 @@ class DeforestationDataset(Dataset):
                 try:
                     post_dt = np.datetime64(post_date)
                 except ValueError as e:
-                    logging.error(f"Invalid post-event date format in file: {post_file}. Error: {e}")
+                    logger.error(f"Invalid post-event date format in file: {post_file}. Error: {e}")
                     continue
 
                 delta_days = (post_dt - mask_dt).astype(int)
@@ -230,9 +233,9 @@ class DeforestationDataset(Dataset):
 
             if suitable_pre and suitable_post:
                 pairs.append((suitable_pre, suitable_post, mask_file))
-                logging.debug(f"Pair added: Pre={suitable_pre.name}, Post={suitable_post.name}, Mask={mask_file.name}")
+                logger.debug(f"Pair added: Pre={suitable_pre.name}, Post={suitable_post.name}, Mask={mask_file.name}")
             else:
-                logging.warning(
+                logger.warning(
                     f"Could not find suitable pre/post images for mask {mask_file.name} in plot {mask_file.parent.parent.name}."
                 )
 
@@ -310,16 +313,16 @@ class DeforestationDataset(Dataset):
             return x, mask, plot_name
 
         except Exception as e:
-            logging.error(f"Error processing files:")
-            logging.error(f"Pre-event: {pre_file}")
-            logging.error(f"Post-event: {post_file}")
-            logging.error(f"Mask: {mask_file}")
-            logging.error(f"Error: {e}")
+            logger.error(f"Error processing files:")
+            logger.error(f"Pre-event: {pre_file}")
+            logger.error(f"Post-event: {post_file}")
+            logger.error(f"Mask: {mask_file}")
+            logger.error(f"Error: {e}")
             raise e
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Metric Tracking
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 class MetricTracker:
     """Track multiple metrics during inference."""
     def __init__(self, device):
@@ -342,9 +345,9 @@ class MetricTracker:
             'f1': self.f1.compute().item()
         }
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Inference Routine
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 def run_inference(
     model: torch.nn.Module,
     dataset_dir: str,
@@ -404,19 +407,19 @@ def run_inference(
             for pred, plot_name in zip(binary_preds, plot_names):
                 output_path = os.path.join(output_dir, f"{plot_name}_pred.npy")
                 np.save(output_path, pred)
-                logging.info(f"Saved prediction: {output_path}")
+                logger.info(f"Saved prediction: {output_path}")
 
     # Compute and return final metrics
     if len(dataset) == 0:
-        logging.warning("No samples found in dataset. Metrics cannot be computed.")
+        logger.warning("No samples found in dataset. Metrics cannot be computed.")
         metrics = {'dice': 0.0, 'f1': 0.0}
     else:
         metrics = metrics.compute()
     return metrics
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Main Inference Execution
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 if __name__ == "__main__":
     # Configuration
     CONFIG = {
@@ -448,6 +451,6 @@ if __name__ == "__main__":
     )
 
     # Log metrics
-    logging.info("Inference completed. Final metrics:")
+    logger.info("Inference completed. Final metrics:")
     for metric_name, value in metrics.items():
-        logging.info(f"{metric_name}: {value:.4f}")
+        logger.info(f"{metric_name}: {value:.4f}")

@@ -12,9 +12,9 @@ Author: Azhar Muhammed
 Date: December 2024
 """
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Essential Imports
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 import cv2
 import shutil
 import rasterio
@@ -31,26 +31,23 @@ from skimage import exposure
 import albumentations as A
 from tqdm import tqdm
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Local Imports
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 from helper import *
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Logging and device configuration using helper script
-# ------------------------------------------------------------
-# Set to logging.DEBUG for more detailed output (image shapes, transforms).
-# Set to logging.INFO or logging.WARNING to reduce output noise.
+# -----------------------------------------------------------------------------
 mp.set_sharing_strategy('file_system')
-current_file = __file__
-filename = os.path.basename(current_file)
-filename_no_ext = os.path.splitext(filename)[0]
+filename = os.path.splitext(os.path.basename(__file__))[0]
+# Set up logger using the imported function
 logger, file_logger = setup_logging(file=filename)
 device = get_device()
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Traiing Configuration
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 TRAIN_CONFIG = {
     'batch_size': 8,
     'num_epochs': 200,
@@ -63,9 +60,9 @@ TRAIN_CONFIG = {
 }
 
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Model Components
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 class ConvBlock(nn.Module):
     def __init__(self, in_channels, out_channels):
         super().__init__()
@@ -158,9 +155,9 @@ class UNetDiff(nn.Module):
         return torch.sigmoid(out)
 
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Loss Functions
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 class DiceLoss(nn.Module):
     def __init__(self, smooth=1e-6):
         super().__init__()
@@ -202,9 +199,9 @@ def create_optimizer_and_scheduler(model, config):
     return optimizer, scheduler
 
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Data Augmentations
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 train_transform = A.Compose([
     A.RandomCrop(int(224 * 0.7), int(224 * 0.7)),
     A.Resize(224, 224),
@@ -219,9 +216,9 @@ val_transform = A.Compose([
 ], is_check_shapes=False)
 
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Training Function
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 def train_model(model, train_loader, val_loader, config):
     """Train and validate the model."""
     model = model.to(config['device'])
@@ -281,9 +278,9 @@ def train_model(model, train_loader, val_loader, config):
             logger.info("Model improved and saved.")
 
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Dataset Definition
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 class TemporalStackDataset(Dataset):
     """
     A dataset class for loading temporal stack data (pre-event, post-event, and mask).
@@ -405,9 +402,9 @@ class TemporalStackDataset(Dataset):
             raise e
 
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Utility Functions
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 def remove_incomplete_plots(root_dir):
     """Remove plots that do not have required pre and post-event data."""
     root = Path(root_dir)
@@ -451,9 +448,9 @@ def inspect_data_shapes(root_dir):
             logger.debug(f"Post-event shape: {post_shape}")
 
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Main Function
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 def main():
     get_device(pretty='print')  # Print environment info once
     remove_incomplete_plots(TRAIN_CONFIG['dataset_dir'])
@@ -497,12 +494,12 @@ def main():
     train_model(model, train_loader, val_loader, TRAIN_CONFIG)
 
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Main Execution
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 if __name__ == "__main__":
     try:
         main()
     except Exception as e:
-        logging.error(f"Unhandled exception: {str(e)}", exc_info=True)
+        logger.error(f"Unhandled exception: {str(e)}", exc_info=True)
         raise

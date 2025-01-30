@@ -12,13 +12,12 @@ Author: Azhar Muhammed
 Date: October 2024
 """
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Essential Imports
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 import os
 import gc
 import re
-import logging
 from pathlib import Path
 import numpy as np
 import rasterio
@@ -28,17 +27,18 @@ from shapely.geometry import box
 from PIL import Image
 from tqdm import tqdm
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Local imports
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 from helper import setup_logging
 
-# Configure logging
-setup_logging()
+filename = os.path.splitext(os.path.basename(__file__))[0]
+# Set up logger using the imported function
+logger, file_logger = setup_logging(file=filename)
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Sentinel Patch Processor Class
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 class SentinelPatchProcessor:
     def __init__(self, patch_size=224):
         """
@@ -49,9 +49,9 @@ class SentinelPatchProcessor:
         """
         self.patch_size = patch_size
 
-    # ------------------------------------------------------------
+    # -----------------------------------------------------------------------------
     # Tile Processing Methods
-    # ------------------------------------------------------------
+    # -----------------------------------------------------------------------------
     def get_tile_id(self, sentinel_path):
         """Extract tile ID from Sentinel path"""
         match = re.search(r'T\d{2}[A-Z]{3}', str(sentinel_path))
@@ -80,19 +80,19 @@ class SentinelPatchProcessor:
         intersecting_count = mask.sum()
 
         if intersecting_count == 0:
-            logging.debug(f"Tile {tile_id} has no intersecting geometries out of {len(gdf)} total geometries")
+            logger.debug(f"Tile {tile_id} has no intersecting geometries out of {len(gdf)} total geometries")
             return None
 
         # Clip geometries to tile bounds
         tile_geometries = gdf[mask].copy()
         tile_geometries['geometry'] = tile_geometries.geometry.intersection(tile_bounds)
 
-        logging.debug(f"Tile {tile_id} has {len(tile_geometries)} intersecting geometries")
+        logger.debug(f"Tile {tile_id} has {len(tile_geometries)} intersecting geometries")
         return tile_geometries
 
-    # ------------------------------------------------------------
+    # -----------------------------------------------------------------------------
     # Band Loading and Processing Methods
-    # ------------------------------------------------------------
+    # -----------------------------------------------------------------------------
     def load_bands(self, sentinel_path):
         """Load and stack Sentinel-2 bands"""
         band_paths = list(Path(sentinel_path).glob('GRANULE/*/IMG_DATA/*.jp2'))
@@ -109,13 +109,13 @@ class SentinelPatchProcessor:
                             band_data[band_name] = src.read(1)
                             if band_name == 'B02':
                                 self.meta = src.meta.copy()
-                            logging.info(f"Loaded band {band_name} from {self.get_tile_id(sentinel_path)}")
+                            logger.info(f"Loaded band {band_name} from {self.get_tile_id(sentinel_path)}")
                     except Exception as e:
-                        logging.error(f"Error loading {band_name} from {sentinel_path}: {str(e)}")
+                        logger.error(f"Error loading {band_name} from {sentinel_path}: {str(e)}")
 
         if len(band_data) != len(required_bands):
             missing_bands = set(required_bands) - set(band_data.keys())
-            logging.error(f"Missing required bands for {self.get_tile_id(sentinel_path)}: {missing_bands}")
+            logger.error(f"Missing required bands for {self.get_tile_id(sentinel_path)}: {missing_bands}")
             return None
 
         return band_data
@@ -131,24 +131,24 @@ class SentinelPatchProcessor:
         try:
             # Get shape from a 10m band (B02)
             target_shape = band_data['B02'].shape
-            logging.debug(f"Target shape for resampling: {target_shape}")
+            logger.debug(f"Target shape for resampling: {target_shape}")
 
             # Bands that need resampling (20m bands)
             bands_to_resample = ['B8A', 'B11', 'B12']
 
             for band in bands_to_resample:
                 if band in band_data and band_data[band].shape != target_shape:
-                    logging.info(f"Resampling {band} to 10m resolution")
+                    logger.info(f"Resampling {band} to 10m resolution")
                     band_data[band] = self._resample_array(
                         band_data[band],
                         target_shape
                     )
-                    logging.debug(f"Resampled {band} shape: {band_data[band].shape}")
+                    logger.debug(f"Resampled {band} shape: {band_data[band].shape}")
 
             return band_data
 
         except Exception as e:
-            logging.error(f"Error in resample_to_10m: {str(e)}")
+            logger.error(f"Error in resample_to_10m: {str(e)}")
             raise
 
     def _resample_array(self, array, target_shape):
@@ -167,12 +167,12 @@ class SentinelPatchProcessor:
             return np.array(resized)
 
         except Exception as e:
-            logging.error(f"Error in _resample_array: {str(e)}")
+            logger.error(f"Error in _resample_array: {str(e)}")
             raise
 
-    # ------------------------------------------------------------
+    # -----------------------------------------------------------------------------
     # Index Computation Methods
-    # ------------------------------------------------------------
+    # -----------------------------------------------------------------------------
     def compute_indices(self, band_data):
         """
         Compute NDVI and NDMI indices from Sentinel-2 bands with safe division
@@ -214,19 +214,19 @@ class SentinelPatchProcessor:
             ndvi = np.nan_to_num(ndvi, nan=0.0)
             ndmi = np.nan_to_num(ndmi, nan=0.0)
 
-            logging.info(f"Successfully computed NDVI and NDMI indices")
-            logging.debug(f"NDVI range: [{ndvi.min():.3f}, {ndvi.max():.3f}]")
-            logging.debug(f"NDMI range: [{ndmi.min():.3f}, {ndmi.max():.3f}]")
+            logger.info(f"Successfully computed NDVI and NDMI indices")
+            logger.debug(f"NDVI range: [{ndvi.min():.3f}, {ndvi.max():.3f}]")
+            logger.debug(f"NDMI range: [{ndmi.min():.3f}, {ndmi.max():.3f}]")
 
             return ndvi, ndmi
 
         except Exception as e:
-            logging.error(f"Error computing indices: {str(e)}")
+            logger.error(f"Error computing indices: {str(e)}")
             raise
 
-    # ------------------------------------------------------------
+    # -----------------------------------------------------------------------------
     # Patch Creation Methods
-    # ------------------------------------------------------------
+    # -----------------------------------------------------------------------------
     def create_patches(self, stacked_bands, geometries, output_dir):
         """
         Create and save image patches for each geometry using the 'name' property.
@@ -241,9 +241,9 @@ class SentinelPatchProcessor:
             name_total_patches = geometries['name'].value_counts().to_dict()
             current_patch_num = {}
 
-            # Add debug logging
-            logging.info(f"Output directory: {output_dir}")
-            logging.info(f"Total patches per name: {name_total_patches}")
+            # Add debug logger
+            logger.info(f"Output directory: {output_dir}")
+            logger.info(f"Total patches per name: {name_total_patches}")
 
             for idx, geometry in geometries.iterrows():
                 try:
@@ -261,7 +261,7 @@ class SentinelPatchProcessor:
 
                     # Create the full output path
                     output_path = output_dir / f"{patch_name}.npy"
-                    logging.debug(f"Attempting to save to: {output_path}")
+                    logger.debug(f"Attempting to save to: {output_path}")
 
                     bounds = geometry.geometry.bounds
                     window = from_bounds(*bounds, transform=self.meta['transform'])
@@ -274,20 +274,20 @@ class SentinelPatchProcessor:
 
                     if patch.shape[1:] == (self.patch_size, self.patch_size):
                         np.save(output_path, patch)
-                        logging.info(f"Saved patch {patch_name} to {output_path}")
+                        logger.info(f"Saved patch {patch_name} to {output_path}")
                     else:
-                        logging.warning(f"Skipping patch {patch_name} due to incorrect size: {patch.shape[1:]}")
+                        logger.warning(f"Skipping patch {patch_name} due to incorrect size: {patch.shape[1:]}")
 
                 except KeyError as ke:
-                    logging.error(f"'name' property not found in geometry at index {idx}: {str(ke)}")
+                    logger.error(f"'name' property not found in geometry at index {idx}: {str(ke)}")
                     continue
                 except Exception as e:
-                    logging.error(f"Error processing patch for geometry at index {idx}: {str(e)}")
-                    logging.error(f"Full error: {str(e)}", exc_info=True)
+                    logger.error(f"Error processing patch for geometry at index {idx}: {str(e)}")
+                    logger.error(f"Full error: {str(e)}", exc_info=True)
                     continue
 
         except Exception as e:
-            logging.error(f"Error in create_patches: {str(e)}")
+            logger.error(f"Error in create_patches: {str(e)}")
             raise
 
     def process_imagery(self, sentinel_path, geojson_path, output_dir):
@@ -303,7 +303,7 @@ class SentinelPatchProcessor:
 
             tile_id = self.get_tile_id(sentinel_path)
             if not tile_id:
-                logging.error(f"Could not determine tile ID for {sentinel_path}")
+                logger.error(f"Could not determine tile ID for {sentinel_path}")
                 return
 
             # Get geometries (we already know they exist from main())
@@ -324,24 +324,17 @@ class SentinelPatchProcessor:
             ])
 
             self.create_patches(stacked_bands, tile_geometries, output_dir)
-            logging.info(f"Successfully processed tile {tile_id}")
+            logger.info(f"Successfully processed tile {tile_id}")
 
         except Exception as e:
-            logging.error(f"Error processing tile {tile_id}: {str(e)}")
+            logger.error(f"Error processing tile {tile_id}: {str(e)}")
             raise
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Main Function
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 def main():
     """Main function"""
-    # Get full path of current script
-    current_file = __file__
-    # Extract just the filename
-    filename = os.path.basename(current_file)
-    # Filename without extension
-    filename_no_ext = os.path.splitext(filename)[0]
-    logging.info(f"Running {filename_no_ext} script...")
     try:
         # Initialize processor
         processor = SentinelPatchProcessor(patch_size=224)
@@ -380,7 +373,7 @@ def main():
 
                 # Check if already processed
                 if output_dir.exists() and list(output_dir.glob("*.npy")):
-                    logging.info(f"Skipping {safe_dir.name} - already processed")
+                    logger.info(f"Skipping {safe_dir.name} - already processed")
                     continue
 
                 # Create directory only when needed
@@ -395,29 +388,29 @@ def main():
                 processed_count += 1
 
             except Exception as e:
-                logging.error(f"Failed to process {safe_dir}: {str(e)}", exc_info=True)
+                logger.error(f"Failed to process {safe_dir}: {str(e)}", exc_info=True)
                 error_count += 1
                 continue
 
             # Clear memory
             gc.collect()
 
-        logging.info(
+        logger.info(
             f"Processing complete. Processed: {processed_count}, "
             f"Skipped: {skipped_count}, Errors: {error_count}"
         )
 
     except Exception as e:
-        logging.error(f"Main execution failed: {str(e)}", exc_info=True)
+        logger.error(f"Main execution failed: {str(e)}", exc_info=True)
         raise
 
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Main Execution
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 if __name__ == "__main__":
     try:
         main()
     except Exception as e:
-        logging.error(f"Unhandled exception: {str(e)}", exc_info=True)
+        logger.error(f"Unhandled exception: {str(e)}", exc_info=True)
         raise

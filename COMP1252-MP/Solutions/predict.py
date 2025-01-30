@@ -11,9 +11,9 @@ Author: Azhar Muhammed
 Date: December 2024
 """
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Essential Imports
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 import torch
 import numpy as np
 import matplotlib.pyplot as plt
@@ -24,15 +24,15 @@ import rasterio
 from tabulate import tabulate
 from sklearn.metrics import precision_score, recall_score, f1_score
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Local Imports
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 from helper import *
 from model_v2 import UNetDiff
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Data Loading and Preprocessing Functions
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 def load_and_preprocess_data(pre_file, post_file):
     """Load and preprocess image pairs."""
     # Load numpy arrays
@@ -67,9 +67,9 @@ def load_mask(mask_file):
         mask = src.read(1)
         return (mask > 0).astype(np.float32)
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Evaluation Metrics
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 def calculate_metrics(true_mask, pred_mask):
     """Calculate comprehensive metrics for the prediction."""
     # Flatten masks for metric calculation
@@ -95,9 +95,9 @@ def calculate_metrics(true_mask, pred_mask):
         'F1 Score': f1
     }
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Main Prediction and Visualization Pipeline
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 def predict_and_visualize():
     """Main function for deforestation detection and visualization."""
     text = "Deforestation Detection Analysis"
@@ -216,8 +216,8 @@ def predict_and_visualize():
     print(f"\nVisualization saved to: {save_path}")
     print("\nAnalysis complete!")
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Script Entry Point
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 if __name__ == "__main__":
     predict_and_visualize()

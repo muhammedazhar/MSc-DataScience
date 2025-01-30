@@ -12,9 +12,9 @@ Author: Azhar Muhammed
 Date: October 2024
 """
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Essential Imports
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 import os
 import sys
 from glob import glob
@@ -22,25 +22,26 @@ import geopandas as gpd
 import rasterio
 from rasterio import features
 
-# Local imports
-from helper import *
+# -----------------------------------------------------------------------------
+# Local Imports
+# -----------------------------------------------------------------------------
+from helper import setup_logging
 
-# ------------------------------------------------------------
-# Logging Setup
-# ------------------------------------------------------------
-setup_logging()
+# -----------------------------------------------------------------------------
+# Constants and Configuration
+# -----------------------------------------------------------------------------
+filename = os.path.splitext(os.path.basename(__file__))[0]
+# Set up logger using the imported function
+logger, file_logger = setup_logging(file=filename)
 
-# ------------------------------------------------------------
-# Constants
-# ------------------------------------------------------------
 RASTER_WIDTH = 224
 RASTER_HEIGHT = 224
 MASK_VALUE = 255
 MASK_DTYPE = 'uint8'
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Mask Creation Function
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 def create_mask(geometry, width=RASTER_WIDTH, height=RASTER_HEIGHT, crs=None):
     """
     Create a raster mask from geometry.
@@ -61,12 +62,12 @@ def create_mask(geometry, width=RASTER_WIDTH, height=RASTER_HEIGHT, crs=None):
         return mask, transform
 
     except Exception as e:
-        logging.error(f"Error creating mask: {str(e)}")
+        logger.error(f"Error creating mask: {str(e)}")
         raise
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Metadata Generation Function
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 def get_output_metadata(height, width, crs, transform):
     """
     Generate raster metadata for output files.
@@ -81,9 +82,9 @@ def get_output_metadata(height, width, crs, transform):
         'transform': transform
     }
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # GeoJSON Processing Function
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 def process_geojson(samples_data_dir, base_dir):
     """
     Process GeoJSON files and generate masks.
@@ -95,7 +96,7 @@ def process_geojson(samples_data_dir, base_dir):
             raise FileNotFoundError("No .geojson files found in the Samples directory.")
 
         latest_file = max(sample_files, key=os.path.getctime)
-        logging.info(f"Processing GeoJSON file: {os.path.basename(latest_file)}")
+        logger.info(f"Processing GeoJSON file: {os.path.basename(latest_file)}")
 
         # Load and process GeoJSON
         gdf = gpd.read_file(latest_file)
@@ -117,15 +118,15 @@ def process_geojson(samples_data_dir, base_dir):
             with rasterio.open(mask_path, 'w', **out_meta) as dest:
                 dest.write(mask, 1)
 
-            logging.info(f"Created mask for {name} - {row['img_date']} as {date_str}.tif file")
+            logger.info(f"Created mask for {name} - {row['img_date']} as {date_str}.tif file")
 
     except Exception as e:
-        logging.error(f"Error processing GeoJSON: {str(e)}")
+        logger.error(f"Error processing GeoJSON: {str(e)}")
         raise
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Main Execution Function
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 def main():
     """Main execution function"""
     # Get full path of current script
@@ -134,7 +135,7 @@ def main():
     filename = os.path.basename(current_file)
     # Filename without extension
     filename_no_ext = os.path.splitext(filename)[0]
-    logging.info(f"Running {filename_no_ext} script...")
+    logger.info(f"Running {filename_no_ext} script...")
 
     # Define directories
     samples_data_dir = "../Datasets/Testing/Samples"
@@ -142,18 +143,18 @@ def main():
 
     try:
         process_geojson(samples_data_dir, base_dir)
-        logging.info("Mask generation completed successfully")
+        logger.info("Mask generation completed successfully")
 
     except Exception as e:
-        logging.error(f"Fatal error: {str(e)}")
+        logger.error(f"Fatal error: {str(e)}")
         sys.exit(1)
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Script Entry Point
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 if __name__ == "__main__":
     try:
         main()
     except Exception as e:
-        logging.error(f"Unhandled exception: {str(e)}", exc_info=True)
+        logger.error(f"Unhandled exception: {str(e)}", exc_info=True)
         raise

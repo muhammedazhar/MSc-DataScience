@@ -12,9 +12,9 @@ Author: Azhar Muhammed
 Date: July 2024
 """
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Essential Imports
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 import os
 import sys
 import torch
@@ -25,9 +25,9 @@ from rich.console import Console
 from rich.theme import Theme
 from colorlog import ColoredFormatter
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Logging Setup Function
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 def setup_logging(log_level=logging.INFO, file='None'):
     # Create logs directory if it doesn't exist
     log_dir = '../Docs/Logs'
@@ -43,33 +43,16 @@ def setup_logging(log_level=logging.INFO, file='None'):
     })
     console = Console(theme=custom_theme)
 
-    # Configure color formatter for console output
-    console_formatter = ColoredFormatter(
-        "%(log_color)s[%(asctime)s] [%(levelname)s] [%(name)s] %(message)s%(reset)s",
-        datefmt="%Y-%m-%d %H:%M:%S",
-        log_colors={
-            'DEBUG':    'green',
-            'INFO':     'cyan',
-            'WARNING':  'yellow',
-            'ERROR':    'red',
-            'CRITICAL': 'red,bg_white',
-        },
-        secondary_log_colors={},
-        style='%'
-    )
-
     # File formatter (without colors)
     file_formatter = logging.Formatter(
         '[%(asctime)s] [%(levelname)s] [%(name)s] %(message)s',
         datefmt="%Y-%m-%d %H:%M:%S"
     )
 
-    # Create and configure handlers
-    console_handler = logging.StreamHandler()
-    console_handler.setFormatter(console_formatter)
-    
-    file_handler = logging.FileHandler(os.path.join(log_dir, 'processing.log'))
-    file_handler.setFormatter(file_formatter)
+    # Clear any existing handlers from the root logger
+    root_logger = logging.getLogger()
+    root_logger.handlers.clear()
+    root_logger.setLevel(log_level)
 
     # Configure rich handler for enhanced console output
     rich_handler = RichHandler(
@@ -79,32 +62,37 @@ def setup_logging(log_level=logging.INFO, file='None'):
         rich_tracebacks=True,
         tracebacks_show_locals=True
     )
+    
+    # File handler for root logger
+    file_handler = logging.FileHandler(os.path.join(log_dir, 'processing.log'))
+    file_handler.setFormatter(file_formatter)
 
-    # Configure root logger
-    root_logger = logging.getLogger()
-    root_logger.setLevel(log_level)
-    root_logger.addHandler(file_handler)
+    # Add handlers to root logger
     root_logger.addHandler(rich_handler)
+    root_logger.addHandler(file_handler)
 
     # Module-specific logger
     logger = logging.getLogger(file)
     logger.setLevel(log_level)
+    # Don't add handlers to module logger - it will use root logger's handlers
 
-    # File-only logger
+    # File-only logger (if you need a separate logger that only writes to file)
     file_logger = logging.getLogger('file_only')
     file_logger.setLevel(log_level)
+    file_logger.propagate = False  # Don't propagate to root logger
     file_only_handler = logging.FileHandler(os.path.join(log_dir, 'processing.log'))
     file_only_handler.setFormatter(file_formatter)
     file_logger.addHandler(file_only_handler)
-    file_logger.propagate = False
+
+    logger.info(f"Running {file} script...")
 
     return logger, file_logger
 
 logger, file_logger = setup_logging()
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Environment Variable Check Function
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 def env_check(var_name, placeholder):
     """
     Check if the environment variable is correctly set.
@@ -125,9 +113,9 @@ def env_check(var_name, placeholder):
         sys.exit(1)
     return value
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Device Information Function
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 def get_device(pretty='silent'):
     """
     Get PyTorch device information with optional output control.
@@ -167,9 +155,9 @@ def get_device(pretty='silent'):
 
     return device
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Results Formatting Function
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 def format(results):
     formatted_results = []
 
@@ -204,7 +192,7 @@ def format(results):
 
     return "\n".join(formatted_results)
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Environment Setup
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------
 load_dotenv("../Keys/.env")
