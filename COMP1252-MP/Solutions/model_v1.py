@@ -208,7 +208,7 @@ def train_model(model, train_loader, val_loader, criterion, optimizer, num_epoch
         train_acc = 0
         train_iou = 0
 
-        for inputs, masks in tqdm(train_loader, desc='Training'):
+        for inputs, masks in tqdm(train_loader, desc='Training', leave=False):
             inputs = inputs.to(DEVICE)
             masks = masks.to(DEVICE)
 
@@ -304,7 +304,7 @@ def main():
 
     print('Loading training images and masks')
     loading_time = time.time()
-    for n, id_ in tqdm(enumerate(train_ids), total=len(train_ids)):
+    for n, id_ in tqdm(enumerate(train_ids), total=len(train_ids), leave=False):
         path = TRAIN_PATH + id_
         img = imread(path + '/images/' + id_ + '.png')[:, :, :IMG_CHANNELS]
         img = resize(img, (IMG_HEIGHT, IMG_WIDTH), mode='constant', preserve_range=True)

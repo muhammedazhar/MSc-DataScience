@@ -42,7 +42,7 @@ from helper import *
 mp.set_sharing_strategy('file_system')
 filename = os.path.splitext(os.path.basename(__file__))[0]
 # Set up logger using the imported function
-logger, file_logger = setup_logging(file=filename)
+logger, file_logger = setup_logging(file='None')
 device = get_device()
 
 # -----------------------------------------------------------------------------
@@ -208,7 +208,7 @@ train_transform = A.Compose([
     A.RandomBrightnessContrast(p=0.5),
     A.ElasticTransform(p=0.5),
     A.GridDistortion(p=0.5),
-    A.CoarseDropout(max_holes=8, max_height=20, max_width=20, p=0.5)
+    # A.CoarseDropout(max_holes=8, max_height=20, max_width=20, p=0.5) # Uncomment for more augmentation
 ], is_check_shapes=False)
 
 val_transform = A.Compose([
@@ -452,6 +452,7 @@ def inspect_data_shapes(root_dir):
 # Main Function
 # -----------------------------------------------------------------------------
 def main():
+    setup_logging(file=filename)  # Print file name in logs
     get_device(pretty='print')  # Print environment info once
     remove_incomplete_plots(TRAIN_CONFIG['dataset_dir'])
     inspect_data_shapes(TRAIN_CONFIG['dataset_dir'])

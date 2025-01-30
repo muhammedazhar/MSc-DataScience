@@ -129,13 +129,6 @@ def process_geojson(samples_data_dir, base_dir):
 # -----------------------------------------------------------------------------
 def main():
     """Main execution function"""
-    # Get full path of current script
-    current_file = __file__
-    # Extract just the filename
-    filename = os.path.basename(current_file)
-    # Filename without extension
-    filename_no_ext = os.path.splitext(filename)[0]
-    logger.info(f"Running {filename_no_ext} script...")
 
     # Define directories
     samples_data_dir = "../Datasets/Testing/Samples"
