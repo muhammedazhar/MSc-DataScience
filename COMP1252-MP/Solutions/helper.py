@@ -28,7 +28,7 @@ from colorlog import ColoredFormatter
 # -----------------------------------------------------------------------------
 # Logging Setup Function
 # -----------------------------------------------------------------------------
-def setup_logging(log_level=logging.INFO, file='None'):
+def setup_logging(log_level=logging.INFO, file=('default', 'None')):
     # Create logs directory if it doesn't exist
     log_dir = '../Docs/Logs'
     os.makedirs(log_dir, exist_ok=True)
@@ -84,11 +84,12 @@ def setup_logging(log_level=logging.INFO, file='None'):
     file_only_handler.setFormatter(file_formatter)
     file_logger.addHandler(file_only_handler)
 
-    logger.info(f"Running {file} script...")
+    if file not in [None, 'None']:
+        logger.info(f"Running {file} script...")
 
     return logger, file_logger
 
-logger, file_logger = setup_logging()
+logger, file_logger = setup_logging(file=None)
 
 # -----------------------------------------------------------------------------
 # Environment Variable Check Function
