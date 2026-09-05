@@ -25,7 +25,7 @@ class SentinelPatchProcessor:
     def __init__(self, patch_size: int = 224, cloud_coverage_threshold: float = 0.3, max_workers: int = 4):
         """
         Initialize the Sentinel-2 patch processor with cloud filtering.
-        
+
         Args:
             patch_size (int): Size of the output patches (default: 224)
             cloud_coverage_threshold (float): Maximum allowed cloud coverage (0.0 - 1.0)
@@ -76,7 +76,7 @@ class SentinelPatchProcessor:
             band_name_match = re.search(r'B\d{2}|B8A', band_path.name)
             if not band_name_match:
                 return None
-            
+
             band_name = band_name_match.group(0)
             if band_name not in self.required_bands:
                 return None
@@ -118,7 +118,7 @@ class SentinelPatchProcessor:
 
         with ThreadPoolExecutor(max_workers=self.max_workers) as executor:
             results = list(executor.map(resample_band, band_data.items()))
-            
+
         return dict(results)
 
     def _resample_array(self, array: np.ndarray, target_shape: Tuple[int, int]) -> np.ndarray:
@@ -269,10 +269,10 @@ def main():
             product_name = safe_dir.parent.name
             output_dir = output_base / product_name
             sample_files = glob('../Datasets/Testing/Samples/*.geojson')
-            
+
             if not sample_files:
                 raise FileNotFoundError("No .geojson files found in Testing/Samples/")
-            
+
             latest_file = max(sample_files, key=os.path.getctime)
             future = executor.submit(
                 processor.process_imagery,

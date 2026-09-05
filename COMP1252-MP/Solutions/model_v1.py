@@ -238,8 +238,8 @@ def train_model(model, train_loader, val_loader, criterion, optimizer, num_epoch
 
         with torch.no_grad():
             for inputs, masks in val_loader:
-                inputs = inputs.to(DEVICE)
-                masks = masks.to(DEVICE)
+                inputs = inputs.to(DEVICE, non_blocking=True)
+                masks = masks.to(DEVICE, non_blocking=True)
 
                 outputs = model(inputs)
                 loss = criterion(outputs, masks)
@@ -324,8 +324,8 @@ def main():
     train_dataset = NucleiDataset(X_train[:train_size], Y_train[:train_size])
     val_dataset = NucleiDataset(X_train[train_size:], Y_train[train_size:])
 
-    train_loader = DataLoader(train_dataset, batch_size=16, shuffle=True)
-    val_loader = DataLoader(val_dataset, batch_size=16)
+    train_loader = DataLoader(train_dataset, batch_size=16, shuffle=True, pin_memory=True)
+    val_loader = DataLoader(val_dataset, batch_size=16, pin_memory=True)
 
     # Initialize model, criterion, and optimizer
     model = UNet().to(DEVICE)
@@ -346,7 +346,7 @@ def main():
     # Make predictions
     model.eval()
     test_dataset = NucleiDataset(X_train[train_size:], Y_train[train_size:])  # Include masks
-    test_loader = DataLoader(test_dataset, batch_size=16)
+    test_loader = DataLoader(test_dataset, batch_size=16, pin_memory=True)
 
     predictions = []
     with torch.no_grad():
