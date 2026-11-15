@@ -167,7 +167,7 @@ cython_debug/
 /Datasets/Validation/
 /Datasets/AnnotationAudit/
 /Datasets/PixelQA/
-/Datasets/CuratedPilot/
+/Datasets/CuratedPilot/*
 *.tar
 *.h5
 *.hdf
@@ -198,3 +198,11 @@ __MACOSX/
 
 # Credentials
 Keys/
+
+# Preserve the small reviewed pilot and evidence; keep preparation/cache output local.
+!/Datasets/CuratedPilot/v1/
+/Datasets/CuratedPilot/v1/*
+!/Datasets/CuratedPilot/v1/dataset/
+!/Datasets/CuratedPilot/v1/verification/
+!/Datasets/CuratedPilot/v1/dataset/**/*.tif
+!/Docs/Reviews/CuratedPilotV1/prepared_cases/**/*.tif

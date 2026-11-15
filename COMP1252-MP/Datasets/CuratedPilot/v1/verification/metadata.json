@@ -1,0 +1,50 @@
+{
+  "verification_status": "passed",
+  "examples_checked": 13,
+  "reviews_retained": 28,
+  "timeline_observations_checked": 136,
+  "unique_observation_caches_checked": 136,
+  "pixel_counts": {
+    "supervised_positive_pixels": 151,
+    "supervised_stable_pixels": 2640,
+    "ignored_pixels": 50457
+  },
+  "visibility_interval_width_days": [
+    15,
+    10,
+    10,
+    20,
+    5,
+    5,
+    5,
+    5,
+    5,
+    10,
+    5,
+    10,
+    5
+  ],
+  "source_jp2_pixel_reads": 0,
+  "model_predictions": 0,
+  "dataset_metadata_sha256": "5d929465f148c1823f6332222f56430dac9a5b0d1985d8545c2eb17c99ec3e71",
+  "verification_implementation_sha256": "12f27b43a15d26e7bd3fc6c3df9363ed9b5b1eb3e017a2665548d1895830e8df",
+  "scope": "Artifact/evidence consistency only; assistant labels are not expert-certified ground truth.",
+  "resources": {
+    "logical_cpu_count": 11,
+    "machine_ram_gib": 18.0,
+    "worker_peak_rss_mib_sampled": 119.0,
+    "worker_high_water_rss_mib": 118.96875,
+    "minimum_available_gib_sampled": 4.14,
+    "elapsed_seconds": 1.02,
+    "worker_limit_mib": 512,
+    "minimum_available_gib_limit": 1.5,
+    "runtime_limit_seconds": 180,
+    "workers": 1,
+    "native_thread_limit": 1,
+    "nice_increment": 10,
+    "gdal_cache_mib": 16,
+    "warp_memory_mib": 0,
+    "gpu_used": false,
+    "monitor_interval_seconds": 0.25
+  }
+}

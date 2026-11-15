@@ -1,174 +1,130 @@
-# Deforestation pilot handoff
+# Deforestation project handoff
 
-## Objective and authorization
+## Current state: reviewed pilot complete
 
-The user wants to locate deforestation and estimate the first usable image in
-which it becomes visible. The annotation `img_date` is an image observation
-date, not the physical felling date. The user approved building a small reviewed
-training pilot, including timeline evidence, stable-forest controls and exports.
-They also explicitly requested this separate branch and a durable handoff.
+Branch: `codex/curated-deforestation-pilot`.
+Initial durable checkpoint: `4eb2387`; the following completion commit contains
+final decisions, the small dataset and verification. Continue on this branch.
 
-Branch: `codex/curated-deforestation-pilot` (created from `master`).
 Repository root: `/Users/muhammedazhar/Developer/Learning/MSc-DataScience`.
-Project root: `/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP`.
+Project: `/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP`.
 Python: `/Users/muhammedazhar/.miniconda3/envs/COMP1252-MP/bin/python`.
 
-Keep Mac responsiveness: one low-priority worker (`nice +10`), native threads 1,
-no GPU, monitored 512 MiB worker RSS, 1.5 GiB available-system-memory reserve,
-300-second per-worker timeout. Existing `validate_sample.run_guarded` supplies
-atomic staging, watchdog and cleanup. Do not start multiple pixel workers.
+The user authorized the data audit, quality scan and reviewed pilot. They also
+explicitly requested a separate branch and durable handoff. Their goal is to
+locate deforestation and estimate when it first becomes visible in usable
+imagery. Annotation `img_date` is the image observation date, not physical
+felling time. Dataset construction is complete; no forest model was trained.
 
-## Completed foundations
+## Completed outputs
 
-- Correctly aligned 64-pixel / 10-m single-sample validator and signed indices.
-- Annotation provenance audit: 5,696 raw annotations -> 3,911 unique events;
-  601 geographic groups with frozen train/validation/test assignments.
-- Full pixel-quality screening: 6,948 pairs / 55 batches / zero errors.
-  2,924 automatic passes pending review, 3,405 excluded, 578 visual-review,
-  41 label-review cases. Maximum scan-worker memory 464.9 MiB.
-- Review queue: 682 anchor events / 7,001 links; 554 events with proposals,
-  124 alternate-imagery/quality-review and 4 label-review events.
-- Independent full verification passed all 6,948 masks and reconstructed
-  targets, 5,096 observation caches, 37 scenes and 682 review entries.
+- Corrected physical-grid sample validation and signed NDVI/NDMI features.
+- Annotation audit: 5,696 raw records -> 3,911 unique events in 601 frozen
+  geographic train/validation/test groups.
+- Full QA: 6,948 pairs / 55 batches / zero processing errors. Statuses: 2,924
+  pass pending visual review, 3,405 excluded, 578 visual-review, 41 label-review.
+  Independent verification passed all masks, targets, 5,096 caches and links.
+- Event review queue: 682 events, 7,001 links. 554 events have candidate
+  proposals; 124 require alternate imagery/quality review; 4 need label review.
+- Reviewed pilot: 28 candidate dispositions retained, 13 accepted examples
+  from 13 distinct training groups with 13 matched stable-forest control ROIs.
+  Nine UXA, three UYA Summer-source, one UYA Spring-source (June).
+- Labels: 151 clearing-interior pixels, 2,640 stable-forest pixels, 50,457
+  ignored pixels. Reviewed interior area 1.51 ha; this is not total event area.
+- All 13 full timelines and primary pair previews were visually inspected.
+  Accepted states have zero corresponding ROI QA; clearing persists in later
+  clear frames and controls have >=3 clear dates including both pair endpoints.
+  Observed intervals range 5–20 days and explicitly retain uncertain/cloud dates.
+- Independent final pilot verification passed all 13 arrays, all 28 decisions,
+  136 timeline observations/caches, feature signs/scales, exact grids/ROI masks,
+  hashes/source statistics, date bounds and held-out footprint isolation.
+- Full test suite: **136 passed** (known old rejection-path ResourceWarnings).
 
-Read `Docs/Guides/{SingleSampleValidation,AnnotationAudit,PixelQuality}.md`.
-Large generated products stay local under ignored `Datasets/Validation/`,
-`Datasets/AnnotationAudit/v1/` and `Datasets/PixelQA/v1/`. Raw satellite scenes
-and existing forest models were not changed.
+## Where to pick up
 
-**Preserve the frozen QA policy.** Its identity is
-`fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560`.
-It hashes `assess_pixel_quality.py`, `pixelqa_masks.py`,
-`pixelqa_scene_metadata.py`, `validate_sample.py`, and
-`annotation_scene_inventory.py`, plus configuration/package/model versions.
-Editing those processing files invalidates existing caches/resumption. New
-curation helpers were deliberately added separately.
+Read `Docs/Guides/CuratedPilot.md` first. The small final dataset is tracked:
 
-## Current pilot status — unfinished checkpoint
+- `Datasets/CuratedPilot/v1/dataset/report.md`: concise accepted/rejected table
+  and direct links to original local inspection artifacts.
+- `dataset/training_manifest.jsonl`: all 13 examples; array paths are relative
+  to the dataset directory and can be consumed without raw satellite scenes.
+- `dataset/examples/<event-id>/`: 27-channel input TIFF, partial supervision,
+  valid mask and hash-rich metadata. The whole dataset is about 6.2 MiB.
+- `dataset/review_decisions.jsonl`: all 28 explicit dispositions and timelines.
+- `Datasets/CuratedPilot/v1/verification/{metadata.json,report.md}`: completed
+  independent checks and measured resources.
+- `Docs/Reviews/CuratedPilotV1/`: finalized `reviews.json`, selection/replacement
+  provenance and all 28 case JSONs, PNGs and ROI masks. Its prepared-case index
+  maps tracked evidence to original local preparation paths. Historical draft
+  notes are clearly superseded by final reviews.
 
-The new pilot code exists and has focused tests:
+Large raw imagery/caches and full audit/QA outputs remain local under ignored
+`Datasets/Sentinel-2/`, `Datasets/AnnotationAudit/v1/`, `Datasets/PixelQA/v1/`.
+Prepared review batches remain local under
+`Datasets/CuratedPilot/v1/{review_parts,replacement_parts}/`. They are finished;
+no processing worker remains. Only the small final dataset/verification and
+tracked evidence were intentionally added to Git; original data/models remain
+unchanged. A fresh computer needs source datasets to regenerate crops, but the
+tracked final TIFFs and evidence can be inspected/used directly.
 
-- `Solutions/prepare_curated_pilot.py`: guarded training-only timeline batches.
-- `Solutions/curated_pilot_review.py`: explicit review/evidence validator.
-- `Solutions/curated_pilot_exports.py`: seven bands/date -> correctly scaled
-  pre9/post9/(post-pre)9 features; strict partial-label exports and round-trip
-  verification.
-- `Solutions/build_curated_pilot.py`: guarded review-bound export orchestrator.
+## Important scientific and implementation constraints
 
-All **28** candidate cases are prepared locally under
-`Datasets/CuratedPilot/v1/{review_parts,replacement_parts}/` (17 initial and 11
-replacement cases). Preparation is finished; no pixel worker should remain.
-The initial preparation peak was 417.6 MiB. Each case has `case.json`,
-`timeline.png`, `pair.png`, `target_mask.tif`, `positive_interior.tif` and
-`proposed_control.tif`. Timelines include every local same-year observation in
-the declared +/-45-day window; they do not establish global earliest clearing.
+Partial labels are **1** reviewed clearing interior, **0** reviewed forest ROI,
+and **255** everywhere else. `valid_mask` is exactly `label != 255`. Never turn
+unknown background, empty targets or quality exclusions into negative labels.
+The 13 controls lie inside original training grids; they are not independent
+held-out negative examples or proof of permanent stability.
 
-Durable branch evidence is copied to `Docs/Reviews/CuratedPilotV1/` (about
-6.5 MiB). This includes all 28 case JSONs, PNGs and ROI masks, selection and
-replacement provenance, the original 17 reviews, and eight draft replacement
-timeline interpretations. The tracked `prepared_case_index.json` maps each
-copy to its original local case path. Raw scenes/caches remain local and are
-needed for final feature export; copying code alone to another computer will
-not provide them. The generated `.gitignore` directories are intentional.
+The original binary trainer is **incompatible with 255** until its loader,
+loss and metrics explicitly ignore those pixels. It also has previously found
+issues with datetime parsing, uint16 index subtraction, augmentation clipping,
+channel scaling, inference paths/masks and truthful prediction display. Do not
+feed this pilot into that trainer unchanged. The appropriate next milestone is
+an ignore-aware loader/loss/metrics and a small baseline smoke run; retain
+geographic separation and do not claim independent accuracy from this pilot.
 
-**Only two initial cases currently have formal accepted decisions** in local
-`Datasets/CuratedPilot/v1/reviews.json` (also copied into tracked evidence):
+The current pilot is strong-signal/clear-image biased. The source called Spring
+has qualifying June examples; it does not establish seasonal coverage. Exact
+selection filter order is saved in selection_order_clarification.json. Only
+windowed local observations support `(last observed forest, first clearing]`;
+these are not exact felling dates or globally earliest sightings.
 
-| Event | Observed transition interval | Positive interior / stable pixels |
-| --- | --- | ---: |
-| `event-e691d44c335d87649310` | (2019-06-11, 2019-06-26] | 25 / 256 |
-| `event-263e9027a6142dc9fc84` | (2019-08-15, 2019-08-25] | 13 / 256 |
+The user requires Mac responsiveness: one `nice +10` worker, native threads 1,
+no GPU, monitored 512 MiB worker budget, 1.5 GiB available-system-memory reserve,
+300-second per-worker limit. Use `validate_sample.run_guarded` for new pixel
+work. Actual largest pilot preparation worker: 417.6 MiB. Export: 29.51s /
+207.5 MiB. Independent verification: 1.02s / about 119 MiB. The earlier full QA
+scan used max 464.9 MiB and 2h49m sequential worker time.
 
-Both timelines AND primary pairs were visually inspected by the root assistant.
-An independent agent checked all review hashes, exact timeline coverage and
-numeric QA compatibility. Later clear observations confirm persistence; each
-forest control has >=3 clear dates. June 16 for the first event remains
-explicitly uncertain and June 21 obscured. These are assistant-reviewed pilot
-labels, not expert ground-truth certification or physical felling dates.
+## Frozen QA identity
 
-The other 15 initial cases are rejected in the formal review file: mostly
-boundary-dominated targets with fewer than four interior pixels, one with no
-fully clear later persistence observation, one with its first clear post-image
-on the last available date. Do not relabel their unreviewed pixels as negatives.
+Keep policy
+`fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560`
+unchanged when reusing completed QA/cache. It hashes these existing files:
+`assess_pixel_quality.py`, `pixelqa_masks.py`, `pixelqa_scene_metadata.py`,
+`validate_sample.py`, `annotation_scene_inventory.py`, plus config/package/model
+versions. Editing them invalidates QA resumption. New curation code was added
+separately: `prepare_curated_pilot.py`, `curated_pilot_review.py`,
+`curated_pilot_exports.py`, `build_curated_pilot.py`, `verify_curated_pilot.py`.
 
-Eight replacement timelines have been inspected, but **formal approval is still
-pending their primary pair PNG inspection and validator confirmation**. Their
-per-date forest/clearing/obscured/uncertain interpretations and control notes
-are saved in tracked
-`replacement_timeline_inspection_drafts.json`. None of those drafts is a
-training approval. The remaining three replacement timelines are uninspected:
+One baseline geometry, `event-8179ed3a1e4286448a17`, becomes invalid after
+projection and emitted distance warnings in preparation. Provenance proves it
+is >407m from every initial crop and >40km from replacements, beyond the 20m
+exclusion margin. New export code conservatively bbox-filters and repairs
+relevant invalid geometries without changing the stored catalogue or frozen
+QA files. The warning did not alter any selected control exclusion.
 
-- `replacement_parts/00002/event-0012effe85aa26b69541/`
-- `replacement_parts/00002/event-65fa6d8d7a0c82498340/`
-- `replacement_parts/00002/event-e932f0d28b2819f8368d/`
+## Commands
 
-No final `Datasets/CuratedPilot/v1/dataset/` export has been run at this
-checkpoint. The accepted count must follow evidence; there is no requirement
-to force twelve examples or artificial source balance.
-
-## Next actions
-
-1. Inspect the eight pending primary pair PNGs using the saved draft timeline
-   notes, then inspect the remaining three timelines and primary pairs. Accept
-   or reject based on actual forest-to-clearing visibility, later persistence
-   and stable control-region evidence; metadata/NDVI alone is insufficient.
-2. Append explicit observations for every prepared scene/date to local
-   `reviews.json`. Each row needs `case_file`, exact `event_id`/`pair_id`,
-   `visual_review` and `temporal_label_review` (`accepted`/`rejected`),
-   `qa_policy_id`, reviewer/notes, all observation states, and SHA256 hashes of
-   `case.json`, `timeline.png`, `pair.png`. Also retain ROI mask hashes.
-   `validate_review(case, review)` derives bounds; never invent dates from
-   annotation dates or NDVI. Keep all rejected cases and reasons.
-3. Validate every review, preserving accepted event/group uniqueness and the
-   unchanged frozen training grids. Copy finalized reviews into tracked evidence.
-4. Run the guarded export once reviews are final:
-
-   ```bash
-   /Users/muhammedazhar/.miniconda3/envs/COMP1252-MP/bin/python -B \
-     Solutions/build_curated_pilot.py \
-     --reviews Datasets/CuratedPilot/v1/reviews.json \
-     --output Datasets/CuratedPilot/v1/dataset
-   ```
-
-5. Independently check every exported small TIFF, feature differences, exact
-   frozen grid/split joins, review hashes, supervised ROI/QA intersections,
-   counts and visibility/control evidence. No broad JP2 reread is necessary.
-6. Complete `Docs/Guides/CuratedPilot.md`, README pointer, concise final report,
-   resource measurements and this handoff; run full test suite and diff checks.
-   Commit the completed milestone on this branch.
-
-Partial supervision is essential: **1** = explicitly reviewed clearing interior;
-**0** = explicitly reviewed stable-forest ROI; **255** = everything else.
-Controls stay INSIDE existing training crops, avoiding new-grid split leakage.
-The original binary trainer is incompatible until its loader/loss/metrics
-explicitly ignore 255. Do not run it on this dataset yet. No forest-model
-training has been authorized as part of this dataset-construction milestone.
-
-## Known qualifications
-
-- Strong-signal, clear-image candidate selection is biased and training-only.
-  The qualifying Spring-source examples are from June, not seasonal coverage.
-  Read the selection-order clarification instead of assuming absolute nearest
-  pre-image selection regardless of the other eligibility filters.
-- One baseline-only geometry, `event-8179ed3a1e4286448a17`, becomes invalid after
-  projection and emits Shapely distance warnings during preparation. Its
-  bounding rectangle is >407 m from every initial selected crop and >40 km
-  from replacements, outside their 20 m exclusion range. Replacement provenance
-  records this proof. New export code uses conservative bbox prefiltering and
-  `make_valid` for relevant geometries; original catalogue/policy is untouched.
-- Existing QA summary rejection-path tests emit file-closing ResourceWarnings;
-  they pass. Do not casually edit frozen processing files to silence them.
-- Some subagents reached service usage limits. Their completed files remain
-  available; do not assume an errored agent completed any requested follow-up.
-
-## Validation command
+Run from the project root with the existing environment:
 
 ```bash
-/Users/muhammedazhar/.miniconda3/envs/COMP1252-MP/bin/python -B \
-  -m unittest discover -s Tests
+/Users/muhammedazhar/.miniconda3/envs/COMP1252-MP/bin/python -B -m unittest discover -s Tests
+
+/Users/muhammedazhar/.miniconda3/envs/COMP1252-MP/bin/python -B Solutions/verify_curated_pilot.py --output Datasets/CuratedPilot/v1/verification-recheck
 ```
 
-At this checkpoint **136 tests passed** in the full suite (0.514 seconds),
-including preparation, review validation, exports, orchestration and the earlier
-audit/QA/resource checks. The known rejection-path ResourceWarnings remain.
-Check current full-suite output if another agent changes tests.
+The independent verifier checks local original preparation/cache/source
+fingerprints, so it requires those local inputs. Use a fresh output directory;
+completed guarded outputs are intentionally not overwritten. No full dataset
+reprocessing or model training is needed to inspect this completed milestone.

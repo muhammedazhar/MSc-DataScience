@@ -1,5 +1,5 @@
 {
-  "scope": "Assistant visual timeline notes saved before context/usage interruption. These are NOT training approvals.",
+  "status": "Historical draft notes superseded by finalized reviews.json; all eleven replacement timelines and primary pairs have now been inspected.",
   "drafts": {
     "event-8628872c64f4cabf6e67": {
       "forest": [
@@ -214,6 +214,82 @@
       ],
       "notes": "Timeline inspected: forest interior through August10 becomes C-shaped clearing August20 and persists. July26 target contrast uncertain and control has QA1%; August15 obscured.",
       "review_status": "draft; timeline inspected, primary pair PNG and formal validator confirmation still required"
+    },
+    "event-0012effe85aa26b69541": {
+      "forest": [
+        "2018-07-31"
+      ],
+      "clearing": [
+        "2018-08-05",
+        "2018-08-10",
+        "2018-08-20",
+        "2018-08-25",
+        "2018-08-30",
+        "2018-09-04",
+        "2018-09-19"
+      ],
+      "obscured": [
+        "2018-08-15"
+      ],
+      "uncertain": [
+        "2018-07-26"
+      ],
+      "control_obscured": [
+        "2018-08-15",
+        "2018-09-19"
+      ],
+      "control_uncertain": [
+        "2018-07-26"
+      ],
+      "notes": "Full timeline and pair inspected. Forest in the gap between older clearing lobes on July31 becomes brown clearing August5 and persists. The green-box forest remains stable on clear observations; July26 veil and later ROI cloud flags remain uncertain/obscured."
+    },
+    "event-65fa6d8d7a0c82498340": {
+      "forest": [
+        "2018-07-31"
+      ],
+      "clearing": [
+        "2018-08-10",
+        "2018-08-20",
+        "2018-08-25",
+        "2018-08-30",
+        "2018-09-04",
+        "2018-09-19"
+      ],
+      "obscured": [
+        "2018-07-26",
+        "2018-08-05",
+        "2018-08-15"
+      ],
+      "control_obscured": [
+        "2018-07-26",
+        "2018-08-05",
+        "2018-08-15"
+      ],
+      "notes": "Full timeline and pair inspected. Compact forest interior July31 is a distinct brown clearing August10 and persists. August5 is cloud-obscured and supplies no tighter bound. The forest-control ROI is stable on clear frames."
+    },
+    "event-e932f0d28b2819f8368d": {
+      "forest": [
+        "2018-07-31",
+        "2018-08-05"
+      ],
+      "clearing": [
+        "2018-08-10",
+        "2018-08-15",
+        "2018-08-20",
+        "2018-08-25",
+        "2018-08-30",
+        "2018-09-04",
+        "2018-09-19"
+      ],
+      "obscured": [],
+      "uncertain": [
+        "2018-07-26"
+      ],
+      "control_obscured": [],
+      "control_uncertain": [
+        "2018-07-26"
+      ],
+      "notes": "Full timeline and pair inspected. Small lower extension is dark forest August5 and bare/brown August10, persisting afterward. Only the four eroded interior pixels are supervised. July26 atmospheric veil remains uncertain; clear-date control box stays forest."
     }
   }
 }

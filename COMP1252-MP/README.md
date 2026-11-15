@@ -8,6 +8,9 @@ The [annotation audit guide](./Docs/Guides/AnnotationAudit.md) describes verifie
 source provenance, duplicate handling, geographic splits and candidate manifests.
 The [pixel-quality guide](./Docs/Guides/PixelQuality.md) documents bounded cloud,
 shadow-risk and invalid-pixel checks, resumable batches and review requirements.
+The [reviewed pilot guide](./Docs/Guides/CuratedPilot.md) describes the 13 accepted
+training pairs, stable-forest control regions, observed date intervals and
+partial labels that require an ignore-aware loader and loss.
 
 ## Structure of the repository
 

@@ -1,0 +1,861 @@
+{
+  "schema_version": 1,
+  "pair_id": "pair-c28a44a19fa6f54b42be",
+  "anchor_event_ids": [
+    "event-b9d89f91b116d8d90fac"
+  ],
+  "group_id": "group-52444261d2ac04078270",
+  "split": "train",
+  "tile": "36UYA",
+  "pre_date": "2019-06-26",
+  "post_date": "2019-07-21",
+  "grid": {
+    "crs": "EPSG:32636",
+    "transform": [
+      10.0,
+      0.0,
+      769760.0,
+      0.0,
+      -10.0,
+      5538180.0
+    ],
+    "width": 64,
+    "height": 64,
+    "bounds": [
+      769760.0,
+      5537540.0,
+      770400.0,
+      5538180.0
+    ]
+  },
+  "channels": [
+    "pre_B02",
+    "pre_B03",
+    "pre_B04",
+    "pre_B08",
+    "pre_B8A",
+    "pre_B11",
+    "pre_B12",
+    "pre_NDVI",
+    "pre_NDMI",
+    "post_B02",
+    "post_B03",
+    "post_B04",
+    "post_B08",
+    "post_B8A",
+    "post_B11",
+    "post_B12",
+    "post_NDVI",
+    "post_NDMI",
+    "difference_B02",
+    "difference_B03",
+    "difference_B04",
+    "difference_B08",
+    "difference_B8A",
+    "difference_B11",
+    "difference_B12",
+    "difference_NDVI",
+    "difference_NDMI"
+  ],
+  "difference_direction": "post minus pre, without clipping",
+  "scaling": "Seven reflectance bands divided by product quantification; signed NDVI and NDMI remain indices",
+  "label_values": {
+    "0": "visually reviewed stable-forest ROI",
+    "1": "reviewed loss interior",
+    "255": "ignored/unreviewed"
+  },
+  "valid_mask_semantics": "1 exactly where supervision is 0 or 1; not a declaration that all other pixels are invalid",
+  "supervised_positive_pixels": 16,
+  "supervised_stable_pixels": 64,
+  "ignored_pixels": 4016,
+  "pixel_area_m2": 100,
+  "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+  "decision": {
+    "case_file": "Datasets/CuratedPilot/v1/replacement_parts/00000/event-b9d89f91b116d8d90fac/case.json",
+    "event_id": "event-b9d89f91b116d8d90fac",
+    "pair_id": "pair-c28a44a19fa6f54b42be",
+    "visual_review": "accepted",
+    "temporal_label_review": "accepted",
+    "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+    "reviewer": "assistant visual inspection",
+    "inspection_scope": "Full timeline and primary pair inspected; only conservative interior and matched forest-control ROI approved.",
+    "notes": "Timeline inspected: forest remains July1, clearing visible July21 and later. Tighten observed interval to (July1,July21], independent of original June26 pre pair. Green8px forest ROI visually stable on clear frames. Primary pair PNG separately inspected and consistent with the timeline.",
+    "rejection_reasons": [],
+    "observations": [
+      {
+        "scene_id": "S2A_MSIL1C_20190606T083601_N0207_R064_T36UYA_20190606T104250",
+        "date": "2019-06-06",
+        "target_state": "forest",
+        "control_state": "stable_forest",
+        "notes": "Assistant inspection of the complete timeline: target=forest; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+      },
+      {
+        "scene_id": "S2B_MSIL1C_20190611T083609_N0207_R064_T36UYA_20190611T122426",
+        "date": "2019-06-11",
+        "target_state": "forest",
+        "control_state": "stable_forest",
+        "notes": "Assistant inspection of the complete timeline: target=forest; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+      },
+      {
+        "scene_id": "S2A_MSIL1C_20190616T083601_N0207_R064_T36UYA_20190616T105922",
+        "date": "2019-06-16",
+        "target_state": "obscured",
+        "control_state": "obscured",
+        "notes": "Assistant inspection of the complete timeline: target=obscured; matched forest control=obscured. Atmospheric/quality-obscured observations do not define clear-state bounds."
+      },
+      {
+        "scene_id": "S2B_MSIL1C_20190621T083609_N0207_R064_T36UYA_20190621T104242",
+        "date": "2019-06-21",
+        "target_state": "obscured",
+        "control_state": "obscured",
+        "notes": "Assistant inspection of the complete timeline: target=obscured; matched forest control=obscured. Atmospheric/quality-obscured observations do not define clear-state bounds."
+      },
+      {
+        "scene_id": "S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306",
+        "date": "2019-06-26",
+        "target_state": "forest",
+        "control_state": "stable_forest",
+        "notes": "Assistant inspection of the complete timeline: target=forest; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+      },
+      {
+        "scene_id": "S2B_MSIL1C_20190701T083609_N0207_R064_T36UYA_20190701T113927",
+        "date": "2019-07-01",
+        "target_state": "forest",
+        "control_state": "stable_forest",
+        "notes": "Assistant inspection of the complete timeline: target=forest; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+      },
+      {
+        "scene_id": "S2A_MSIL1C_20190706T083611_N0207_R064_T36UYA_20190706T104407",
+        "date": "2019-07-06",
+        "target_state": "obscured",
+        "control_state": "obscured",
+        "notes": "Assistant inspection of the complete timeline: target=obscured; matched forest control=obscured. Atmospheric/quality-obscured observations do not define clear-state bounds."
+      },
+      {
+        "scene_id": "S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447",
+        "date": "2019-07-21",
+        "target_state": "clearing_visible",
+        "control_state": "stable_forest",
+        "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+      },
+      {
+        "scene_id": "S2A_MSIL1C_20190726T083611_N0208_R064_T36UYA_20190726T104344",
+        "date": "2019-07-26",
+        "target_state": "obscured",
+        "control_state": "obscured",
+        "notes": "Assistant inspection of the complete timeline: target=obscured; matched forest control=obscured. Atmospheric/quality-obscured observations do not define clear-state bounds."
+      },
+      {
+        "scene_id": "S2A_MSIL1C_20190805T083601_N0208_R064_T36UYA_20190805T104319",
+        "date": "2019-08-05",
+        "target_state": "obscured",
+        "control_state": "obscured",
+        "notes": "Assistant inspection of the complete timeline: target=obscured; matched forest control=obscured. Atmospheric/quality-obscured observations do not define clear-state bounds."
+      },
+      {
+        "scene_id": "S2B_MSIL1C_20190810T083609_N0208_R064_T36UYA_20190810T122530",
+        "date": "2019-08-10",
+        "target_state": "obscured",
+        "control_state": "obscured",
+        "notes": "Assistant inspection of the complete timeline: target=obscured; matched forest control=obscured. Atmospheric/quality-obscured observations do not define clear-state bounds."
+      },
+      {
+        "scene_id": "S2A_MSIL1C_20190815T083601_N0208_R064_T36UYA_20190815T123742",
+        "date": "2019-08-15",
+        "target_state": "clearing_visible",
+        "control_state": "stable_forest",
+        "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+      },
+      {
+        "scene_id": "S2A_MSIL1C_20190825T083601_N0208_R064_T36UYA_20190825T104312",
+        "date": "2019-08-25",
+        "target_state": "clearing_visible",
+        "control_state": "stable_forest",
+        "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+      },
+      {
+        "scene_id": "S2B_MSIL1C_20190830T083609_N0208_R064_T36UYA_20190830T114819",
+        "date": "2019-08-30",
+        "target_state": "clearing_visible",
+        "control_state": "stable_forest",
+        "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+      },
+      {
+        "scene_id": "S2A_MSIL1C_20190904T083601_N0208_R064_T36UYA_20190904T110155",
+        "date": "2019-09-04",
+        "target_state": "clearing_visible",
+        "control_state": "stable_forest",
+        "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+      }
+    ],
+    "case_sha256": "4bdbc4054789471df2e680652466cdf0eed9df42b86d0cc35704176b71fe2c6d",
+    "timeline_png_sha256": "2c7ca36e536516d44b5fbdd409edcd91f18f9bf319f920f0a53fa8120b0b49d0",
+    "pair_png_sha256": "aa7c53f127c18fdf844b985453eb2351ad5bf9de33fe2c4876f64e5d8f2cc91a",
+    "positive_interior_sha256": "d5171c0d088a5fb0b9f1ecbcc3295d282a37b7fd4776a806dd96730f648a6182",
+    "proposed_control_sha256": "dbf7457bc11f068adcac9a3e970ef24f64258cf6c492161d8f5a7a41e538e5d6",
+    "validation": {
+      "case_file": "Datasets/CuratedPilot/v1/replacement_parts/00000/event-b9d89f91b116d8d90fac/case.json",
+      "event_id": "event-b9d89f91b116d8d90fac",
+      "pair_id": "pair-c28a44a19fa6f54b42be",
+      "visual_review": "accepted",
+      "temporal_label_review": "accepted",
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "reviewer": "assistant visual inspection",
+      "inspection_scope": "Full timeline and primary pair inspected; only conservative interior and matched forest-control ROI approved.",
+      "notes": "Timeline inspected: forest remains July1, clearing visible July21 and later. Tighten observed interval to (July1,July21], independent of original June26 pre pair. Green8px forest ROI visually stable on clear frames. Primary pair PNG separately inspected and consistent with the timeline.",
+      "rejection_reasons": [],
+      "observations": [
+        {
+          "scene_id": "S2A_MSIL1C_20190606T083601_N0207_R064_T36UYA_20190606T104250",
+          "date": "2019-06-06",
+          "target_state": "forest",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=forest; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190611T083609_N0207_R064_T36UYA_20190611T122426",
+          "date": "2019-06-11",
+          "target_state": "forest",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=forest; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190616T083601_N0207_R064_T36UYA_20190616T105922",
+          "date": "2019-06-16",
+          "target_state": "obscured",
+          "control_state": "obscured",
+          "notes": "Assistant inspection of the complete timeline: target=obscured; matched forest control=obscured. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190621T083609_N0207_R064_T36UYA_20190621T104242",
+          "date": "2019-06-21",
+          "target_state": "obscured",
+          "control_state": "obscured",
+          "notes": "Assistant inspection of the complete timeline: target=obscured; matched forest control=obscured. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306",
+          "date": "2019-06-26",
+          "target_state": "forest",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=forest; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190701T083609_N0207_R064_T36UYA_20190701T113927",
+          "date": "2019-07-01",
+          "target_state": "forest",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=forest; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190706T083611_N0207_R064_T36UYA_20190706T104407",
+          "date": "2019-07-06",
+          "target_state": "obscured",
+          "control_state": "obscured",
+          "notes": "Assistant inspection of the complete timeline: target=obscured; matched forest control=obscured. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447",
+          "date": "2019-07-21",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190726T083611_N0208_R064_T36UYA_20190726T104344",
+          "date": "2019-07-26",
+          "target_state": "obscured",
+          "control_state": "obscured",
+          "notes": "Assistant inspection of the complete timeline: target=obscured; matched forest control=obscured. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190805T083601_N0208_R064_T36UYA_20190805T104319",
+          "date": "2019-08-05",
+          "target_state": "obscured",
+          "control_state": "obscured",
+          "notes": "Assistant inspection of the complete timeline: target=obscured; matched forest control=obscured. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190810T083609_N0208_R064_T36UYA_20190810T122530",
+          "date": "2019-08-10",
+          "target_state": "obscured",
+          "control_state": "obscured",
+          "notes": "Assistant inspection of the complete timeline: target=obscured; matched forest control=obscured. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190815T083601_N0208_R064_T36UYA_20190815T123742",
+          "date": "2019-08-15",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190825T083601_N0208_R064_T36UYA_20190825T104312",
+          "date": "2019-08-25",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190830T083609_N0208_R064_T36UYA_20190830T114819",
+          "date": "2019-08-30",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190904T083601_N0208_R064_T36UYA_20190904T110155",
+          "date": "2019-09-04",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        }
+      ],
+      "case_sha256": "4bdbc4054789471df2e680652466cdf0eed9df42b86d0cc35704176b71fe2c6d",
+      "timeline_png_sha256": "2c7ca36e536516d44b5fbdd409edcd91f18f9bf319f920f0a53fa8120b0b49d0",
+      "pair_png_sha256": "aa7c53f127c18fdf844b985453eb2351ad5bf9de33fe2c4876f64e5d8f2cc91a",
+      "positive_interior_sha256": "d5171c0d088a5fb0b9f1ecbcc3295d282a37b7fd4776a806dd96730f648a6182",
+      "proposed_control_sha256": "dbf7457bc11f068adcac9a3e970ef24f64258cf6c492161d8f5a7a41e538e5d6",
+      "group_id": "group-52444261d2ac04078270",
+      "split": "train",
+      "prepared_case_sha256": "47bd3eda6faafe4d82d787b6e776f16d372e5d88c17046d039cf8b6958bd11ea",
+      "training_approved": true,
+      "observed_change_interval": {
+        "last_observed_forest_date": "2019-07-01",
+        "last_observed_forest_scene_id": "S2B_MSIL1C_20190701T083609_N0207_R064_T36UYA_20190701T113927",
+        "first_observed_clearing_date": "2019-07-21",
+        "first_observed_clearing_scene_id": "S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447",
+        "lower_bound_exclusive": "2019-07-01",
+        "upper_bound_inclusive": "2019-07-21",
+        "interval_notation": "(last_observed_forest_date, first_observed_clearing_date]",
+        "width_days": 20,
+        "intervening_uncertain_or_obscured_observations": [
+          {
+            "scene_id": "S2A_MSIL1C_20190706T083611_N0207_R064_T36UYA_20190706T104407",
+            "date": "2019-07-06",
+            "target_state": "obscured",
+            "notes": "Assistant inspection of the complete timeline: target=obscured; matched forest control=obscured. Atmospheric/quality-obscured observations do not define clear-state bounds."
+          }
+        ],
+        "persistence_scene_ids": [
+          "S2A_MSIL1C_20190815T083601_N0208_R064_T36UYA_20190815T123742",
+          "S2A_MSIL1C_20190825T083601_N0208_R064_T36UYA_20190825T104312",
+          "S2B_MSIL1C_20190830T083609_N0208_R064_T36UYA_20190830T114819",
+          "S2A_MSIL1C_20190904T083601_N0208_R064_T36UYA_20190904T110155"
+        ],
+        "interpretation": "Bounded by inspected available local observations; not an exact felling date or globally earliest sighting"
+      },
+      "controls": {
+        "stable_scene_ids": [
+          "S2A_MSIL1C_20190606T083601_N0207_R064_T36UYA_20190606T104250",
+          "S2B_MSIL1C_20190611T083609_N0207_R064_T36UYA_20190611T122426",
+          "S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306",
+          "S2B_MSIL1C_20190701T083609_N0207_R064_T36UYA_20190701T113927",
+          "S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447",
+          "S2A_MSIL1C_20190815T083601_N0208_R064_T36UYA_20190815T123742",
+          "S2A_MSIL1C_20190825T083601_N0208_R064_T36UYA_20190825T104312",
+          "S2B_MSIL1C_20190830T083609_N0208_R064_T36UYA_20190830T114819",
+          "S2A_MSIL1C_20190904T083601_N0208_R064_T36UYA_20190904T110155"
+        ],
+        "clear_observation_count": 9,
+        "supervised_pixels": 64,
+        "observed_stability_start": "2019-06-06",
+        "observed_stability_end": "2019-09-04",
+        "primary_endpoints_stable": true,
+        "interpretation": "Visually reviewed ROI stability over inspected dates only; all other pixels remain unreviewed"
+      },
+      "approval_scope": "Small partially supervised training pilot only",
+      "decision_status": "accepted"
+    },
+    "approval_scope": "Explicit reviewed partial pilot supervision"
+  },
+  "decision_sha256": "4426ee9c8bbea1dd62b47013af2b5b8a288ba373f5267512690068868917002e",
+  "frozen_pair_sha256": "740ee45806d3a2a0de7982ebc6f1fb2a950c4eb0ff3f20c036d1ab2b64346928",
+  "source_file_stats": {
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/IMG_DATA/T36UYA_20190626T083601_B01.jp2": [
+      3393681,
+      1671475620000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/IMG_DATA/T36UYA_20190626T083601_B02.jp2": [
+      95980463,
+      1671475622000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/IMG_DATA/T36UYA_20190626T083601_B03.jp2": [
+      100373187,
+      1671475628000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/IMG_DATA/T36UYA_20190626T083601_B04.jp2": [
+      105519252,
+      1671475636000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/IMG_DATA/T36UYA_20190626T083601_B05.jp2": [
+      31127703,
+      1671475644000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/IMG_DATA/T36UYA_20190626T083601_B08.jp2": [
+      133064716,
+      1671475652000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/IMG_DATA/T36UYA_20190626T083601_B09.jp2": [
+      3754655,
+      1671475662000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/IMG_DATA/T36UYA_20190626T083601_B10.jp2": [
+      1610743,
+      1671475662000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/IMG_DATA/T36UYA_20190626T083601_B11.jp2": [
+      31672084,
+      1671475662000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/IMG_DATA/T36UYA_20190626T083601_B12.jp2": [
+      31115488,
+      1671475666000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/IMG_DATA/T36UYA_20190626T083601_B8A.jp2": [
+      33854676,
+      1671475668000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/MTD_TL.xml": [
+      551736,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_CLOUDS_B00.gml": [
+      26813,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_DEFECT_B01.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_DEFECT_B02.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_DEFECT_B03.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_DEFECT_B04.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_DEFECT_B05.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_DEFECT_B08.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_DEFECT_B09.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_DEFECT_B10.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_DEFECT_B11.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_DEFECT_B12.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_DEFECT_B8A.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_NODATA_B01.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_NODATA_B02.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_NODATA_B03.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_NODATA_B04.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_NODATA_B05.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_NODATA_B08.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_NODATA_B09.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_NODATA_B10.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_NODATA_B11.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_NODATA_B12.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_NODATA_B8A.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_SATURA_B01.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_SATURA_B02.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_SATURA_B03.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_SATURA_B04.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_SATURA_B05.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_SATURA_B08.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_SATURA_B09.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_SATURA_B10.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_SATURA_B11.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_SATURA_B12.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_SATURA_B8A.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_TECQUA_B01.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_TECQUA_B02.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_TECQUA_B03.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_TECQUA_B04.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_TECQUA_B05.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_TECQUA_B08.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_TECQUA_B09.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_TECQUA_B10.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_TECQUA_B11.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_TECQUA_B12.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/GRANULE/L1C_T36UYA_A020939_20190626T083926/QI_DATA/MSK_TECQUA_B8A.gml": [
+      428,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306/S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306.SAFE/MTD_MSIL1C.xml": [
+      44349,
+      1671475682000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/IMG_DATA/T36UYA_20190721T083609_B01.jp2": [
+      3766941,
+      1671476774000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/IMG_DATA/T36UYA_20190721T083609_B02.jp2": [
+      111295545,
+      1671476774000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/IMG_DATA/T36UYA_20190721T083609_B03.jp2": [
+      112554163,
+      1671476782000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/IMG_DATA/T36UYA_20190721T083609_B04.jp2": [
+      115254815,
+      1671476790000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/IMG_DATA/T36UYA_20190721T083609_B05.jp2": [
+      33908448,
+      1671476798000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/IMG_DATA/T36UYA_20190721T083609_B08.jp2": [
+      127783112,
+      1671476806000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/IMG_DATA/T36UYA_20190721T083609_B09.jp2": [
+      3729106,
+      1671476814000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/IMG_DATA/T36UYA_20190721T083609_B10.jp2": [
+      2650633,
+      1671476816000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/IMG_DATA/T36UYA_20190721T083609_B11.jp2": [
+      33814714,
+      1671476816000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/IMG_DATA/T36UYA_20190721T083609_B12.jp2": [
+      33897519,
+      1671476818000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/IMG_DATA/T36UYA_20190721T083609_B8A.jp2": [
+      33834825,
+      1671476820000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/MTD_TL.xml": [
+      551506,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_CLOUDS_B00.gml": [
+      1555983,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_DEFECT_B01.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_DEFECT_B02.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_DEFECT_B03.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_DEFECT_B04.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_DEFECT_B05.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_DEFECT_B08.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_DEFECT_B09.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_DEFECT_B10.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_DEFECT_B11.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_DEFECT_B12.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_DEFECT_B8A.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_NODATA_B01.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_NODATA_B02.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_NODATA_B03.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_NODATA_B04.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_NODATA_B05.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_NODATA_B08.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_NODATA_B09.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_NODATA_B10.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_NODATA_B11.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_NODATA_B12.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_NODATA_B8A.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_SATURA_B01.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_SATURA_B02.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_SATURA_B03.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_SATURA_B04.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_SATURA_B05.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_SATURA_B08.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_SATURA_B09.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_SATURA_B10.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_SATURA_B11.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_SATURA_B12.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_SATURA_B8A.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_TECQUA_B01.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_TECQUA_B02.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_TECQUA_B03.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_TECQUA_B04.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_TECQUA_B05.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_TECQUA_B08.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_TECQUA_B09.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_TECQUA_B10.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_TECQUA_B11.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_TECQUA_B12.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/GRANULE/L1C_T36UYA_A012388_20190721T083756/QI_DATA/MSK_TECQUA_B8A.gml": [
+      428,
+      1671476832000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447/S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447.SAFE/MTD_MSIL1C.xml": [
+      44190,
+      1671476832000000000
+    ]
+  },
+  "source_summary_sha256": "6f79faf30d815d0a504772a08b322da7d2e242764faefa0d6d47cebaf0208e4e",
+  "implementation_sha256": "caf67918894fa13ad62c3f9e6b8aad58ac69c414e999df9a988901d2166a9958",
+  "output_sha256": {
+    "input_features.tif": "9a94d592b2a3e18b5e9a8432f21a7db9cbdf344b197b8337dbc13b99238a12f1",
+    "supervision_mask.tif": "36d5b9fe44121c80a51484f4f2ede63f54815aa518be52b28499067bc6b80459",
+    "valid_mask.tif": "a397dd2611acf273b4923eb82a6afad3657fe71a8008c309fb8ac32bec197c40"
+  },
+  "training_approved": true,
+  "approval_scope": "Small partially supervised training pilot; no held-out evaluation or exact onset-date certification",
+  "checks": {
+    "train_split_only": true,
+    "all_grids_equal": true,
+    "round_trip_arrays_equal": true,
+    "supervision_rois_disjoint": true,
+    "supervised_features_finite": true,
+    "source_statistics_unchanged": true,
+    "frozen_qa_exact": true,
+    "positives_within_temporal_reference": true,
+    "stable_avoids_all_known_loss_plus_10m": true,
+    "unreviewed_pixels_ignored": true
+  }
+}

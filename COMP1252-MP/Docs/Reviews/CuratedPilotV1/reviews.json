@@ -1579,6 +1579,1013 @@
       "pair_png_sha256": "db72d605c0e16dc7ad671228fc083b8343018337e961c6d907dbe6fdcc9fb9d7",
       "positive_interior_sha256": "affb62afbf1dbef18d6314f96c6bad2b324ea0b6096c02e18ce9944ec100f71b",
       "proposed_control_sha256": "56699468ed5ee77ec8d2ca061f7ea434a3ce06db9d0cfc61d8cd6450aac82804"
+    },
+    {
+      "case_file": "Datasets/CuratedPilot/v1/replacement_parts/00000/event-8628872c64f4cabf6e67/case.json",
+      "event_id": "event-8628872c64f4cabf6e67",
+      "pair_id": "pair-d55e01747d6b508e04ec",
+      "visual_review": "accepted",
+      "temporal_label_review": "accepted",
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "reviewer": "assistant visual inspection",
+      "inspection_scope": "Full timeline and primary pair inspected; only conservative interior and matched forest-control ROI approved.",
+      "notes": "Timeline inspected: small brown extension at left edge of existing clearing appears August 20 and persists. Forest-control box stays green on clear dates; September19 control QA3% prevents a stable claim. Primary pair PNG separately inspected and consistent with the timeline.",
+      "rejection_reasons": [],
+      "observations": [
+        {
+          "scene_id": "S2B_MSIL1C_20180726T084009_N0206_R064_T36UXA_20180726T104227",
+          "date": "2018-07-26",
+          "target_state": "obscured",
+          "control_state": "obscured",
+          "notes": "Assistant inspection of the complete timeline: target=obscured; matched forest control=obscured. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233",
+          "date": "2018-07-31",
+          "target_state": "forest",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=forest; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757",
+          "date": "2018-08-05",
+          "target_state": "forest",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=forest; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180810T083601_N0206_R064_T36UXA_20180810T124435",
+          "date": "2018-08-10",
+          "target_state": "forest",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=forest; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180815T084009_N0206_R064_T36UXA_20180815T123155",
+          "date": "2018-08-15",
+          "target_state": "obscured",
+          "control_state": "obscured",
+          "notes": "Assistant inspection of the complete timeline: target=obscured; matched forest control=obscured. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180820T083601_N0206_R064_T36UXA_20180820T105651",
+          "date": "2018-08-20",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180825T083549_N0206_R064_T36UXA_20180825T124942",
+          "date": "2018-08-25",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180830T083601_N0206_R064_T36UXA_20180830T105527",
+          "date": "2018-08-30",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180904T083549_N0206_R064_T36UXA_20180904T123955",
+          "date": "2018-09-04",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180919T083621_N0206_R064_T36UXA_20180919T105540",
+          "date": "2018-09-19",
+          "target_state": "clearing_visible",
+          "control_state": "obscured",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=obscured. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        }
+      ],
+      "case_sha256": "ca940fe5de119138d80cec5d5480a2ca6718e138dc54381383dbeb9612af980c",
+      "timeline_png_sha256": "feed4d781ecc0526abc563826248704236dda86a793ccc44301e90d6c4fa4bd2",
+      "pair_png_sha256": "c0eb3bacf383b22fb880ec2d611b045a9081b6f3eaebc9fb0a0bd9f71e42f472",
+      "positive_interior_sha256": "92e046abc5955a1c8646450296f5235db0d2b4ea19617aec0f00322ebb727f44",
+      "proposed_control_sha256": "2a2868654ad7008b658b288ec8dd4db302d41e7189edc530c39922207155492a"
+    },
+    {
+      "case_file": "Datasets/CuratedPilot/v1/replacement_parts/00000/event-b9d89f91b116d8d90fac/case.json",
+      "event_id": "event-b9d89f91b116d8d90fac",
+      "pair_id": "pair-c28a44a19fa6f54b42be",
+      "visual_review": "accepted",
+      "temporal_label_review": "accepted",
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "reviewer": "assistant visual inspection",
+      "inspection_scope": "Full timeline and primary pair inspected; only conservative interior and matched forest-control ROI approved.",
+      "notes": "Timeline inspected: forest remains July1, clearing visible July21 and later. Tighten observed interval to (July1,July21], independent of original June26 pre pair. Green8px forest ROI visually stable on clear frames. Primary pair PNG separately inspected and consistent with the timeline.",
+      "rejection_reasons": [],
+      "observations": [
+        {
+          "scene_id": "S2A_MSIL1C_20190606T083601_N0207_R064_T36UYA_20190606T104250",
+          "date": "2019-06-06",
+          "target_state": "forest",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=forest; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190611T083609_N0207_R064_T36UYA_20190611T122426",
+          "date": "2019-06-11",
+          "target_state": "forest",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=forest; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190616T083601_N0207_R064_T36UYA_20190616T105922",
+          "date": "2019-06-16",
+          "target_state": "obscured",
+          "control_state": "obscured",
+          "notes": "Assistant inspection of the complete timeline: target=obscured; matched forest control=obscured. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190621T083609_N0207_R064_T36UYA_20190621T104242",
+          "date": "2019-06-21",
+          "target_state": "obscured",
+          "control_state": "obscured",
+          "notes": "Assistant inspection of the complete timeline: target=obscured; matched forest control=obscured. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306",
+          "date": "2019-06-26",
+          "target_state": "forest",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=forest; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190701T083609_N0207_R064_T36UYA_20190701T113927",
+          "date": "2019-07-01",
+          "target_state": "forest",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=forest; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190706T083611_N0207_R064_T36UYA_20190706T104407",
+          "date": "2019-07-06",
+          "target_state": "obscured",
+          "control_state": "obscured",
+          "notes": "Assistant inspection of the complete timeline: target=obscured; matched forest control=obscured. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447",
+          "date": "2019-07-21",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190726T083611_N0208_R064_T36UYA_20190726T104344",
+          "date": "2019-07-26",
+          "target_state": "obscured",
+          "control_state": "obscured",
+          "notes": "Assistant inspection of the complete timeline: target=obscured; matched forest control=obscured. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190805T083601_N0208_R064_T36UYA_20190805T104319",
+          "date": "2019-08-05",
+          "target_state": "obscured",
+          "control_state": "obscured",
+          "notes": "Assistant inspection of the complete timeline: target=obscured; matched forest control=obscured. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190810T083609_N0208_R064_T36UYA_20190810T122530",
+          "date": "2019-08-10",
+          "target_state": "obscured",
+          "control_state": "obscured",
+          "notes": "Assistant inspection of the complete timeline: target=obscured; matched forest control=obscured. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190815T083601_N0208_R064_T36UYA_20190815T123742",
+          "date": "2019-08-15",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190825T083601_N0208_R064_T36UYA_20190825T104312",
+          "date": "2019-08-25",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190830T083609_N0208_R064_T36UYA_20190830T114819",
+          "date": "2019-08-30",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190904T083601_N0208_R064_T36UYA_20190904T110155",
+          "date": "2019-09-04",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        }
+      ],
+      "case_sha256": "4bdbc4054789471df2e680652466cdf0eed9df42b86d0cc35704176b71fe2c6d",
+      "timeline_png_sha256": "2c7ca36e536516d44b5fbdd409edcd91f18f9bf319f920f0a53fa8120b0b49d0",
+      "pair_png_sha256": "aa7c53f127c18fdf844b985453eb2351ad5bf9de33fe2c4876f64e5d8f2cc91a",
+      "positive_interior_sha256": "d5171c0d088a5fb0b9f1ecbcc3295d282a37b7fd4776a806dd96730f648a6182",
+      "proposed_control_sha256": "dbf7457bc11f068adcac9a3e970ef24f64258cf6c492161d8f5a7a41e538e5d6"
+    },
+    {
+      "case_file": "Datasets/CuratedPilot/v1/replacement_parts/00000/event-e59c75f02fe23bb9a1ae/case.json",
+      "event_id": "event-e59c75f02fe23bb9a1ae",
+      "pair_id": "pair-d4c5cfe3c98c90d8748f",
+      "visual_review": "accepted",
+      "temporal_label_review": "accepted",
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "reviewer": "assistant visual inspection",
+      "inspection_scope": "Full timeline and primary pair inspected; only conservative interior and matched forest-control ROI approved.",
+      "notes": "Timeline inspected: compact target is forest August25 and brown clearing August30, persisting September4/9. Control box remains forest on clear dates. Primary pair PNG separately inspected and consistent with the timeline.",
+      "rejection_reasons": [],
+      "observations": [
+        {
+          "scene_id": "S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447",
+          "date": "2019-07-21",
+          "target_state": "obscured",
+          "control_state": "obscured",
+          "notes": "Assistant inspection of the complete timeline: target=obscured; matched forest control=obscured. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190726T083611_N0208_R064_T36UYA_20190726T104344",
+          "date": "2019-07-26",
+          "target_state": "obscured",
+          "control_state": "obscured",
+          "notes": "Assistant inspection of the complete timeline: target=obscured; matched forest control=obscured. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190805T083601_N0208_R064_T36UYA_20190805T104319",
+          "date": "2019-08-05",
+          "target_state": "obscured",
+          "control_state": "obscured",
+          "notes": "Assistant inspection of the complete timeline: target=obscured; matched forest control=obscured. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190810T083609_N0208_R064_T36UYA_20190810T122530",
+          "date": "2019-08-10",
+          "target_state": "obscured",
+          "control_state": "obscured",
+          "notes": "Assistant inspection of the complete timeline: target=obscured; matched forest control=obscured. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190815T083601_N0208_R064_T36UYA_20190815T123742",
+          "date": "2019-08-15",
+          "target_state": "forest",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=forest; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190825T083601_N0208_R064_T36UYA_20190825T104312",
+          "date": "2019-08-25",
+          "target_state": "forest",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=forest; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190830T083609_N0208_R064_T36UYA_20190830T114819",
+          "date": "2019-08-30",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190904T083601_N0208_R064_T36UYA_20190904T110155",
+          "date": "2019-09-04",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190909T083559_N0208_R064_T36UYA_20190909T122324",
+          "date": "2019-09-09",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        }
+      ],
+      "case_sha256": "0e1b4200e19f116e1e94984b3cf3bb27d7bee88d1f8644cc25cb7030eba20649",
+      "timeline_png_sha256": "583b877e68e84aa41a61146d4f85e15dfcdd258526d011e2639479b6f9a8d803",
+      "pair_png_sha256": "74fd6b17604338711817b945cdeeaf678890a4d106be7b1862f6f47753b5a4fd",
+      "positive_interior_sha256": "9a4c0c96e9857ba5149f7c5e450ca23ec9e5903120fdbf9e7d75f9cc88696723",
+      "proposed_control_sha256": "a0f07e73cd32321c32fbb231331c0806effa614ec7f80faa40cbb813a3edb915"
+    },
+    {
+      "case_file": "Datasets/CuratedPilot/v1/replacement_parts/00000/event-e6224bcd39746b840ea4/case.json",
+      "event_id": "event-e6224bcd39746b840ea4",
+      "pair_id": "pair-6402df65a4de4788506b",
+      "visual_review": "accepted",
+      "temporal_label_review": "accepted",
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "reviewer": "assistant visual inspection",
+      "inspection_scope": "Full timeline and primary pair inspected; only conservative interior and matched forest-control ROI approved.",
+      "notes": "Timeline inspected: forest strip August5 becomes brown August10 and persists. July26 widespread veil and August15 nearby haze keep control uncertain despite zero control QA. Primary pair PNG separately inspected and consistent with the timeline.",
+      "rejection_reasons": [],
+      "observations": [
+        {
+          "scene_id": "S2B_MSIL1C_20180726T084009_N0206_R064_T36UXA_20180726T104227",
+          "date": "2018-07-26",
+          "target_state": "obscured",
+          "control_state": "uncertain",
+          "notes": "Assistant inspection of the complete timeline: target=obscured; matched forest control=uncertain. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233",
+          "date": "2018-07-31",
+          "target_state": "forest",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=forest; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757",
+          "date": "2018-08-05",
+          "target_state": "forest",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=forest; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180810T083601_N0206_R064_T36UXA_20180810T124435",
+          "date": "2018-08-10",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180815T084009_N0206_R064_T36UXA_20180815T123155",
+          "date": "2018-08-15",
+          "target_state": "obscured",
+          "control_state": "uncertain",
+          "notes": "Assistant inspection of the complete timeline: target=obscured; matched forest control=uncertain. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180820T083601_N0206_R064_T36UXA_20180820T105651",
+          "date": "2018-08-20",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180825T083549_N0206_R064_T36UXA_20180825T124942",
+          "date": "2018-08-25",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180830T083601_N0206_R064_T36UXA_20180830T105527",
+          "date": "2018-08-30",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180904T083549_N0206_R064_T36UXA_20180904T123955",
+          "date": "2018-09-04",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180919T083621_N0206_R064_T36UXA_20180919T105540",
+          "date": "2018-09-19",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        }
+      ],
+      "case_sha256": "bd2a970fc41c9e01344824724b47b31904c3ffe4604eb0ab5d33b51fb2faff12",
+      "timeline_png_sha256": "72d8e424ae86f1b5fe2f9d6a696ad8884bd48b8f69acb5485d8d6ddb68dc9c93",
+      "pair_png_sha256": "172abd8bf6a8712f56f394eb67bd9c05001c431a35f54df559794486933f4c88",
+      "positive_interior_sha256": "92d87744fb0a7ee24dceac91db03de6ff1f81e13e7f6361c222b128ff661ae53",
+      "proposed_control_sha256": "d82e4e24e753bf8a5599035c7dfdb2d3e26e47f0fc7aad4f280da6bed0d1e8b3"
+    },
+    {
+      "case_file": "Datasets/CuratedPilot/v1/replacement_parts/00001/event-073d95e8a1c667845607/case.json",
+      "event_id": "event-073d95e8a1c667845607",
+      "pair_id": "pair-1c5ffcab8d4b8d8705a8",
+      "visual_review": "accepted",
+      "temporal_label_review": "accepted",
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "reviewer": "assistant visual inspection",
+      "inspection_scope": "Full timeline and primary pair inspected; only conservative interior and matched forest-control ROI approved.",
+      "notes": "Timeline inspected: reference strip adjoining road/old clearing becomes bare August5 after forest July31, persistent thereafter. Green corner control remains forest at clear dates. Primary pair PNG separately inspected and consistent with the timeline.",
+      "rejection_reasons": [],
+      "observations": [
+        {
+          "scene_id": "S2B_MSIL1C_20180726T084009_N0206_R064_T36UXA_20180726T104227",
+          "date": "2018-07-26",
+          "target_state": "obscured",
+          "control_state": "obscured",
+          "notes": "Assistant inspection of the complete timeline: target=obscured; matched forest control=obscured. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233",
+          "date": "2018-07-31",
+          "target_state": "forest",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=forest; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757",
+          "date": "2018-08-05",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180810T083601_N0206_R064_T36UXA_20180810T124435",
+          "date": "2018-08-10",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180815T084009_N0206_R064_T36UXA_20180815T123155",
+          "date": "2018-08-15",
+          "target_state": "obscured",
+          "control_state": "obscured",
+          "notes": "Assistant inspection of the complete timeline: target=obscured; matched forest control=obscured. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180820T083601_N0206_R064_T36UXA_20180820T105651",
+          "date": "2018-08-20",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180825T083549_N0206_R064_T36UXA_20180825T124942",
+          "date": "2018-08-25",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180830T083601_N0206_R064_T36UXA_20180830T105527",
+          "date": "2018-08-30",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180904T083549_N0206_R064_T36UXA_20180904T123955",
+          "date": "2018-09-04",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180919T083621_N0206_R064_T36UXA_20180919T105540",
+          "date": "2018-09-19",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        }
+      ],
+      "case_sha256": "c2ca79ee694cc0e2e2fa2b770b74837f0676df6c3d3351e37b1e875b4442e595",
+      "timeline_png_sha256": "143948a95905a6ebae7e5eb788f8eb22a69c8779fcbb49bfd8002efa2f188cc0",
+      "pair_png_sha256": "cd5fc9c6184e20c4858905b6fe0e4c4ee595c91d96e8b184550b8770efcf4a9d",
+      "positive_interior_sha256": "2c32af4715fce0dafbfb22f7022de50cb7c53fefa537574e1b506a2ddb8192ce",
+      "proposed_control_sha256": "e841694948182746ca82c27dcf66a819b455eafa50b8cf06b8ada89fb1318270"
+    },
+    {
+      "case_file": "Datasets/CuratedPilot/v1/replacement_parts/00001/event-4fa26438d5872a8480af/case.json",
+      "event_id": "event-4fa26438d5872a8480af",
+      "pair_id": "pair-fa7e255563dbb3f2d278",
+      "visual_review": "accepted",
+      "temporal_label_review": "accepted",
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "reviewer": "assistant visual inspection",
+      "inspection_scope": "Full timeline and primary pair inspected; only conservative interior and matched forest-control ROI approved.",
+      "notes": "Timeline inspected: dark forest July31 becomes small brown clearing August5 and persists. July26 veil prevents confident states; September19 cloud QA prevents claims. Primary pair PNG separately inspected and consistent with the timeline.",
+      "rejection_reasons": [],
+      "observations": [
+        {
+          "scene_id": "S2B_MSIL1C_20180726T084009_N0206_R064_T36UXA_20180726T104227",
+          "date": "2018-07-26",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "Assistant inspection of the complete timeline: target=uncertain; matched forest control=uncertain. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233",
+          "date": "2018-07-31",
+          "target_state": "forest",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=forest; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757",
+          "date": "2018-08-05",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180810T083601_N0206_R064_T36UXA_20180810T124435",
+          "date": "2018-08-10",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180815T084009_N0206_R064_T36UXA_20180815T123155",
+          "date": "2018-08-15",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180820T083601_N0206_R064_T36UXA_20180820T105651",
+          "date": "2018-08-20",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180825T083549_N0206_R064_T36UXA_20180825T124942",
+          "date": "2018-08-25",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180830T083601_N0206_R064_T36UXA_20180830T105527",
+          "date": "2018-08-30",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180904T083549_N0206_R064_T36UXA_20180904T123955",
+          "date": "2018-09-04",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180919T083621_N0206_R064_T36UXA_20180919T105540",
+          "date": "2018-09-19",
+          "target_state": "obscured",
+          "control_state": "obscured",
+          "notes": "Assistant inspection of the complete timeline: target=obscured; matched forest control=obscured. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        }
+      ],
+      "case_sha256": "2a1c98bc55bf224b356c9be67e445df075f3cf0ba978856687be175678c2eed5",
+      "timeline_png_sha256": "360f88cf400ecd67cf2897c26dcfd6b126f18c253fe6db2a6ee39046eade2003",
+      "pair_png_sha256": "c2629869fc22c97261c4bce079afe6943fb18ded99584d5620734f831d9f980d",
+      "positive_interior_sha256": "7ea2d17ed7d5effa768915e5c34f515ecef73e6a0ef0884fd5d85af61d491288",
+      "proposed_control_sha256": "7bdd0b0b94a9f30ad890be1a1ec0a30f0fa834ad4bcabbb23f92c25d90095f9f"
+    },
+    {
+      "case_file": "Datasets/CuratedPilot/v1/replacement_parts/00001/event-a72e10d66054921e60b2/case.json",
+      "event_id": "event-a72e10d66054921e60b2",
+      "pair_id": "pair-987d1e18cb35de989fe3",
+      "visual_review": "accepted",
+      "temporal_label_review": "accepted",
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "reviewer": "assistant visual inspection",
+      "inspection_scope": "Full timeline and primary pair inspected; only conservative interior and matched forest-control ROI approved.",
+      "notes": "Timeline inspected: central reference is dark forest July31 and brown clearing August5, persisting. July26 blue veil remains uncertain; August15 cloud QA obscures target/control. Primary pair PNG separately inspected and consistent with the timeline.",
+      "rejection_reasons": [],
+      "observations": [
+        {
+          "scene_id": "S2B_MSIL1C_20180726T084009_N0206_R064_T36UXA_20180726T104227",
+          "date": "2018-07-26",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "Assistant inspection of the complete timeline: target=uncertain; matched forest control=uncertain. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233",
+          "date": "2018-07-31",
+          "target_state": "forest",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=forest; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757",
+          "date": "2018-08-05",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180810T083601_N0206_R064_T36UXA_20180810T124435",
+          "date": "2018-08-10",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180815T084009_N0206_R064_T36UXA_20180815T123155",
+          "date": "2018-08-15",
+          "target_state": "obscured",
+          "control_state": "obscured",
+          "notes": "Assistant inspection of the complete timeline: target=obscured; matched forest control=obscured. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180820T083601_N0206_R064_T36UXA_20180820T105651",
+          "date": "2018-08-20",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180825T083549_N0206_R064_T36UXA_20180825T124942",
+          "date": "2018-08-25",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180830T083601_N0206_R064_T36UXA_20180830T105527",
+          "date": "2018-08-30",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180904T083549_N0206_R064_T36UXA_20180904T123955",
+          "date": "2018-09-04",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180919T083621_N0206_R064_T36UXA_20180919T105540",
+          "date": "2018-09-19",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        }
+      ],
+      "case_sha256": "ad912ce9fa13fe2a9327af9bc69c130415af501ce9ba713b9edaea36bc981d6d",
+      "timeline_png_sha256": "7b89eed12fccae45cad30f2050dda88b0794b54756c80ada726d8809e2477d1e",
+      "pair_png_sha256": "d81ae4b3840f8d8080416591d4ec65683f3a6eccbb11ab21f3dd9e8849193647",
+      "positive_interior_sha256": "704223b304ca7dc43b3f49f67c0f0302d5750e04045db89e490ae686201415b5",
+      "proposed_control_sha256": "4139680c006617488972d8bcc2b09031cd4add8bbf5ccf6da8f39516dc7fc1cb"
+    },
+    {
+      "case_file": "Datasets/CuratedPilot/v1/replacement_parts/00001/event-f7e5f043776b24cb7dfa/case.json",
+      "event_id": "event-f7e5f043776b24cb7dfa",
+      "pair_id": "pair-6ed3eefd320f4945aa7a",
+      "visual_review": "accepted",
+      "temporal_label_review": "accepted",
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "reviewer": "assistant visual inspection",
+      "inspection_scope": "Full timeline and primary pair inspected; only conservative interior and matched forest-control ROI approved.",
+      "notes": "Timeline inspected: forest interior through August10 becomes C-shaped clearing August20 and persists. July26 target contrast uncertain and control has QA1%; August15 obscured. Primary pair PNG separately inspected and consistent with the timeline.",
+      "rejection_reasons": [],
+      "observations": [
+        {
+          "scene_id": "S2B_MSIL1C_20180726T084009_N0206_R064_T36UXA_20180726T104227",
+          "date": "2018-07-26",
+          "target_state": "uncertain",
+          "control_state": "obscured",
+          "notes": "Assistant inspection of the complete timeline: target=uncertain; matched forest control=obscured. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233",
+          "date": "2018-07-31",
+          "target_state": "forest",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=forest; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757",
+          "date": "2018-08-05",
+          "target_state": "forest",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=forest; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180810T083601_N0206_R064_T36UXA_20180810T124435",
+          "date": "2018-08-10",
+          "target_state": "forest",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=forest; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180815T084009_N0206_R064_T36UXA_20180815T123155",
+          "date": "2018-08-15",
+          "target_state": "obscured",
+          "control_state": "obscured",
+          "notes": "Assistant inspection of the complete timeline: target=obscured; matched forest control=obscured. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180820T083601_N0206_R064_T36UXA_20180820T105651",
+          "date": "2018-08-20",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180825T083549_N0206_R064_T36UXA_20180825T124942",
+          "date": "2018-08-25",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180830T083601_N0206_R064_T36UXA_20180830T105527",
+          "date": "2018-08-30",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180904T083549_N0206_R064_T36UXA_20180904T123955",
+          "date": "2018-09-04",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180919T083621_N0206_R064_T36UXA_20180919T105540",
+          "date": "2018-09-19",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        }
+      ],
+      "case_sha256": "e78b7681357a5ed183ff70da8d9091041e3897392c997261517e4119290d5610",
+      "timeline_png_sha256": "9df4d3f73e5d6e6cd7a2839e551234ab29c438a286c6419936c047ecf90dbcb7",
+      "pair_png_sha256": "c874d3be09e64d4440add60ad520b9a6a6e4a0827f87f77b6ec3992cb6c1d0b9",
+      "positive_interior_sha256": "d271631dd375ef1f24619c1d8c21471a7ae851cbce561062cbf3bd8ad17b3881",
+      "proposed_control_sha256": "4fe8f12f396556b67d573be5eca6117d7c7772391eec0ec5a2b6f32ce30d9f62"
+    },
+    {
+      "case_file": "Datasets/CuratedPilot/v1/replacement_parts/00002/event-0012effe85aa26b69541/case.json",
+      "event_id": "event-0012effe85aa26b69541",
+      "pair_id": "pair-858a14a4fa14aae1ba7c",
+      "visual_review": "accepted",
+      "temporal_label_review": "accepted",
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "reviewer": "assistant visual inspection",
+      "inspection_scope": "Full timeline and primary pair inspected; only conservative interior and matched forest-control ROI approved.",
+      "notes": "Full timeline and pair inspected. Forest in the gap between older clearing lobes on July31 becomes brown clearing August5 and persists. The green-box forest remains stable on clear observations; July26 veil and later ROI cloud flags remain uncertain/obscured. Primary pair PNG separately inspected and consistent with the timeline.",
+      "rejection_reasons": [],
+      "observations": [
+        {
+          "scene_id": "S2B_MSIL1C_20180726T084009_N0206_R064_T36UXA_20180726T104227",
+          "date": "2018-07-26",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "Assistant inspection of the complete timeline: target=uncertain; matched forest control=uncertain. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233",
+          "date": "2018-07-31",
+          "target_state": "forest",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=forest; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757",
+          "date": "2018-08-05",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180810T083601_N0206_R064_T36UXA_20180810T124435",
+          "date": "2018-08-10",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180815T084009_N0206_R064_T36UXA_20180815T123155",
+          "date": "2018-08-15",
+          "target_state": "obscured",
+          "control_state": "obscured",
+          "notes": "Assistant inspection of the complete timeline: target=obscured; matched forest control=obscured. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180820T083601_N0206_R064_T36UXA_20180820T105651",
+          "date": "2018-08-20",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180825T083549_N0206_R064_T36UXA_20180825T124942",
+          "date": "2018-08-25",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180830T083601_N0206_R064_T36UXA_20180830T105527",
+          "date": "2018-08-30",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180904T083549_N0206_R064_T36UXA_20180904T123955",
+          "date": "2018-09-04",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180919T083621_N0206_R064_T36UXA_20180919T105540",
+          "date": "2018-09-19",
+          "target_state": "clearing_visible",
+          "control_state": "obscured",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=obscured. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        }
+      ],
+      "case_sha256": "7579b791153ed8f3baa67608cb10a6f17fb4d319cd6866dda42cc5e8ec936529",
+      "timeline_png_sha256": "5ec9d19b9532e42fa21c18c784f2c10160fcec0c84e8d3840682e9f241663203",
+      "pair_png_sha256": "8ef7c1aae9d3364a60895c624fcd4782870214a024ae71c199da2ec66412d0ad",
+      "positive_interior_sha256": "4abb3a9d967c8a6c055c5cb7e42d22818f79ed6c87476555cc1c76aec95bdc4a",
+      "proposed_control_sha256": "8d0fa6b8c0272f529bcb82656efc84bdb0d2853e022e18fffc0c452b70f31aad"
+    },
+    {
+      "case_file": "Datasets/CuratedPilot/v1/replacement_parts/00002/event-65fa6d8d7a0c82498340/case.json",
+      "event_id": "event-65fa6d8d7a0c82498340",
+      "pair_id": "pair-dea9a46803843451655e",
+      "visual_review": "accepted",
+      "temporal_label_review": "accepted",
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "reviewer": "assistant visual inspection",
+      "inspection_scope": "Full timeline and primary pair inspected; only conservative interior and matched forest-control ROI approved.",
+      "notes": "Full timeline and pair inspected. Compact forest interior July31 is a distinct brown clearing August10 and persists. August5 is cloud-obscured and supplies no tighter bound. The forest-control ROI is stable on clear frames. Primary pair PNG separately inspected and consistent with the timeline.",
+      "rejection_reasons": [],
+      "observations": [
+        {
+          "scene_id": "S2B_MSIL1C_20180726T084009_N0206_R064_T36UXA_20180726T104227",
+          "date": "2018-07-26",
+          "target_state": "obscured",
+          "control_state": "obscured",
+          "notes": "Assistant inspection of the complete timeline: target=obscured; matched forest control=obscured. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233",
+          "date": "2018-07-31",
+          "target_state": "forest",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=forest; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757",
+          "date": "2018-08-05",
+          "target_state": "obscured",
+          "control_state": "obscured",
+          "notes": "Assistant inspection of the complete timeline: target=obscured; matched forest control=obscured. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180810T083601_N0206_R064_T36UXA_20180810T124435",
+          "date": "2018-08-10",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180815T084009_N0206_R064_T36UXA_20180815T123155",
+          "date": "2018-08-15",
+          "target_state": "obscured",
+          "control_state": "obscured",
+          "notes": "Assistant inspection of the complete timeline: target=obscured; matched forest control=obscured. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180820T083601_N0206_R064_T36UXA_20180820T105651",
+          "date": "2018-08-20",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180825T083549_N0206_R064_T36UXA_20180825T124942",
+          "date": "2018-08-25",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180830T083601_N0206_R064_T36UXA_20180830T105527",
+          "date": "2018-08-30",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180904T083549_N0206_R064_T36UXA_20180904T123955",
+          "date": "2018-09-04",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180919T083621_N0206_R064_T36UXA_20180919T105540",
+          "date": "2018-09-19",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        }
+      ],
+      "case_sha256": "c8216610a58493958c0baabf3d8deb7e6ff57424916eb54ca11b2d8bb19731e5",
+      "timeline_png_sha256": "5cf08609c6be3339e1f9c1ff77a744b481eaa55197eaa71f3dfbe6a5b942baba",
+      "pair_png_sha256": "b30657e006f54dec8c116e0bf7bd2b066d7839b0c96c0e65fe49402395a3495b",
+      "positive_interior_sha256": "48fbf80a6d72a4e60e80c8efef7ebcce46f3ab2ff4383e2d5d609cb314403d1a",
+      "proposed_control_sha256": "bed6de0496a3c8cd0d2bd7920a8fc32d70c50f26dacbcbe117bd1ee99bd21c58"
+    },
+    {
+      "case_file": "Datasets/CuratedPilot/v1/replacement_parts/00002/event-e932f0d28b2819f8368d/case.json",
+      "event_id": "event-e932f0d28b2819f8368d",
+      "pair_id": "pair-cdae04d23ac42b4129ed",
+      "visual_review": "accepted",
+      "temporal_label_review": "accepted",
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "reviewer": "assistant visual inspection",
+      "inspection_scope": "Full timeline and primary pair inspected; only conservative interior and matched forest-control ROI approved.",
+      "notes": "Full timeline and pair inspected. Small lower extension is dark forest August5 and bare/brown August10, persisting afterward. Only the four eroded interior pixels are supervised. July26 atmospheric veil remains uncertain; clear-date control box stays forest. Primary pair PNG separately inspected and consistent with the timeline.",
+      "rejection_reasons": [],
+      "observations": [
+        {
+          "scene_id": "S2B_MSIL1C_20180726T084009_N0206_R064_T36UXA_20180726T104227",
+          "date": "2018-07-26",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "Assistant inspection of the complete timeline: target=uncertain; matched forest control=uncertain. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233",
+          "date": "2018-07-31",
+          "target_state": "forest",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=forest; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757",
+          "date": "2018-08-05",
+          "target_state": "forest",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=forest; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180810T083601_N0206_R064_T36UXA_20180810T124435",
+          "date": "2018-08-10",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180815T084009_N0206_R064_T36UXA_20180815T123155",
+          "date": "2018-08-15",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180820T083601_N0206_R064_T36UXA_20180820T105651",
+          "date": "2018-08-20",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180825T083549_N0206_R064_T36UXA_20180825T124942",
+          "date": "2018-08-25",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180830T083601_N0206_R064_T36UXA_20180830T105527",
+          "date": "2018-08-30",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180904T083549_N0206_R064_T36UXA_20180904T123955",
+          "date": "2018-09-04",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180919T083621_N0206_R064_T36UXA_20180919T105540",
+          "date": "2018-09-19",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant inspection of the complete timeline: target=clearing_visible; matched forest control=stable_forest. Atmospheric/quality-obscured observations do not define clear-state bounds."
+        }
+      ],
+      "case_sha256": "1197dd4917ef31ffed07dd24d19da1714feaeb66be562d7c4c52423d4cf20922",
+      "timeline_png_sha256": "ef05e83956e8a7f15069cca886c4ba4604eee60fbc8a10c87e0252ccdf5d7a6e",
+      "pair_png_sha256": "35b5c4c320a1a8f3efeacdedb81758e65c814c2993e5bfcea4cdc3e9cc7c49fe",
+      "positive_interior_sha256": "a3611501ea1a14839ef1f497886d4d3a5a631e7d3b5e6c77cb137d40b4f98d8e",
+      "proposed_control_sha256": "5484161779830b53352ef5f1684feb31d7e5641e865cb9410a4a85cbe1d0b3c3"
     }
   ]
 }
