@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "retrieved_date": "2026-11-14",
+  "source_folder": "https://drive.google.com/drive/folders/1GJwDQ7SqASyPlusjbYWHLbrpNg_wAtuP",
+  "author_repository": "https://github.com/QuantuMobileSoftware/forest_change_detection#dataset",
+  "paper_doi": "10.1109/JSTARS.2020.3034186",
+  "sources": [
+    {
+      "source_id": "36UXA_time-dependent",
+      "filename": "36UXA_time-dependent.geojson",
+      "kind": "temporal",
+      "declared_tile": "36UXA",
+      "source_url": "https://drive.google.com/file/d/1X0BJCRsGCZkUR32L_noOm6bCo6koGsQ0/view",
+      "sha256": "e88eb45f44c5fb212e587e6fca36842e8c46f0d8c43e99738dff9e533175bf2f",
+      "size_bytes": 1556185
+    },
+    {
+      "source_id": "36UYA_36UXA_baseline",
+      "filename": "36UYA_36UXA_baseline.geojson",
+      "kind": "baseline",
+      "declared_tile": null,
+      "source_url": "https://drive.google.com/file/d/1UmECkUz3JyPTN3NG7pg6pYFrkIiCX8nq/view",
+      "sha256": "50bece033f294d33cecd1a4da5fe803e3a79ff98744133a830b8741c33926a27",
+      "size_bytes": 1429161
+    },
+    {
+      "source_id": "36UYA_Spring_time-dependent",
+      "filename": "36UYA_Spring_time-dependent.geojson",
+      "kind": "temporal",
+      "declared_tile": null,
+      "source_url": "https://drive.google.com/file/d/1R__f3z9ftcHNowNKmxekgHz7JA-s0nOh/view",
+      "sha256": "8059ba587e0bddb0ab55848b20500069b79296d4bfea8ac7df902a47a8f0c4dc",
+      "size_bytes": 256798
+    },
+    {
+      "source_id": "36UYA_Summer_time-dependent",
+      "filename": "36UYA_Summer_time-dependent.geojson",
+      "kind": "temporal",
+      "declared_tile": null,
+      "source_url": "https://drive.google.com/file/d/1BR-FbdgWNXOKYZawgplQ0mDP-YfcL-B-/view",
+      "sha256": "2c2391b5f4bb99e9aa628c7f31b06ec25856889e25e8bf0d46aa61a7063d9a8b",
+      "size_bytes": 114493
+    }
+  ]
+}

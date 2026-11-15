@@ -1,0 +1,142 @@
+[
+  {
+    "event_id": "event-970414764804f89e60a9",
+    "local_case_file": "Datasets/CuratedPilot/v1/review_parts/00000/event-970414764804f89e60a9/case.json",
+    "tracked_evidence_directory": "Docs/Reviews/CuratedPilotV1/prepared_cases/event-970414764804f89e60a9"
+  },
+  {
+    "event_id": "event-d25898e9d88aacf3b5c7",
+    "local_case_file": "Datasets/CuratedPilot/v1/review_parts/00000/event-d25898e9d88aacf3b5c7/case.json",
+    "tracked_evidence_directory": "Docs/Reviews/CuratedPilotV1/prepared_cases/event-d25898e9d88aacf3b5c7"
+  },
+  {
+    "event_id": "event-dba65b972460aca5c126",
+    "local_case_file": "Datasets/CuratedPilot/v1/review_parts/00000/event-dba65b972460aca5c126/case.json",
+    "tracked_evidence_directory": "Docs/Reviews/CuratedPilotV1/prepared_cases/event-dba65b972460aca5c126"
+  },
+  {
+    "event_id": "event-fa401753669ab81027f4",
+    "local_case_file": "Datasets/CuratedPilot/v1/review_parts/00000/event-fa401753669ab81027f4/case.json",
+    "tracked_evidence_directory": "Docs/Reviews/CuratedPilotV1/prepared_cases/event-fa401753669ab81027f4"
+  },
+  {
+    "event_id": "event-0e2f7f165cfdf1d9ed7c",
+    "local_case_file": "Datasets/CuratedPilot/v1/review_parts/00001/event-0e2f7f165cfdf1d9ed7c/case.json",
+    "tracked_evidence_directory": "Docs/Reviews/CuratedPilotV1/prepared_cases/event-0e2f7f165cfdf1d9ed7c"
+  },
+  {
+    "event_id": "event-133d3d11c615a3c3bc26",
+    "local_case_file": "Datasets/CuratedPilot/v1/review_parts/00001/event-133d3d11c615a3c3bc26/case.json",
+    "tracked_evidence_directory": "Docs/Reviews/CuratedPilotV1/prepared_cases/event-133d3d11c615a3c3bc26"
+  },
+  {
+    "event_id": "event-69f390dfc9d176f50f1d",
+    "local_case_file": "Datasets/CuratedPilot/v1/review_parts/00001/event-69f390dfc9d176f50f1d/case.json",
+    "tracked_evidence_directory": "Docs/Reviews/CuratedPilotV1/prepared_cases/event-69f390dfc9d176f50f1d"
+  },
+  {
+    "event_id": "event-fb9c705bda551c5fd13e",
+    "local_case_file": "Datasets/CuratedPilot/v1/review_parts/00001/event-fb9c705bda551c5fd13e/case.json",
+    "tracked_evidence_directory": "Docs/Reviews/CuratedPilotV1/prepared_cases/event-fb9c705bda551c5fd13e"
+  },
+  {
+    "event_id": "event-09aec2bd330378e33f72",
+    "local_case_file": "Datasets/CuratedPilot/v1/review_parts/00002/event-09aec2bd330378e33f72/case.json",
+    "tracked_evidence_directory": "Docs/Reviews/CuratedPilotV1/prepared_cases/event-09aec2bd330378e33f72"
+  },
+  {
+    "event_id": "event-9d169a84581b6a4c50a5",
+    "local_case_file": "Datasets/CuratedPilot/v1/review_parts/00002/event-9d169a84581b6a4c50a5/case.json",
+    "tracked_evidence_directory": "Docs/Reviews/CuratedPilotV1/prepared_cases/event-9d169a84581b6a4c50a5"
+  },
+  {
+    "event_id": "event-aaff832c34619704f3a4",
+    "local_case_file": "Datasets/CuratedPilot/v1/review_parts/00002/event-aaff832c34619704f3a4/case.json",
+    "tracked_evidence_directory": "Docs/Reviews/CuratedPilotV1/prepared_cases/event-aaff832c34619704f3a4"
+  },
+  {
+    "event_id": "event-e691d44c335d87649310",
+    "local_case_file": "Datasets/CuratedPilot/v1/review_parts/00002/event-e691d44c335d87649310/case.json",
+    "tracked_evidence_directory": "Docs/Reviews/CuratedPilotV1/prepared_cases/event-e691d44c335d87649310"
+  },
+  {
+    "event_id": "event-01dc179dcd8513caffaa",
+    "local_case_file": "Datasets/CuratedPilot/v1/review_parts/00003/event-01dc179dcd8513caffaa/case.json",
+    "tracked_evidence_directory": "Docs/Reviews/CuratedPilotV1/prepared_cases/event-01dc179dcd8513caffaa"
+  },
+  {
+    "event_id": "event-25888befa0297de3917f",
+    "local_case_file": "Datasets/CuratedPilot/v1/review_parts/00003/event-25888befa0297de3917f/case.json",
+    "tracked_evidence_directory": "Docs/Reviews/CuratedPilotV1/prepared_cases/event-25888befa0297de3917f"
+  },
+  {
+    "event_id": "event-4027aba1f531addd4d1b",
+    "local_case_file": "Datasets/CuratedPilot/v1/review_parts/00003/event-4027aba1f531addd4d1b/case.json",
+    "tracked_evidence_directory": "Docs/Reviews/CuratedPilotV1/prepared_cases/event-4027aba1f531addd4d1b"
+  },
+  {
+    "event_id": "event-e48cbd49ed33587595b7",
+    "local_case_file": "Datasets/CuratedPilot/v1/review_parts/00003/event-e48cbd49ed33587595b7/case.json",
+    "tracked_evidence_directory": "Docs/Reviews/CuratedPilotV1/prepared_cases/event-e48cbd49ed33587595b7"
+  },
+  {
+    "event_id": "event-263e9027a6142dc9fc84",
+    "local_case_file": "Datasets/CuratedPilot/v1/review_parts/00004/event-263e9027a6142dc9fc84/case.json",
+    "tracked_evidence_directory": "Docs/Reviews/CuratedPilotV1/prepared_cases/event-263e9027a6142dc9fc84"
+  },
+  {
+    "event_id": "event-8628872c64f4cabf6e67",
+    "local_case_file": "Datasets/CuratedPilot/v1/replacement_parts/00000/event-8628872c64f4cabf6e67/case.json",
+    "tracked_evidence_directory": "Docs/Reviews/CuratedPilotV1/prepared_cases/event-8628872c64f4cabf6e67"
+  },
+  {
+    "event_id": "event-b9d89f91b116d8d90fac",
+    "local_case_file": "Datasets/CuratedPilot/v1/replacement_parts/00000/event-b9d89f91b116d8d90fac/case.json",
+    "tracked_evidence_directory": "Docs/Reviews/CuratedPilotV1/prepared_cases/event-b9d89f91b116d8d90fac"
+  },
+  {
+    "event_id": "event-e59c75f02fe23bb9a1ae",
+    "local_case_file": "Datasets/CuratedPilot/v1/replacement_parts/00000/event-e59c75f02fe23bb9a1ae/case.json",
+    "tracked_evidence_directory": "Docs/Reviews/CuratedPilotV1/prepared_cases/event-e59c75f02fe23bb9a1ae"
+  },
+  {
+    "event_id": "event-e6224bcd39746b840ea4",
+    "local_case_file": "Datasets/CuratedPilot/v1/replacement_parts/00000/event-e6224bcd39746b840ea4/case.json",
+    "tracked_evidence_directory": "Docs/Reviews/CuratedPilotV1/prepared_cases/event-e6224bcd39746b840ea4"
+  },
+  {
+    "event_id": "event-073d95e8a1c667845607",
+    "local_case_file": "Datasets/CuratedPilot/v1/replacement_parts/00001/event-073d95e8a1c667845607/case.json",
+    "tracked_evidence_directory": "Docs/Reviews/CuratedPilotV1/prepared_cases/event-073d95e8a1c667845607"
+  },
+  {
+    "event_id": "event-4fa26438d5872a8480af",
+    "local_case_file": "Datasets/CuratedPilot/v1/replacement_parts/00001/event-4fa26438d5872a8480af/case.json",
+    "tracked_evidence_directory": "Docs/Reviews/CuratedPilotV1/prepared_cases/event-4fa26438d5872a8480af"
+  },
+  {
+    "event_id": "event-a72e10d66054921e60b2",
+    "local_case_file": "Datasets/CuratedPilot/v1/replacement_parts/00001/event-a72e10d66054921e60b2/case.json",
+    "tracked_evidence_directory": "Docs/Reviews/CuratedPilotV1/prepared_cases/event-a72e10d66054921e60b2"
+  },
+  {
+    "event_id": "event-f7e5f043776b24cb7dfa",
+    "local_case_file": "Datasets/CuratedPilot/v1/replacement_parts/00001/event-f7e5f043776b24cb7dfa/case.json",
+    "tracked_evidence_directory": "Docs/Reviews/CuratedPilotV1/prepared_cases/event-f7e5f043776b24cb7dfa"
+  },
+  {
+    "event_id": "event-0012effe85aa26b69541",
+    "local_case_file": "Datasets/CuratedPilot/v1/replacement_parts/00002/event-0012effe85aa26b69541/case.json",
+    "tracked_evidence_directory": "Docs/Reviews/CuratedPilotV1/prepared_cases/event-0012effe85aa26b69541"
+  },
+  {
+    "event_id": "event-65fa6d8d7a0c82498340",
+    "local_case_file": "Datasets/CuratedPilot/v1/replacement_parts/00002/event-65fa6d8d7a0c82498340/case.json",
+    "tracked_evidence_directory": "Docs/Reviews/CuratedPilotV1/prepared_cases/event-65fa6d8d7a0c82498340"
+  },
+  {
+    "event_id": "event-e932f0d28b2819f8368d",
+    "local_case_file": "Datasets/CuratedPilot/v1/replacement_parts/00002/event-e932f0d28b2819f8368d/case.json",
+    "tracked_evidence_directory": "Docs/Reviews/CuratedPilotV1/prepared_cases/event-e932f0d28b2819f8368d"
+  }
+]

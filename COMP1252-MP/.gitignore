@@ -164,6 +164,10 @@ cython_debug/
 #.idea/
 
 # Project datasets
+/Datasets/Validation/
+/Datasets/AnnotationAudit/
+/Datasets/PixelQA/
+/Datasets/CuratedPilot/
 *.tar
 *.h5
 *.hdf

@@ -1,0 +1,26 @@
+{
+  "selection_seed": 42,
+  "hash_prefix": "reviewed-pilot-v1:42:",
+  "eligible_event_pools": {
+    "36UXA": 74,
+    "36UYA_Summer": 23,
+    "36UYA_Spring": 7
+  },
+  "selected_counts": {
+    "36UXA": 6,
+    "36UYA_Spring": 5,
+    "36UYA_Summer": 6
+  },
+  "selection_order": "Nearest clean pre is selected before applying NDVI-drop filter, rather than cherry-picking a more distant pre.",
+  "limitations": [
+    "Only five distinct Spring-source groups satisfy these filters; all have June annotation dates.",
+    "No source JP2 reads, imagery inspection, forest model inference, visibility truth or training approval was performed."
+  ],
+  "known_prior_control": {
+    "pair_id": "pair-83d9a36c0d2b455c1dbc",
+    "legacy_alias": "PLOT-00004",
+    "prior_inspection": "requires_haze_review",
+    "source_record": "Datasets/PixelQA/v1/pilot/visual_review.json",
+    "note": "Retain as prior rejected/review control provenance; not forced into strong-signal shortlist."
+  }
+}

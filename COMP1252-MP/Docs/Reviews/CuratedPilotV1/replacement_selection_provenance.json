@@ -1,0 +1,77 @@
+{
+  "selection_seed": 42,
+  "hash_prefix": "reviewed-pilot-replacements-v1:42:",
+  "base_eligible_event_counts": {
+    "36UYA_Summer": 23,
+    "36UXA": 74,
+    "36UYA_Spring": 7
+  },
+  "qualified_replacement_event_counts": {
+    "36UXA": 11,
+    "36UYA_Summer": 2
+  },
+  "qualified_replacement_distinct_group_counts": {
+    "36UXA": 9,
+    "36UYA_Summer": 2,
+    "36UYA_Spring": 0
+  },
+  "selected_counts": {
+    "36UXA": 9,
+    "36UYA_Summer": 2
+  },
+  "selected_total": 11,
+  "excluded_original_event_ids": [
+    "event-01dc179dcd8513caffaa",
+    "event-09aec2bd330378e33f72",
+    "event-0e2f7f165cfdf1d9ed7c",
+    "event-133d3d11c615a3c3bc26",
+    "event-25888befa0297de3917f",
+    "event-263e9027a6142dc9fc84",
+    "event-4027aba1f531addd4d1b",
+    "event-69f390dfc9d176f50f1d",
+    "event-970414764804f89e60a9",
+    "event-9d169a84581b6a4c50a5",
+    "event-aaff832c34619704f3a4",
+    "event-d25898e9d88aacf3b5c7",
+    "event-dba65b972460aca5c126",
+    "event-e48cbd49ed33587595b7",
+    "event-e691d44c335d87649310",
+    "event-fa401753669ab81027f4",
+    "event-fb9c705bda551c5fd13e"
+  ],
+  "excluded_accepted_group_ids": [
+    "group-0b1befcba1b951941711",
+    "group-8dea78ccfd15060ff7f3"
+  ],
+  "accepted_original_event_ids": [
+    "event-263e9027a6142dc9fc84",
+    "event-e691d44c335d87649310"
+  ],
+  "rejection_counts": {
+    "already_reviewed_event": 17,
+    "accepted_original_group": 4,
+    "anchor_interior_below_four_pixels": 62,
+    "fewer_than_two_later_scenes": 8
+  },
+  "selection_order": "Qualifying train/pass/zero fullcrop QA/intervaltarget >=25/exactpost rows, nearest pre by date then pairID, then drop>=.15, then anchor interior>=4 and >=2 later scenes, prior event/group exclusions; round-robin strata with seeded hash and unique groups.",
+  "invalid_projected_geometries": [
+    {
+      "event_id": "event-8179ed3a1e4286448a17",
+      "projected_validity": "Self-intersection[737160.916514706 5512771.29805487]",
+      "projected_bounds": [
+        736871.6050585004,
+        5512354.473502184,
+        737222.104107392,
+        5513292.381854357
+      ],
+      "minimum_distance_to_original17_crop_m": 407.6181456428021,
+      "minimum_distance_to_final_replacement_crop_m": 40579.07902916355,
+      "temporal_sources": [],
+      "original17_and_replacements_outside_20m_buffer": true,
+      "suggested_future_exclusion_geometry": "Full projected bounding rectangle buffered20m; exclusion-only conservative handling in a new version of the new preparation helper, without changing original catalogue or frozen processing helpers"
+    }
+  ],
+  "no_jp2_reads": true,
+  "no_model_predictions": true,
+  "training_approved": false
+}

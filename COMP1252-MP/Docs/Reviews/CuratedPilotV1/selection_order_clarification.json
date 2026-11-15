@@ -1,0 +1,12 @@
+{
+  "original_shortlist": "/tmp/curated_pilot_shortlist.json",
+  "selection_order": [
+    "Filter train pairs to automatic pass, zero full-crop unusable pixels, target>=25 pixels.",
+    "For each event retain exact annotation-date post image; select latest pre_date among this qualifying pair pool, tie by pair_id.",
+    "Require selected pair target-median NDVI drop >=0.15.",
+    "Use seeded event hash and distinct train groups to choose up to six per source stratum."
+  ],
+  "clarification": "A later clean pre with target<25 pixels was excluded before the nearest-pre choice. This is not necessarily the absolute nearest clean pre observation.",
+  "comparison": "The replacement scan instead chooses absolute nearest clean pre first, then tests target size and NDVI drop. Its eligible counts differ.",
+  "timing_evidence": "Acceptance bounds must derive only from complete inspected timeline states, not from selection pairs, annotation dates, or NDVI."
+}

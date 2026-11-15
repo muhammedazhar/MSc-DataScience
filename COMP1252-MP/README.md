@@ -2,6 +2,13 @@
 
 Read thee [Contribution Guidelines](./Docs/Guides/Contributions.md) to know how to contribute to the project. To run this project onto your local machine, go to the [Environment Setup](./Docs/Guides/EnvironmentSetup.md) page to setup the environment for the project.
 
+The [single-sample validation guide](./Docs/Guides/SingleSampleValidation.md)
+documents the corrected, resource-limited image-pair example and its inspection.
+The [annotation audit guide](./Docs/Guides/AnnotationAudit.md) describes verified
+source provenance, duplicate handling, geographic splits and candidate manifests.
+The [pixel-quality guide](./Docs/Guides/PixelQuality.md) documents bounded cloud,
+shadow-risk and invalid-pixel checks, resumable batches and review requirements.
+
 ## Structure of the repository
 
 ```bash

@@ -1,0 +1,359 @@
+[
+  {
+    "event_id": "event-d25898e9d88aacf3b5c7",
+    "pair_id": "pair-067201c1bca0cf2b51b0",
+    "stratum": "36UXA",
+    "rank": 1,
+    "group_id": "group-4dfe8e06595a11f04396",
+    "split": "train",
+    "pre_date": "2018-08-10",
+    "post_date": "2018-08-30",
+    "selection_metrics": {
+      "target_pixels": 55,
+      "pre_target_median_ndvi": 0.5116004943847656,
+      "post_target_median_ndvi": 0.29362332820892334,
+      "target_median_ndvi_drop": 0.21797716617584229,
+      "crop_unusable_pixels": 0,
+      "stable_ndvi_proxy_pixels": 109,
+      "stable_proxy_rule": "NDVI > 0.6 in both dates and abs(delta) < 0.08; not a verified control ROI"
+    },
+    "selection_reason": "Training-only clear full-crop QA, target >=25 pixels, exact annotation-date post observation, nearest clean pre observation, NDVI drop >=0.15; stable seeded event hash selects distinct groups.",
+    "selection_bias": "Strong-signal, clear-image curation pilot; not a representative accuracy/evaluation sample. Source collection balance is not seasonal balance. Metrics do not establish visible clearing or no-change truth."
+  },
+  {
+    "event_id": "event-970414764804f89e60a9",
+    "pair_id": "pair-da649e176e2618c217ae",
+    "stratum": "36UXA",
+    "rank": 2,
+    "group_id": "group-ab1e4806d94a3ad27785",
+    "split": "train",
+    "pre_date": "2018-08-05",
+    "post_date": "2018-08-20",
+    "selection_metrics": {
+      "target_pixels": 40,
+      "pre_target_median_ndvi": 0.6959514617919922,
+      "post_target_median_ndvi": 0.37968313694000244,
+      "target_median_ndvi_drop": 0.31626832485198975,
+      "crop_unusable_pixels": 0,
+      "stable_ndvi_proxy_pixels": 2969,
+      "stable_proxy_rule": "NDVI > 0.6 in both dates and abs(delta) < 0.08; not a verified control ROI"
+    },
+    "selection_reason": "Training-only clear full-crop QA, target >=25 pixels, exact annotation-date post observation, nearest clean pre observation, NDVI drop >=0.15; stable seeded event hash selects distinct groups.",
+    "selection_bias": "Strong-signal, clear-image curation pilot; not a representative accuracy/evaluation sample. Source collection balance is not seasonal balance. Metrics do not establish visible clearing or no-change truth."
+  },
+  {
+    "event_id": "event-dba65b972460aca5c126",
+    "pair_id": "pair-a30e796bb5502c5453b3",
+    "stratum": "36UXA",
+    "rank": 3,
+    "group_id": "group-c27a75b31d1c196df2fb",
+    "split": "train",
+    "pre_date": "2018-08-10",
+    "post_date": "2018-08-30",
+    "selection_metrics": {
+      "target_pixels": 76,
+      "pre_target_median_ndvi": 0.668408989906311,
+      "post_target_median_ndvi": 0.4180821180343628,
+      "target_median_ndvi_drop": 0.25032687187194824,
+      "crop_unusable_pixels": 0,
+      "stable_ndvi_proxy_pixels": 1951,
+      "stable_proxy_rule": "NDVI > 0.6 in both dates and abs(delta) < 0.08; not a verified control ROI"
+    },
+    "selection_reason": "Training-only clear full-crop QA, target >=25 pixels, exact annotation-date post observation, nearest clean pre observation, NDVI drop >=0.15; stable seeded event hash selects distinct groups.",
+    "selection_bias": "Strong-signal, clear-image curation pilot; not a representative accuracy/evaluation sample. Source collection balance is not seasonal balance. Metrics do not establish visible clearing or no-change truth."
+  },
+  {
+    "event_id": "event-fa401753669ab81027f4",
+    "pair_id": "pair-ec9fbb43797f537169fa",
+    "stratum": "36UXA",
+    "rank": 4,
+    "group_id": "group-7bdbc25c80a4f80718fc",
+    "split": "train",
+    "pre_date": "2018-08-10",
+    "post_date": "2018-08-15",
+    "selection_metrics": {
+      "target_pixels": 26,
+      "pre_target_median_ndvi": 0.6164023876190186,
+      "post_target_median_ndvi": 0.46043044328689575,
+      "target_median_ndvi_drop": 0.1559719443321228,
+      "crop_unusable_pixels": 0,
+      "stable_ndvi_proxy_pixels": 3658,
+      "stable_proxy_rule": "NDVI > 0.6 in both dates and abs(delta) < 0.08; not a verified control ROI"
+    },
+    "selection_reason": "Training-only clear full-crop QA, target >=25 pixels, exact annotation-date post observation, nearest clean pre observation, NDVI drop >=0.15; stable seeded event hash selects distinct groups.",
+    "selection_bias": "Strong-signal, clear-image curation pilot; not a representative accuracy/evaluation sample. Source collection balance is not seasonal balance. Metrics do not establish visible clearing or no-change truth."
+  },
+  {
+    "event_id": "event-fb9c705bda551c5fd13e",
+    "pair_id": "pair-a5f8b90ab99c6d412974",
+    "stratum": "36UXA",
+    "rank": 5,
+    "group_id": "group-107187351f1c7cfd7722",
+    "split": "train",
+    "pre_date": "2018-08-05",
+    "post_date": "2018-08-30",
+    "selection_metrics": {
+      "target_pixels": 28,
+      "pre_target_median_ndvi": 0.6293329000473022,
+      "post_target_median_ndvi": 0.4087006449699402,
+      "target_median_ndvi_drop": 0.22063225507736206,
+      "crop_unusable_pixels": 0,
+      "stable_ndvi_proxy_pixels": 2463,
+      "stable_proxy_rule": "NDVI > 0.6 in both dates and abs(delta) < 0.08; not a verified control ROI"
+    },
+    "selection_reason": "Training-only clear full-crop QA, target >=25 pixels, exact annotation-date post observation, nearest clean pre observation, NDVI drop >=0.15; stable seeded event hash selects distinct groups.",
+    "selection_bias": "Strong-signal, clear-image curation pilot; not a representative accuracy/evaluation sample. Source collection balance is not seasonal balance. Metrics do not establish visible clearing or no-change truth."
+  },
+  {
+    "event_id": "event-69f390dfc9d176f50f1d",
+    "pair_id": "pair-d89a6b297bca99808938",
+    "stratum": "36UXA",
+    "rank": 6,
+    "group_id": "group-cc28b81ea2fc80b0587a",
+    "split": "train",
+    "pre_date": "2018-08-10",
+    "post_date": "2018-08-25",
+    "selection_metrics": {
+      "target_pixels": 40,
+      "pre_target_median_ndvi": 0.6620732545852661,
+      "post_target_median_ndvi": 0.41432052850723267,
+      "target_median_ndvi_drop": 0.24775272607803345,
+      "crop_unusable_pixels": 0,
+      "stable_ndvi_proxy_pixels": 2366,
+      "stable_proxy_rule": "NDVI > 0.6 in both dates and abs(delta) < 0.08; not a verified control ROI"
+    },
+    "selection_reason": "Training-only clear full-crop QA, target >=25 pixels, exact annotation-date post observation, nearest clean pre observation, NDVI drop >=0.15; stable seeded event hash selects distinct groups.",
+    "selection_bias": "Strong-signal, clear-image curation pilot; not a representative accuracy/evaluation sample. Source collection balance is not seasonal balance. Metrics do not establish visible clearing or no-change truth."
+  },
+  {
+    "event_id": "event-0e2f7f165cfdf1d9ed7c",
+    "pair_id": "pair-fa83f45a0d247212614b",
+    "stratum": "36UYA_Spring",
+    "rank": 1,
+    "group_id": "group-4a657365db5b02701f95",
+    "split": "train",
+    "pre_date": "2019-06-06",
+    "post_date": "2019-06-26",
+    "selection_metrics": {
+      "target_pixels": 32,
+      "pre_target_median_ndvi": 0.4529673755168915,
+      "post_target_median_ndvi": 0.2135351151227951,
+      "target_median_ndvi_drop": 0.23943226039409637,
+      "crop_unusable_pixels": 0,
+      "stable_ndvi_proxy_pixels": 311,
+      "stable_proxy_rule": "NDVI > 0.6 in both dates and abs(delta) < 0.08; not a verified control ROI"
+    },
+    "selection_reason": "Training-only clear full-crop QA, target >=25 pixels, exact annotation-date post observation, nearest clean pre observation, NDVI drop >=0.15; stable seeded event hash selects distinct groups.",
+    "selection_bias": "Strong-signal, clear-image curation pilot; not a representative accuracy/evaluation sample. Source collection balance is not seasonal balance. Metrics do not establish visible clearing or no-change truth."
+  },
+  {
+    "event_id": "event-133d3d11c615a3c3bc26",
+    "pair_id": "pair-90e3b975c3145de75234",
+    "stratum": "36UYA_Spring",
+    "rank": 2,
+    "group_id": "group-402cb13b3290128f8b36",
+    "split": "train",
+    "pre_date": "2019-06-11",
+    "post_date": "2019-06-26",
+    "selection_metrics": {
+      "target_pixels": 35,
+      "pre_target_median_ndvi": 0.5725741982460022,
+      "post_target_median_ndvi": 0.40930673480033875,
+      "target_median_ndvi_drop": 0.16326746344566345,
+      "crop_unusable_pixels": 0,
+      "stable_ndvi_proxy_pixels": 1579,
+      "stable_proxy_rule": "NDVI > 0.6 in both dates and abs(delta) < 0.08; not a verified control ROI"
+    },
+    "selection_reason": "Training-only clear full-crop QA, target >=25 pixels, exact annotation-date post observation, nearest clean pre observation, NDVI drop >=0.15; stable seeded event hash selects distinct groups.",
+    "selection_bias": "Strong-signal, clear-image curation pilot; not a representative accuracy/evaluation sample. Source collection balance is not seasonal balance. Metrics do not establish visible clearing or no-change truth."
+  },
+  {
+    "event_id": "event-09aec2bd330378e33f72",
+    "pair_id": "pair-41987bf0df95576c48b7",
+    "stratum": "36UYA_Spring",
+    "rank": 3,
+    "group_id": "group-7d34728dd8a5d4611c50",
+    "split": "train",
+    "pre_date": "2019-06-11",
+    "post_date": "2019-06-26",
+    "selection_metrics": {
+      "target_pixels": 35,
+      "pre_target_median_ndvi": 0.770219624042511,
+      "post_target_median_ndvi": 0.5428571701049805,
+      "target_median_ndvi_drop": 0.22736245393753052,
+      "crop_unusable_pixels": 0,
+      "stable_ndvi_proxy_pixels": 3788,
+      "stable_proxy_rule": "NDVI > 0.6 in both dates and abs(delta) < 0.08; not a verified control ROI"
+    },
+    "selection_reason": "Training-only clear full-crop QA, target >=25 pixels, exact annotation-date post observation, nearest clean pre observation, NDVI drop >=0.15; stable seeded event hash selects distinct groups.",
+    "selection_bias": "Strong-signal, clear-image curation pilot; not a representative accuracy/evaluation sample. Source collection balance is not seasonal balance. Metrics do not establish visible clearing or no-change truth."
+  },
+  {
+    "event_id": "event-9d169a84581b6a4c50a5",
+    "pair_id": "pair-b79ede096640253a557d",
+    "stratum": "36UYA_Spring",
+    "rank": 4,
+    "group_id": "group-d17e1bec408e530562c9",
+    "split": "train",
+    "pre_date": "2019-06-06",
+    "post_date": "2019-06-11",
+    "selection_metrics": {
+      "target_pixels": 37,
+      "pre_target_median_ndvi": 0.7735522985458374,
+      "post_target_median_ndvi": 0.6155228018760681,
+      "target_median_ndvi_drop": 0.1580294966697693,
+      "crop_unusable_pixels": 0,
+      "stable_ndvi_proxy_pixels": 3170,
+      "stable_proxy_rule": "NDVI > 0.6 in both dates and abs(delta) < 0.08; not a verified control ROI"
+    },
+    "selection_reason": "Training-only clear full-crop QA, target >=25 pixels, exact annotation-date post observation, nearest clean pre observation, NDVI drop >=0.15; stable seeded event hash selects distinct groups.",
+    "selection_bias": "Strong-signal, clear-image curation pilot; not a representative accuracy/evaluation sample. Source collection balance is not seasonal balance. Metrics do not establish visible clearing or no-change truth."
+  },
+  {
+    "event_id": "event-e691d44c335d87649310",
+    "pair_id": "pair-9e46432dba83dd68c052",
+    "stratum": "36UYA_Spring",
+    "rank": 5,
+    "group_id": "group-8dea78ccfd15060ff7f3",
+    "split": "train",
+    "pre_date": "2019-06-11",
+    "post_date": "2019-06-26",
+    "selection_metrics": {
+      "target_pixels": 56,
+      "pre_target_median_ndvi": 0.779406726360321,
+      "post_target_median_ndvi": 0.4781271815299988,
+      "target_median_ndvi_drop": 0.30127954483032227,
+      "crop_unusable_pixels": 0,
+      "stable_ndvi_proxy_pixels": 4005,
+      "stable_proxy_rule": "NDVI > 0.6 in both dates and abs(delta) < 0.08; not a verified control ROI"
+    },
+    "selection_reason": "Training-only clear full-crop QA, target >=25 pixels, exact annotation-date post observation, nearest clean pre observation, NDVI drop >=0.15; stable seeded event hash selects distinct groups.",
+    "selection_bias": "Strong-signal, clear-image curation pilot; not a representative accuracy/evaluation sample. Source collection balance is not seasonal balance. Metrics do not establish visible clearing or no-change truth."
+  },
+  {
+    "event_id": "event-aaff832c34619704f3a4",
+    "pair_id": "pair-4db1d16c9375713e7ef7",
+    "stratum": "36UYA_Summer",
+    "rank": 1,
+    "group_id": "group-f701f8e7dabf28c68114",
+    "split": "train",
+    "pre_date": "2019-08-25",
+    "post_date": "2019-08-30",
+    "selection_metrics": {
+      "target_pixels": 41,
+      "pre_target_median_ndvi": 0.6837766766548157,
+      "post_target_median_ndvi": 0.4158366620540619,
+      "target_median_ndvi_drop": 0.2679400146007538,
+      "crop_unusable_pixels": 0,
+      "stable_ndvi_proxy_pixels": 3197,
+      "stable_proxy_rule": "NDVI > 0.6 in both dates and abs(delta) < 0.08; not a verified control ROI"
+    },
+    "selection_reason": "Training-only clear full-crop QA, target >=25 pixels, exact annotation-date post observation, nearest clean pre observation, NDVI drop >=0.15; stable seeded event hash selects distinct groups.",
+    "selection_bias": "Strong-signal, clear-image curation pilot; not a representative accuracy/evaluation sample. Source collection balance is not seasonal balance. Metrics do not establish visible clearing or no-change truth."
+  },
+  {
+    "event_id": "event-01dc179dcd8513caffaa",
+    "pair_id": "pair-bc7752f3cb2be0013af3",
+    "stratum": "36UYA_Summer",
+    "rank": 2,
+    "group_id": "group-c79a05c506f5f75dd895",
+    "split": "train",
+    "pre_date": "2019-08-25",
+    "post_date": "2019-08-30",
+    "selection_metrics": {
+      "target_pixels": 28,
+      "pre_target_median_ndvi": 0.7309815883636475,
+      "post_target_median_ndvi": 0.5641927123069763,
+      "target_median_ndvi_drop": 0.16678887605667114,
+      "crop_unusable_pixels": 0,
+      "stable_ndvi_proxy_pixels": 3712,
+      "stable_proxy_rule": "NDVI > 0.6 in both dates and abs(delta) < 0.08; not a verified control ROI"
+    },
+    "selection_reason": "Training-only clear full-crop QA, target >=25 pixels, exact annotation-date post observation, nearest clean pre observation, NDVI drop >=0.15; stable seeded event hash selects distinct groups.",
+    "selection_bias": "Strong-signal, clear-image curation pilot; not a representative accuracy/evaluation sample. Source collection balance is not seasonal balance. Metrics do not establish visible clearing or no-change truth."
+  },
+  {
+    "event_id": "event-25888befa0297de3917f",
+    "pair_id": "pair-ddf360f23fa05901b26a",
+    "stratum": "36UYA_Summer",
+    "rank": 3,
+    "group_id": "group-475baa37b7b8e4c511be",
+    "split": "train",
+    "pre_date": "2019-08-30",
+    "post_date": "2019-09-09",
+    "selection_metrics": {
+      "target_pixels": 36,
+      "pre_target_median_ndvi": 0.7306363582611084,
+      "post_target_median_ndvi": 0.47015181183815,
+      "target_median_ndvi_drop": 0.2604845464229584,
+      "crop_unusable_pixels": 0,
+      "stable_ndvi_proxy_pixels": 2343,
+      "stable_proxy_rule": "NDVI > 0.6 in both dates and abs(delta) < 0.08; not a verified control ROI"
+    },
+    "selection_reason": "Training-only clear full-crop QA, target >=25 pixels, exact annotation-date post observation, nearest clean pre observation, NDVI drop >=0.15; stable seeded event hash selects distinct groups.",
+    "selection_bias": "Strong-signal, clear-image curation pilot; not a representative accuracy/evaluation sample. Source collection balance is not seasonal balance. Metrics do not establish visible clearing or no-change truth."
+  },
+  {
+    "event_id": "event-e48cbd49ed33587595b7",
+    "pair_id": "pair-50406204c941370966fc",
+    "stratum": "36UYA_Summer",
+    "rank": 4,
+    "group_id": "group-027cdac6be24db9923ac",
+    "split": "train",
+    "pre_date": "2019-08-25",
+    "post_date": "2019-09-09",
+    "selection_metrics": {
+      "target_pixels": 27,
+      "pre_target_median_ndvi": 0.7301844358444214,
+      "post_target_median_ndvi": 0.5305570363998413,
+      "target_median_ndvi_drop": 0.19962739944458008,
+      "crop_unusable_pixels": 0,
+      "stable_ndvi_proxy_pixels": 3001,
+      "stable_proxy_rule": "NDVI > 0.6 in both dates and abs(delta) < 0.08; not a verified control ROI"
+    },
+    "selection_reason": "Training-only clear full-crop QA, target >=25 pixels, exact annotation-date post observation, nearest clean pre observation, NDVI drop >=0.15; stable seeded event hash selects distinct groups.",
+    "selection_bias": "Strong-signal, clear-image curation pilot; not a representative accuracy/evaluation sample. Source collection balance is not seasonal balance. Metrics do not establish visible clearing or no-change truth."
+  },
+  {
+    "event_id": "event-4027aba1f531addd4d1b",
+    "pair_id": "pair-bc5367e5b0489ec4f1d4",
+    "stratum": "36UYA_Summer",
+    "rank": 5,
+    "group_id": "group-21cdc9429261e8632074",
+    "split": "train",
+    "pre_date": "2019-08-30",
+    "post_date": "2019-09-09",
+    "selection_metrics": {
+      "target_pixels": 32,
+      "pre_target_median_ndvi": 0.6613585948944092,
+      "post_target_median_ndvi": 0.3818865418434143,
+      "target_median_ndvi_drop": 0.2794720530509949,
+      "crop_unusable_pixels": 0,
+      "stable_ndvi_proxy_pixels": 154,
+      "stable_proxy_rule": "NDVI > 0.6 in both dates and abs(delta) < 0.08; not a verified control ROI"
+    },
+    "selection_reason": "Training-only clear full-crop QA, target >=25 pixels, exact annotation-date post observation, nearest clean pre observation, NDVI drop >=0.15; stable seeded event hash selects distinct groups.",
+    "selection_bias": "Strong-signal, clear-image curation pilot; not a representative accuracy/evaluation sample. Source collection balance is not seasonal balance. Metrics do not establish visible clearing or no-change truth."
+  },
+  {
+    "event_id": "event-263e9027a6142dc9fc84",
+    "pair_id": "pair-6b854a3fc1500a858fe4",
+    "stratum": "36UYA_Summer",
+    "rank": 6,
+    "group_id": "group-0b1befcba1b951941711",
+    "split": "train",
+    "pre_date": "2019-08-15",
+    "post_date": "2019-08-25",
+    "selection_metrics": {
+      "target_pixels": 54,
+      "pre_target_median_ndvi": 0.7066365480422974,
+      "post_target_median_ndvi": 0.44482356309890747,
+      "target_median_ndvi_drop": 0.2618129849433899,
+      "crop_unusable_pixels": 0,
+      "stable_ndvi_proxy_pixels": 3982,
+      "stable_proxy_rule": "NDVI > 0.6 in both dates and abs(delta) < 0.08; not a verified control ROI"
+    },
+    "selection_reason": "Training-only clear full-crop QA, target >=25 pixels, exact annotation-date post observation, nearest clean pre observation, NDVI drop >=0.15; stable seeded event hash selects distinct groups.",
+    "selection_bias": "Strong-signal, clear-image curation pilot; not a representative accuracy/evaluation sample. Source collection balance is not seasonal balance. Metrics do not establish visible clearing or no-change truth."
+  }
+]

@@ -1,0 +1,1584 @@
+{
+  "schema_version": 1,
+  "review_scope": "Training-only assistant-reviewed partial-label pilot; no expert ground-truth certification.",
+  "reviews": [
+    {
+      "case_file": "Datasets/CuratedPilot/v1/review_parts/00000/event-970414764804f89e60a9/case.json",
+      "event_id": "event-970414764804f89e60a9",
+      "pair_id": "pair-da649e176e2618c217ae",
+      "visual_review": "rejected",
+      "temporal_label_review": "rejected",
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "reviewer": "assistant visual inspection",
+      "inspection_scope": "Conservative rejection; no visual ground-truth claim",
+      "notes": "Rejected before label approval: only 0 pixels survive the one-pixel boundary margin; minimum pilot support is four pixels. No target or control states inferred from the unreviewed preview.",
+      "rejection_reasons": [
+        "Rejected before label approval: only 0 pixels survive the one-pixel boundary margin; minimum pilot support is four pixels. No target or control states inferred from the unreviewed preview."
+      ],
+      "observations": [
+        {
+          "scene_id": "S2B_MSIL1C_20180726T084009_N0206_R064_T36UXA_20180726T104227",
+          "date": "2018-07-26",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233",
+          "date": "2018-07-31",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757",
+          "date": "2018-08-05",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180810T083601_N0206_R064_T36UXA_20180810T124435",
+          "date": "2018-08-10",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180815T084009_N0206_R064_T36UXA_20180815T123155",
+          "date": "2018-08-15",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180820T083601_N0206_R064_T36UXA_20180820T105651",
+          "date": "2018-08-20",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180825T083549_N0206_R064_T36UXA_20180825T124942",
+          "date": "2018-08-25",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180830T083601_N0206_R064_T36UXA_20180830T105527",
+          "date": "2018-08-30",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180904T083549_N0206_R064_T36UXA_20180904T123955",
+          "date": "2018-09-04",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180919T083621_N0206_R064_T36UXA_20180919T105540",
+          "date": "2018-09-19",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        }
+      ],
+      "case_sha256": "7b0591739af0b391d717a58c5b93448c0c17288f87a81b82469d81dc116596c8",
+      "timeline_png_sha256": "89161a96d1ea793f32fecaa66cccd79c390d8f36bfeb6545559d867957c44de4",
+      "pair_png_sha256": "11239a3e7dca68b547ac7244c84cb4306b1953f7c5b25a5c0c56e1fd94572183",
+      "positive_interior_sha256": "0cf510b8ecd8d96fd54f9a6d5be35886ba919984a42f4b135414e7314ac742ac",
+      "proposed_control_sha256": "9458a1ad1645436b28d61846034cebd346db9bb4b6b5da7bae3a930b0ebb1ebf"
+    },
+    {
+      "case_file": "Datasets/CuratedPilot/v1/review_parts/00000/event-d25898e9d88aacf3b5c7/case.json",
+      "event_id": "event-d25898e9d88aacf3b5c7",
+      "pair_id": "pair-067201c1bca0cf2b51b0",
+      "visual_review": "rejected",
+      "temporal_label_review": "rejected",
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "reviewer": "assistant visual inspection",
+      "inspection_scope": "Conservative rejection; no visual ground-truth claim",
+      "notes": "Rejected before label approval: only 0 pixels survive the one-pixel boundary margin; minimum pilot support is four pixels. No target or control states inferred from the unreviewed preview.",
+      "rejection_reasons": [
+        "Rejected before label approval: only 0 pixels survive the one-pixel boundary margin; minimum pilot support is four pixels. No target or control states inferred from the unreviewed preview."
+      ],
+      "observations": [
+        {
+          "scene_id": "S2B_MSIL1C_20180726T084009_N0206_R064_T36UXA_20180726T104227",
+          "date": "2018-07-26",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233",
+          "date": "2018-07-31",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757",
+          "date": "2018-08-05",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180810T083601_N0206_R064_T36UXA_20180810T124435",
+          "date": "2018-08-10",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180815T084009_N0206_R064_T36UXA_20180815T123155",
+          "date": "2018-08-15",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180820T083601_N0206_R064_T36UXA_20180820T105651",
+          "date": "2018-08-20",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180825T083549_N0206_R064_T36UXA_20180825T124942",
+          "date": "2018-08-25",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180830T083601_N0206_R064_T36UXA_20180830T105527",
+          "date": "2018-08-30",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180904T083549_N0206_R064_T36UXA_20180904T123955",
+          "date": "2018-09-04",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180919T083621_N0206_R064_T36UXA_20180919T105540",
+          "date": "2018-09-19",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        }
+      ],
+      "case_sha256": "5b02d1214e0f4653aa7e6ef654a99243bee0a0fa93da019aea2f5a9e56dc3d8d",
+      "timeline_png_sha256": "84ab049e1ff6e86e43627712c5a7b0475e640da1a437a614d1974729a871761e",
+      "pair_png_sha256": "a2f6d596213681ad040df970cfc814c73ceb0ef0befd3e06113e91aa0cf79b97",
+      "positive_interior_sha256": "7e4accfbb9d7ea06fb7a97ea51e49cf427f5be7aff5ecc3ba88af49d5072bc1e",
+      "proposed_control_sha256": "4d4812b09826281e665b391340cc13be1a9b2b2ed5c0c0c2d3429e66a57ccfaa"
+    },
+    {
+      "case_file": "Datasets/CuratedPilot/v1/review_parts/00000/event-dba65b972460aca5c126/case.json",
+      "event_id": "event-dba65b972460aca5c126",
+      "pair_id": "pair-a30e796bb5502c5453b3",
+      "visual_review": "rejected",
+      "temporal_label_review": "rejected",
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "reviewer": "assistant visual inspection",
+      "inspection_scope": "Conservative rejection; no visual ground-truth claim",
+      "notes": "Rejected before label approval: only 0 pixels survive the one-pixel boundary margin; minimum pilot support is four pixels. No target or control states inferred from the unreviewed preview.",
+      "rejection_reasons": [
+        "Rejected before label approval: only 0 pixels survive the one-pixel boundary margin; minimum pilot support is four pixels. No target or control states inferred from the unreviewed preview."
+      ],
+      "observations": [
+        {
+          "scene_id": "S2B_MSIL1C_20180726T084009_N0206_R064_T36UXA_20180726T104227",
+          "date": "2018-07-26",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233",
+          "date": "2018-07-31",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757",
+          "date": "2018-08-05",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180810T083601_N0206_R064_T36UXA_20180810T124435",
+          "date": "2018-08-10",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180815T084009_N0206_R064_T36UXA_20180815T123155",
+          "date": "2018-08-15",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180820T083601_N0206_R064_T36UXA_20180820T105651",
+          "date": "2018-08-20",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180825T083549_N0206_R064_T36UXA_20180825T124942",
+          "date": "2018-08-25",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180830T083601_N0206_R064_T36UXA_20180830T105527",
+          "date": "2018-08-30",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180904T083549_N0206_R064_T36UXA_20180904T123955",
+          "date": "2018-09-04",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180919T083621_N0206_R064_T36UXA_20180919T105540",
+          "date": "2018-09-19",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        }
+      ],
+      "case_sha256": "a505a7b975265a30362dcf9521a4958502721d065c2329852dae4542fdfa3931",
+      "timeline_png_sha256": "efcdfce9246e80d6f6a77654dfd0095cfeb8238b392901ccc8835d956fa4ed87",
+      "pair_png_sha256": "d3b9888d3d293d65e4840bc910a74cef0c983e91f60775204a2c4526260e48e2",
+      "positive_interior_sha256": "fc18c6be6e56a04721a12c1f8bd1000ccd2deed7b4ca7ebd51a73eaf93c20e78",
+      "proposed_control_sha256": "883ea678dc0a06f3330426b8a84127668397307bbd4a7c0f4488aaee89e16f04"
+    },
+    {
+      "case_file": "Datasets/CuratedPilot/v1/review_parts/00000/event-fa401753669ab81027f4/case.json",
+      "event_id": "event-fa401753669ab81027f4",
+      "pair_id": "pair-ec9fbb43797f537169fa",
+      "visual_review": "rejected",
+      "temporal_label_review": "rejected",
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "reviewer": "assistant visual inspection",
+      "inspection_scope": "Conservative rejection; no visual ground-truth claim",
+      "notes": "Rejected before label approval: only 1 pixels survive the one-pixel boundary margin; minimum pilot support is four pixels. No target or control states inferred from the unreviewed preview.",
+      "rejection_reasons": [
+        "Rejected before label approval: only 1 pixels survive the one-pixel boundary margin; minimum pilot support is four pixels. No target or control states inferred from the unreviewed preview."
+      ],
+      "observations": [
+        {
+          "scene_id": "S2B_MSIL1C_20180726T084009_N0206_R064_T36UXA_20180726T104227",
+          "date": "2018-07-26",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233",
+          "date": "2018-07-31",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757",
+          "date": "2018-08-05",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180810T083601_N0206_R064_T36UXA_20180810T124435",
+          "date": "2018-08-10",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180815T084009_N0206_R064_T36UXA_20180815T123155",
+          "date": "2018-08-15",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180820T083601_N0206_R064_T36UXA_20180820T105651",
+          "date": "2018-08-20",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180825T083549_N0206_R064_T36UXA_20180825T124942",
+          "date": "2018-08-25",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180830T083601_N0206_R064_T36UXA_20180830T105527",
+          "date": "2018-08-30",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180904T083549_N0206_R064_T36UXA_20180904T123955",
+          "date": "2018-09-04",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180919T083621_N0206_R064_T36UXA_20180919T105540",
+          "date": "2018-09-19",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        }
+      ],
+      "case_sha256": "944d25064aedbffca335cc0f539c4893a822931e03f23a05c4b3feb70e0474ae",
+      "timeline_png_sha256": "c7b620e17b72b7252a895ccce9beb7df730edb3c23dca868eaed6eec0e615b18",
+      "pair_png_sha256": "3227a73d69df66243c9f6759fdbf52b22cdb3e155175b3233b46e911809b1f6d",
+      "positive_interior_sha256": "251d86edbb3d12e2e5c19358e64706b9269ff5e68107d6e65f629b0bb330ab40",
+      "proposed_control_sha256": "46855cd5f6d426c7f8429e1cd291946d3e10db1011ff0de82591a0b2dc3f92da"
+    },
+    {
+      "case_file": "Datasets/CuratedPilot/v1/review_parts/00001/event-0e2f7f165cfdf1d9ed7c/case.json",
+      "event_id": "event-0e2f7f165cfdf1d9ed7c",
+      "pair_id": "pair-fa83f45a0d247212614b",
+      "visual_review": "rejected",
+      "temporal_label_review": "rejected",
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "reviewer": "assistant visual inspection",
+      "inspection_scope": "Conservative rejection; no visual ground-truth claim",
+      "notes": "Rejected before label approval: only 0 pixels survive the one-pixel boundary margin; minimum pilot support is four pixels. No target or control states inferred from the unreviewed preview.",
+      "rejection_reasons": [
+        "Rejected before label approval: only 0 pixels survive the one-pixel boundary margin; minimum pilot support is four pixels. No target or control states inferred from the unreviewed preview."
+      ],
+      "observations": [
+        {
+          "scene_id": "S2A_MSIL1C_20190517T083601_N0207_R064_T36UYA_20190517T100755",
+          "date": "2019-05-17",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190601T083609_N0207_R064_T36UYA_20190601T104404",
+          "date": "2019-06-01",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190606T083601_N0207_R064_T36UYA_20190606T104250",
+          "date": "2019-06-06",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190611T083609_N0207_R064_T36UYA_20190611T122426",
+          "date": "2019-06-11",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190616T083601_N0207_R064_T36UYA_20190616T105922",
+          "date": "2019-06-16",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190621T083609_N0207_R064_T36UYA_20190621T104242",
+          "date": "2019-06-21",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306",
+          "date": "2019-06-26",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190701T083609_N0207_R064_T36UYA_20190701T113927",
+          "date": "2019-07-01",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190706T083611_N0207_R064_T36UYA_20190706T104407",
+          "date": "2019-07-06",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447",
+          "date": "2019-07-21",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190726T083611_N0208_R064_T36UYA_20190726T104344",
+          "date": "2019-07-26",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190805T083601_N0208_R064_T36UYA_20190805T104319",
+          "date": "2019-08-05",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190810T083609_N0208_R064_T36UYA_20190810T122530",
+          "date": "2019-08-10",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        }
+      ],
+      "case_sha256": "6524e6b8bd09dd2b7f16a6a00aeceef7d9c6284e3ce71da816aaedb779f83858",
+      "timeline_png_sha256": "377bc3dfb1f2829313e70c0ff251863bac8fe708e2a6c41292e9a886f9933cca",
+      "pair_png_sha256": "6a24c959b0a65c1e032c9cc17c41f37e0cdab7cb8e4a0d6095a474e9951ac8b5",
+      "positive_interior_sha256": "464a42268d3b13c0462731da0dd83a16c7a5b8776966d0686af0fcfadb0c44fe",
+      "proposed_control_sha256": "ba2aa0b286a7771fc0760b01b14df6016e7d0efecf93a72d7f2bfcedb4d64e57"
+    },
+    {
+      "case_file": "Datasets/CuratedPilot/v1/review_parts/00001/event-133d3d11c615a3c3bc26/case.json",
+      "event_id": "event-133d3d11c615a3c3bc26",
+      "pair_id": "pair-90e3b975c3145de75234",
+      "visual_review": "rejected",
+      "temporal_label_review": "rejected",
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "reviewer": "assistant visual inspection",
+      "inspection_scope": "Conservative rejection; no visual ground-truth claim",
+      "notes": "Inspected timeline but no fully quality-clear later target observation supports persistence; retain for further review, outside this pilot.",
+      "rejection_reasons": [
+        "Inspected timeline but no fully quality-clear later target observation supports persistence; retain for further review, outside this pilot."
+      ],
+      "observations": [
+        {
+          "scene_id": "S2A_MSIL1C_20190517T083601_N0207_R064_T36UYA_20190517T100755",
+          "date": "2019-05-17",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190601T083609_N0207_R064_T36UYA_20190601T104404",
+          "date": "2019-06-01",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190606T083601_N0207_R064_T36UYA_20190606T104250",
+          "date": "2019-06-06",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190611T083609_N0207_R064_T36UYA_20190611T122426",
+          "date": "2019-06-11",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190616T083601_N0207_R064_T36UYA_20190616T105922",
+          "date": "2019-06-16",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190621T083609_N0207_R064_T36UYA_20190621T104242",
+          "date": "2019-06-21",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306",
+          "date": "2019-06-26",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190701T083609_N0207_R064_T36UYA_20190701T113927",
+          "date": "2019-07-01",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190706T083611_N0207_R064_T36UYA_20190706T104407",
+          "date": "2019-07-06",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447",
+          "date": "2019-07-21",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190726T083611_N0208_R064_T36UYA_20190726T104344",
+          "date": "2019-07-26",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190805T083601_N0208_R064_T36UYA_20190805T104319",
+          "date": "2019-08-05",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190810T083609_N0208_R064_T36UYA_20190810T122530",
+          "date": "2019-08-10",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        }
+      ],
+      "case_sha256": "6b687b700cca1043fa34199889462f292bcead5cda3dfb8e09b5a645ff100901",
+      "timeline_png_sha256": "f33d3b2361c1748a074350025e4275483bb93b6544cef3f9edb02b01ff84ad43",
+      "pair_png_sha256": "5e911138c46a06b7b26b63b105ef46399458e5cd18ef88f11454e2dac2ac0b7e",
+      "positive_interior_sha256": "f8b187aad863ea0445f9fa042c90abc7da0f0c29d0fd38b6f0d7ba9dbcbd2e28",
+      "proposed_control_sha256": "4e0b309ef23fcaa02c4fade5be56869e3e548022eca19c2a6ea7b64b89995edc"
+    },
+    {
+      "case_file": "Datasets/CuratedPilot/v1/review_parts/00001/event-69f390dfc9d176f50f1d/case.json",
+      "event_id": "event-69f390dfc9d176f50f1d",
+      "pair_id": "pair-d89a6b297bca99808938",
+      "visual_review": "rejected",
+      "temporal_label_review": "rejected",
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "reviewer": "assistant visual inspection",
+      "inspection_scope": "Conservative rejection; no visual ground-truth claim",
+      "notes": "Rejected before label approval: only 0 pixels survive the one-pixel boundary margin; minimum pilot support is four pixels. No target or control states inferred from the unreviewed preview.",
+      "rejection_reasons": [
+        "Rejected before label approval: only 0 pixels survive the one-pixel boundary margin; minimum pilot support is four pixels. No target or control states inferred from the unreviewed preview."
+      ],
+      "observations": [
+        {
+          "scene_id": "S2B_MSIL1C_20180726T084009_N0206_R064_T36UXA_20180726T104227",
+          "date": "2018-07-26",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233",
+          "date": "2018-07-31",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757",
+          "date": "2018-08-05",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180810T083601_N0206_R064_T36UXA_20180810T124435",
+          "date": "2018-08-10",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180815T084009_N0206_R064_T36UXA_20180815T123155",
+          "date": "2018-08-15",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180820T083601_N0206_R064_T36UXA_20180820T105651",
+          "date": "2018-08-20",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180825T083549_N0206_R064_T36UXA_20180825T124942",
+          "date": "2018-08-25",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180830T083601_N0206_R064_T36UXA_20180830T105527",
+          "date": "2018-08-30",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180904T083549_N0206_R064_T36UXA_20180904T123955",
+          "date": "2018-09-04",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180919T083621_N0206_R064_T36UXA_20180919T105540",
+          "date": "2018-09-19",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        }
+      ],
+      "case_sha256": "dc2c72269bbd4842e1d1f492b525e7e127528b5c1b0a41a4894446e05e5c9bf8",
+      "timeline_png_sha256": "a022560bd65a8d508b87f9d59605971b085e4ebe37604a9b1ebd2e2971b1c11f",
+      "pair_png_sha256": "0a0d4b965e3ae5d47faad54cc2c1f259e96cafd48966cfea3d04577e6d75363e",
+      "positive_interior_sha256": "3db8bbb205dc432cc2de67186f95bd6ebdeabe916308183976b16c5a415c2277",
+      "proposed_control_sha256": "d1c297687f20829f379ae3e7c0554980f85cde7a542041b009b4e015c560db7c"
+    },
+    {
+      "case_file": "Datasets/CuratedPilot/v1/review_parts/00001/event-fb9c705bda551c5fd13e/case.json",
+      "event_id": "event-fb9c705bda551c5fd13e",
+      "pair_id": "pair-a5f8b90ab99c6d412974",
+      "visual_review": "rejected",
+      "temporal_label_review": "rejected",
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "reviewer": "assistant visual inspection",
+      "inspection_scope": "Conservative rejection; no visual ground-truth claim",
+      "notes": "Rejected before label approval: only 0 pixels survive the one-pixel boundary margin; minimum pilot support is four pixels. No target or control states inferred from the unreviewed preview.",
+      "rejection_reasons": [
+        "Rejected before label approval: only 0 pixels survive the one-pixel boundary margin; minimum pilot support is four pixels. No target or control states inferred from the unreviewed preview."
+      ],
+      "observations": [
+        {
+          "scene_id": "S2B_MSIL1C_20180726T084009_N0206_R064_T36UXA_20180726T104227",
+          "date": "2018-07-26",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233",
+          "date": "2018-07-31",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757",
+          "date": "2018-08-05",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180810T083601_N0206_R064_T36UXA_20180810T124435",
+          "date": "2018-08-10",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180815T084009_N0206_R064_T36UXA_20180815T123155",
+          "date": "2018-08-15",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180820T083601_N0206_R064_T36UXA_20180820T105651",
+          "date": "2018-08-20",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180825T083549_N0206_R064_T36UXA_20180825T124942",
+          "date": "2018-08-25",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180830T083601_N0206_R064_T36UXA_20180830T105527",
+          "date": "2018-08-30",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180904T083549_N0206_R064_T36UXA_20180904T123955",
+          "date": "2018-09-04",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180919T083621_N0206_R064_T36UXA_20180919T105540",
+          "date": "2018-09-19",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        }
+      ],
+      "case_sha256": "7d1cff30e5224786606fddc8c419c580440983d0e3ac428592ab151ea8253155",
+      "timeline_png_sha256": "fb37e5e3c398be7538aea0dd55bb12164d23788c0c0622e275f13d42cc81b44c",
+      "pair_png_sha256": "5dd6332d0fc73826b64be833c9a70c1a9f9e0af093eed428766b682301b419c2",
+      "positive_interior_sha256": "16f14a48bbde3f0138aef205dd47b6afc2f7e0d1d7eb6cd319a2d16a9a17b710",
+      "proposed_control_sha256": "c977518ba54b9167015ae7988192d9c51c5bff723fd90b9600354407a3902380"
+    },
+    {
+      "case_file": "Datasets/CuratedPilot/v1/review_parts/00002/event-09aec2bd330378e33f72/case.json",
+      "event_id": "event-09aec2bd330378e33f72",
+      "pair_id": "pair-41987bf0df95576c48b7",
+      "visual_review": "rejected",
+      "temporal_label_review": "rejected",
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "reviewer": "assistant visual inspection",
+      "inspection_scope": "Conservative rejection; no visual ground-truth claim",
+      "notes": "Rejected before label approval: only 0 pixels survive the one-pixel boundary margin; minimum pilot support is four pixels. No target or control states inferred from the unreviewed preview.",
+      "rejection_reasons": [
+        "Rejected before label approval: only 0 pixels survive the one-pixel boundary margin; minimum pilot support is four pixels. No target or control states inferred from the unreviewed preview."
+      ],
+      "observations": [
+        {
+          "scene_id": "S2A_MSIL1C_20190517T083601_N0207_R064_T36UYA_20190517T100755",
+          "date": "2019-05-17",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190601T083609_N0207_R064_T36UYA_20190601T104404",
+          "date": "2019-06-01",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190606T083601_N0207_R064_T36UYA_20190606T104250",
+          "date": "2019-06-06",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190611T083609_N0207_R064_T36UYA_20190611T122426",
+          "date": "2019-06-11",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190616T083601_N0207_R064_T36UYA_20190616T105922",
+          "date": "2019-06-16",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190621T083609_N0207_R064_T36UYA_20190621T104242",
+          "date": "2019-06-21",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306",
+          "date": "2019-06-26",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190701T083609_N0207_R064_T36UYA_20190701T113927",
+          "date": "2019-07-01",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190706T083611_N0207_R064_T36UYA_20190706T104407",
+          "date": "2019-07-06",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447",
+          "date": "2019-07-21",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190726T083611_N0208_R064_T36UYA_20190726T104344",
+          "date": "2019-07-26",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190805T083601_N0208_R064_T36UYA_20190805T104319",
+          "date": "2019-08-05",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190810T083609_N0208_R064_T36UYA_20190810T122530",
+          "date": "2019-08-10",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        }
+      ],
+      "case_sha256": "85c1a9b23a9b177a574f5753a9a1831f9b5ca1de42a331318643e18eb3d13c55",
+      "timeline_png_sha256": "4ca21b15d111e0262f573abe4e6d34cc5207cdcb4055ee06e9414283551d88e1",
+      "pair_png_sha256": "b9a28f796861f4b3ede1398254bf7eb3a2ab9b3bd69403ef2346c4ad1cc8826f",
+      "positive_interior_sha256": "24640828522745ae4cd21e547e2fcb2479f1129969569b3ed53aa58f18e3a040",
+      "proposed_control_sha256": "60eefc565b9f711c0cbdf05c273448dadaaec383a4d39aee491b58b1f9edc1ca"
+    },
+    {
+      "case_file": "Datasets/CuratedPilot/v1/review_parts/00002/event-9d169a84581b6a4c50a5/case.json",
+      "event_id": "event-9d169a84581b6a4c50a5",
+      "pair_id": "pair-b79ede096640253a557d",
+      "visual_review": "rejected",
+      "temporal_label_review": "rejected",
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "reviewer": "assistant visual inspection",
+      "inspection_scope": "Conservative rejection; no visual ground-truth claim",
+      "notes": "Rejected before label approval: only 0 pixels survive the one-pixel boundary margin; minimum pilot support is four pixels. No target or control states inferred from the unreviewed preview.",
+      "rejection_reasons": [
+        "Rejected before label approval: only 0 pixels survive the one-pixel boundary margin; minimum pilot support is four pixels. No target or control states inferred from the unreviewed preview."
+      ],
+      "observations": [
+        {
+          "scene_id": "S2A_MSIL1C_20190427T083601_N0207_R064_T36UYA_20190427T100851",
+          "date": "2019-04-27",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190517T083601_N0207_R064_T36UYA_20190517T100755",
+          "date": "2019-05-17",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190601T083609_N0207_R064_T36UYA_20190601T104404",
+          "date": "2019-06-01",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190606T083601_N0207_R064_T36UYA_20190606T104250",
+          "date": "2019-06-06",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190611T083609_N0207_R064_T36UYA_20190611T122426",
+          "date": "2019-06-11",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190616T083601_N0207_R064_T36UYA_20190616T105922",
+          "date": "2019-06-16",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190621T083609_N0207_R064_T36UYA_20190621T104242",
+          "date": "2019-06-21",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306",
+          "date": "2019-06-26",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190701T083609_N0207_R064_T36UYA_20190701T113927",
+          "date": "2019-07-01",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190706T083611_N0207_R064_T36UYA_20190706T104407",
+          "date": "2019-07-06",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447",
+          "date": "2019-07-21",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190726T083611_N0208_R064_T36UYA_20190726T104344",
+          "date": "2019-07-26",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        }
+      ],
+      "case_sha256": "5d654be8ed14654c959c0b71a13256eb6a8fd634098c3402dd98ffb6286f21cc",
+      "timeline_png_sha256": "cdb596d9b5d973c3bd584cd2c3e23c325ed7976d71dca996c5e130046d1d37f5",
+      "pair_png_sha256": "e8c3154d37fff6bb26d3896786b56aa12319adac0bf82ab2e9422dee81c3a7cc",
+      "positive_interior_sha256": "a26d07b5ff3bb0cbd909ebcc52a7b29926d464157ef993f67a5ad903e31b0890",
+      "proposed_control_sha256": "85c856e06843868f1fadfc5177b0ceeb098e5850433469b06ba0b73b72f09ff3"
+    },
+    {
+      "case_file": "Datasets/CuratedPilot/v1/review_parts/00002/event-aaff832c34619704f3a4/case.json",
+      "event_id": "event-aaff832c34619704f3a4",
+      "pair_id": "pair-4db1d16c9375713e7ef7",
+      "visual_review": "rejected",
+      "temporal_label_review": "rejected",
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "reviewer": "assistant visual inspection",
+      "inspection_scope": "Conservative rejection; no visual ground-truth claim",
+      "notes": "Rejected before label approval: only 3 pixels survive the one-pixel boundary margin; minimum pilot support is four pixels. No target or control states inferred from the unreviewed preview.",
+      "rejection_reasons": [
+        "Rejected before label approval: only 3 pixels survive the one-pixel boundary margin; minimum pilot support is four pixels. No target or control states inferred from the unreviewed preview."
+      ],
+      "observations": [
+        {
+          "scene_id": "S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447",
+          "date": "2019-07-21",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190726T083611_N0208_R064_T36UYA_20190726T104344",
+          "date": "2019-07-26",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190805T083601_N0208_R064_T36UYA_20190805T104319",
+          "date": "2019-08-05",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190810T083609_N0208_R064_T36UYA_20190810T122530",
+          "date": "2019-08-10",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190815T083601_N0208_R064_T36UYA_20190815T123742",
+          "date": "2019-08-15",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190825T083601_N0208_R064_T36UYA_20190825T104312",
+          "date": "2019-08-25",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190830T083609_N0208_R064_T36UYA_20190830T114819",
+          "date": "2019-08-30",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190904T083601_N0208_R064_T36UYA_20190904T110155",
+          "date": "2019-09-04",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190909T083559_N0208_R064_T36UYA_20190909T122324",
+          "date": "2019-09-09",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        }
+      ],
+      "case_sha256": "9d95414124595f47afcaa7e8af302d0d2dc52268736cd20b3fe646c06ecc7f14",
+      "timeline_png_sha256": "a113913e82d95cb8daf41ada9038439c7914b676bec0d2dcda44fb0effd32b93",
+      "pair_png_sha256": "bf78ceb01b76124a60eeba0b9c34dfe04dfeca08af0d6bd81b74e181778b160d",
+      "positive_interior_sha256": "ce081da0088d6e10841d2b9cb280c30165208fe04a35b70aaded12599d1942b2",
+      "proposed_control_sha256": "5009ef2cf7c5e2a64d6fd245e6bf3add1aff11c3d5d21be2354007f1d95fd3d1"
+    },
+    {
+      "case_file": "Datasets/CuratedPilot/v1/review_parts/00002/event-e691d44c335d87649310/case.json",
+      "event_id": "event-e691d44c335d87649310",
+      "pair_id": "pair-9e46432dba83dd68c052",
+      "visual_review": "accepted",
+      "temporal_label_review": "accepted",
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "reviewer": "assistant visual inspection",
+      "inspection_scope": "Full timeline and primary pair inspected",
+      "notes": "Inspected full timeline and primary pair. A compact brown clearing replaces the dark forest interior and persists on July 1 and July 6. The green-box forest interior remains visually stable on multiple clear dates. June 16 target contrast is uncertain under nearby haze; retain June 11 as the conservative last observed forest bound.",
+      "rejection_reasons": [],
+      "observations": [
+        {
+          "scene_id": "S2A_MSIL1C_20190517T083601_N0207_R064_T36UYA_20190517T100755",
+          "date": "2019-05-17",
+          "target_state": "forest",
+          "control_state": "stable_forest",
+          "notes": "Assistant visual inspection: target=forest, control=stable_forest. Only unobscured reviewed regions support positive forest/clearing or stable-control claims."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190601T083609_N0207_R064_T36UYA_20190601T104404",
+          "date": "2019-06-01",
+          "target_state": "obscured",
+          "control_state": "stable_forest",
+          "notes": "Assistant visual inspection: target=obscured, control=stable_forest. Only unobscured reviewed regions support positive forest/clearing or stable-control claims."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190606T083601_N0207_R064_T36UYA_20190606T104250",
+          "date": "2019-06-06",
+          "target_state": "forest",
+          "control_state": "stable_forest",
+          "notes": "Assistant visual inspection: target=forest, control=stable_forest. Only unobscured reviewed regions support positive forest/clearing or stable-control claims."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190611T083609_N0207_R064_T36UYA_20190611T122426",
+          "date": "2019-06-11",
+          "target_state": "forest",
+          "control_state": "stable_forest",
+          "notes": "Assistant visual inspection: target=forest, control=stable_forest. Only unobscured reviewed regions support positive forest/clearing or stable-control claims."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190616T083601_N0207_R064_T36UYA_20190616T105922",
+          "date": "2019-06-16",
+          "target_state": "uncertain",
+          "control_state": "obscured",
+          "notes": "Assistant visual inspection: target=uncertain, control=obscured. Target contrast remains uncertain under nearby atmospheric veil."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190621T083609_N0207_R064_T36UYA_20190621T104242",
+          "date": "2019-06-21",
+          "target_state": "obscured",
+          "control_state": "obscured",
+          "notes": "Assistant visual inspection: target=obscured, control=obscured. Only unobscured reviewed regions support positive forest/clearing or stable-control claims."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306",
+          "date": "2019-06-26",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant visual inspection: target=clearing_visible, control=stable_forest. Only unobscured reviewed regions support positive forest/clearing or stable-control claims."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190701T083609_N0207_R064_T36UYA_20190701T113927",
+          "date": "2019-07-01",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant visual inspection: target=clearing_visible, control=stable_forest. Only unobscured reviewed regions support positive forest/clearing or stable-control claims."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190706T083611_N0207_R064_T36UYA_20190706T104407",
+          "date": "2019-07-06",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant visual inspection: target=clearing_visible, control=stable_forest. Only unobscured reviewed regions support positive forest/clearing or stable-control claims."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447",
+          "date": "2019-07-21",
+          "target_state": "obscured",
+          "control_state": "obscured",
+          "notes": "Assistant visual inspection: target=obscured, control=obscured. Only unobscured reviewed regions support positive forest/clearing or stable-control claims."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190726T083611_N0208_R064_T36UYA_20190726T104344",
+          "date": "2019-07-26",
+          "target_state": "obscured",
+          "control_state": "obscured",
+          "notes": "Assistant visual inspection: target=obscured, control=obscured. Only unobscured reviewed regions support positive forest/clearing or stable-control claims."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190805T083601_N0208_R064_T36UYA_20190805T104319",
+          "date": "2019-08-05",
+          "target_state": "obscured",
+          "control_state": "obscured",
+          "notes": "Assistant visual inspection: target=obscured, control=obscured. Only unobscured reviewed regions support positive forest/clearing or stable-control claims."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190810T083609_N0208_R064_T36UYA_20190810T122530",
+          "date": "2019-08-10",
+          "target_state": "obscured",
+          "control_state": "obscured",
+          "notes": "Assistant visual inspection: target=obscured, control=obscured. Only unobscured reviewed regions support positive forest/clearing or stable-control claims."
+        }
+      ],
+      "case_sha256": "361f31fc8057269adf0af4e65fce9e2a7e3703294e8d76eac6380a88aa174cfa",
+      "timeline_png_sha256": "6d8f61e957e215490cf015f72cbd596aa8d4d2b484a577b406308199a11bef20",
+      "pair_png_sha256": "4fa57d2d8638ef687843a93f95d79d108b91f833e20841b1b93c45451be97729",
+      "positive_interior_sha256": "652dd3b61340071e83a0092acb02f43136477641d906f7bc96c51ee02d51a52d",
+      "proposed_control_sha256": "8bb6317c0c9278a03122a372f3a9b2f120b12b78c1376e59b4a8de32009f3588"
+    },
+    {
+      "case_file": "Datasets/CuratedPilot/v1/review_parts/00003/event-01dc179dcd8513caffaa/case.json",
+      "event_id": "event-01dc179dcd8513caffaa",
+      "pair_id": "pair-bc7752f3cb2be0013af3",
+      "visual_review": "rejected",
+      "temporal_label_review": "rejected",
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "reviewer": "assistant visual inspection",
+      "inspection_scope": "Conservative rejection; no visual ground-truth claim",
+      "notes": "Rejected before label approval: only 0 pixels survive the one-pixel boundary margin; minimum pilot support is four pixels. No target or control states inferred from the unreviewed preview.",
+      "rejection_reasons": [
+        "Rejected before label approval: only 0 pixels survive the one-pixel boundary margin; minimum pilot support is four pixels. No target or control states inferred from the unreviewed preview."
+      ],
+      "observations": [
+        {
+          "scene_id": "S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447",
+          "date": "2019-07-21",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190726T083611_N0208_R064_T36UYA_20190726T104344",
+          "date": "2019-07-26",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190805T083601_N0208_R064_T36UYA_20190805T104319",
+          "date": "2019-08-05",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190810T083609_N0208_R064_T36UYA_20190810T122530",
+          "date": "2019-08-10",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190815T083601_N0208_R064_T36UYA_20190815T123742",
+          "date": "2019-08-15",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190825T083601_N0208_R064_T36UYA_20190825T104312",
+          "date": "2019-08-25",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190830T083609_N0208_R064_T36UYA_20190830T114819",
+          "date": "2019-08-30",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190904T083601_N0208_R064_T36UYA_20190904T110155",
+          "date": "2019-09-04",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190909T083559_N0208_R064_T36UYA_20190909T122324",
+          "date": "2019-09-09",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        }
+      ],
+      "case_sha256": "a82abcc209be837ffa4843eb93f3cc3aad461075d91e0127f4d85311f3fa472f",
+      "timeline_png_sha256": "5842ceb9ffd66b2394b048800c78235dead7f1e841c44ed9336628114b7d0f80",
+      "pair_png_sha256": "5b65266995424f8ddcf29c8b83849c97f6d1c400d16909278d5df19a43bbc3c1",
+      "positive_interior_sha256": "f4b66812ebd9121c861e0f915ac999a043126a30094bbb291887c091a2ad1a12",
+      "proposed_control_sha256": "ad9324cc7fde6ddd0eaf51e6d3117b3e825aaa90fa28b148ad123dd90f3c5f89"
+    },
+    {
+      "case_file": "Datasets/CuratedPilot/v1/review_parts/00003/event-25888befa0297de3917f/case.json",
+      "event_id": "event-25888befa0297de3917f",
+      "pair_id": "pair-ddf360f23fa05901b26a",
+      "visual_review": "rejected",
+      "temporal_label_review": "rejected",
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "reviewer": "assistant visual inspection",
+      "inspection_scope": "Conservative rejection; no visual ground-truth claim",
+      "notes": "Rejected: post-image is the last available local acquisition, so later persistence cannot be independently observed.",
+      "rejection_reasons": [
+        "Rejected: post-image is the last available local acquisition, so later persistence cannot be independently observed."
+      ],
+      "observations": [
+        {
+          "scene_id": "S2A_MSIL1C_20190726T083611_N0208_R064_T36UYA_20190726T104344",
+          "date": "2019-07-26",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190805T083601_N0208_R064_T36UYA_20190805T104319",
+          "date": "2019-08-05",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190810T083609_N0208_R064_T36UYA_20190810T122530",
+          "date": "2019-08-10",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190815T083601_N0208_R064_T36UYA_20190815T123742",
+          "date": "2019-08-15",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190825T083601_N0208_R064_T36UYA_20190825T104312",
+          "date": "2019-08-25",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190830T083609_N0208_R064_T36UYA_20190830T114819",
+          "date": "2019-08-30",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190904T083601_N0208_R064_T36UYA_20190904T110155",
+          "date": "2019-09-04",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190909T083559_N0208_R064_T36UYA_20190909T122324",
+          "date": "2019-09-09",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        }
+      ],
+      "case_sha256": "250bdc126e39627de49440a95561195298cb09b66799b83b9c3e6a43d6914d3c",
+      "timeline_png_sha256": "6cf3159a869c377514a7b9a04a6faee40b1e3f274bbc543c508b7d8128f4963e",
+      "pair_png_sha256": "0a2dcf4f416baddd064fb16bc4616a1f5f52ca4eb9c9594488dca9fd19321bd3",
+      "positive_interior_sha256": "1d7793dbb4f8487cedb0101d4769cabc47bc701703096e63ffab202627ec2d30",
+      "proposed_control_sha256": "e021fc6f7ba1fede176418beedbf9d6e0f9421abf7f24a226a7453d0644f3d94"
+    },
+    {
+      "case_file": "Datasets/CuratedPilot/v1/review_parts/00003/event-4027aba1f531addd4d1b/case.json",
+      "event_id": "event-4027aba1f531addd4d1b",
+      "pair_id": "pair-bc5367e5b0489ec4f1d4",
+      "visual_review": "rejected",
+      "temporal_label_review": "rejected",
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "reviewer": "assistant visual inspection",
+      "inspection_scope": "Conservative rejection; no visual ground-truth claim",
+      "notes": "Rejected before label approval: only 1 pixels survive the one-pixel boundary margin; minimum pilot support is four pixels. No target or control states inferred from the unreviewed preview.",
+      "rejection_reasons": [
+        "Rejected before label approval: only 1 pixels survive the one-pixel boundary margin; minimum pilot support is four pixels. No target or control states inferred from the unreviewed preview."
+      ],
+      "observations": [
+        {
+          "scene_id": "S2A_MSIL1C_20190726T083611_N0208_R064_T36UYA_20190726T104344",
+          "date": "2019-07-26",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190805T083601_N0208_R064_T36UYA_20190805T104319",
+          "date": "2019-08-05",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190810T083609_N0208_R064_T36UYA_20190810T122530",
+          "date": "2019-08-10",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190815T083601_N0208_R064_T36UYA_20190815T123742",
+          "date": "2019-08-15",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190825T083601_N0208_R064_T36UYA_20190825T104312",
+          "date": "2019-08-25",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190830T083609_N0208_R064_T36UYA_20190830T114819",
+          "date": "2019-08-30",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190904T083601_N0208_R064_T36UYA_20190904T110155",
+          "date": "2019-09-04",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190909T083559_N0208_R064_T36UYA_20190909T122324",
+          "date": "2019-09-09",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        }
+      ],
+      "case_sha256": "0def9efb3e0cb6a0de28a7904e5c783d0ef3178fd9420a26699d3195b8764792",
+      "timeline_png_sha256": "30e57880557d65923f82def14ded4d2c897d2bbfbc1460d069ea81f3085185ba",
+      "pair_png_sha256": "e4a06866700270a7d11337a20d015c9f4d2ae8c5bb9671c4676947828b4afffb",
+      "positive_interior_sha256": "effcc80ebd273ef9528c77324e069b562fdba4bf32ceda1c1fcc982ca9133903",
+      "proposed_control_sha256": "bf250c36c6afed892fa8caaf8070a25e407fa79bab862fdd4344cb5932b92a9f"
+    },
+    {
+      "case_file": "Datasets/CuratedPilot/v1/review_parts/00003/event-e48cbd49ed33587595b7/case.json",
+      "event_id": "event-e48cbd49ed33587595b7",
+      "pair_id": "pair-50406204c941370966fc",
+      "visual_review": "rejected",
+      "temporal_label_review": "rejected",
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "reviewer": "assistant visual inspection",
+      "inspection_scope": "Conservative rejection; no visual ground-truth claim",
+      "notes": "Rejected before label approval: only 0 pixels survive the one-pixel boundary margin; minimum pilot support is four pixels. No target or control states inferred from the unreviewed preview.",
+      "rejection_reasons": [
+        "Rejected before label approval: only 0 pixels survive the one-pixel boundary margin; minimum pilot support is four pixels. No target or control states inferred from the unreviewed preview."
+      ],
+      "observations": [
+        {
+          "scene_id": "S2A_MSIL1C_20190726T083611_N0208_R064_T36UYA_20190726T104344",
+          "date": "2019-07-26",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190805T083601_N0208_R064_T36UYA_20190805T104319",
+          "date": "2019-08-05",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190810T083609_N0208_R064_T36UYA_20190810T122530",
+          "date": "2019-08-10",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190815T083601_N0208_R064_T36UYA_20190815T123742",
+          "date": "2019-08-15",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190825T083601_N0208_R064_T36UYA_20190825T104312",
+          "date": "2019-08-25",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190830T083609_N0208_R064_T36UYA_20190830T114819",
+          "date": "2019-08-30",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190904T083601_N0208_R064_T36UYA_20190904T110155",
+          "date": "2019-09-04",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190909T083559_N0208_R064_T36UYA_20190909T122324",
+          "date": "2019-09-09",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual state claim: candidate rejected by the recorded conservative eligibility/persistence gate."
+        }
+      ],
+      "case_sha256": "aed32255e1ebe2bc76df5ee90e7b90cba53df907d9e58378d01c267b2f42ffdc",
+      "timeline_png_sha256": "f771468fe273d25c9c5b094716a62d5e6f8da6b89d928ab5cc52fb8413ba9de8",
+      "pair_png_sha256": "155691302d37a713ce4e9bfaa83e05ce1829bf27f000cb5f2ff34ff7acf5a99d",
+      "positive_interior_sha256": "152fa6455d6c8092a64a92b658dfeff405e57da9101b721125f9fff847cf9767",
+      "proposed_control_sha256": "831b939cc4bc33cd03b703db58d8eda535be3e62361de5d86a11313327cc8943"
+    },
+    {
+      "case_file": "Datasets/CuratedPilot/v1/review_parts/00004/event-263e9027a6142dc9fc84/case.json",
+      "event_id": "event-263e9027a6142dc9fc84",
+      "pair_id": "pair-6b854a3fc1500a858fe4",
+      "visual_review": "accepted",
+      "temporal_label_review": "accepted",
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "reviewer": "assistant visual inspection",
+      "inspection_scope": "Full timeline and primary pair inspected",
+      "notes": "Inspected full timeline and primary pair. The reference interior is forest on August 15 and a distinct brown clearing on August 25, persisting through September 9. The green-box forest remains visibly unchanged at six clear observations. Earlier cloud/quality-obscured target observations supply no earlier visibility bound.",
+      "rejection_reasons": [],
+      "observations": [
+        {
+          "scene_id": "S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447",
+          "date": "2019-07-21",
+          "target_state": "obscured",
+          "control_state": "stable_forest",
+          "notes": "Assistant visual inspection: target=obscured, control=stable_forest. Only unobscured reviewed regions support positive forest/clearing or stable-control claims."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190726T083611_N0208_R064_T36UYA_20190726T104344",
+          "date": "2019-07-26",
+          "target_state": "obscured",
+          "control_state": "obscured",
+          "notes": "Assistant visual inspection: target=obscured, control=obscured. Only unobscured reviewed regions support positive forest/clearing or stable-control claims."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190805T083601_N0208_R064_T36UYA_20190805T104319",
+          "date": "2019-08-05",
+          "target_state": "obscured",
+          "control_state": "obscured",
+          "notes": "Assistant visual inspection: target=obscured, control=obscured. Only unobscured reviewed regions support positive forest/clearing or stable-control claims."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190810T083609_N0208_R064_T36UYA_20190810T122530",
+          "date": "2019-08-10",
+          "target_state": "obscured",
+          "control_state": "obscured",
+          "notes": "Assistant visual inspection: target=obscured, control=obscured. Only unobscured reviewed regions support positive forest/clearing or stable-control claims."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190815T083601_N0208_R064_T36UYA_20190815T123742",
+          "date": "2019-08-15",
+          "target_state": "forest",
+          "control_state": "stable_forest",
+          "notes": "Assistant visual inspection: target=forest, control=stable_forest. Only unobscured reviewed regions support positive forest/clearing or stable-control claims."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190825T083601_N0208_R064_T36UYA_20190825T104312",
+          "date": "2019-08-25",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant visual inspection: target=clearing_visible, control=stable_forest. Only unobscured reviewed regions support positive forest/clearing or stable-control claims."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190830T083609_N0208_R064_T36UYA_20190830T114819",
+          "date": "2019-08-30",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant visual inspection: target=clearing_visible, control=stable_forest. Only unobscured reviewed regions support positive forest/clearing or stable-control claims."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190904T083601_N0208_R064_T36UYA_20190904T110155",
+          "date": "2019-09-04",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant visual inspection: target=clearing_visible, control=stable_forest. Only unobscured reviewed regions support positive forest/clearing or stable-control claims."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190909T083559_N0208_R064_T36UYA_20190909T122324",
+          "date": "2019-09-09",
+          "target_state": "clearing_visible",
+          "control_state": "stable_forest",
+          "notes": "Assistant visual inspection: target=clearing_visible, control=stable_forest. Only unobscured reviewed regions support positive forest/clearing or stable-control claims."
+        }
+      ],
+      "case_sha256": "7704602009c4db4beaa4001131a5662956ab813be5d4407c6225a7ba75f1a159",
+      "timeline_png_sha256": "91e79708e2d34e84df3fb1c4d29f19aff59ec1c5b7454b1250c13c62c54f6456",
+      "pair_png_sha256": "db72d605c0e16dc7ad671228fc083b8343018337e961c6d907dbe6fdcc9fb9d7",
+      "positive_interior_sha256": "affb62afbf1dbef18d6314f96c6bad2b324ea0b6096c02e18ce9944ec100f71b",
+      "proposed_control_sha256": "56699468ed5ee77ec8d2ca061f7ea434a3ce06db9d0cfc61d8cd6450aac82804"
+    }
+  ]
+}

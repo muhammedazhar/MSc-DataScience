@@ -9,6 +9,11 @@ usgs
 
 earthengine-api
 rasterio
+Pillow
+psutil
+s2cloudless==1.7.3
+lightgbm==4.5.0
+scipy>=1.14,<2
 matplotlib
 torch
 pandas
