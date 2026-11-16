@@ -1,0 +1,1831 @@
+{
+  "schema_version": 1,
+  "role": "validation_review",
+  "event_id": "event-9993d3bc382d3405a7ad",
+  "pair_id": "pair-cbdc5c3dc169f42a07e0",
+  "group_id": "group-646504159ec8034a1565",
+  "split": "validation",
+  "stratum": "36UXA_time-dependent",
+  "tile": "36UXA",
+  "selection": {
+    "event_id": "event-9993d3bc382d3405a7ad",
+    "pair_id": "pair-cbdc5c3dc169f42a07e0",
+    "group_id": "group-646504159ec8034a1565",
+    "stratum": "36UXA_time-dependent",
+    "existing_top_candidate_rank": 0,
+    "split": "validation",
+    "tile": "36UXA",
+    "observation_date": "2018-08-05",
+    "pre_date": "2018-07-31",
+    "post_date": "2018-08-05",
+    "grid": {
+      "crs": "EPSG:32636",
+      "transform": [
+        10.0,
+        0.0,
+        651760.0,
+        0.0,
+        -10.0,
+        5557680.0
+      ],
+      "width": 64,
+      "height": 64,
+      "bounds": [
+        651760.0,
+        5557040.0,
+        652400.0,
+        5557680.0
+      ]
+    },
+    "search_aid_metrics": {
+      "anchor_area_m2": 1995.6987465427562,
+      "anchor_width_m": 76.8341187464539,
+      "anchor_height_m": 53.03588758967817,
+      "union_target_pixels": 33,
+      "eroded_anchor_interior_pixels": null,
+      "later_local_scene_dates": [
+        "2018-08-10",
+        "2018-08-15",
+        "2018-08-20",
+        "2018-08-25",
+        "2018-08-30",
+        "2018-09-04",
+        "2018-09-19"
+      ]
+    },
+    "endpoint_cache_paths": [
+      "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/84dab80f61adbca50169aee4922935b4b6da2ada721e2b2e9ac3a7333a573ba3.npz",
+      "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/6fec1944b4053af6f82b7b5849c01f6c2e364b93bdb2fa2fb0dbfde890bc3be1.npz"
+    ],
+    "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+    "validation_approved": false,
+    "training_approved": false,
+    "role": "primary",
+    "rank": 1,
+    "endpoint_caches_present": true
+  },
+  "pair": {
+    "pair_id": "pair-cbdc5c3dc169f42a07e0",
+    "group_id": "group-646504159ec8034a1565",
+    "split": "validation",
+    "tile": "36UXA",
+    "pre_date": "2018-07-31",
+    "post_date": "2018-08-05",
+    "interval_days": 5,
+    "pre_scene_id": "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233",
+    "post_scene_id": "S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757",
+    "pre_path": "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE",
+    "post_path": "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE",
+    "grid": {
+      "crs": "EPSG:32636",
+      "transform": [
+        10.0,
+        0.0,
+        651760.0,
+        0.0,
+        -10.0,
+        5557680.0
+      ],
+      "width": 64,
+      "height": 64,
+      "bounds": [
+        651760.0,
+        5557040.0,
+        652400.0,
+        5557680.0
+      ]
+    },
+    "anchor_event_ids": [
+      "event-9993d3bc382d3405a7ad"
+    ],
+    "blocking_reasons": [],
+    "label_event_ids_by_post_date": [
+      "event-1db55761f3f5b9388343",
+      "event-323744615bd6128a0ef6",
+      "event-441ca332f54be973729b",
+      "event-5036b72703c23dc3c90a",
+      "event-67f4253eabc10d745f73",
+      "event-9993d3bc382d3405a7ad",
+      "event-d2b59c10719901fea00a",
+      "event-e8880c47f245ea564e80",
+      "event-fee188ffe39620faebdc"
+    ],
+    "context_event_ids": [
+      "event-1db55761f3f5b9388343",
+      "event-1fc3ddb968a0fd2b287b",
+      "event-2ff11d13b9d8981d1792",
+      "event-323744615bd6128a0ef6",
+      "event-3583428ac78c1d2fbb62",
+      "event-441ca332f54be973729b",
+      "event-4b8961eb0ca3b4b4c44c",
+      "event-5036b72703c23dc3c90a",
+      "event-67f4253eabc10d745f73",
+      "event-755838159cdddd1a52f1",
+      "event-7c4a2eeda0702e9c6365",
+      "event-9337860c954c8762e9d5",
+      "event-9993d3bc382d3405a7ad",
+      "event-9a957ad272c4ec6354eb",
+      "event-d2b59c10719901fea00a",
+      "event-dd4bd80de3e6c35d7e9b",
+      "event-df96e9be3664b2d9325e",
+      "event-e8880c47f245ea564e80",
+      "event-fee188ffe39620faebdc"
+    ],
+    "conflicting_label_event_ids": [],
+    "temporal_source_ids": [
+      "36UXA_time-dependent"
+    ],
+    "status": "candidate_for_pixel_review",
+    "pixel_quality": "unreviewed",
+    "visual_review": "unreviewed",
+    "training_approved": false,
+    "label_interpretation": "New annotated loss between observations; zero is not verified no-change"
+  },
+  "annotation_observation_date": "2018-08-05",
+  "config_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+  "target_pixels": 21,
+  "positive_interior_pixels": 1,
+  "interior_rule": "One-pixel 3x3 binary erosion of anchor-specific new-loss reference",
+  "empty_interior_action": null,
+  "control_proposal": {
+    "proposal_found": true,
+    "row": 3,
+    "col": 0,
+    "height": 16,
+    "width": 16,
+    "pixels": 256,
+    "minimum_endpoint_ndvi": 0.7251868844032288,
+    "mean_minimum_endpoint_ndvi": 0.7791663408279419,
+    "search_rule": "No catalogue geometry within 20 m; clear endpoints; NDVI > .6 both and absolute change < .10",
+    "control_label_review": "unreviewed",
+    "training_approved": false
+  },
+  "catalogue_exclusion_rule": "Every cleaned catalogue geometry at every date/provenance, buffered20m and burned all-touched",
+  "timeline_window": {
+    "start": "2018-06-21",
+    "end": "2018-09-19",
+    "same_year_only": 2018,
+    "window_days_each_side": 45,
+    "interpretation": "Local windowed observation evidence; not a global first-clearing claim"
+  },
+  "timeline": [
+    {
+      "date": "2018-07-26",
+      "scene_id": "S2B_MSIL1C_20180726T084009_N0206_R064_T36UXA_20180726T104227",
+      "scene_path": "Datasets/Sentinel-2/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXA_20180726T104227/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXA_20180726T104227.SAFE",
+      "metadata_usable": true,
+      "metadata_issues": [],
+      "visual_event_state": "unreviewed",
+      "visual_control_state": "unreviewed",
+      "training_approved": false,
+      "evaluation_approved": false,
+      "observation": {
+        "scene_id": "S2B_MSIL1C_20180726T084009_N0206_R064_T36UXA_20180726T104227",
+        "metadata_uid": "e7fd103e3704c46980a65cc3896dda784d6ec707acec9caafd7014e57c7661ec",
+        "source_id": "bafb62c5b2cc160324a06bbb8afe69096054d99c6d28f4ea3efdec2fdd6c4517",
+        "grid": {
+          "crs": "EPSG:32636",
+          "transform": [
+            10.0,
+            0.0,
+            651760.0,
+            0.0,
+            -10.0,
+            5557680.0
+          ],
+          "width": 64,
+          "height": 64,
+          "bounds": [
+            651760.0,
+            5557040.0,
+            652400.0,
+            5557680.0
+          ]
+        },
+        "context_invalid_fraction": 0.0,
+        "context_incomplete": false,
+        "solar_azimuth_deg": 153.445195080169,
+        "solar_zenith_deg": 32.8514628907564,
+        "timings_seconds": {
+          "read": 1.3752,
+          "product_qa": 0.1309,
+          "cloud_model": 0.6773,
+          "total": 2.1838
+        },
+        "cache_key": "0686a28c1986c165c0cd2c7f06709d7521dcffe8b5265c7f26ccd2dd2511cb29",
+        "config_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+        "cache_path": "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/0686a28c1986c165c0cd2c7f06709d7521dcffe8b5265c7f26ccd2dd2511cb29.npz"
+      },
+      "event_metrics": {
+        "region_pixels": 21,
+        "denominator_pixels": 21,
+        "valid_pixels": 21,
+        "usable_pixels": 0,
+        "unusable_pixels": 21,
+        "cloud_pixels": 21,
+        "cloud_buffer_pixels": 21,
+        "shadow_risk_pixels": 0,
+        "haze_risk_pixels": 0,
+        "invalid_pixels": 0,
+        "cloud_fraction": 1.0,
+        "cloud_buffer_fraction": 1.0,
+        "shadow_risk_fraction": 0.0,
+        "haze_risk_fraction": 0.0,
+        "invalid_fraction": 0.0,
+        "valid_fraction": 1.0,
+        "usable_fraction": 0.0,
+        "unusable_fraction": 1.0,
+        "usable_median_ndvi": null
+      },
+      "control_metrics": {
+        "region_pixels": 256,
+        "denominator_pixels": 256,
+        "valid_pixels": 256,
+        "usable_pixels": 0,
+        "unusable_pixels": 256,
+        "cloud_pixels": 256,
+        "cloud_buffer_pixels": 256,
+        "shadow_risk_pixels": 0,
+        "haze_risk_pixels": 0,
+        "invalid_pixels": 0,
+        "cloud_fraction": 1.0,
+        "cloud_buffer_fraction": 1.0,
+        "shadow_risk_fraction": 0.0,
+        "haze_risk_fraction": 0.0,
+        "invalid_fraction": 0.0,
+        "valid_fraction": 1.0,
+        "usable_fraction": 0.0,
+        "unusable_fraction": 1.0,
+        "usable_median_ndvi": null
+      },
+      "crop_metrics": {
+        "region_pixels": 4096,
+        "denominator_pixels": 4096,
+        "valid_pixels": 4096,
+        "usable_pixels": 0,
+        "unusable_pixels": 4096,
+        "cloud_pixels": 4096,
+        "cloud_buffer_pixels": 4096,
+        "shadow_risk_pixels": 0,
+        "haze_risk_pixels": 0,
+        "invalid_pixels": 0,
+        "cloud_fraction": 1.0,
+        "cloud_buffer_fraction": 1.0,
+        "shadow_risk_fraction": 0.0,
+        "haze_risk_fraction": 0.0,
+        "invalid_fraction": 0.0,
+        "valid_fraction": 1.0,
+        "usable_fraction": 0.0,
+        "unusable_fraction": 1.0,
+        "usable_median_ndvi": null
+      }
+    },
+    {
+      "date": "2018-07-31",
+      "scene_id": "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233",
+      "scene_path": "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE",
+      "metadata_usable": true,
+      "metadata_issues": [],
+      "visual_event_state": "unreviewed",
+      "visual_control_state": "unreviewed",
+      "training_approved": false,
+      "evaluation_approved": false,
+      "observation": {
+        "scene_id": "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233",
+        "metadata_uid": "e58c069f44f575e265a54fc28e89354c7f502a938245b071e8998506bb92aed7",
+        "source_id": "6f3cabdffded46ef604feb2086af2735b463f34dc6e93a43ca28a3dc77a872ca",
+        "grid": {
+          "crs": "EPSG:32636",
+          "transform": [
+            10.0,
+            0.0,
+            651760.0,
+            0.0,
+            -10.0,
+            5557680.0
+          ],
+          "width": 64,
+          "height": 64,
+          "bounds": [
+            651760.0,
+            5557040.0,
+            652400.0,
+            5557680.0
+          ]
+        },
+        "context_invalid_fraction": 0.0,
+        "context_incomplete": false,
+        "solar_azimuth_deg": 154.161552587084,
+        "solar_zenith_deg": 33.9560747663748,
+        "timings_seconds": {
+          "read": 1.401,
+          "product_qa": 0.0235,
+          "cloud_model": 0.6508,
+          "total": 2.0762
+        },
+        "cache_key": "84dab80f61adbca50169aee4922935b4b6da2ada721e2b2e9ac3a7333a573ba3",
+        "config_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+        "cache_path": "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/84dab80f61adbca50169aee4922935b4b6da2ada721e2b2e9ac3a7333a573ba3.npz"
+      },
+      "event_metrics": {
+        "region_pixels": 21,
+        "denominator_pixels": 21,
+        "valid_pixels": 21,
+        "usable_pixels": 21,
+        "unusable_pixels": 0,
+        "cloud_pixels": 0,
+        "cloud_buffer_pixels": 0,
+        "shadow_risk_pixels": 0,
+        "haze_risk_pixels": 0,
+        "invalid_pixels": 0,
+        "cloud_fraction": 0.0,
+        "cloud_buffer_fraction": 0.0,
+        "shadow_risk_fraction": 0.0,
+        "haze_risk_fraction": 0.0,
+        "invalid_fraction": 0.0,
+        "valid_fraction": 1.0,
+        "usable_fraction": 1.0,
+        "unusable_fraction": 0.0,
+        "usable_median_ndvi": 0.5352343320846558
+      },
+      "control_metrics": {
+        "region_pixels": 256,
+        "denominator_pixels": 256,
+        "valid_pixels": 256,
+        "usable_pixels": 256,
+        "unusable_pixels": 0,
+        "cloud_pixels": 0,
+        "cloud_buffer_pixels": 0,
+        "shadow_risk_pixels": 0,
+        "haze_risk_pixels": 0,
+        "invalid_pixels": 0,
+        "cloud_fraction": 0.0,
+        "cloud_buffer_fraction": 0.0,
+        "shadow_risk_fraction": 0.0,
+        "haze_risk_fraction": 0.0,
+        "invalid_fraction": 0.0,
+        "valid_fraction": 1.0,
+        "usable_fraction": 1.0,
+        "unusable_fraction": 0.0,
+        "usable_median_ndvi": 0.7858140468597412
+      },
+      "crop_metrics": {
+        "region_pixels": 4096,
+        "denominator_pixels": 4096,
+        "valid_pixels": 4096,
+        "usable_pixels": 4096,
+        "unusable_pixels": 0,
+        "cloud_pixels": 0,
+        "cloud_buffer_pixels": 0,
+        "shadow_risk_pixels": 0,
+        "haze_risk_pixels": 0,
+        "invalid_pixels": 0,
+        "cloud_fraction": 0.0,
+        "cloud_buffer_fraction": 0.0,
+        "shadow_risk_fraction": 0.0,
+        "haze_risk_fraction": 0.0,
+        "invalid_fraction": 0.0,
+        "valid_fraction": 1.0,
+        "usable_fraction": 1.0,
+        "unusable_fraction": 0.0,
+        "usable_median_ndvi": 0.7226004600524902
+      }
+    },
+    {
+      "date": "2018-08-05",
+      "scene_id": "S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757",
+      "scene_path": "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE",
+      "metadata_usable": true,
+      "metadata_issues": [],
+      "visual_event_state": "unreviewed",
+      "visual_control_state": "unreviewed",
+      "training_approved": false,
+      "evaluation_approved": false,
+      "observation": {
+        "scene_id": "S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757",
+        "metadata_uid": "28ad9baa309c83a4dc55f39c30af47e1026e093524947f6c8f3819e531710ca8",
+        "source_id": "4a572ca1db12f01878f1c5466e6d092e634522913a957d5a4f93a35d7ae1310f",
+        "grid": {
+          "crs": "EPSG:32636",
+          "transform": [
+            10.0,
+            0.0,
+            651760.0,
+            0.0,
+            -10.0,
+            5557680.0
+          ],
+          "width": 64,
+          "height": 64,
+          "bounds": [
+            651760.0,
+            5557040.0,
+            652400.0,
+            5557680.0
+          ]
+        },
+        "context_invalid_fraction": 0.0,
+        "context_incomplete": false,
+        "solar_azimuth_deg": 154.947639947277,
+        "solar_zenith_deg": 35.1754433600116,
+        "timings_seconds": {
+          "read": 1.4012,
+          "product_qa": 0.0393,
+          "cloud_model": 0.6188,
+          "total": 2.0594
+        },
+        "cache_key": "6fec1944b4053af6f82b7b5849c01f6c2e364b93bdb2fa2fb0dbfde890bc3be1",
+        "config_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+        "cache_path": "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/6fec1944b4053af6f82b7b5849c01f6c2e364b93bdb2fa2fb0dbfde890bc3be1.npz"
+      },
+      "event_metrics": {
+        "region_pixels": 21,
+        "denominator_pixels": 21,
+        "valid_pixels": 21,
+        "usable_pixels": 21,
+        "unusable_pixels": 0,
+        "cloud_pixels": 0,
+        "cloud_buffer_pixels": 0,
+        "shadow_risk_pixels": 0,
+        "haze_risk_pixels": 0,
+        "invalid_pixels": 0,
+        "cloud_fraction": 0.0,
+        "cloud_buffer_fraction": 0.0,
+        "shadow_risk_fraction": 0.0,
+        "haze_risk_fraction": 0.0,
+        "invalid_fraction": 0.0,
+        "valid_fraction": 1.0,
+        "usable_fraction": 1.0,
+        "unusable_fraction": 0.0,
+        "usable_median_ndvi": 0.49910447001457214
+      },
+      "control_metrics": {
+        "region_pixels": 256,
+        "denominator_pixels": 256,
+        "valid_pixels": 256,
+        "usable_pixels": 256,
+        "unusable_pixels": 0,
+        "cloud_pixels": 0,
+        "cloud_buffer_pixels": 0,
+        "shadow_risk_pixels": 0,
+        "haze_risk_pixels": 0,
+        "invalid_pixels": 0,
+        "cloud_fraction": 0.0,
+        "cloud_buffer_fraction": 0.0,
+        "shadow_risk_fraction": 0.0,
+        "haze_risk_fraction": 0.0,
+        "invalid_fraction": 0.0,
+        "valid_fraction": 1.0,
+        "usable_fraction": 1.0,
+        "unusable_fraction": 0.0,
+        "usable_median_ndvi": 0.7839382886886597
+      },
+      "crop_metrics": {
+        "region_pixels": 4096,
+        "denominator_pixels": 4096,
+        "valid_pixels": 4096,
+        "usable_pixels": 4096,
+        "unusable_pixels": 0,
+        "cloud_pixels": 0,
+        "cloud_buffer_pixels": 0,
+        "shadow_risk_pixels": 0,
+        "haze_risk_pixels": 0,
+        "invalid_pixels": 0,
+        "cloud_fraction": 0.0,
+        "cloud_buffer_fraction": 0.0,
+        "shadow_risk_fraction": 0.0,
+        "haze_risk_fraction": 0.0,
+        "invalid_fraction": 0.0,
+        "valid_fraction": 1.0,
+        "usable_fraction": 1.0,
+        "unusable_fraction": 0.0,
+        "usable_median_ndvi": 0.721197247505188
+      }
+    },
+    {
+      "date": "2018-08-10",
+      "scene_id": "S2A_MSIL1C_20180810T083601_N0206_R064_T36UXA_20180810T124435",
+      "scene_path": "Datasets/Sentinel-2/S2A_MSIL1C_20180810T083601_N0206_R064_T36UXA_20180810T124435/S2A_MSIL1C_20180810T083601_N0206_R064_T36UXA_20180810T124435.SAFE",
+      "metadata_usable": true,
+      "metadata_issues": [],
+      "visual_event_state": "unreviewed",
+      "visual_control_state": "unreviewed",
+      "training_approved": false,
+      "evaluation_approved": false,
+      "observation": {
+        "scene_id": "S2A_MSIL1C_20180810T083601_N0206_R064_T36UXA_20180810T124435",
+        "metadata_uid": "a1bf5033d0b6f9edf5f0367fda3d2ba1c88e0495834f7dcd6de7a81011f396c2",
+        "source_id": "bf457652cb8ba85cf2226f68a6545b2cbce95354c54a76ec5b0f2e907e429d04",
+        "grid": {
+          "crs": "EPSG:32636",
+          "transform": [
+            10.0,
+            0.0,
+            651760.0,
+            0.0,
+            -10.0,
+            5557680.0
+          ],
+          "width": 64,
+          "height": 64,
+          "bounds": [
+            651760.0,
+            5557040.0,
+            652400.0,
+            5557680.0
+          ]
+        },
+        "context_invalid_fraction": 0.0,
+        "context_incomplete": false,
+        "solar_azimuth_deg": 155.889615446797,
+        "solar_zenith_deg": 36.4843955144963,
+        "timings_seconds": {
+          "read": 1.3744,
+          "product_qa": 0.0117,
+          "cloud_model": 0.57,
+          "total": 1.9563
+        },
+        "cache_key": "9b742b400325954ea5633de9b92df7384b533e43b1e8bd3ad2cbf2ce76320a6c",
+        "config_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+        "cache_path": "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/9b742b400325954ea5633de9b92df7384b533e43b1e8bd3ad2cbf2ce76320a6c.npz"
+      },
+      "event_metrics": {
+        "region_pixels": 21,
+        "denominator_pixels": 21,
+        "valid_pixels": 21,
+        "usable_pixels": 21,
+        "unusable_pixels": 0,
+        "cloud_pixels": 0,
+        "cloud_buffer_pixels": 0,
+        "shadow_risk_pixels": 0,
+        "haze_risk_pixels": 0,
+        "invalid_pixels": 0,
+        "cloud_fraction": 0.0,
+        "cloud_buffer_fraction": 0.0,
+        "shadow_risk_fraction": 0.0,
+        "haze_risk_fraction": 0.0,
+        "invalid_fraction": 0.0,
+        "valid_fraction": 1.0,
+        "usable_fraction": 1.0,
+        "unusable_fraction": 0.0,
+        "usable_median_ndvi": 0.47908008098602295
+      },
+      "control_metrics": {
+        "region_pixels": 256,
+        "denominator_pixels": 256,
+        "valid_pixels": 256,
+        "usable_pixels": 256,
+        "unusable_pixels": 0,
+        "cloud_pixels": 0,
+        "cloud_buffer_pixels": 0,
+        "shadow_risk_pixels": 0,
+        "haze_risk_pixels": 0,
+        "invalid_pixels": 0,
+        "cloud_fraction": 0.0,
+        "cloud_buffer_fraction": 0.0,
+        "shadow_risk_fraction": 0.0,
+        "haze_risk_fraction": 0.0,
+        "invalid_fraction": 0.0,
+        "valid_fraction": 1.0,
+        "usable_fraction": 1.0,
+        "unusable_fraction": 0.0,
+        "usable_median_ndvi": 0.808503270149231
+      },
+      "crop_metrics": {
+        "region_pixels": 4096,
+        "denominator_pixels": 4096,
+        "valid_pixels": 4096,
+        "usable_pixels": 4096,
+        "unusable_pixels": 0,
+        "cloud_pixels": 0,
+        "cloud_buffer_pixels": 0,
+        "shadow_risk_pixels": 0,
+        "haze_risk_pixels": 0,
+        "invalid_pixels": 0,
+        "cloud_fraction": 0.0,
+        "cloud_buffer_fraction": 0.0,
+        "shadow_risk_fraction": 0.0,
+        "haze_risk_fraction": 0.0,
+        "invalid_fraction": 0.0,
+        "valid_fraction": 1.0,
+        "usable_fraction": 1.0,
+        "unusable_fraction": 0.0,
+        "usable_median_ndvi": 0.7521138191223145
+      }
+    },
+    {
+      "date": "2018-08-15",
+      "scene_id": "S2B_MSIL1C_20180815T084009_N0206_R064_T36UXA_20180815T123155",
+      "scene_path": "Datasets/Sentinel-2/S2B_MSIL1C_20180815T084009_N0206_R064_T36UXA_20180815T123155/S2B_MSIL1C_20180815T084009_N0206_R064_T36UXA_20180815T123155.SAFE",
+      "metadata_usable": true,
+      "metadata_issues": [],
+      "visual_event_state": "unreviewed",
+      "visual_control_state": "unreviewed",
+      "training_approved": false,
+      "evaluation_approved": false,
+      "observation": {
+        "scene_id": "S2B_MSIL1C_20180815T084009_N0206_R064_T36UXA_20180815T123155",
+        "metadata_uid": "9d23f583ddd5f3529c98e14b2ea67387df82b0eede7db2970837fd1ae77fe1b9",
+        "source_id": "bd14e0a22bad3d3061341bdcb084ffd6d28f779282eb99cb5d48dd820b055cd7",
+        "grid": {
+          "crs": "EPSG:32636",
+          "transform": [
+            10.0,
+            0.0,
+            651760.0,
+            0.0,
+            -10.0,
+            5557680.0
+          ],
+          "width": 64,
+          "height": 64,
+          "bounds": [
+            651760.0,
+            5557040.0,
+            652400.0,
+            5557680.0
+          ]
+        },
+        "context_invalid_fraction": 0.0,
+        "context_incomplete": false,
+        "solar_azimuth_deg": 156.854740204186,
+        "solar_zenith_deg": 37.8942096912496,
+        "timings_seconds": {
+          "read": 1.4587,
+          "product_qa": 0.4011,
+          "cloud_model": 0.7773,
+          "total": 2.6377
+        },
+        "cache_key": "c9a2dc3c21c145de75773ce24d737840e9b58ac6dc604ed61d457ab75b31fa7a",
+        "config_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+        "cache_path": "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/c9a2dc3c21c145de75773ce24d737840e9b58ac6dc604ed61d457ab75b31fa7a.npz"
+      },
+      "event_metrics": {
+        "region_pixels": 21,
+        "denominator_pixels": 21,
+        "valid_pixels": 21,
+        "usable_pixels": 0,
+        "unusable_pixels": 21,
+        "cloud_pixels": 21,
+        "cloud_buffer_pixels": 21,
+        "shadow_risk_pixels": 0,
+        "haze_risk_pixels": 19,
+        "invalid_pixels": 0,
+        "cloud_fraction": 1.0,
+        "cloud_buffer_fraction": 1.0,
+        "shadow_risk_fraction": 0.0,
+        "haze_risk_fraction": 0.9047619047619048,
+        "invalid_fraction": 0.0,
+        "valid_fraction": 1.0,
+        "usable_fraction": 0.0,
+        "unusable_fraction": 1.0,
+        "usable_median_ndvi": null
+      },
+      "control_metrics": {
+        "region_pixels": 256,
+        "denominator_pixels": 256,
+        "valid_pixels": 256,
+        "usable_pixels": 0,
+        "unusable_pixels": 256,
+        "cloud_pixels": 256,
+        "cloud_buffer_pixels": 256,
+        "shadow_risk_pixels": 0,
+        "haze_risk_pixels": 162,
+        "invalid_pixels": 0,
+        "cloud_fraction": 1.0,
+        "cloud_buffer_fraction": 1.0,
+        "shadow_risk_fraction": 0.0,
+        "haze_risk_fraction": 0.6328125,
+        "invalid_fraction": 0.0,
+        "valid_fraction": 1.0,
+        "usable_fraction": 0.0,
+        "unusable_fraction": 1.0,
+        "usable_median_ndvi": null
+      },
+      "crop_metrics": {
+        "region_pixels": 4096,
+        "denominator_pixels": 4096,
+        "valid_pixels": 4096,
+        "usable_pixels": 0,
+        "unusable_pixels": 4096,
+        "cloud_pixels": 4088,
+        "cloud_buffer_pixels": 4096,
+        "shadow_risk_pixels": 0,
+        "haze_risk_pixels": 1820,
+        "invalid_pixels": 0,
+        "cloud_fraction": 0.998046875,
+        "cloud_buffer_fraction": 1.0,
+        "shadow_risk_fraction": 0.0,
+        "haze_risk_fraction": 0.4443359375,
+        "invalid_fraction": 0.0,
+        "valid_fraction": 1.0,
+        "usable_fraction": 0.0,
+        "unusable_fraction": 1.0,
+        "usable_median_ndvi": null
+      }
+    },
+    {
+      "date": "2018-08-20",
+      "scene_id": "S2A_MSIL1C_20180820T083601_N0206_R064_T36UXA_20180820T105651",
+      "scene_path": "Datasets/Sentinel-2/S2A_MSIL1C_20180820T083601_N0206_R064_T36UXA_20180820T105651/S2A_MSIL1C_20180820T083601_N0206_R064_T36UXA_20180820T105651.SAFE",
+      "metadata_usable": true,
+      "metadata_issues": [],
+      "visual_event_state": "unreviewed",
+      "visual_control_state": "unreviewed",
+      "training_approved": false,
+      "evaluation_approved": false,
+      "observation": {
+        "scene_id": "S2A_MSIL1C_20180820T083601_N0206_R064_T36UXA_20180820T105651",
+        "metadata_uid": "a5eb0a5c3cad704a119bb0fa959cc85356f4d5bead2471479f928bbff0eb5550",
+        "source_id": "90ba7fd66e6395270eb34ef055156f8305f4cec14dbca38454e6b7041883c795",
+        "grid": {
+          "crs": "EPSG:32636",
+          "transform": [
+            10.0,
+            0.0,
+            651760.0,
+            0.0,
+            -10.0,
+            5557680.0
+          ],
+          "width": 64,
+          "height": 64,
+          "bounds": [
+            651760.0,
+            5557040.0,
+            652400.0,
+            5557680.0
+          ]
+        },
+        "context_invalid_fraction": 0.0,
+        "context_incomplete": false,
+        "solar_azimuth_deg": 157.950044419726,
+        "solar_zenith_deg": 39.3760019204107,
+        "timings_seconds": {
+          "read": 1.4127,
+          "product_qa": 0.0509,
+          "cloud_model": 0.6433,
+          "total": 2.1072
+        },
+        "cache_key": "0fbcf3f88dcfb0dfd17ba6d3ab1b2c8b2c69e00800260827f553495f89032249",
+        "config_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+        "cache_path": "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/0fbcf3f88dcfb0dfd17ba6d3ab1b2c8b2c69e00800260827f553495f89032249.npz"
+      },
+      "event_metrics": {
+        "region_pixels": 21,
+        "denominator_pixels": 21,
+        "valid_pixels": 21,
+        "usable_pixels": 21,
+        "unusable_pixels": 0,
+        "cloud_pixels": 0,
+        "cloud_buffer_pixels": 0,
+        "shadow_risk_pixels": 0,
+        "haze_risk_pixels": 0,
+        "invalid_pixels": 0,
+        "cloud_fraction": 0.0,
+        "cloud_buffer_fraction": 0.0,
+        "shadow_risk_fraction": 0.0,
+        "haze_risk_fraction": 0.0,
+        "invalid_fraction": 0.0,
+        "valid_fraction": 1.0,
+        "usable_fraction": 1.0,
+        "unusable_fraction": 0.0,
+        "usable_median_ndvi": 0.3503740727901459
+      },
+      "control_metrics": {
+        "region_pixels": 256,
+        "denominator_pixels": 256,
+        "valid_pixels": 256,
+        "usable_pixels": 256,
+        "unusable_pixels": 0,
+        "cloud_pixels": 0,
+        "cloud_buffer_pixels": 0,
+        "shadow_risk_pixels": 0,
+        "haze_risk_pixels": 0,
+        "invalid_pixels": 0,
+        "cloud_fraction": 0.0,
+        "cloud_buffer_fraction": 0.0,
+        "shadow_risk_fraction": 0.0,
+        "haze_risk_fraction": 0.0,
+        "invalid_fraction": 0.0,
+        "valid_fraction": 1.0,
+        "usable_fraction": 1.0,
+        "unusable_fraction": 0.0,
+        "usable_median_ndvi": 0.7611594796180725
+      },
+      "crop_metrics": {
+        "region_pixels": 4096,
+        "denominator_pixels": 4096,
+        "valid_pixels": 4096,
+        "usable_pixels": 4096,
+        "unusable_pixels": 0,
+        "cloud_pixels": 0,
+        "cloud_buffer_pixels": 0,
+        "shadow_risk_pixels": 0,
+        "haze_risk_pixels": 0,
+        "invalid_pixels": 0,
+        "cloud_fraction": 0.0,
+        "cloud_buffer_fraction": 0.0,
+        "shadow_risk_fraction": 0.0,
+        "haze_risk_fraction": 0.0,
+        "invalid_fraction": 0.0,
+        "valid_fraction": 1.0,
+        "usable_fraction": 1.0,
+        "unusable_fraction": 0.0,
+        "usable_median_ndvi": 0.7008970975875854
+      }
+    },
+    {
+      "date": "2018-08-25",
+      "scene_id": "S2B_MSIL1C_20180825T083549_N0206_R064_T36UXA_20180825T124942",
+      "scene_path": "Datasets/Sentinel-2/S2B_MSIL1C_20180825T083549_N0206_R064_T36UXA_20180825T124942/S2B_MSIL1C_20180825T083549_N0206_R064_T36UXA_20180825T124942.SAFE",
+      "metadata_usable": true,
+      "metadata_issues": [],
+      "visual_event_state": "unreviewed",
+      "visual_control_state": "unreviewed",
+      "training_approved": false,
+      "evaluation_approved": false,
+      "observation": {
+        "scene_id": "S2B_MSIL1C_20180825T083549_N0206_R064_T36UXA_20180825T124942",
+        "metadata_uid": "15f079dd73e0ebfb3a66bf6fd3d5bc36317984525687770d7e5db9f1ab5fe545",
+        "source_id": "a4d666a4bdf6da616516af3954c06221ae099d5c805b09624e510cf786fc7571",
+        "grid": {
+          "crs": "EPSG:32636",
+          "transform": [
+            10.0,
+            0.0,
+            651760.0,
+            0.0,
+            -10.0,
+            5557680.0
+          ],
+          "width": 64,
+          "height": 64,
+          "bounds": [
+            651760.0,
+            5557040.0,
+            652400.0,
+            5557680.0
+          ]
+        },
+        "context_invalid_fraction": 0.0,
+        "context_incomplete": false,
+        "solar_azimuth_deg": 159.0123677093,
+        "solar_zenith_deg": 40.9452877577131,
+        "timings_seconds": {
+          "read": 1.4278,
+          "product_qa": 0.0284,
+          "cloud_model": 0.6312,
+          "total": 2.0876
+        },
+        "cache_key": "4fe421d0fa99d4361e24a950a250f5878d7da302d791c8780c3fa60130b0efaf",
+        "config_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+        "cache_path": "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/4fe421d0fa99d4361e24a950a250f5878d7da302d791c8780c3fa60130b0efaf.npz"
+      },
+      "event_metrics": {
+        "region_pixels": 21,
+        "denominator_pixels": 21,
+        "valid_pixels": 21,
+        "usable_pixels": 21,
+        "unusable_pixels": 0,
+        "cloud_pixels": 0,
+        "cloud_buffer_pixels": 0,
+        "shadow_risk_pixels": 0,
+        "haze_risk_pixels": 0,
+        "invalid_pixels": 0,
+        "cloud_fraction": 0.0,
+        "cloud_buffer_fraction": 0.0,
+        "shadow_risk_fraction": 0.0,
+        "haze_risk_fraction": 0.0,
+        "invalid_fraction": 0.0,
+        "valid_fraction": 1.0,
+        "usable_fraction": 1.0,
+        "unusable_fraction": 0.0,
+        "usable_median_ndvi": 0.33974525332450867
+      },
+      "control_metrics": {
+        "region_pixels": 256,
+        "denominator_pixels": 256,
+        "valid_pixels": 256,
+        "usable_pixels": 256,
+        "unusable_pixels": 0,
+        "cloud_pixels": 0,
+        "cloud_buffer_pixels": 0,
+        "shadow_risk_pixels": 0,
+        "haze_risk_pixels": 0,
+        "invalid_pixels": 0,
+        "cloud_fraction": 0.0,
+        "cloud_buffer_fraction": 0.0,
+        "shadow_risk_fraction": 0.0,
+        "haze_risk_fraction": 0.0,
+        "invalid_fraction": 0.0,
+        "valid_fraction": 1.0,
+        "usable_fraction": 1.0,
+        "unusable_fraction": 0.0,
+        "usable_median_ndvi": 0.7601947784423828
+      },
+      "crop_metrics": {
+        "region_pixels": 4096,
+        "denominator_pixels": 4096,
+        "valid_pixels": 4096,
+        "usable_pixels": 4096,
+        "unusable_pixels": 0,
+        "cloud_pixels": 0,
+        "cloud_buffer_pixels": 0,
+        "shadow_risk_pixels": 0,
+        "haze_risk_pixels": 0,
+        "invalid_pixels": 0,
+        "cloud_fraction": 0.0,
+        "cloud_buffer_fraction": 0.0,
+        "shadow_risk_fraction": 0.0,
+        "haze_risk_fraction": 0.0,
+        "invalid_fraction": 0.0,
+        "valid_fraction": 1.0,
+        "usable_fraction": 1.0,
+        "unusable_fraction": 0.0,
+        "usable_median_ndvi": 0.7007767558097839
+      }
+    },
+    {
+      "date": "2018-08-30",
+      "scene_id": "S2A_MSIL1C_20180830T083601_N0206_R064_T36UXA_20180830T105527",
+      "scene_path": "Datasets/Sentinel-2/S2A_MSIL1C_20180830T083601_N0206_R064_T36UXA_20180830T105527/S2A_MSIL1C_20180830T083601_N0206_R064_T36UXA_20180830T105527.SAFE",
+      "metadata_usable": true,
+      "metadata_issues": [],
+      "visual_event_state": "unreviewed",
+      "visual_control_state": "unreviewed",
+      "training_approved": false,
+      "evaluation_approved": false,
+      "observation": {
+        "scene_id": "S2A_MSIL1C_20180830T083601_N0206_R064_T36UXA_20180830T105527",
+        "metadata_uid": "2bece007a86510746467052d291ef7a5c056ffbbb8c105dda142479cc0b5afd8",
+        "source_id": "d2525d950578dd7b7e4e6e26e8370440d11050b5d1c668cbde2889618a14c8d9",
+        "grid": {
+          "crs": "EPSG:32636",
+          "transform": [
+            10.0,
+            0.0,
+            651760.0,
+            0.0,
+            -10.0,
+            5557680.0
+          ],
+          "width": 64,
+          "height": 64,
+          "bounds": [
+            651760.0,
+            5557040.0,
+            652400.0,
+            5557680.0
+          ]
+        },
+        "context_invalid_fraction": 0.0,
+        "context_incomplete": false,
+        "solar_azimuth_deg": 160.179719168137,
+        "solar_zenith_deg": 42.5695808131306,
+        "timings_seconds": {
+          "read": 1.438,
+          "product_qa": 0.0115,
+          "cloud_model": 0.732,
+          "total": 2.1817
+        },
+        "cache_key": "7ad721e8b43705ac37627324708e67f17faacdfbecaa63d0d5547e7dc824d00b",
+        "config_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+        "cache_path": "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/7ad721e8b43705ac37627324708e67f17faacdfbecaa63d0d5547e7dc824d00b.npz"
+      },
+      "event_metrics": {
+        "region_pixels": 21,
+        "denominator_pixels": 21,
+        "valid_pixels": 21,
+        "usable_pixels": 21,
+        "unusable_pixels": 0,
+        "cloud_pixels": 0,
+        "cloud_buffer_pixels": 0,
+        "shadow_risk_pixels": 0,
+        "haze_risk_pixels": 0,
+        "invalid_pixels": 0,
+        "cloud_fraction": 0.0,
+        "cloud_buffer_fraction": 0.0,
+        "shadow_risk_fraction": 0.0,
+        "haze_risk_fraction": 0.0,
+        "invalid_fraction": 0.0,
+        "valid_fraction": 1.0,
+        "usable_fraction": 1.0,
+        "unusable_fraction": 0.0,
+        "usable_median_ndvi": 0.30063730478286743
+      },
+      "control_metrics": {
+        "region_pixels": 256,
+        "denominator_pixels": 256,
+        "valid_pixels": 256,
+        "usable_pixels": 256,
+        "unusable_pixels": 0,
+        "cloud_pixels": 0,
+        "cloud_buffer_pixels": 0,
+        "shadow_risk_pixels": 0,
+        "haze_risk_pixels": 0,
+        "invalid_pixels": 0,
+        "cloud_fraction": 0.0,
+        "cloud_buffer_fraction": 0.0,
+        "shadow_risk_fraction": 0.0,
+        "haze_risk_fraction": 0.0,
+        "invalid_fraction": 0.0,
+        "valid_fraction": 1.0,
+        "usable_fraction": 1.0,
+        "unusable_fraction": 0.0,
+        "usable_median_ndvi": 0.7065532207489014
+      },
+      "crop_metrics": {
+        "region_pixels": 4096,
+        "denominator_pixels": 4096,
+        "valid_pixels": 4096,
+        "usable_pixels": 4096,
+        "unusable_pixels": 0,
+        "cloud_pixels": 0,
+        "cloud_buffer_pixels": 0,
+        "shadow_risk_pixels": 0,
+        "haze_risk_pixels": 0,
+        "invalid_pixels": 0,
+        "cloud_fraction": 0.0,
+        "cloud_buffer_fraction": 0.0,
+        "shadow_risk_fraction": 0.0,
+        "haze_risk_fraction": 0.0,
+        "invalid_fraction": 0.0,
+        "valid_fraction": 1.0,
+        "usable_fraction": 1.0,
+        "unusable_fraction": 0.0,
+        "usable_median_ndvi": 0.644991397857666
+      }
+    },
+    {
+      "date": "2018-09-04",
+      "scene_id": "S2B_MSIL1C_20180904T083549_N0206_R064_T36UXA_20180904T123955",
+      "scene_path": "Datasets/Sentinel-2/S2B_MSIL1C_20180904T083549_N0206_R064_T36UXA_20180904T123955/S2B_MSIL1C_20180904T083549_N0206_R064_T36UXA_20180904T123955.SAFE",
+      "metadata_usable": true,
+      "metadata_issues": [],
+      "visual_event_state": "unreviewed",
+      "visual_control_state": "unreviewed",
+      "training_approved": false,
+      "evaluation_approved": false,
+      "observation": {
+        "scene_id": "S2B_MSIL1C_20180904T083549_N0206_R064_T36UXA_20180904T123955",
+        "metadata_uid": "a732119479066d41b3acd10de4e0fcec8a84b707fdac5a0d579b1a1faf574236",
+        "source_id": "fb065d5bf421dbbeb41257c3eb6450a61368b94c0cddf9d58b36709574de67e0",
+        "grid": {
+          "crs": "EPSG:32636",
+          "transform": [
+            10.0,
+            0.0,
+            651760.0,
+            0.0,
+            -10.0,
+            5557680.0
+          ],
+          "width": 64,
+          "height": 64,
+          "bounds": [
+            651760.0,
+            5557040.0,
+            652400.0,
+            5557680.0
+          ]
+        },
+        "context_invalid_fraction": 0.0,
+        "context_incomplete": false,
+        "solar_azimuth_deg": 161.264675941974,
+        "solar_zenith_deg": 44.2675909213113,
+        "timings_seconds": {
+          "read": 1.4088,
+          "product_qa": 0.0217,
+          "cloud_model": 0.6895,
+          "total": 2.1204
+        },
+        "cache_key": "f002481c62d73207b476c497f79c7aa8f237fbe76f68f1509dcdd39bce916366",
+        "config_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+        "cache_path": "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/f002481c62d73207b476c497f79c7aa8f237fbe76f68f1509dcdd39bce916366.npz"
+      },
+      "event_metrics": {
+        "region_pixels": 21,
+        "denominator_pixels": 21,
+        "valid_pixels": 21,
+        "usable_pixels": 21,
+        "unusable_pixels": 0,
+        "cloud_pixels": 0,
+        "cloud_buffer_pixels": 0,
+        "shadow_risk_pixels": 0,
+        "haze_risk_pixels": 0,
+        "invalid_pixels": 0,
+        "cloud_fraction": 0.0,
+        "cloud_buffer_fraction": 0.0,
+        "shadow_risk_fraction": 0.0,
+        "haze_risk_fraction": 0.0,
+        "invalid_fraction": 0.0,
+        "valid_fraction": 1.0,
+        "usable_fraction": 1.0,
+        "unusable_fraction": 0.0,
+        "usable_median_ndvi": 0.2971786856651306
+      },
+      "control_metrics": {
+        "region_pixels": 256,
+        "denominator_pixels": 256,
+        "valid_pixels": 256,
+        "usable_pixels": 256,
+        "unusable_pixels": 0,
+        "cloud_pixels": 0,
+        "cloud_buffer_pixels": 0,
+        "shadow_risk_pixels": 0,
+        "haze_risk_pixels": 0,
+        "invalid_pixels": 0,
+        "cloud_fraction": 0.0,
+        "cloud_buffer_fraction": 0.0,
+        "shadow_risk_fraction": 0.0,
+        "haze_risk_fraction": 0.0,
+        "invalid_fraction": 0.0,
+        "valid_fraction": 1.0,
+        "usable_fraction": 1.0,
+        "unusable_fraction": 0.0,
+        "usable_median_ndvi": 0.6977006196975708
+      },
+      "crop_metrics": {
+        "region_pixels": 4096,
+        "denominator_pixels": 4096,
+        "valid_pixels": 4096,
+        "usable_pixels": 4096,
+        "unusable_pixels": 0,
+        "cloud_pixels": 0,
+        "cloud_buffer_pixels": 0,
+        "shadow_risk_pixels": 0,
+        "haze_risk_pixels": 0,
+        "invalid_pixels": 0,
+        "cloud_fraction": 0.0,
+        "cloud_buffer_fraction": 0.0,
+        "shadow_risk_fraction": 0.0,
+        "haze_risk_fraction": 0.0,
+        "invalid_fraction": 0.0,
+        "valid_fraction": 1.0,
+        "usable_fraction": 1.0,
+        "unusable_fraction": 0.0,
+        "usable_median_ndvi": 0.63850998878479
+      }
+    },
+    {
+      "date": "2018-09-19",
+      "scene_id": "S2A_MSIL1C_20180919T083621_N0206_R064_T36UXA_20180919T105540",
+      "scene_path": "Datasets/Sentinel-2/S2A_MSIL1C_20180919T083621_N0206_R064_T36UXA_20180919T105540/S2A_MSIL1C_20180919T083621_N0206_R064_T36UXA_20180919T105540.SAFE",
+      "metadata_usable": true,
+      "metadata_issues": [],
+      "visual_event_state": "unreviewed",
+      "visual_control_state": "unreviewed",
+      "training_approved": false,
+      "evaluation_approved": false,
+      "observation": {
+        "scene_id": "S2A_MSIL1C_20180919T083621_N0206_R064_T36UXA_20180919T105540",
+        "metadata_uid": "59718559197e9ba8c54d0de687cb41784dd9df7ad78bf08dce71a64f8cd721c9",
+        "source_id": "164e0e9d3f45f7c330851becb005e67aa082d26715475ff907b007a2bf336920",
+        "grid": {
+          "crs": "EPSG:32636",
+          "transform": [
+            10.0,
+            0.0,
+            651760.0,
+            0.0,
+            -10.0,
+            5557680.0
+          ],
+          "width": 64,
+          "height": 64,
+          "bounds": [
+            651760.0,
+            5557040.0,
+            652400.0,
+            5557680.0
+          ]
+        },
+        "context_invalid_fraction": 0.0,
+        "context_incomplete": false,
+        "solar_azimuth_deg": 164.522468690286,
+        "solar_zenith_deg": 49.6161300111003,
+        "timings_seconds": {
+          "read": 1.4059,
+          "product_qa": 0.0098,
+          "cloud_model": 0.6369,
+          "total": 2.0536
+        },
+        "cache_key": "32d7fe0ee957a5f9e11892169b464d8299d2270272aaf083c2cb76f0d4361c1a",
+        "config_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+        "cache_path": "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/32d7fe0ee957a5f9e11892169b464d8299d2270272aaf083c2cb76f0d4361c1a.npz"
+      },
+      "event_metrics": {
+        "region_pixels": 21,
+        "denominator_pixels": 21,
+        "valid_pixels": 21,
+        "usable_pixels": 21,
+        "unusable_pixels": 0,
+        "cloud_pixels": 0,
+        "cloud_buffer_pixels": 0,
+        "shadow_risk_pixels": 0,
+        "haze_risk_pixels": 0,
+        "invalid_pixels": 0,
+        "cloud_fraction": 0.0,
+        "cloud_buffer_fraction": 0.0,
+        "shadow_risk_fraction": 0.0,
+        "haze_risk_fraction": 0.0,
+        "invalid_fraction": 0.0,
+        "valid_fraction": 1.0,
+        "usable_fraction": 1.0,
+        "unusable_fraction": 0.0,
+        "usable_median_ndvi": 0.2907749116420746
+      },
+      "control_metrics": {
+        "region_pixels": 256,
+        "denominator_pixels": 256,
+        "valid_pixels": 256,
+        "usable_pixels": 256,
+        "unusable_pixels": 0,
+        "cloud_pixels": 0,
+        "cloud_buffer_pixels": 0,
+        "shadow_risk_pixels": 0,
+        "haze_risk_pixels": 0,
+        "invalid_pixels": 0,
+        "cloud_fraction": 0.0,
+        "cloud_buffer_fraction": 0.0,
+        "shadow_risk_fraction": 0.0,
+        "haze_risk_fraction": 0.0,
+        "invalid_fraction": 0.0,
+        "valid_fraction": 1.0,
+        "usable_fraction": 1.0,
+        "unusable_fraction": 0.0,
+        "usable_median_ndvi": 0.7251061201095581
+      },
+      "crop_metrics": {
+        "region_pixels": 4096,
+        "denominator_pixels": 4096,
+        "valid_pixels": 4096,
+        "usable_pixels": 4096,
+        "unusable_pixels": 0,
+        "cloud_pixels": 0,
+        "cloud_buffer_pixels": 0,
+        "shadow_risk_pixels": 0,
+        "haze_risk_pixels": 0,
+        "invalid_pixels": 0,
+        "cloud_fraction": 0.0,
+        "cloud_buffer_fraction": 0.0,
+        "shadow_risk_fraction": 0.0,
+        "haze_risk_fraction": 0.0,
+        "invalid_fraction": 0.0,
+        "valid_fraction": 1.0,
+        "usable_fraction": 1.0,
+        "unusable_fraction": 0.0,
+        "usable_median_ndvi": 0.6695914268493652
+      }
+    }
+  ],
+  "primary_endpoint_cache_paths": {
+    "pre": "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/84dab80f61adbca50169aee4922935b4b6da2ada721e2b2e9ac3a7333a573ba3.npz",
+    "post": "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/6fec1944b4053af6f82b7b5849c01f6c2e364b93bdb2fa2fb0dbfde890bc3be1.npz"
+  },
+  "published_qa": {
+    "index_row": {
+      "pair_id": "pair-cbdc5c3dc169f42a07e0",
+      "group_id": "group-646504159ec8034a1565",
+      "split": "validation",
+      "tile": "36UXA",
+      "anchor_event_ids": [
+        "event-9993d3bc382d3405a7ad"
+      ],
+      "pre_date": "2018-07-31",
+      "post_date": "2018-08-05",
+      "interval_days": 5,
+      "quality_status": "passed_automatic_screen_pending_visual_review",
+      "quality_reasons": [],
+      "config_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "batch_path": "Datasets/PixelQA/v1/batches/00051",
+      "qa_mask_file": "masks/pair-cbdc5c3dc169f42a07e0.tif",
+      "preview_file": null,
+      "visual_review": "unreviewed",
+      "training_approved": false
+    },
+    "qa_file": "Datasets/PixelQA/v1/batches/00051/masks/pair-cbdc5c3dc169f42a07e0.tif",
+    "qa_file_sha256": "c30de5629e2d571223b484f64283fdced62261bac59a586cd94bb7bec532715e"
+  },
+  "feature_source_file_stats": {
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/IMG_DATA/T36UXA_20180731T083601_B01.jp2": [
+      3325351,
+      1671474752000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/IMG_DATA/T36UXA_20180731T083601_B02.jp2": [
+      92163215,
+      1671474752000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/IMG_DATA/T36UXA_20180731T083601_B03.jp2": [
+      96849171,
+      1671474758000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/IMG_DATA/T36UXA_20180731T083601_B04.jp2": [
+      97946752,
+      1671474766000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/IMG_DATA/T36UXA_20180731T083601_B05.jp2": [
+      29840322,
+      1671474772000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/IMG_DATA/T36UXA_20180731T083601_B08.jp2": [
+      130338386,
+      1671474780000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/IMG_DATA/T36UXA_20180731T083601_B09.jp2": [
+      3752165,
+      1671474788000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/IMG_DATA/T36UXA_20180731T083601_B10.jp2": [
+      1694257,
+      1671474790000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/IMG_DATA/T36UXA_20180731T083601_B11.jp2": [
+      31372265,
+      1671474790000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/IMG_DATA/T36UXA_20180731T083601_B12.jp2": [
+      30440497,
+      1671474792000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/IMG_DATA/T36UXA_20180731T083601_B8A.jp2": [
+      33824749,
+      1671474794000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/MTD_TL.xml": [
+      551632,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_CLOUDS_B00.gml": [
+      64217,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_DEFECT_B01.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_DEFECT_B02.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_DEFECT_B03.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_DEFECT_B04.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_DEFECT_B05.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_DEFECT_B08.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_DEFECT_B09.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_DEFECT_B10.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_DEFECT_B11.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_DEFECT_B12.gml": [
+      1455,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_DEFECT_B8A.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_NODATA_B01.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_NODATA_B02.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_NODATA_B03.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_NODATA_B04.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_NODATA_B05.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_NODATA_B08.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_NODATA_B09.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_NODATA_B10.gml": [
+      1490,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_NODATA_B11.gml": [
+      1488,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_NODATA_B12.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_NODATA_B8A.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_SATURA_B01.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_SATURA_B02.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_SATURA_B03.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_SATURA_B04.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_SATURA_B05.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_SATURA_B08.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_SATURA_B09.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_SATURA_B10.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_SATURA_B11.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_SATURA_B12.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_SATURA_B8A.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_TECQUA_B01.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_TECQUA_B02.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_TECQUA_B03.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_TECQUA_B04.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_TECQUA_B05.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_TECQUA_B08.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_TECQUA_B09.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_TECQUA_B10.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_TECQUA_B11.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_TECQUA_B12.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/GRANULE/L1C_T36UXA_A016220_20180731T084204/QI_DATA/MSK_TECQUA_B8A.gml": [
+      428,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE/MTD_MSIL1C.xml": [
+      44298,
+      1671474806000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/IMG_DATA/T36UXA_20180805T083559_B01.jp2": [
+      3332529,
+      1671476088000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/IMG_DATA/T36UXA_20180805T083559_B02.jp2": [
+      92002088,
+      1671476088000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/IMG_DATA/T36UXA_20180805T083559_B03.jp2": [
+      97311494,
+      1671476096000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/IMG_DATA/T36UXA_20180805T083559_B04.jp2": [
+      98633985,
+      1671476102000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/IMG_DATA/T36UXA_20180805T083559_B05.jp2": [
+      29974563,
+      1671476110000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/IMG_DATA/T36UXA_20180805T083559_B08.jp2": [
+      129839558,
+      1671476116000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/IMG_DATA/T36UXA_20180805T083559_B09.jp2": [
+      3645272,
+      1671476126000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/IMG_DATA/T36UXA_20180805T083559_B10.jp2": [
+      1572755,
+      1671476126000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/IMG_DATA/T36UXA_20180805T083559_B11.jp2": [
+      32241683,
+      1671476126000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/IMG_DATA/T36UXA_20180805T083559_B12.jp2": [
+      30982657,
+      1671476130000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/IMG_DATA/T36UXA_20180805T083559_B8A.jp2": [
+      33753057,
+      1671476132000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/MTD_TL.xml": [
+      551639,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_CLOUDS_B00.gml": [
+      68427,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_DEFECT_B01.gml": [
+      428,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_DEFECT_B02.gml": [
+      428,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_DEFECT_B03.gml": [
+      428,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_DEFECT_B04.gml": [
+      428,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_DEFECT_B05.gml": [
+      428,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_DEFECT_B08.gml": [
+      428,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_DEFECT_B09.gml": [
+      428,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_DEFECT_B10.gml": [
+      428,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_DEFECT_B11.gml": [
+      428,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_DEFECT_B12.gml": [
+      1458,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_DEFECT_B8A.gml": [
+      428,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_NODATA_B01.gml": [
+      1492,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_NODATA_B02.gml": [
+      1491,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_NODATA_B03.gml": [
+      1487,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_NODATA_B04.gml": [
+      1486,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_NODATA_B05.gml": [
+      1489,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_NODATA_B08.gml": [
+      1490,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_NODATA_B09.gml": [
+      1493,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_NODATA_B10.gml": [
+      1490,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_NODATA_B11.gml": [
+      1492,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_NODATA_B12.gml": [
+      428,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_NODATA_B8A.gml": [
+      1488,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_SATURA_B01.gml": [
+      428,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_SATURA_B02.gml": [
+      428,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_SATURA_B03.gml": [
+      428,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_SATURA_B04.gml": [
+      428,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_SATURA_B05.gml": [
+      428,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_SATURA_B08.gml": [
+      428,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_SATURA_B09.gml": [
+      428,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_SATURA_B10.gml": [
+      428,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_SATURA_B11.gml": [
+      428,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_SATURA_B12.gml": [
+      428,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_SATURA_B8A.gml": [
+      428,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_TECQUA_B01.gml": [
+      428,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_TECQUA_B02.gml": [
+      428,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_TECQUA_B03.gml": [
+      428,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_TECQUA_B04.gml": [
+      428,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_TECQUA_B05.gml": [
+      428,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_TECQUA_B08.gml": [
+      428,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_TECQUA_B09.gml": [
+      428,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_TECQUA_B10.gml": [
+      428,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_TECQUA_B11.gml": [
+      428,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_TECQUA_B12.gml": [
+      428,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/GRANULE/L1C_T36UXA_A007383_20180805T084554/QI_DATA/MSK_TECQUA_B8A.gml": [
+      428,
+      1671476144000000000
+    ],
+    "Datasets/Sentinel-2/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757/S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757.SAFE/MTD_MSIL1C.xml": [
+      44140,
+      1671476144000000000
+    ]
+  },
+  "feature_channels": [
+    "pre_B02",
+    "pre_B03",
+    "pre_B04",
+    "pre_B08",
+    "pre_B8A",
+    "pre_B11",
+    "pre_B12",
+    "pre_NDVI",
+    "pre_NDMI",
+    "post_B02",
+    "post_B03",
+    "post_B04",
+    "post_B08",
+    "post_B8A",
+    "post_B11",
+    "post_B12",
+    "post_NDVI",
+    "post_NDMI",
+    "difference_B02",
+    "difference_B03",
+    "difference_B04",
+    "difference_B08",
+    "difference_B8A",
+    "difference_B11",
+    "difference_B12",
+    "difference_NDVI",
+    "difference_NDMI"
+  ],
+  "feature_valid_pixels": 4096,
+  "feature_nonfinite_values": 0,
+  "features_nonfinite_policy": "Only invalid context may be NaN; final reviewed ROIs must be fully finite before approval; no labels are approved here",
+  "visual_review": "unreviewed",
+  "temporal_label_review": "unreviewed",
+  "control_label_review": "unreviewed",
+  "training_approved": false,
+  "evaluation_approved": false,
+  "model_predictions_read": false,
+  "artifact_sha256": {
+    "positive_interior.tif": "18aad5d8eb5c333293de467ce46f60e8497281316088b0c6f06e46d6ebe86631",
+    "pair.png": "2ef96dffc0b9b6cf775bb1a3697e6e8a40cffd4f43dc234c304ed1a80b646f2b",
+    "feature_valid.tif": "3c3abfcecb8bc9e0ba65769ff2cf9ca95b971490b45ccac79ff424c1c29c4031",
+    "proposed_control.tif": "5338a8672995076d9a31a001f9260d3a36642dc8199ae8de3845ad4ad15ec29d",
+    "target_mask.tif": "77d81d061129b5e8707dd8a8bb7c10aa3f48cb06847e3e4091588ee82abe5779",
+    "catalogue_exclusion.tif": "e8792868f59490b32a539117e691299b64a3f9a2476245f0c4e6a3e4f2b7c6fd",
+    "timeline.png": "7e6a70aecb3d0a52c72cda192c55b0ef17108d5f8ff3ecfb38dbec72474efd43",
+    "input_features.tif": "b78089025cd93a362fea7ebd414ec4f57a6b5723a8708e05bae3868d4b3d2780",
+    "endpoint_unusable.tif": "df9df694551ad50b2bee45ad6a8224b912be74ed9b034032509155ec5f9cc416"
+  },
+  "limitations": [
+    "Preparation and numeric proposals do not approve labels.",
+    "Selected validation examples are a small reviewed-region development diagnostic, not a representative benchmark.",
+    "Timeline bounds are local observations, not exact felling dates."
+  ]
+}

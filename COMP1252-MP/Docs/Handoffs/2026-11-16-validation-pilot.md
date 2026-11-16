@@ -13,6 +13,38 @@ after reviews and labels are locked. Protocol:
 `Docs/Reviews/ValidationPilotV1/protocol.json`. No validation model inference
 has run and no validation label is approved yet.
 
+## Completed bounded review: no approved validation labels
+
+All five locked candidates (3 primaries and 2 predefined alternates) have now
+been prepared sequentially and their complete timeline PNGs opened. The Spring
+primary's detailed pair PNG was also inspected. `reviews.json` contains every
+hash-bound rejection; exact artifacts and guarded receipts are tracked under
+`prepared_cases/` and `preparation_receipts/` in the review directory.
+
+| Candidate | Role | Eroded interior pixels | Disposition |
+| --- | --- | ---: | --- |
+| 9993 (UXA) | Primary | 1 | Below fixed minimum4 |
+| 4ee5 (Summer) | Primary | 0 | Below fixed minimum4 |
+| 4a343 (Spring) | Primary | 10 | Pre-image forest not unambiguous in road/disturbance mosaic |
+| 9495 (UXA) | Alternate | 0 | Below fixed minimum4 |
+| 3304 (Spring) | Alternate | 0 | Below fixed minimum4 |
+
+**Zero samples are approved. No dataset, label lock, validation inference or
+accuracy score may be fabricated from this roster.** The bounded roster is
+exhausted; do not relax ROI rules or add replacements until something passes.
+The follow-up being implemented is a geometry-only audit of metadata-eligible
+validation candidates to quantify actual rasterized interior support before
+designing a separate future review roster. It reads no source JP2s or model
+predictions and does not open or approve new imagery.
+
+Five preparation workers used 9.16–15.25s each, peak375.22/367.62/380.30/
+362.28/373.12MiB, minimum available memory2.63GiB. All stayed within the
+512MiB/1.5GiB limits. There is no active pixel/model worker at this checkpoint.
+Review-only independent verification and the geometry audit remain pending.
+Export/evaluation modules are implemented for a future valid label set and
+must be described as unexecuted against real validation data, even if unit
+tests pass. Their presence does not imply this dataset exists.
+
 Plan: one primary per UXA/UYA Summer/UYA Spring stratum, at most one predeclared
 alternate from another group per stratum, maximum six prepared cases and three
 accepted loss cases. Clear image/geometry filtering is a search aid and creates

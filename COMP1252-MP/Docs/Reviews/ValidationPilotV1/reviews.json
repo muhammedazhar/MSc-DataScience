@@ -1,0 +1,543 @@
+{
+  "schema_version": 1,
+  "review_scope": "Final prediction-blind assistant review of the bounded five-case validation roster; zero approved samples, no expert ground-truth certification.",
+  "selection_file": "Docs/Reviews/ValidationPilotV1/selection/selection.json",
+  "selection_sha256": "c5b0ca063285c083d29615c1d933f1dbabc752edbf286faa740a6e9e3db8620d",
+  "prepared_case_files": [
+    "Docs/Reviews/ValidationPilotV1/prepared_cases/event-9993d3bc382d3405a7ad/case.json",
+    "Docs/Reviews/ValidationPilotV1/prepared_cases/event-4ee5bdeb33ddec684474/case.json",
+    "Docs/Reviews/ValidationPilotV1/prepared_cases/event-4a34368ee9483ed8f7a7/case.json",
+    "Docs/Reviews/ValidationPilotV1/prepared_cases/event-9495d4e4197219fc88a6/case.json",
+    "Docs/Reviews/ValidationPilotV1/prepared_cases/event-3304b611a63af8c10ebc/case.json"
+  ],
+  "reviews": [
+    {
+      "case_file": "Docs/Reviews/ValidationPilotV1/prepared_cases/event-9993d3bc382d3405a7ad/case.json",
+      "prepared_batch_file": "Docs/Reviews/ValidationPilotV1/preparation_receipts/event-9993d3bc382d3405a7ad.json",
+      "case_sha256": "ae7907035dcd6d58c8e74441f6ba828a809cc6dd3af65d03f2882ba8e8811811",
+      "prepared_case_sha256": "a1dc7e4a3e69e828257e206e651766104352355f63aa2c6b77de45c5c6e9e557",
+      "artifact_sha256": {
+        "positive_interior.tif": "18aad5d8eb5c333293de467ce46f60e8497281316088b0c6f06e46d6ebe86631",
+        "pair.png": "2ef96dffc0b9b6cf775bb1a3697e6e8a40cffd4f43dc234c304ed1a80b646f2b",
+        "feature_valid.tif": "3c3abfcecb8bc9e0ba65769ff2cf9ca95b971490b45ccac79ff424c1c29c4031",
+        "proposed_control.tif": "5338a8672995076d9a31a001f9260d3a36642dc8199ae8de3845ad4ad15ec29d",
+        "target_mask.tif": "77d81d061129b5e8707dd8a8bb7c10aa3f48cb06847e3e4091588ee82abe5779",
+        "catalogue_exclusion.tif": "e8792868f59490b32a539117e691299b64a3f9a2476245f0c4e6a3e4f2b7c6fd",
+        "timeline.png": "7e6a70aecb3d0a52c72cda192c55b0ef17108d5f8ff3ecfb38dbec72474efd43",
+        "input_features.tif": "b78089025cd93a362fea7ebd414ec4f57a6b5723a8708e05bae3868d4b3d2780",
+        "endpoint_unusable.tif": "df9df694551ad50b2bee45ad6a8224b912be74ed9b034032509155ec5f9cc416"
+      },
+      "event_id": "event-9993d3bc382d3405a7ad",
+      "pair_id": "pair-cbdc5c3dc169f42a07e0",
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "reviewer": "assistant visual inspection",
+      "used_model_predictions": false,
+      "visual_review": "rejected",
+      "temporal_label_review": "rejected",
+      "notes": "Only one pixel survives the fixed one-pixel erosion, below minimum four. All timeline images were opened before any validation predictions. No target or control labels are approved for this rejected case.",
+      "rejection_reasons": [
+        "positive_interior_1_below_minimum_4"
+      ],
+      "observations": [
+        {
+          "scene_id": "S2B_MSIL1C_20180726T084009_N0206_R064_T36UXA_20180726T104227",
+          "date": "2018-07-26",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233",
+          "date": "2018-07-31",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757",
+          "date": "2018-08-05",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180810T083601_N0206_R064_T36UXA_20180810T124435",
+          "date": "2018-08-10",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180815T084009_N0206_R064_T36UXA_20180815T123155",
+          "date": "2018-08-15",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180820T083601_N0206_R064_T36UXA_20180820T105651",
+          "date": "2018-08-20",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180825T083549_N0206_R064_T36UXA_20180825T124942",
+          "date": "2018-08-25",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180830T083601_N0206_R064_T36UXA_20180830T105527",
+          "date": "2018-08-30",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180904T083549_N0206_R064_T36UXA_20180904T123955",
+          "date": "2018-09-04",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180919T083621_N0206_R064_T36UXA_20180919T105540",
+          "date": "2018-09-19",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        }
+      ]
+    },
+    {
+      "case_file": "Docs/Reviews/ValidationPilotV1/prepared_cases/event-4ee5bdeb33ddec684474/case.json",
+      "prepared_batch_file": "Docs/Reviews/ValidationPilotV1/preparation_receipts/event-4ee5bdeb33ddec684474.json",
+      "case_sha256": "db4358f6dbebb8a0dbc0f780f2774e13b4777965d2de9f5e927c56c9dcca8f40",
+      "prepared_case_sha256": "8231e74e4e7e24f33bfe4cf33a71cb9e6e37033160262ab075cb2be16bbb0bdb",
+      "artifact_sha256": {
+        "positive_interior.tif": "b5f3fdaca9126be32c6513581fb4c23e4c839538b3c0ff99258d6800af865fe5",
+        "pair.png": "395dcca62abfa0f48e7d771cbd3f405cbcc133f99960b3c4c3da1a14fe8c50a1",
+        "feature_valid.tif": "a78ac6b64eb53a5604777be8bfc405aee39028e4d55c5c8e134ef99f54571837",
+        "proposed_control.tif": "45a21a0ed760f57a8913805caeb1b978aa96b756a11b63456ed8b28545afa169",
+        "target_mask.tif": "7995faf125f1e625b9a37ce73491bed70b0ba6da526f3311811f23763330bf41",
+        "catalogue_exclusion.tif": "d8b45e0c4f3d348846c988baf8c69bba7a518c440818dfd58d90b72f25a0d6a7",
+        "timeline.png": "4e010f5fd21aa0bca10fd393c637260ca0fc8f0c5ba76e62152c2c169b681952",
+        "input_features.tif": "75b3bae14b2b943f8bc05fb8f443475fa55b7bc89a2f078cd6d935c50f4e3e7f",
+        "endpoint_unusable.tif": "c597d2e3e2d50844496bb77851149426219847bbef740a4c8774f8b7105d810f"
+      },
+      "event_id": "event-4ee5bdeb33ddec684474",
+      "pair_id": "pair-b1da19290095d3863e28",
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "reviewer": "assistant visual inspection",
+      "used_model_predictions": false,
+      "visual_review": "rejected",
+      "temporal_label_review": "rejected",
+      "notes": "No pixels survive the fixed one-pixel erosion. The thin reference cannot supply the required reviewed clearing interior. All timeline images were opened before any validation predictions. No target or control labels are approved for this rejected case.",
+      "rejection_reasons": [
+        "positive_interior_0_below_minimum_4"
+      ],
+      "observations": [
+        {
+          "scene_id": "S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447",
+          "date": "2019-07-21",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190726T083611_N0208_R064_T36UYA_20190726T104344",
+          "date": "2019-07-26",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190805T083601_N0208_R064_T36UYA_20190805T104319",
+          "date": "2019-08-05",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190810T083609_N0208_R064_T36UYA_20190810T122530",
+          "date": "2019-08-10",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190815T083601_N0208_R064_T36UYA_20190815T123742",
+          "date": "2019-08-15",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190825T083601_N0208_R064_T36UYA_20190825T104312",
+          "date": "2019-08-25",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190830T083609_N0208_R064_T36UYA_20190830T114819",
+          "date": "2019-08-30",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190904T083601_N0208_R064_T36UYA_20190904T110155",
+          "date": "2019-09-04",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190909T083559_N0208_R064_T36UYA_20190909T122324",
+          "date": "2019-09-09",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        }
+      ]
+    },
+    {
+      "case_file": "Docs/Reviews/ValidationPilotV1/prepared_cases/event-4a34368ee9483ed8f7a7/case.json",
+      "prepared_batch_file": "Docs/Reviews/ValidationPilotV1/preparation_receipts/event-4a34368ee9483ed8f7a7.json",
+      "case_sha256": "855c329075cde00dace89a63df5d1802010c07f5c0b79251601742f7bc47b7eb",
+      "prepared_case_sha256": "7bb8a59581aaf348fb9832b356dd519f78cf77ac7dd0e49a66c317a043c10a8c",
+      "artifact_sha256": {
+        "positive_interior.tif": "1dba0f934fc6d40b823f70b18a5cb2191b523c26dd2e82d5c90e9babfe6a3f32",
+        "pair.png": "0f8b399e957eb0de013e151b2b014e03ed29578ec54e6427dffe653e3eca7d2c",
+        "feature_valid.tif": "d35797e956155aa12752ea29ed02503c143cca3595a3462feac91f4a06b3a5d4",
+        "proposed_control.tif": "2c53bfacb4bfd9088f558fab5f902c33b928c533e8f10807741a8bb7306a34c9",
+        "target_mask.tif": "9440aea455acaed0055dfc862a54e04cff779caeccbd7c4985ff7189e9598729",
+        "catalogue_exclusion.tif": "3724dbb17d24ebc7678aa91b5677155d228dc6a51759f90c8dd429f06dcd6e25",
+        "timeline.png": "1003261d0a47e83c08792fa18e3f7d577daa7d233fe29bb66f38489f5e4bf6ab",
+        "input_features.tif": "d63e45201a3394fbd12395fda502da91b4b83397f1cbe29f6407f7c48e102a87",
+        "endpoint_unusable.tif": "0a558038488c1ef72cdd86f93f3053cd809e396fb3238ba791a61b4290ba8d9e"
+      },
+      "event_id": "event-4a34368ee9483ed8f7a7",
+      "pair_id": "pair-2b4e19bb3dea8c59803f",
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "reviewer": "assistant visual inspection",
+      "used_model_predictions": false,
+      "visual_review": "rejected",
+      "temporal_label_review": "rejected",
+      "notes": "The primary pair and full timeline were inspected. The reference lies within a road and disturbed-ground mosaic; a wholly forested pre-image cannot be established confidently at 10m. Colour change or annotation date alone cannot approve new loss. All timeline images were opened before any validation predictions. No target or control labels are approved for this rejected case.",
+      "rejection_reasons": [
+        "pre_event_forest_not_unambiguous_at_10m"
+      ],
+      "observations": [
+        {
+          "scene_id": "S2A_MSIL1C_20190517T083601_N0207_R064_T36UYA_20190517T100755",
+          "date": "2019-05-17",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190601T083609_N0207_R064_T36UYA_20190601T104404",
+          "date": "2019-06-01",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190606T083601_N0207_R064_T36UYA_20190606T104250",
+          "date": "2019-06-06",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190611T083609_N0207_R064_T36UYA_20190611T122426",
+          "date": "2019-06-11",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190616T083601_N0207_R064_T36UYA_20190616T105922",
+          "date": "2019-06-16",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190621T083609_N0207_R064_T36UYA_20190621T104242",
+          "date": "2019-06-21",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306",
+          "date": "2019-06-26",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190701T083609_N0207_R064_T36UYA_20190701T113927",
+          "date": "2019-07-01",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190706T083611_N0207_R064_T36UYA_20190706T104407",
+          "date": "2019-07-06",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447",
+          "date": "2019-07-21",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190726T083611_N0208_R064_T36UYA_20190726T104344",
+          "date": "2019-07-26",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190805T083601_N0208_R064_T36UYA_20190805T104319",
+          "date": "2019-08-05",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190810T083609_N0208_R064_T36UYA_20190810T122530",
+          "date": "2019-08-10",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        }
+      ]
+    },
+    {
+      "case_file": "Docs/Reviews/ValidationPilotV1/prepared_cases/event-9495d4e4197219fc88a6/case.json",
+      "prepared_batch_file": "Docs/Reviews/ValidationPilotV1/preparation_receipts/event-9495d4e4197219fc88a6.json",
+      "case_sha256": "4d2a5ad82f20c3683774ca2f0edbc0d0adaa0007befc87e03ba49ba72d06bddb",
+      "prepared_case_sha256": "b34cf8a6da1a5e25a79f9bd2f0c47f947f107035cff3d3afe5d363abf62a544c",
+      "artifact_sha256": {
+        "positive_interior.tif": "03d3e68b9fe09c7c85a2358b4f63a0c8e4197e0bf52f50678a6df7946beeffb7",
+        "pair.png": "3370d79772330e1657142b31a8689ef88c3aed68d3029ec1ddb0bf8455ce17b4",
+        "feature_valid.tif": "781f58cb41bd3ee32a482f42dc56d7a34da0957d229068003a8faae75257c3a0",
+        "proposed_control.tif": "00da01beb91055343301a59409b3924c76c95222a71b49d3f5f5cf4efc964b62",
+        "target_mask.tif": "dadab3c87d81044b20f3f7497a871147fc4b5bfc0a6b1b653ee7a3c7053a27ef",
+        "catalogue_exclusion.tif": "1cb4e222b91c2e7efc3bf9d985bfb46f699435fe055edfe8bb5866412133ce2e",
+        "timeline.png": "98a0bd7731f3a9474361cd5af77df22cfba190fa2e3369c40499abc486981566",
+        "input_features.tif": "8d71caef00f47932618ef0113cda37bf9a2e95e3ca941a1a47947ecc5e6d4077",
+        "endpoint_unusable.tif": "5a44f2b25a123c228a84fd27e25a2d77d30e296895015d595a73a4da6729b231"
+      },
+      "event_id": "event-9495d4e4197219fc88a6",
+      "pair_id": "pair-ba25e71a1d114caceaa7",
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "reviewer": "assistant visual inspection",
+      "used_model_predictions": false,
+      "visual_review": "rejected",
+      "temporal_label_review": "rejected",
+      "notes": "No pixels survive the fixed one-pixel erosion. Rejected under the same support rule as the primary; no boundary fallback. All timeline images were opened before any validation predictions. No target or control labels are approved for this rejected case.",
+      "rejection_reasons": [
+        "positive_interior_0_below_minimum_4"
+      ],
+      "observations": [
+        {
+          "scene_id": "S2B_MSIL1C_20180726T084009_N0206_R064_T36UXA_20180726T104227",
+          "date": "2018-07-26",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233",
+          "date": "2018-07-31",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757",
+          "date": "2018-08-05",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180810T083601_N0206_R064_T36UXA_20180810T124435",
+          "date": "2018-08-10",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180815T084009_N0206_R064_T36UXA_20180815T123155",
+          "date": "2018-08-15",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180820T083601_N0206_R064_T36UXA_20180820T105651",
+          "date": "2018-08-20",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180825T083549_N0206_R064_T36UXA_20180825T124942",
+          "date": "2018-08-25",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180830T083601_N0206_R064_T36UXA_20180830T105527",
+          "date": "2018-08-30",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20180904T083549_N0206_R064_T36UXA_20180904T123955",
+          "date": "2018-09-04",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180919T083621_N0206_R064_T36UXA_20180919T105540",
+          "date": "2018-09-19",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        }
+      ]
+    },
+    {
+      "case_file": "Docs/Reviews/ValidationPilotV1/prepared_cases/event-3304b611a63af8c10ebc/case.json",
+      "prepared_batch_file": "Docs/Reviews/ValidationPilotV1/preparation_receipts/event-3304b611a63af8c10ebc.json",
+      "case_sha256": "a0b8900587f01764f1030871c1a5d4454cc1712c6ab79213581124e7c3146dbe",
+      "prepared_case_sha256": "fbe9c2746e583144454ce6df47920f2867e4d30e27b297715f7281ee48f297cf",
+      "artifact_sha256": {
+        "positive_interior.tif": "ef0a59c6f4dd19adcef102393881cb6cb0905f172203e272759e4ab0f536a5cd",
+        "pair.png": "345b8eeae312dd43e18c2e8f5a02cf1ba2e740eaf431f72d97e04c85fc48aee5",
+        "feature_valid.tif": "26598f3ea52aa2af8846c27f939a026d2e6aa039bfa8f31a9d7ec8fa5d0df7d7",
+        "proposed_control.tif": "e5e6506fbcce5297790825caee54502b138580d08bf6890cbfa8cf91c09d0595",
+        "target_mask.tif": "14abb03ac5636720dc786481f7b8ef87751a13788380b737a51f7423bd8f77fd",
+        "catalogue_exclusion.tif": "6bcebffec8359d9336bc03aa7ba03335c14c41abd53a7975e82b754a1f4a174d",
+        "timeline.png": "60decb9d839cb296c20db357ebbdf48273111046bafb9afe948c0570860f48a2",
+        "input_features.tif": "d6a6fb581a670ad2061b28211ad7fceb1227f3c3a811b34e25806310a4f8eaa9",
+        "endpoint_unusable.tif": "5fae64f9cb59fff315c2232024703c75aadfaeaae30f397c47c8696f6f5f29d1"
+      },
+      "event_id": "event-3304b611a63af8c10ebc",
+      "pair_id": "pair-a1577dac851dcf1c07da",
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "reviewer": "assistant visual inspection",
+      "used_model_predictions": false,
+      "visual_review": "rejected",
+      "temporal_label_review": "rejected",
+      "notes": "No pixels survive the fixed one-pixel erosion. The narrow edge-like reference cannot supply the required clearing interior. All timeline images were opened before any validation predictions. No target or control labels are approved for this rejected case.",
+      "rejection_reasons": [
+        "positive_interior_0_below_minimum_4"
+      ],
+      "observations": [
+        {
+          "scene_id": "S2A_MSIL1C_20190517T083601_N0207_R064_T36UYA_20190517T100755",
+          "date": "2019-05-17",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190601T083609_N0207_R064_T36UYA_20190601T104404",
+          "date": "2019-06-01",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190606T083601_N0207_R064_T36UYA_20190606T104250",
+          "date": "2019-06-06",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190611T083609_N0207_R064_T36UYA_20190611T122426",
+          "date": "2019-06-11",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190616T083601_N0207_R064_T36UYA_20190616T105922",
+          "date": "2019-06-16",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190621T083609_N0207_R064_T36UYA_20190621T104242",
+          "date": "2019-06-21",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306",
+          "date": "2019-06-26",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190701T083609_N0207_R064_T36UYA_20190701T113927",
+          "date": "2019-07-01",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190706T083611_N0207_R064_T36UYA_20190706T104407",
+          "date": "2019-07-06",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2B_MSIL1C_20190721T083609_N0208_R064_T36UYA_20190721T110447",
+          "date": "2019-07-21",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20190726T083611_N0208_R064_T36UYA_20190726T104344",
+          "date": "2019-07-26",
+          "target_state": "uncertain",
+          "control_state": "uncertain",
+          "notes": "No visual label approved for this rejected candidate; uncertainty is retained rather than converting a numerical screen or annotation into truth."
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "prepared": 5,
+    "accepted": 0,
+    "rejected": 5,
+    "evaluation_run": false,
+    "reason": "No defensible labels under the predeclared minimum support and temporal visibility rules. No empty dataset accuracy is reported."
+  }
+}
