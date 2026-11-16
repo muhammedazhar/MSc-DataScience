@@ -1,0 +1,14 @@
+test_actual_training_crop_overlap_and_reused_group_fail_even_when_catalogue_bounds_do_not (test_validation_preparation.ValidationPreparationTests) ... ok
+test_actual_training_footprint_is_reprojected_before_overlap_comparison (test_validation_preparation.ValidationPreparationTests) ... ok
+test_anchor_must_be_unblocked_and_bound_to_exact_validation_group_and_split (test_validation_preparation.ValidationPreparationTests) ... ok
+test_forward_five_to_thirty_day_intervals_are_required (test_validation_preparation.ValidationPreparationTests) ... ok
+test_frozen_quality_error_list_contract_is_preserved (test_validation_preparation.ValidationPreparationTests) ... ok
+test_full_core_corner_overlap_with_any_train_or_test_conservative_footprint_fails (test_validation_preparation.ValidationPreparationTests) ... ok
+test_grid_rejects_role_shape_resolution_rotation_bounds_and_nonfinite_origin (test_validation_preparation.ValidationPreparationTests) ... ok
+test_isolation_requires_all_thirteen_training_rows_with_train_role (test_validation_preparation.ValidationPreparationTests) ... ok
+test_separate_validation_core_and_exact_thirteen_training_crops_pass_unchanged (test_validation_preparation.ValidationPreparationTests) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.096s
+
+OK

@@ -42,6 +42,12 @@ explicitly retained. Its run reads metadata only and uses no model predictions.
 Source/selection hashes are frozen before image inspection. Export/audit code
 is still in progress. No validation images have been inspected or approved yet.
 
+The first preparation preflight found a new-code schema mismatch: completed QA
+stores `processing_errors` as an empty list, not integer zero. It failed before
+pixel processing and published no output. The new preparer now validates the
+actual list contract; all 9 preparation tests pass, including its regression.
+Protocol preparation-source hash was refreshed before any successful preparation.
+
 GitHub backup is now authorized and configured: push every completed checkpoint
 to `origin/codex/curated-deforestation-pilot` on the same branch. The initial
 push succeeded through `6509ba5`; subsequent checkpoint pushes should follow.

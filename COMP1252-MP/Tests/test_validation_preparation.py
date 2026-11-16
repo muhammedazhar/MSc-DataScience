@@ -7,7 +7,7 @@ import unittest
 
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]/'Solutions'))
-from prepare_validation_review import validate_grid, validate_validation_pair
+from prepare_validation_review import validate_grid, validate_validation_pair, validate_quality_summary
 
 
 def grid(west=500000., north=5600000., crs='EPSG:32636'):
@@ -42,6 +42,15 @@ def fixture():
 
 
 class ValidationPreparationTests(unittest.TestCase):
+    def test_frozen_quality_error_list_contract_is_preserved(self):
+        summary = {'checks': {'complete': True}, 'processing_errors': []}
+        validate_quality_summary(summary)
+        for errors in (0, None, {}, ['failed-pair']):
+            with self.subTest(errors=errors), self.assertRaises(ValueError):
+                validate_quality_summary({**summary, 'processing_errors': errors})
+        with self.assertRaises(ValueError):
+            validate_quality_summary({**summary, 'checks': {'complete': False}})
+
     def test_separate_validation_core_and_exact_thirteen_training_crops_pass_unchanged(self):
         pair, catalogue, splits, training = fixture()
         originals = deepcopy((pair, catalogue, splits, training))

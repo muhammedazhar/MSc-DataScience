@@ -74,6 +74,13 @@ def validate_grid(pair):
     return {**grid, 'transform': transform}
 
 
+def validate_quality_summary(summary):
+    """The frozen publication stores errors as a list, not an error count."""
+    require(isinstance(summary.get('checks'), dict) and bool(summary['checks'])
+            and all(value is True for value in summary['checks'].values())
+            and summary.get('processing_errors') == [], 'Frozen QA is incomplete or has errors')
+
+
 def validate_validation_pair(pair, event_id, catalogue, splits, training_records):
     """Reject cross-split footprints, including every actual training crop."""
     from pyproj import Transformer
@@ -128,8 +135,7 @@ def read_validation_features(pair, summary):
     from curated_pilot_exports import stack_pair
 
     validate_grid(pair)
-    require(all(summary['checks'].values()) and summary['processing_errors'] == 0,
-            'Completed error-free frozen QA is required')
+    validate_quality_summary(summary)
     metadata, paths = [], set()
     for side in ('pre', 'post'):
         scene = rooted(pair[side+'_path'])
@@ -321,7 +327,7 @@ def prepare(args, output):
         groups.add(pair['group_id'])
     require(args.batch_index < len(entries), 'Selected validation batch is empty')
     summary = read_json(args.quality_root/'summary/metadata.json')
-    require(all(summary['checks'].values()) and summary['processing_errors'] == 0, 'Frozen QA is incomplete')
+    validate_quality_summary(summary)
     validate_source_stats(summary)
     reader = ObservationReader(args.cache_root, model_identity())
     require(reader.config_id == summary['config_id'], 'Frozen QA policy changed')
