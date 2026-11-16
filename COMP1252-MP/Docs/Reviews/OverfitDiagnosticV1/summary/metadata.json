@@ -1,0 +1,1063 @@
+{
+  "verification_status": "passed",
+  "scope": "Single-example training memorization diagnostic; not held-out accuracy, deforestation deployment readiness or onset-date inference.",
+  "arm_count": 3,
+  "all_fit_outcomes_retained": true,
+  "fitted_arm_count": 3,
+  "event_id": "event-e691d44c335d87649310",
+  "pair_id": "pair-9e46432dba83dd68c052",
+  "group_id": "group-8dea78ccfd15060ff7f3",
+  "split": "train",
+  "support": {
+    "positive": 25,
+    "stable": 256,
+    "ignored": 3815
+  },
+  "selected_tensor_sha256": "796e0f542c11cb131dd6a47a784f7939dc30fd19464a943ac8558d83ee0a352a",
+  "selected_artifacts_sha256": {
+    "input_features": "56b1ac79b534b54eed2b3d2e2f1f7e7cb1444a6db74a8f075231ae21b82a475f",
+    "supervision_mask": "5a1da08294d329d3f66e3f08d8769ef7be17a1278b224d04d7e5fad594089a52",
+    "valid_mask": "a2f9c8e0d2215dd779f0834c023a2dee734d44e39ca49a6cc4ab2558d766d1e3",
+    "metadata": "dc98c43e2a0b44049de08871f4bc9f65fd2b6ab75536b6daa839d6536e27639d"
+  },
+  "plan_sha256": "f5e9d9d54da0b412322e1db51c670137fa9c14c0dec047c2fd59600e5d3f0e31",
+  "dataset_metadata_sha256": "5d929465f148c1823f6332222f56430dac9a5b0d1985d8545c2eb17c99ec3e71",
+  "manifest_sha256": "138713e6a0b57e5491015fe42438d1a5d1702c68c753289bf52abb5caf7949aa",
+  "summary_implementation_sha256": "b5e5db9b1c1435872048cf46678f348e54ba13194b77db60f179454f46a27d7f",
+  "arms": [
+    {
+      "arm_id": "global_weight_sgd",
+      "arm_configuration": {
+        "arm_id": "global_weight_sgd",
+        "optimizer": "SGD",
+        "learning_rate": 0.05,
+        "momentum": 0.0,
+        "weight_decay": 0.0,
+        "positive_weight": 17.483443708609272,
+        "comparison_role": "Reference with previous global pilot class weight; checkpoints show fixed-case exposure over time."
+      },
+      "fit_passed": true,
+      "first_passing_predeclared_checkpoint": 128,
+      "checkpoints": [
+        {
+          "attempt": 0,
+          "metrics": {
+            "tp": 25,
+            "fp": 256,
+            "fn": 0,
+            "tn": 0,
+            "supervised_pixels": 281,
+            "positive_pixels": 25,
+            "stable_pixels": 256,
+            "ignored_pixels": 3815,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 0.08896797153024912,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "f1": 0.16339869281045752,
+            "dice": 0.16339869281045752,
+            "iou": 0.08896797153024912,
+            "accuracy": 0.08896797153024912,
+            "balanced_accuracy": 0.5
+          },
+          "fit": {
+            "passed": false,
+            "reasons": [
+              "precision_below_minimum",
+              "specificity_below_minimum",
+              "dice_below_minimum",
+              "only_one_predicted_class"
+            ],
+            "precision": 0.08896797153024912,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "dice": 0.16339869281045752,
+            "minimum": 0.95
+          },
+          "weighted_bce": 1.6729007966997986,
+          "unweighted_bce": 0.7419407863029376,
+          "mean_weight_normalized_bce": 0.6782492518801516,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 25,
+              "mean": 0.5300322294235229,
+              "median": 0.5301533341407776,
+              "min": 0.5289797782897949,
+              "max": 0.5313038229942322
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.5287663307972252,
+              "median": 0.5289701223373413,
+              "min": 0.5268460512161255,
+              "max": 0.5292631983757019
+            },
+            "ignored_pixels": 3815,
+            "training_pairwise_auc": 0.97140625
+          },
+          "parameter_sha256": "c1ede0b060ceca01c032464825eda272759ca28ec018b827a8e59f01b399fa73"
+        },
+        {
+          "attempt": 26,
+          "metrics": {
+            "tp": 25,
+            "fp": 256,
+            "fn": 0,
+            "tn": 0,
+            "supervised_pixels": 281,
+            "positive_pixels": 25,
+            "stable_pixels": 256,
+            "ignored_pixels": 3815,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 0.08896797153024912,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "f1": 0.16339869281045752,
+            "dice": 0.16339869281045752,
+            "iou": 0.08896797153024912,
+            "accuracy": 0.08896797153024912,
+            "balanced_accuracy": 0.5
+          },
+          "fit": {
+            "passed": false,
+            "reasons": [
+              "precision_below_minimum",
+              "specificity_below_minimum",
+              "dice_below_minimum",
+              "only_one_predicted_class"
+            ],
+            "precision": 0.08896797153024912,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "dice": 0.16339869281045752,
+            "minimum": 0.95
+          },
+          "weighted_bce": 1.2439833326246341,
+          "unweighted_bce": 0.8266540858102501,
+          "mean_weight_normalized_bce": 0.5043519414710655,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 25,
+              "mean": 0.7525510954856872,
+              "median": 0.7530458569526672,
+              "min": 0.7070049047470093,
+              "max": 0.7763468623161316
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.5850242397282273,
+              "median": 0.5860599279403687,
+              "min": 0.5697245001792908,
+              "max": 0.5924424529075623
+            },
+            "ignored_pixels": 3815,
+            "training_pairwise_auc": 1.0
+          },
+          "parameter_sha256": "96db64f393214e5a9b76cf1c50cdd3fac5b58a836009b052833dee3c3247623a"
+        },
+        {
+          "attempt": 128,
+          "metrics": {
+            "tp": 25,
+            "fp": 0,
+            "fn": 0,
+            "tn": 256,
+            "supervised_pixels": 281,
+            "positive_pixels": 25,
+            "stable_pixels": 256,
+            "ignored_pixels": 3815,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.008630925867207527,
+          "unweighted_bce": 0.0053790666525291445,
+          "mean_weight_normalized_bce": 0.0034992624930389325,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 25,
+              "mean": 0.9978000283241272,
+              "median": 0.999619722366333,
+              "min": 0.9782530665397644,
+              "max": 0.9999594688415527
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.005657746623910498,
+              "median": 0.00420795357786119,
+              "min": 0.0038186656311154366,
+              "max": 0.026816466823220253
+            },
+            "ignored_pixels": 3815,
+            "training_pairwise_auc": 1.0
+          },
+          "parameter_sha256": "0f29d5c59ed7501fd56bede01f0490cd9ae2e9ae8908e05837e89b9ec62c48d0"
+        },
+        {
+          "attempt": 256,
+          "metrics": {
+            "tp": 25,
+            "fp": 0,
+            "fn": 0,
+            "tn": 256,
+            "supervised_pixels": 281,
+            "positive_pixels": 25,
+            "stable_pixels": 256,
+            "ignored_pixels": 3815,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.0027255471581667367,
+          "unweighted_bce": 0.0017043123643138522,
+          "mean_weight_normalized_bce": 0.0011050268638986085,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 25,
+              "mean": 0.9993058443069458,
+              "median": 0.9999481439590454,
+              "min": 0.9920660853385925,
+              "max": 0.9999969005584717
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.0017985331737691013,
+              "median": 0.0011786430841311812,
+              "min": 0.0010400365572422743,
+              "max": 0.011063193902373314
+            },
+            "ignored_pixels": 3815,
+            "training_pairwise_auc": 1.0
+          },
+          "parameter_sha256": "ad729486fe5e665f37a65d22d048976e2062bb75c77cb8f0476247c7bb9a5d4b"
+        },
+        {
+          "attempt": 512,
+          "metrics": {
+            "tp": 25,
+            "fp": 0,
+            "fn": 0,
+            "tn": 256,
+            "supervised_pixels": 281,
+            "positive_pixels": 25,
+            "stable_pixels": 256,
+            "ignored_pixels": 3815,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.0010334929672597604,
+          "unweighted_bce": 0.0006503118107507194,
+          "mean_weight_normalized_bce": 0.0004190121932215915,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 25,
+              "mean": 0.9997390627861023,
+              "median": 0.9999909400939941,
+              "min": 0.996802568435669,
+              "max": 0.9999996423721313
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.0006875028343529266,
+              "median": 0.0004017916216980666,
+              "min": 0.0003412381047382951,
+              "max": 0.0050624399445950985
+            },
+            "ignored_pixels": 3815,
+            "training_pairwise_auc": 1.0
+          },
+          "parameter_sha256": "8b436db936c42bc2b852c3f320bf56ef8a7a86642b72bb0ff91d2c39622fc25d"
+        }
+      ],
+      "nonzero_parameter_updates": 512,
+      "zero_parameter_delta_attempts": [],
+      "resources": {
+        "peak_worker_mib": 293.81,
+        "minimum_available_gib": 3.67,
+        "elapsed_seconds": 3.06
+      },
+      "run_metadata_sha256": "bca5a1312a65a235f1be8f8b0df4aa5ab9d194f6ce64a2a18c4d2d60a8099bf7",
+      "artifact_sha256": {
+        "preview.png": "bd03c851dddec424882648ed263cfcad0169867605a1010cfbbb2299a439eb89",
+        "checkpoint_arrays.npz": "fc54a96a15f667f5770992077c7a87b1f2471059973e915495cf29ac58e09828",
+        "steps.jsonl": "3eac5818de695f09c8a61df105c4f44921112283822f6f7f1df07e4163d7f55d",
+        "model_weights.npz": "22cfdc5ce5ada783503c6842c1574807de22ef5721ab9bf2ad9fa427b6ed4599",
+        "report.md": "ac7dbb92cb7fce9d01dd4bfd45a574fb27a1cdcbc0e98060298b19a6023ee99a"
+      },
+      "initial_parameter_sha256": "c1ede0b060ceca01c032464825eda272759ca28ec018b827a8e59f01b399fa73",
+      "final_parameter_sha256": "8b436db936c42bc2b852c3f320bf56ef8a7a86642b72bb0ff91d2c39622fc25d",
+      "selected_tensor_sha256": "796e0f542c11cb131dd6a47a784f7939dc30fd19464a943ac8558d83ee0a352a",
+      "implementation_sha256": {
+        "pilot_overfit_worker.py": "2da2fc63c99f9ca4533e6d22061870301a7d8985d827621dae7ae96cf480bb4c",
+        "diagnose_pilot_overfit.py": "e190a95b153498df138bb000d9edbf2dcab5c3b14058391e0a8e1a234637f27b",
+        "pilot_dataset.py": "bb0e58cfb61ac8980d77ed0cc88f99266fa1c35fe1aba5a19780cef4e53af7b7",
+        "pilot_objectives.py": "bccfd912cfdafcd7a04df1fb997b05627a995b5f89496241508e00dc97430d61",
+        "train_pilot_baseline.py": "259f367ddc613b0095a93ddcf7b9ae8f0a14553fa4fc5fc28665c76ae6059995",
+        "run_pilot_checks.py": "9f76cd6c4dd8ceb956102d503e9069c89f63f1ac5a481515391e9393598adceb",
+        "validate_sample.py": "475f641ed582af37eedc2ee9e94065e280202db08eb381441e1403c3eb001fba"
+      },
+      "torch_version": "2.6.0.dev20241112",
+      "torch_distribution_version": "2.5.1",
+      "torch_git_version": "555bc8349d67a8f5ccd5325d1a7f46c3619b1769",
+      "run_directory": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Docs/Reviews/OverfitDiagnosticV1/runs/global_weight_sgd"
+    },
+    {
+      "arm_id": "local_weight_sgd",
+      "arm_configuration": {
+        "arm_id": "local_weight_sgd",
+        "optimizer": "SGD",
+        "learning_rate": 0.05,
+        "momentum": 0.0,
+        "weight_decay": 0.0,
+        "positive_weight": 10.24,
+        "comparison_role": "Only class weight differs from global_weight_sgd; isolates weight choice within this one case."
+      },
+      "fit_passed": true,
+      "first_passing_predeclared_checkpoint": 128,
+      "checkpoints": [
+        {
+          "attempt": 0,
+          "metrics": {
+            "tp": 25,
+            "fp": 256,
+            "fn": 0,
+            "tn": 0,
+            "supervised_pixels": 281,
+            "positive_pixels": 25,
+            "stable_pixels": 256,
+            "ignored_pixels": 3815,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 0.08896797153024912,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "f1": 0.16339869281045752,
+            "dice": 0.16339869281045752,
+            "iou": 0.08896797153024912,
+            "accuracy": 0.08896797153024912,
+            "balanced_accuracy": 0.5
+          },
+          "fit": {
+            "passed": false,
+            "reasons": [
+              "precision_below_minimum",
+              "specificity_below_minimum",
+              "dice_below_minimum",
+              "only_one_predicted_class"
+            ],
+            "precision": 0.08896797153024912,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "dice": 0.16339869281045752,
+            "minimum": 0.95
+          },
+          "weighted_bce": 1.2638020337541696,
+          "unweighted_bce": 0.7419407863029376,
+          "mean_weight_normalized_bce": 0.6936101005564876,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 25,
+              "mean": 0.5300322294235229,
+              "median": 0.5301533341407776,
+              "min": 0.5289797782897949,
+              "max": 0.5313038229942322
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.5287663307972252,
+              "median": 0.5289701223373413,
+              "min": 0.5268460512161255,
+              "max": 0.5292631983757019
+            },
+            "ignored_pixels": 3815,
+            "training_pairwise_auc": 0.97140625
+          },
+          "parameter_sha256": "c1ede0b060ceca01c032464825eda272759ca28ec018b827a8e59f01b399fa73"
+        },
+        {
+          "attempt": 26,
+          "metrics": {
+            "tp": 25,
+            "fp": 256,
+            "fn": 0,
+            "tn": 0,
+            "supervised_pixels": 281,
+            "positive_pixels": 25,
+            "stable_pixels": 256,
+            "ignored_pixels": 3815,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 0.08896797153024912,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "f1": 0.16339869281045752,
+            "dice": 0.16339869281045752,
+            "iou": 0.08896797153024912,
+            "accuracy": 0.08896797153024912,
+            "balanced_accuracy": 0.5
+          },
+          "fit": {
+            "passed": false,
+            "reasons": [
+              "precision_below_minimum",
+              "specificity_below_minimum",
+              "dice_below_minimum",
+              "only_one_predicted_class"
+            ],
+            "precision": 0.08896797153024912,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "dice": 0.16339869281045752,
+            "minimum": 0.95
+          },
+          "weighted_bce": 1.197289675816721,
+          "unweighted_bce": 0.6956050158530842,
+          "mean_weight_normalized_bce": 0.6571062478603489,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 25,
+              "mean": 0.5432246112823487,
+              "median": 0.5440999269485474,
+              "min": 0.5305299758911133,
+              "max": 0.5500194430351257
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.5053662641439587,
+              "median": 0.5053894817829132,
+              "min": 0.5038328170776367,
+              "max": 0.5071051716804504
+            },
+            "ignored_pixels": 3815,
+            "training_pairwise_auc": 1.0
+          },
+          "parameter_sha256": "406df3fe8f78b7b0fb9a1e9c5dba8b58d8a6fe423ee7bd89f419d7b92a575342"
+        },
+        {
+          "attempt": 128,
+          "metrics": {
+            "tp": 25,
+            "fp": 0,
+            "fn": 0,
+            "tn": 256,
+            "supervised_pixels": 281,
+            "positive_pixels": 25,
+            "stable_pixels": 256,
+            "ignored_pixels": 3815,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.010340870162996422,
+          "unweighted_bce": 0.006382823182029152,
+          "mean_weight_normalized_bce": 0.005675360382425771,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 25,
+              "mean": 0.9952566504478455,
+              "median": 0.9989375472068787,
+              "min": 0.9572505950927734,
+              "max": 0.9997981190681458
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.006498015296529047,
+              "median": 0.004897777922451496,
+              "min": 0.004469181876629591,
+              "max": 0.029525145888328552
+            },
+            "ignored_pixels": 3815,
+            "training_pairwise_auc": 1.0
+          },
+          "parameter_sha256": "777e81ad6158e1a617fb6e36b0b90b17ddd843b02040d12dc665a85887f2435e"
+        },
+        {
+          "attempt": 256,
+          "metrics": {
+            "tp": 25,
+            "fp": 0,
+            "fn": 0,
+            "tn": 256,
+            "supervised_pixels": 281,
+            "positive_pixels": 25,
+            "stable_pixels": 256,
+            "ignored_pixels": 3815,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.0029877553046025016,
+          "unweighted_bce": 0.0018586462312309266,
+          "mean_weight_normalized_bce": 0.001639764141783795,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 25,
+              "mean": 0.9986345338821411,
+              "median": 0.9998742341995239,
+              "min": 0.9851201176643372,
+              "max": 0.9999788999557495
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.0019013920777979365,
+              "median": 0.0012537609436549246,
+              "min": 0.0011116157984361053,
+              "max": 0.011554150842130184
+            },
+            "ignored_pixels": 3815,
+            "training_pairwise_auc": 1.0
+          },
+          "parameter_sha256": "2381a3569763c1a1173fc5436a284fa553e87d8e3f24add978d07e49302ba2ff"
+        },
+        {
+          "attempt": 512,
+          "metrics": {
+            "tp": 25,
+            "fp": 0,
+            "fn": 0,
+            "tn": 256,
+            "supervised_pixels": 281,
+            "positive_pixels": 25,
+            "stable_pixels": 256,
+            "ignored_pixels": 3815,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.0010923511935769026,
+          "unweighted_bce": 0.0006856305517294691,
+          "mean_weight_normalized_bce": 0.0005995130574123236,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 25,
+              "mean": 0.9995064449310302,
+              "median": 0.9999767541885376,
+              "min": 0.9941469430923462,
+              "max": 0.9999966621398926
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.0007034459199530829,
+              "median": 0.00041415072337258607,
+              "min": 0.0003550104156602174,
+              "max": 0.005124195478856564
+            },
+            "ignored_pixels": 3815,
+            "training_pairwise_auc": 1.0
+          },
+          "parameter_sha256": "73b07c357936eba67b3c416bbc6813f6f912d94e573759b980b88c36709549df"
+        }
+      ],
+      "nonzero_parameter_updates": 512,
+      "zero_parameter_delta_attempts": [],
+      "resources": {
+        "peak_worker_mib": 316.75,
+        "minimum_available_gib": 3.52,
+        "elapsed_seconds": 2.55
+      },
+      "run_metadata_sha256": "c743e09363db448e652c4b2fe185900f13a933d9d64f68d26a4f5ed7b1dd2526",
+      "artifact_sha256": {
+        "preview.png": "61ac39de346c092e81a9c805a7f3a9f4a107cc1ddff4a0d544a6d6305f8acdf8",
+        "checkpoint_arrays.npz": "6e17fa798463778d90b7d27325e7a3e293c179597c9a5ec3623174b97d6e6fe5",
+        "steps.jsonl": "e82e9f474c98b5f91f193d5ecf5ea289ef91faa9fbd67607ce9e9d1ed7c3d90c",
+        "model_weights.npz": "d934cc90e76cf6432e61f40505b3a4268ce3a18c31efe8e158ee3183353c03c7",
+        "report.md": "72aba72dde4b9818ffc0b44be28ec5d459b5542b755d69770c17c88fbba56384"
+      },
+      "initial_parameter_sha256": "c1ede0b060ceca01c032464825eda272759ca28ec018b827a8e59f01b399fa73",
+      "final_parameter_sha256": "73b07c357936eba67b3c416bbc6813f6f912d94e573759b980b88c36709549df",
+      "selected_tensor_sha256": "796e0f542c11cb131dd6a47a784f7939dc30fd19464a943ac8558d83ee0a352a",
+      "implementation_sha256": {
+        "pilot_overfit_worker.py": "2da2fc63c99f9ca4533e6d22061870301a7d8985d827621dae7ae96cf480bb4c",
+        "diagnose_pilot_overfit.py": "e190a95b153498df138bb000d9edbf2dcab5c3b14058391e0a8e1a234637f27b",
+        "pilot_dataset.py": "bb0e58cfb61ac8980d77ed0cc88f99266fa1c35fe1aba5a19780cef4e53af7b7",
+        "pilot_objectives.py": "bccfd912cfdafcd7a04df1fb997b05627a995b5f89496241508e00dc97430d61",
+        "train_pilot_baseline.py": "259f367ddc613b0095a93ddcf7b9ae8f0a14553fa4fc5fc28665c76ae6059995",
+        "run_pilot_checks.py": "9f76cd6c4dd8ceb956102d503e9069c89f63f1ac5a481515391e9393598adceb",
+        "validate_sample.py": "475f641ed582af37eedc2ee9e94065e280202db08eb381441e1403c3eb001fba"
+      },
+      "torch_version": "2.6.0.dev20241112",
+      "torch_distribution_version": "2.5.1",
+      "torch_git_version": "555bc8349d67a8f5ccd5325d1a7f46c3619b1769",
+      "run_directory": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Docs/Reviews/OverfitDiagnosticV1/runs/local_weight_sgd"
+    },
+    {
+      "arm_id": "local_weight_adam",
+      "arm_configuration": {
+        "arm_id": "local_weight_adam",
+        "optimizer": "Adam",
+        "learning_rate": 0.01,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "epsilon": 1e-08,
+        "weight_decay": 0.0,
+        "positive_weight": 10.24,
+        "comparison_role": "Predeclared optimization sanity variant; optimizer AND learning rate differ from local_weight_sgd, so differences cannot be attributed solely to optimizer."
+      },
+      "fit_passed": true,
+      "first_passing_predeclared_checkpoint": 26,
+      "checkpoints": [
+        {
+          "attempt": 0,
+          "metrics": {
+            "tp": 25,
+            "fp": 256,
+            "fn": 0,
+            "tn": 0,
+            "supervised_pixels": 281,
+            "positive_pixels": 25,
+            "stable_pixels": 256,
+            "ignored_pixels": 3815,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 0.08896797153024912,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "f1": 0.16339869281045752,
+            "dice": 0.16339869281045752,
+            "iou": 0.08896797153024912,
+            "accuracy": 0.08896797153024912,
+            "balanced_accuracy": 0.5
+          },
+          "fit": {
+            "passed": false,
+            "reasons": [
+              "precision_below_minimum",
+              "specificity_below_minimum",
+              "dice_below_minimum",
+              "only_one_predicted_class"
+            ],
+            "precision": 0.08896797153024912,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "dice": 0.16339869281045752,
+            "minimum": 0.95
+          },
+          "weighted_bce": 1.2638020337541696,
+          "unweighted_bce": 0.7419407863029376,
+          "mean_weight_normalized_bce": 0.6936101005564876,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 25,
+              "mean": 0.5300322294235229,
+              "median": 0.5301533341407776,
+              "min": 0.5289797782897949,
+              "max": 0.5313038229942322
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.5287663307972252,
+              "median": 0.5289701223373413,
+              "min": 0.5268460512161255,
+              "max": 0.5292631983757019
+            },
+            "ignored_pixels": 3815,
+            "training_pairwise_auc": 0.97140625
+          },
+          "parameter_sha256": "c1ede0b060ceca01c032464825eda272759ca28ec018b827a8e59f01b399fa73"
+        },
+        {
+          "attempt": 26,
+          "metrics": {
+            "tp": 25,
+            "fp": 0,
+            "fn": 0,
+            "tn": 256,
+            "supervised_pixels": 281,
+            "positive_pixels": 25,
+            "stable_pixels": 256,
+            "ignored_pixels": 3815,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.004004854830505044,
+          "unweighted_bce": 0.0019158062983854953,
+          "mean_weight_normalized_bce": 0.002197976967523276,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 25,
+              "mean": 0.9974898266792297,
+              "median": 0.9998934268951416,
+              "min": 0.9684358835220337,
+              "max": 0.9999936819076538
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.0018495203839847818,
+              "median": 0.001138629566412419,
+              "min": 0.0009673702879808843,
+              "max": 0.012800782918930054
+            },
+            "ignored_pixels": 3815,
+            "training_pairwise_auc": 1.0
+          },
+          "parameter_sha256": "39f608e706770751a22d5c099567517c7e6afb87e4cd28268c75aed54e66973b"
+        },
+        {
+          "attempt": 128,
+          "metrics": {
+            "tp": 25,
+            "fp": 0,
+            "fn": 0,
+            "tn": 256,
+            "supervised_pixels": 281,
+            "positive_pixels": 25,
+            "stable_pixels": 256,
+            "ignored_pixels": 3815,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 7.185730644073039e-05,
+          "unweighted_bce": 4.924325763140027e-05,
+          "mean_weight_normalized_bce": 3.943731076141649e-05,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 25,
+              "mean": 0.9999725008010865,
+              "median": 1.0,
+              "min": 0.9995846152305603,
+              "max": 1.0
+            },
+            "negative": {
+              "count": 256,
+              "mean": 5.135607566231215e-05,
+              "median": 1.7192589439218864e-05,
+              "min": 1.3173660590837244e-05,
+              "max": 0.0006144702201709151
+            },
+            "ignored_pixels": 3815,
+            "training_pairwise_auc": 1.0
+          },
+          "parameter_sha256": "ccdb49dc8649cc2f09239a30957412a65fcb5010f73f88fb576f52efe00cce4d"
+        },
+        {
+          "attempt": 256,
+          "metrics": {
+            "tp": 25,
+            "fp": 0,
+            "fn": 0,
+            "tn": 256,
+            "supervised_pixels": 281,
+            "positive_pixels": 25,
+            "stable_pixels": 256,
+            "ignored_pixels": 3815,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 4.5752867709558324e-05,
+          "unweighted_bce": 3.260382257829369e-05,
+          "mean_weight_normalized_bce": 2.511046059840994e-05,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 25,
+              "mean": 0.9999840044975281,
+              "median": 1.0,
+              "min": 0.9997598528862,
+              "max": 1.0
+            },
+            "negative": {
+              "count": 256,
+              "mean": 3.422141792697175e-05,
+              "median": 1.1371721029718174e-05,
+              "min": 8.61110856931191e-06,
+              "max": 0.00041067408164963126
+            },
+            "ignored_pixels": 3815,
+            "training_pairwise_auc": 1.0
+          },
+          "parameter_sha256": "e5812cbedf68ff5214a0c817aaf9ce304ae183274c79432fe1715eb0a6869a47"
+        },
+        {
+          "attempt": 512,
+          "metrics": {
+            "tp": 25,
+            "fp": 0,
+            "fn": 0,
+            "tn": 256,
+            "supervised_pixels": 281,
+            "positive_pixels": 25,
+            "stable_pixels": 256,
+            "ignored_pixels": 3815,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 2.6010593585700805e-05,
+          "unweighted_bce": 2.0150292668522238e-05,
+          "mean_weight_normalized_bce": 1.42753453077772e-05,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 25,
+              "mean": 0.9999928808212281,
+              "median": 1.0,
+              "min": 0.9998936653137207,
+              "max": 1.0
+            },
+            "negative": {
+              "count": 256,
+              "mean": 2.1420121923299007e-05,
+              "median": 6.669676849924144e-06,
+              "min": 4.944216925650835e-06,
+              "max": 0.0002656303986441344
+            },
+            "ignored_pixels": 3815,
+            "training_pairwise_auc": 1.0
+          },
+          "parameter_sha256": "46fa8df959839134f04c9d1b11f3141db6d1e7bce0339ffb2b5d2a2abb94b96a"
+        }
+      ],
+      "nonzero_parameter_updates": 512,
+      "zero_parameter_delta_attempts": [],
+      "resources": {
+        "peak_worker_mib": 308.66,
+        "minimum_available_gib": 3.49,
+        "elapsed_seconds": 2.8
+      },
+      "run_metadata_sha256": "aca5491320001294d7e56b00409691a692e54b300dda17ca39804fc6e9e96d50",
+      "artifact_sha256": {
+        "preview.png": "4bf86054e9178b0eca6aba0b50a62dd9bb142c033234bb430b0d3c9146e9ed9b",
+        "checkpoint_arrays.npz": "9401f77d775a80724c250d28eb95d50550ab1fc69350e311c2d8388b4ff80dcd",
+        "steps.jsonl": "415ce992bdb3f0b8784687b47c11b7f6922f8565faefa0f3149a8a9ecd80f55a",
+        "model_weights.npz": "90116d603bb7b3ff3a5e7394b7ed7dab529c9102ccaa30310acba408b082984c",
+        "report.md": "633d6c6a2f0072166cf0e5d44ff21bdee0eb2c7daea74a694d38be95bcef5642"
+      },
+      "initial_parameter_sha256": "c1ede0b060ceca01c032464825eda272759ca28ec018b827a8e59f01b399fa73",
+      "final_parameter_sha256": "46fa8df959839134f04c9d1b11f3141db6d1e7bce0339ffb2b5d2a2abb94b96a",
+      "selected_tensor_sha256": "796e0f542c11cb131dd6a47a784f7939dc30fd19464a943ac8558d83ee0a352a",
+      "implementation_sha256": {
+        "pilot_overfit_worker.py": "2da2fc63c99f9ca4533e6d22061870301a7d8985d827621dae7ae96cf480bb4c",
+        "diagnose_pilot_overfit.py": "e190a95b153498df138bb000d9edbf2dcab5c3b14058391e0a8e1a234637f27b",
+        "pilot_dataset.py": "bb0e58cfb61ac8980d77ed0cc88f99266fa1c35fe1aba5a19780cef4e53af7b7",
+        "pilot_objectives.py": "bccfd912cfdafcd7a04df1fb997b05627a995b5f89496241508e00dc97430d61",
+        "train_pilot_baseline.py": "259f367ddc613b0095a93ddcf7b9ae8f0a14553fa4fc5fc28665c76ae6059995",
+        "run_pilot_checks.py": "9f76cd6c4dd8ceb956102d503e9069c89f63f1ac5a481515391e9393598adceb",
+        "validate_sample.py": "475f641ed582af37eedc2ee9e94065e280202db08eb381441e1403c3eb001fba"
+      },
+      "torch_version": "2.6.0.dev20241112",
+      "torch_distribution_version": "2.5.1",
+      "torch_git_version": "555bc8349d67a8f5ccd5325d1a7f46c3619b1769",
+      "run_directory": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Docs/Reviews/OverfitDiagnosticV1/runs/local_weight_adam"
+    }
+  ],
+  "model_executions": 0,
+  "source_jp2_pixel_reads": 0,
+  "torch_imported": false,
+  "checks": {
+    "exact_three_completed_arms": true,
+    "identical_initial_states_and_predictions": true,
+    "frozen_source_plan_and_tensor_identities": true,
+    "all_512_step_receipts_retained": true,
+    "all_five_checkpoint_counts_and_losses_recomputed": true,
+    "fit_probability_distribution_and_auc_agree": true,
+    "finite_update_stall_and_ignored_gradient_receipts_consistent": true,
+    "source_tiff_grid_labels_validity_and_hashes_agree": true,
+    "safe_final_weight_arrays_match_recorded_parameter_hash": true,
+    "resource_limits_respected": true
+  },
+  "limitations": [
+    "Model gradients and saved-weight forward replay are worker receipts, not re-executed by this verifier.",
+    "The selected training crop is not held-out evaluation or a globally valid forest-loss map.",
+    "Adam changes optimizer and learning rate together; differences cannot be assigned solely to optimizer.",
+    "A finite no-fit arm is retained as a valid negative diagnostic result."
+  ],
+  "resources": {
+    "logical_cpu_count": 11,
+    "machine_ram_gib": 18.0,
+    "worker_peak_rss_mib_sampled": 61.0,
+    "worker_high_water_rss_mib": 69.84,
+    "minimum_available_gib_sampled": 4.09,
+    "elapsed_seconds": 0.51,
+    "worker_limit_mib": 512,
+    "minimum_available_gib_limit": 1.5,
+    "runtime_limit_seconds": 180,
+    "workers": 1,
+    "native_thread_limit": 1,
+    "nice_increment": 10,
+    "gdal_cache_mib": 16,
+    "warp_memory_mib": 0,
+    "gpu_used": false,
+    "monitor_interval_seconds": 0.25
+  }
+}

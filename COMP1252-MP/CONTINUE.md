@@ -6,7 +6,7 @@ agent. Work in this project on **`codex/curated-deforestation-pilot`**. Read
 editing. Preserve other work and commit each completed, verified logical change
 on this same branch with an updated handoff.
 
-Current task/state: **`Docs/Handoffs/2026-11-16-overfit-diagnostic.md`**.
+Current completed milestone/state: **`Docs/Handoffs/2026-11-16-overfit-diagnostic.md`**.
 Earlier pipeline: `Docs/Handoffs/2026-11-16-pilot-baseline.md`.
 Dataset/provenance: `Docs/Handoffs/2026-11-15-curated-pilot.md`.
 
@@ -18,9 +18,11 @@ Git root is its parent MSc-DataScience directory. Python:
 The project locates forest loss in paired Sentinel-2 images and aims to estimate
 when it first becomes visible. Annotation image dates and observed visibility
 intervals are not exact felling dates. A small reviewed training dataset and a
-working partial-label pipeline are committed; a tiny smoke model still predicts
-all reviewed pixels as clearing. The current authorized task investigates that
-with a bounded single-example overfit experiment, not a large model fit.
+working partial-label pipeline are committed. The short smoke predicted all
+reviewed pixels as clearing; the completed controlled single-example experiment
+shows all three predeclared configurations can learn the reviewed regions of
+one crop. No large fit, independent accuracy or date-inference claim follows.
+The handoff identifies proposed next work and what has already finished.
 
 Use one low-priority CPU worker, native/Torch threads one, no GPU, monitored
 512 MiB worker RSS and 1.5 GiB available-system-memory reserve. Use the existing

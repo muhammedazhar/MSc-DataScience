@@ -1,5 +1,8 @@
 # COMP1252 - Master's Project
 
+For continuation with Codex, Gemini Antigravity or another coding agent, start
+with [CONTINUE.md](./CONTINUE.md) on `codex/curated-deforestation-pilot`.
+
 Read thee [Contribution Guidelines](./Docs/Guides/Contributions.md) to know how to contribute to the project. To run this project onto your local machine, go to the [Environment Setup](./Docs/Guides/EnvironmentSetup.md) page to setup the environment for the project.
 
 The [single-sample validation guide](./Docs/Guides/SingleSampleValidation.md)
@@ -14,6 +17,9 @@ partial labels that require an ignore-aware loader and loss.
 The [pilot training guide](./Docs/Guides/PilotBaseline.md) covers the implemented
 loader, masked objectives and bounded CPU smoke run, including its current
 all-positive prediction limitation.
+The [overfit diagnostic](./Docs/Guides/OverfitDiagnostic.md) confirms that the
+same training path can fit one reviewed crop, with controlled weight/optimizer
+comparisons and independent reconstruction of the saved results.
 
 ## Structure of the repository
 

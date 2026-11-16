@@ -1,0 +1,3 @@
+# Preserve byte-hashed experimental receipts exactly as generated. Their extra
+# final blank line is intentional archival formatting; other whitespace rules apply.
+Docs/Reviews/OverfitDiagnosticV1/runs/*/report.md whitespace=-blank-at-eof

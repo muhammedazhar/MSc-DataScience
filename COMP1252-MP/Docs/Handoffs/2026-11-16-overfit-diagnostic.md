@@ -1,139 +1,141 @@
-# Single-example overfit diagnostic
+# Single-example overfit diagnostic continuation
 
-## Current state: all three arms completed; independent summary pending
+## Current state: authorized diagnostic complete
 
-Branch: `codex/curated-deforestation-pilot`. The user authorized the next task
-after the pipeline smoke and requested tool-neutral continuity for Gemini
-Antigravity if the ChatGPT usage window expires. Start with root `CONTINUE.md`.
-Commit verified logical changes on this branch and update this file.
+Branch: `codex/curated-deforestation-pilot`. Commit each verified logical change
+on this same branch and update this handoff. Root `CONTINUE.md` is the
+self-contained entry point for Codex, Gemini Antigravity or another agent.
+The user explicitly requested cross-agent continuity if the ChatGPT usage
+window expires. No chat history or Codex-specific memory is needed.
 
-Implementation checkpoint: `74338f8`. All three planned workers have now
-completed all512 attempts successfully; **do not rerun them**. Raw evidence is
-tracked under `Docs/Reviews/OverfitDiagnosticV1/runs/` and retained locally at
-the execution paths below. Same initial parameter hash, selected tensor hash,
-plan hash and implementation hashes were checked across all arms.
+Milestone checkpoints: `5aafc56` predeclared plan + tool-neutral continuation;
+`74338f8` tested gates/worker; `c00f63e` all three completed raw experiment arms.
+The following completion commit contains the independent summary/verifier,
+191-test proof, guide and this final handoff. No model job remains active and
+there is no need to repeat the completed experiment.
 
-| Arm | First passing checkpoint | Final TP / FP / FN / TN | Final Dice | Worker peak MiB |
-| --- | ---: | --- | ---: | ---: |
-| global_weight_sgd | 128 | 25 / 0 / 0 / 256 | 1.0 | 293.81 |
-| local_weight_sgd | 128 | 25 / 0 / 0 / 256 | 1.0 | 316.75 |
-| local_weight_adam | 26 | 25 / 0 / 0 / 256 | 1.0 | 308.66 |
+## What was done and learned
 
-All used one low-priority CPU worker and stayed above3.49GiB sampled available
-memory. Workers totalled8.41s. At26 attempts both SGD arms still predicted all
-reviewed pixels positive, but ranking AUC was already1.0; probabilities carried
-class signal before the fixed threshold separated them. At128 both passed.
-This supports learning capability on ONE crop, not generalization or a proven
-cause of the earlier13-case smoke's behaviour. Global versus local weight did
-not prevent eventual memorization. Adam differs in optimizer AND learning rate.
+The first manifest case was fixed BEFORE observing outcomes:
+`event-e691d44c335d87649310`, pair `pair-9e46432dba83dd68c052`, group
+`group-8dea78ccfd15060ff7f3`. It has 25 clearing-interior / 256 forest-control /
+3,815 ignored pixels in its original 64x64, 27-channel grid. The CNN and partial
+0/1/255 supervision were preserved. No held-out imagery, new annotations,
+threshold tuning, raw JP2 rereads or legacy forest checkpoint was used.
 
-Remaining: finish/inspect the new summary/verifier from overfit_test_review,
-run its focused/full tests and execute independent NumPy reconstruction of all
-15 checkpoints, losses, fit gates, source hashes and resource receipts. Then
-write concise final guide/summary and update this handoff/CONTINUE.md. No new
-model training, data selection, settings search or threshold tuning is needed.
+Each arm used identical seed 42 initial weights/tensors and 512 fixed updates,
+with checkpoints 0/26/128/256/512 and no early stopping:
 
-Plan/continuation checkpoint: `5aafc56`. NEW
-`Solutions/diagnose_pilot_overfit.py` now supplies the pure analytic controls,
-strict train-event selector, fixed checkpoint schedule, reviewed-only
-probability/AUC summaries and confusion-derived fit gate, plus its guarded CLI.
-All **14** new helper tests pass (guarded worker 1.53s, max sampled194.8MiB).
-The CLI engine `Solutions/pilot_overfit_worker.py` is now complete, AST-checked
-and inspected by root. It allows finite stationary steps, verifies ignored
-gradients on every update, retains all fixed checkpoints, rereads the selected
-arrays, and checks saved weights. The complete current suite passes **187
-tests** (3.06s guarded worker, largest sampled RSS314.9MiB). The model executions
-are now finished as recorded above. The summary agent is writing
-`Solutions/summarize_pilot_overfit.py`; do not assume that file is ready until
-inspected/tested.
+| Arm | Optimizer / rate | Positive weight | First passing recorded checkpoint | Final TP / FP / FN / TN |
+| --- | --- | ---: | ---: | --- |
+| global_weight_sgd | SGD / .05 | 17.48344 | 128 | 25 / 0 / 0 / 256 |
+| local_weight_sgd | SGD / .05 | 10.24 | 128 | 25 / 0 / 0 / 256 |
+| local_weight_adam | Adam / .01 | 10.24 | 26 | 25 / 0 / 0 / 256 |
 
-The prior milestone is complete in `9e3f110` (foundation `07e0a6d`): 173 tests,
-13-example reviewed dataset, correct 255-ignore loss/metrics, deterministic
-26-step tiny CPU smoke. It still predicts every reviewed pixel as clearing at
-threshold 0.5. Full source, reports and weights are committed. Read the linked
-prior handoffs and `Docs/Guides/PilotBaseline.md` for detailed context.
+All arms passed final reviewed precision/recall/specificity/Dice>=.95 (actual
+all 1.0). These are **ONE-crop training fits**, NOT independent accuracy or
+predictions of first-visible dates. Exact first fitting steps are unknown
+between the recorded checkpoints. The Adam variant also changes learning rate,
+so it is not a causal optimizer-only comparison.
 
-## Approved current scope and frozen plan
+At 26 attempts both SGD arms were still all-positive at threshold 0.5, while their
+reviewed ranking AUC was already 1.0. Global-SGD mean probabilities were .75255
+(clearing) versus .58502 (forest); local-SGD .54322 versus .50537. By 128 both
+separated the reviewed pixels. Thus the model/masked path is capable of learning
+this crop; an all-positive early threshold result does not imply no class
+signal. The old 13-case smoke saw each crop only twice, so this is consistent
+with exposure/optimization limitations but does not prove its exact cause.
 
-`Docs/Reviews/OverfitDiagnosticV1/experiment_plan.json` was written before any
-new diagnostic model execution. It binds the FIRST manifest record:
-`event-e691d44c335d87649310`, 25 reviewed positive / 256 forest / 3,815 ignored
-pixels. Do not select a different example after seeing results.
+Analytic loss audit: the previous trainer weights each image's mean BCE equally,
+while reporting pixel-aggregated BCE. With its global pixel-derived class weight,
+the equal-image constant optimum is .59131 versus .5 for pixel aggregation.
+For this selected case, global weight gives .63064 versus .5 with local weight.
+This is a real objective/prior distinction, not proof of a masking bug, and it
+did not prevent eventual fitting in either SGD arm. Raw BCE scales differ;
+mean-weight-normalized loss is also retained, with no common raw-loss cutoff.
 
-Three sequential, fresh CPU workers will use identical initialization (seed42),
-the same 2,545-parameter CNN and cached tensors, 512 attempted updates each:
+## Verification, resources and files
 
-1. SGD .05, global positive weight17.48344.
-2. SGD .05, local positive weight10.24 (only weight differs).
-3. Adam .01, local weight10.24 (optimizer AND rate differ; not an isolated
-   optimizer comparison).
+- **191 tests pass** (1.381s tests, 3.56s guarded worker). Fourteen new tests cover
+  analytic controls, exact case selection, strict nontrivial gates and ignored
+  probability/AUC invariance. Four independent-verifier regressions cover
+  numerical reconstruction, retained no-fit outcomes and unsafe resources.
+- New `Solutions/summarize_pilot_overfit.py` independently reconstructed all
+  15 checkpoints from saved logits using NumPy float64 logaddexp, no Torch or
+  model execution. It checked all three plans/configurations, common initial
+  weights/predictions, source tensor bytes/TIFF headers/hashes, exact class
+  support, metrics/AUC/fit gates, 1,536 step receipts, final parameter arrays,
+  and resource limits. All checks passed in .51s at 69.84 MiB.
+- Gradient execution, zero ignored-logit gradients every step, all-ignored
+  no-forward/no-optimizer safety and exact saved-weight forward replay are
+  worker-validated receipts, not re-executed by the independent verifier.
+- No stationary parameter deltas occurred; finite zero deltas would have been
+  retained as stalls rather than converting a valid fit into processing error.
+- Three model workers ran sequentially for 3.06/2.55/2.80s (sum 8.41s), peaking
+  293.81/316.75/308.66MiB. Sampled available memory during training stayed above
+  3.49GiB. The limits remained 512 MiB worker RSS, 1.5 GiB reserve, one CPU thread,
+  nice +10, no GPU, DataLoader workers 0, max 300s per arm.
 
-Checkpoints are 0/26/128/256/512, with no early stopping. The primary fit gate
-is at512: reviewed precision, recall, specificity and Dice >=.95 at frozen
-threshold.5, both predicted classes, exact ground-truth support. No shared
-raw-BCE cutoff; record raw and weight-mass-normalized losses. A finite completed
-arm with no adequate fit is a valid negative result, not a processing failure.
-Record finite stationary/zero parameter deltas after convergence rather than
-aborting solely because every single step is not nonzero.
+Tracked durable evidence under `Docs/Reviews/OverfitDiagnosticV1/`:
 
-## Analytic finding to test, not overstate
+- `experiment_plan.json`: declaration made before any diagnostic model run.
+- `runs/<arm>/`: all checkpoint logits/probabilities/labels/validity in safe NPZ,
+  final weights,512 step receipts, preview, source-bound metadata and report.
+- `summary/{metadata.json,report.md}`: independently verified complete results.
+- `checks/`:14 helper tests,187 pre-execution tests,4 summary tests and191 final tests,
+  with exact console logs and measured guard resources.
 
-The previous trainer averages each image's mean reviewed-pixel loss equally;
-evaluation aggregates reviewed pixels. With the global class weight, the
-equal-image constant-probability optimum is0.59131, versus0.5 for the pixel
-objective. On the selected case alone, global weight gives constant optimum
-0.63064 and local weight gives0.5. This suggests a positive prior bias but is
-not proof of the empirical cause. Prior evaluated BCE1.273797 beats the global
-constant minimum1.311292, so all-positive threshold outputs do not prove that
-probabilities contain no class signal. Record reviewed positive/negative
-probability distributions and training-only ranking AUC without threshold tuning.
+Guide: `Docs/Guides/OverfitDiagnostic.md`. Code:
+`diagnose_pilot_overfit.py` pure gates + guarded CLI;
+`pilot_overfit_worker.py` model worker;
+`summarize_pilot_overfit.py` independent numerical verifier/summary.
+Prior dataset/pipeline handoffs remain linked in `CONTINUE.md`.
 
-## Remaining implementation and checks
+Original local runs are under ignored
+`Datasets/CuratedPilot/v1/overfit_diagnostic/`. The committed snapshots above are
+sufficient for verification on another worktree; the verifier binds plan
+CONTENT hashes, not the original absolute plan path. The selected feature TIFFs
+are already tracked in `Datasets/CuratedPilot/v1/dataset/`, so no source imagery
+or new download is needed for this check. Never modify frozen QA files or
+original dataset arrays. The narrow .gitattributes rule preserves byte-hashed
+raw report formatting while tolerating its existing final blank line; all
+other whitespace checks remain active.
 
-Execution commands (fresh output directories, one command at a time):
+Actual Torch runtime remains 2.6.0.dev20241112 (git 555bc834...), distribution
+metadata 2.5.1. Both identities and module path are recorded. Environment
+reinstallation was outside this diagnostic; do not claim cross-machine
+reproducibility without resolving/documenting that discrepancy.
+
+## Commands for any agent
+
+Project: `/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP`.
+Git root: its parent MSc-DataScience directory. Check branch/status before edits.
+Python: `/Users/muhammedazhar/.miniconda3/envs/COMP1252-MP/bin/python`.
 
 ```bash
 PILOT_PYTHON=/Users/muhammedazhar/.miniconda3/envs/COMP1252-MP/bin/python
-"$PILOT_PYTHON" -B Solutions/diagnose_pilot_overfit.py --arm global_weight_sgd --output Datasets/CuratedPilot/v1/overfit_diagnostic/runs/global_weight_sgd
-"$PILOT_PYTHON" -B Solutions/diagnose_pilot_overfit.py --arm local_weight_sgd --output Datasets/CuratedPilot/v1/overfit_diagnostic/runs/local_weight_sgd
-"$PILOT_PYTHON" -B Solutions/diagnose_pilot_overfit.py --arm local_weight_adam --output Datasets/CuratedPilot/v1/overfit_diagnostic/runs/local_weight_adam
+# Verify committed outcomes only; NEW output directory required.
+"$PILOT_PYTHON" -B Solutions/summarize_pilot_overfit.py --runs-root Docs/Reviews/OverfitDiagnosticV1/runs --output Datasets/CuratedPilot/v1/overfit_diagnostic/summary-recheck
+"$PILOT_PYTHON" -B Solutions/run_pilot_checks.py --mode tests --output Datasets/CuratedPilot/v1/overfit_diagnostic/checks/tests-recheck
 ```
 
-If usage expires while a job is active, check the exact Python command and
-completed `metadata.json` before resuming. Code and plan are already saved;
-do not train the same arm twice or change settings in response to results.
+All three arms are DONE; do not rerun unless explicitly required. If a future
+agent is interrupted mid-experiment, inspect active Python commands and final
+metadata.json outputs before resuming. Keep one pixel/model worker at a time.
 
-- Root will add NEW `Solutions/diagnose_pilot_overfit.py`, reusing existing
-  `make_model`, loader, masked BCE and count metrics. Keep prior model helper
-  and frozen QA source unchanged. Parent stays stdlib; child configures CPU
-  before Torch work and uses the existing guard (512MiB/1.5GiB/nice10/threads1/
-  noGPU/max300s). One arm per worker, run sequentially.
-- The overfit_test_review agent owns NEW `Tests/test_pilot_overfit.py` (pure
-  helper tests, AST-only until root serial execution). Check its state before
-  importing; a usage-limited agent may not have finished the file.
-- Pure helper APIs planned: constant_optimum(P,N,w), fit_assessment(metrics,P,N,
-  minimum=.95), checkpoint_steps(limit), select_record(records,event_id=None),
-  probability_diagnostics(probabilities,labels). Fit derives from counts, not
-  caller-provided scores; trivial all-positive/all-negative outcomes must fail.
-- Run focused/full tests under `run_pilot_checks.py`; then execute the three
-  predeclared arms. Every run must retain source/plan/data hashes, exact one
-  selected ID, step/checkpoint logs, counts, probabilities, safe NPZ weights,
-  finite-gradient/update evidence and measured resource use. Verify reload and
-  same initialization across arms, ignored-gradient safety and unchanged inputs.
-- Independently recompute fit/confusion/AUC from saved arrays; inspect actual
-  prediction previews. Save small results under tracked
-  `Docs/Reviews/OverfitDiagnosticV1/`; local staging/run folders may remain under
-  ignored `Datasets/CuratedPilot/v1/overfit_diagnostic/`. Save findings honestly,
-  including any exhausted/no-fit arm; do not search settings until it passes.
+## Proposed next task — not executed
 
-## Continuity essentials
+Choose and document the intended objective before extending bounded training
+to all 13 reviewed examples. For a pixel-aggregated objective with uniform
+image sampling, multiplying each image's mean reviewed loss by
+`N_images * n_reviewed_image / total_reviewed_pixels` gives the correct expected
+pixel-mean gradient. If equal-image weighting is intentional, derive its class
+balance consistently instead. Prove the chosen normalization with an analytic
+loss/gradient equivalence test; do not silently compare different objectives.
 
-All three diagnostic model runs are complete. Dataset and model sources are
-local/committed; there is no need for a new download or API account.
-The exact Torch runtime is2.6.0.dev20241112 (git555bc834...), although distribution
-metadata says2.5.1; preserve both identities in receipts and avoid environment
-reinstallation during this diagnostic. Official2.6 contracts were checked in
-the preceding task. Do not claim portability or generalization from this check.
-
-This task does not authorize a large fit, held-out tuning, new annotations or
-first-visible-date prediction. The user's Mac capacity limits remain in force.
+Then predeclare a bounded 13-example training diagnostic. Develop geographically
+separate reviewed validation examples before model selection/accuracy claims.
+Do not use the test split for tuning, treat unknown 255 pixels as negative, or
+present one-crop memorization as generalization. Temporal date inference and
+larger model fitting remain later tasks. The original binary trainer is still
+unmodified/incompatible with partial labels; use the new masked path.

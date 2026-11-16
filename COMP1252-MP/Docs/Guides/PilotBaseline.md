@@ -126,8 +126,10 @@ claiming reproducibility across machines or stable Torch releases.
 
 ## Next training work
 
-Use a bounded single-example overfit diagnostic to investigate the all-positive
-collapse, then develop on a larger reviewed dataset with geographically
+The [bounded single-example diagnostic](OverfitDiagnostic.md) is now complete:
+all three predeclared arms fitted the reviewed regions of that crop. Define
+the intended loss reduction before extending the fit to all 13 cases, then
+develop on a larger reviewed dataset with geographically
 separate validation examples. Do not tune thresholds on held-out imagery or
 treat the current 13 training groups as a validation/test set. The original
 binary training scripts remain incompatible with 255 labels; the new pilot
