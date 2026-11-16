@@ -16,7 +16,16 @@ reviewed-pixel loss and gradient. Sequential updates do not equal one batch
 update. The original modules remain unchanged to preserve archived source
 hashes; new code and equivalence tests go in separate modules.
 
-Training has NOT started. Implementation is complete and **206 tests pass**.
+The single predeclared training run is **COMPLETE**. All 13 examples pass the
+final fit gate (pooled TP151/FP0/FN0/TN2640). First passing recorded checkpoint:
+416; checkpoints 0 and 26 still predict every reviewed pixel as clearing.
+All 1664 fixed updates ran, with no early stopping. Worker resources: 8.87s,
+313.94 MiB peak, minimum 2.60 GiB available memory. Saved weights reproduce
+all 13 final logit maps exactly. Raw outputs and hash receipts are archived in
+`Docs/Reviews/PixelPilotV1/run/`. **Independent numerical verification and
+preview inspection remain pending at this checkpoint. Do not rerun training.**
+
+Implementation is complete and **206 tests pass**.
 Objective equivalence (8 tests) and worker skip/scope (3 tests) also passed
 separately. Evidence: `Docs/Reviews/PixelPilotV1/checks/`. Full suite used
 251.5 MiB peak, 11.98 seconds, minimum 2.28 GiB available memory. The plan now
@@ -24,7 +33,7 @@ freezes all ten executable source hashes before any training. Independent
 NumPy verifier and four regression tests are implemented. Old source hashes
 are unchanged. Guide: `Docs/Guides/ReviewedPixelPilot.md`.
 
-Planned: same 2545-parameter CPU CNN, seed 42, SGD
+Completed: same 2545-parameter CPU CNN, seed 42, SGD
 rate .05, fixed manifest order, 128 cycles / 1664 updates, checkpoints
 0/26/416/832/1664, fixed threshold .5 and no early stopping. Primary final fit
 requires precision/recall/specificity/Dice >=.95 on every example AND aggregate.
@@ -51,10 +60,9 @@ Keep all old QA/model/objective source files unchanged; do not reinstall Torch
 
 ## Remaining work
 
-1. DONE: implemented and guard-tested the objective, worker, independent verifier;
-   froze executable sources in the predeclared plan. Commit this state before running.
-2. Run the single predeclared diagnostic now that tests pass. Save all results,
-   including no-fit outcomes, inspect previews and verify saved logits numerically.
+1. DONE: implementation and 206 tests, frozen code at `8a00e23`; training complete.
+2. Run `verify_pixel_pilot.py` against the committed run and inspect all four
+   preview pages. Save verification results without rerunning any model.
 3. Update this handoff, guide and `CONTINUE.md`, complete verification and commit.
 
 Next milestone after this task: geographically separate reviewed validation,

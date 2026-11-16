@@ -1,0 +1,4099 @@
+{
+  "execution_status": "completed",
+  "scope": "Training-only all-13 reviewed-pixel diagnostic; no independent accuracy or temporal inference.",
+  "fit_passed": true,
+  "plan_sha256": "73fc879744985532e48c6869ce75d42566f703c210b26de89714f1e2d6567a03",
+  "implementation_sha256": {
+    "reviewed_pilot_worker.py": "7e826d6f4cb3d9ed9d2c32e23838c479926261284a274879a2989dc78df43252",
+    "train_reviewed_pilot.py": "389ecb205b7fa91624964c6eb030352827001b0b38b74b7c12e30c833ec24813",
+    "pilot_pixel_objective.py": "6020e42610e7e371000a2667958ddb3a8ce1acbe5a2ff7b3c721bfb27b1a1599",
+    "pilot_dataset.py": "bb0e58cfb61ac8980d77ed0cc88f99266fa1c35fe1aba5a19780cef4e53af7b7",
+    "pilot_objectives.py": "bccfd912cfdafcd7a04df1fb997b05627a995b5f89496241508e00dc97430d61",
+    "train_pilot_baseline.py": "259f367ddc613b0095a93ddcf7b9ae8f0a14553fa4fc5fc28665c76ae6059995",
+    "pilot_overfit_worker.py": "2da2fc63c99f9ca4533e6d22061870301a7d8985d827621dae7ae96cf480bb4c",
+    "diagnose_pilot_overfit.py": "e190a95b153498df138bb000d9edbf2dcab5c3b14058391e0a8e1a234637f27b",
+    "run_pilot_checks.py": "9f76cd6c4dd8ceb956102d503e9069c89f63f1ac5a481515391e9393598adceb",
+    "validate_sample.py": "475f641ed582af37eedc2ee9e94065e280202db08eb381441e1403c3eb001fba"
+  },
+  "dataset_metadata_sha256": "5d929465f148c1823f6332222f56430dac9a5b0d1985d8545c2eb17c99ec3e71",
+  "manifest_sha256": "138713e6a0b57e5491015fe42438d1a5d1702c68c753289bf52abb5caf7949aa",
+  "dataset_audit": {
+    "example_count": 13,
+    "supervised_positive_pixels": 151,
+    "supervised_stable_pixels": 2640,
+    "ignored_pixels": 50457,
+    "nonfinite_feature_values_replaced": 0,
+    "examples_with_nonfinite_replacements": 0,
+    "event_ids": [
+      "event-e691d44c335d87649310",
+      "event-263e9027a6142dc9fc84",
+      "event-8628872c64f4cabf6e67",
+      "event-b9d89f91b116d8d90fac",
+      "event-e59c75f02fe23bb9a1ae",
+      "event-e6224bcd39746b840ea4",
+      "event-073d95e8a1c667845607",
+      "event-4fa26438d5872a8480af",
+      "event-a72e10d66054921e60b2",
+      "event-f7e5f043776b24cb7dfa",
+      "event-0012effe85aa26b69541",
+      "event-65fa6d8d7a0c82498340",
+      "event-e932f0d28b2819f8368d"
+    ],
+    "group_ids": [
+      "group-8dea78ccfd15060ff7f3",
+      "group-0b1befcba1b951941711",
+      "group-c27a75b31d1c196df2fb",
+      "group-52444261d2ac04078270",
+      "group-21cdc9429261e8632074",
+      "group-d2731394f164a7e6d099",
+      "group-809d15d55ce128df4a5e",
+      "group-8272e5677043d4707f44",
+      "group-6cdc7474f0a4563efc13",
+      "group-5ea4149628fe2b5d628d",
+      "group-107187351f1c7cfd7722",
+      "group-d83b3f05f781ec32814f",
+      "group-7bdbc25c80a4f80718fc"
+    ],
+    "splits": [
+      "train"
+    ],
+    "feature_shape": [
+      27,
+      64,
+      64
+    ],
+    "channels": [
+      "pre_B02",
+      "pre_B03",
+      "pre_B04",
+      "pre_B08",
+      "pre_B8A",
+      "pre_B11",
+      "pre_B12",
+      "pre_NDVI",
+      "pre_NDMI",
+      "post_B02",
+      "post_B03",
+      "post_B04",
+      "post_B08",
+      "post_B8A",
+      "post_B11",
+      "post_B12",
+      "post_NDVI",
+      "post_NDMI",
+      "difference_B02",
+      "difference_B03",
+      "difference_B04",
+      "difference_B08",
+      "difference_B8A",
+      "difference_B11",
+      "difference_B12",
+      "difference_NDVI",
+      "difference_NDMI"
+    ],
+    "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+    "dataset_metadata_sha256": "5d929465f148c1823f6332222f56430dac9a5b0d1985d8545c2eb17c99ec3e71",
+    "manifest_sha256": "138713e6a0b57e5491015fe42438d1a5d1702c68c753289bf52abb5caf7949aa",
+    "feature_handling": "Exported finite values unchanged; non-finite ignored inputs replaced with zero only"
+  },
+  "objective": {
+    "name": "dataset_reviewed_pixel_mean_weighted_bce",
+    "positive_weight": 17.483443708609272,
+    "image_count": 13,
+    "total_reviewed_pixels": 2791,
+    "per_image_step_scale": "image_count * reviewed_pixels_in_image / total_reviewed_pixels",
+    "normalization": "Mean is over reviewed pixel count, not class-weight mass. Report mean-weight-normalized BCE separately.",
+    "fixed_parameter_identity": "Mean of all scaled image losses/gradients equals full reviewed-pixel loss/gradient. Sequential updates are not one full-batch update."
+  },
+  "protocol": {
+    "seed": 42,
+    "cycles": 128,
+    "attempts": 1664,
+    "checkpoint_attempts": [
+      0,
+      26,
+      416,
+      832,
+      1664
+    ],
+    "order": "fixed manifest order, no shuffle",
+    "early_stopping": false,
+    "probability_threshold": 0.5,
+    "optimizer": {
+      "optimizer": "SGD",
+      "learning_rate": 0.05,
+      "momentum": 0.0,
+      "weight_decay": 0.0
+    },
+    "model": "Conv27-8(3x3), ReLU, Conv8-8(3x3), ReLU, Conv8-1(1x1)",
+    "parameter_count": 2545,
+    "dtype": "float32",
+    "batch_size": 1,
+    "augmentation": false,
+    "feature_normalization": "preserve exported arrays; no new transform"
+  },
+  "tensor_sha256": [
+    "796e0f542c11cb131dd6a47a784f7939dc30fd19464a943ac8558d83ee0a352a",
+    "47a90b632f9e0f502a46c30cc5fbcfba81a84e4bb4252a6906ef87b9225bc644",
+    "47d27bc306257b9de6ed7ee895d29ebd92706cadcaf8b4b466b2fa225383ca25",
+    "ef10b9e01f623054dc979f5ece9b844e4f900afcbc7593546282a24d985b5c07",
+    "e97743b277d36a90140c4afc144e59a680b6ccaf62c0033b5e82243c108d2490",
+    "945d7c14cbee9fa2e6c43927687f8c8a2d87f0b89e71e8bb1db3bfd7bcf0505a",
+    "6ffeed8ff38bd14ac442448a6f055cc4ef93781f7a58fc38e2ebf3450b2ca502",
+    "7af53c21a276df300abfd9ad2108bd5e671f0584388ede0e9b2d0ae99ae71931",
+    "5ecac9e751766a111b105717f56c84dfa38985529ff7eeefbcdb620b516ce7f5",
+    "cfcfcf4ec742b7e8c6df06a239d4f172ca4f9ac768f41b9b4170ab9c863921d7",
+    "eaaa0a7703bd2952344ce4791d77ae55d809d2ee896d12613dc52347c0a285ca",
+    "f9232fba7eba4fcb53a01f5cd0927efc9192bef9e634dc2caca457794fe755f3",
+    "a17c88d1ec5085aff838dec8770595a02b80df3084f8101504f71fb8bed81820"
+  ],
+  "initial_parameter_sha256": "c1ede0b060ceca01c032464825eda272759ca28ec018b827a8e59f01b399fa73",
+  "final_parameter_sha256": "725325c760c1ad748c9c78c5becaa4316e363219f94cbf2839349b033b506428",
+  "parameter_count": 2545,
+  "device": "cpu",
+  "gpu_used": false,
+  "batch_size": 1,
+  "native_threads": 1,
+  "dataloader_workers": 0,
+  "torch_intraop_threads": 1,
+  "torch_interop_threads": 1,
+  "attempted_batches": 1664,
+  "optimizer_steps": 1664,
+  "all_ignored_no_forward_no_step": true,
+  "all_ignored_safety_check": {
+    "updated": false,
+    "reviewed_pixels": 0,
+    "step_scale": 0.0,
+    "scaled_loss_before_step": null,
+    "gradient_norm": 0.0,
+    "parameter_delta_l2": 0.0,
+    "zero_parameter_delta": true,
+    "ignored_gradient_max_abs": 0.0,
+    "optimizer_step_called": false
+  },
+  "ignored_logit_gradients_zero_every_step": true,
+  "saved_weights_reproduce_final_logits": true,
+  "source_dataset_unchanged": true,
+  "checkpoints": [
+    {
+      "attempt": 0,
+      "arrays_file": "checkpoint_0000.npz",
+      "parameter_sha256": "c1ede0b060ceca01c032464825eda272759ca28ec018b827a8e59f01b399fa73",
+      "aggregate": {
+        "metrics": {
+          "tp": 151,
+          "fp": 2640,
+          "fn": 0,
+          "tn": 0,
+          "supervised_pixels": 2791,
+          "positive_pixels": 151,
+          "stable_pixels": 2640,
+          "ignored_pixels": 50457,
+          "updates": 13,
+          "empty_updates": 0,
+          "probability_threshold": 0.5,
+          "precision": 0.05410247223217485,
+          "recall": 1.0,
+          "specificity": 0.0,
+          "f1": 0.1026512576478586,
+          "dice": 0.1026512576478586,
+          "iou": 0.05410247223217485,
+          "accuracy": 0.05410247223217485,
+          "balanced_accuracy": 0.5
+        },
+        "fit": {
+          "passed": false,
+          "reasons": [
+            "precision_below_minimum",
+            "specificity_below_minimum",
+            "dice_below_minimum",
+            "only_one_predicted_class"
+          ],
+          "precision": 0.05410247223217485,
+          "recall": 1.0,
+          "specificity": 0.0,
+          "dice": 0.1026512576478586,
+          "minimum": 0.95
+        },
+        "weighted_bce": 1.3128412201258497,
+        "unweighted_bce": 0.7468252870097719,
+        "mean_weight_normalized_bce": 0.6939658798051603
+      },
+      "examples": [
+        {
+          "event_id": "event-e691d44c335d87649310",
+          "metrics": {
+            "tp": 25,
+            "fp": 256,
+            "fn": 0,
+            "tn": 0,
+            "supervised_pixels": 281,
+            "positive_pixels": 25,
+            "stable_pixels": 256,
+            "ignored_pixels": 3815,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 0.08896797153024912,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "f1": 0.16339869281045752,
+            "dice": 0.16339869281045752,
+            "iou": 0.08896797153024912,
+            "accuracy": 0.08896797153024912,
+            "balanced_accuracy": 0.5
+          },
+          "fit": {
+            "passed": false,
+            "reasons": [
+              "precision_below_minimum",
+              "specificity_below_minimum",
+              "dice_below_minimum",
+              "only_one_predicted_class"
+            ],
+            "precision": 0.08896797153024912,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "dice": 0.16339869281045752,
+            "minimum": 0.95
+          },
+          "weighted_bce": 1.6729007959365845,
+          "unweighted_bce": 0.7419407367706299,
+          "mean_weight_normalized_bce": 0.6782492515707194,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 25,
+              "mean": 0.5300322294235229,
+              "median": 0.5301533341407776,
+              "min": 0.5289797782897949,
+              "max": 0.5313038229942322
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.5287663307972252,
+              "median": 0.5289701223373413,
+              "min": 0.5268460512161255,
+              "max": 0.5292631983757019
+            },
+            "ignored_pixels": 3815,
+            "training_pairwise_auc": 0.97140625
+          }
+        },
+        {
+          "event_id": "event-263e9027a6142dc9fc84",
+          "metrics": {
+            "tp": 13,
+            "fp": 256,
+            "fn": 0,
+            "tn": 0,
+            "supervised_pixels": 269,
+            "positive_pixels": 13,
+            "stable_pixels": 256,
+            "ignored_pixels": 3827,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 0.048327137546468404,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "f1": 0.09219858156028368,
+            "dice": 0.09219858156028368,
+            "iou": 0.048327137546468404,
+            "accuracy": 0.048327137546468404,
+            "balanced_accuracy": 0.5
+          },
+          "fit": {
+            "passed": false,
+            "reasons": [
+              "precision_below_minimum",
+              "specificity_below_minimum",
+              "dice_below_minimum",
+              "only_one_predicted_class"
+            ],
+            "precision": 0.048327137546468404,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "dice": 0.09219858156028368,
+            "minimum": 0.95
+          },
+          "weighted_bce": 1.25288987159729,
+          "unweighted_bce": 0.7477005124092102,
+          "mean_weight_normalized_bce": 0.6973680894322835,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 13,
+              "mean": 0.5303683097545917,
+              "median": 0.5304166078567505,
+              "min": 0.5297738909721375,
+              "max": 0.5308857560157776
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.5292673814110458,
+              "median": 0.5292600095272064,
+              "min": 0.5287442803382874,
+              "max": 0.5298352241516113
+            },
+            "ignored_pixels": 3827,
+            "training_pairwise_auc": 0.9996995192307693
+          }
+        },
+        {
+          "event_id": "event-8628872c64f4cabf6e67",
+          "metrics": {
+            "tp": 6,
+            "fp": 256,
+            "fn": 0,
+            "tn": 0,
+            "supervised_pixels": 262,
+            "positive_pixels": 6,
+            "stable_pixels": 256,
+            "ignored_pixels": 3834,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 0.022900763358778626,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "f1": 0.04477611940298507,
+            "dice": 0.04477611940298507,
+            "iou": 0.022900763358778626,
+            "accuracy": 0.022900763358778626,
+            "balanced_accuracy": 0.5
+          },
+          "fit": {
+            "passed": false,
+            "reasons": [
+              "precision_below_minimum",
+              "specificity_below_minimum",
+              "dice_below_minimum",
+              "only_one_predicted_class"
+            ],
+            "precision": 0.022900763358778626,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "dice": 0.04477611940298507,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.9903538823127747,
+          "unweighted_bce": 0.7512413859367371,
+          "mean_weight_normalized_bce": 0.7189588280251393,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 6,
+              "mean": 0.5307637353738149,
+              "median": 0.530724823474884,
+              "min": 0.530322790145874,
+              "max": 0.5313103795051575
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.5295202336274087,
+              "median": 0.52951380610466,
+              "min": 0.5290164351463318,
+              "max": 0.5299938321113586
+            },
+            "ignored_pixels": 3834,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-b9d89f91b116d8d90fac",
+          "metrics": {
+            "tp": 16,
+            "fp": 64,
+            "fn": 0,
+            "tn": 0,
+            "supervised_pixels": 80,
+            "positive_pixels": 16,
+            "stable_pixels": 64,
+            "ignored_pixels": 4016,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 0.2,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "f1": 0.3333333333333333,
+            "dice": 0.3333333333333333,
+            "iou": 0.2,
+            "accuracy": 0.2,
+            "balanced_accuracy": 0.5
+          },
+          "fit": {
+            "passed": false,
+            "reasons": [
+              "precision_below_minimum",
+              "specificity_below_minimum",
+              "dice_below_minimum",
+              "only_one_predicted_class"
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "dice": 0.3333333333333333,
+            "minimum": 0.95
+          },
+          "weighted_bce": 2.8209450244903564,
+          "unweighted_bce": 0.7292259931564331,
+          "mean_weight_normalized_bce": 0.656539301322509,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 16,
+              "mean": 0.5302055180072784,
+              "median": 0.5302343964576721,
+              "min": 0.5293932557106018,
+              "max": 0.5310099124908447
+            },
+            "negative": {
+              "count": 64,
+              "mean": 0.5290059130638838,
+              "median": 0.5289933681488037,
+              "min": 0.5286785364151001,
+              "max": 0.5293124914169312
+            },
+            "ignored_pixels": 4016,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-e59c75f02fe23bb9a1ae",
+          "metrics": {
+            "tp": 5,
+            "fp": 256,
+            "fn": 0,
+            "tn": 0,
+            "supervised_pixels": 261,
+            "positive_pixels": 5,
+            "stable_pixels": 256,
+            "ignored_pixels": 3835,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 0.019157088122605363,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "f1": 0.03759398496240601,
+            "dice": 0.03759398496240601,
+            "iou": 0.019157088122605363,
+            "accuracy": 0.019157088122605363,
+            "balanced_accuracy": 0.5
+          },
+          "fit": {
+            "passed": false,
+            "reasons": [
+              "precision_below_minimum",
+              "specificity_below_minimum",
+              "dice_below_minimum",
+              "only_one_predicted_class"
+            ],
+            "precision": 0.019157088122605363,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "dice": 0.03759398496240601,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.9521104097366333,
+          "unweighted_bce": 0.7518303394317627,
+          "mean_weight_normalized_bce": 0.7236119900904515,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 5,
+              "mean": 0.5303333759307861,
+              "median": 0.5301867127418518,
+              "min": 0.5296920537948608,
+              "max": 0.5311635136604309
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.5295783600304276,
+              "median": 0.5293731987476349,
+              "min": 0.5290241837501526,
+              "max": 0.5319158434867859
+            },
+            "ignored_pixels": 3835,
+            "training_pairwise_auc": 0.896875
+          }
+        },
+        {
+          "event_id": "event-e6224bcd39746b840ea4",
+          "metrics": {
+            "tp": 6,
+            "fp": 256,
+            "fn": 0,
+            "tn": 0,
+            "supervised_pixels": 262,
+            "positive_pixels": 6,
+            "stable_pixels": 256,
+            "ignored_pixels": 3834,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 0.022900763358778626,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "f1": 0.04477611940298507,
+            "dice": 0.04477611940298507,
+            "iou": 0.022900763358778626,
+            "accuracy": 0.022900763358778626,
+            "balanced_accuracy": 0.5
+          },
+          "fit": {
+            "passed": false,
+            "reasons": [
+              "precision_below_minimum",
+              "specificity_below_minimum",
+              "dice_below_minimum",
+              "only_one_predicted_class"
+            ],
+            "precision": 0.022900763358778626,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "dice": 0.04477611940298507,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.9891983866691589,
+          "unweighted_bce": 0.7499794363975525,
+          "mean_weight_normalized_bce": 0.7181199826300144,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 6,
+              "mean": 0.5306141277154287,
+              "median": 0.5304684937000275,
+              "min": 0.5304250717163086,
+              "max": 0.5313445329666138
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.5289088275749236,
+              "median": 0.5289422273635864,
+              "min": 0.527091920375824,
+              "max": 0.5300773978233337
+            },
+            "ignored_pixels": 3834,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-073d95e8a1c667845607",
+          "metrics": {
+            "tp": 12,
+            "fp": 64,
+            "fn": 0,
+            "tn": 0,
+            "supervised_pixels": 76,
+            "positive_pixels": 12,
+            "stable_pixels": 64,
+            "ignored_pixels": 4020,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 0.15789473684210525,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "f1": 0.2727272727272727,
+            "dice": 0.2727272727272727,
+            "iou": 0.15789473684210525,
+            "accuracy": 0.15789473684210525,
+            "balanced_accuracy": 0.5
+          },
+          "fit": {
+            "passed": false,
+            "reasons": [
+              "precision_below_minimum",
+              "specificity_below_minimum",
+              "dice_below_minimum",
+              "only_one_predicted_class"
+            ],
+            "precision": 0.15789473684210525,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "dice": 0.2727272727272727,
+            "minimum": 0.95
+          },
+          "weighted_bce": 2.387028932571411,
+          "unweighted_bce": 0.7351393699645996,
+          "mean_weight_normalized_bce": 0.6625760456218439,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 12,
+              "mean": 0.5300969630479813,
+              "median": 0.5300712883472443,
+              "min": 0.5296238660812378,
+              "max": 0.5307788848876953
+            },
+            "negative": {
+              "count": 64,
+              "mean": 0.5295061273500323,
+              "median": 0.5294144153594971,
+              "min": 0.5290572643280029,
+              "max": 0.5305224061012268
+            },
+            "ignored_pixels": 4020,
+            "training_pairwise_auc": 0.9114583333333334
+          }
+        },
+        {
+          "event_id": "event-4fa26438d5872a8480af",
+          "metrics": {
+            "tp": 6,
+            "fp": 256,
+            "fn": 0,
+            "tn": 0,
+            "supervised_pixels": 262,
+            "positive_pixels": 6,
+            "stable_pixels": 256,
+            "ignored_pixels": 3834,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 0.022900763358778626,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "f1": 0.04477611940298507,
+            "dice": 0.04477611940298507,
+            "iou": 0.022900763358778626,
+            "accuracy": 0.022900763358778626,
+            "balanced_accuracy": 0.5
+          },
+          "fit": {
+            "passed": false,
+            "reasons": [
+              "precision_below_minimum",
+              "specificity_below_minimum",
+              "dice_below_minimum",
+              "only_one_predicted_class"
+            ],
+            "precision": 0.022900763358778626,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "dice": 0.04477611940298507,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.9895741939544678,
+          "unweighted_bce": 0.7497026324272156,
+          "mean_weight_normalized_bce": 0.7183928042650223,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 6,
+              "mean": 0.5296975274880728,
+              "median": 0.5296467542648315,
+              "min": 0.5291587710380554,
+              "max": 0.5303994417190552
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.5287564848549664,
+              "median": 0.5287131369113922,
+              "min": 0.5283016562461853,
+              "max": 0.5292647480964661
+            },
+            "ignored_pixels": 3834,
+            "training_pairwise_auc": 0.9967447916666666
+          }
+        },
+        {
+          "event_id": "event-a72e10d66054921e60b2",
+          "metrics": {
+            "tp": 15,
+            "fp": 256,
+            "fn": 0,
+            "tn": 0,
+            "supervised_pixels": 271,
+            "positive_pixels": 15,
+            "stable_pixels": 256,
+            "ignored_pixels": 3825,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 0.055350553505535055,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "f1": 0.1048951048951049,
+            "dice": 0.1048951048951049,
+            "iou": 0.055350553505535055,
+            "accuracy": 0.055350553505535055,
+            "balanced_accuracy": 0.5
+          },
+          "fit": {
+            "passed": false,
+            "reasons": [
+              "precision_below_minimum",
+              "specificity_below_minimum",
+              "dice_below_minimum",
+              "only_one_predicted_class"
+            ],
+            "precision": 0.055350553505535055,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "dice": 0.1048951048951049,
+            "minimum": 0.95
+          },
+          "weighted_bce": 1.3269076347351074,
+          "unweighted_bce": 0.7472391724586487,
+          "mean_weight_normalized_bce": 0.6938559001353931,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 15,
+              "mean": 0.529752782980601,
+              "median": 0.529578447341919,
+              "min": 0.5292315483093262,
+              "max": 0.5305253267288208
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.5294224945828319,
+              "median": 0.5292530655860901,
+              "min": 0.528575599193573,
+              "max": 0.5320340991020203
+            },
+            "ignored_pixels": 3825,
+            "training_pairwise_auc": 0.8317708333333333
+          }
+        },
+        {
+          "event_id": "event-f7e5f043776b24cb7dfa",
+          "metrics": {
+            "tp": 10,
+            "fp": 144,
+            "fn": 0,
+            "tn": 0,
+            "supervised_pixels": 154,
+            "positive_pixels": 10,
+            "stable_pixels": 144,
+            "ignored_pixels": 3942,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 0.06493506493506493,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "f1": 0.12195121951219512,
+            "dice": 0.12195121951219512,
+            "iou": 0.06493506493506493,
+            "accuracy": 0.06493506493506493,
+            "balanced_accuracy": 0.5
+          },
+          "fit": {
+            "passed": false,
+            "reasons": [
+              "precision_below_minimum",
+              "specificity_below_minimum",
+              "dice_below_minimum",
+              "only_one_predicted_class"
+            ],
+            "precision": 0.06493506493506493,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "dice": 0.12195121951219512,
+            "minimum": 0.95
+          },
+          "weighted_bce": 1.4256807565689087,
+          "unweighted_bce": 0.7462831735610962,
+          "mean_weight_normalized_bce": 0.6886170719768486,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 10,
+              "mean": 0.5300727128982544,
+              "median": 0.5301309823989868,
+              "min": 0.5295003056526184,
+              "max": 0.5305256843566895
+            },
+            "negative": {
+              "count": 144,
+              "mean": 0.5295327963928381,
+              "median": 0.5295137465000153,
+              "min": 0.529091477394104,
+              "max": 0.5301729440689087
+            },
+            "ignored_pixels": 3942,
+            "training_pairwise_auc": 0.8888888888888888
+          }
+        },
+        {
+          "event_id": "event-0012effe85aa26b69541",
+          "metrics": {
+            "tp": 15,
+            "fp": 256,
+            "fn": 0,
+            "tn": 0,
+            "supervised_pixels": 271,
+            "positive_pixels": 15,
+            "stable_pixels": 256,
+            "ignored_pixels": 3825,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 0.055350553505535055,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "f1": 0.1048951048951049,
+            "dice": 0.1048951048951049,
+            "iou": 0.055350553505535055,
+            "accuracy": 0.055350553505535055,
+            "balanced_accuracy": 0.5
+          },
+          "fit": {
+            "passed": false,
+            "reasons": [
+              "precision_below_minimum",
+              "specificity_below_minimum",
+              "dice_below_minimum",
+              "only_one_predicted_class"
+            ],
+            "precision": 0.055350553505535055,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "dice": 0.1048951048951049,
+            "minimum": 0.95
+          },
+          "weighted_bce": 1.3253123760223389,
+          "unweighted_bce": 0.7463704347610474,
+          "mean_weight_normalized_bce": 0.6930217202413889,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 15,
+              "mean": 0.5301749388376872,
+              "median": 0.5303763151168823,
+              "min": 0.5289201736450195,
+              "max": 0.5312539935112
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.5290118376724422,
+              "median": 0.5289757549762726,
+              "min": 0.5285874009132385,
+              "max": 0.5295731425285339
+            },
+            "ignored_pixels": 3825,
+            "training_pairwise_auc": 0.9252604166666667
+          }
+        },
+        {
+          "event_id": "event-65fa6d8d7a0c82498340",
+          "metrics": {
+            "tp": 18,
+            "fp": 64,
+            "fn": 0,
+            "tn": 0,
+            "supervised_pixels": 82,
+            "positive_pixels": 18,
+            "stable_pixels": 64,
+            "ignored_pixels": 4014,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 0.21951219512195122,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "f1": 0.36,
+            "dice": 0.36,
+            "iou": 0.21951219512195122,
+            "accuracy": 0.21951219512195122,
+            "balanced_accuracy": 0.5
+          },
+          "fit": {
+            "passed": false,
+            "reasons": [
+              "precision_below_minimum",
+              "specificity_below_minimum",
+              "dice_below_minimum",
+              "only_one_predicted_class"
+            ],
+            "precision": 0.21951219512195122,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "dice": 0.36,
+            "minimum": 0.95
+          },
+          "weighted_bce": 3.0268516540527344,
+          "unweighted_bce": 0.7280011773109436,
+          "mean_weight_normalized_bce": 0.6554014616060603,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 18,
+              "mean": 0.5297572314739227,
+              "median": 0.529755711555481,
+              "min": 0.5289697647094727,
+              "max": 0.5306544899940491
+            },
+            "negative": {
+              "count": 64,
+              "mean": 0.529548728838563,
+              "median": 0.5296023786067963,
+              "min": 0.5286722779273987,
+              "max": 0.5301030278205872
+            },
+            "ignored_pixels": 4014,
+            "training_pairwise_auc": 0.6137152777777778
+          }
+        },
+        {
+          "event_id": "event-e932f0d28b2819f8368d",
+          "metrics": {
+            "tp": 4,
+            "fp": 256,
+            "fn": 0,
+            "tn": 0,
+            "supervised_pixels": 260,
+            "positive_pixels": 4,
+            "stable_pixels": 256,
+            "ignored_pixels": 3836,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 0.015384615384615385,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "f1": 0.030303030303030304,
+            "dice": 0.030303030303030304,
+            "iou": 0.015384615384615385,
+            "accuracy": 0.015384615384615385,
+            "balanced_accuracy": 0.5
+          },
+          "fit": {
+            "passed": false,
+            "reasons": [
+              "precision_below_minimum",
+              "specificity_below_minimum",
+              "dice_below_minimum",
+              "only_one_predicted_class"
+            ],
+            "precision": 0.015384615384615385,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "dice": 0.030303030303030304,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.9116050004959106,
+          "unweighted_bce": 0.7507782578468323,
+          "mean_weight_normalized_bce": 0.7271946586368142,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 4,
+              "mean": 0.5303616523742676,
+              "median": 0.5303545892238617,
+              "min": 0.5301557779312134,
+              "max": 0.5305816531181335
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.5288596192840487,
+              "median": 0.5288877785205841,
+              "min": 0.5269460082054138,
+              "max": 0.5301818251609802
+            },
+            "ignored_pixels": 3836,
+            "training_pairwise_auc": 0.9990234375
+          }
+        }
+      ],
+      "all_examples_fit": false,
+      "fit_passed": false
+    },
+    {
+      "attempt": 26,
+      "arrays_file": "checkpoint_0026.npz",
+      "parameter_sha256": "97b08a95773e3c78ba7a302392642dfd7f852da8542fa994fce10817a555e03a",
+      "aggregate": {
+        "metrics": {
+          "tp": 151,
+          "fp": 2640,
+          "fn": 0,
+          "tn": 0,
+          "supervised_pixels": 2791,
+          "positive_pixels": 151,
+          "stable_pixels": 2640,
+          "ignored_pixels": 50457,
+          "updates": 13,
+          "empty_updates": 0,
+          "probability_threshold": 0.5,
+          "precision": 0.05410247223217485,
+          "recall": 1.0,
+          "specificity": 0.0,
+          "f1": 0.1026512576478586,
+          "dice": 0.1026512576478586,
+          "iou": 0.05410247223217485,
+          "accuracy": 0.05410247223217485,
+          "balanced_accuracy": 0.5
+        },
+        "fit": {
+          "passed": false,
+          "reasons": [
+            "precision_below_minimum",
+            "specificity_below_minimum",
+            "dice_below_minimum",
+            "only_one_predicted_class"
+          ],
+          "precision": 0.05410247223217485,
+          "recall": 1.0,
+          "specificity": 0.0,
+          "dice": 0.1026512576478586,
+          "minimum": 0.95
+        },
+        "weighted_bce": 1.2686058566460086,
+        "unweighted_bce": 0.695946463522882,
+        "mean_weight_normalized_bce": 0.6705831336929944
+      },
+      "examples": [
+        {
+          "event_id": "event-e691d44c335d87649310",
+          "metrics": {
+            "tp": 25,
+            "fp": 256,
+            "fn": 0,
+            "tn": 0,
+            "supervised_pixels": 281,
+            "positive_pixels": 25,
+            "stable_pixels": 256,
+            "ignored_pixels": 3815,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 0.08896797153024912,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "f1": 0.16339869281045752,
+            "dice": 0.16339869281045752,
+            "iou": 0.08896797153024912,
+            "accuracy": 0.08896797153024912,
+            "balanced_accuracy": 0.5
+          },
+          "fit": {
+            "passed": false,
+            "reasons": [
+              "precision_below_minimum",
+              "specificity_below_minimum",
+              "dice_below_minimum",
+              "only_one_predicted_class"
+            ],
+            "precision": 0.08896797153024912,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "dice": 0.16339869281045752,
+            "minimum": 0.95
+          },
+          "weighted_bce": 1.63213312625885,
+          "unweighted_bce": 0.6917843818664551,
+          "mean_weight_normalized_bce": 0.6617206914108055,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 25,
+              "mean": 0.5266617202758789,
+              "median": 0.5274221301078796,
+              "min": 0.5175104141235352,
+              "max": 0.531663179397583
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.5017839202191681,
+              "median": 0.5016517639160156,
+              "min": 0.5008496046066284,
+              "max": 0.5043472051620483
+            },
+            "ignored_pixels": 3815,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-263e9027a6142dc9fc84",
+          "metrics": {
+            "tp": 13,
+            "fp": 256,
+            "fn": 0,
+            "tn": 0,
+            "supervised_pixels": 269,
+            "positive_pixels": 13,
+            "stable_pixels": 256,
+            "ignored_pixels": 3827,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 0.048327137546468404,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "f1": 0.09219858156028368,
+            "dice": 0.09219858156028368,
+            "iou": 0.048327137546468404,
+            "accuracy": 0.048327137546468404,
+            "balanced_accuracy": 0.5
+          },
+          "fit": {
+            "passed": false,
+            "reasons": [
+              "precision_below_minimum",
+              "specificity_below_minimum",
+              "dice_below_minimum",
+              "only_one_predicted_class"
+            ],
+            "precision": 0.048327137546468404,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "dice": 0.09219858156028368,
+            "minimum": 0.95
+          },
+          "weighted_bce": 1.2005873918533325,
+          "unweighted_bce": 0.6947802305221558,
+          "mean_weight_normalized_bce": 0.6682561289970745,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 13,
+              "mean": 0.5299590642635639,
+              "median": 0.529749870300293,
+              "min": 0.52632075548172,
+              "max": 0.53167325258255
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.5023299143649638,
+              "median": 0.5023082494735718,
+              "min": 0.5018858909606934,
+              "max": 0.5030279159545898
+            },
+            "ignored_pixels": 3827,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-8628872c64f4cabf6e67",
+          "metrics": {
+            "tp": 6,
+            "fp": 256,
+            "fn": 0,
+            "tn": 0,
+            "supervised_pixels": 262,
+            "positive_pixels": 6,
+            "stable_pixels": 256,
+            "ignored_pixels": 3834,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 0.022900763358778626,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "f1": 0.04477611940298507,
+            "dice": 0.04477611940298507,
+            "iou": 0.022900763358778626,
+            "accuracy": 0.022900763358778626,
+            "balanced_accuracy": 0.5
+          },
+          "fit": {
+            "passed": false,
+            "reasons": [
+              "precision_below_minimum",
+              "specificity_below_minimum",
+              "dice_below_minimum",
+              "only_one_predicted_class"
+            ],
+            "precision": 0.022900763358778626,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "dice": 0.04477611940298507,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.9430620670318604,
+          "unweighted_bce": 0.7007558345794678,
+          "mean_weight_normalized_bce": 0.6846267890471679,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 6,
+              "mean": 0.5262923638025919,
+              "median": 0.526351809501648,
+              "min": 0.5254729986190796,
+              "max": 0.5271092057228088
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.5044733930844814,
+              "median": 0.5044435560703278,
+              "min": 0.5031449794769287,
+              "max": 0.5067355036735535
+            },
+            "ignored_pixels": 3834,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-b9d89f91b116d8d90fac",
+          "metrics": {
+            "tp": 16,
+            "fp": 64,
+            "fn": 0,
+            "tn": 0,
+            "supervised_pixels": 80,
+            "positive_pixels": 16,
+            "stable_pixels": 64,
+            "ignored_pixels": 4016,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 0.2,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "f1": 0.3333333333333333,
+            "dice": 0.3333333333333333,
+            "iou": 0.2,
+            "accuracy": 0.2,
+            "balanced_accuracy": 0.5
+          },
+          "fit": {
+            "passed": false,
+            "reasons": [
+              "precision_below_minimum",
+              "specificity_below_minimum",
+              "dice_below_minimum",
+              "only_one_predicted_class"
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "dice": 0.3333333333333333,
+            "minimum": 0.95
+          },
+          "weighted_bce": 2.7918150424957275,
+          "unweighted_bce": 0.6876338720321655,
+          "mean_weight_normalized_bce": 0.6497596661788761,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 16,
+              "mean": 0.5282164514064789,
+              "median": 0.5288108587265015,
+              "min": 0.5206859111785889,
+              "max": 0.5323997735977173
+            },
+            "negative": {
+              "count": 64,
+              "mean": 0.503402036614716,
+              "median": 0.503411203622818,
+              "min": 0.5029711127281189,
+              "max": 0.503807008266449
+            },
+            "ignored_pixels": 4016,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-e59c75f02fe23bb9a1ae",
+          "metrics": {
+            "tp": 5,
+            "fp": 256,
+            "fn": 0,
+            "tn": 0,
+            "supervised_pixels": 261,
+            "positive_pixels": 5,
+            "stable_pixels": 256,
+            "ignored_pixels": 3835,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 0.019157088122605363,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "f1": 0.03759398496240601,
+            "dice": 0.03759398496240601,
+            "iou": 0.019157088122605363,
+            "accuracy": 0.019157088122605363,
+            "balanced_accuracy": 0.5
+          },
+          "fit": {
+            "passed": false,
+            "reasons": [
+              "precision_below_minimum",
+              "specificity_below_minimum",
+              "dice_below_minimum",
+              "only_one_predicted_class"
+            ],
+            "precision": 0.019157088122605363,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "dice": 0.03759398496240601,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.9047826528549194,
+          "unweighted_bce": 0.7003373503684998,
+          "mean_weight_normalized_bce": 0.6876424932826525,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 5,
+              "mean": 0.5233863115310669,
+              "median": 0.5236856341362,
+              "min": 0.521459698677063,
+              "max": 0.525730550289154
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.504087220178917,
+              "median": 0.5031796395778656,
+              "min": 0.5019945502281189,
+              "max": 0.5141038298606873
+            },
+            "ignored_pixels": 3835,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-e6224bcd39746b840ea4",
+          "metrics": {
+            "tp": 6,
+            "fp": 256,
+            "fn": 0,
+            "tn": 0,
+            "supervised_pixels": 262,
+            "positive_pixels": 6,
+            "stable_pixels": 256,
+            "ignored_pixels": 3834,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 0.022900763358778626,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "f1": 0.04477611940298507,
+            "dice": 0.04477611940298507,
+            "iou": 0.022900763358778626,
+            "accuracy": 0.022900763358778626,
+            "balanced_accuracy": 0.5
+          },
+          "fit": {
+            "passed": false,
+            "reasons": [
+              "precision_below_minimum",
+              "specificity_below_minimum",
+              "dice_below_minimum",
+              "only_one_predicted_class"
+            ],
+            "precision": 0.022900763358778626,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "dice": 0.04477611940298507,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.9365218281745911,
+          "unweighted_bce": 0.6963282227516174,
+          "mean_weight_normalized_bce": 0.6798788271844387,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 6,
+              "mean": 0.5292515456676483,
+              "median": 0.5300905406475067,
+              "min": 0.5239861011505127,
+              "max": 0.5311315059661865
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.5022871242836118,
+              "median": 0.5018864870071411,
+              "min": 0.501613199710846,
+              "max": 0.5069374442100525
+            },
+            "ignored_pixels": 3834,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-073d95e8a1c667845607",
+          "metrics": {
+            "tp": 12,
+            "fp": 64,
+            "fn": 0,
+            "tn": 0,
+            "supervised_pixels": 76,
+            "positive_pixels": 12,
+            "stable_pixels": 64,
+            "ignored_pixels": 4020,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 0.15789473684210525,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "f1": 0.2727272727272727,
+            "dice": 0.2727272727272727,
+            "iou": 0.15789473684210525,
+            "accuracy": 0.15789473684210525,
+            "balanced_accuracy": 0.5
+          },
+          "fit": {
+            "passed": false,
+            "reasons": [
+              "precision_below_minimum",
+              "specificity_below_minimum",
+              "dice_below_minimum",
+              "only_one_predicted_class"
+            ],
+            "precision": 0.15789473684210525,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "dice": 0.2727272727272727,
+            "minimum": 0.95
+          },
+          "weighted_bce": 2.3817970752716064,
+          "unweighted_bce": 0.6937893629074097,
+          "mean_weight_normalized_bce": 0.6611238205257584,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 12,
+              "mean": 0.5227916687726974,
+              "median": 0.5228286981582642,
+              "min": 0.5215849876403809,
+              "max": 0.5236287117004395
+            },
+            "negative": {
+              "count": 64,
+              "mean": 0.5045380368828773,
+              "median": 0.5041232109069824,
+              "min": 0.5038890242576599,
+              "max": 0.5077654719352722
+            },
+            "ignored_pixels": 4020,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-4fa26438d5872a8480af",
+          "metrics": {
+            "tp": 6,
+            "fp": 256,
+            "fn": 0,
+            "tn": 0,
+            "supervised_pixels": 262,
+            "positive_pixels": 6,
+            "stable_pixels": 256,
+            "ignored_pixels": 3834,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 0.022900763358778626,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "f1": 0.04477611940298507,
+            "dice": 0.04477611940298507,
+            "iou": 0.022900763358778626,
+            "accuracy": 0.022900763358778626,
+            "balanced_accuracy": 0.5
+          },
+          "fit": {
+            "passed": false,
+            "reasons": [
+              "precision_below_minimum",
+              "specificity_below_minimum",
+              "dice_below_minimum",
+              "only_one_predicted_class"
+            ],
+            "precision": 0.022900763358778626,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "dice": 0.04477611940298507,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.9406493306159973,
+          "unweighted_bce": 0.694828987121582,
+          "mean_weight_normalized_bce": 0.6828752352068058,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 6,
+              "mean": 0.5214168230692545,
+              "median": 0.5216386318206787,
+              "min": 0.5189823508262634,
+              "max": 0.5226932764053345
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.5013501150533557,
+              "median": 0.5012284815311432,
+              "min": 0.5007886290550232,
+              "max": 0.5021383762359619
+            },
+            "ignored_pixels": 3834,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-a72e10d66054921e60b2",
+          "metrics": {
+            "tp": 15,
+            "fp": 256,
+            "fn": 0,
+            "tn": 0,
+            "supervised_pixels": 271,
+            "positive_pixels": 15,
+            "stable_pixels": 256,
+            "ignored_pixels": 3825,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 0.055350553505535055,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "f1": 0.1048951048951049,
+            "dice": 0.1048951048951049,
+            "iou": 0.055350553505535055,
+            "accuracy": 0.055350553505535055,
+            "balanced_accuracy": 0.5
+          },
+          "fit": {
+            "passed": false,
+            "reasons": [
+              "precision_below_minimum",
+              "specificity_below_minimum",
+              "dice_below_minimum",
+              "only_one_predicted_class"
+            ],
+            "precision": 0.055350553505535055,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "dice": 0.1048951048951049,
+            "minimum": 0.95
+          },
+          "weighted_bce": 1.2825958728790283,
+          "unweighted_bce": 0.6976376175880432,
+          "mean_weight_normalized_bce": 0.670684748953214,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 15,
+              "mean": 0.5266948143641154,
+              "median": 0.5265675187110901,
+              "min": 0.521599292755127,
+              "max": 0.5300105214118958
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.503878619754687,
+              "median": 0.5030252635478973,
+              "min": 0.5023697018623352,
+              "max": 0.5133652687072754
+            },
+            "ignored_pixels": 3825,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-f7e5f043776b24cb7dfa",
+          "metrics": {
+            "tp": 10,
+            "fp": 144,
+            "fn": 0,
+            "tn": 0,
+            "supervised_pixels": 154,
+            "positive_pixels": 10,
+            "stable_pixels": 144,
+            "ignored_pixels": 3942,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 0.06493506493506493,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "f1": 0.12195121951219512,
+            "dice": 0.12195121951219512,
+            "iou": 0.06493506493506493,
+            "accuracy": 0.06493506493506493,
+            "balanced_accuracy": 0.5
+          },
+          "fit": {
+            "passed": false,
+            "reasons": [
+              "precision_below_minimum",
+              "specificity_below_minimum",
+              "dice_below_minimum",
+              "only_one_predicted_class"
+            ],
+            "precision": 0.06493506493506493,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "dice": 0.12195121951219512,
+            "minimum": 0.95
+          },
+          "weighted_bce": 1.3905104398727417,
+          "unweighted_bce": 0.698395311832428,
+          "mean_weight_normalized_bce": 0.6716294817381342,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 10,
+              "mean": 0.5238152921199799,
+              "median": 0.5246678292751312,
+              "min": 0.518161952495575,
+              "max": 0.5249983072280884
+            },
+            "negative": {
+              "count": 144,
+              "mean": 0.504401634964678,
+              "median": 0.5042709112167358,
+              "min": 0.503075897693634,
+              "max": 0.5069446563720703
+            },
+            "ignored_pixels": 3942,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-0012effe85aa26b69541",
+          "metrics": {
+            "tp": 15,
+            "fp": 256,
+            "fn": 0,
+            "tn": 0,
+            "supervised_pixels": 271,
+            "positive_pixels": 15,
+            "stable_pixels": 256,
+            "ignored_pixels": 3825,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 0.055350553505535055,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "f1": 0.1048951048951049,
+            "dice": 0.1048951048951049,
+            "iou": 0.055350553505535055,
+            "accuracy": 0.055350553505535055,
+            "balanced_accuracy": 0.5
+          },
+          "fit": {
+            "passed": false,
+            "reasons": [
+              "precision_below_minimum",
+              "specificity_below_minimum",
+              "dice_below_minimum",
+              "only_one_predicted_class"
+            ],
+            "precision": 0.055350553505535055,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "dice": 0.1048951048951049,
+            "minimum": 0.95
+          },
+          "weighted_bce": 1.2782926559448242,
+          "unweighted_bce": 0.6950460076332092,
+          "mean_weight_normalized_bce": 0.6684345452606592,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 15,
+              "mean": 0.52769429286321,
+              "median": 0.5286601781845093,
+              "min": 0.520063042640686,
+              "max": 0.5328969955444336
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.5025766857434064,
+              "median": 0.5024847090244293,
+              "min": 0.5018917322158813,
+              "max": 0.5046224594116211
+            },
+            "ignored_pixels": 3825,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-65fa6d8d7a0c82498340",
+          "metrics": {
+            "tp": 18,
+            "fp": 64,
+            "fn": 0,
+            "tn": 0,
+            "supervised_pixels": 82,
+            "positive_pixels": 18,
+            "stable_pixels": 64,
+            "ignored_pixels": 4014,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 0.21951219512195122,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "f1": 0.36,
+            "dice": 0.36,
+            "iou": 0.21951219512195122,
+            "accuracy": 0.21951219512195122,
+            "balanced_accuracy": 0.5
+          },
+          "fit": {
+            "passed": false,
+            "reasons": [
+              "precision_below_minimum",
+              "specificity_below_minimum",
+              "dice_below_minimum",
+              "only_one_predicted_class"
+            ],
+            "precision": 0.21951219512195122,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "dice": 0.36,
+            "minimum": 0.95
+          },
+          "weighted_bce": 3.0161073207855225,
+          "unweighted_bce": 0.6881486177444458,
+          "mean_weight_normalized_bce": 0.6530750008038321,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 18,
+              "mean": 0.5255158775382571,
+              "median": 0.5260210335254669,
+              "min": 0.5222086906433105,
+              "max": 0.5284010171890259
+            },
+            "negative": {
+              "count": 64,
+              "mean": 0.5037816502153873,
+              "median": 0.5037923157215118,
+              "min": 0.5033034682273865,
+              "max": 0.504224956035614
+            },
+            "ignored_pixels": 4014,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-e932f0d28b2819f8368d",
+          "metrics": {
+            "tp": 4,
+            "fp": 256,
+            "fn": 0,
+            "tn": 0,
+            "supervised_pixels": 260,
+            "positive_pixels": 4,
+            "stable_pixels": 256,
+            "ignored_pixels": 3836,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 0.015384615384615385,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "f1": 0.030303030303030304,
+            "dice": 0.030303030303030304,
+            "iou": 0.015384615384615385,
+            "accuracy": 0.015384615384615385,
+            "balanced_accuracy": 0.5
+          },
+          "fit": {
+            "passed": false,
+            "reasons": [
+              "precision_below_minimum",
+              "specificity_below_minimum",
+              "dice_below_minimum",
+              "only_one_predicted_class"
+            ],
+            "precision": 0.015384615384615385,
+            "recall": 1.0,
+            "specificity": 0.0,
+            "dice": 0.030303030303030304,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.8623852729797363,
+          "unweighted_bce": 0.6965115070343018,
+          "mean_weight_normalized_bce": 0.6879316851671092,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 4,
+              "mean": 0.5199133604764938,
+              "median": 0.520511269569397,
+              "min": 0.5171527862548828,
+              "max": 0.5214781165122986
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.5020077514927834,
+              "median": 0.5015614330768585,
+              "min": 0.5011086463928223,
+              "max": 0.5068612098693848
+            },
+            "ignored_pixels": 3836,
+            "training_pairwise_auc": 1.0
+          }
+        }
+      ],
+      "all_examples_fit": false,
+      "fit_passed": false
+    },
+    {
+      "attempt": 416,
+      "arrays_file": "checkpoint_0416.npz",
+      "parameter_sha256": "13e563e09986be346eccd0a4c7b5bbb1f87fb73f290c215d7121cbc8e2aa1c22",
+      "aggregate": {
+        "metrics": {
+          "tp": 151,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2640,
+          "supervised_pixels": 2791,
+          "positive_pixels": 151,
+          "stable_pixels": 2640,
+          "ignored_pixels": 50457,
+          "updates": 13,
+          "empty_updates": 0,
+          "probability_threshold": 0.5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": 1.0,
+          "f1": 1.0,
+          "dice": 1.0,
+          "iou": 1.0,
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0
+        },
+        "fit": {
+          "passed": true,
+          "reasons": [],
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": 1.0,
+          "dice": 1.0,
+          "minimum": 0.95
+        },
+        "weighted_bce": 0.0017540961768659515,
+        "unweighted_bce": 0.0010610375569761934,
+        "mean_weight_normalized_bce": 0.0009272125813698619
+      },
+      "examples": [
+        {
+          "event_id": "event-e691d44c335d87649310",
+          "metrics": {
+            "tp": 25,
+            "fp": 0,
+            "fn": 0,
+            "tn": 256,
+            "supervised_pixels": 281,
+            "positive_pixels": 25,
+            "stable_pixels": 256,
+            "ignored_pixels": 3815,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.001488434849306941,
+          "unweighted_bce": 0.0005704881623387337,
+          "mean_weight_normalized_bce": 0.000603460662465055,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 25,
+              "mean": 0.9993760633468628,
+              "median": 0.9999717473983765,
+              "min": 0.992487907409668,
+              "max": 0.9999960660934448
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.0005639129600467641,
+              "median": 0.00018637355969985947,
+              "min": 0.00016314128879457712,
+              "max": 0.0062800864689052105
+            },
+            "ignored_pixels": 3815,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-263e9027a6142dc9fc84",
+          "metrics": {
+            "tp": 13,
+            "fp": 0,
+            "fn": 0,
+            "tn": 256,
+            "supervised_pixels": 269,
+            "positive_pixels": 13,
+            "stable_pixels": 256,
+            "ignored_pixels": 3827,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.0003366484888829291,
+          "unweighted_bce": 0.00031998485792428255,
+          "mean_weight_normalized_bce": 0.00018738112488949374,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 13,
+              "mean": 0.9999790741847112,
+              "median": 0.9999871253967285,
+              "min": 0.9998973608016968,
+              "max": 0.9999946355819702
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.00033514002876700033,
+              "median": 0.0003316433430882171,
+              "min": 0.00024236683384515345,
+              "max": 0.0005111407372169197
+            },
+            "ignored_pixels": 3827,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-8628872c64f4cabf6e67",
+          "metrics": {
+            "tp": 6,
+            "fp": 0,
+            "fn": 0,
+            "tn": 256,
+            "supervised_pixels": 262,
+            "positive_pixels": 6,
+            "stable_pixels": 256,
+            "ignored_pixels": 3834,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.0017342271748930216,
+          "unweighted_bce": 0.0016960164066404104,
+          "mean_weight_normalized_bce": 0.0012589822279271455,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 6,
+              "mean": 0.999898781379064,
+              "median": 0.9999114274978638,
+              "min": 0.9998201727867126,
+              "max": 0.9999648332595825
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.0017315901247911825,
+              "median": 0.0015407538739964366,
+              "min": 0.0007717031403444707,
+              "max": 0.005227333400398493
+            },
+            "ignored_pixels": 3834,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-b9d89f91b116d8d90fac",
+          "metrics": {
+            "tp": 16,
+            "fp": 0,
+            "fn": 0,
+            "tn": 64,
+            "supervised_pixels": 80,
+            "positive_pixels": 16,
+            "stable_pixels": 64,
+            "ignored_pixels": 4016,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.0017713147681206465,
+          "unweighted_bce": 0.00142779597081244,
+          "mean_weight_normalized_bce": 0.0004122511251328878,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 16,
+              "mean": 0.9998958334326744,
+              "median": 0.9999857544898987,
+              "min": 0.9991952776908875,
+              "max": 0.9999971389770508
+            },
+            "negative": {
+              "count": 64,
+              "mean": 0.001757119101966964,
+              "median": 0.0017550859483890235,
+              "min": 0.0015678744530305266,
+              "max": 0.0020425112452358007
+            },
+            "ignored_pixels": 4016,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-e59c75f02fe23bb9a1ae",
+          "metrics": {
+            "tp": 5,
+            "fp": 0,
+            "fn": 0,
+            "tn": 256,
+            "supervised_pixels": 261,
+            "positive_pixels": 5,
+            "stable_pixels": 256,
+            "ignored_pixels": 3835,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.0027397016528993845,
+          "unweighted_bce": 0.002472431631758809,
+          "mean_weight_normalized_bce": 0.0020821965026692696,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 5,
+              "mean": 0.9991541385650635,
+              "median": 0.9989564418792725,
+              "min": 0.9983755350112915,
+              "max": 0.9998636245727539
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.002479444302707634,
+              "median": 0.0007719967979937792,
+              "min": 0.00033392439945600927,
+              "max": 0.053089290857315063
+            },
+            "ignored_pixels": 3835,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-e6224bcd39746b840ea4",
+          "metrics": {
+            "tp": 6,
+            "fp": 0,
+            "fn": 0,
+            "tn": 256,
+            "supervised_pixels": 262,
+            "positive_pixels": 6,
+            "stable_pixels": 256,
+            "ignored_pixels": 3834,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.0009340582182630897,
+          "unweighted_bce": 0.0009048968204297125,
+          "mean_weight_normalized_bce": 0.0006780903411429161,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 6,
+              "mean": 0.9999227623144785,
+              "median": 0.9999825358390808,
+              "min": 0.9996114373207092,
+              "max": 0.9999916553497314
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.0009211949513314721,
+              "median": 0.0003123524656984955,
+              "min": 0.00022747369075659662,
+              "max": 0.010750127024948597
+            },
+            "ignored_pixels": 3834,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-073d95e8a1c667845607",
+          "metrics": {
+            "tp": 12,
+            "fp": 0,
+            "fn": 0,
+            "tn": 64,
+            "supervised_pixels": 76,
+            "positive_pixels": 12,
+            "stable_pixels": 64,
+            "ignored_pixels": 4020,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.002614850178360939,
+          "unweighted_bce": 0.0007090610451996326,
+          "mean_weight_normalized_bce": 0.0007258131928906282,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 12,
+              "mean": 0.999268114566803,
+              "median": 0.9994377791881561,
+              "min": 0.9982819557189941,
+              "max": 0.9996994733810425
+            },
+            "negative": {
+              "count": 64,
+              "mean": 0.0007044492149361758,
+              "median": 0.0006248483550734818,
+              "min": 0.0005577639094553888,
+              "max": 0.0013630865141749382
+            },
+            "ignored_pixels": 4020,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-4fa26438d5872a8480af",
+          "metrics": {
+            "tp": 6,
+            "fp": 0,
+            "fn": 0,
+            "tn": 256,
+            "supervised_pixels": 262,
+            "positive_pixels": 6,
+            "stable_pixels": 256,
+            "ignored_pixels": 3834,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.0009431088110432029,
+          "unweighted_bce": 0.0003891629457939416,
+          "mean_weight_normalized_bce": 0.000684660723401556,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 6,
+              "mean": 0.9985345502694448,
+              "median": 0.9990100562572479,
+              "min": 0.9955861568450928,
+              "max": 0.9995458722114563
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.000363835999451112,
+              "median": 0.000361693455488421,
+              "min": 0.00026948173763230443,
+              "max": 0.0004954457399435341
+            },
+            "ignored_pixels": 3834,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-a72e10d66054921e60b2",
+          "metrics": {
+            "tp": 15,
+            "fp": 0,
+            "fn": 0,
+            "tn": 256,
+            "supervised_pixels": 271,
+            "positive_pixels": 15,
+            "stable_pixels": 256,
+            "ignored_pixels": 3825,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.00213293032720685,
+          "unweighted_bce": 0.002032588003203273,
+          "mean_weight_normalized_bce": 0.0011153348231398423,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 15,
+              "mean": 0.9998900214831035,
+              "median": 0.9999332427978516,
+              "min": 0.9994001388549805,
+              "max": 0.9999829530715942
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.002129805517938621,
+              "median": 0.0007194874051492661,
+              "min": 0.0004319393774494529,
+              "max": 0.02895391918718815
+            },
+            "ignored_pixels": 3825,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-f7e5f043776b24cb7dfa",
+          "metrics": {
+            "tp": 10,
+            "fp": 0,
+            "fn": 0,
+            "tn": 144,
+            "supervised_pixels": 154,
+            "positive_pixels": 10,
+            "stable_pixels": 144,
+            "ignored_pixels": 3942,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.0037533435970544815,
+          "unweighted_bce": 0.0012120949104428291,
+          "mean_weight_normalized_bce": 0.0018128998838049374,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 10,
+              "mean": 0.9976489067077636,
+              "median": 0.9997797012329102,
+              "min": 0.978661298751831,
+              "max": 0.9998587369918823
+            },
+            "negative": {
+              "count": 144,
+              "mean": 0.0011304495803617304,
+              "median": 0.000853689998621121,
+              "min": 0.0004750274238176644,
+              "max": 0.005024845711886883
+            },
+            "ignored_pixels": 3942,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-0012effe85aa26b69541",
+          "metrics": {
+            "tp": 15,
+            "fp": 0,
+            "fn": 0,
+            "tn": 256,
+            "supervised_pixels": 271,
+            "positive_pixels": 15,
+            "stable_pixels": 256,
+            "ignored_pixels": 3825,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.0004380460304673761,
+          "unweighted_bce": 0.00034269888419657946,
+          "mean_weight_normalized_bce": 0.00022905951764408476,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 15,
+              "mean": 0.9998955210049947,
+              "median": 0.9999756813049316,
+              "min": 0.9994101524353027,
+              "max": 0.9999933242797852
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.0003565590314451583,
+              "median": 0.0002893865021178499,
+              "min": 0.00017798561020754278,
+              "max": 0.0018951784586533904
+            },
+            "ignored_pixels": 3825,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-65fa6d8d7a0c82498340",
+          "metrics": {
+            "tp": 18,
+            "fp": 0,
+            "fn": 0,
+            "tn": 64,
+            "supervised_pixels": 82,
+            "positive_pixels": 18,
+            "stable_pixels": 64,
+            "ignored_pixels": 4014,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.001440933789126575,
+          "unweighted_bce": 0.0004354011034592986,
+          "mean_weight_normalized_bce": 0.000312004095148385,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 18,
+              "mean": 0.9997221761279635,
+              "median": 0.9998584389686584,
+              "min": 0.9987367987632751,
+              "max": 0.9999486207962036
+            },
+            "negative": {
+              "count": 64,
+              "mean": 0.000479548575640365,
+              "median": 0.0004930136492475867,
+              "min": 0.0003407678450457752,
+              "max": 0.0005998510750941932
+            },
+            "ignored_pixels": 4014,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-e932f0d28b2819f8368d",
+          "metrics": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "tn": 256,
+            "supervised_pixels": 260,
+            "positive_pixels": 4,
+            "stable_pixels": 256,
+            "ignored_pixels": 3836,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.00381648656912148,
+          "unweighted_bce": 0.000969567452557385,
+          "mean_weight_normalized_bce": 0.0030444421063009854,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 4,
+              "mean": 0.9889419674873352,
+              "median": 0.9966154396533966,
+              "min": 0.9641311168670654,
+              "max": 0.9984058737754822
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.0008067747972972938,
+              "median": 0.0002504455769667402,
+              "min": 0.00018186355009675026,
+              "max": 0.00954519771039486
+            },
+            "ignored_pixels": 3836,
+            "training_pairwise_auc": 1.0
+          }
+        }
+      ],
+      "all_examples_fit": true,
+      "fit_passed": true
+    },
+    {
+      "attempt": 832,
+      "arrays_file": "checkpoint_0832.npz",
+      "parameter_sha256": "6bda2ea8813dd93c9d33429c5d50b97b6c93405279971b45496ac19565f7f808",
+      "aggregate": {
+        "metrics": {
+          "tp": 151,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2640,
+          "supervised_pixels": 2791,
+          "positive_pixels": 151,
+          "stable_pixels": 2640,
+          "ignored_pixels": 50457,
+          "updates": 13,
+          "empty_updates": 0,
+          "probability_threshold": 0.5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": 1.0,
+          "f1": 1.0,
+          "dice": 1.0,
+          "iou": 1.0,
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0
+        },
+        "fit": {
+          "passed": true,
+          "reasons": [],
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": 1.0,
+          "dice": 1.0,
+          "minimum": 0.95
+        },
+        "weighted_bce": 0.0007273600101359579,
+        "unweighted_bce": 0.00043297931833221655,
+        "mean_weight_normalized_bce": 0.0003844813992972459
+      },
+      "examples": [
+        {
+          "event_id": "event-e691d44c335d87649310",
+          "metrics": {
+            "tp": 25,
+            "fp": 0,
+            "fn": 0,
+            "tn": 256,
+            "supervised_pixels": 281,
+            "positive_pixels": 25,
+            "stable_pixels": 256,
+            "ignored_pixels": 3815,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.0006060795858502388,
+          "unweighted_bce": 0.00023136836534831673,
+          "mean_weight_normalized_bce": 0.0002457246876166821,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 25,
+              "mean": 0.9997448468208313,
+              "median": 0.9999939203262329,
+              "min": 0.9967246651649475,
+              "max": 0.9999994039535522
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.00022876246609371265,
+              "median": 5.191160744288936e-05,
+              "min": 4.454684312804602e-05,
+              "max": 0.002957878867164254
+            },
+            "ignored_pixels": 3815,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-263e9027a6142dc9fc84",
+          "metrics": {
+            "tp": 13,
+            "fp": 0,
+            "fn": 0,
+            "tn": 256,
+            "supervised_pixels": 269,
+            "positive_pixels": 13,
+            "stable_pixels": 256,
+            "ignored_pixels": 3827,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.00010109251888934523,
+          "unweighted_bce": 9.740624227561057e-05,
+          "mean_weight_normalized_bce": 5.626886955665306e-05,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 13,
+              "mean": 0.999995387517489,
+              "median": 0.999997615814209,
+              "min": 0.9999732971191406,
+              "max": 0.9999990463256836
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.00010212719513447155,
+              "median": 0.0001007743485388346,
+              "min": 6.970399408601224e-05,
+              "max": 0.00016696579405106604
+            },
+            "ignored_pixels": 3827,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-8628872c64f4cabf6e67",
+          "metrics": {
+            "tp": 6,
+            "fp": 0,
+            "fn": 0,
+            "tn": 256,
+            "supervised_pixels": 262,
+            "positive_pixels": 6,
+            "stable_pixels": 256,
+            "ignored_pixels": 3834,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.0006683081155642867,
+          "unweighted_bce": 0.0006592559511773288,
+          "mean_weight_normalized_bce": 0.0004851659877413812,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 6,
+              "mean": 0.9999760190645853,
+              "median": 0.9999787211418152,
+              "min": 0.9999551773071289,
+              "max": 0.9999922513961792
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.0006738680986018153,
+              "median": 0.0005784711975138634,
+              "min": 0.0002606291091069579,
+              "max": 0.0023847452830523252
+            },
+            "ignored_pixels": 3834,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-b9d89f91b116d8d90fac",
+          "metrics": {
+            "tp": 16,
+            "fp": 0,
+            "fn": 0,
+            "tn": 64,
+            "supervised_pixels": 80,
+            "positive_pixels": 16,
+            "stable_pixels": 64,
+            "ignored_pixels": 4016,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.0006437022238969803,
+          "unweighted_bce": 0.0005508712492883205,
+          "mean_weight_normalized_bce": 0.00014981355704137488,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 16,
+              "mean": 0.9999718256294727,
+              "median": 0.9999971985816956,
+              "min": 0.9997640252113342,
+              "max": 0.9999995231628418
+            },
+            "negative": {
+              "count": 64,
+              "mean": 0.0006813123400206678,
+              "median": 0.0006805195298511535,
+              "min": 0.0005970772472210228,
+              "max": 0.0008106391760520637
+            },
+            "ignored_pixels": 4016,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-e59c75f02fe23bb9a1ae",
+          "metrics": {
+            "tp": 5,
+            "fp": 0,
+            "fn": 0,
+            "tn": 256,
+            "supervised_pixels": 261,
+            "positive_pixels": 5,
+            "stable_pixels": 256,
+            "ignored_pixels": 3835,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.0011738898465409875,
+          "unweighted_bce": 0.001088208518922329,
+          "mean_weight_normalized_bce": 0.0008921662438681514,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 5,
+              "mean": 0.9997287034988404,
+              "median": 0.9996734857559204,
+              "min": 0.9994550347328186,
+              "max": 0.9999628067016602
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.0010979317518433618,
+              "median": 0.0002631631650729105,
+              "min": 0.00010176055366173387,
+              "max": 0.029597297310829163
+            },
+            "ignored_pixels": 3835,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-e6224bcd39746b840ea4",
+          "metrics": {
+            "tp": 6,
+            "fp": 0,
+            "fn": 0,
+            "tn": 256,
+            "supervised_pixels": 262,
+            "positive_pixels": 6,
+            "stable_pixels": 256,
+            "ignored_pixels": 3834,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.0004148789739701897,
+          "unweighted_bce": 0.0004077857593074441,
+          "mean_weight_normalized_bce": 0.0003011861782187435,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 6,
+              "mean": 0.9999812046686808,
+              "median": 0.999996542930603,
+              "min": 0.9999016523361206,
+              "max": 0.9999985694885254
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.0004160446741252599,
+              "median": 9.44980674830731e-05,
+              "min": 6.529698293888941e-05,
+              "max": 0.0057239471934735775
+            },
+            "ignored_pixels": 3834,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-073d95e8a1c667845607",
+          "metrics": {
+            "tp": 12,
+            "fp": 0,
+            "fn": 0,
+            "tn": 64,
+            "supervised_pixels": 76,
+            "positive_pixels": 12,
+            "stable_pixels": 64,
+            "ignored_pixels": 4020,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.0008253482519648969,
+          "unweighted_bce": 0.00023357516329269856,
+          "mean_weight_normalized_bce": 0.00022909482729172688,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 12,
+              "mean": 0.9997726529836655,
+              "median": 0.9998353123664856,
+              "min": 0.9994245767593384,
+              "max": 0.9999098777770996
+            },
+            "negative": {
+              "count": 64,
+              "mean": 0.00023472606380892103,
+              "median": 0.00020470882736844942,
+              "min": 0.00017918285448104143,
+              "max": 0.00048613979015499353
+            },
+            "ignored_pixels": 4020,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-4fa26438d5872a8480af",
+          "metrics": {
+            "tp": 6,
+            "fp": 0,
+            "fn": 0,
+            "tn": 256,
+            "supervised_pixels": 262,
+            "positive_pixels": 6,
+            "stable_pixels": 256,
+            "ignored_pixels": 3834,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.00030930788489058614,
+          "unweighted_bce": 0.0001200958649860695,
+          "mean_weight_normalized_bce": 0.00022454562797345436,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 6,
+              "mean": 0.9994990229606628,
+              "median": 0.9996991753578186,
+              "min": 0.9982982277870178,
+              "max": 0.9998804330825806
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.00011116566528812655,
+              "median": 0.00011036546129616909,
+              "min": 7.871948764659464e-05,
+              "max": 0.0001593452470842749
+            },
+            "ignored_pixels": 3834,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-a72e10d66054921e60b2",
+          "metrics": {
+            "tp": 15,
+            "fp": 0,
+            "fn": 0,
+            "tn": 256,
+            "supervised_pixels": 271,
+            "positive_pixels": 15,
+            "stable_pixels": 256,
+            "ignored_pixels": 3825,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.0008876749780029058,
+          "unweighted_bce": 0.0008612689562141895,
+          "mean_weight_normalized_bce": 0.0004641758814002365,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 15,
+              "mean": 0.9999710400899251,
+              "median": 0.9999841451644897,
+              "min": 0.9998337030410767,
+              "max": 0.999996542930603
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.0009066368741628139,
+              "median": 0.0002410447268630378,
+              "min": 0.0001373402337776497,
+              "max": 0.014329376630485058
+            },
+            "ignored_pixels": 3825,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-f7e5f043776b24cb7dfa",
+          "metrics": {
+            "tp": 10,
+            "fp": 0,
+            "fn": 0,
+            "tn": 144,
+            "supervised_pixels": 154,
+            "positive_pixels": 10,
+            "stable_pixels": 144,
+            "ignored_pixels": 3942,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.0016941819339990616,
+          "unweighted_bce": 0.00046642578672617674,
+          "mean_weight_normalized_bce": 0.0008183056391910555,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 10,
+              "mean": 0.9988587915897369,
+              "median": 0.9999358057975769,
+              "min": 0.9892249703407288,
+              "max": 0.9999616146087646
+            },
+            "negative": {
+              "count": 144,
+              "mean": 0.0004190057121983652,
+              "median": 0.0002962873986689374,
+              "min": 0.0001511479786131531,
+              "max": 0.0022838027216494083
+            },
+            "ignored_pixels": 3942,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-0012effe85aa26b69541",
+          "metrics": {
+            "tp": 15,
+            "fp": 0,
+            "fn": 0,
+            "tn": 256,
+            "supervised_pixels": 271,
+            "positive_pixels": 15,
+            "stable_pixels": 256,
+            "ignored_pixels": 3825,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.00013013725401833653,
+          "unweighted_bce": 0.0001065332253347151,
+          "mean_weight_normalized_bce": 6.805032932534693e-05,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 15,
+              "mean": 0.9999741236368815,
+              "median": 0.9999949932098389,
+              "min": 0.9998495578765869,
+              "max": 0.999998927116394
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.00011124080410240822,
+              "median": 8.470027387375012e-05,
+              "min": 4.7682508011348546e-05,
+              "max": 0.0007386199431493878
+            },
+            "ignored_pixels": 3825,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-65fa6d8d7a0c82498340",
+          "metrics": {
+            "tp": 18,
+            "fp": 0,
+            "fn": 0,
+            "tn": 64,
+            "supervised_pixels": 82,
+            "positive_pixels": 18,
+            "stable_pixels": 64,
+            "ignored_pixels": 4014,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.0004515245382208377,
+          "unweighted_bce": 0.00013659389514941722,
+          "mean_weight_normalized_bce": 9.776820145933148e-05,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 18,
+              "mean": 0.9999129739072588,
+              "median": 0.9999621510505676,
+              "min": 0.9995710253715515,
+              "max": 0.9999881982803345
+            },
+            "negative": {
+              "count": 64,
+              "mean": 0.00015056060158258333,
+              "median": 0.0001556082206661813,
+              "min": 0.00010091828880831599,
+              "max": 0.0001945636613527313
+            },
+            "ignored_pixels": 4014,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-e932f0d28b2819f8368d",
+          "metrics": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "tn": 256,
+            "supervised_pixels": 260,
+            "positive_pixels": 4,
+            "stable_pixels": 256,
+            "ignored_pixels": 3836,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.0018206223612651229,
+          "unweighted_bce": 0.00044249978964217007,
+          "mean_weight_normalized_bce": 0.0014523251362010062,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 4,
+              "mean": 0.9946100413799286,
+              "median": 0.9987927973270416,
+              "min": 0.9813514351844788,
+              "max": 0.9995031356811523
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.0003638071486307126,
+              "median": 7.332683526328765e-05,
+              "min": 5.06566975673195e-05,
+              "max": 0.004997516516596079
+            },
+            "ignored_pixels": 3836,
+            "training_pairwise_auc": 1.0
+          }
+        }
+      ],
+      "all_examples_fit": true,
+      "fit_passed": true
+    },
+    {
+      "attempt": 1664,
+      "arrays_file": "checkpoint_1664.npz",
+      "parameter_sha256": "725325c760c1ad748c9c78c5becaa4316e363219f94cbf2839349b033b506428",
+      "aggregate": {
+        "metrics": {
+          "tp": 151,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2640,
+          "supervised_pixels": 2791,
+          "positive_pixels": 151,
+          "stable_pixels": 2640,
+          "ignored_pixels": 50457,
+          "updates": 13,
+          "empty_updates": 0,
+          "probability_threshold": 0.5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": 1.0,
+          "f1": 1.0,
+          "dice": 1.0,
+          "iou": 1.0,
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0
+        },
+        "fit": {
+          "passed": true,
+          "reasons": [],
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": 1.0,
+          "dice": 1.0,
+          "minimum": 0.95
+        },
+        "weighted_bce": 0.0003175322372823142,
+        "unweighted_bce": 0.0001887038273106832,
+        "mean_weight_normalized_bce": 0.00016784705951798087
+      },
+      "examples": [
+        {
+          "event_id": "event-e691d44c335d87649310",
+          "metrics": {
+            "tp": 25,
+            "fp": 0,
+            "fn": 0,
+            "tn": 256,
+            "supervised_pixels": 281,
+            "positive_pixels": 25,
+            "stable_pixels": 256,
+            "ignored_pixels": 3815,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.00025506410747766495,
+          "unweighted_bce": 0.00010113546886714175,
+          "mean_weight_normalized_bce": 0.0001034114159186745,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 25,
+              "mean": 0.9998951101303101,
+              "median": 0.9999986886978149,
+              "min": 0.9985901713371277,
+              "max": 0.9999998807907104
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.00010069187130667956,
+              "median": 1.5399280528072268e-05,
+              "min": 1.297791186516406e-05,
+              "max": 0.0014358485350385308
+            },
+            "ignored_pixels": 3815,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-263e9027a6142dc9fc84",
+          "metrics": {
+            "tp": 13,
+            "fp": 0,
+            "fn": 0,
+            "tn": 256,
+            "supervised_pixels": 269,
+            "positive_pixels": 13,
+            "stable_pixels": 256,
+            "ignored_pixels": 3827,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 3.234096220694482e-05,
+          "unweighted_bce": 3.1470859539695084e-05,
+          "mean_weight_normalized_bce": 1.8001227031954227e-05,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 13,
+              "mean": 0.9999989087765033,
+              "median": 0.9999995231628418,
+              "min": 0.9999927282333374,
+              "max": 0.9999998807907104
+            },
+            "negative": {
+              "count": 256,
+              "mean": 3.302852878306339e-05,
+              "median": 3.242965794925112e-05,
+              "min": 2.1285575712681748e-05,
+              "max": 5.785852044937201e-05
+            },
+            "ignored_pixels": 3827,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-8628872c64f4cabf6e67",
+          "metrics": {
+            "tp": 6,
+            "fp": 0,
+            "fn": 0,
+            "tn": 256,
+            "supervised_pixels": 262,
+            "positive_pixels": 6,
+            "stable_pixels": 256,
+            "ignored_pixels": 3834,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.00027617369778454304,
+          "unweighted_bce": 0.00027375310310162604,
+          "mean_weight_normalized_bce": 0.00020049148252627885,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 6,
+              "mean": 0.9999935825665792,
+              "median": 0.9999943375587463,
+              "min": 0.999987006187439,
+              "max": 0.9999982118606567
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.00027997352725606106,
+              "median": 0.00023094310745364055,
+              "min": 9.420866990694776e-05,
+              "max": 0.0011468497104942799
+            },
+            "ignored_pixels": 3834,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-b9d89f91b116d8d90fac",
+          "metrics": {
+            "tp": 16,
+            "fp": 0,
+            "fn": 0,
+            "tn": 64,
+            "supervised_pixels": 80,
+            "positive_pixels": 16,
+            "stable_pixels": 64,
+            "ignored_pixels": 4016,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.0002530908677726984,
+          "unweighted_bce": 0.0002276646700920537,
+          "mean_weight_normalized_bce": 5.89037007300824e-05,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 16,
+              "mean": 0.9999922811985016,
+              "median": 0.9999994039535522,
+              "min": 0.9999313354492188,
+              "max": 0.9999998807907104
+            },
+            "negative": {
+              "count": 64,
+              "mean": 0.00028262002297196887,
+              "median": 0.0002815875195665285,
+              "min": 0.00024342609685845673,
+              "max": 0.00034376440453343093
+            },
+            "ignored_pixels": 4016,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-e59c75f02fe23bb9a1ae",
+          "metrics": {
+            "tp": 5,
+            "fp": 0,
+            "fn": 0,
+            "tn": 256,
+            "supervised_pixels": 261,
+            "positive_pixels": 5,
+            "stable_pixels": 256,
+            "ignored_pixels": 3835,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.0005233334377408028,
+          "unweighted_bce": 0.0004957015626132488,
+          "mean_weight_normalized_bce": 0.0003977378531857987,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 5,
+              "mean": 0.9999125123023986,
+              "median": 0.9998977184295654,
+              "min": 0.9998168349266052,
+              "max": 0.99998939037323
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.0005020923814953449,
+              "median": 9.545906141283922e-05,
+              "min": 3.333690619911067e-05,
+              "max": 0.01621660590171814
+            },
+            "ignored_pixels": 3835,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-e6224bcd39746b840ea4",
+          "metrics": {
+            "tp": 6,
+            "fp": 0,
+            "fn": 0,
+            "tn": 256,
+            "supervised_pixels": 262,
+            "positive_pixels": 6,
+            "stable_pixels": 256,
+            "ignored_pixels": 3834,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.0002028254821198061,
+          "unweighted_bce": 0.00020109029719606042,
+          "mean_weight_normalized_bce": 0.00014724349903889772,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 6,
+              "mean": 0.9999954104423523,
+              "median": 0.9999992847442627,
+              "min": 0.999975323677063,
+              "max": 0.9999997615814209
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.0002054265174180614,
+              "median": 3.0392329790629447e-05,
+              "min": 1.9940007405239157e-05,
+              "max": 0.0031528822146356106
+            },
+            "ignored_pixels": 3834,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-073d95e8a1c667845607",
+          "metrics": {
+            "tp": 12,
+            "fp": 0,
+            "fn": 0,
+            "tn": 64,
+            "supervised_pixels": 76,
+            "positive_pixels": 12,
+            "stable_pixels": 64,
+            "ignored_pixels": 4020,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.00027021486312150955,
+          "unweighted_bce": 8.06303505669348e-05,
+          "mean_weight_normalized_bce": 7.500449325615431e-05,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 12,
+              "mean": 0.9999271581570307,
+              "median": 0.9999454617500305,
+              "min": 0.999806821346283,
+              "max": 0.9999721050262451
+            },
+            "negative": {
+              "count": 64,
+              "mean": 8.207059647702408e-05,
+              "median": 7.04455014783889e-05,
+              "min": 6.06021421845071e-05,
+              "max": 0.00017963825666811317
+            },
+            "ignored_pixels": 4020,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-4fa26438d5872a8480af",
+          "metrics": {
+            "tp": 6,
+            "fp": 0,
+            "fn": 0,
+            "tn": 256,
+            "supervised_pixels": 262,
+            "positive_pixels": 6,
+            "stable_pixels": 256,
+            "ignored_pixels": 3834,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.000105102444649674,
+          "unweighted_bce": 3.977341839345172e-05,
+          "mean_weight_normalized_bce": 7.630033241394603e-05,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 6,
+              "mean": 0.9998269577821096,
+              "median": 0.999908447265625,
+              "min": 0.9993497729301453,
+              "max": 0.9999685287475586
+            },
+            "negative": {
+              "count": 256,
+              "mean": 3.6627337649974834e-05,
+              "median": 3.635156281234231e-05,
+              "min": 2.4857661628630012e-05,
+              "max": 5.522029096027836e-05
+            },
+            "ignored_pixels": 3834,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-a72e10d66054921e60b2",
+          "metrics": {
+            "tp": 15,
+            "fp": 0,
+            "fn": 0,
+            "tn": 256,
+            "supervised_pixels": 271,
+            "positive_pixels": 15,
+            "stable_pixels": 256,
+            "ignored_pixels": 3825,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.0003840845893137157,
+          "unweighted_bce": 0.00037678692024201155,
+          "mean_weight_normalized_bce": 0.00020084243354255978,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 15,
+              "mean": 0.9999920050303142,
+              "median": 0.9999961853027344,
+              "min": 0.999951958656311,
+              "max": 0.9999992847442627
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.0003976381101011839,
+              "median": 8.628200885141268e-05,
+              "min": 4.626854934031144e-05,
+              "max": 0.007006299216300249
+            },
+            "ignored_pixels": 3825,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-f7e5f043776b24cb7dfa",
+          "metrics": {
+            "tp": 10,
+            "fp": 0,
+            "fn": 0,
+            "tn": 144,
+            "supervised_pixels": 154,
+            "positive_pixels": 10,
+            "stable_pixels": 144,
+            "ignored_pixels": 3942,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.0007848634850233793,
+          "unweighted_bce": 0.00019138237985316664,
+          "mean_weight_normalized_bce": 0.00037909636674837287,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 10,
+              "mean": 0.9994469523429871,
+              "median": 0.9999808073043823,
+              "min": 0.9946646690368652,
+              "max": 0.9999891519546509
+            },
+            "negative": {
+              "count": 144,
+              "mean": 0.0001661771664455753,
+              "median": 0.00010780966113088652,
+              "min": 5.0825958169298247e-05,
+              "max": 0.001096548279747367
+            },
+            "ignored_pixels": 3942,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-0012effe85aa26b69541",
+          "metrics": {
+            "tp": 15,
+            "fp": 0,
+            "fn": 0,
+            "tn": 256,
+            "supervised_pixels": 271,
+            "positive_pixels": 15,
+            "stable_pixels": 256,
+            "ignored_pixels": 3825,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 4.1572708141757175e-05,
+          "unweighted_bce": 3.555595321813598e-05,
+          "mean_weight_normalized_bce": 2.173886717783742e-05,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 15,
+              "mean": 0.999993379910787,
+              "median": 0.999998927116394,
+              "min": 0.9999622106552124,
+              "max": 0.9999997615814209
+            },
+            "negative": {
+              "count": 256,
+              "mean": 3.724939619331735e-05,
+              "median": 2.6307680855097715e-05,
+              "min": 1.3553361895901617e-05,
+              "max": 0.00030595037969760597
+            },
+            "ignored_pixels": 3825,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-65fa6d8d7a0c82498340",
+          "metrics": {
+            "tp": 18,
+            "fp": 0,
+            "fn": 0,
+            "tn": 64,
+            "supervised_pixels": 82,
+            "positive_pixels": 18,
+            "stable_pixels": 64,
+            "ignored_pixels": 4014,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.00015086842176970094,
+          "unweighted_bce": 4.5263164793141186e-05,
+          "mean_weight_normalized_bce": 3.2667403440690344e-05,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 18,
+              "mean": 0.9999708069695367,
+              "median": 0.9999894499778748,
+              "min": 0.9998379945755005,
+              "max": 0.9999971389770508
+            },
+            "negative": {
+              "count": 64,
+              "mean": 4.980702749435295e-05,
+              "median": 5.160099499335047e-05,
+              "min": 3.152779027004726e-05,
+              "max": 6.657187623204663e-05
+            },
+            "ignored_pixels": 4014,
+            "training_pairwise_auc": 1.0
+          }
+        },
+        {
+          "event_id": "event-e932f0d28b2819f8368d",
+          "metrics": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "tn": 256,
+            "supervised_pixels": 260,
+            "positive_pixels": 4,
+            "stable_pixels": 256,
+            "ignored_pixels": 3836,
+            "updates": 1,
+            "empty_updates": 0,
+            "probability_threshold": 0.5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "f1": 1.0,
+            "dice": 1.0,
+            "iou": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0
+          },
+          "fit": {
+            "passed": true,
+            "reasons": [],
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "dice": 1.0,
+            "minimum": 0.95
+          },
+          "weighted_bce": 0.0008725314401090145,
+          "unweighted_bce": 0.00021657490287907422,
+          "mean_weight_normalized_bce": 0.0006960253644887822,
+          "probability_diagnostics": {
+            "positive": {
+              "count": 4,
+              "mean": 0.9974242895841599,
+              "median": 0.9995772540569305,
+              "min": 0.9906953573226929,
+              "max": 0.9998472929000854
+            },
+            "negative": {
+              "count": 256,
+              "mean": 0.00017929911206593374,
+              "median": 2.2836024982098024e-05,
+              "min": 1.5045969121274538e-05,
+              "max": 0.0027105773333460093
+            },
+            "ignored_pixels": 3836,
+            "training_pairwise_auc": 1.0
+          }
+        }
+      ],
+      "all_examples_fit": true,
+      "fit_passed": true
+    }
+  ],
+  "first_passing_recorded_checkpoint": 416,
+  "zero_parameter_delta_attempts": [],
+  "torch_version": "2.6.0.dev20241112",
+  "torch_distribution_version": "2.5.1",
+  "torch_git_version": "555bc8349d67a8f5ccd5325d1a7f46c3619b1769",
+  "torch_module_path": "/Users/muhammedazhar/.miniconda3/envs/COMP1252-MP/lib/python3.10/site-packages/torch/__init__.py",
+  "numpy_version": "1.26.4",
+  "rasterio_version": "1.4.3",
+  "python_version": "3.10.15 (main, Oct  3 2024, 02:24:49) [Clang 14.0.6 ]",
+  "python_executable": "/Users/muhammedazhar/.miniconda3/envs/COMP1252-MP/bin/python",
+  "artifact_sha256": {
+    "preview_4.png": "b6c685e362d47d82f6d39e74574d0200d9af44fd60422eefce69dd22fa0f581f",
+    "checkpoint_0416.npz": "2ee5fe18b91227b1def84bc27949a14259462642b335c5087948979c4e7b3751",
+    "checkpoint_0832.npz": "74f9bf1e00380ab2fe0e9cfad81c7d8271a423b104ec349706bf62d29f4bc135",
+    "preview_2.png": "ee9db09effef058c1b8b7f4c0a3d3d2d1d7de6865fe4bc8b034850c0cb9adaf4",
+    "checkpoint_0000.npz": "926d09f8b8bafdf5a68cb6fa9d4524243ae8a322867c09180c290f1d790d86db",
+    "steps.jsonl": "3bd049ae6409c65068b5714c5621f686dd95bd610093977eae987171383cfe6b",
+    "preview_3.png": "78aaa71c2fe1787a5c8c3fef6ac30dd4a2452a72b7c5238b221a721dce871b9c",
+    "preview_1.png": "5565199d316c43c46c7fba1c1a4f8f99d6d66ccbc260fd3f3bf26ab0a6157e10",
+    "checkpoint_0026.npz": "ba2aa31a562edb5908e64cc458ff85a2216c32c930f1cc1621171faccb9a1d18",
+    "model_weights.npz": "e3a7b56dcaa701a514de357f66c243f57c8f9bacee358d26841f19dc90d880bf",
+    "checkpoint_1664.npz": "24e895322ddf71f15e3bb3d2704a68dc8432f07a2ad1b39000ca5202229a4c9b",
+    "report.md": "d967ef0f45ed97b2e6985f841bfd5103a37decad4a1d76fc4b65763c88c8f590"
+  },
+  "limitations": [
+    "This run uses all 13 reviewed training groups; no held-out selection or generalization claim.",
+    "Ignored pixels are unknown, never negatives.",
+    "Longer exposure and changed normalization differ from the old 26-step smoke; there is no isolated empirical causal comparison.",
+    "All checkpoints and the final no-fit outcome are retained; no threshold tuning, early stopping or rerun-until-pass.",
+    "Model selection requires geographically separate reviewed validation.",
+    "Annotation image dates are not exact felling dates; temporal inference remains later work."
+  ],
+  "resources": {
+    "logical_cpu_count": 11,
+    "machine_ram_gib": 18.0,
+    "worker_peak_rss_mib_sampled": 313.8,
+    "worker_high_water_rss_mib": 313.94,
+    "minimum_available_gib_sampled": 2.6,
+    "elapsed_seconds": 8.87,
+    "worker_limit_mib": 512,
+    "minimum_available_gib_limit": 1.5,
+    "runtime_limit_seconds": 300,
+    "workers": 1,
+    "native_thread_limit": 1,
+    "nice_increment": 10,
+    "gdal_cache_mib": 16,
+    "warp_memory_mib": 0,
+    "gpu_used": false,
+    "monitor_interval_seconds": 0.25
+  }
+}
