@@ -40,7 +40,14 @@ predictions and does not open or approve new imagery.
 Five preparation workers used 9.16–15.25s each, peak375.22/367.62/380.30/
 362.28/373.12MiB, minimum available memory2.63GiB. All stayed within the
 512MiB/1.5GiB limits. There is no active pixel/model worker at this checkpoint.
-Review-only independent verification and the geometry audit remain pending.
+Review-only independent verification PASSED: all five rejections, all 53
+timeline observations/caches, actual target erosion, source identities and
+complete footprint isolation were checked without Torch, model execution or
+source JP2 pixel reads. It took 2.79s at 179.73MiB. Results are archived in
+`Docs/Reviews/ValidationPilotV1/review_verification/`. The 42 focused validation
+tests now pass. A global TIFF ignore rule had omitted the 35 review-bound
+arrays from Git; a narrow exception now includes their exact hash-verified
+bytes in the authoritative Docs review snapshots. The geometry audit is pending.
 Export/evaluation modules are implemented for a future valid label set and
 must be described as unexecuted against real validation data, even if unit
 tests pass. Their presence does not imply this dataset exists.
@@ -71,8 +78,10 @@ preparation tests and 6 selector tests pass under the resource guard. Selector
 output is locked under `Docs/Reviews/ValidationPilotV1/selection/`: three
 primaries plus two distinct-group alternates, with the missing Summer alternate
 explicitly retained. Its run reads metadata only and uses no model predictions.
-Source/selection hashes are frozen before image inspection. Export/audit code
-is still in progress. No validation images have been inspected or approved yet.
+Source/selection hashes were frozen before image inspection. Export/evaluation
+code was preserved by interruption checkpoint `65aef3f`; its helper tests pass,
+but real validation export/inference are deliberately unexecuted because all
+labels in this roster were rejected. The independent review audit is complete.
 
 The first preparation preflight found a new-code schema mismatch: completed QA
 stores `processing_errors` as an empty list, not integer zero. It failed before

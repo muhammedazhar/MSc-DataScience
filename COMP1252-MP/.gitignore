@@ -206,3 +206,7 @@ Keys/
 !/Datasets/CuratedPilot/v1/verification/
 !/Datasets/CuratedPilot/v1/dataset/**/*.tif
 !/Docs/Reviews/CuratedPilotV1/prepared_cases/**/*.tif
+
+# Preserve all review-bound validation arrays; keep further working outputs local.
+!/Docs/Reviews/ValidationPilotV1/prepared_cases/**/*.tif
+/Datasets/ValidationPilot/

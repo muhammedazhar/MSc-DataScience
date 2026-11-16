@@ -1,0 +1,11 @@
+test_partial_labels_never_expand_to_unknown_context (test_validation_exports.ValidationExportTests) ... ok
+test_predeclared_alternate_requires_retained_primary_rejection (test_validation_exports.ValidationExportTests) ... ok
+test_raw_case_and_actual_artifact_bytes_are_both_review_locked (test_validation_exports.ValidationExportTests) ... ok
+test_reviewed_qa_nonfinite_and_catalogue_conflicts_cannot_be_silently_dropped (test_validation_exports.ValidationExportTests) ... ok
+test_training_and_test_evidence_cannot_be_repurposed_as_validation (test_validation_exports.ValidationExportTests) ... ok
+test_zero_positive_stable_pair_supervises_only_its_reviewed_control (test_validation_exports.ValidationExportTests) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.019s
+
+OK

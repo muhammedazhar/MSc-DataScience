@@ -292,8 +292,9 @@ def load_and_verify(dataset, protocol):
     catalogue, split_plan = read_json(audit/'annotations_clean.geojson'), read_json(audit/'splits.json')
     scenes = list(records(audit/'scene_inventory.jsonl'))
     quality_summary = read_json(ROOT/'Datasets/PixelQA/v1/summary/metadata.json')
-    require(quality_summary['config_id'] == policy['qa_policy_id']
-            and quality_summary['processing_errors'] == 0 and all(quality_summary['checks'].values()),
+    from prepare_validation_review import validate_quality_summary
+    validate_quality_summary(quality_summary)
+    require(quality_summary['config_id'] == policy['qa_policy_id'],
             'Frozen QA publication is incomplete or changed')
     for name, values in metadata['source_file_stats'].items():
         require(quality_summary['source_file_stats'].get(name) == values, 'Source fingerprints differ from frozen QA')
@@ -526,8 +527,9 @@ def verify_review_dispositions(reviews_path, protocol_path):
     training_plan = read_json(ROOT/'Docs/Reviews/PixelPilotV1/experiment_plan.json')
     require(digest(training_path) == training_plan['selection']['manifest_sha256'], 'Frozen training isolation reference changed')
     summary_path = qa_root/'summary/metadata.json'; summary = read_json(summary_path)
-    require(summary['config_id'] == protocol['qa_policy_id'] and summary['processing_errors'] == 0
-            and all(summary['checks'].values()), 'Completed frozen quality publication changed')
+    from prepare_validation_review import validate_quality_summary
+    validate_quality_summary(summary)
+    require(summary['config_id'] == protocol['qa_policy_id'], 'Completed frozen quality publication changed')
     wanted = {row['pair_id'] for row in candidates}
     frozen_pairs = {row['pair_id']: row for row in records(audit/'candidate_pairs.jsonl') if row['pair_id'] in wanted}
     quality = {row['pair_id']: row for row in records(qa_root/'review/quality_result_index.jsonl') if row['pair_id'] in wanted}
