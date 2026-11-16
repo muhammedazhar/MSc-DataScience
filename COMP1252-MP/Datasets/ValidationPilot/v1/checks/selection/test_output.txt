@@ -1,0 +1,11 @@
+test_alternates_never_reuse_primary_or_other_selected_groups (test_validation_selection.ValidationSelectionTests) ... ok
+test_cross_split_or_approved_quality_cannot_be_repurposed_as_validation (test_validation_selection.ValidationSelectionTests) ... ok
+test_full_grid_touching_train_test_barrier_or_actual_training_grid_is_rejected (test_validation_selection.ValidationSelectionTests) ... ok
+test_metadata_selection_never_invents_interior_support_or_label_approval (test_validation_selection.ValidationSelectionTests) ... ok
+test_primary_then_alternate_ranking_is_deterministic_without_spectral_or_model_scores (test_validation_selection.ValidationSelectionTests) ... ok
+test_quality_unknown_crs_and_missing_followup_remain_explicit_dispositions (test_validation_selection.ValidationSelectionTests) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.003s
+
+OK

@@ -1,0 +1,76 @@
+{
+  "execution_status": "completed",
+  "selection_sha256": "c5b0ca063285c083d29615c1d933f1dbabc752edbf286faa740a6e9e3db8620d",
+  "selected_case_count": 5,
+  "source_files": {
+    "audit_metadata": {
+      "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/AnnotationAudit/v1/metadata.json",
+      "sha256": "0a3f4c12caf3dacef860603266396f29e885c3d29d2bbea4cda6d16707f494c8"
+    },
+    "splits": {
+      "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/AnnotationAudit/v1/splits.json",
+      "sha256": "6c29ca5ab841dfe452ccccb1df826f1b2ae1613aea0cb9f463ab4302c5dd806d"
+    },
+    "catalogue": {
+      "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/AnnotationAudit/v1/annotations_clean.geojson",
+      "sha256": "06a1090c8451d670929163ff7be067d63454cb1893a3e8cbee97519fbb69cbce"
+    },
+    "annotations": {
+      "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/AnnotationAudit/v1/annotation_manifest.jsonl",
+      "sha256": "20511aba811a4d75fd09f317d898b26259e587734f4240807cebf414bf327554"
+    },
+    "pairs": {
+      "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/AnnotationAudit/v1/candidate_pairs.jsonl",
+      "sha256": "74d8d229470b4ef4aa968199768772fffd010aaab28f6d44775afb27c1601cd6"
+    },
+    "scenes": {
+      "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/AnnotationAudit/v1/scene_inventory.jsonl",
+      "sha256": "78a3006c508ac008af5f9d879fa59907475ca28641e63866c2c95bf3a2ede740"
+    },
+    "quality_summary": {
+      "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/PixelQA/v1/summary/metadata.json",
+      "sha256": "6f79faf30d815d0a504772a08b322da7d2e242764faefa0d6d47cebaf0208e4e"
+    },
+    "quality": {
+      "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/PixelQA/v1/summary/quality_manifest.jsonl",
+      "sha256": "6ea1147bd2ec1f904c999c252457bd97022214f85f4e23b7a29fcf5a1a4dab99"
+    },
+    "review_metadata": {
+      "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/PixelQA/v1/review/metadata.json",
+      "sha256": "7a84ff3a6ab43cd8a96823b642dd7a8e5e4b64205cfa233f6e8a71b4aa4c8209"
+    },
+    "queue": {
+      "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/PixelQA/v1/review/review_queue.jsonl",
+      "sha256": "3f139333eba72bd0a5361854f826e5c0133f526875b5b467c71e3bf57e83a190"
+    },
+    "training_metadata": {
+      "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/CuratedPilot/v1/dataset/metadata.json",
+      "sha256": "5d929465f148c1823f6332222f56430dac9a5b0d1985d8545c2eb17c99ec3e71"
+    },
+    "training_manifest": {
+      "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/CuratedPilot/v1/dataset/training_manifest.jsonl",
+      "sha256": "138713e6a0b57e5491015fe42438d1a5d1702c68c753289bf52abb5caf7949aa"
+    }
+  },
+  "implementation_sha256": "0a137b5a343e21a1e6daf10ba21abf10d1efc69eee36f77761ee30b3e0689ca7",
+  "pixel_arrays_read": 0,
+  "model_executions": 0,
+  "resources": {
+    "logical_cpu_count": 11,
+    "machine_ram_gib": 18.0,
+    "worker_peak_rss_mib_sampled": 120.2,
+    "worker_high_water_rss_mib": 120.22,
+    "minimum_available_gib_sampled": 2.79,
+    "elapsed_seconds": 1.27,
+    "worker_limit_mib": 512,
+    "minimum_available_gib_limit": 1.5,
+    "runtime_limit_seconds": 120,
+    "workers": 1,
+    "native_thread_limit": 1,
+    "nice_increment": 10,
+    "gdal_cache_mib": 16,
+    "warp_memory_mib": 0,
+    "gpu_used": false,
+    "monitor_interval_seconds": 0.25
+  }
+}

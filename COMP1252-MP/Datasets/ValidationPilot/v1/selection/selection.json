@@ -1,0 +1,1436 @@
+{
+  "rule": {
+    "selection_version": 1,
+    "strata_in_order": [
+      "36UXA_time-dependent",
+      "36UYA_Summer_time-dependent",
+      "36UYA_Spring_time-dependent"
+    ],
+    "selection_order": "one primary per stratum, then at most one alternate per stratum",
+    "ranking": [
+      "group_id",
+      "event_id",
+      "existing_top_candidate_rank",
+      "pair_id"
+    ],
+    "all_roster_groups_unique": true,
+    "required_split": "validation",
+    "quality_status": "passed_automatic_screen_pending_visual_review",
+    "both_endpoint_core_and_target_unusable_pixels": 0,
+    "minimum_union_target_pixels_search_aid": 4,
+    "minimum_anchor_area_m2_search_aid": 1600,
+    "minimum_anchor_width_height_m_search_aid": 40,
+    "require_later_local_scene_in_same_year_45_day_window": true,
+    "reject_touching_or_overlapping_train_test_conservative_footprints": true,
+    "reject_touching_or_overlapping_actual_training_feature_grids": true,
+    "unknown_crs_handling": "reject; do not transform in metadata-only selection",
+    "geometry_does_not_guarantee_eroded_interior": true,
+    "minimum_eroded_interior_pixels_deferred_to_guarded_preparation": 4,
+    "no_ndvi_or_model_output_ranking": true,
+    "maximum_cases": 6,
+    "missing_alternate_handling": "retain missing slot; never relax filters or reuse a selected group"
+  },
+  "candidates": [
+    {
+      "event_id": "event-9993d3bc382d3405a7ad",
+      "pair_id": "pair-cbdc5c3dc169f42a07e0",
+      "group_id": "group-646504159ec8034a1565",
+      "stratum": "36UXA_time-dependent",
+      "existing_top_candidate_rank": 0,
+      "split": "validation",
+      "tile": "36UXA",
+      "observation_date": "2018-08-05",
+      "pre_date": "2018-07-31",
+      "post_date": "2018-08-05",
+      "grid": {
+        "crs": "EPSG:32636",
+        "transform": [
+          10.0,
+          0.0,
+          651760.0,
+          0.0,
+          -10.0,
+          5557680.0
+        ],
+        "width": 64,
+        "height": 64,
+        "bounds": [
+          651760.0,
+          5557040.0,
+          652400.0,
+          5557680.0
+        ]
+      },
+      "search_aid_metrics": {
+        "anchor_area_m2": 1995.6987465427562,
+        "anchor_width_m": 76.8341187464539,
+        "anchor_height_m": 53.03588758967817,
+        "union_target_pixels": 33,
+        "eroded_anchor_interior_pixels": null,
+        "later_local_scene_dates": [
+          "2018-08-10",
+          "2018-08-15",
+          "2018-08-20",
+          "2018-08-25",
+          "2018-08-30",
+          "2018-09-04",
+          "2018-09-19"
+        ]
+      },
+      "endpoint_cache_paths": [
+        "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/84dab80f61adbca50169aee4922935b4b6da2ada721e2b2e9ac3a7333a573ba3.npz",
+        "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/6fec1944b4053af6f82b7b5849c01f6c2e364b93bdb2fa2fb0dbfde890bc3be1.npz"
+      ],
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "validation_approved": false,
+      "training_approved": false,
+      "role": "primary",
+      "rank": 1,
+      "endpoint_caches_present": true
+    },
+    {
+      "event_id": "event-4ee5bdeb33ddec684474",
+      "pair_id": "pair-b1da19290095d3863e28",
+      "group_id": "group-0d4c6841d965abf62969",
+      "stratum": "36UYA_Summer_time-dependent",
+      "existing_top_candidate_rank": 0,
+      "split": "validation",
+      "tile": "36UYA",
+      "observation_date": "2019-09-04",
+      "pre_date": "2019-08-30",
+      "post_date": "2019-09-04",
+      "grid": {
+        "crs": "EPSG:32636",
+        "transform": [
+          10.0,
+          0.0,
+          707560.0,
+          0.0,
+          -10.0,
+          5568000.0
+        ],
+        "width": 64,
+        "height": 64,
+        "bounds": [
+          707560.0,
+          5567360.0,
+          708200.0,
+          5568000.0
+        ]
+      },
+      "search_aid_metrics": {
+        "anchor_area_m2": 1921.5673700089828,
+        "anchor_width_m": 85.22865812748205,
+        "anchor_height_m": 96.07883782312274,
+        "union_target_pixels": 14,
+        "eroded_anchor_interior_pixels": null,
+        "later_local_scene_dates": [
+          "2019-09-09"
+        ]
+      },
+      "endpoint_cache_paths": [
+        "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/206136b7a27f36767ee4211e34811e48aab9f3d87303f2c448f2fa255566a04d.npz",
+        "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/710785a76eb9723ba60128dd197537a909479690df956d1e298ae8f732af3265.npz"
+      ],
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "validation_approved": false,
+      "training_approved": false,
+      "role": "primary",
+      "rank": 2,
+      "endpoint_caches_present": true
+    },
+    {
+      "event_id": "event-4a34368ee9483ed8f7a7",
+      "pair_id": "pair-2b4e19bb3dea8c59803f",
+      "group_id": "group-594ecdcf428fc819f662",
+      "stratum": "36UYA_Spring_time-dependent",
+      "existing_top_candidate_rank": 0,
+      "split": "validation",
+      "tile": "36UYA",
+      "observation_date": "2019-06-26",
+      "pre_date": "2019-06-11",
+      "post_date": "2019-06-26",
+      "grid": {
+        "crs": "EPSG:32636",
+        "transform": [
+          10.0,
+          0.0,
+          732660.0,
+          0.0,
+          -10.0,
+          5513680.0
+        ],
+        "width": 64,
+        "height": 64,
+        "bounds": [
+          732660.0,
+          5513040.0,
+          733300.0,
+          5513680.0
+        ]
+      },
+      "search_aid_metrics": {
+        "anchor_area_m2": 3569.949204625494,
+        "anchor_width_m": 74.71044746495318,
+        "anchor_height_m": 67.3154452079907,
+        "union_target_pixels": 36,
+        "eroded_anchor_interior_pixels": null,
+        "later_local_scene_dates": [
+          "2019-07-01",
+          "2019-07-06",
+          "2019-07-21",
+          "2019-07-26",
+          "2019-08-05",
+          "2019-08-10"
+        ]
+      },
+      "endpoint_cache_paths": [
+        "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/d3fd03dcf11332b6f9570b6f335db37be31179a9fb530a446b607eb7718039b1.npz",
+        "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/c1993abe81cad7d625805c975c5f7ef56995fe849be6dbea0b3251812243b5bf.npz"
+      ],
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "validation_approved": false,
+      "training_approved": false,
+      "role": "primary",
+      "rank": 3,
+      "endpoint_caches_present": true
+    },
+    {
+      "event_id": "event-9495d4e4197219fc88a6",
+      "pair_id": "pair-ba25e71a1d114caceaa7",
+      "group_id": "group-a177948c08d55f377549",
+      "stratum": "36UXA_time-dependent",
+      "existing_top_candidate_rank": 0,
+      "split": "validation",
+      "tile": "36UXA",
+      "observation_date": "2018-08-25",
+      "pre_date": "2018-08-20",
+      "post_date": "2018-08-25",
+      "grid": {
+        "crs": "EPSG:32636",
+        "transform": [
+          10.0,
+          0.0,
+          665220.0,
+          0.0,
+          -10.0,
+          5528400.0
+        ],
+        "width": 64,
+        "height": 64,
+        "bounds": [
+          665220.0,
+          5527760.0,
+          665860.0,
+          5528400.0
+        ]
+      },
+      "search_aid_metrics": {
+        "anchor_area_m2": 2219.1218328959267,
+        "anchor_width_m": 71.51066819147673,
+        "anchor_height_m": 65.79445362929255,
+        "union_target_pixels": 38,
+        "eroded_anchor_interior_pixels": null,
+        "later_local_scene_dates": [
+          "2018-08-30",
+          "2018-09-04",
+          "2018-09-19"
+        ]
+      },
+      "endpoint_cache_paths": [
+        "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/19463d551dc7d39ae405b2837df55c3e13567e4ba0af9b10365dac3348f9b92f.npz",
+        "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/f8efea95d199c3497651d291703e0f71a6687f2f020ac7aad9d009358a2d8dc1.npz"
+      ],
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "validation_approved": false,
+      "training_approved": false,
+      "role": "alternate",
+      "rank": 4,
+      "endpoint_caches_present": true
+    },
+    {
+      "event_id": "event-3304b611a63af8c10ebc",
+      "pair_id": "pair-a1577dac851dcf1c07da",
+      "group_id": "group-6bef49e5258e9f579324",
+      "stratum": "36UYA_Spring_time-dependent",
+      "existing_top_candidate_rank": 0,
+      "split": "validation",
+      "tile": "36UYA",
+      "observation_date": "2019-06-16",
+      "pre_date": "2019-06-11",
+      "post_date": "2019-06-26",
+      "grid": {
+        "crs": "EPSG:32636",
+        "transform": [
+          10.0,
+          0.0,
+          726900.0,
+          0.0,
+          -10.0,
+          5507460.0
+        ],
+        "width": 64,
+        "height": 64,
+        "bounds": [
+          726900.0,
+          5506820.0,
+          727540.0,
+          5507460.0
+        ]
+      },
+      "search_aid_metrics": {
+        "anchor_area_m2": 2078.537920292244,
+        "anchor_width_m": 59.464649968314916,
+        "anchor_height_m": 94.73365335725248,
+        "union_target_pixels": 62,
+        "eroded_anchor_interior_pixels": null,
+        "later_local_scene_dates": [
+          "2019-07-01",
+          "2019-07-06",
+          "2019-07-21",
+          "2019-07-26"
+        ]
+      },
+      "endpoint_cache_paths": [
+        "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/2bb960a7a9210096cc4a14283bb0de01318e4ca165c0ae371b72742e1ef544f3.npz",
+        "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/bc61c52619cc7a5265f13b047f4da105ced19999f4c60dc45addd8bf106bf4e8.npz"
+      ],
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "validation_approved": false,
+      "training_approved": false,
+      "role": "alternate",
+      "rank": 5,
+      "endpoint_caches_present": true
+    }
+  ],
+  "missing_slots": [
+    {
+      "role": "alternate",
+      "stratum": "36UYA_Summer_time-dependent",
+      "reason": "no_eligible_unused_geographic_group"
+    }
+  ],
+  "eligible_pair_count": 33,
+  "eligible_event_count": 11,
+  "eligible_group_count": 6,
+  "validation_queue_event_count": 53,
+  "dispositions": [
+    {
+      "event_id": "event-011bc19e1e0f43eaa1ea",
+      "group_id": "group-01d258e68b5c4e02152b",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "no_candidate_passed_metadata_rules"
+      ],
+      "considered_pairs": [
+        {
+          "pair_id": "pair-5ce0173eaaa67c67a04f",
+          "existing_top_candidate_rank": 0,
+          "reasons": [
+            "not_passed_automatic_quality_screen",
+            "endpoint_core_or_target_quality_flags"
+          ],
+          "eligible": false,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-73bad06c9e0d3fe6b7fc",
+          "existing_top_candidate_rank": 1,
+          "reasons": [
+            "not_passed_automatic_quality_screen",
+            "endpoint_core_or_target_quality_flags"
+          ],
+          "eligible": false,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-1c39681fc137d005b931",
+          "existing_top_candidate_rank": 2,
+          "reasons": [
+            "not_passed_automatic_quality_screen",
+            "endpoint_core_or_target_quality_flags"
+          ],
+          "eligible": false,
+          "overlapping_train_test_event_ids": []
+        }
+      ]
+    },
+    {
+      "event_id": "event-09d8404da019897e1147",
+      "group_id": "group-a77532f92e6bf57d35aa",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "no_candidate_passed_metadata_rules"
+      ],
+      "considered_pairs": [
+        {
+          "pair_id": "pair-c7c11e9015ccdda9c2ca",
+          "existing_top_candidate_rank": 0,
+          "reasons": [
+            "not_passed_automatic_quality_screen",
+            "endpoint_core_or_target_quality_flags"
+          ],
+          "eligible": false,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-23489597e47e6c3c2de4",
+          "existing_top_candidate_rank": 1,
+          "reasons": [
+            "not_passed_automatic_quality_screen",
+            "endpoint_core_or_target_quality_flags"
+          ],
+          "eligible": false,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-f113871fa642d1296fbc",
+          "existing_top_candidate_rank": 2,
+          "reasons": [
+            "not_passed_automatic_quality_screen",
+            "endpoint_core_or_target_quality_flags"
+          ],
+          "eligible": false,
+          "overlapping_train_test_event_ids": []
+        }
+      ]
+    },
+    {
+      "event_id": "event-0ab79db724103f463576",
+      "group_id": "group-ca924da77b0c5edd3a22",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "no_candidate_passed_metadata_rules"
+      ],
+      "considered_pairs": [
+        {
+          "pair_id": "pair-12a71f433e799f9b5de1",
+          "existing_top_candidate_rank": 0,
+          "reasons": [
+            "not_passed_automatic_quality_screen",
+            "endpoint_core_or_target_quality_flags"
+          ],
+          "eligible": false,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-e6856b3806b900afcd78",
+          "existing_top_candidate_rank": 1,
+          "reasons": [
+            "not_passed_automatic_quality_screen",
+            "endpoint_core_or_target_quality_flags"
+          ],
+          "eligible": false,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-a94057c546bf659b28da",
+          "existing_top_candidate_rank": 2,
+          "reasons": [
+            "not_passed_automatic_quality_screen",
+            "endpoint_core_or_target_quality_flags"
+          ],
+          "eligible": false,
+          "overlapping_train_test_event_ids": []
+        }
+      ]
+    },
+    {
+      "event_id": "event-142932521626c5782007",
+      "group_id": "group-a177948c08d55f377549",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "anchor_geometry_below_declared_search_aid_threshold"
+      ],
+      "considered_pairs": []
+    },
+    {
+      "event_id": "event-1fc3ddb968a0fd2b287b",
+      "group_id": "group-646504159ec8034a1565",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "anchor_geometry_below_declared_search_aid_threshold"
+      ],
+      "considered_pairs": []
+    },
+    {
+      "event_id": "event-24aef2e60c23cf0e3829",
+      "group_id": "group-a177948c08d55f377549",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "anchor_geometry_below_declared_search_aid_threshold"
+      ],
+      "considered_pairs": []
+    },
+    {
+      "event_id": "event-29126c32ff86e4117752",
+      "group_id": "group-ad1f9acc0d07fd0409f6",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "anchor_geometry_below_declared_search_aid_threshold"
+      ],
+      "considered_pairs": []
+    },
+    {
+      "event_id": "event-3304b611a63af8c10ebc",
+      "group_id": "group-6bef49e5258e9f579324",
+      "disposition": "selected_for_review_not_approved",
+      "reasons": [],
+      "considered_pairs": [
+        {
+          "pair_id": "pair-a1577dac851dcf1c07da",
+          "existing_top_candidate_rank": 0,
+          "reasons": [],
+          "eligible": true,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-762a7d3bec07b85e9898",
+          "existing_top_candidate_rank": 1,
+          "reasons": [],
+          "eligible": true,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-25553619e215155c0034",
+          "existing_top_candidate_rank": 2,
+          "reasons": [],
+          "eligible": true,
+          "overlapping_train_test_event_ids": []
+        }
+      ]
+    },
+    {
+      "event_id": "event-3d85659aace843f098ed",
+      "group_id": "group-0d4c6841d965abf62969",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "no_candidate_passed_metadata_rules"
+      ],
+      "considered_pairs": [
+        {
+          "pair_id": "pair-7a8b1b6bba36027b9b7e",
+          "existing_top_candidate_rank": 0,
+          "reasons": [
+            "endpoint_core_or_target_quality_flags",
+            "no_later_local_scene_for_persistence_review"
+          ],
+          "eligible": false,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-87de28a682043553eaea",
+          "existing_top_candidate_rank": 1,
+          "reasons": [
+            "no_later_local_scene_for_persistence_review"
+          ],
+          "eligible": false,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-ce0edfde01bd333382ee",
+          "existing_top_candidate_rank": 2,
+          "reasons": [
+            "no_later_local_scene_for_persistence_review"
+          ],
+          "eligible": false,
+          "overlapping_train_test_event_ids": []
+        }
+      ]
+    },
+    {
+      "event_id": "event-4a34368ee9483ed8f7a7",
+      "group_id": "group-594ecdcf428fc819f662",
+      "disposition": "selected_for_review_not_approved",
+      "reasons": [],
+      "considered_pairs": [
+        {
+          "pair_id": "pair-2b4e19bb3dea8c59803f",
+          "existing_top_candidate_rank": 0,
+          "reasons": [],
+          "eligible": true,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-61326d4c0d288fe91b8a",
+          "existing_top_candidate_rank": 1,
+          "reasons": [],
+          "eligible": true,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-a55278054ae53537955d",
+          "existing_top_candidate_rank": 2,
+          "reasons": [],
+          "eligible": true,
+          "overlapping_train_test_event_ids": []
+        }
+      ]
+    },
+    {
+      "event_id": "event-4b8961eb0ca3b4b4c44c",
+      "group_id": "group-646504159ec8034a1565",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "anchor_geometry_below_declared_search_aid_threshold"
+      ],
+      "considered_pairs": []
+    },
+    {
+      "event_id": "event-4ee5bdeb33ddec684474",
+      "group_id": "group-0d4c6841d965abf62969",
+      "disposition": "selected_for_review_not_approved",
+      "reasons": [],
+      "considered_pairs": [
+        {
+          "pair_id": "pair-b1da19290095d3863e28",
+          "existing_top_candidate_rank": 0,
+          "reasons": [],
+          "eligible": true,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-27bf67c1910e07bba2bd",
+          "existing_top_candidate_rank": 1,
+          "reasons": [],
+          "eligible": true,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-c77de497720d92fd28d4",
+          "existing_top_candidate_rank": 2,
+          "reasons": [],
+          "eligible": true,
+          "overlapping_train_test_event_ids": []
+        }
+      ]
+    },
+    {
+      "event_id": "event-619ad5667277d02c3129",
+      "group_id": "group-ca924da77b0c5edd3a22",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "anchor_geometry_below_declared_search_aid_threshold"
+      ],
+      "considered_pairs": []
+    },
+    {
+      "event_id": "event-640105ab811d61d7e594",
+      "group_id": "group-6bef49e5258e9f579324",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "anchor_geometry_below_declared_search_aid_threshold"
+      ],
+      "considered_pairs": []
+    },
+    {
+      "event_id": "event-690fb8e9423ff5df7d79",
+      "group_id": "group-ca924da77b0c5edd3a22",
+      "disposition": "not_selected_by_predeclared_bounded_roster",
+      "reasons": [],
+      "considered_pairs": [
+        {
+          "pair_id": "pair-c896677f6b14c564af37",
+          "existing_top_candidate_rank": 0,
+          "reasons": [],
+          "eligible": true,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-6e2e4fcf28f43dcd119d",
+          "existing_top_candidate_rank": 1,
+          "reasons": [],
+          "eligible": true,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-37e876464d598c513241",
+          "existing_top_candidate_rank": 2,
+          "reasons": [],
+          "eligible": true,
+          "overlapping_train_test_event_ids": []
+        }
+      ]
+    },
+    {
+      "event_id": "event-6c72341975d1e9237507",
+      "group_id": "group-ad1f9acc0d07fd0409f6",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "anchor_geometry_below_declared_search_aid_threshold"
+      ],
+      "considered_pairs": []
+    },
+    {
+      "event_id": "event-7030fdc04527942e5d85",
+      "group_id": "group-6bef49e5258e9f579324",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "anchor_geometry_below_declared_search_aid_threshold"
+      ],
+      "considered_pairs": []
+    },
+    {
+      "event_id": "event-712e5a77d884870f8698",
+      "group_id": "group-ad1f9acc0d07fd0409f6",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "anchor_geometry_below_declared_search_aid_threshold"
+      ],
+      "considered_pairs": []
+    },
+    {
+      "event_id": "event-73c1079c55e15eae315d",
+      "group_id": "group-02bd5553d6c38aef4100",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "no_candidate_passed_metadata_rules"
+      ],
+      "considered_pairs": [
+        {
+          "pair_id": "pair-794142a7f72535f8923f",
+          "existing_top_candidate_rank": 0,
+          "reasons": [
+            "not_passed_automatic_quality_screen",
+            "endpoint_core_or_target_quality_flags"
+          ],
+          "eligible": false,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-cd2fc7024ea1c7c74c69",
+          "existing_top_candidate_rank": 1,
+          "reasons": [
+            "not_passed_automatic_quality_screen",
+            "endpoint_core_or_target_quality_flags"
+          ],
+          "eligible": false,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-80c82287d4949ba6be0d",
+          "existing_top_candidate_rank": 2,
+          "reasons": [
+            "not_passed_automatic_quality_screen",
+            "endpoint_core_or_target_quality_flags"
+          ],
+          "eligible": false,
+          "overlapping_train_test_event_ids": []
+        }
+      ]
+    },
+    {
+      "event_id": "event-7560e74a73392efc132b",
+      "group_id": "group-ca924da77b0c5edd3a22",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "anchor_geometry_below_declared_search_aid_threshold"
+      ],
+      "considered_pairs": []
+    },
+    {
+      "event_id": "event-7c4a2eeda0702e9c6365",
+      "group_id": "group-646504159ec8034a1565",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "anchor_geometry_below_declared_search_aid_threshold"
+      ],
+      "considered_pairs": []
+    },
+    {
+      "event_id": "event-817385ac6f2e57d66996",
+      "group_id": "group-ef94cffb16622f217e6d",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "no_candidate_passed_metadata_rules"
+      ],
+      "considered_pairs": [
+        {
+          "pair_id": "pair-31601bc48343780321ab",
+          "existing_top_candidate_rank": 0,
+          "reasons": [
+            "not_passed_automatic_quality_screen",
+            "endpoint_core_or_target_quality_flags"
+          ],
+          "eligible": false,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-471cea97402ba9ffcb1a",
+          "existing_top_candidate_rank": 1,
+          "reasons": [
+            "not_passed_automatic_quality_screen",
+            "endpoint_core_or_target_quality_flags"
+          ],
+          "eligible": false,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-21bb6f74457c8d1631a5",
+          "existing_top_candidate_rank": 2,
+          "reasons": [
+            "not_passed_automatic_quality_screen",
+            "endpoint_core_or_target_quality_flags"
+          ],
+          "eligible": false,
+          "overlapping_train_test_event_ids": []
+        }
+      ]
+    },
+    {
+      "event_id": "event-8932b75d5f97a9b2b8ea",
+      "group_id": "group-a177948c08d55f377549",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "anchor_geometry_below_declared_search_aid_threshold"
+      ],
+      "considered_pairs": []
+    },
+    {
+      "event_id": "event-9495d4e4197219fc88a6",
+      "group_id": "group-a177948c08d55f377549",
+      "disposition": "selected_for_review_not_approved",
+      "reasons": [],
+      "considered_pairs": [
+        {
+          "pair_id": "pair-ba25e71a1d114caceaa7",
+          "existing_top_candidate_rank": 0,
+          "reasons": [],
+          "eligible": true,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-c8e5e88c68736fe3cbce",
+          "existing_top_candidate_rank": 1,
+          "reasons": [],
+          "eligible": true,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-74c7f279fb1767d580fb",
+          "existing_top_candidate_rank": 2,
+          "reasons": [],
+          "eligible": true,
+          "overlapping_train_test_event_ids": []
+        }
+      ]
+    },
+    {
+      "event_id": "event-9993d3bc382d3405a7ad",
+      "group_id": "group-646504159ec8034a1565",
+      "disposition": "selected_for_review_not_approved",
+      "reasons": [],
+      "considered_pairs": [
+        {
+          "pair_id": "pair-cbdc5c3dc169f42a07e0",
+          "existing_top_candidate_rank": 0,
+          "reasons": [],
+          "eligible": true,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-9fb88dfe6bcc069e4216",
+          "existing_top_candidate_rank": 1,
+          "reasons": [],
+          "eligible": true,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-e0f825324e56aa916f7e",
+          "existing_top_candidate_rank": 2,
+          "reasons": [],
+          "eligible": true,
+          "overlapping_train_test_event_ids": []
+        }
+      ]
+    },
+    {
+      "event_id": "event-9a957ad272c4ec6354eb",
+      "group_id": "group-646504159ec8034a1565",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "anchor_geometry_below_declared_search_aid_threshold"
+      ],
+      "considered_pairs": []
+    },
+    {
+      "event_id": "event-9b9ddf1ad254c5ddf0bb",
+      "group_id": "group-a177948c08d55f377549",
+      "disposition": "not_selected_by_predeclared_bounded_roster",
+      "reasons": [],
+      "considered_pairs": [
+        {
+          "pair_id": "pair-da6ed6c0619a5a7cc504",
+          "existing_top_candidate_rank": 0,
+          "reasons": [],
+          "eligible": true,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-a4c8f7f9316efde14d02",
+          "existing_top_candidate_rank": 1,
+          "reasons": [],
+          "eligible": true,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-8c2c607f4b768e9bcbc9",
+          "existing_top_candidate_rank": 2,
+          "reasons": [],
+          "eligible": true,
+          "overlapping_train_test_event_ids": []
+        }
+      ]
+    },
+    {
+      "event_id": "event-9bc6a711a0863aaaf894",
+      "group_id": "group-ad1f9acc0d07fd0409f6",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "anchor_geometry_below_declared_search_aid_threshold"
+      ],
+      "considered_pairs": []
+    },
+    {
+      "event_id": "event-a04d970e7db3b282b437",
+      "group_id": "group-02bd5553d6c38aef4100",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "no_candidate_passed_metadata_rules"
+      ],
+      "considered_pairs": [
+        {
+          "pair_id": "pair-4da0c1fed3e02525a046",
+          "existing_top_candidate_rank": 0,
+          "reasons": [
+            "not_passed_automatic_quality_screen",
+            "endpoint_core_or_target_quality_flags"
+          ],
+          "eligible": false,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-9f4ae7ee18af8aaf7f6d",
+          "existing_top_candidate_rank": 1,
+          "reasons": [
+            "not_passed_automatic_quality_screen",
+            "endpoint_core_or_target_quality_flags"
+          ],
+          "eligible": false,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-53c02d9d0dba80e38b72",
+          "existing_top_candidate_rank": 2,
+          "reasons": [
+            "not_passed_automatic_quality_screen",
+            "endpoint_core_or_target_quality_flags"
+          ],
+          "eligible": false,
+          "overlapping_train_test_event_ids": []
+        }
+      ]
+    },
+    {
+      "event_id": "event-a31cd3d8fad22e8a8665",
+      "group_id": "group-ef94cffb16622f217e6d",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "anchor_geometry_below_declared_search_aid_threshold"
+      ],
+      "considered_pairs": []
+    },
+    {
+      "event_id": "event-ad147fc240e2cf36837d",
+      "group_id": "group-6bef49e5258e9f579324",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "anchor_geometry_below_declared_search_aid_threshold"
+      ],
+      "considered_pairs": []
+    },
+    {
+      "event_id": "event-b0d28a07e8d2ba953e84",
+      "group_id": "group-6bef49e5258e9f579324",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "anchor_geometry_below_declared_search_aid_threshold"
+      ],
+      "considered_pairs": []
+    },
+    {
+      "event_id": "event-b2cd19eb536879693b66",
+      "group_id": "group-0b708c0fcf0abe675cb7",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "anchor_geometry_below_declared_search_aid_threshold"
+      ],
+      "considered_pairs": []
+    },
+    {
+      "event_id": "event-b41d67055c21412c75de",
+      "group_id": "group-6bef49e5258e9f579324",
+      "disposition": "not_selected_by_predeclared_bounded_roster",
+      "reasons": [],
+      "considered_pairs": [
+        {
+          "pair_id": "pair-28070caefd7d00ec4b7a",
+          "existing_top_candidate_rank": 0,
+          "reasons": [],
+          "eligible": true,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-9df2cf1a01e0eb6039bc",
+          "existing_top_candidate_rank": 1,
+          "reasons": [],
+          "eligible": true,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-0522cbdfe40755c614b5",
+          "existing_top_candidate_rank": 2,
+          "reasons": [],
+          "eligible": true,
+          "overlapping_train_test_event_ids": []
+        }
+      ]
+    },
+    {
+      "event_id": "event-b7484d83cffa8e62be41",
+      "group_id": "group-6bef49e5258e9f579324",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "no_candidate_passed_metadata_rules"
+      ],
+      "considered_pairs": [
+        {
+          "pair_id": "pair-20b746057ab24b396af0",
+          "existing_top_candidate_rank": 0,
+          "reasons": [
+            "endpoint_core_or_target_quality_flags"
+          ],
+          "eligible": false,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-fae791551d28c672f160",
+          "existing_top_candidate_rank": 1,
+          "reasons": [
+            "endpoint_core_or_target_quality_flags"
+          ],
+          "eligible": false,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-603c9b5882830eb3e6de",
+          "existing_top_candidate_rank": 2,
+          "reasons": [
+            "endpoint_core_or_target_quality_flags"
+          ],
+          "eligible": false,
+          "overlapping_train_test_event_ids": []
+        }
+      ]
+    },
+    {
+      "event_id": "event-b922ba30673927889beb",
+      "group_id": "group-45f0c39e787ca8622918",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "anchor_geometry_below_declared_search_aid_threshold"
+      ],
+      "considered_pairs": []
+    },
+    {
+      "event_id": "event-b9bbffdd56fa20017ed7",
+      "group_id": "group-6bef49e5258e9f579324",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "anchor_geometry_below_declared_search_aid_threshold"
+      ],
+      "considered_pairs": []
+    },
+    {
+      "event_id": "event-be298e572d2b6bb96b43",
+      "group_id": "group-6bef49e5258e9f579324",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "anchor_geometry_below_declared_search_aid_threshold"
+      ],
+      "considered_pairs": []
+    },
+    {
+      "event_id": "event-bf3d28f31dcf19938962",
+      "group_id": "group-45f0c39e787ca8622918",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "no_candidate_passed_metadata_rules"
+      ],
+      "considered_pairs": [
+        {
+          "pair_id": "pair-430ec0ecae32ce98efcb",
+          "existing_top_candidate_rank": 0,
+          "reasons": [
+            "endpoint_core_or_target_quality_flags"
+          ],
+          "eligible": false,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-20bab62e74e82178ff34",
+          "existing_top_candidate_rank": 1,
+          "reasons": [
+            "not_passed_automatic_quality_screen",
+            "endpoint_core_or_target_quality_flags"
+          ],
+          "eligible": false,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-88f2fe856cadcc223f84",
+          "existing_top_candidate_rank": 2,
+          "reasons": [
+            "not_passed_automatic_quality_screen",
+            "endpoint_core_or_target_quality_flags"
+          ],
+          "eligible": false,
+          "overlapping_train_test_event_ids": []
+        }
+      ]
+    },
+    {
+      "event_id": "event-c23f665683de6447d4fc",
+      "group_id": "group-0b708c0fcf0abe675cb7",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "anchor_geometry_below_declared_search_aid_threshold"
+      ],
+      "considered_pairs": []
+    },
+    {
+      "event_id": "event-ca0f3b6de08b05c09a41",
+      "group_id": "group-6bef49e5258e9f579324",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "no_candidate_passed_metadata_rules"
+      ],
+      "considered_pairs": [
+        {
+          "pair_id": "pair-165b7b7d05c61ba3f7a8",
+          "existing_top_candidate_rank": 0,
+          "reasons": [
+            "endpoint_core_or_target_quality_flags"
+          ],
+          "eligible": false,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-2e67c853e6bd14538828",
+          "existing_top_candidate_rank": 1,
+          "reasons": [
+            "endpoint_core_or_target_quality_flags"
+          ],
+          "eligible": false,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-57e41797bb5413895303",
+          "existing_top_candidate_rank": 2,
+          "reasons": [
+            "not_passed_automatic_quality_screen",
+            "endpoint_core_or_target_quality_flags"
+          ],
+          "eligible": false,
+          "overlapping_train_test_event_ids": []
+        }
+      ]
+    },
+    {
+      "event_id": "event-d14d8cddf8afcb5978db",
+      "group_id": "group-45f0c39e787ca8622918",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "anchor_geometry_below_declared_search_aid_threshold"
+      ],
+      "considered_pairs": []
+    },
+    {
+      "event_id": "event-d25ba5af6aaf82ee679d",
+      "group_id": "group-a77532f92e6bf57d35aa",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "anchor_geometry_below_declared_search_aid_threshold"
+      ],
+      "considered_pairs": []
+    },
+    {
+      "event_id": "event-d2b59c10719901fea00a",
+      "group_id": "group-646504159ec8034a1565",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "anchor_geometry_below_declared_search_aid_threshold"
+      ],
+      "considered_pairs": []
+    },
+    {
+      "event_id": "event-d429b74df2f252831671",
+      "group_id": "group-a177948c08d55f377549",
+      "disposition": "not_selected_by_predeclared_bounded_roster",
+      "reasons": [],
+      "considered_pairs": [
+        {
+          "pair_id": "pair-a50f33ac6ed67395b946",
+          "existing_top_candidate_rank": 0,
+          "reasons": [],
+          "eligible": true,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-6403fce18a8324fa34ed",
+          "existing_top_candidate_rank": 1,
+          "reasons": [],
+          "eligible": true,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-2edfdf71678ef9ac0a56",
+          "existing_top_candidate_rank": 2,
+          "reasons": [],
+          "eligible": true,
+          "overlapping_train_test_event_ids": []
+        }
+      ]
+    },
+    {
+      "event_id": "event-dd4bd80de3e6c35d7e9b",
+      "group_id": "group-646504159ec8034a1565",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "anchor_geometry_below_declared_search_aid_threshold"
+      ],
+      "considered_pairs": []
+    },
+    {
+      "event_id": "event-df503adc18d2d27071e3",
+      "group_id": "group-ef94cffb16622f217e6d",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "anchor_geometry_below_declared_search_aid_threshold"
+      ],
+      "considered_pairs": []
+    },
+    {
+      "event_id": "event-e15c0fadd44fbee7f053",
+      "group_id": "group-0d4c6841d965abf62969",
+      "disposition": "not_selected_by_predeclared_bounded_roster",
+      "reasons": [],
+      "considered_pairs": [
+        {
+          "pair_id": "pair-9985a5eebeb532573799",
+          "existing_top_candidate_rank": 0,
+          "reasons": [],
+          "eligible": true,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-0c35f377fd2ba765efbb",
+          "existing_top_candidate_rank": 1,
+          "reasons": [],
+          "eligible": true,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-64430af443ef26be7377",
+          "existing_top_candidate_rank": 2,
+          "reasons": [],
+          "eligible": true,
+          "overlapping_train_test_event_ids": []
+        }
+      ]
+    },
+    {
+      "event_id": "event-e5407d496d4b84fa2fe8",
+      "group_id": "group-6bef49e5258e9f579324",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "no_candidate_passed_metadata_rules"
+      ],
+      "considered_pairs": [
+        {
+          "pair_id": "pair-a8f2dc9be1fd94cbca66",
+          "existing_top_candidate_rank": 0,
+          "reasons": [
+            "not_passed_automatic_quality_screen",
+            "endpoint_core_or_target_quality_flags"
+          ],
+          "eligible": false,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-13b1f10f187a0662a71b",
+          "existing_top_candidate_rank": 1,
+          "reasons": [
+            "not_passed_automatic_quality_screen",
+            "endpoint_core_or_target_quality_flags"
+          ],
+          "eligible": false,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-d24a8816d7635dd6e408",
+          "existing_top_candidate_rank": 2,
+          "reasons": [
+            "not_passed_automatic_quality_screen",
+            "endpoint_core_or_target_quality_flags"
+          ],
+          "eligible": false,
+          "overlapping_train_test_event_ids": []
+        }
+      ]
+    },
+    {
+      "event_id": "event-e5a0e8d3382f9b41f762",
+      "group_id": "group-a177948c08d55f377549",
+      "disposition": "not_selected_by_predeclared_bounded_roster",
+      "reasons": [],
+      "considered_pairs": [
+        {
+          "pair_id": "pair-c8386ed0e115157fce5f",
+          "existing_top_candidate_rank": 0,
+          "reasons": [],
+          "eligible": true,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-23335fd2076f592b9a1b",
+          "existing_top_candidate_rank": 1,
+          "reasons": [],
+          "eligible": true,
+          "overlapping_train_test_event_ids": []
+        },
+        {
+          "pair_id": "pair-4605a379ce40b49e1c75",
+          "existing_top_candidate_rank": 2,
+          "reasons": [],
+          "eligible": true,
+          "overlapping_train_test_event_ids": []
+        }
+      ]
+    },
+    {
+      "event_id": "event-ed63cfe27012fe5c7ae3",
+      "group_id": "group-36a03a9f0cbb1cdf96d7",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "anchor_geometry_below_declared_search_aid_threshold"
+      ],
+      "considered_pairs": []
+    },
+    {
+      "event_id": "event-f865b33dacb83ca61daa",
+      "group_id": "group-0b708c0fcf0abe675cb7",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "anchor_geometry_below_declared_search_aid_threshold"
+      ],
+      "considered_pairs": []
+    },
+    {
+      "event_id": "event-f93b5ffcb754ccf2e4cc",
+      "group_id": "group-6bef49e5258e9f579324",
+      "disposition": "metadata_ineligible",
+      "reasons": [
+        "anchor_geometry_below_declared_search_aid_threshold"
+      ],
+      "considered_pairs": []
+    }
+  ],
+  "barrier_event_count": 3397,
+  "actual_training_grid_count": 13,
+  "schema_version": 1,
+  "frozen_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+  "source_files": {
+    "audit_metadata": {
+      "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/AnnotationAudit/v1/metadata.json",
+      "sha256": "0a3f4c12caf3dacef860603266396f29e885c3d29d2bbea4cda6d16707f494c8"
+    },
+    "splits": {
+      "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/AnnotationAudit/v1/splits.json",
+      "sha256": "6c29ca5ab841dfe452ccccb1df826f1b2ae1613aea0cb9f463ab4302c5dd806d"
+    },
+    "catalogue": {
+      "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/AnnotationAudit/v1/annotations_clean.geojson",
+      "sha256": "06a1090c8451d670929163ff7be067d63454cb1893a3e8cbee97519fbb69cbce"
+    },
+    "annotations": {
+      "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/AnnotationAudit/v1/annotation_manifest.jsonl",
+      "sha256": "20511aba811a4d75fd09f317d898b26259e587734f4240807cebf414bf327554"
+    },
+    "pairs": {
+      "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/AnnotationAudit/v1/candidate_pairs.jsonl",
+      "sha256": "74d8d229470b4ef4aa968199768772fffd010aaab28f6d44775afb27c1601cd6"
+    },
+    "scenes": {
+      "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/AnnotationAudit/v1/scene_inventory.jsonl",
+      "sha256": "78a3006c508ac008af5f9d879fa59907475ca28641e63866c2c95bf3a2ede740"
+    },
+    "quality_summary": {
+      "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/PixelQA/v1/summary/metadata.json",
+      "sha256": "6f79faf30d815d0a504772a08b322da7d2e242764faefa0d6d47cebaf0208e4e"
+    },
+    "quality": {
+      "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/PixelQA/v1/summary/quality_manifest.jsonl",
+      "sha256": "6ea1147bd2ec1f904c999c252457bd97022214f85f4e23b7a29fcf5a1a4dab99"
+    },
+    "review_metadata": {
+      "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/PixelQA/v1/review/metadata.json",
+      "sha256": "7a84ff3a6ab43cd8a96823b642dd7a8e5e4b64205cfa233f6e8a71b4aa4c8209"
+    },
+    "queue": {
+      "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/PixelQA/v1/review/review_queue.jsonl",
+      "sha256": "3f139333eba72bd0a5361854f826e5c0133f526875b5b467c71e3bf57e83a190"
+    },
+    "training_metadata": {
+      "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/CuratedPilot/v1/dataset/metadata.json",
+      "sha256": "5d929465f148c1823f6332222f56430dac9a5b0d1985d8545c2eb17c99ec3e71"
+    },
+    "training_manifest": {
+      "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/CuratedPilot/v1/dataset/training_manifest.jsonl",
+      "sha256": "138713e6a0b57e5491015fe42438d1a5d1702c68c753289bf52abb5caf7949aa"
+    }
+  },
+  "counts": {
+    "candidate_pairs_by_split": {
+      "test": 1799,
+      "train": 8211,
+      "validation": 1146
+    },
+    "quality_pairs_by_split": {
+      "test": 825,
+      "train": 5583,
+      "validation": 540
+    },
+    "review_events_by_split": {
+      "train": 541,
+      "validation": 53,
+      "test": 88
+    },
+    "dispositions": {
+      "metadata_ineligible": 42,
+      "selected_for_review_not_approved": 5,
+      "not_selected_by_predeclared_bounded_roster": 6
+    }
+  },
+  "selection_uses_model_predictions": false,
+  "pixel_arrays_read": 0,
+  "model_executions": 0,
+  "training_approved": false,
+  "validation_approved": false,
+  "limitations": [
+    "Curated metadata-filtered pilot; not population-representative.",
+    "Geometry thresholds and union target counts are search aids, not reviewed labels or eroded-interior proof.",
+    "A later scene is only an opportunity for persistence review, not a clear-observation claim.",
+    "Stable/no-change validation pairs still require explicit image review and unknown-pixel masking."
+  ]
+}
