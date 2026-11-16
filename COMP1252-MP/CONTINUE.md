@@ -6,7 +6,8 @@ agent. Work in this project on **`codex/curated-deforestation-pilot`**. Read
 editing. Preserve other work and commit each completed, verified logical change
 on this same branch with an updated handoff.
 
-Current completed milestone/state: **`Docs/Handoffs/2026-11-16-overfit-diagnostic.md`**.
+Current work/state: **`Docs/Handoffs/2026-11-16-pixel-pilot.md`**.
+Previous completed milestone: `Docs/Handoffs/2026-11-16-overfit-diagnostic.md`.
 Earlier pipeline: `Docs/Handoffs/2026-11-16-pilot-baseline.md`.
 Dataset/provenance: `Docs/Handoffs/2026-11-15-curated-pilot.md`.
 
