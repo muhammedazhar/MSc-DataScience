@@ -1,0 +1,41 @@
+{
+  "mode": "tests",
+  "device": "cpu",
+  "torch_version": "2.6.0.dev20241112",
+  "torch_intraop_threads": 1,
+  "torch_interop_threads": 1,
+  "native_threads": 1,
+  "dataloader_workers": 0,
+  "seed": 42,
+  "gpu_used": false,
+  "environment_versions": {
+    "torch": "2.5.1",
+    "numpy": "1.26.4",
+    "rasterio": "1.4.3"
+  },
+  "implementation_sha256": "9f76cd6c4dd8ceb956102d503e9069c89f63f1ac5a481515391e9393598adceb",
+  "pattern": "test_validation_support_verification.py",
+  "tests_run": 3,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "successful": true,
+  "resources": {
+    "logical_cpu_count": 11,
+    "machine_ram_gib": 18.0,
+    "worker_peak_rss_mib_sampled": 197.7,
+    "worker_high_water_rss_mib": 193.06,
+    "minimum_available_gib_sampled": 4.26,
+    "elapsed_seconds": 1.28,
+    "worker_limit_mib": 512,
+    "minimum_available_gib_limit": 1.5,
+    "runtime_limit_seconds": 120,
+    "workers": 1,
+    "native_thread_limit": 1,
+    "nice_increment": 10,
+    "gdal_cache_mib": 16,
+    "warp_memory_mib": 0,
+    "gpu_used": false,
+    "monitor_interval_seconds": 0.25
+  }
+}

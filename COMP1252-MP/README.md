@@ -26,6 +26,10 @@ reviewed training examples. The [validation review guide](./Docs/Guides/Validati
 records the first bounded held-out review: all five candidates were rejected,
 with independent evidence checks and a geometry-support audit. No validation
 accuracy has been measured; usable reviewed validation labels remain needed.
+The [broader validation support audit](./Docs/Guides/ValidationSupportPool.md)
+accounts for all 540 screened validation pairs and explains why the current
+rules yield no fresh review shortlist. Its independent check and all exclusion
+records are saved without opening new imagery or measuring model accuracy.
 
 ## Structure of the repository
 

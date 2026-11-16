@@ -1,0 +1,8 @@
+test_prior_group_and_claimed_eligibility_do_not_override_evidence (test_validation_support_verification.IndependentSupportVerificationTests) ... ok
+test_published_temporal_clipping_changes_support_for_the_same_anchor (test_validation_support_verification.IndependentSupportVerificationTests) ... ok
+test_shortlist_rebuild_is_order_invariant_and_retains_missing_slots (test_validation_support_verification.IndependentSupportVerificationTests) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.109s
+
+OK

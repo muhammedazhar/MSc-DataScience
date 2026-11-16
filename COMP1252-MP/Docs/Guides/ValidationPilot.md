@@ -91,12 +91,16 @@ available-memory reserve, one native thread and no GPU. No training was repeated
 
 ## Next bounded task
 
-Before preparing more timelines, audit actual anchor-specific rasterized
-interior support over a broader frozen validation QA pool. Keep the four-pixel
-minimum and geographical separation intact. Predeclare a separate next roster
-from support-qualified cases before opening new images; preserve every rejected
-case and document selection bias. Temporal ambiguity needs explicit review or
-expert adjudication, not an assumed annotation date or automatic boundary labels.
+The subsequent [broader support audit](ValidationSupportPool.md) is complete:
+all 540 screened validation pairs were audited and independently checked. Its
+saved empty fresh-review shortlist and diagnostic gate counts now determine
+the next task; do not repeat this first roster or its processing.
+
+Use the completed broader audit's diagnostic evidence for a separately
+predeclared quality/context review protocol. Keep the four-pixel minimum and
+geographical separation intact. Preserve every rejected case and document
+selection bias. Temporal ambiguity needs explicit review or expert adjudication,
+not an assumed annotation date or automatic boundary labels.
 
 Only after sufficient reviews are approved and committed should the frozen
 final-1664 model be evaluated at threshold .5. Keep test groups untouched and

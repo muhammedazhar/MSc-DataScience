@@ -6,7 +6,7 @@ agent. Work in this project on **`codex/curated-deforestation-pilot`**. Read
 editing. Preserve other work and commit each completed, verified logical change
 on this same branch with an updated handoff.
 
-Current work/state: **`Docs/Handoffs/2026-11-16-validation-support-pool.md`**.
+Current completed audit/state: **`Docs/Handoffs/2026-11-16-validation-support-pool.md`**.
 Previous completed review: `Docs/Handoffs/2026-11-16-validation-pilot.md`.
 Previous completed milestone: `Docs/Handoffs/2026-11-16-pixel-pilot.md`.
 Previous completed milestone: `Docs/Handoffs/2026-11-16-overfit-diagnostic.md`.
@@ -31,8 +31,12 @@ correctness, clearing area or date-inference claim follows. The first bounded
 validation roster is now fully reviewed and independently verified: all five
 cases were rejected, so no validation dataset or accuracy score exists. The
 geometry audit explains insufficient pixel interiors in most eligible pairs.
-Next is broader geometry-first eligibility before a separately predeclared
-review roster. Do not repeat completed training or force labels from rejections.
+The broader support audit is also complete and independently verified: all
+540 screened validation pairs are accounted for, but no fresh group meets
+every current gate. The empty shortlist and all reasons are saved; 263 tests
+pass. Next is an explicitly predeclared review of quality screening on the
+reviewed ROIs and their model context. Do not silently relax the completed
+protocol, repeat training, or force labels from rejected cases.
 The handoff identifies proposed next work and what has already finished.
 
 Use one low-priority CPU worker, native/Torch threads one, no GPU, monitored
