@@ -6,9 +6,9 @@
   "selection": {
     "split": "validation",
     "strata": [
-      "36UXA",
-      "36UYA_Summer",
-      "36UYA_Spring"
+      "36UXA_time-dependent",
+      "36UYA_Summer_time-dependent",
+      "36UYA_Spring_time-dependent"
     ],
     "primaries_per_stratum": 1,
     "alternates_per_stratum_at_most": 1,
@@ -17,9 +17,10 @@
     "max_derived_stable_pairs": 3,
     "group_uniqueness": "All selected loss-case groups distinct; derived earlier pair shares its reviewed parent validation group.",
     "eligibility": "Frozen automatic pass, zero core and target QA flags, anchor area>=1600 square metres and bounding width/height>=40 metres as search aids only, at least one later local observation. Exact interior>=4 is a subsequent preparation gate.",
-    "ranking": "Within stratum, ascending group_id/event_id then annotation-date post preferred, shortest interval and pair_id; select all primaries before disjoint-group alternates. Missing alternates remain missing.",
+    "ranking": "Within stratum, ascending group_id/event_id, existing frozen review-queue top-candidate rank, then pair_id; select all primaries before disjoint-group alternates. Missing alternates remain missing.",
     "footprints": "Complete 64x64 feature footprint must avoid every frozen train/test conservative group footprint and all13 actual training grids. No split reassignment.",
-    "selection_bias": "Clear-image and geometry-filtered convenience sample; not random population validation. No NDVI contrast or model prediction selection."
+    "selection_bias": "Clear-image and geometry-filtered convenience sample; not random population validation. No NDVI contrast or model prediction selection.",
+    "selection_sha256": "c5b0ca063285c083d29615c1d933f1dbabc752edbf286faa740a6e9e3db8620d"
   },
   "review": {
     "used_model_predictions": false,
@@ -81,5 +82,10 @@
     "Ignored pixels never become negatives; partial ROIs do not establish complete clearing boundaries or area.",
     "Validation is for development; test groups remain untouched.",
     "Observed image-date intervals are not exact felling dates."
-  ]
+  ],
+  "preparation_implementation_sha256": {
+    "select_validation_cases.py": "0a137b5a343e21a1e6daf10ba21abf10d1efc69eee36f77761ee30b3e0689ca7",
+    "prepare_validation_review.py": "ccd87d997489866c48b8ddc151cd1fde443966c3c7b7e7f19002ab714782b294",
+    "validation_review.py": "b73853c8ac3229aad82e1b1e11b50395d51ca80d9ed486c30015320919777f62"
+  }
 }

@@ -34,7 +34,17 @@ candidate-pair records. They share parent validation groups, not new locations.
 Keep all existing QA, training-only curation/loader and source-bound model files
 unchanged. New selector/preparer/review/export modules provide an explicit
 validation role; do not spoof validation as training to bypass old gates.
-At this checkpoint new code is in progress and not yet fully tested.
+Selector, preparer and blind review rules are implemented. The 18 review/
+preparation tests and 6 selector tests pass under the resource guard. Selector
+output is locked under `Docs/Reviews/ValidationPilotV1/selection/`: three
+primaries plus two distinct-group alternates, with the missing Summer alternate
+explicitly retained. Its run reads metadata only and uses no model predictions.
+Source/selection hashes are frozen before image inspection. Export/audit code
+is still in progress. No validation images have been inspected or approved yet.
+
+GitHub backup is now authorized and configured: push every completed checkpoint
+to `origin/codex/curated-deforestation-pilot` on the same branch. The initial
+push succeeded through `6509ba5`; subsequent checkpoint pushes should follow.
 
 Project: `/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP`.
 Git root is its parent. Python:

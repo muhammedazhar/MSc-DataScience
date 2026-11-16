@@ -4,6 +4,8 @@
 - After each completed, verified logical change, commit the change on this
   branch and update the handoff with current state, validation and remaining
   work. Keep incomplete work explicitly identified in any interruption checkpoint.
+- Push completed checkpoints to GitHub on this same branch, as requested by
+  the user. Keep the local and remote branch names identical.
 - Read `CONTINUE.md` and `Docs/Handoffs/2026-11-16-validation-pilot.md` before
   continuing, then the linked prior handoffs for provenance and frozen QA constraints.
 - Preserve the user's Mac capacity limits documented in that handoff. Use one

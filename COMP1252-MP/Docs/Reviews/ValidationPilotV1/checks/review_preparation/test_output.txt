@@ -1,0 +1,23 @@
+test_actual_training_crop_overlap_and_reused_group_fail_even_when_catalogue_bounds_do_not (test_validation_preparation.ValidationPreparationTests) ... ok
+test_actual_training_footprint_is_reprojected_before_overlap_comparison (test_validation_preparation.ValidationPreparationTests) ... ok
+test_anchor_must_be_unblocked_and_bound_to_exact_validation_group_and_split (test_validation_preparation.ValidationPreparationTests) ... ok
+test_forward_five_to_thirty_day_intervals_are_required (test_validation_preparation.ValidationPreparationTests) ... ok
+test_full_core_corner_overlap_with_any_train_or_test_conservative_footprint_fails (test_validation_preparation.ValidationPreparationTests) ... ok
+test_grid_rejects_role_shape_resolution_rotation_bounds_and_nonfinite_origin (test_validation_preparation.ValidationPreparationTests) ... ok
+test_isolation_requires_all_thirteen_training_rows_with_train_role (test_validation_preparation.ValidationPreparationTests) ... ok
+test_separate_validation_core_and_exact_thirteen_training_crops_pass_unchanged (test_validation_preparation.ValidationPreparationTests) ... ok
+test_accepted_review_approves_evaluation_only_and_derives_observed_bounds (test_validation_review.ValidationReviewTests) ... ok
+test_case_and_artifact_mutations_invalidate_review_bindings (test_validation_review.ValidationReviewTests) ... ok
+test_clear_claim_cannot_override_qa_metadata_validity_or_policy (test_validation_review.ValidationReviewTests) ... ok
+test_exact_scene_date_coverage_and_order_are_required (test_validation_review.ValidationReviewTests) ... ok
+test_model_assisted_or_missing_blind_review_declaration_cannot_approve_labels (test_validation_review.ValidationReviewTests) ... ok
+test_no_eligible_stable_pair_remains_none_without_imputed_negative (test_validation_review.ValidationReviewTests) ... ok
+test_persistence_and_no_later_forest_are_required (test_validation_review.ValidationReviewTests) ... ok
+test_rejection_retains_reasons_and_never_approves_or_derives_intervals (test_validation_review.ValidationReviewTests) ... ok
+test_stable_pair_is_earliest_valid_pre_loss_combination_not_empty_target (test_validation_review.ValidationReviewTests) ... ok
+test_training_test_and_already_approved_evidence_are_rejected (test_validation_review.ValidationReviewTests) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.244s
+
+OK
