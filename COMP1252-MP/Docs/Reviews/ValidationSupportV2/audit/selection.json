@@ -1,0 +1,83 @@
+{
+  "schema_version": 2,
+  "scope": "Broader frozen validation QA geometry/support audit and fixed prediction-blind review shortlist; no label approval or accuracy measurement.",
+  "rule": {
+    "audit_universe": "Every frozen validation candidate pair, and every anchor of every validation pair with completed published QA; no area, bounding-size, top-three or quality-status filter before auditing.",
+    "unreviewed_candidates": "Retain unscreened/blocked candidate pairs with explicit status and no fabricated pixel counts.",
+    "erosion_pixels": 1,
+    "minimum_interior_pixels": 4,
+    "require_automatic_pass": true,
+    "require_zero_endpoint_crop_and_target_qa": true,
+    "require_zero_actual_interior_qa": true,
+    "require_full_footprint_isolation": true,
+    "require_later_metadata_usable_scene": true,
+    "followup_window_days": 45,
+    "followup_same_year": true,
+    "exclude_prior_events": true,
+    "exclude_prior_groups": true,
+    "source_strata": [
+      "36UXA_time-dependent",
+      "36UYA_Summer_time-dependent",
+      "36UYA_Spring_time-dependent"
+    ],
+    "primaries_per_stratum": 1,
+    "alternates_per_stratum_at_most": 1,
+    "maximum_shortlist": 6,
+    "ranking": [
+      "group_id",
+      "event_id",
+      "post_date_not_annotation_date",
+      "interval_days",
+      "pair_id"
+    ],
+    "ranking_uses_ndvi_or_model_scores": false,
+    "shortlist_approves_labels": false,
+    "new_imagery_reviewed": false,
+    "no_fallback_when_slots_missing": true,
+    "cache_policy": "Final target/interior depend on pair dates and temporal reference; never cache by event/grid alone."
+  },
+  "protocol_sha256": "afe7ee41222489693c1944b35edf265885a48fd204ff530066caffafb95241d5",
+  "source_audit_sha256": "e36dbf5aaf20fcbaf3da22458d27763b5e3f29c40c9db535f42fa67bbf794c99",
+  "selection_uses_model_predictions": false,
+  "source_jp2_pixel_reads": 0,
+  "published_qa_masks_read": 540,
+  "model_executions": 0,
+  "training_approved": false,
+  "evaluation_approved": false,
+  "candidates": [],
+  "missing_slots": [
+    {
+      "stratum": "36UXA_time-dependent",
+      "role": "primary",
+      "reason": "no_eligible_unreviewed_unused_geographic_group"
+    },
+    {
+      "stratum": "36UYA_Summer_time-dependent",
+      "role": "primary",
+      "reason": "no_eligible_unreviewed_unused_geographic_group"
+    },
+    {
+      "stratum": "36UYA_Spring_time-dependent",
+      "role": "primary",
+      "reason": "no_eligible_unreviewed_unused_geographic_group"
+    },
+    {
+      "stratum": "36UXA_time-dependent",
+      "role": "alternate",
+      "reason": "no_eligible_unreviewed_unused_geographic_group"
+    },
+    {
+      "stratum": "36UYA_Summer_time-dependent",
+      "role": "alternate",
+      "reason": "no_eligible_unreviewed_unused_geographic_group"
+    },
+    {
+      "stratum": "36UYA_Spring_time-dependent",
+      "role": "alternate",
+      "reason": "no_eligible_unreviewed_unused_geographic_group"
+    }
+  ],
+  "eligible_anchor_pair_count": 0,
+  "eligible_event_count": 0,
+  "eligible_group_count": 0
+}

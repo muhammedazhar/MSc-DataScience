@@ -1,0 +1,58 @@
+{
+  "execution_status": "completed",
+  "mode": "validation_support_pool",
+  "protocol_sha256": "afe7ee41222489693c1944b35edf265885a48fd204ff530066caffafb95241d5",
+  "coverage": {
+    "anchor_pair_count": 540,
+    "pair_count": 540,
+    "event_count": 53,
+    "group_count": 14,
+    "anchor_pairs_with_interior_at_least_four": 100,
+    "events_with_interior_at_least_four": 10
+  },
+  "eligible_after_history": {
+    "anchor_pair_count": 0,
+    "pair_count": 0,
+    "event_count": 0,
+    "group_count": 0,
+    "anchor_pairs_with_interior_at_least_four": 0,
+    "events_with_interior_at_least_four": 0
+  },
+  "shortlist_count": 0,
+  "implementation_sha256": {
+    "audit_validation_support_pool.py": "27bebf952e323708b28e9cf9772fdb516dbeea934e2fe7e44802e88e0ba1e508",
+    "audit_validation_geometry.py": "1d0e3f5ffc3d755c1f53a5c1eafa36d5af7336cb51826508efc4e5b2fe7fe2ee",
+    "prepare_validation_review.py": "239f42dba0086c5dc1d8cae7ff448df44b6d4b85c76008ed94d220a1e46ace1d",
+    "select_validation_cases.py": "0a137b5a343e21a1e6daf10ba21abf10d1efc69eee36f77761ee30b3e0689ca7",
+    "assess_pixel_quality.py": "4e0b77922cd478322912cb4116801502ec13bdcb740fc7696a1010e94fbd535f",
+    "validate_sample.py": "475f641ed582af37eedc2ee9e94065e280202db08eb381441e1403c3eb001fba"
+  },
+  "artifact_sha256": {
+    "audit.json": "e36dbf5aaf20fcbaf3da22458d27763b5e3f29c40c9db535f42fa67bbf794c99",
+    "selection.json": "8807e48e61558c3aa589abf50345cfe0f9b1f5927ac356c495da2db9f87c5462",
+    "report.md": "a840ca678b15e58771ecc175809faa7708d8f1968ab0239b3e3e3732eb9e3b52"
+  },
+  "source_jp2_pixel_reads": 0,
+  "model_executions": 0,
+  "new_imagery_reviewed": 0,
+  "labels_approved": 0,
+  "torch_imported": false,
+  "resources": {
+    "logical_cpu_count": 11,
+    "machine_ram_gib": 18.0,
+    "worker_peak_rss_mib_sampled": 194.7,
+    "worker_high_water_rss_mib": 198.77,
+    "minimum_available_gib_sampled": 4.17,
+    "elapsed_seconds": 4.59,
+    "worker_limit_mib": 512,
+    "minimum_available_gib_limit": 1.5,
+    "runtime_limit_seconds": 300,
+    "workers": 1,
+    "native_thread_limit": 1,
+    "nice_increment": 10,
+    "gdal_cache_mib": 16,
+    "warp_memory_mib": 0,
+    "gpu_used": false,
+    "monitor_interval_seconds": 0.25
+  }
+}

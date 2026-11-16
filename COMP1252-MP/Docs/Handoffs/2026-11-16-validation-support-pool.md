@@ -11,11 +11,20 @@ Approved task: audit actual interior support over the BROADER frozen validation
 QA pool, preserve exclusions and save a fixed shortlist BEFORE new image review.
 Protocol: `Docs/Reviews/ValidationSupportV2/protocol.json`. It binds all input
 hashes, immutable source code, selection rules and Mac limits before processing.
-The new broad worker and ten rule/provenance tests are implemented; all ten
-focused tests pass under the unchanged guard. No broad geometry processing,
-new imagery inspection or validation inference has run. The independent
-verifier is in progress and will reconstruct geometry using published target
-planes and a separate NumPy erosion implementation.
+The broad audit is COMPLETE and archived in `Docs/Reviews/ValidationSupportV2/audit/`.
+It covers all 540 completed validation QA pairs/anchors, 53 events and 14 groups,
+with all 606 unscreened candidates retained separately (1146 candidates total).
+100 pairs from 10 events meet the four-pixel interior minimum. Only 8 pairs from
+2 events in 2 groups satisfy the quality, footprint and later-observation gates
+before review-history exclusion. Both groups were previously exposed, leaving
+ZERO fresh candidates and all six shortlist slots explicitly missing.
+
+The empty shortlist is a valid audit outcome. Do not relax the protocol or add
+fallback candidates to populate it. No new imagery was opened, no labels were
+approved, and no validation model inference was run. The worker took 4.59s,
+peak 198.77MiB, with >=4.17GiB available; no source JP2 pixels or Torch imports.
+All ten rule/provenance tests pass. Independent verification remains pending;
+it reconstructs geometry using published target planes and separate NumPy erosion.
 
 The universe is all frozen validation candidate pairs. Every completed QA pair
 and EVERY anchor will be audited, including bad quality and prior-rejected
@@ -38,11 +47,12 @@ missing; no fallback or forced approval. Maximum six shortlist cases.
 
 ## Remaining work
 
-1. Implement/test the new separate broad audit and independent verifier without
-   modifying archived QA/training/validation code. Freeze executable sources.
-2. Run one low-priority guarded audit, then independently verify geometry from
-   published target masks, counts, all exclusions and deterministic shortlist.
-3. Save results/test receipts and a clear report, update this handoff and
+1. DONE: implemented/tested broad worker and executed the full audit without
+   modifying archived QA/training/validation code. Raw output is complete; no rerun.
+2. Finish/test and run the independent verifier, checking all geometry, counts,
+   exclusions and deterministic empty shortlist. Retain diagnostics as planning
+   evidence only; do not change the predeclared selection.
+3. Save verification/test receipts and a clear report, update this handoff and
    `CONTINUE.md`, commit and push. No new imagery review in this audit milestone.
 
 The later review task needs a separate bounded review protocol for the actual
