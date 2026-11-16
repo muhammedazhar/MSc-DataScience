@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "status": "predeclared_before_validation_predictions",
+  "scope": "Small prediction-blind assistant-reviewed partial ROI validation; not a representative benchmark or expert-certified ground truth.",
+  "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+  "selection": {
+    "split": "validation",
+    "strata": [
+      "36UXA",
+      "36UYA_Summer",
+      "36UYA_Spring"
+    ],
+    "primaries_per_stratum": 1,
+    "alternates_per_stratum_at_most": 1,
+    "max_prepared_cases": 6,
+    "max_accepted_loss_cases": 3,
+    "max_derived_stable_pairs": 3,
+    "group_uniqueness": "All selected loss-case groups distinct; derived earlier pair shares its reviewed parent validation group.",
+    "eligibility": "Frozen automatic pass, zero core and target QA flags, anchor area>=1600 square metres and bounding width/height>=40 metres as search aids only, at least one later local observation. Exact interior>=4 is a subsequent preparation gate.",
+    "ranking": "Within stratum, ascending group_id/event_id then annotation-date post preferred, shortest interval and pair_id; select all primaries before disjoint-group alternates. Missing alternates remain missing.",
+    "footprints": "Complete 64x64 feature footprint must avoid every frozen train/test conservative group footprint and all13 actual training grids. No split reassignment.",
+    "selection_bias": "Clear-image and geometry-filtered convenience sample; not random population validation. No NDVI contrast or model prediction selection."
+  },
+  "review": {
+    "used_model_predictions": false,
+    "minimum_positive_interior_pixels": 4,
+    "minimum_control_pixels": 64,
+    "timeline": "Every local same-year observation within45 days eachside; no omitted cloudy/uncertain observations.",
+    "acceptance": "Reviewed forest before and clearing after primary pair, later clear persistence, at least3 reviewed stable control dates including both endpoints, numeric QA zero for each clear ROI claim.",
+    "stable_pair_rule": "Earliest chronological5-30day pair with reviewed target forest and control stable, bothdates<=loss pre-date. Derived pair identity/lineage explicit; supervise control ROI ONLY, all other pixels255. No eligible pair is retained as unavailable.",
+    "rejections": "Retain every prepared disposition. Use predeclared same-stratum alternate only after primary rejection; do not search until success."
+  },
+  "evaluation": {
+    "checkpoint": "Docs/Reviews/PixelPilotV1/run/model_weights.npz",
+    "weights_sha256": "e3a7b56dcaa701a514de357f66c243f57c8f9bacee358d26841f19dc90d880bf",
+    "run_metadata_sha256": "ebcc690faa15aad5eff235a3b173b10b77448aeddbc3acd228a875d71c1f241c",
+    "checkpoint_attempt": 1664,
+    "probability_threshold": 0.5,
+    "training_positive_weight": 17.483443708609272,
+    "retraining": false,
+    "threshold_tuning": false,
+    "best_checkpoint_selection": false,
+    "label_lock": "Commit finalized hash-bound reviews and exported validation manifest BEFORE any validation model inference.",
+    "metrics": "Reviewed pixels only; report clearing pairs and stable-only pairs separately and pooled; six temporal samples represent at most3 geographic groups. Undefined metrics remain undefined."
+  },
+  "resources": {
+    "workers": 1,
+    "native_threads": 1,
+    "torch_threads": 1,
+    "gpu_used": false,
+    "nice_increment": 10,
+    "worker_rss_mib": 512,
+    "available_memory_reserve_gib": 1.5,
+    "max_seconds_per_worker": 300,
+    "preparation_batch_size": 1
+  },
+  "immutable_sources_sha256": {
+    "assess_pixel_quality.py": "4e0b77922cd478322912cb4116801502ec13bdcb740fc7696a1010e94fbd535f",
+    "pixelqa_masks.py": "cdbac7d70b94cc2043cbfa94a8201a232320b634c7c23d987b33f3948617897f",
+    "pixelqa_scene_metadata.py": "4d783446400c33f2bfb9d6e8730d3ab8e5178d35559a39cf714735384d542b72",
+    "validate_sample.py": "475f641ed582af37eedc2ee9e94065e280202db08eb381441e1403c3eb001fba",
+    "annotation_scene_inventory.py": "5c35020ccf12f5e5f689c1f7130d64d9cabd5e6e3e04cdede291c9a912688318",
+    "prepare_curated_pilot.py": "1a8d5ec426bd657cd0eb7f1ed2e08c125f8a9f879aad799c395168536e777f82",
+    "curated_pilot_review.py": "222bfc332959d2e597644d881ea295b43a29d08606ce8326750e3dd2176e918f",
+    "curated_pilot_exports.py": "caf67918894fa13ad62c3f9e6b8aad58ac69c414e999df9a988901d2166a9958",
+    "build_curated_pilot.py": "302c6fb3aedd13facaf0f83abcb3c234f4ff1b2257d303ce7b5cdc5cd470cc4c",
+    "verify_curated_pilot.py": "12f27b43a15d26e7bd3fc6c3df9363ed9b5b1eb3e017a2665548d1895830e8df",
+    "pilot_dataset.py": "bb0e58cfb61ac8980d77ed0cc88f99266fa1c35fe1aba5a19780cef4e53af7b7",
+    "pilot_objectives.py": "bccfd912cfdafcd7a04df1fb997b05627a995b5f89496241508e00dc97430d61",
+    "pilot_pixel_objective.py": "6020e42610e7e371000a2667958ddb3a8ce1acbe5a2ff7b3c721bfb27b1a1599",
+    "train_reviewed_pilot.py": "389ecb205b7fa91624964c6eb030352827001b0b38b74b7c12e30c833ec24813",
+    "reviewed_pilot_worker.py": "7e826d6f4cb3d9ed9d2c32e23838c479926261284a274879a2989dc78df43252",
+    "train_pilot_baseline.py": "259f367ddc613b0095a93ddcf7b9ae8f0a14553fa4fc5fc28665c76ae6059995",
+    "run_pilot_checks.py": "9f76cd6c4dd8ceb956102d503e9069c89f63f1ac5a481515391e9393598adceb",
+    "diagnose_pilot_overfit.py": "e190a95b153498df138bb000d9edbf2dcab5c3b14058391e0a8e1a234637f27b",
+    "pilot_overfit_worker.py": "2da2fc63c99f9ca4533e6d22061870301a7d8985d827621dae7ae96cf480bb4c",
+    "verify_pixel_pilot.py": "f6684643e4ea536b69a48a2da00581b9644e408e27715b0645c7fbc84a611c97"
+  },
+  "limitations": [
+    "Assistant image review is not independent expert annotation.",
+    "Ignored pixels never become negatives; partial ROIs do not establish complete clearing boundaries or area.",
+    "Validation is for development; test groups remain untouched.",
+    "Observed image-date intervals are not exact felling dates."
+  ]
+}
