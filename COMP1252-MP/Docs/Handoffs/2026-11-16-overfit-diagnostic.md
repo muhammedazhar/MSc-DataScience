@@ -1,11 +1,26 @@
 # Single-example overfit diagnostic
 
-## Current state: predeclared experiment, implementation pending
+## Current state: diagnostic implementation ready; model executions pending
 
 Branch: `codex/curated-deforestation-pilot`. The user authorized the next task
 after the pipeline smoke and requested tool-neutral continuity for Gemini
 Antigravity if the ChatGPT usage window expires. Start with root `CONTINUE.md`.
 Commit verified logical changes on this branch and update this file.
+
+Plan/continuation checkpoint: `5aafc56`. NEW
+`Solutions/diagnose_pilot_overfit.py` now supplies the pure analytic controls,
+strict train-event selector, fixed checkpoint schedule, reviewed-only
+probability/AUC summaries and confusion-derived fit gate, plus its guarded CLI.
+All **14** new helper tests pass (guarded worker 1.53s, max sampled194.8MiB).
+The CLI engine `Solutions/pilot_overfit_worker.py` is now complete, AST-checked
+and inspected by root. It allows finite stationary steps, verifies ignored
+gradients on every update, retains all fixed checkpoints, rereads the selected
+arrays, and checks saved weights. The complete current suite passes **187
+tests** (3.06s guarded worker, largest sampled RSS314.9MiB). No diagnostic
+model execution has started at this checkpoint. Next, run the three arms
+sequentially using the commands below. The summary agent is writing
+`Solutions/summarize_pilot_overfit.py`; do not assume that file is ready until
+inspected/tested.
 
 The prior milestone is complete in `9e3f110` (foundation `07e0a6d`): 173 tests,
 13-example reviewed dataset, correct 255-ignore loss/metrics, deterministic
@@ -49,6 +64,19 @@ probabilities contain no class signal. Record reviewed positive/negative
 probability distributions and training-only ranking AUC without threshold tuning.
 
 ## Remaining implementation and checks
+
+Execution commands (fresh output directories, one command at a time):
+
+```bash
+PILOT_PYTHON=/Users/muhammedazhar/.miniconda3/envs/COMP1252-MP/bin/python
+"$PILOT_PYTHON" -B Solutions/diagnose_pilot_overfit.py --arm global_weight_sgd --output Datasets/CuratedPilot/v1/overfit_diagnostic/runs/global_weight_sgd
+"$PILOT_PYTHON" -B Solutions/diagnose_pilot_overfit.py --arm local_weight_sgd --output Datasets/CuratedPilot/v1/overfit_diagnostic/runs/local_weight_sgd
+"$PILOT_PYTHON" -B Solutions/diagnose_pilot_overfit.py --arm local_weight_adam --output Datasets/CuratedPilot/v1/overfit_diagnostic/runs/local_weight_adam
+```
+
+If usage expires while a job is active, check the exact Python command and
+completed `metadata.json` before resuming. Code and plan are already saved;
+do not train the same arm twice or change settings in response to results.
 
 - Root will add NEW `Solutions/diagnose_pilot_overfit.py`, reusing existing
   `make_model`, loader, masked BCE and count metrics. Keep prior model helper

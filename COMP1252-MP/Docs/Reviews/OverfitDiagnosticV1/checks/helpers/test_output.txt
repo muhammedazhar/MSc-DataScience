@@ -1,0 +1,19 @@
+test_global_weight_pushes_the_one_event_constant_optimum_above_half (test_pilot_overfit.ConstantProbabilityTests) ... ok
+test_local_balance_has_half_probability_and_analytic_weighted_loss (test_pilot_overfit.ConstantProbabilityTests) ... ok
+test_missing_classes_noninteger_counts_and_invalid_weights_are_rejected (test_pilot_overfit.ConstantProbabilityTests) ... ok
+test_unweighted_constant_matches_the_observed_class_prior (test_pilot_overfit.ConstantProbabilityTests) ... ok
+test_checkpoint_schedule_is_unique_bounded_and_includes_final_attempt (test_pilot_overfit.FixedDiagnosticSelectionTests) ... ok
+test_selection_is_a_single_exact_approved_training_event (test_pilot_overfit.FixedDiagnosticSelectionTests) ... ok
+test_arbitrary_ignored_probabilities_cannot_change_the_evidence (test_pilot_overfit.ProbabilityEvidenceTests) ... ok
+test_class_summaries_and_pairwise_auc_ties_use_reviewed_pixels_only (test_pilot_overfit.ProbabilityEvidenceTests) ... ok
+test_invalid_reviewed_probabilities_shapes_and_unknown_labels_fail (test_pilot_overfit.ProbabilityEvidenceTests) ... ok
+test_all_positive_and_all_negative_predictions_cannot_pass (test_pilot_overfit.ReviewedFitGateTests) ... ok
+test_forged_metric_fields_do_not_override_the_confusion_counts (test_pilot_overfit.ReviewedFitGateTests) ... ok
+test_gate_accepts_exact_predeclared_minimum (test_pilot_overfit.ReviewedFitGateTests) ... ok
+test_perfect_and_near_perfect_reviewed_fits_pass (test_pilot_overfit.ReviewedFitGateTests) ... ok
+test_wrong_support_noninteger_counts_and_threshold_changes_are_errors (test_pilot_overfit.ReviewedFitGateTests) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.002s
+
+OK
