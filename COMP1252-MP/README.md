@@ -15,11 +15,14 @@ The [reviewed pilot guide](./Docs/Guides/CuratedPilot.md) describes the 13 accep
 training pairs, stable-forest control regions, observed date intervals and
 partial labels that require an ignore-aware loader and loss.
 The [pilot training guide](./Docs/Guides/PilotBaseline.md) covers the implemented
-loader, masked objectives and bounded CPU smoke run, including its current
-all-positive prediction limitation.
+loader, masked objectives and bounded CPU smoke run, including the short run's
+all-positive predictions.
 The [overfit diagnostic](./Docs/Guides/OverfitDiagnostic.md) confirms that the
 same training path can fit one reviewed crop, with controlled weight/optimizer
 comparisons and independent reconstruction of the saved results.
+The [reviewed-pixel training guide](./Docs/Guides/ReviewedPixelPilot.md) documents
+the corrected dataset-wide loss weighting and completed bounded fit of all 13
+reviewed training examples. Separate reviewed validation is the next milestone.
 
 ## Structure of the repository
 

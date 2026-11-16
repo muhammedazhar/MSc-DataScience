@@ -127,10 +127,10 @@ claiming reproducibility across machines or stable Torch releases.
 ## Next training work
 
 The [bounded single-example diagnostic](OverfitDiagnostic.md) is now complete:
-all three predeclared arms fitted the reviewed regions of that crop. Define
-the intended loss reduction before extending the fit to all 13 cases, then
-develop on a larger reviewed dataset with geographically
-separate validation examples. Do not tune thresholds on held-out imagery or
+all three predeclared arms fitted the reviewed regions of that crop. The
+[reviewed-pixel objective and bounded all-13 fit](ReviewedPixelPilot.md) are
+also complete, with independent numerical verification. Next curate
+geographically separate reviewed validation examples. Do not tune thresholds on held-out imagery or
 treat the current 13 training groups as a validation/test set. The original
 binary training scripts remain incompatible with 255 labels; the new pilot
 path supplies the required masking.

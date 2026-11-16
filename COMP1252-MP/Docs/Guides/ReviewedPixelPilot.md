@@ -1,6 +1,6 @@
 # Training the reviewed-pixel pilot
 
-The approved pilot has 13 independent training groups, 151 reviewed clearing
+The approved pilot has 13 distinct geographic training groups, 151 reviewed clearing
 interior pixels and 2,640 reviewed stable-forest pixels. Another 50,457 pixels
 are unknown (`255`) and contribute neither loss nor reported performance.
 All features retain their exported 27-channel, 64x64 grids and signed values.
@@ -81,6 +81,45 @@ PILOT_PYTHON=/Users/muhammedazhar/.miniconda3/envs/COMP1252-MP/bin/python
 The documented Torch runtime/distribution discrepancy persists; both identities
 are recorded. Do not claim portability to another runtime without checking it.
 
+## Completed results
+
+The one predeclared run completed all 1,664 updates in **8.87 seconds**, peaking
+at **313.94 MiB**. Sampled available system memory stayed at or above **2.60 GiB**.
+All 13 examples and pooled support passed the final fit gate: **TP151 / FP0 /
+FN0 / TN2640**. Precision, recall, specificity and Dice are 1.0 on these reviewed
+training pixels only. Final weighted BCE is approximately .000318, or .000168
+after division by mean class-weight mass.
+
+| Update | Complete image cycles | Pooled Dice | Cases passing |
+| ---: | ---: | ---: | ---: |
+| 0 | 0 | .102651 | 0/13 |
+| 26 | 2 | .102651 | 0/13 |
+| 416 | 32 | 1.0 | 13/13 |
+| 832 | 64 | 1.0 | 13/13 |
+| 1664 | 128 | 1.0 | 13/13 |
+
+416 is the first passing **recorded checkpoint**, not the exact first fitting
+update. At 26 the corrected objective still produced all-positive reviewed
+predictions. Thus normalization alone did not eliminate that early result;
+the longer run demonstrates learnability without isolating its cause.
+
+**206 tests passed** before training. Independent numerical verification passed
+for all 65 saved example checkpoints, five pooled summaries, all 1,664 step
+receipts, safe final weights and source arrays. This verification took .51s at
+78.66 MiB peak, imported no Torch and executed no model. All final logit maps
+were exactly reproduced by saved-weight replay inside the training worker.
+
+All four preview pages were inspected. Reviewed clearing interiors appear in
+high-probability regions and reviewed forest controls in low-probability
+regions. Predictions also extend outside reviewed ROIs; these extensions are
+unvalidated and cannot supply clearing boundaries or area estimates.
+
+Durable evidence is in `Docs/Reviews/PixelPilotV1/`: the predeclared plan,
+`run/` raw arrays/weights/logs/previews, `verification/` independent results,
+`checks/` test receipts and `preview_review.md` visual inspection. The
+[verified report](../Reviews/PixelPilotV1/verification/report.md) includes all
+per-example counts and losses. No experiment needs repeating to continue.
+
 ## Interpretation and next work
 
 This diagnostic uses reviewed TRAINING pixels only. A fitting result demonstrates
@@ -88,9 +127,18 @@ training capability, not unseen-location performance or correctness on ignored
 pixels. The longer exposure and new normalization differ from the old smoke;
 this is not an isolated empirical comparison of normalization effects.
 
-Geographically separate, explicitly reviewed validation is needed before model
-selection or performance claims. Keep test locations untouched. Annotation
-image dates are observation dates; first-visible-date inference remains a
-separate later task and cannot establish exact felling dates.
+Next prepare a small review set from the frozen validation geographic groups,
+checking complete feature-footprint separation from training. Select and label
+without viewing model predictions. Include stable/no-change pairs when assessing
+false alarms; a set containing only known clearings cannot establish that rate
+across unchanged locations. Preserve explicit review evidence and unknown labels.
+Use a separate validation path rather than weakening the archived train-only
+loader/export safeguards. After freezing the reviews, evaluate the current
+final-1664 checkpoint at the existing .5 threshold without retraining or tuning.
+Partial ROIs still support only reviewed-region scores.
+
+Keep test locations untouched. Annotation image dates are observation dates;
+first-visible-date inference remains a separate later task and cannot establish
+exact felling dates.
 
 Current state and completed evidence: `Docs/Handoffs/2026-11-16-pixel-pilot.md`.

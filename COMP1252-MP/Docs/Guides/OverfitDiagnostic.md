@@ -132,8 +132,8 @@ There is no need to rerun the arms to continue the project.
 
 ## Next work
 
-Define the intended reviewed-pixel versus equal-image objective, then extend a
-bounded training diagnostic to all 13 examples. Develop a geographically
+The [reviewed-pixel objective and bounded all-13 training diagnostic](ReviewedPixelPilot.md)
+are now complete and independently verified. Next develop a geographically
 separate reviewed validation set before model selection or accuracy claims.
 Do not treat this one-crop fit, ignored regions, or training controls as a test
 set. Temporal first-visible-date inference remains a later task.
