@@ -1,0 +1,13 @@
+test_all_ignored_loss_is_none_without_gradient_or_fake_zero (test_pilot_pixel_objective.PixelAggregateObjectiveTests) ... ok
+test_count_types_bounds_and_unrepresentable_scales_are_rejected (test_pilot_pixel_objective.PixelAggregateObjectiveTests) ... ok
+test_equal_image_mean_is_a_counterexample_for_unequal_support (test_pilot_pixel_objective.PixelAggregateObjectiveTests) ... ok
+test_ignored_nonfinite_logits_have_exact_zero_gradient_after_scaling (test_pilot_pixel_objective.PixelAggregateObjectiveTests) ... ok
+test_scale_is_one_for_one_image_or_equal_reviewed_support (test_pilot_pixel_objective.PixelAggregateObjectiveTests) ... ok
+test_singleton_image_batch_matches_unbatched_but_multiple_images_fail (test_pilot_pixel_objective.PixelAggregateObjectiveTests) ... ok
+test_unequal_support_loss_and_shared_gradient_equal_concatenated_reference (test_pilot_pixel_objective.PixelAggregateObjectiveTests) ... ok
+test_wrapper_enforces_global_counts_support_and_original_validity (test_pilot_pixel_objective.PixelAggregateObjectiveTests) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.076s
+
+OK

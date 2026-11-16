@@ -1,0 +1,8 @@
+test_all_ignored_skips_forward_rng_batchnorm_and_existing_optimizer_state (test_reviewed_pilot_worker.ReviewedPilotWorkerTests) ... ok
+test_inconsistent_validity_fails_before_forward_or_optimizer (test_reviewed_pilot_worker.ReviewedPilotWorkerTests) ... ok
+test_plan_rejects_changes_to_exposure_mask_support_optimizer_and_limits (test_reviewed_pilot_worker.ReviewedPilotWorkerTests) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.617s
+
+OK

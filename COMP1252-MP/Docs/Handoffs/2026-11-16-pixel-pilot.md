@@ -16,7 +16,15 @@ reviewed-pixel loss and gradient. Sequential updates do not equal one batch
 update. The original modules remain unchanged to preserve archived source
 hashes; new code and equivalence tests go in separate modules.
 
-Training has NOT started. Planned: same 2545-parameter CPU CNN, seed 42, SGD
+Training has NOT started. Implementation is complete and **206 tests pass**.
+Objective equivalence (8 tests) and worker skip/scope (3 tests) also passed
+separately. Evidence: `Docs/Reviews/PixelPilotV1/checks/`. Full suite used
+251.5 MiB peak, 11.98 seconds, minimum 2.28 GiB available memory. The plan now
+freezes all ten executable source hashes before any training. Independent
+NumPy verifier and four regression tests are implemented. Old source hashes
+are unchanged. Guide: `Docs/Guides/ReviewedPixelPilot.md`.
+
+Planned: same 2545-parameter CPU CNN, seed 42, SGD
 rate .05, fixed manifest order, 128 cycles / 1664 updates, checkpoints
 0/26/416/832/1664, fixed threshold .5 and no early stopping. Primary final fit
 requires precision/recall/specificity/Dice >=.95 on every example AND aggregate.
@@ -43,13 +51,11 @@ Keep all old QA/model/objective source files unchanged; do not reinstall Torch
 
 ## Remaining work
 
-1. Implement and guard-test the pixel objective, including shared-parameter
-   gradient equivalence for unequal reviewed counts and ignored-value invariance.
-2. Implement bounded worker and independent logits verifier; bind plan, sources,
-   arrays, steps and final weight replay. Freeze/commit code before running.
-3. Run the single predeclared diagnostic only after tests pass. Save all results,
+1. DONE: implemented and guard-tested the objective, worker, independent verifier;
+   froze executable sources in the predeclared plan. Commit this state before running.
+2. Run the single predeclared diagnostic now that tests pass. Save all results,
    including no-fit outcomes, inspect previews and verify saved logits numerically.
-4. Update this handoff, guide and `CONTINUE.md`, run appropriate checks and commit.
+3. Update this handoff, guide and `CONTINUE.md`, complete verification and commit.
 
 Next milestone after this task: geographically separate reviewed validation,
 before claiming detection performance. First-visible-date inference remains later.
