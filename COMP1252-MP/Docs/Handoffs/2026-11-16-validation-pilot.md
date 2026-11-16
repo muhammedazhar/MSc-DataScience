@@ -1,122 +1,163 @@
 # Small held-out validation continuation
 
-## Current state: approved work in progress
+## Current state: bounded review and audit complete; validation labels unavailable
 
-Continue on `codex/curated-deforestation-pilot`; commit each verified logical
-change with this handoff updated. Previous training milestone complete at
-`439e14c`. Do not repeat training. Root `CONTINUE.md` is usable by Codex, Gemini
-Antigravity or another agent without chat history.
+Continue on `codex/curated-deforestation-pilot`. Commit each verified logical
+change with this handoff updated, then push to the SAME GitHub branch at origin.
+Root `CONTINUE.md` is the tool-neutral entry point for Codex, Gemini Antigravity
+or another agent. The full training milestone remains complete at `439e14c`;
+no training or held-out inference needs repeating.
 
-Current task: prepare a small prediction-blind validation set from the original
-frozen VALIDATION groups, then evaluate the frozen final-1664 checkpoint only
-after reviews and labels are locked. Protocol:
-`Docs/Reviews/ValidationPilotV1/protocol.json`. No validation model inference
-has run and no validation label is approved yet.
+The five-case validation roster is exhausted: **0 approved, 5 rejected**. The
+rejections were independently verified; a geometry-only audit then explained
+poor raster interior support across the metadata-eligible pool. There is NO
+approved validation dataset, label lock or accuracy score. Preparing labels and
+measuring unseen-location performance remain future work. Do not force labels,
+relax margins or silently select replacements until a result passes.
 
-## Completed bounded review: no approved validation labels
+Checkpoints: `6509ba5` predeclared protocol; `2dbd686` locked roster and tested
+review/preparation; `18ec71c` QA schema fix; `5f41594` all five rejections;
+`65aef3f` interruption backup preserving in-progress code; `501c023` independent
+review verification and all 35 review-bound TIFFs. The following completion
+commit contains geometry results, final 250-test proof, exporter refusal and
+updated guide/continuation. Completed checkpoints are pushed to origin.
 
-All five locked candidates (3 primaries and 2 predefined alternates) have now
-been prepared sequentially and their complete timeline PNGs opened. The Spring
-primary's detailed pair PNG was also inspected. `reviews.json` contains every
-hash-bound rejection; exact artifacts and guarded receipts are tracked under
-`prepared_cases/` and `preparation_receipts/` in the review directory.
+## What was selected, inspected and rejected
 
-| Candidate | Role | Eroded interior pixels | Disposition |
-| --- | --- | ---: | --- |
-| 9993 (UXA) | Primary | 1 | Below fixed minimum4 |
-| 4ee5 (Summer) | Primary | 0 | Below fixed minimum4 |
-| 4a343 (Spring) | Primary | 10 | Pre-image forest not unambiguous in road/disturbance mosaic |
-| 9495 (UXA) | Alternate | 0 | Below fixed minimum4 |
-| 3304 (Spring) | Alternate | 0 | Below fixed minimum4 |
+Protocol: `Docs/Reviews/ValidationPilotV1/protocol.json`. Selection:
+`selection/selection.json` under that review directory. The metadata-only rule
+used frozen validation groups, clear endpoint QA and area/bounding dimensions
+as SEARCH AIDS, with no NDVI contrast or model prediction ranking. Full 64x64
+feature footprints avoid EVERY frozen train/test conservative footprint and
+all 13 actual training grids. No split reassignment occurred.
 
-**Zero samples are approved. No dataset, label lock, validation inference or
-accuracy score may be fabricated from this roster.** The bounded roster is
-exhausted; do not relax ROI rules or add replacements until something passes.
-The follow-up being implemented is a geometry-only audit of metadata-eligible
-validation candidates to quantify actual rasterized interior support before
-designing a separate future review roster. It reads no source JP2s or model
-predictions and does not open or approve new imagery.
+Three primaries and two predefined distinct-group alternates were selected.
+Summer had no eligible second group under the same rules. All five complete
+local timeline PNGs were opened before any validation prediction, and the
+Spring primary's detailed before/after pair was inspected. The observations
+retain explicit uncertainty; no rejected case supplies even negative labels.
 
-Five preparation workers used 9.16–15.25s each, peak375.22/367.62/380.30/
-362.28/373.12MiB, minimum available memory2.63GiB. All stayed within the
-512MiB/1.5GiB limits. There is no active pixel/model worker at this checkpoint.
-Review-only independent verification PASSED: all five rejections, all 53
-timeline observations/caches, actual target erosion, source identities and
-complete footprint isolation were checked without Torch, model execution or
-source JP2 pixel reads. It took 2.79s at 179.73MiB. Results are archived in
-`Docs/Reviews/ValidationPilotV1/review_verification/`. The 42 focused validation
-tests now pass. A global TIFF ignore rule had omitted the 35 review-bound
-arrays from Git; a narrow exception now includes their exact hash-verified
-bytes in the authoritative Docs review snapshots. The geometry audit is pending.
-Export/evaluation modules are implemented for a future valid label set and
-must be described as unexecuted against real validation data, even if unit
-tests pass. Their presence does not imply this dataset exists.
+| Candidate suffix | Source stratum | Role | Eroded pixels | Rejection |
+| --- | --- | --- | ---: | --- |
+| 9993 | UXA | Primary | 1 | Below fixed minimum 4 |
+| 4ee5 | UYA Summer | Primary | 0 | Below fixed minimum 4 |
+| 4a343 | UYA Spring | Primary | 10 | Pre-image forest not unambiguous |
+| 9495 | UXA | Alternate | 0 | Below fixed minimum 4 |
+| 3304 | UYA Spring | Alternate | 0 | Below fixed minimum 4 |
 
-Plan: one primary per UXA/UYA Summer/UYA Spring stratum, at most one predeclared
-alternate from another group per stratum, maximum six prepared cases and three
-accepted loss cases. Clear image/geometry filtering is a search aid and creates
-selection bias. It does not prove labels or guarantee an eroded interior.
-Full 64x64 feature footprints must avoid all frozen train/test conservative
-footprints and all 13 actual training grids. No split reassignment.
+The Spring primary lies in a road/disturbed-ground mosaic; colour change or an
+annotation date does not prove a forest-to-clearing transition. Review is
+assistant inspection, not independent expert ground truth. Rejection statements
+are hash-bound to exact case JSONs, all 9 artifacts and all prepared observations.
 
-Every available timeline observation requires explicit forest/clearing/obscured/
-uncertain and stable-control review states. Use no predictions during review.
-Accepted loss pairs need >=4 interior pixels, >=64 forest control pixels,
-forest then clearing endpoints, later persistence and >=3 clear control dates.
-Optional stable-only earlier pairs use a deterministic rule over reviewed
-pre-event dates; supervise ONLY the reviewed forest control, never empty targets
-or unknown background. These are explicitly derived temporal pairs, not frozen
-candidate-pair records. They share parent validation groups, not new locations.
+## Geometry finding and interpretation
 
-## Implementation and resource boundaries
+`geometry_audit/` reconstructs the anchor-specific temporal reference and exact
+one-pixel 3x3 erosion on all 33 metadata-eligible anchor-pairs from 11 events in 6
+geographic groups. It selects no new candidates and reads no satellite pixels.
 
-Keep all existing QA, training-only curation/loader and source-bound model files
-unchanged. New selector/preparer/review/export modules provide an explicit
-validation role; do not spoof validation as training to bypass old gates.
-Selector, preparer and blind review rules are implemented. The 18 review/
-preparation tests and 6 selector tests pass under the resource guard. Selector
-output is locked under `Docs/Reviews/ValidationPilotV1/selection/`: three
-primaries plus two distinct-group alternates, with the missing Summer alternate
-explicitly retained. Its run reads metadata only and uses no model predictions.
-Source/selection hashes were frozen before image inspection. Export/evaluation
-code was preserved by interruption checkpoint `65aef3f`; its helper tests pass,
-but real validation export/inference are deliberately unexecuted because all
-labels in this roster were rejected. The independent review audit is complete.
+- UXA: 18 pairs, 6 events; none retain >=4 interior pixels.
+- UYA Summer: 6 pairs, 2 events; none retain >=4 interior pixels.
+- UYA Spring: 9 pairs, 3 events; 6 pairs from 2 events in 2 groups retain >=4 pixels.
+- Total:27/33 pairs fail. Geometry support is NOT clearing/temporal approval.
 
-The first preparation preflight found a new-code schema mismatch: completed QA
-stores `processing_errors` as an empty list, not integer zero. It failed before
-pixel processing and published no output. The new preparer now validates the
-actual list contract; all 9 preparation tests pass, including its regression.
-Protocol preparation-source hash was refreshed before any successful preparation.
+The two support-qualified events are `event-4a34368ee9483ed8f7a7` (already
+rejected for ambiguous temporal evidence) and `event-b41d67055c21412c75de`
+(not visually reviewed or approved). Do not treat this list as a new roster.
+The audited subset inherits earlier clear-image/area/top-candidate filtering;
+it is not all 514 validation events or all 91 validation groups.
 
-GitHub backup is now authorized and configured: push every completed checkpoint
-to `origin/codex/curated-deforestation-pilot` on the same branch. The initial
-push succeeded through `6509ba5`; subsequent checkpoint pushes should follow.
+Tests show equal 1,600m2 geometries can differ: a thin 2-pixel-wide rectangle loses
+all eroded pixels, while a 4x4-pixel square retains 4. Union targets can also be
+large because of other events; only the selected anchor's own interior counts.
+The initial area/bbox search aid did not establish minimum raster support.
+
+## Verification and resources
+
+**250 tests pass**: the previous 206 plus 44 validation tests. Full suite took
+1.480s within a 3.31s guarded worker, peak 305.89 MiB, minimum 3.82 GiB available.
+No further full-suite/model rerun is needed absent a new change or concern.
+
+Independent review verification PASSED all 5 rejections, 53 timeline observations
+and 53 distinct caches. It checked exact frozen joins, full footprint isolation,
+raw/canonical case hashes, all artifacts, original target/erosion, complete
+scene-inventory coverage, actual cached QA planes/counts, published endpoint QA
+and source fingerprints. It used 179.73 MiB in 2.79s, no Torch/model execution or
+source JP2 pixel reads. It verifies recorded evidence, not independent visual
+truth. Prepared features were checked without re-extracting raw source bands.
+
+Geometry audit PASSED in 2.55s at165.14MiB; no satellite pixel reads, model
+execution, new imagery inspection or label approval. Frozen input/source hashes
+were unchanged. Actual export of the all-rejected roster is also tested: it
+refuses publication with an explicit error and the unchanged guard removes
+staging, leaving no dataset output. No empty-set accuracy is manufactured.
+
+Five sequential preparation workers totalled 63.99s and peaked at380.30 MiB.
+Minimum available memory stayed >=2.63 GiB. All processing used one nice +10
+CPU worker, native threads 1, no GPU, unchanged 512 MiB RSS / 1.5 GiB reserve guard.
+
+## Durable evidence and implementation status
+
+Authoritative tracked evidence: `Docs/Reviews/ValidationPilotV1/`:
+
+- `protocol.json`, `selection/`: predeclared criteria, exact roster and source hashes.
+- `prepared_cases/`: all five case JSONs, pair/timeline PNGs and 35 TIFF arrays.
+- `preparation_receipts/`, `reviews.json`: measured jobs and every final rejection.
+- `review_verification/`: completed independent rejection audit/report.
+- `geometry_audit/`: all 33 geometry reconstructions, coverage/report and resources.
+- `checks/`: focused/final test logs and actual `export_refusal.json` check.
+
+Guide: `Docs/Guides/ValidationPilot.md`. New implemented modules:
+`select_validation_cases.py`, `prepare_validation_review.py`,
+`validation_review.py`, `build_validation_pilot.py`,
+`verify_validation_dataset.py`, `evaluate_validation_pilot.py`,
+`audit_validation_geometry.py`. Export/evaluation helpers have meaningful unit
+tests but are NOT integrated against a real approved validation dataset, because
+none exists. Inference requires committed approved labels/reviews/protocol and
+a label-lock file before importing Torch. Do not infer execution from code presence.
+
+One early preparation preflight found new-code `processing_errors==0` assumed
+an integer, whereas the frozen QA report stores a list. It failed before pixel
+processing, published nothing and was corrected/tested before successful jobs.
+The independent verifier uses the same corrected list contract. Original frozen
+QA code and archived model/objective sources remain unchanged.
+
+The global TIFF ignore rule initially omitted case arrays from Git. A narrow
+exception now preserves all 35 exact hash-bound Docs TIFFs. Some duplicate local
+JSON/PNG outputs were also included by interruption backup 65aef3f; preserve that
+history and use Docs snapshots as authoritative. Further local working outputs
+are ignored under `Datasets/ValidationPilot/`. GitHub contains code and bounded
+review evidence; full audit/cache/source imagery remain on this Mac and are
+needed for complete numerical rechecks and source-stat verification.
+
+## Safe continuation and next task
 
 Project: `/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP`.
 Git root is its parent. Python:
 `/Users/muhammedazhar/.miniconda3/envs/COMP1252-MP/bin/python`.
-One low-priority CPU worker, native/Torch threads one, no GPU. Unchanged guard:
-512 MiB RSS, 1.5 GiB available-memory reserve, 300s maximum, one prepared case
-per worker. No simultaneous pixel/model jobs. Labels 0/1/255 retain exact
-reviewed forest/clearing/ignore meanings. Never overwrite completed outputs.
+No pixel/model job remains active. Check branch/status and existing outputs
+before any new worker. Never overwrite completed results or duplicate a job.
 
-Inputs: `Datasets/AnnotationAudit/v1/`, `Datasets/PixelQA/v1/`, existing
-`Datasets/PixelQA/cache/`, immutable 13-case training export. The frozen QA
-policy and original source hashes are bound in the protocol. Earlier details:
-`Docs/Handoffs/2026-11-16-pixel-pilot.md` and linked prior handoffs.
+Frozen QA policy:
+`fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560`.
+Original QA/model/training-only loader/curation files are unchanged. The existing
+Torch runtime/distribution discrepancy remains recorded; do not reinstall it
+as part of this task. Preserve labels 0 forest, 1 clearing, 255 unknown exactly.
 
-## Remaining work
+Completed review recheck, ONLY if specifically needed, using a NEW output path:
 
-1. Finish/test metadata-only deterministic selector and separate guarded
-   validation preparer/review/export path; freeze source/selection hashes.
-2. Prepare at most six cases sequentially, inspect images without predictions,
-   preserve all rejections, bind decisions to exact artifacts and freeze labels.
-3. Verify exports and geographic/temporal/source isolation, then commit the
-   label lock before any model inference.
-4. Evaluate only the frozen final-1664 checkpoint at threshold .5, no retraining
-   or tuning; retain all outcomes and report partial-ROI limitations.
-5. Update guide, evidence and this handoff; commit completed verified work.
+```bash
+PILOT_PYTHON=/Users/muhammedazhar/.miniconda3/envs/COMP1252-MP/bin/python
+"$PILOT_PYTHON" -B Solutions/verify_validation_dataset.py --mode reviews --reviews Docs/Reviews/ValidationPilotV1/reviews.json --output Datasets/ValidationPilot/v1/review-verification-recheck
+```
 
-If interrupted, inspect committed outputs and active workers before resuming.
-Do not turn unreviewed cases into approved labels or rerun finished jobs.
+Next proposed bounded task (NOT executed): audit actual anchor-specific raster
+interior support over a BROADER frozen validation QA pool, avoiding reliance on
+area/bbox or top-three review proposals as sufficient support. Do this before
+preparing more image timelines. Keep the margin/minimum and split barriers;
+predeclare a separate support-qualified roster before opening new imagery.
+Retain all rejections and acknowledge convenience-sample bias. Temporal ambiguity
+needs explicit review/expert adjudication rather than automatic boundary labels.
+Only after approved reviews and exports are committed should the frozen final
+1664 checkpoint be evaluated at .5 without retraining or tuning. Test groups stay
+untouched. Temporal first-visible-date inference remains later work.

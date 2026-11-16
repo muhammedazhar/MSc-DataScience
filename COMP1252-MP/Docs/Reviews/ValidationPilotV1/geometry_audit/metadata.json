@@ -1,0 +1,90 @@
+{
+  "audit_status": "passed",
+  "scope": "Geometry support audit of the locked metadata-eligible pool; no new review roster or approved labels.",
+  "coverage": {
+    "anchor_pair_count": 33,
+    "pair_count": 33,
+    "event_count": 11,
+    "group_count": 6,
+    "anchor_pairs_with_interior_at_least_4": 6,
+    "pairs_with_any_anchor_interior_at_least_4": 6,
+    "events_with_any_interior_at_least_4": 2,
+    "groups_with_any_interior_at_least_4": 2,
+    "anchor_pairs_below_4": 27
+  },
+  "by_stratum": {
+    "36UXA_time-dependent": {
+      "anchor_pair_count": 18,
+      "pair_count": 18,
+      "event_count": 6,
+      "group_count": 3,
+      "anchor_pairs_with_interior_at_least_4": 0,
+      "pairs_with_any_anchor_interior_at_least_4": 0,
+      "events_with_any_interior_at_least_4": 0,
+      "groups_with_any_interior_at_least_4": 0,
+      "anchor_pairs_below_4": 18
+    },
+    "36UYA_Summer_time-dependent": {
+      "anchor_pair_count": 6,
+      "pair_count": 6,
+      "event_count": 2,
+      "group_count": 1,
+      "anchor_pairs_with_interior_at_least_4": 0,
+      "pairs_with_any_anchor_interior_at_least_4": 0,
+      "events_with_any_interior_at_least_4": 0,
+      "groups_with_any_interior_at_least_4": 0,
+      "anchor_pairs_below_4": 6
+    },
+    "36UYA_Spring_time-dependent": {
+      "anchor_pair_count": 9,
+      "pair_count": 9,
+      "event_count": 3,
+      "group_count": 2,
+      "anchor_pairs_with_interior_at_least_4": 6,
+      "pairs_with_any_anchor_interior_at_least_4": 6,
+      "events_with_any_interior_at_least_4": 2,
+      "groups_with_any_interior_at_least_4": 2,
+      "anchor_pairs_below_4": 3
+    }
+  },
+  "locked_roster_coverage": {
+    "anchor_pair_count": 5,
+    "pair_count": 5,
+    "event_count": 5,
+    "group_count": 5,
+    "anchor_pairs_with_interior_at_least_4": 1,
+    "pairs_with_any_anchor_interior_at_least_4": 1,
+    "events_with_any_interior_at_least_4": 1,
+    "groups_with_any_interior_at_least_4": 1,
+    "anchor_pairs_below_4": 4
+  },
+  "implementation_sha256": "1d0e3f5ffc3d755c1f53a5c1eafa36d5af7336cb51826508efc4e5b2fe7fe2ee",
+  "source_jp2_pixel_reads": 0,
+  "model_executions": 0,
+  "new_imagery_reviewed": 0,
+  "new_candidates_selected": 0,
+  "training_approved": false,
+  "evaluation_approved": false,
+  "artifact_sha256": {
+    "audit.json": "d23e38df137b4abf4151f73c021ef321e27155d47b7925076b195d3f8085484d",
+    "report.md": "4f8b3a6254fb01df557c1c3509fe83ef7f2ba7040701509d49b0132428ed9435"
+  },
+  "resources": {
+    "logical_cpu_count": 11,
+    "machine_ram_gib": 18.0,
+    "worker_peak_rss_mib_sampled": 163.5,
+    "worker_high_water_rss_mib": 165.14,
+    "minimum_available_gib_sampled": 3.67,
+    "elapsed_seconds": 2.55,
+    "worker_limit_mib": 512,
+    "minimum_available_gib_limit": 1.5,
+    "runtime_limit_seconds": 120,
+    "workers": 1,
+    "native_thread_limit": 1,
+    "nice_increment": 10,
+    "gdal_cache_mib": 16,
+    "warp_memory_mib": 0,
+    "gpu_used": false,
+    "monitor_interval_seconds": 0.25
+  }
+}

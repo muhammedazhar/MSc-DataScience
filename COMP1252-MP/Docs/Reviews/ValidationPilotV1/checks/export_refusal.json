@@ -1,0 +1,9 @@
+{
+  "check": "actual_rejected_roster_cannot_publish_empty_dataset",
+  "passed": true,
+  "returncode": 1,
+  "published_output_exists": false,
+  "expected_message": "No validation labels were approved; use reviews-only verification",
+  "model_inference_run": false,
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Solutions/build_validation_pilot.py\", line 413, in <module>\n    main()\n  File \"/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Solutions/build_validation_pilot.py\", line 403, in main\n    os.nice(10); build(args, args.worker_output)\n  File \"/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Solutions/build_validation_pilot.py\", line 293, in build\n    require(bool(accepted),\n  File \"/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Solutions/build_validation_pilot.py\", line 26, in require\n    raise ValueError(message)\nValueError: No validation labels were approved; use reviews-only verification instead of publishing an empty dataset\nTraceback (most recent call last):\n  File \"/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Solutions/build_validation_pilot.py\", line 413, in <module>\n    main()\n  File \"/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Solutions/build_validation_pilot.py\", line 409, in main\n    run_guarded(args, script_path=__file__, operation='validation-export', gdal_cache_mib=32, warp_memory_mib=16)\n  File \"/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Solutions/validate_sample.py\", line 467, in run_guarded\n    raise RuntimeError(f\"{operation.capitalize()} failed; staging output was discarded\")\nRuntimeError: Validation-export failed; staging output was discarded\n"
+}

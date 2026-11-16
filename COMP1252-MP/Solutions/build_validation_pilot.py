@@ -290,6 +290,8 @@ def build(args, output):
                              'review': review, 'validation': decision})
         assembled.append((case, directory, pair, review, decision))
     accepted = enforce_selection_policy(candidates, dispositions)
+    require(bool(accepted),
+            'No validation labels were approved; use reviews-only verification instead of publishing an empty dataset')
     accepted_assembled = [row for row in assembled if row[0]['event_id'] in accepted]
     require(len({row[2]['group_id'] for row in accepted_assembled}) == len(accepted), 'Accepted validation groups repeat')
     validate_source_stats({'source_file_stats': source_stats})

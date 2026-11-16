@@ -6,7 +6,7 @@ agent. Work in this project on **`codex/curated-deforestation-pilot`**. Read
 editing. Preserve other work and commit each completed, verified logical change
 on this same branch with an updated handoff.
 
-Current work/state: **`Docs/Handoffs/2026-11-16-validation-pilot.md`**.
+Current review/audit state: **`Docs/Handoffs/2026-11-16-validation-pilot.md`**.
 Previous completed milestone: `Docs/Handoffs/2026-11-16-pixel-pilot.md`.
 Previous completed milestone: `Docs/Handoffs/2026-11-16-overfit-diagnostic.md`.
 Earlier pipeline: `Docs/Handoffs/2026-11-16-pilot-baseline.md`.
@@ -26,8 +26,12 @@ shows all three predeclared configurations can learn the reviewed regions of
 one crop. The completed reviewed-pixel objective and bounded all-13 experiment
 now also fit every reviewed training region, with independent saved-logit
 verification and 206 passing tests. No unseen-location accuracy, complete-mask
-correctness, clearing area or date-inference claim follows. Next is a small
-separately reviewed validation set; do not repeat completed training runs.
+correctness, clearing area or date-inference claim follows. The first bounded
+validation roster is now fully reviewed and independently verified: all five
+cases were rejected, so no validation dataset or accuracy score exists. The
+geometry audit explains insufficient pixel interiors in most eligible pairs.
+Next is broader geometry-first eligibility before a separately predeclared
+review roster. Do not repeat completed training or force labels from rejections.
 The handoff identifies proposed next work and what has already finished.
 
 Use one low-priority CPU worker, native/Torch threads one, no GPU, monitored

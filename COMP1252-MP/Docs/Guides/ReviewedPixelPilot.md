@@ -122,6 +122,11 @@ per-example counts and losses. No experiment needs repeating to continue.
 
 ## Interpretation and next work
 
+The subsequent [bounded validation review](ValidationPilot.md) is complete:
+all five candidates were rejected, and no validation accuracy was measured.
+Its geometry audit identifies the next eligibility checks before more imagery
+is prepared. The validation protocol below remains conditional on approved labels.
+
 This diagnostic uses reviewed TRAINING pixels only. A fitting result demonstrates
 training capability, not unseen-location performance or correctness on ignored
 pixels. The longer exposure and new normalization differ from the old smoke;

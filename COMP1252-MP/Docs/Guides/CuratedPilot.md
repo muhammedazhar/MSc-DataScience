@@ -152,6 +152,8 @@ The ignore-aware loader, loss/metrics and bounded CPU smoke run are implemented
 in the new [pilot training path](PilotBaseline.md). The original binary trainer
 remains incompatible with 255 labels. The new path selects only `labels != 255`
 before loss/metrics and preserves channel scales and signed differences.
-The smoke passes pipeline checks but its tiny model still predicts every
-reviewed pixel as clearing; further training diagnostics are required. This
-pilot cannot provide an unbiased accuracy estimate or independent test score.
+The short smoke predicted every reviewed pixel as clearing. Subsequent
+[reviewed-pixel training](ReviewedPixelPilot.md) fitted all 13 training examples.
+The first [held-out review](ValidationPilot.md) rejected every candidate, so
+unseen-location accuracy remains unmeasured. This training pilot cannot supply
+an unbiased accuracy estimate or independent test score.

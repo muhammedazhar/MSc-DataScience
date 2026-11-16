@@ -22,7 +22,10 @@ same training path can fit one reviewed crop, with controlled weight/optimizer
 comparisons and independent reconstruction of the saved results.
 The [reviewed-pixel training guide](./Docs/Guides/ReviewedPixelPilot.md) documents
 the corrected dataset-wide loss weighting and completed bounded fit of all 13
-reviewed training examples. Separate reviewed validation is the next milestone.
+reviewed training examples. The [validation review guide](./Docs/Guides/ValidationPilot.md)
+records the first bounded held-out review: all five candidates were rejected,
+with independent evidence checks and a geometry-support audit. No validation
+accuracy has been measured; usable reviewed validation labels remain needed.
 
 ## Structure of the repository
 
