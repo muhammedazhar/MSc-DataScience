@@ -1,0 +1,15 @@
+test_actual_support_and_all_qa_isolation_followup_gates_are_required (test_validation_support_pool.BroadValidationSupportTests) ... ok
+test_all_primaries_precede_alternates_and_groups_never_repeat (test_validation_support_pool.BroadValidationSupportTests) ... ok
+test_every_qa_anchor_is_audited_without_old_top_three_area_or_quality_filter (test_validation_support_pool.BroadValidationSupportTests) ... ok
+test_exact_annotation_post_then_shorter_interval_then_pair_id_rank (test_validation_support_pool.BroadValidationSupportTests) ... ok
+test_followup_requires_later_usable_same_year_scene_within_declared_window (test_validation_support_pool.BroadValidationSupportTests) ... ok
+test_frozen_qa_index_identity_mismatches_fail_instead_of_losing_coverage (test_validation_support_pool.BroadValidationSupportTests) ... ok
+test_input_order_and_spectral_or_model_scores_do_not_change_fixed_shortlist (test_validation_support_pool.BroadValidationSupportTests) ... ok
+test_predeclared_protocol_cannot_silently_change_support_history_or_capacity (test_validation_support_pool.BroadValidationSupportTests) ... ok
+test_prior_event_rejection_applies_to_every_other_temporal_pair (test_validation_support_pool.BroadValidationSupportTests) ... ok
+test_prior_group_excludes_an_unreviewed_event_without_discarding_its_audit_record (test_validation_support_pool.BroadValidationSupportTests) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.002s
+
+OK

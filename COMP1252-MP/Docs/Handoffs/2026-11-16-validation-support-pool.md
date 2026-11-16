@@ -11,7 +11,11 @@ Approved task: audit actual interior support over the BROADER frozen validation
 QA pool, preserve exclusions and save a fixed shortlist BEFORE new image review.
 Protocol: `Docs/Reviews/ValidationSupportV2/protocol.json`. It binds all input
 hashes, immutable source code, selection rules and Mac limits before processing.
-No new geometry processing, imagery inspection or validation inference has run.
+The new broad worker and ten rule/provenance tests are implemented; all ten
+focused tests pass under the unchanged guard. No broad geometry processing,
+new imagery inspection or validation inference has run. The independent
+verifier is in progress and will reconstruct geometry using published target
+planes and a separate NumPy erosion implementation.
 
 The universe is all frozen validation candidate pairs. Every completed QA pair
 and EVERY anchor will be audited, including bad quality and prior-rejected
