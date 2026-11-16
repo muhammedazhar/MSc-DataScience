@@ -1,5 +1,8 @@
 # Deforestation project handoff
 
+Current continuation: see `2026-11-16-pilot-baseline.md` for the authorized
+ignore-aware training pipeline and its latest verified checkpoint.
+
 ## Current state: reviewed pilot complete
 
 Branch: `codex/curated-deforestation-pilot`.

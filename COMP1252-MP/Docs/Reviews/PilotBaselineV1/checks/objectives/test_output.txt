@@ -1,0 +1,22 @@
+test_all_ignored_batch_returns_none_without_creating_a_fake_zero_loss (test_pilot_objectives.ReviewedLossTests) ... ok
+test_changing_only_ignored_predictions_cannot_change_loss_or_counts (test_pilot_objectives.ReviewedLossTests) ... ok
+test_ignored_nonfinite_predictions_never_enter_loss_or_gradients (test_pilot_objectives.ReviewedLossTests) ... ok
+test_integer_logits_and_empty_spatial_shapes_are_rejected (test_pilot_objectives.ReviewedLossTests) ... ok
+test_invalid_scalar_weights_fail_even_when_every_pixel_is_ignored (test_pilot_objectives.ReviewedLossTests) ... ok
+test_nonfinite_reviewed_logits_are_errors_for_both_loss_and_metrics (test_pilot_objectives.ReviewedLossTests) ... ok
+test_positive_weight_applies_only_to_reviewed_positive_term (test_pilot_objectives.ReviewedLossTests) ... ok
+test_python_scalar_weight_retains_float64_precision (test_pilot_objectives.ReviewedLossTests) ... ok
+test_single_channel_batch_and_unbatched_shapes_align_without_broadcasting (test_pilot_objectives.ReviewedLossTests) ... ok
+test_unknown_labels_and_boolean_mask_conversion_are_rejected (test_pilot_objectives.ReviewedLossTests) ... ok
+test_validity_must_be_boolean_exact_and_same_shape (test_pilot_objectives.ReviewedLossTests) ... ok
+test_absent_positive_class_does_not_receive_a_fabricated_overlap_score (test_pilot_objectives.ReviewedMetricTests) ... ok
+test_aggregate_counts_precede_ratios_instead_of_averaging_image_scores (test_pilot_objectives.ReviewedMetricTests) ... ok
+test_all_ignored_update_does_not_create_true_negatives_or_defined_scores (test_pilot_objectives.ReviewedMetricTests) ... ok
+test_failed_update_leaves_previous_valid_counts_unchanged (test_pilot_objectives.ReviewedMetricTests) ... ok
+test_invalid_probability_thresholds_are_rejected (test_pilot_objectives.ReviewedMetricTests) ... ok
+test_zero_logit_is_positive_at_default_half_probability_threshold (test_pilot_objectives.ReviewedMetricTests) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.060s
+
+OK

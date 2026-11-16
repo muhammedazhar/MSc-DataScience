@@ -1,0 +1,17 @@
+test_audit_matches_real_pixels_and_does_not_modify_the_artifacts (test_pilot_dataset.ReviewedPilotDatasetTests) ... ok
+test_changed_artifact_after_construction_is_detected_on_access (test_pilot_dataset.ReviewedPilotDatasetTests) ... ok
+test_changed_manifest_and_changed_tiff_cannot_reuse_published_hashes (test_pilot_dataset.ReviewedPilotDatasetTests) ... ok
+test_duplicate_geographic_groups_and_missing_accepted_evidence_are_rejected (test_pilot_dataset.ReviewedPilotDatasetTests) ... ok
+test_finite_difference_corruption_is_rejected_without_recomputing_inputs (test_pilot_dataset.ReviewedPilotDatasetTests) ... ok
+test_held_out_unapproved_or_policy_mismatched_records_are_rejected (test_pilot_dataset.ReviewedPilotDatasetTests) ... ok
+test_nonfinite_ignored_inputs_are_zeroed_only_in_memory_and_reported (test_pilot_dataset.ReviewedPilotDatasetTests) ... ok
+test_nonfinite_supervised_inputs_are_rejected_instead_of_zeroed (test_pilot_dataset.ReviewedPilotDatasetTests) ... ok
+test_path_traversal_and_symlinks_outside_the_dataset_are_rejected (test_pilot_dataset.ReviewedPilotDatasetTests) ... ok
+test_signed_float_features_and_255_labels_are_preserved_exactly (test_pilot_dataset.ReviewedPilotDatasetTests) ... ok
+test_transposed_channels_and_changed_grid_are_rejected_even_with_new_hashes (test_pilot_dataset.ReviewedPilotDatasetTests) ... ok
+test_wrong_valid_mask_and_unknown_label_values_are_rejected (test_pilot_dataset.ReviewedPilotDatasetTests) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.212s
+
+OK

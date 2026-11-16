@@ -237,7 +237,8 @@ class ResourceGuardTests(unittest.TestCase):
             existing.write_text("keep existing data")
             with mock.patch.dict(sys.modules, {"psutil": fake}), \
                     mock.patch.object(validator.subprocess, "Popen", return_value=worker) as popen, \
-                    mock.patch.object(validator.shutil, "disk_usage", return_value=SimpleNamespace(free=2**30)):
+                    mock.patch.object(validator.shutil, "disk_usage", return_value=SimpleNamespace(free=2**30)), \
+                    mock.patch.object(sys, "argv", ["validate_sample.py"]):
                 with self.assertRaisesRegex(RuntimeError, "Worker exceeded its memory budget"):
                     validator.run_guarded(self.args(output))
 
