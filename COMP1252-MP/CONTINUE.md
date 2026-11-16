@@ -1,0 +1,36 @@
+# Continue this project with any coding agent
+
+This is the tool-neutral entry point for Codex, Gemini Antigravity, or another
+agent. Work in this project on **`codex/curated-deforestation-pilot`**. Read
+`AGENTS.md`, check `git status`, and read the latest handoff linked below before
+editing. Preserve other work and commit each completed, verified logical change
+on this same branch with an updated handoff.
+
+Current task/state: **`Docs/Handoffs/2026-11-16-overfit-diagnostic.md`**.
+Earlier pipeline: `Docs/Handoffs/2026-11-16-pilot-baseline.md`.
+Dataset/provenance: `Docs/Handoffs/2026-11-15-curated-pilot.md`.
+
+Project root:
+`/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP`.
+Git root is its parent MSc-DataScience directory. Python:
+`/Users/muhammedazhar/.miniconda3/envs/COMP1252-MP/bin/python`.
+
+The project locates forest loss in paired Sentinel-2 images and aims to estimate
+when it first becomes visible. Annotation image dates and observed visibility
+intervals are not exact felling dates. A small reviewed training dataset and a
+working partial-label pipeline are committed; a tiny smoke model still predicts
+all reviewed pixels as clearing. The current authorized task investigates that
+with a bounded single-example overfit experiment, not a large model fit.
+
+Use one low-priority CPU worker, native/Torch threads one, no GPU, monitored
+512 MiB worker RSS and 1.5 GiB available-system-memory reserve. Use the existing
+resource guard unchanged. Read the handoff for the frozen QA files and data
+locations. Labels are **0** reviewed forest, **1** reviewed clearing, **255**
+ignore; preserve this mask in every loss and metric.
+
+If the previous agent stopped mid-run, check active Python commands and the
+handoff's completed output directories before launching another worker.
+Completed guarded output has a metadata.json; unfinished workers publish no
+final output. Never duplicate an active pixel/model job or overwrite completed
+results. Read current files and receipts rather than assuming a previous
+agent's chat history or tool state is available.

@@ -1,5 +1,8 @@
 # Pilot baseline continuation
 
+Current authorized follow-up: `2026-11-16-overfit-diagnostic.md` in this
+directory. Root `CONTINUE.md` is the tool-neutral entry point for other agents.
+
 Branch: `codex/curated-deforestation-pilot`. Commit each completed, verified
 logical change on this branch and update this handoff. Earlier data/provenance
 state is in `2026-11-15-curated-pilot.md` in this directory.

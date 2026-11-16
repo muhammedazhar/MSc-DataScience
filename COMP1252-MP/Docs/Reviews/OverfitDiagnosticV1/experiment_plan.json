@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "plan_status": "predeclared before diagnostic model execution",
+  "scope": "Single-example training memorization diagnostic; not held-out accuracy, deforestation deployment readiness or onset-date inference.",
+  "selection": {
+    "rule": "First accepted manifest record, fixed before observing diagnostic results; no candidate search or best-case reselection.",
+    "event_id": "event-e691d44c335d87649310",
+    "pair_id": "pair-9e46432dba83dd68c052",
+    "group_id": "group-8dea78ccfd15060ff7f3",
+    "split": "train",
+    "dataset_root": "Datasets/CuratedPilot/v1/dataset",
+    "dataset_metadata_sha256": "5d929465f148c1823f6332222f56430dac9a5b0d1985d8545c2eb17c99ec3e71",
+    "training_manifest_sha256": "138713e6a0b57e5491015fe42438d1a5d1702c68c753289bf52abb5caf7949aa",
+    "selected_artifacts_sha256": {
+      "input_features": "56b1ac79b534b54eed2b3d2e2f1f7e7cb1444a6db74a8f075231ae21b82a475f",
+      "supervision_mask": "5a1da08294d329d3f66e3f08d8769ef7be17a1278b224d04d7e5fad594089a52",
+      "valid_mask": "a2f9c8e0d2215dd779f0834c023a2dee734d44e39ca49a6cc4ab2558d766d1e3",
+      "metadata": "dc98c43e2a0b44049de08871f4bc9f65fd2b6ab75536b6daa839d6536e27639d"
+    },
+    "positive_pixels": 25,
+    "stable_pixels": 256,
+    "ignored_pixels": 3815,
+    "features_shape": [
+      1,
+      27,
+      64,
+      64
+    ],
+    "input_handling": "Unchanged exported finite features, signed indices/differences, labels 0/1/255; no augmentation, rescaling, clipping, offset crops or additional labels."
+  },
+  "fixed_protocol": {
+    "seed": 42,
+    "model": "Existing fresh make_model(): Conv27-8(3x3),ReLU,Conv8-8(3x3),ReLU,Conv8-1(1x1)",
+    "initialization": "Exact identical initial state SHA256 across all three arms, from seed42; reset seed before make_model.",
+    "batch_size": 1,
+    "dataloader_workers": 0,
+    "single_cached_example_only": true,
+    "attempted_updates_per_arm": 512,
+    "early_stopping": false,
+    "checkpoint_attempts": [
+      0,
+      26,
+      128,
+      256,
+      512
+    ],
+    "probability_threshold": 0.5,
+    "loss": "masked BCE mean over exactly P+N reviewed pixels; 255 selected out before computation",
+    "prediction_rule": "Logit >=0 is positive (probability >=0.5); threshold is frozen, not tuned."
+  },
+  "arms": [
+    {
+      "arm_id": "global_weight_sgd",
+      "optimizer": "SGD",
+      "learning_rate": 0.05,
+      "momentum": 0.0,
+      "weight_decay": 0.0,
+      "positive_weight": 17.483443708609272,
+      "comparison_role": "Reference with previous global pilot class weight; checkpoints show fixed-case exposure over time."
+    },
+    {
+      "arm_id": "local_weight_sgd",
+      "optimizer": "SGD",
+      "learning_rate": 0.05,
+      "momentum": 0.0,
+      "weight_decay": 0.0,
+      "positive_weight": 10.24,
+      "comparison_role": "Only class weight differs from global_weight_sgd; isolates weight choice within this one case."
+    },
+    {
+      "arm_id": "local_weight_adam",
+      "optimizer": "Adam",
+      "learning_rate": 0.01,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "epsilon": 1e-08,
+      "weight_decay": 0.0,
+      "positive_weight": 10.24,
+      "comparison_role": "Predeclared optimization sanity variant; optimizer AND learning rate differ from local_weight_sgd, so differences cannot be attributed solely to optimizer."
+    }
+  ],
+  "analytic_constant_prediction_baselines": {
+    "formula_case": "p_star=w*P/(w*P+N)",
+    "full_pilot_counts": {
+      "positive": 151,
+      "stable": 2640
+    },
+    "global_positive_weight": 17.483443708609272,
+    "full_pilot_pixel_aggregated_objective_p_star": 0.5,
+    "full_pilot_equal_image_mean_objective_p_star": 0.591307841529458,
+    "single_case_global_weight_p_star": 0.630637517199205,
+    "single_case_local_weight_p_star": 0.5,
+    "single_case_unweighted_p_star": 0.08896797153024912,
+    "mean_weight_formula": "mean_weight=(w*P+N)/(P+N)",
+    "normalized_weighted_BCE_formula": "raw_mean_BCE/mean_weight = raw_mean_BCE*(P+N)/(w*P+N)",
+    "interpretation": "The existing equal-image training objective has an above-half constant optimum under a global pixel-derived class weight. This is an analytic prior-bias explanation, not an empirical attribution of all-positive collapse. The diagnostic comparisons are required."
+  },
+  "validity_gates": [
+    "All three arms use the exact same selected tensors, reviewed mask, initialization and fixed checkpoint schedule.",
+    "Finite reviewed loss, finite gradients and finite model state; an actual parameter change must occur overall. Record zero deltas/stalling rather than inventing updates.",
+    "Source dataset and selected artifact hashes and class counts remain unchanged.",
+    "Ignored-logit gradients remain zero; all-ignored safety skips model forward and optimizer step.",
+    "All resource guards pass; any resource or numerical abort is distinct from a valid completed arm whose fit gate fails."
+  ],
+  "fit_gate": {
+    "primary_checkpoint": 512,
+    "requires_precision_at_least": 0.95,
+    "requires_recall_at_least": 0.95,
+    "requires_dice_at_least": 0.95,
+    "requires_GT_both_classes": true,
+    "requires_predicted_both_classes": true,
+    "case_integer_implication": "With P=25,N=256, this requires at least24 true positives and no more than1 false positive.",
+    "raw_BCE_cutoff": null,
+    "raw_BCE_cutoff_reason": "Raw weighted-BCE scale changes with class weight; a shared absolute cutoff would unfairly compare arms. Report raw and mean-weight-normalized losses and their curves as diagnostics.",
+    "secondary_reporting": "Record first passing PREDECLARED checkpoint if any, but do not stop early or replace the primary final512 outcome with a best checkpoint.",
+    "failure_semantics": "A finite completed arm can fail the memorization gate; retain its results as evidence, not a processing error.",
+    "requires_specificity_at_least": 0.95
+  },
+  "resource_limits": {
+    "workers": 1,
+    "sequential_arms": true,
+    "device": "cpu",
+    "gpu_used": false,
+    "nice_increment": 10,
+    "native_threads": 1,
+    "torch_intraop_threads": 1,
+    "torch_interop_threads": 1,
+    "worker_RSS_limit_MiB": 512,
+    "minimum_available_system_memory_GiB": 1.5,
+    "maximum_worker_seconds": 300,
+    "frozen_guard": "validate_sample.run_guarded; do not modify existing frozen QA-policy files."
+  },
+  "interpretation_limits": [
+    "A passing fit demonstrates capacity to memorize only the reviewed pixels of one training crop, not generalization or full-image label correctness.",
+    "Longer-run checkpoint differences diagnose fixed-case exposure, not a direct reproduction of the original 13-case two-pass smoke.",
+    "SGD global versus local isolates only weight choice on this case; both may fit eventually despite different priors and transient curves.",
+    "Adam comparison changes optimizer and learning rate together; it is a sanity variant, not a causal optimizer experiment.",
+    "No held-out images, threshold tuning, timing inference, new annotations or source pixel rereads belong to this task."
+  ],
+  "diagnostic_reporting": {
+    "reviewed_probability_distributions": [
+      "count",
+      "mean",
+      "median",
+      "min",
+      "max"
+    ],
+    "ranking": "Exact positive-versus-negative pairwise AUC on reviewed pixels only; descriptive training diagnostic, no threshold selection."
+  }
+}
