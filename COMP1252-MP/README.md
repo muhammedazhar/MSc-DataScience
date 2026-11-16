@@ -11,6 +11,9 @@ shadow-risk and invalid-pixel checks, resumable batches and review requirements.
 The [reviewed pilot guide](./Docs/Guides/CuratedPilot.md) describes the 13 accepted
 training pairs, stable-forest control regions, observed date intervals and
 partial labels that require an ignore-aware loader and loss.
+The [pilot training guide](./Docs/Guides/PilotBaseline.md) covers the implemented
+loader, masked objectives and bounded CPU smoke run, including its current
+all-positive prediction limitation.
 
 ## Structure of the repository
 

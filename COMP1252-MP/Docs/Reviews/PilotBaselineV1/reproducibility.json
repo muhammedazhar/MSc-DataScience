@@ -1,0 +1,30 @@
+{
+  "reproducibility_status": "passed",
+  "same_seed": 42,
+  "matching_metadata_fields": [
+    "seed",
+    "torch_version",
+    "torch_distribution_version",
+    "torch_git_version",
+    "implementation_sha256",
+    "dataset_audit",
+    "initial_parameter_sha256",
+    "final_parameter_sha256",
+    "initial_training_diagnostics",
+    "final_training_diagnostics",
+    "attempted_batches",
+    "optimizer_updates",
+    "all_ignored_no_forward_no_step"
+  ],
+  "matching_step_log_bytes": true,
+  "matching_npz_arrays": {
+    "model_weights.npz": true,
+    "predictions.npz": true
+  },
+  "first_run_metadata_sha256": "ce6c6a16669f7892829049501adac05969aa0162ad9dc7d7891b14712d030677",
+  "second_run_metadata_sha256": "aeb5ffb10e9ab636682704044daad444c83ce0c28aeca6e1df8fefa2c181d5c8",
+  "final_parameter_sha256": "ec4eaafa54f5a798270a294d63b983923c0a9cb152cb91eae557f1f530e190f3",
+  "training_only": true,
+  "all_reviewed_predictions_positive": true,
+  "largest_smoke_worker_mib": 311.69
+}

@@ -1,0 +1,13 @@
+test_all_ignored_batch_skips_forward_weight_decay_and_existing_momentum (test_train_pilot_baseline.BaselineTrainingStepTests) ... ok
+test_factory_creates_a_small_fresh_cpu_model_without_loading_checkpoint (test_train_pilot_baseline.BaselineTrainingStepTests) ... ok
+test_finite_reviewed_batch_changes_parameters_and_records_an_actual_step (test_train_pilot_baseline.BaselineTrainingStepTests) ... ok
+test_ignored_logits_receive_exactly_zero_gradient_during_real_model_training (test_train_pilot_baseline.BaselineTrainingStepTests) ... ok
+test_malformed_validity_and_targets_fail_before_forward_or_optimizer_step (test_train_pilot_baseline.BaselineTrainingStepTests) ... ok
+test_nonfinite_backward_gradient_is_detected_before_optimizer_step (test_train_pilot_baseline.BaselineTrainingStepTests) ... ok
+test_nonfinite_feature_even_at_ignored_location_cannot_enter_a_convolution (test_train_pilot_baseline.BaselineTrainingStepTests) ... ok
+test_nonfinite_model_output_never_updates_weights (test_train_pilot_baseline.BaselineTrainingStepTests) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.817s
+
+OK

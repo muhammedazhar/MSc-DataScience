@@ -146,11 +146,12 @@ reserve. The largest preparation worker used **417.6 MiB**. Feature export took
 **29.51 seconds** at **207.5 MiB**; independent verification took **1.02 seconds**
 at approximately **119 MiB**. No forest model was trained.
 
-## Next implementation step
+## Training continuation
 
-Implement an ignore-aware loader, loss and metrics before a baseline smoke
-run. The original binary trainer is incompatible with 255 labels. For BCE,
-select only `labels != 255` before computing targets/loss; metrics must use the
-same reviewed-pixel mask. Preserve all channel scales and signed differences.
-This pilot supports pipeline checks and learning experiments; it cannot provide
-an unbiased accuracy estimate or independent test score.
+The ignore-aware loader, loss/metrics and bounded CPU smoke run are implemented
+in the new [pilot training path](PilotBaseline.md). The original binary trainer
+remains incompatible with 255 labels. The new path selects only `labels != 255`
+before loss/metrics and preserves channel scales and signed differences.
+The smoke passes pipeline checks but its tiny model still predicts every
+reviewed pixel as clearing; further training diagnostics are required. This
+pilot cannot provide an unbiased accuracy estimate or independent test score.
