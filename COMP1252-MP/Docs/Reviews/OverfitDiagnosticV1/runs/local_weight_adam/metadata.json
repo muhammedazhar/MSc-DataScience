@@ -1,0 +1,442 @@
+{
+  "execution_status": "completed",
+  "fit_passed": true,
+  "arm_id": "local_weight_adam",
+  "arm_configuration": {
+    "arm_id": "local_weight_adam",
+    "optimizer": "Adam",
+    "learning_rate": 0.01,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "epsilon": 1e-08,
+    "weight_decay": 0.0,
+    "positive_weight": 10.24,
+    "comparison_role": "Predeclared optimization sanity variant; optimizer AND learning rate differ from local_weight_sgd, so differences cannot be attributed solely to optimizer."
+  },
+  "scope": "Single-example training memorization diagnostic; not held-out accuracy, deforestation deployment readiness or onset-date inference.",
+  "event_id": "event-e691d44c335d87649310",
+  "pair_id": "pair-9e46432dba83dd68c052",
+  "group_id": "group-8dea78ccfd15060ff7f3",
+  "split": "train",
+  "selected_manifest_index": 0,
+  "selected_positive_pixels": 25,
+  "selected_stable_pixels": 256,
+  "selected_ignored_pixels": 3815,
+  "selected_tensor_sha256": "796e0f542c11cb131dd6a47a784f7939dc30fd19464a943ac8558d83ee0a352a",
+  "selected_artifact_sha256": {
+    "input_features": "56b1ac79b534b54eed2b3d2e2f1f7e7cb1444a6db74a8f075231ae21b82a475f",
+    "supervision_mask": "5a1da08294d329d3f66e3f08d8769ef7be17a1278b224d04d7e5fad594089a52",
+    "valid_mask": "a2f9c8e0d2215dd779f0834c023a2dee734d44e39ca49a6cc4ab2558d766d1e3",
+    "metadata": "dc98c43e2a0b44049de08871f4bc9f65fd2b6ab75536b6daa839d6536e27639d"
+  },
+  "dataset_metadata_sha256": "5d929465f148c1823f6332222f56430dac9a5b0d1985d8545c2eb17c99ec3e71",
+  "manifest_sha256": "138713e6a0b57e5491015fe42438d1a5d1702c68c753289bf52abb5caf7949aa",
+  "dataset_root": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/CuratedPilot/v1/dataset",
+  "plan_path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Docs/Reviews/OverfitDiagnosticV1/experiment_plan.json",
+  "plan_sha256": "f5e9d9d54da0b412322e1db51c670137fa9c14c0dec047c2fd59600e5d3f0e31",
+  "seed": 42,
+  "device": "cpu",
+  "gpu_used": false,
+  "batch_size": 1,
+  "dataloader_workers": 0,
+  "native_threads": 1,
+  "torch_intraop_threads": 1,
+  "torch_interop_threads": 1,
+  "model_specification": "Existing fresh make_model(): Conv27-8(3x3),ReLU,Conv8-8(3x3),ReLU,Conv8-1(1x1)",
+  "parameter_count": 2545,
+  "optimizer_implementation": "Ordinary CPU for-loop optimizer; foreach=False,fused=False",
+  "attempted_batches": 512,
+  "optimizer_steps": 512,
+  "nonzero_parameter_updates": 512,
+  "zero_parameter_delta_attempts": [],
+  "gradient_norm_min": 0.00032937155384308415,
+  "gradient_norm_max": 1.2413401816885854,
+  "parameter_delta_l2_min": 0.00037002067658525455,
+  "parameter_delta_l2_max": 0.4057526844505949,
+  "all_ignored_no_forward_no_step": true,
+  "all_ignored_safety_check": {
+    "updated": false,
+    "loss": null,
+    "reviewed_pixels": 0,
+    "gradient_norm": 0.0,
+    "parameter_delta_l2": 0.0
+  },
+  "ignored_logit_gradients_zero_every_step": true,
+  "initial_parameter_sha256": "c1ede0b060ceca01c032464825eda272759ca28ec018b827a8e59f01b399fa73",
+  "final_parameter_sha256": "46fa8df959839134f04c9d1b11f3141db6d1e7bce0339ffb2b5d2a2abb94b96a",
+  "constant_prediction_optimum": {
+    "probability": 0.5,
+    "logit": 0.0,
+    "weighted_bce": 1.2629585638672314,
+    "mean_weight": 1.8220640569395017
+  },
+  "checkpoints": [
+    {
+      "attempt": 0,
+      "metrics": {
+        "tp": 25,
+        "fp": 256,
+        "fn": 0,
+        "tn": 0,
+        "supervised_pixels": 281,
+        "positive_pixels": 25,
+        "stable_pixels": 256,
+        "ignored_pixels": 3815,
+        "updates": 1,
+        "empty_updates": 0,
+        "probability_threshold": 0.5,
+        "precision": 0.08896797153024912,
+        "recall": 1.0,
+        "specificity": 0.0,
+        "f1": 0.16339869281045752,
+        "dice": 0.16339869281045752,
+        "iou": 0.08896797153024912,
+        "accuracy": 0.08896797153024912,
+        "balanced_accuracy": 0.5
+      },
+      "fit": {
+        "passed": false,
+        "reasons": [
+          "precision_below_minimum",
+          "specificity_below_minimum",
+          "dice_below_minimum",
+          "only_one_predicted_class"
+        ],
+        "precision": 0.08896797153024912,
+        "recall": 1.0,
+        "specificity": 0.0,
+        "dice": 0.16339869281045752,
+        "minimum": 0.95
+      },
+      "weighted_bce": 1.2638020515441895,
+      "unweighted_bce": 0.7419407367706299,
+      "mean_weight_normalized_bce": 0.6936101103201509,
+      "probability_diagnostics": {
+        "positive": {
+          "count": 25,
+          "mean": 0.5300322294235229,
+          "median": 0.5301533341407776,
+          "min": 0.5289797782897949,
+          "max": 0.5313038229942322
+        },
+        "negative": {
+          "count": 256,
+          "mean": 0.5287663307972252,
+          "median": 0.5289701223373413,
+          "min": 0.5268460512161255,
+          "max": 0.5292631983757019
+        },
+        "ignored_pixels": 3815,
+        "training_pairwise_auc": 0.97140625
+      },
+      "parameter_sha256": "c1ede0b060ceca01c032464825eda272759ca28ec018b827a8e59f01b399fa73"
+    },
+    {
+      "attempt": 26,
+      "metrics": {
+        "tp": 25,
+        "fp": 0,
+        "fn": 0,
+        "tn": 256,
+        "supervised_pixels": 281,
+        "positive_pixels": 25,
+        "stable_pixels": 256,
+        "ignored_pixels": 3815,
+        "updates": 1,
+        "empty_updates": 0,
+        "probability_threshold": 0.5,
+        "precision": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "f1": 1.0,
+        "dice": 1.0,
+        "iou": 1.0,
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0
+      },
+      "fit": {
+        "passed": true,
+        "reasons": [],
+        "precision": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "dice": 1.0,
+        "minimum": 0.95
+      },
+      "weighted_bce": 0.004004860296845436,
+      "unweighted_bce": 0.0019158116774633527,
+      "mean_weight_normalized_bce": 0.002197979967604624,
+      "probability_diagnostics": {
+        "positive": {
+          "count": 25,
+          "mean": 0.9974898266792297,
+          "median": 0.9998934268951416,
+          "min": 0.9684358835220337,
+          "max": 0.9999936819076538
+        },
+        "negative": {
+          "count": 256,
+          "mean": 0.0018495203839847818,
+          "median": 0.001138629566412419,
+          "min": 0.0009673702879808843,
+          "max": 0.012800782918930054
+        },
+        "ignored_pixels": 3815,
+        "training_pairwise_auc": 1.0
+      },
+      "parameter_sha256": "39f608e706770751a22d5c099567517c7e6afb87e4cd28268c75aed54e66973b"
+    },
+    {
+      "attempt": 128,
+      "metrics": {
+        "tp": 25,
+        "fp": 0,
+        "fn": 0,
+        "tn": 256,
+        "supervised_pixels": 281,
+        "positive_pixels": 25,
+        "stable_pixels": 256,
+        "ignored_pixels": 3815,
+        "updates": 1,
+        "empty_updates": 0,
+        "probability_threshold": 0.5,
+        "precision": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "f1": 1.0,
+        "dice": 1.0,
+        "iou": 1.0,
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0
+      },
+      "fit": {
+        "passed": true,
+        "reasons": [],
+        "precision": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "dice": 1.0,
+        "minimum": 0.95
+      },
+      "weighted_bce": 7.186446600826457e-05,
+      "unweighted_bce": 4.925041503156535e-05,
+      "mean_weight_normalized_bce": 3.944124013344208e-05,
+      "probability_diagnostics": {
+        "positive": {
+          "count": 25,
+          "mean": 0.9999725008010865,
+          "median": 1.0,
+          "min": 0.9995846152305603,
+          "max": 1.0
+        },
+        "negative": {
+          "count": 256,
+          "mean": 5.135607566231215e-05,
+          "median": 1.7192589439218864e-05,
+          "min": 1.3173660590837244e-05,
+          "max": 0.0006144702201709151
+        },
+        "ignored_pixels": 3815,
+        "training_pairwise_auc": 1.0
+      },
+      "parameter_sha256": "ccdb49dc8649cc2f09239a30957412a65fcb5010f73f88fb576f52efe00cce4d"
+    },
+    {
+      "attempt": 256,
+      "metrics": {
+        "tp": 25,
+        "fp": 0,
+        "fn": 0,
+        "tn": 256,
+        "supervised_pixels": 281,
+        "positive_pixels": 25,
+        "stable_pixels": 256,
+        "ignored_pixels": 3815,
+        "updates": 1,
+        "empty_updates": 0,
+        "probability_threshold": 0.5,
+        "precision": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "f1": 1.0,
+        "dice": 1.0,
+        "iou": 1.0,
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0
+      },
+      "fit": {
+        "passed": true,
+        "reasons": [],
+        "precision": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "dice": 1.0,
+        "minimum": 0.95
+      },
+      "weighted_bce": 4.574469494400546e-05,
+      "unweighted_bce": 3.25956498272717e-05,
+      "mean_weight_normalized_bce": 2.5105975154815496e-05,
+      "probability_diagnostics": {
+        "positive": {
+          "count": 25,
+          "mean": 0.9999840044975281,
+          "median": 1.0,
+          "min": 0.9997598528862,
+          "max": 1.0
+        },
+        "negative": {
+          "count": 256,
+          "mean": 3.422141792697175e-05,
+          "median": 1.1371721029718174e-05,
+          "min": 8.61110856931191e-06,
+          "max": 0.00041067408164963126
+        },
+        "ignored_pixels": 3815,
+        "training_pairwise_auc": 1.0
+      },
+      "parameter_sha256": "e5812cbedf68ff5214a0c817aaf9ce304ae183274c79432fe1715eb0a6869a47"
+    },
+    {
+      "attempt": 512,
+      "metrics": {
+        "tp": 25,
+        "fp": 0,
+        "fn": 0,
+        "tn": 256,
+        "supervised_pixels": 281,
+        "positive_pixels": 25,
+        "stable_pixels": 256,
+        "ignored_pixels": 3815,
+        "updates": 1,
+        "empty_updates": 0,
+        "probability_threshold": 0.5,
+        "precision": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "f1": 1.0,
+        "dice": 1.0,
+        "iou": 1.0,
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0
+      },
+      "fit": {
+        "passed": true,
+        "reasons": [],
+        "precision": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "dice": 1.0,
+        "minimum": 0.95
+      },
+      "weighted_bce": 2.601940286695026e-05,
+      "unweighted_bce": 2.015910104091745e-05,
+      "mean_weight_normalized_bce": 1.4280180089087935e-05,
+      "probability_diagnostics": {
+        "positive": {
+          "count": 25,
+          "mean": 0.9999928808212281,
+          "median": 1.0,
+          "min": 0.9998936653137207,
+          "max": 1.0
+        },
+        "negative": {
+          "count": 256,
+          "mean": 2.1420121923299007e-05,
+          "median": 6.669676849924144e-06,
+          "min": 4.944216925650835e-06,
+          "max": 0.0002656303986441344
+        },
+        "ignored_pixels": 3815,
+        "training_pairwise_auc": 1.0
+      },
+      "parameter_sha256": "46fa8df959839134f04c9d1b11f3141db6d1e7bce0339ffb2b5d2a2abb94b96a"
+    }
+  ],
+  "final_metrics": {
+    "tp": 25,
+    "fp": 0,
+    "fn": 0,
+    "tn": 256,
+    "supervised_pixels": 281,
+    "positive_pixels": 25,
+    "stable_pixels": 256,
+    "ignored_pixels": 3815,
+    "updates": 1,
+    "empty_updates": 0,
+    "probability_threshold": 0.5,
+    "precision": 1.0,
+    "recall": 1.0,
+    "specificity": 1.0,
+    "f1": 1.0,
+    "dice": 1.0,
+    "iou": 1.0,
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0
+  },
+  "final_fit": {
+    "passed": true,
+    "reasons": [],
+    "precision": 1.0,
+    "recall": 1.0,
+    "specificity": 1.0,
+    "dice": 1.0,
+    "minimum": 0.95
+  },
+  "first_passing_predeclared_checkpoint": 26,
+  "primary_fit_checkpoint": 512,
+  "early_stopping_used": false,
+  "saved_weights_reproduce_final_logits": true,
+  "selected_arrays_read_count": 2,
+  "source_dataset_unchanged": true,
+  "implementation_sha256": {
+    "pilot_overfit_worker.py": "2da2fc63c99f9ca4533e6d22061870301a7d8985d827621dae7ae96cf480bb4c",
+    "diagnose_pilot_overfit.py": "e190a95b153498df138bb000d9edbf2dcab5c3b14058391e0a8e1a234637f27b",
+    "pilot_dataset.py": "bb0e58cfb61ac8980d77ed0cc88f99266fa1c35fe1aba5a19780cef4e53af7b7",
+    "pilot_objectives.py": "bccfd912cfdafcd7a04df1fb997b05627a995b5f89496241508e00dc97430d61",
+    "train_pilot_baseline.py": "259f367ddc613b0095a93ddcf7b9ae8f0a14553fa4fc5fc28665c76ae6059995",
+    "run_pilot_checks.py": "9f76cd6c4dd8ceb956102d503e9069c89f63f1ac5a481515391e9393598adceb",
+    "validate_sample.py": "475f641ed582af37eedc2ee9e94065e280202db08eb381441e1403c3eb001fba"
+  },
+  "torch_version": "2.6.0.dev20241112",
+  "torch_distribution_version": "2.5.1",
+  "torch_git_version": "555bc8349d67a8f5ccd5325d1a7f46c3619b1769",
+  "torch_module_path": "/Users/muhammedazhar/.miniconda3/envs/COMP1252-MP/lib/python3.10/site-packages/torch/__init__.py",
+  "numpy_version": "1.26.4",
+  "rasterio_version": "1.4.3",
+  "python_version": "3.10.15 (main, Oct  3 2024, 02:24:49) [Clang 14.0.6 ]",
+  "python_executable": "/Users/muhammedazhar/.miniconda3/envs/COMP1252-MP/bin/python",
+  "artifact_sha256": {
+    "preview.png": "4bf86054e9178b0eca6aba0b50a62dd9bb142c033234bb430b0d3c9146e9ed9b",
+    "checkpoint_arrays.npz": "9401f77d775a80724c250d28eb95d50550ab1fc69350e311c2d8388b4ff80dcd",
+    "steps.jsonl": "415ce992bdb3f0b8784687b47c11b7f6922f8565faefa0f3149a8a9ecd80f55a",
+    "model_weights.npz": "90116d603bb7b3ff3a5e7394b7ed7dab529c9102ccaa30310acba408b082984c",
+    "report.md": "633d6c6a2f0072166cf0e5d44ff21bdee0eb2c7daea74a694d38be95bcef5642"
+  },
+  "limitations": [
+    "A passing fit demonstrates capacity to memorize only the reviewed pixels of one training crop, not generalization or full-image label correctness.",
+    "Longer-run checkpoint differences diagnose fixed-case exposure, not a direct reproduction of the original 13-case two-pass smoke.",
+    "SGD global versus local isolates only weight choice on this case; both may fit eventually despite different priors and transient curves.",
+    "Adam comparison changes optimizer and learning rate together; it is a sanity variant, not a causal optimizer experiment.",
+    "No held-out images, threshold tuning, timing inference, new annotations or source pixel rereads belong to this task."
+  ],
+  "resources": {
+    "logical_cpu_count": 11,
+    "machine_ram_gib": 18.0,
+    "worker_peak_rss_mib_sampled": 307.3,
+    "worker_high_water_rss_mib": 308.66,
+    "minimum_available_gib_sampled": 3.49,
+    "elapsed_seconds": 2.8,
+    "worker_limit_mib": 512,
+    "minimum_available_gib_limit": 1.5,
+    "runtime_limit_seconds": 300,
+    "workers": 1,
+    "native_thread_limit": 1,
+    "nice_increment": 10,
+    "gdal_cache_mib": 16,
+    "warp_memory_mib": 0,
+    "gpu_used": false,
+    "monitor_interval_seconds": 0.25
+  }
+}

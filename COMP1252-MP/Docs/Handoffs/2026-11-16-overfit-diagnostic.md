@@ -1,11 +1,37 @@
 # Single-example overfit diagnostic
 
-## Current state: diagnostic implementation ready; model executions pending
+## Current state: all three arms completed; independent summary pending
 
 Branch: `codex/curated-deforestation-pilot`. The user authorized the next task
 after the pipeline smoke and requested tool-neutral continuity for Gemini
 Antigravity if the ChatGPT usage window expires. Start with root `CONTINUE.md`.
 Commit verified logical changes on this branch and update this file.
+
+Implementation checkpoint: `74338f8`. All three planned workers have now
+completed all512 attempts successfully; **do not rerun them**. Raw evidence is
+tracked under `Docs/Reviews/OverfitDiagnosticV1/runs/` and retained locally at
+the execution paths below. Same initial parameter hash, selected tensor hash,
+plan hash and implementation hashes were checked across all arms.
+
+| Arm | First passing checkpoint | Final TP / FP / FN / TN | Final Dice | Worker peak MiB |
+| --- | ---: | --- | ---: | ---: |
+| global_weight_sgd | 128 | 25 / 0 / 0 / 256 | 1.0 | 293.81 |
+| local_weight_sgd | 128 | 25 / 0 / 0 / 256 | 1.0 | 316.75 |
+| local_weight_adam | 26 | 25 / 0 / 0 / 256 | 1.0 | 308.66 |
+
+All used one low-priority CPU worker and stayed above3.49GiB sampled available
+memory. Workers totalled8.41s. At26 attempts both SGD arms still predicted all
+reviewed pixels positive, but ranking AUC was already1.0; probabilities carried
+class signal before the fixed threshold separated them. At128 both passed.
+This supports learning capability on ONE crop, not generalization or a proven
+cause of the earlier13-case smoke's behaviour. Global versus local weight did
+not prevent eventual memorization. Adam differs in optimizer AND learning rate.
+
+Remaining: finish/inspect the new summary/verifier from overfit_test_review,
+run its focused/full tests and execute independent NumPy reconstruction of all
+15 checkpoints, losses, fit gates, source hashes and resource receipts. Then
+write concise final guide/summary and update this handoff/CONTINUE.md. No new
+model training, data selection, settings search or threshold tuning is needed.
 
 Plan/continuation checkpoint: `5aafc56`. NEW
 `Solutions/diagnose_pilot_overfit.py` now supplies the pure analytic controls,
@@ -16,9 +42,8 @@ The CLI engine `Solutions/pilot_overfit_worker.py` is now complete, AST-checked
 and inspected by root. It allows finite stationary steps, verifies ignored
 gradients on every update, retains all fixed checkpoints, rereads the selected
 arrays, and checks saved weights. The complete current suite passes **187
-tests** (3.06s guarded worker, largest sampled RSS314.9MiB). No diagnostic
-model execution has started at this checkpoint. Next, run the three arms
-sequentially using the commands below. The summary agent is writing
+tests** (3.06s guarded worker, largest sampled RSS314.9MiB). The model executions
+are now finished as recorded above. The summary agent is writing
 `Solutions/summarize_pilot_overfit.py`; do not assume that file is ready until
 inspected/tested.
 
@@ -103,8 +128,8 @@ do not train the same arm twice or change settings in response to results.
 
 ## Continuity essentials
 
-No diagnostic model run has started at this checkpoint. Dataset and model
-sources are local/committed; there is no need for a new download or API account.
+All three diagnostic model runs are complete. Dataset and model sources are
+local/committed; there is no need for a new download or API account.
 The exact Torch runtime is2.6.0.dev20241112 (git555bc834...), although distribution
 metadata says2.5.1; preserve both identities in receipts and avoid environment
 reinstallation during this diagnostic. Official2.6 contracts were checked in
