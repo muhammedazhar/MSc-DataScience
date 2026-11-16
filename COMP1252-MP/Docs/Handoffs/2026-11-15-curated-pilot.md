@@ -6,6 +6,18 @@ Branch: `codex/curated-deforestation-pilot`.
 Initial durable checkpoint: `4eb2387`; the following completion commit contains
 final decisions, the small dataset and verification. Continue on this branch.
 
+User continuation instruction, confirmed 16 November 2026: save each completed,
+verified logical change as a commit on this same branch and refresh this handoff
+with current state, validation and remaining work. If interrupted mid-change,
+save an explicit incomplete checkpoint rather than implying completion. Project
+`AGENTS.md` carries this instruction for subsequent agents.
+
+Current next task remains the ignore-aware loader, loss and metrics described
+below, followed by a resource-bounded baseline smoke run. No model training has
+started. This continuation update changes documentation/instructions only;
+validation is a clean diff check, and the previously recorded 136-test result
+belongs to the completed pilot implementation.
+
 Repository root: `/Users/muhammedazhar/Developer/Learning/MSc-DataScience`.
 Project: `/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP`.
 Python: `/Users/muhammedazhar/.miniconda3/envs/COMP1252-MP/bin/python`.
