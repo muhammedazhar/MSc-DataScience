@@ -1,0 +1,115 @@
+{
+  "schema_version": 7,
+  "scope": "Metadata-only source catalogue search for compatible Sentinel-2 products covering the fixed coordinates and dates for the two fresh supported temporal V5 events and 12 original pairs. No shifted grids, imagery reads, QA, models, labels or downloads.",
+  "source_files": {
+    "prior_protocol": {
+      "path": "Docs/Reviews/ValidationCoverageV6/protocol.json",
+      "sha256": "6f9b9eb37aee3d410a956488c116e24df39d2d280ce533cfbc4236cf86b58cd3"
+    },
+    "prior_coverage": {
+      "path": "Docs/Reviews/ValidationCoverageV6/coverage/coverage.json",
+      "sha256": "796892510e8c32f53ea87f723d1cd16daf87484dac2dabe632a2e626cae494a1"
+    },
+    "prior_metadata": {
+      "path": "Docs/Reviews/ValidationCoverageV6/coverage/metadata.json",
+      "sha256": "ed87d082693ef58549a51b4989f472590835d7da7ffe870ad4b1616d2b399ad9"
+    },
+    "source_requirements": {
+      "path": "Docs/Reviews/ValidationCoverageV6/source_requirements.json",
+      "sha256": "21ed0567806ed1efd2840002b3c30bb6b5f2dcda36d19c0fb5ee51ab0dac2a02"
+    },
+    "prior_integrity": {
+      "path": "Docs/Reviews/ValidationCoverageV6/checks/final_integrity.json",
+      "sha256": "c71d4c400dde194feea7596bc4e2f3416ee8bd2931494ed070098287b770fce0"
+    }
+  },
+  "immutable_sources_sha256": {
+    "assess_pixel_quality.py": "4e0b77922cd478322912cb4116801502ec13bdcb740fc7696a1010e94fbd535f",
+    "pixelqa_masks.py": "cdbac7d70b94cc2043cbfa94a8201a232320b634c7c23d987b33f3948617897f",
+    "pixelqa_scene_metadata.py": "4d783446400c33f2bfb9d6e8730d3ab8e5178d35559a39cf714735384d542b72",
+    "validate_sample.py": "475f641ed582af37eedc2ee9e94065e280202db08eb381441e1403c3eb001fba",
+    "annotation_scene_inventory.py": "5c35020ccf12f5e5f689c1f7130d64d9cabd5e6e3e04cdede291c9a912688318",
+    "prepare_curated_pilot.py": "1a8d5ec426bd657cd0eb7f1ed2e08c125f8a9f879aad799c395168536e777f82",
+    "curated_pilot_review.py": "222bfc332959d2e597644d881ea295b43a29d08606ce8326750e3dd2176e918f",
+    "curated_pilot_exports.py": "caf67918894fa13ad62c3f9e6b8aad58ac69c414e999df9a988901d2166a9958",
+    "build_curated_pilot.py": "302c6fb3aedd13facaf0f83abcb3c234f4ff1b2257d303ce7b5cdc5cd470cc4c",
+    "verify_curated_pilot.py": "12f27b43a15d26e7bd3fc6c3df9363ed9b5b1eb3e017a2665548d1895830e8df",
+    "pilot_dataset.py": "bb0e58cfb61ac8980d77ed0cc88f99266fa1c35fe1aba5a19780cef4e53af7b7",
+    "pilot_objectives.py": "bccfd912cfdafcd7a04df1fb997b05627a995b5f89496241508e00dc97430d61",
+    "pilot_pixel_objective.py": "6020e42610e7e371000a2667958ddb3a8ce1acbe5a2ff7b3c721bfb27b1a1599",
+    "train_reviewed_pilot.py": "389ecb205b7fa91624964c6eb030352827001b0b38b74b7c12e30c833ec24813",
+    "reviewed_pilot_worker.py": "7e826d6f4cb3d9ed9d2c32e23838c479926261284a274879a2989dc78df43252",
+    "train_pilot_baseline.py": "259f367ddc613b0095a93ddcf7b9ae8f0a14553fa4fc5fc28665c76ae6059995",
+    "run_pilot_checks.py": "9f76cd6c4dd8ceb956102d503e9069c89f63f1ac5a481515391e9393598adceb",
+    "diagnose_pilot_overfit.py": "e190a95b153498df138bb000d9edbf2dcab5c3b14058391e0a8e1a234637f27b",
+    "pilot_overfit_worker.py": "2da2fc63c99f9ca4533e6d22061870301a7d8985d827621dae7ae96cf480bb4c",
+    "verify_pixel_pilot.py": "f6684643e4ea536b69a48a2da00581b9644e408e27715b0645c7fbc84a611c97",
+    "select_validation_cases.py": "0a137b5a343e21a1e6daf10ba21abf10d1efc69eee36f77761ee30b3e0689ca7",
+    "prepare_validation_review.py": "239f42dba0086c5dc1d8cae7ff448df44b6d4b85c76008ed94d220a1e46ace1d",
+    "validation_review.py": "b73853c8ac3229aad82e1b1e11b50395d51ca80d9ed486c30015320919777f62",
+    "audit_validation_geometry.py": "1d0e3f5ffc3d755c1f53a5c1eafa36d5af7336cb51826508efc4e5b2fe7fe2ee",
+    "audit_validation_support_pool.py": "27bebf952e323708b28e9cf9772fdb516dbeea934e2fe7e44802e88e0ba1e508",
+    "verify_validation_support_pool.py": "b4a398da0a44f264520992aa8d0b8708e9281516abc56d22353aac86a4ed8a80",
+    "verify_validation_dataset.py": "785f5cea93311196070f71160a63680bd49d629758a91f5bdec3bdbf4bdf1f22",
+    "validation_context_worker.py": "5bc30e1023679bee956430be92544f709257d0b07202e1e19736378430a707a8",
+    "audit_validation_context.py": "894d676e8ad728505a2d31db9c971e0910fc258f469b806a392747f362bc3c42",
+    "verify_validation_context.py": "f36b39950c336bd6cae6601f4281c9137f8de8c0424b2a67142f4cccd2450c39",
+    "prepare_validation_manual.py": "dc8e008ae86705fb45b6b04cb3b7d3cdc220f17416271e1efc9a57b7020d6919",
+    "verify_validation_manual.py": "7d36cd810a036ee31a8c426d278ddc93601746230bf258c7ae5587a210cf374b",
+    "audit_validation_unscreened.py": "e0b1d5fa6bd4e1f6c67f3fbd294d00772c1242625cbaac134118f47d5a906d6e",
+    "audit_validation_coverage.py": "011417f1e207414d0b39b218459a555c0c4a92703be31b3eaf6dfd0f6bd425b9"
+  },
+  "rule": {
+    "events": [
+      "event-71d8da17cbbfd9babdee",
+      "event-ce1c1df8d02be33bb3c8"
+    ],
+    "pairs": 12,
+    "group_id": "group-96c27871459d03c08bcc",
+    "fixed_crs": "EPSG:32636",
+    "core_union_bounds": [
+      663380.0,
+      5604740.0,
+      664280.0,
+      5605640.0
+    ],
+    "qa_context_union_bounds": [
+      662180.0,
+      5603540.0,
+      665480.0,
+      5606840.0
+    ],
+    "context_padding_m": 1200,
+    "fixed_pair_dates": [
+      "2018-07-26",
+      "2018-07-31",
+      "2018-08-05",
+      "2018-08-10",
+      "2018-08-15",
+      "2018-08-20",
+      "2018-08-25"
+    ],
+    "timeline_window_end": "2018-09-14",
+    "catalogues": [
+      "Copernicus_Data_Space",
+      "AWS_Earth_Search"
+    ],
+    "require_full_crop_containment": true,
+    "require_full_context_containment": true,
+    "check_processing_baseline_compatibility": true,
+    "check_radiometric_offset_compatibility": true,
+    "record_download_sizes": true,
+    "no_grid_shift_or_download": true,
+    "no_pixel_reads_or_model_executions": true,
+    "no_label_inferences": true
+  },
+  "resources": {
+    "workers": 1,
+    "native_threads": 1,
+    "nice_increment": 10,
+    "gpu_used": false,
+    "worker_rss_mib": 512,
+    "available_memory_reserve_gib": 1.5,
+    "max_seconds_per_worker": 300
+  }
+}
