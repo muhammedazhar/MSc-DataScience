@@ -16,8 +16,14 @@ in EPSG:32636. Query external source catalogues (Copernicus Data Space Ecosystem
 AWS Earth Search STAC) using spatial geometry and dates only. Record coverage, acquisition
 date, tile ID, processing baseline, source-reader/QA compatibility and download sizes.
 
-Remaining: implement/test metadata-only catalogue search with offline mock tests,
-freeze source, run one guarded worker, archive report, verify final integrity and update
+Protocol checkpoint `0cce5b5` is pushed. The new metadata-only implementation
+`Solutions/audit_validation_catalogue.py` and five unit/regression tests in
+`Tests/test_validation_catalogue.py` are complete; source is frozen in the protocol.
+All 316 tests pass: test suite 3.06 s, sampled peak 355.30 MiB (high-water 356.58 MiB),
+minimum 3.58 GiB available. Proof: V7 `checks/pre_execution_tests/`.
+No real catalogue search worker has run yet at this checkpoint.
+
+Remaining: run one guarded worker, archive report, verify final integrity and update
 this handoff. Preserve existing blocks. No grid shifts, downloads, raster pixel reads, QA
 or labels authorized in this step. No search worker has run at this checkpoint.
 
