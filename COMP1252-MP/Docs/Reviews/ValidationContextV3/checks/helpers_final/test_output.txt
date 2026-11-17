@@ -1,0 +1,19 @@
+test_control_search_prefers_largest_size_before_first_position_not_best_ndvi (test_validation_context.ValidationContextTests) ... ok
+test_empty_wrong_type_shape_and_incomplete_edge_context_are_rejected (test_validation_context.ValidationContextTests) ... ok
+test_feature_invalid_or_nonfinite_halo_blocks_otherwise_green_control (test_validation_context.ValidationContextTests) ... ok
+test_fixed_protocol_rejects_context_support_architecture_and_capacity_changes (test_validation_context.ValidationContextTests) ... ok
+test_flag_outside_roi_but_inside_halo_rejects_control_and_distant_flag_does_not (test_validation_context.ValidationContextTests) ... ok
+test_full_halo_catalogue_exclusion_is_required_without_shrinking_roi (test_validation_context.ValidationContextTests) ... ok
+test_green_stable_threshold_is_on_roi_while_halo_still_requires_finite_inputs (test_validation_context.ValidationContextTests) ... ok
+test_quality_union_counts_overlap_once_and_keeps_both_dates_separate (test_validation_context.ValidationContextTests) ... ok
+test_two_pixel_context_is_exact_square_union_and_preserves_input (test_validation_context.ValidationContextTests) ... ok
+test_actual_factory_output_gradient_is_exactly_inside_five_by_five_context (test_validation_context_architecture.ValidationContextArchitectureTests) ... ok
+test_actual_factory_proves_radius_two_and_rejects_global_or_changed_context (test_validation_context_verifier.ContextVerifierTests) ... ok
+test_control_search_rechecks_full_context_and_keeps_first_fixed_geometry (test_validation_context_verifier.ContextVerifierTests) ... ok
+test_full_target_halo_failure_cannot_be_hidden_by_a_smaller_clean_interior (test_validation_context_verifier.ContextVerifierTests) ... ok
+test_square_halo_includes_diagonal_dependencies_and_exposes_clipped_context (test_validation_context_verifier.ContextVerifierTests) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.377s
+
+OK

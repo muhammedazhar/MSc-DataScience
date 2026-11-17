@@ -13,7 +13,12 @@ one fresh V2 candidate blocked only by whole-crop QA. Protocol:
 `event-bf3d28f31dcf19938962`, pair `pair-430ec0ecae32ce98efcb`, validation group
 `group-45f0c39e787ca8622918`, 2019-04-02 -> 2019-04-27, annotation 2019-04-22.
 Its target has36 pixels/interior4; prior endpoint full-crop QA counts56/0.
-No new context calculation, feature extraction or image review has run yet.
+The worker/helpers and architecture checks are implemented. Fourteen focused
+tests pass, including the actual factory's synthetic gradient proof of its
+5x5 dependency, full-halo failure cases, finite inputs and protocol bounds.
+All twelve worker source hashes are now frozen in the protocol before execution.
+No candidate context calculation, feature extraction or image review has run yet.
+The independent verifier is being finalized; no result is approved yet.
 
 ## Fixed rules and boundaries
 

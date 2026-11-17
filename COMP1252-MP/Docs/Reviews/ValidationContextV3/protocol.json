@@ -235,5 +235,19 @@
     "Two-pixel context is specific to the frozen tiny CNN, not larger/global-context models.",
     "No partial ROI shrinking, halo clipping, extra candidates, new visual previews, model inference or training.",
     "Actual27featurechannels are read from14boundedbandwindows in one worker; independent verifier checks saved values and source fingerprints without repeating raw extraction."
-  ]
+  ],
+  "implementation_sha256": {
+    "validation_context_worker.py": "5bc30e1023679bee956430be92544f709257d0b07202e1e19736378430a707a8",
+    "audit_validation_context.py": "894d676e8ad728505a2d31db9c971e0910fc258f469b806a392747f362bc3c42",
+    "verify_validation_dataset.py": "785f5cea93311196070f71160a63680bd49d629758a91f5bdec3bdbf4bdf1f22",
+    "prepare_validation_review.py": "239f42dba0086c5dc1d8cae7ff448df44b6d4b85c76008ed94d220a1e46ace1d",
+    "prepare_curated_pilot.py": "1a8d5ec426bd657cd0eb7f1ed2e08c125f8a9f879aad799c395168536e777f82",
+    "curated_pilot_exports.py": "caf67918894fa13ad62c3f9e6b8aad58ac69c414e999df9a988901d2166a9958",
+    "assess_pixel_quality.py": "4e0b77922cd478322912cb4116801502ec13bdcb740fc7696a1010e94fbd535f",
+    "pixelqa_masks.py": "cdbac7d70b94cc2043cbfa94a8201a232320b634c7c23d987b33f3948617897f",
+    "pixelqa_scene_metadata.py": "4d783446400c33f2bfb9d6e8730d3ab8e5178d35559a39cf714735384d542b72",
+    "validate_sample.py": "475f641ed582af37eedc2ee9e94065e280202db08eb381441e1403c3eb001fba",
+    "annotation_scene_inventory.py": "5c35020ccf12f5e5f689c1f7130d64d9cabd5e6e3e04cdede291c9a912688318",
+    "train_pilot_baseline.py": "259f367ddc613b0095a93ddcf7b9ae8f0a14553fa4fc5fc28665c76ae6059995"
+  }
 }
