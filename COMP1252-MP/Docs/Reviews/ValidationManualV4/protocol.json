@@ -3277,6 +3277,7 @@
     "No approved labels or unseen-location accuracy follows from preparing or reviewing images."
   ],
   "implementation_sha256": {
-    "prepare_validation_manual.py": "5ef0d5b3a199b47433a18b97c149bfe96ef76f5e6df1695daa20f28966d4de6e"
+    "prepare_validation_manual.py": "dc8e008ae86705fb45b6b04cb3b7d3cdc220f17416271e1efc9a57b7020d6919",
+    "verify_validation_manual.py": "7d36cd810a036ee31a8c426d278ddc93601746230bf258c7ae5587a210cf374b"
   }
 }

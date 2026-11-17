@@ -1,0 +1,10 @@
+{
+  "status": "fixed_before_any_real_image_processing",
+  "failed_check": "Synthetic actual-render integration:13focusedtests,1plainRGBpixelcomparisonerror",
+  "cause": "Overlay coordinate-label origin touched the adjacent plain RGB panel at its final column.",
+  "fix": "Moved vertical coordinate-label origin from x-15 to x-12, entirely beyond the plain panel; strict pixel comparisons unchanged.",
+  "validation": "Full299-test suite passes, including actual-render integration covering16plainRGB and14QA panels.",
+  "raw_validation_pixels_processed_before_fix": 0,
+  "forest_model_executions": 0,
+  "labels_approved": 0
+}

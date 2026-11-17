@@ -285,7 +285,9 @@ def render_packet(output, observations, rows, arrays, roster):
         for coordinate in (0, 16, 32, 48, 63):
             location = int((coordinate+.5)*size/64)
             draw.text((x+location-6, y-13), str(coordinate), fill='white', font=small)
-            draw.text((x-15, y+location-6), str(coordinate), fill='white', font=small)
+            # Keep every glyph beyond the neighbouring plain panel's last
+            # column. The 14px inter-panel gutter starts at x-14.
+            draw.text((x-12, y+location-6), str(coordinate), fill='white', font=small)
     views = []
     for first in range(0, len(rows), 4):
         subset = list(zip(observations[first:first+4], rows[first:first+4]))

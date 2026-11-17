@@ -13,12 +13,13 @@ handoffs for frozen provenance, QA, split, model and resource constraints.
 The user authorized the next visual timeline review. The separate V4 protocol
 is `Docs/Reviews/ValidationManualV4/protocol.json`, declared BEFORE new images,
 pixel processing or visual assessment. V3's negative eligibility stays unchanged.
-The new preparation implementation and eight focused tests are complete.
-Its source hash is frozen in the protocol before processing. Independent
-verification code/tests are still in progress in separate new files. No V4
-pixel worker, preview inspection, manual verdict, labels or forest-model
-inference has completed at this checkpoint. Frozen existing sources remain
-unchanged. The original protocol checkpoint is `4950a0c` and is pushed.
+Preparation and independent verification implementations/tests are complete;
+both source hashes are frozen in the protocol BEFORE processing. All299tests
+pass. No V4 real-image worker, preview inspection, manual verdict, labels or
+forest-model inference has completed at this checkpoint. Frozen existing
+sources remain unchanged. Pushed checkpoints: original protocol `4950a0c`,
+tested preparation `fc6e976`. The following checkpoint contains the independent
+verifier, source freeze, synthetic rendering fix and full-suite proof.
 
 ## Fixed task and boundaries
 
@@ -70,10 +71,26 @@ selection, disjoint FULL halos, flags/exclusions/nonfinite values only in a
 margin, exhaustion/empty roster, exact visual contexts and capacity limits.
 No real validation imagery or QA model ran during these synthetic tests.
 
-1. Finish/test new separate independent verifier, including complete rendered
-   image coverage and plain pixels matching saved RGB. Freeze its source before
-   actual processing, preserving all old immutable files. New verifier file may
-   be uncommitted while this work is in progress; it has not run.
+Independent verifier: `Solutions/verify_validation_manual.py`, with13tests in
+`Tests/test_validation_manual_verification.py`. It independently reconstructs
+square halos, geometry-only roster, per-date metrics and review rules, checks
+all5 renderedviews/all12dates, and independently compares16plainRGB/14QA panels
+to saved arrays. Overlay image hashes, masks and source code are bound; overlay
+pixels are not independently re-rendered. It verifies evidence integrity and
+decision rules, not visual truth. Both packet-only and final-review modes are
+implemented but not yet run on real data.
+
+An actual-render SYNTHETIC integration test caught overlay coordinate labels
+touching one column of the adjacent plain panel. Moving their origin fromx-15
+to x-12 fixes it without weakening pixel checks, before any real image processing.
+The initial focused13-test attempt failed1case and published no output. See
+`checks/rendering_regression.json`. Full299tests (previous278+8prep+13verifier)
+now pass: worker3.56s/357.98MiB, minimum5.16GiB available. Receipt/log:
+`Docs/Reviews/ValidationManualV4/checks/pre_execution_tests/`. No further test
+rerun is needed without a new source change or concern.
+
+1. Implementations and pre-execution tests are complete. Do not repeat them or
+   edit either frozen source while processing/reviewing this protocol.
 2. Run one guarded preparation; retain all12 dates, raw evidence and resources.
    Commit exact control roster/artifacts BEFORE image inspection.
 3. Independently verify source/array/QA/roster integrity. Inspect all plain and

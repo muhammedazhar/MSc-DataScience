@@ -42,8 +42,9 @@ feature checks, but the fixed NDVI control search yields no proposal. Overall
 numeric eligibility remains false; no validation labels or accuracy exist.
 278 tests pass. The separately predeclared manual image/timeline assessment
 is now approved and in progress, keeping the verified context QA requirements.
-Its V4 protocol is committed before processing/images; no V4 verdict or labels
-exist at this checkpoint. Do not silently retune completed protocols, repeat training or
+Its V4 protocol and tested implementations are committed before real image
+processing;299tests pass. Actual preparation/review remain pending and no V4
+verdict or labels exist at this checkpoint. Do not silently retune completed protocols, repeat training or
 force labels from numeric proxies or rejected cases.
 The handoff identifies proposed next work and what has already finished.
 
