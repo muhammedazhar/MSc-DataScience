@@ -1,0 +1,364 @@
+{
+  "protocol_sha256": "aee7fbbd6118ac6fbfbfa13077587b6c7263518ea70526e6b8900b66760eee8a",
+  "summary": {
+    "total_registered_scenes": 52,
+    "prior_registered_scenes": 50,
+    "new_registered_scenes": 2,
+    "ingested_scene_ids": [
+      "S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227",
+      "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233"
+    ],
+    "tile_id": "36UXB",
+    "relative_orbit": "R064",
+    "processing_baseline": "02.06 (N0206)",
+    "radiometric_offset": 0,
+    "all_new_scenes_metadata_usable": true,
+    "total_bytes_transferred": 979071178,
+    "download_elapsed_seconds": 45.89,
+    "minimal_pair_dates": [
+      "2018-07-26",
+      "2018-07-31"
+    ],
+    "events_evaluated": 2,
+    "both_events_minimal_pair_covered": true,
+    "coverage_verdict": "Both fresh events (event-71d8da17cbbfd9babdee and event-ce1c1df8d02be33bb3c8) now have full core crop and QA context coverage for 2018-07-26 and 2018-07-31.",
+    "blocker_status": "Original missing_post_scene_coverage and crop_crosses_tile_edge blocks are resolved for the 2018-07-26/2018-07-31 pair. QA and manual review screening remain required before any validation use."
+  },
+  "ingestion_results": [
+    {
+      "scene_id": "S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227",
+      "safe_path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/Sentinel-2/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227.SAFE",
+      "total_bytes": 461375371,
+      "assets": [
+        {
+          "role": "product_metadata",
+          "bytes": 44316,
+          "sha256": "607262ddf8721a33170083ad0ec6319999f2e5ba3b27a8cd302ece234634255f",
+          "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/Sentinel-2/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227.SAFE/MTD_MSIL1C.xml",
+          "status": "downloaded"
+        },
+        {
+          "role": "tile_metadata",
+          "bytes": 468774,
+          "sha256": "a3384fa252e1e016dae972f77e2f66aff5ad2ed8b1e6c4c63cb0477eedb40e43",
+          "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/Sentinel-2/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227.SAFE/GRANULE/L1C_T36UXB_A007240_20180726T084437/MTD_TL.xml",
+          "status": "downloaded"
+        },
+        {
+          "role": "cloud_qa",
+          "bytes": 344217,
+          "sha256": "7cf4317ef0c13673440b62baca24c4e9acd84bd356af410ec01e7d6133ad161b",
+          "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/Sentinel-2/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227.SAFE/GRANULE/L1C_T36UXB_A007240_20180726T084437/QI_DATA/MSK_CLOUDS_B00.gml",
+          "status": "downloaded"
+        },
+        {
+          "role": "B02",
+          "bytes": 84280495,
+          "sha256": "e104c5cf0280f9e464e662c31e4707776b497652b85f57a299a30bdc1336b2f5",
+          "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/Sentinel-2/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227.SAFE/GRANULE/L1C_T36UXB_A007240_20180726T084437/IMG_DATA/T36UXB_20180726T084009_B02.jp2",
+          "status": "downloaded"
+        },
+        {
+          "role": "B03",
+          "bytes": 86990432,
+          "sha256": "210c9f78d42b31721990a096da81873f7cebfce76ad7d966001e8683409cd318",
+          "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/Sentinel-2/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227.SAFE/GRANULE/L1C_T36UXB_A007240_20180726T084437/IMG_DATA/T36UXB_20180726T084009_B03.jp2",
+          "status": "downloaded"
+        },
+        {
+          "role": "B04",
+          "bytes": 87174012,
+          "sha256": "321be4fb4e54f1a7b0f0636e33dd5ab3deb81758ad7b660cb6598cda95a638fc",
+          "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/Sentinel-2/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227.SAFE/GRANULE/L1C_T36UXB_A007240_20180726T084437/IMG_DATA/T36UXB_20180726T084009_B04.jp2",
+          "status": "downloaded"
+        },
+        {
+          "role": "B08",
+          "bytes": 115716031,
+          "sha256": "f04c12cb6a0abe426964d3602acd6d4c93716fe8896b4b7fdc6cd357c72f9768",
+          "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/Sentinel-2/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227.SAFE/GRANULE/L1C_T36UXB_A007240_20180726T084437/IMG_DATA/T36UXB_20180726T084009_B08.jp2",
+          "status": "downloaded"
+        },
+        {
+          "role": "B8A",
+          "bytes": 33261151,
+          "sha256": "292fad081e6fe571daa2aad17d1f22471b70aba297b38c5af4f8c51510eb789e",
+          "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/Sentinel-2/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227.SAFE/GRANULE/L1C_T36UXB_A007240_20180726T084437/IMG_DATA/T36UXB_20180726T084009_B8A.jp2",
+          "status": "downloaded"
+        },
+        {
+          "role": "B11",
+          "bytes": 27331080,
+          "sha256": "bab30a20ebc156c1eb2e4b4a84206631b32f4ef79d038fc75e7afd118a40c8e5",
+          "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/Sentinel-2/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227.SAFE/GRANULE/L1C_T36UXB_A007240_20180726T084437/IMG_DATA/T36UXB_20180726T084009_B11.jp2",
+          "status": "downloaded"
+        },
+        {
+          "role": "B12",
+          "bytes": 25764863,
+          "sha256": "37b55aa0602a2d304c9ffc2806154aa6f5b57a5cf4c2b3733d04cf78e4fa598e",
+          "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/Sentinel-2/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227.SAFE/GRANULE/L1C_T36UXB_A007240_20180726T084437/IMG_DATA/T36UXB_20180726T084009_B12.jp2",
+          "status": "downloaded"
+        }
+      ]
+    },
+    {
+      "scene_id": "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233",
+      "safe_path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233.SAFE",
+      "total_bytes": 517695807,
+      "assets": [
+        {
+          "role": "product_metadata",
+          "bytes": 44478,
+          "sha256": "e506218702df385cbc3f28b83069274057febc3056a04c7aa18ced23eea24331",
+          "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233.SAFE/MTD_MSIL1C.xml",
+          "status": "downloaded"
+        },
+        {
+          "role": "tile_metadata",
+          "bytes": 469035,
+          "sha256": "221d2e7b275299b6117e621dbbbd2a869a733ec9d65d59fd71c8fdd513cb18f7",
+          "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233.SAFE/GRANULE/L1C_T36UXB_A016220_20180731T084204/MTD_TL.xml",
+          "status": "downloaded"
+        },
+        {
+          "role": "cloud_qa",
+          "bytes": 347631,
+          "sha256": "27687d3d0b5336de728309af8ff94787970a73ce93101990990cb4654cc58721",
+          "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233.SAFE/GRANULE/L1C_T36UXB_A016220_20180731T084204/QI_DATA/MSK_CLOUDS_B00.gml",
+          "status": "downloaded"
+        },
+        {
+          "role": "B02",
+          "bytes": 94859290,
+          "sha256": "b11dbf3f7db2e845acead7ba700635c6893459279c05a543a10cf52deda6d6a0",
+          "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233.SAFE/GRANULE/L1C_T36UXB_A016220_20180731T084204/IMG_DATA/T36UXB_20180731T083601_B02.jp2",
+          "status": "downloaded"
+        },
+        {
+          "role": "B03",
+          "bytes": 98822705,
+          "sha256": "0a373b940ecc97442b35cf364b4a1c54d436b0fe2585a5e9e2a31ad4fbee4dca",
+          "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233.SAFE/GRANULE/L1C_T36UXB_A016220_20180731T084204/IMG_DATA/T36UXB_20180731T083601_B03.jp2",
+          "status": "downloaded"
+        },
+        {
+          "role": "B04",
+          "bytes": 100070803,
+          "sha256": "0dc0a55cd8acaae2dd0a18109189f4380ec1ee717d116c8d2e6e41676a4cfcee",
+          "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233.SAFE/GRANULE/L1C_T36UXB_A016220_20180731T084204/IMG_DATA/T36UXB_20180731T083601_B04.jp2",
+          "status": "downloaded"
+        },
+        {
+          "role": "B08",
+          "bytes": 126481445,
+          "sha256": "f6165471d4af6fbbe8ece1651a38909d3fb68bfc25f23782a867e18760a8266d",
+          "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233.SAFE/GRANULE/L1C_T36UXB_A016220_20180731T084204/IMG_DATA/T36UXB_20180731T083601_B08.jp2",
+          "status": "downloaded"
+        },
+        {
+          "role": "B8A",
+          "bytes": 33868262,
+          "sha256": "662cef010c64d27d9e7876b2346bec05d0b3d1320606cdc399ed601e389823ae",
+          "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233.SAFE/GRANULE/L1C_T36UXB_A016220_20180731T084204/IMG_DATA/T36UXB_20180731T083601_B8A.jp2",
+          "status": "downloaded"
+        },
+        {
+          "role": "B11",
+          "bytes": 32058197,
+          "sha256": "13689b40e9f31e8dc98810bfd3fba1a3b6258dbfbab6fa4e7d4378caf434dc7a",
+          "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233.SAFE/GRANULE/L1C_T36UXB_A016220_20180731T084204/IMG_DATA/T36UXB_20180731T083601_B11.jp2",
+          "status": "downloaded"
+        },
+        {
+          "role": "B12",
+          "bytes": 30673961,
+          "sha256": "fe695ffbf274bffc9695154fe46fec3749e99e64dee095cc317fa91f745de5d8",
+          "path": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233.SAFE/GRANULE/L1C_T36UXB_A016220_20180731T084204/IMG_DATA/T36UXB_20180731T083601_B12.jp2",
+          "status": "downloaded"
+        }
+      ]
+    }
+  ],
+  "registered_scenes": [
+    {
+      "scene_id": "S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227",
+      "product_name": "S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227",
+      "satellite": "S2B",
+      "processing_level": "L1C",
+      "tile": "36UXB",
+      "acquisition_date": "2018-07-26",
+      "acquisition_datetime": "2018-07-26T08:40:09Z",
+      "baseline_code": "N0206",
+      "processing_baseline": "02.06",
+      "path": "Datasets/Sentinel-2/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227.SAFE",
+      "product_path": "Datasets/Sentinel-2/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227",
+      "band_paths": {
+        "B02": "Datasets/Sentinel-2/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227.SAFE/GRANULE/L1C_T36UXB_A007240_20180726T084437/IMG_DATA/T36UXB_20180726T084009_B02.jp2",
+        "B03": "Datasets/Sentinel-2/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227.SAFE/GRANULE/L1C_T36UXB_A007240_20180726T084437/IMG_DATA/T36UXB_20180726T084009_B03.jp2",
+        "B04": "Datasets/Sentinel-2/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227.SAFE/GRANULE/L1C_T36UXB_A007240_20180726T084437/IMG_DATA/T36UXB_20180726T084009_B04.jp2",
+        "B08": "Datasets/Sentinel-2/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227.SAFE/GRANULE/L1C_T36UXB_A007240_20180726T084437/IMG_DATA/T36UXB_20180726T084009_B08.jp2",
+        "B8A": "Datasets/Sentinel-2/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227.SAFE/GRANULE/L1C_T36UXB_A007240_20180726T084437/IMG_DATA/T36UXB_20180726T084009_B8A.jp2",
+        "B11": "Datasets/Sentinel-2/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227.SAFE/GRANULE/L1C_T36UXB_A007240_20180726T084437/IMG_DATA/T36UXB_20180726T084009_B11.jp2",
+        "B12": "Datasets/Sentinel-2/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227.SAFE/GRANULE/L1C_T36UXB_A007240_20180726T084437/IMG_DATA/T36UXB_20180726T084009_B12.jp2"
+      },
+      "missing_bands": [],
+      "ambiguous_bands": [],
+      "cloud_qa_path": "Datasets/Sentinel-2/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227.SAFE/GRANULE/L1C_T36UXB_A007240_20180726T084437/QI_DATA/MSK_CLOUDS_B00.gml",
+      "cloud_qa_missing": false,
+      "cloud_qa_well_formed": true,
+      "cloud_cover_percent": 33.9981,
+      "cloud_cover_source": "tile_metadata",
+      "product_cloud_cover_percent": 33.9981,
+      "tile_cloud_cover_percent": 33.9981,
+      "quantification_value": 10000.0,
+      "radiometric_offsets": {},
+      "nonzero_offset": false,
+      "crs": "EPSG:32636",
+      "grid_10m": {
+        "ulx": 600000.0,
+        "uly": 5700000.0,
+        "xdim": 10.0,
+        "ydim": -10.0,
+        "width": 10980,
+        "height": 10980,
+        "transform": [
+          10.0,
+          0.0,
+          600000.0,
+          0.0,
+          -10.0,
+          5700000.0
+        ],
+        "bounds": [
+          600000.0,
+          5590200.0,
+          709800.0,
+          5700000.0
+        ]
+      },
+      "metadata_sha256": {
+        "product_metadata": "607262ddf8721a33170083ad0ec6319999f2e5ba3b27a8cd302ece234634255f",
+        "tile_metadata": "a3384fa252e1e016dae972f77e2f66aff5ad2ed8b1e6c4c63cb0477eedb40e43",
+        "cloud_qa": "7cf4317ef0c13673440b62baca24c4e9acd84bd356af410ec01e7d6133ad161b"
+      },
+      "metadata_usable": true,
+      "issues": []
+    },
+    {
+      "scene_id": "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233",
+      "product_name": "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233",
+      "satellite": "S2A",
+      "processing_level": "L1C",
+      "tile": "36UXB",
+      "acquisition_date": "2018-07-31",
+      "acquisition_datetime": "2018-07-31T08:36:01Z",
+      "baseline_code": "N0206",
+      "processing_baseline": "02.06",
+      "path": "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233.SAFE",
+      "product_path": "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233",
+      "band_paths": {
+        "B02": "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233.SAFE/GRANULE/L1C_T36UXB_A016220_20180731T084204/IMG_DATA/T36UXB_20180731T083601_B02.jp2",
+        "B03": "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233.SAFE/GRANULE/L1C_T36UXB_A016220_20180731T084204/IMG_DATA/T36UXB_20180731T083601_B03.jp2",
+        "B04": "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233.SAFE/GRANULE/L1C_T36UXB_A016220_20180731T084204/IMG_DATA/T36UXB_20180731T083601_B04.jp2",
+        "B08": "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233.SAFE/GRANULE/L1C_T36UXB_A016220_20180731T084204/IMG_DATA/T36UXB_20180731T083601_B08.jp2",
+        "B8A": "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233.SAFE/GRANULE/L1C_T36UXB_A016220_20180731T084204/IMG_DATA/T36UXB_20180731T083601_B8A.jp2",
+        "B11": "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233.SAFE/GRANULE/L1C_T36UXB_A016220_20180731T084204/IMG_DATA/T36UXB_20180731T083601_B11.jp2",
+        "B12": "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233.SAFE/GRANULE/L1C_T36UXB_A016220_20180731T084204/IMG_DATA/T36UXB_20180731T083601_B12.jp2"
+      },
+      "missing_bands": [],
+      "ambiguous_bands": [],
+      "cloud_qa_path": "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233.SAFE/GRANULE/L1C_T36UXB_A016220_20180731T084204/QI_DATA/MSK_CLOUDS_B00.gml",
+      "cloud_qa_missing": false,
+      "cloud_qa_well_formed": true,
+      "cloud_cover_percent": 4.0131,
+      "cloud_cover_source": "tile_metadata",
+      "product_cloud_cover_percent": 4.0131,
+      "tile_cloud_cover_percent": 4.0131,
+      "quantification_value": 10000.0,
+      "radiometric_offsets": {},
+      "nonzero_offset": false,
+      "crs": "EPSG:32636",
+      "grid_10m": {
+        "ulx": 600000.0,
+        "uly": 5700000.0,
+        "xdim": 10.0,
+        "ydim": -10.0,
+        "width": 10980,
+        "height": 10980,
+        "transform": [
+          10.0,
+          0.0,
+          600000.0,
+          0.0,
+          -10.0,
+          5700000.0
+        ],
+        "bounds": [
+          600000.0,
+          5590200.0,
+          709800.0,
+          5700000.0
+        ]
+      },
+      "metadata_sha256": {
+        "product_metadata": "e506218702df385cbc3f28b83069274057febc3056a04c7aa18ced23eea24331",
+        "tile_metadata": "221d2e7b275299b6117e621dbbbd2a869a733ec9d65d59fd71c8fdd513cb18f7",
+        "cloud_qa": "27687d3d0b5336de728309af8ff94787970a73ce93101990990cb4654cc58721"
+      },
+      "metadata_usable": true,
+      "issues": []
+    }
+  ],
+  "events_coverage": [
+    {
+      "event_id": "event-71d8da17cbbfd9babdee",
+      "pre_scene_2018_07_26_covered": true,
+      "post_scene_2018_07_31_covered": true,
+      "minimal_pair_fully_covered": true,
+      "covering_scenes": [
+        {
+          "scene_id": "S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227",
+          "date": "2018-07-26",
+          "tile": "36UXB",
+          "orbit": "R064",
+          "covers_crop": true,
+          "covers_qa_context": true
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233",
+          "date": "2018-07-31",
+          "tile": "36UXB",
+          "orbit": "R064",
+          "covers_crop": true,
+          "covers_qa_context": true
+        }
+      ]
+    },
+    {
+      "event_id": "event-ce1c1df8d02be33bb3c8",
+      "pre_scene_2018_07_26_covered": true,
+      "post_scene_2018_07_31_covered": true,
+      "minimal_pair_fully_covered": true,
+      "covering_scenes": [
+        {
+          "scene_id": "S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227",
+          "date": "2018-07-26",
+          "tile": "36UXB",
+          "orbit": "R064",
+          "covers_crop": true,
+          "covers_qa_context": true
+        },
+        {
+          "scene_id": "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233",
+          "date": "2018-07-31",
+          "tile": "36UXB",
+          "orbit": "R064",
+          "covers_crop": true,
+          "covers_qa_context": true
+        }
+      ]
+    }
+  ],
+  "conclusion": "Minimal validation pair scenes for 2018-07-26 and 2018-07-31 in tile 36UXB were successfully ingested from AWS open data and registered in Datasets/Sentinel-2/ (total 52 local scenes). Both scenes pass frozen reader verification with metadata_usable True and zero radiometric offset. Both fresh validation events now have full core crop and QA context containment on both pair dates."
+}

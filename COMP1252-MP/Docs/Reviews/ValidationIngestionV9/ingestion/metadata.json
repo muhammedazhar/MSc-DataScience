@@ -1,0 +1,59 @@
+{
+  "execution_status": "completed",
+  "protocol_sha256": "aee7fbbd6118ac6fbfbfa13077587b6c7263518ea70526e6b8900b66760eee8a",
+  "summary": {
+    "total_registered_scenes": 52,
+    "prior_registered_scenes": 50,
+    "new_registered_scenes": 2,
+    "ingested_scene_ids": [
+      "S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227",
+      "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233"
+    ],
+    "tile_id": "36UXB",
+    "relative_orbit": "R064",
+    "processing_baseline": "02.06 (N0206)",
+    "radiometric_offset": 0,
+    "all_new_scenes_metadata_usable": true,
+    "total_bytes_transferred": 979071178,
+    "download_elapsed_seconds": 45.89,
+    "minimal_pair_dates": [
+      "2018-07-26",
+      "2018-07-31"
+    ],
+    "events_evaluated": 2,
+    "both_events_minimal_pair_covered": true,
+    "coverage_verdict": "Both fresh events (event-71d8da17cbbfd9babdee and event-ce1c1df8d02be33bb3c8) now have full core crop and QA context coverage for 2018-07-26 and 2018-07-31.",
+    "blocker_status": "Original missing_post_scene_coverage and crop_crosses_tile_edge blocks are resolved for the 2018-07-26/2018-07-31 pair. QA and manual review screening remain required before any validation use."
+  },
+  "implementation_sha256": "0f368c5d9b63048ccc689838cd21cedc44a6aa55b15ebfc4e5ae4af3dd42cb01",
+  "artifact_sha256": {
+    "ingestion.json": "e119f1cce2567117c1d6a9a694200d489ec68492255de87f354d23a7d31553ee",
+    "report.md": "5e39cd18e0028555400a1dd45b8a774318bba6bca5e9e1b563908740adb4f53e"
+  },
+  "satellite_pixel_reads": 0,
+  "qa_or_cache_reads": 0,
+  "model_executions": 0,
+  "new_imagery_reviewed": 0,
+  "scenes_ingested": 2,
+  "total_registered_scenes": 52,
+  "labels_approved": 0,
+  "verification_scope": "Complete SAFE assembly and registration in Datasets/Sentinel-2; verified via frozen inventory_scenes() and event boundary containment.",
+  "resources": {
+    "logical_cpu_count": 11,
+    "machine_ram_gib": 18.0,
+    "worker_peak_rss_mib_sampled": 63.1,
+    "worker_high_water_rss_mib": 79.66,
+    "minimum_available_gib_sampled": 3.47,
+    "elapsed_seconds": 46.48,
+    "worker_limit_mib": 512,
+    "minimum_available_gib_limit": 1.5,
+    "runtime_limit_seconds": 300,
+    "workers": 1,
+    "native_thread_limit": 1,
+    "nice_increment": 10,
+    "gdal_cache_mib": 0,
+    "warp_memory_mib": 0,
+    "gpu_used": false,
+    "monitor_interval_seconds": 0.25
+  }
+}

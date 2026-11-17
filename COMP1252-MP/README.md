@@ -51,6 +51,11 @@ all 316 tests pass.
 The [source acquisition and reader adaptation guide](./Docs/Guides/ValidationAcquisition.md)
 establishes direct reader compatibility and SAFE assembly for the minimal pair (2018-07-26 and 2018-07-31)
 via AWS open data Baseline 02.06 (870.07 MiB combined for 7 required bands); all 319 tests pass.
+The [scene ingestion and registration guide](./Docs/Guides/ValidationIngestion.md)
+documents the successful acquisition and SAFE registration of minimal validation pair
+scenes (2018-07-26 and 2018-07-31) in tile 36UXB from AWS open data, bringing total
+registered scenes to 52 and providing full core and QA context coverage for both fresh events;
+all 324 tests pass.
 
 ## Structure of the repository
 

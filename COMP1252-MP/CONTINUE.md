@@ -66,10 +66,16 @@ via public AWS open data under Baseline 02.06 with zero radiometric offset, matc
 the local 50-scene inventory and passing frozen reader SAFE layout verification.
 Combined required-7-bands download size is 870.07 MiB (0.85 GiB), well within the
 32 GiB Mac capacity reserve. All 319 tests pass; the guarded worker used 17.89 MiB
-in 0.26 s. No uncurated training, full downloads or labels were executed; the pairs
-remain blocked. Do not rerun completed processing, silently retune protocols or
-force labels from numeric proxies or rejected cases.
-proxies or rejected cases.
+in 0.26 s.
+Scene ingestion and SAFE registration are now complete: minimal pair (2018-07-26 and
+2018-07-31) in tile 36UXB on orbit R064 was ingested from AWS Open Data into
+Datasets/Sentinel-2/, bringing local registered scenes from 50 to 52. Both scenes pass
+frozen reader verification with metadata_usable True and zero radiometric offset;
+both fresh validation events have full core crop and QA context containment on both pair dates.
+All 324 tests pass; the guarded worker used 79.66 MiB high-water RSS in 46.48 s (45.89 s
+network transfer for 933.72 MiB). No uncurated training, threshold tuning or labels were
+executed; QA screening remains required before any validation use. Do not rerun completed
+processing, silently retune protocols or force labels from numeric proxies or rejected cases.
 The handoff identifies proposed next work and what has already finished.
 
 Use one low-priority CPU worker, native/Torch threads one, no GPU, monitored
