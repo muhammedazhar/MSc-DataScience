@@ -13,8 +13,14 @@ in tile `36UXB` on relative orbit `R064`. Evaluates AWS open data Sentinel-2 L1C
 public access) and Copernicus L1C (baseline 05.00, offset normalization). Develops SAFE assembly adapter
 and tests compatibility with the project's frozen L1C reader (`annotation_scene_inventory.py`).
 
-Remaining: implement/test SAFE assembly adapter and acquisition planner with offline mock tests,
-freeze source, run one guarded worker, archive report, verify final integrity and update
+Protocol checkpoint `5ff0adb` is pushed. The new acquisition adapter implementation
+`Solutions/adapt_validation_scenes.py` and three unit/regression tests in
+`Tests/test_validation_acquisition.py` are complete; source is frozen in the protocol.
+All 319 tests pass: test suite 2.54 s, sampled peak 360.80 MiB (high-water 362.91 MiB),
+minimum 3.48 GiB available. Proof: V8 `checks/pre_execution_tests/`.
+No real acquisition worker has run yet at this checkpoint.
+
+Remaining: run one guarded worker, archive report, verify final integrity and update
 this handoff. Preserve existing blocks. No uncurated training, full downloads or labels authorized
 in this planning step. No acquisition worker has run at this checkpoint.
 

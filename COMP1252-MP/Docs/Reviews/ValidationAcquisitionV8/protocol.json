@@ -94,5 +94,8 @@
     "worker_rss_mib": 512,
     "available_memory_reserve_gib": 1.5,
     "max_seconds_per_worker": 300
+  },
+  "implementation_sha256": {
+    "adapt_validation_scenes.py": "c1d7d8354efd6ae11798a49a3dc717707f1f51f46d71db250ba42b07938d72b8"
   }
 }
