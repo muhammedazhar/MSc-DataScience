@@ -30,6 +30,10 @@ The [broader validation support audit](./Docs/Guides/ValidationSupportPool.md)
 accounts for all 540 screened validation pairs and explains why the current
 rules yield no fresh review shortlist. Its independent check and all exclusion
 records are saved without opening new imagery or measuring model accuracy.
+The [local context quality audit](./Docs/Guides/ValidationContext.md) checks the
+one fixed fresh candidate's actual model inputs. Its target contexts pass, but
+the automatic forest-control proxy finds no complete qualifying square; visual
+control/temporal evidence and approved validation labels are still needed.
 
 ## Structure of the repository
 

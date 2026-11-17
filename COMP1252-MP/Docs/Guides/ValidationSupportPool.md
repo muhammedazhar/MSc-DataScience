@@ -71,13 +71,13 @@ selection: omitting only the whole-crop-zero-QA gate leaves one pair/event/group
 omitting only the previous-group exclusion leaves three pairs from one event
 in one group. These are planning diagnostics, not approved candidates or labels.
 
-The next useful bounded task is to assess a separately predeclared quality rule
-for reviewed ROIs and the model context they depend on. For the current tiny
-two-3x3-convolution CNN, output depends on a two-pixel input halo. That context
-would still need clear QA at both dates, as would reviewed forest controls.
-This architecture-specific observation is not permission to change this audit,
-ignore flagged context, or transfer the rule to larger models. Visual temporal
-review and committed labels would still precede any inference.
+The subsequent [one-case context audit](ValidationContext.md) is complete:
+target contexts pass, while the automatic control proxy returns no proposal.
+Its independent evidence and manual-review next step are now documented there.
+That separate audit requires clear QA at both dates over each ROI and the exact
+tiny CNN's two-pixel input margin. This architecture-specific result does not
+change the broader audit's original rules or transfer to larger models. Visual
+temporal review and committed labels still precede any inference.
 
 ## Evidence and verification
 

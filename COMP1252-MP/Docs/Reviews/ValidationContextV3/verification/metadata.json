@@ -1,0 +1,214 @@
+{
+  "verification_status": "passed",
+  "event_id": "event-bf3d28f31dcf19938962",
+  "pair_id": "pair-430ec0ecae32ce98efcb",
+  "scope": "One fixed fresh validation candidate: target/interior and proposed forest-control QA plus exact tiny-CNN input context. Numeric audit only; no labels or accuracy.",
+  "protocol_sha256": "fbf16a31df6fca008bdb73309bdea8652cb93feab7b1c9a2ce17ce09b1e4cb74",
+  "audit_metadata_sha256": "4b3c56d01dcede16c132a840f836287c4afaef5a636794ac6c01b109f1ef8bb6",
+  "audit_artifact_sha256": {
+    "context_arrays.npz": "53b410c522fc2c308c1f17383f3baa279cccce465defed103354aeb55133a0c6",
+    "report.md": "de2ffce1a0a7b30648df9d6d6dea966052e4490c7ee3fe46e501e08535e6750f"
+  },
+  "contexts": {
+    "target": {
+      "roi_pixels": 36,
+      "context_pixels": 136,
+      "full_context_inside_grid": true,
+      "dates": {
+        "pre": {
+          "roi_unusable_pixels": 0,
+          "context_unusable_pixels": 0,
+          "context_components": {
+            "cloud": 0,
+            "cloud_buffer": 0,
+            "shadow_risk": 0,
+            "haze_risk": 0,
+            "invalid": 0
+          }
+        },
+        "post": {
+          "roi_unusable_pixels": 0,
+          "context_unusable_pixels": 0,
+          "context_components": {
+            "cloud": 0,
+            "cloud_buffer": 0,
+            "shadow_risk": 0,
+            "haze_risk": 0,
+            "invalid": 0
+          }
+        }
+      },
+      "invalid_or_nonfinite_context_pixels": 0,
+      "context_clear": true
+    },
+    "positive_interior": {
+      "roi_pixels": 4,
+      "context_pixels": 36,
+      "full_context_inside_grid": true,
+      "dates": {
+        "pre": {
+          "roi_unusable_pixels": 0,
+          "context_unusable_pixels": 0,
+          "context_components": {
+            "cloud": 0,
+            "cloud_buffer": 0,
+            "shadow_risk": 0,
+            "haze_risk": 0,
+            "invalid": 0
+          }
+        },
+        "post": {
+          "roi_unusable_pixels": 0,
+          "context_unusable_pixels": 0,
+          "context_components": {
+            "cloud": 0,
+            "cloud_buffer": 0,
+            "shadow_risk": 0,
+            "haze_risk": 0,
+            "invalid": 0
+          }
+        }
+      },
+      "invalid_or_nonfinite_context_pixels": 0,
+      "context_clear": true
+    },
+    "control": {
+      "roi_pixels": 0,
+      "context_pixels": 0,
+      "full_context_inside_grid": false,
+      "dates": {
+        "pre": {
+          "roi_unusable_pixels": 0,
+          "context_unusable_pixels": 0,
+          "context_components": {
+            "cloud": 0,
+            "cloud_buffer": 0,
+            "shadow_risk": 0,
+            "haze_risk": 0,
+            "invalid": 0
+          }
+        },
+        "post": {
+          "roi_unusable_pixels": 0,
+          "context_unusable_pixels": 0,
+          "context_components": {
+            "cloud": 0,
+            "cloud_buffer": 0,
+            "shadow_risk": 0,
+            "haze_risk": 0,
+            "invalid": 0
+          }
+        }
+      },
+      "invalid_or_nonfinite_context_pixels": 0,
+      "context_clear": false
+    }
+  },
+  "proposal_metadata": {
+    "proposal_found": false,
+    "pixels": 0,
+    "reason": "No declared square has green stable endpoint ROI and fully clear, finite, unexcluded input context",
+    "control_label_review": "unreviewed",
+    "training_approved": false,
+    "evaluation_approved": false
+  },
+  "qa_eligible_for_visual_review": false,
+  "numeric_context_passed": false,
+  "training_approved": false,
+  "evaluation_approved": false,
+  "labels_approved": 0,
+  "architecture": {
+    "spatial_receptive_field_pixels": 5,
+    "context_radius_pixels": 2,
+    "parameter_count": 2545,
+    "global_context_operations": false,
+    "factory_sha256": "259f367ddc613b0095a93ddcf7b9ae8f0a14553fa4fc5fc28665c76ae6059995"
+  },
+  "run_resources": {
+    "peak_worker_mib": 205.62,
+    "minimum_available_gib": 3.03,
+    "elapsed_seconds": 6.56
+  },
+  "control_search_diagnostics": {
+    "diagnostic_only": true,
+    "counts_are_overlapping_not_cumulative": true,
+    "search_order_and_thresholds_unchanged": true,
+    "new_regions_selected": 0,
+    "per_size": [
+      {
+        "size_pixels": 16,
+        "roi_pixels": 256,
+        "context_radius_pixels": 2,
+        "inbounds_squares": 2025,
+        "qa_finite_clear_context_squares": 1809,
+        "qa_finite_exclusion_clear_context_squares": 732,
+        "pre_ndvi_above_point6_roi_squares": 0,
+        "post_ndvi_above_point6_roi_squares": 0,
+        "both_ndvi_above_point6_roi_squares": 0,
+        "absolute_ndvi_change_below_point1_roi_squares": 0,
+        "safe_context_and_both_ndvi_roi_squares": 0,
+        "safe_context_and_stable_change_roi_squares": 0,
+        "all_gates_pass_squares": 0
+      },
+      {
+        "size_pixels": 12,
+        "roi_pixels": 144,
+        "context_radius_pixels": 2,
+        "inbounds_squares": 2401,
+        "qa_finite_clear_context_squares": 2185,
+        "qa_finite_exclusion_clear_context_squares": 1360,
+        "pre_ndvi_above_point6_roi_squares": 0,
+        "post_ndvi_above_point6_roi_squares": 0,
+        "both_ndvi_above_point6_roi_squares": 0,
+        "absolute_ndvi_change_below_point1_roi_squares": 0,
+        "safe_context_and_both_ndvi_roi_squares": 0,
+        "safe_context_and_stable_change_roi_squares": 0,
+        "all_gates_pass_squares": 0
+      },
+      {
+        "size_pixels": 8,
+        "roi_pixels": 64,
+        "context_radius_pixels": 2,
+        "inbounds_squares": 2809,
+        "qa_finite_clear_context_squares": 2595,
+        "qa_finite_exclusion_clear_context_squares": 1990,
+        "pre_ndvi_above_point6_roi_squares": 0,
+        "post_ndvi_above_point6_roi_squares": 0,
+        "both_ndvi_above_point6_roi_squares": 0,
+        "absolute_ndvi_change_below_point1_roi_squares": 0,
+        "safe_context_and_both_ndvi_roi_squares": 0,
+        "safe_context_and_stable_change_roi_squares": 0,
+        "all_gates_pass_squares": 0
+      }
+    ]
+  },
+  "source_jp2_pixel_reads": 0,
+  "model_executions": 0,
+  "cloud_model_executions": 0,
+  "new_imagery_reviewed": 0,
+  "torch_imported": false,
+  "verification_implementation_sha256": "f36b39950c336bd6cae6601f4281c9137f8de8c0424b2a67142f4cccd2450c39",
+  "limitations": [
+    "Numeric QA and NDVI proposals do not approve forest stability or temporal loss labels.",
+    "Source feature values were not independently re-extracted from satellite bands.",
+    "The two-pixel context contract belongs only to the exact frozen tiny CNN."
+  ],
+  "resources": {
+    "logical_cpu_count": 11,
+    "machine_ram_gib": 18.0,
+    "worker_peak_rss_mib_sampled": 120.6,
+    "worker_high_water_rss_mib": 130.52,
+    "minimum_available_gib_sampled": 2.75,
+    "elapsed_seconds": 2.53,
+    "worker_limit_mib": 512,
+    "minimum_available_gib_limit": 1.5,
+    "runtime_limit_seconds": 300,
+    "workers": 1,
+    "native_thread_limit": 1,
+    "nice_increment": 10,
+    "gdal_cache_mib": 16,
+    "warp_memory_mib": 0,
+    "gpu_used": false,
+    "monitor_interval_seconds": 0.25
+  }
+}

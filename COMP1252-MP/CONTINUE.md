@@ -6,7 +6,7 @@ agent. Work in this project on **`codex/curated-deforestation-pilot`**. Read
 editing. Preserve other work and commit each completed, verified logical change
 on this same branch with an updated handoff.
 
-Current work/state: **`Docs/Handoffs/2026-11-17-validation-context.md`**.
+Current completed audit/state: **`Docs/Handoffs/2026-11-17-validation-context.md`**.
 Previous completed audit: `Docs/Handoffs/2026-11-16-validation-support-pool.md`.
 Previous completed review: `Docs/Handoffs/2026-11-16-validation-pilot.md`.
 Previous completed milestone: `Docs/Handoffs/2026-11-16-pixel-pilot.md`.
@@ -35,9 +35,14 @@ geometry audit explains insufficient pixel interiors in most eligible pairs.
 The broader support audit is also complete and independently verified: all
 540 screened validation pairs are accounted for, but no fresh group meets
 every current gate. The empty shortlist and all reasons are saved; 263 tests
-pass. Next is an explicitly predeclared review of quality screening on the
-reviewed ROIs and their model context. Do not silently relax the completed
-protocol, repeat training, or force labels from rejected cases.
+pass. The separate context audit is now also complete and independently
+verified: target/interior plus two-pixel margins pass both-date QA and all 27
+feature checks, but the fixed NDVI control search yields no proposal. Overall
+numeric eligibility remains false; no validation labels or accuracy exist.
+278 tests pass. Next is separately predeclared manual image/timeline assessment
+of the target and potential forest controls, keeping the verified context QA
+requirements. Do not silently retune completed protocols, repeat training or
+force labels from numeric proxies or rejected cases.
 The handoff identifies proposed next work and what has already finished.
 
 Use one low-priority CPU worker, native/Torch threads one, no GPU, monitored

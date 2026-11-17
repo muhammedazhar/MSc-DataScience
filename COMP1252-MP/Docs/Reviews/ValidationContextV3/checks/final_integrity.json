@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "checked_on": "2026-11-17",
+  "protocol_sha256": "fbf16a31df6fca008bdb73309bdea8652cb93feab7b1c9a2ce17ce09b1e4cb74",
+  "audit_metadata_sha256": "4b3c56d01dcede16c132a840f836287c4afaef5a636794ac6c01b109f1ef8bb6",
+  "verification_metadata_sha256": "57c3daf783af8db3e3253e894189651f67ed9996bc1ecaad076b7376f19bdd43",
+  "verifier_source_sha256": "f36b39950c336bd6cae6601f4281c9137f8de8c0424b2a67142f4cccd2450c39",
+  "source_inputs_checked": 19,
+  "immutable_sources_checked": 27,
+  "frozen_worker_implementations_checked": 12,
+  "feature_source_stats_checked": 116,
+  "archive_matches_local_outputs": true,
+  "tests_run": 278,
+  "active_context_processing_workers": 0,
+  "numeric_context_passed": false,
+  "labels_approved": 0,
+  "model_executions": 0,
+  "scope": "Final metadata, hash and source-stat integrity checks only; no satellite pixel reads, model execution or test rerun."
+}

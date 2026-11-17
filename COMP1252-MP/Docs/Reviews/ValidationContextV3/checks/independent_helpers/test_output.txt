@@ -1,0 +1,10 @@
+test_actual_factory_proves_radius_two_and_rejects_global_or_changed_context (test_validation_context_verifier.ContextVerifierTests) ... ok
+test_control_search_rechecks_full_context_and_keeps_first_fixed_geometry (test_validation_context_verifier.ContextVerifierTests) ... ok
+test_full_target_halo_failure_cannot_be_hidden_by_a_smaller_clean_interior (test_validation_context_verifier.ContextVerifierTests) ... ok
+test_qa_safe_contexts_do_not_override_failed_ndvi_control_proposals (test_validation_context_verifier.ContextVerifierTests) ... ok
+test_square_halo_includes_diagonal_dependencies_and_exposes_clipped_context (test_validation_context_verifier.ContextVerifierTests) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.059s
+
+OK
