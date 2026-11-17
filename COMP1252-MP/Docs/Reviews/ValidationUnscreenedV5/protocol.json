@@ -1,0 +1,150 @@
+{
+  "schema_version": 5,
+  "scope": "Complete metadata/geometry-only inventory of the606 unscreened V2 validation pairs and630 anchors, including all blocked records. No shortlist, satellite pixels, QA/caches, new imagery, models or labels.",
+  "source_files": {
+    "audit_metadata": {
+      "path": "Datasets/AnnotationAudit/v1/metadata.json",
+      "sha256": "0a3f4c12caf3dacef860603266396f29e885c3d29d2bbea4cda6d16707f494c8"
+    },
+    "splits": {
+      "path": "Datasets/AnnotationAudit/v1/splits.json",
+      "sha256": "6c29ca5ab841dfe452ccccb1df826f1b2ae1613aea0cb9f463ab4302c5dd806d"
+    },
+    "catalogue": {
+      "path": "Datasets/AnnotationAudit/v1/annotations_clean.geojson",
+      "sha256": "06a1090c8451d670929163ff7be067d63454cb1893a3e8cbee97519fbb69cbce"
+    },
+    "annotations": {
+      "path": "Datasets/AnnotationAudit/v1/annotation_manifest.jsonl",
+      "sha256": "20511aba811a4d75fd09f317d898b26259e587734f4240807cebf414bf327554"
+    },
+    "pairs": {
+      "path": "Datasets/AnnotationAudit/v1/candidate_pairs.jsonl",
+      "sha256": "74d8d229470b4ef4aa968199768772fffd010aaab28f6d44775afb27c1601cd6"
+    },
+    "scenes": {
+      "path": "Datasets/AnnotationAudit/v1/scene_inventory.jsonl",
+      "sha256": "78a3006c508ac008af5f9d879fa59907475ca28641e63866c2c95bf3a2ede740"
+    },
+    "quality_summary": {
+      "path": "Datasets/PixelQA/v1/summary/metadata.json",
+      "sha256": "6f79faf30d815d0a504772a08b322da7d2e242764faefa0d6d47cebaf0208e4e"
+    },
+    "quality": {
+      "path": "Datasets/PixelQA/v1/summary/quality_manifest.jsonl",
+      "sha256": "6ea1147bd2ec1f904c999c252457bd97022214f85f4e23b7a29fcf5a1a4dab99"
+    },
+    "quality_index": {
+      "path": "Datasets/PixelQA/v1/review/quality_result_index.jsonl",
+      "sha256": "6b29f6c8dc2c512506f36d79089310c1b94643514876e55e94b59038b093eb2c"
+    },
+    "training_metadata": {
+      "path": "Datasets/CuratedPilot/v1/dataset/metadata.json",
+      "sha256": "5d929465f148c1823f6332222f56430dac9a5b0d1985d8545c2eb17c99ec3e71"
+    },
+    "training_manifest": {
+      "path": "Datasets/CuratedPilot/v1/dataset/training_manifest.jsonl",
+      "sha256": "138713e6a0b57e5491015fe42438d1a5d1702c68c753289bf52abb5caf7949aa"
+    },
+    "prior_reviews": {
+      "path": "Docs/Reviews/ValidationPilotV1/reviews.json",
+      "sha256": "60b21c7f3ff3aa83fd06b5d42fc5cf628c51ae5e8c2d023813d5203935639d89"
+    },
+    "prior_verification": {
+      "path": "Docs/Reviews/ValidationPilotV1/review_verification/metadata.json",
+      "sha256": "5ab207a3914bae5f0669eec261acb52224e573eb8a04530a2b428d91fe4c52f5"
+    },
+    "prior_protocol": {
+      "path": "Docs/Reviews/ValidationPilotV1/protocol.json",
+      "sha256": "732d220785ff1dd6339ee8ccb7c136e835c3856a857df607642811053a486c40"
+    },
+    "v2_protocol": {
+      "path": "Docs/Reviews/ValidationSupportV2/protocol.json",
+      "sha256": "afe7ee41222489693c1944b35edf265885a48fd204ff530066caffafb95241d5"
+    },
+    "v2_audit": {
+      "path": "Docs/Reviews/ValidationSupportV2/audit/audit.json",
+      "sha256": "e36dbf5aaf20fcbaf3da22458d27763b5e3f29c40c9db535f42fa67bbf794c99"
+    },
+    "v2_metadata": {
+      "path": "Docs/Reviews/ValidationSupportV2/audit/metadata.json",
+      "sha256": "345f082d50dc5d61450014ec829f0b9cc3b3582c1cd5cdb7753fc4b53b1b73eb"
+    },
+    "v2_verification": {
+      "path": "Docs/Reviews/ValidationSupportV2/verification/metadata.json",
+      "sha256": "1787ec665e2f8a16beb3270321dc55bd228dd512de4fdc0ca16535084aca49ed"
+    },
+    "manual_protocol": {
+      "path": "Docs/Reviews/ValidationManualV4/protocol.json",
+      "sha256": "c0339f4fc3cd0b088512f2f20da8484587d0bb1b4b2858f384c20809b90a82fe"
+    },
+    "manual_reviews": {
+      "path": "Docs/Reviews/ValidationManualV4/reviews.json",
+      "sha256": "58a0f02e5527b7ff6a6d1f0a3ff998629327cab54998f5d5890832eaefd87c81"
+    },
+    "manual_metadata": {
+      "path": "Docs/Reviews/ValidationManualV4/preparation/metadata.json",
+      "sha256": "d6f8843a604ebdc3a2464b29b344447045abe862706c6f35d4bb39ae779cdde8"
+    },
+    "manual_verification": {
+      "path": "Docs/Reviews/ValidationManualV4/review_verification/metadata.json",
+      "sha256": "71cb076d3c574ee851d889064fed137e4188b18160ea8c6645bf76f376eb9d16"
+    }
+  },
+  "immutable_sources_sha256": {
+    "assess_pixel_quality.py": "4e0b77922cd478322912cb4116801502ec13bdcb740fc7696a1010e94fbd535f",
+    "pixelqa_masks.py": "cdbac7d70b94cc2043cbfa94a8201a232320b634c7c23d987b33f3948617897f",
+    "pixelqa_scene_metadata.py": "4d783446400c33f2bfb9d6e8730d3ab8e5178d35559a39cf714735384d542b72",
+    "validate_sample.py": "475f641ed582af37eedc2ee9e94065e280202db08eb381441e1403c3eb001fba",
+    "annotation_scene_inventory.py": "5c35020ccf12f5e5f689c1f7130d64d9cabd5e6e3e04cdede291c9a912688318",
+    "prepare_curated_pilot.py": "1a8d5ec426bd657cd0eb7f1ed2e08c125f8a9f879aad799c395168536e777f82",
+    "curated_pilot_review.py": "222bfc332959d2e597644d881ea295b43a29d08606ce8326750e3dd2176e918f",
+    "curated_pilot_exports.py": "caf67918894fa13ad62c3f9e6b8aad58ac69c414e999df9a988901d2166a9958",
+    "build_curated_pilot.py": "302c6fb3aedd13facaf0f83abcb3c234f4ff1b2257d303ce7b5cdc5cd470cc4c",
+    "verify_curated_pilot.py": "12f27b43a15d26e7bd3fc6c3df9363ed9b5b1eb3e017a2665548d1895830e8df",
+    "pilot_dataset.py": "bb0e58cfb61ac8980d77ed0cc88f99266fa1c35fe1aba5a19780cef4e53af7b7",
+    "pilot_objectives.py": "bccfd912cfdafcd7a04df1fb997b05627a995b5f89496241508e00dc97430d61",
+    "pilot_pixel_objective.py": "6020e42610e7e371000a2667958ddb3a8ce1acbe5a2ff7b3c721bfb27b1a1599",
+    "train_reviewed_pilot.py": "389ecb205b7fa91624964c6eb030352827001b0b38b74b7c12e30c833ec24813",
+    "reviewed_pilot_worker.py": "7e826d6f4cb3d9ed9d2c32e23838c479926261284a274879a2989dc78df43252",
+    "train_pilot_baseline.py": "259f367ddc613b0095a93ddcf7b9ae8f0a14553fa4fc5fc28665c76ae6059995",
+    "run_pilot_checks.py": "9f76cd6c4dd8ceb956102d503e9069c89f63f1ac5a481515391e9393598adceb",
+    "diagnose_pilot_overfit.py": "e190a95b153498df138bb000d9edbf2dcab5c3b14058391e0a8e1a234637f27b",
+    "pilot_overfit_worker.py": "2da2fc63c99f9ca4533e6d22061870301a7d8985d827621dae7ae96cf480bb4c",
+    "verify_pixel_pilot.py": "f6684643e4ea536b69a48a2da00581b9644e408e27715b0645c7fbc84a611c97",
+    "select_validation_cases.py": "0a137b5a343e21a1e6daf10ba21abf10d1efc69eee36f77761ee30b3e0689ca7",
+    "prepare_validation_review.py": "239f42dba0086c5dc1d8cae7ff448df44b6d4b85c76008ed94d220a1e46ace1d",
+    "validation_review.py": "b73853c8ac3229aad82e1b1e11b50395d51ca80d9ed486c30015320919777f62",
+    "audit_validation_geometry.py": "1d0e3f5ffc3d755c1f53a5c1eafa36d5af7336cb51826508efc4e5b2fe7fe2ee",
+    "audit_validation_support_pool.py": "27bebf952e323708b28e9cf9772fdb516dbeea934e2fe7e44802e88e0ba1e508",
+    "verify_validation_support_pool.py": "b4a398da0a44f264520992aa8d0b8708e9281516abc56d22353aac86a4ed8a80",
+    "verify_validation_dataset.py": "785f5cea93311196070f71160a63680bd49d629758a91f5bdec3bdbf4bdf1f22",
+    "validation_context_worker.py": "5bc30e1023679bee956430be92544f709257d0b07202e1e19736378430a707a8",
+    "audit_validation_context.py": "894d676e8ad728505a2d31db9c971e0910fc258f469b806a392747f362bc3c42",
+    "verify_validation_context.py": "f36b39950c336bd6cae6601f4281c9137f8de8c0424b2a67142f4cccd2450c39",
+    "prepare_validation_manual.py": "dc8e008ae86705fb45b6b04cb3b7d3cdc220f17416271e1efc9a57b7020d6919",
+    "verify_validation_manual.py": "7d36cd810a036ee31a8c426d278ddc93601746230bf258c7ae5587a210cf374b"
+  },
+  "rule": {
+    "pairs": 606,
+    "anchor_pairs": 630,
+    "minimum_positive_interior_pixels": 4,
+    "erosion": "one-pixel3x3 on anchor intersection with cumulative-post minus cumulative-pre temporal reference",
+    "retain_all_blocking_reasons": true,
+    "quality_status": "unknown_no_published_qa",
+    "footprint": "Original64x64 grid versus every frozen train/test conservative footprint and all13 actual training grids, including boundary contact.",
+    "followup": "metadata-usable same-year observation strictly after post and <=annotation+45days; opportunity only",
+    "history": "All V1 reviewed groups plus V4 now-exposed group; no recycling across events/pairs",
+    "no_quality_or_class_approval": true,
+    "no_selection": true
+  },
+  "resources": {
+    "workers": 1,
+    "native_threads": 1,
+    "nice_increment": 10,
+    "gpu_used": false,
+    "worker_rss_mib": 512,
+    "available_memory_reserve_gib": 1.5,
+    "max_seconds_per_worker": 300
+  }
+}
