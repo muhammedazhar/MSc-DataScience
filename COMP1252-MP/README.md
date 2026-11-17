@@ -34,6 +34,10 @@ The [local context quality audit](./Docs/Guides/ValidationContext.md) checks the
 one fixed fresh candidate's actual model inputs. Its target contexts pass, but
 the automatic forest-control proxy finds no complete qualifying square; visual
 control/temporal evidence and approved validation labels are still needed.
+The separate [manual timeline review](./Docs/Guides/ValidationManual.md) is now
+complete: all 12 dates and three fixed controls were inspected, but the target
+transition and forest-control classes remain uncertain. The rejected case
+supplies no validation labels or first-visible interval; all 299 tests pass.
 
 ## Structure of the repository
 

@@ -1,0 +1,203 @@
+{
+  "schema_version": 4,
+  "review_completed_date": "2026-11-17",
+  "protocol_sha256": "c0339f4fc3cd0b088512f2f20da8484587d0bb1b4b2858f384c20809b90a82fe",
+  "prepared_metadata_sha256": "d6f8843a604ebdc3a2464b29b344447045abe862706c6f35d4bb39ae779cdde8",
+  "artifact_sha256": {
+    "pair.png": "f8db69bfdd3a1d1f7090437f9546a9dcd7e962239fb563f3a8e7331265db5a52",
+    "observations.npz": "027642df8ef8a971a295e33aaaa0556dfd290a262016649c9883bf9b46bfa309",
+    "timeline-01.png": "9ee30d804e3ba2c6188ca5bc3cb4cc7a3d0917e4882e926df6458798f4b16457",
+    "timeline-03.png": "be600f40be4e807abbcc713e5a6f88f573041441bf3a89286eb3e0c911e946fb",
+    "timeline-02.png": "3ed6201f0e5dd7fcb255f07781e3114ee41998db6762e3ef1558bc070bc6c327",
+    "target-detail.png": "9c66599dc7e06bfd79ce84403cc1f539965540de38b91917d234abc5c7aea051"
+  },
+  "reviewer": "Codex assistant image inspection, with separate assistant visual critique; neither is expert ground truth.",
+  "used_model_predictions": false,
+  "notes": "All five precommitted image views were opened: three complete chronological timeline pages with plain RGB, overlays and QA, the endpoint pair, and the nearest-neighbour target detail. Both assistant assessments retain target and forest-control uncertainty. Obscured means required full-context QA is flagged and no definite visual class is asserted; it does not imply every ROI pixel is literally hidden by cloud. No NDVI threshold or model prediction supplies a class. No approved labels, negative-only samples or temporal interval follow from this rejected case.",
+  "inspected_views": [
+    {
+      "file": "timeline-01.png",
+      "sha256": "9ee30d804e3ba2c6188ca5bc3cb4cc7a3d0917e4882e926df6458798f4b16457"
+    },
+    {
+      "file": "timeline-02.png",
+      "sha256": "3ed6201f0e5dd7fcb255f07781e3114ee41998db6762e3ef1558bc070bc6c327"
+    },
+    {
+      "file": "timeline-03.png",
+      "sha256": "be600f40be4e807abbcc713e5a6f88f573041441bf3a89286eb3e0c911e946fb"
+    },
+    {
+      "file": "pair.png",
+      "sha256": "f8db69bfdd3a1d1f7090437f9546a9dcd7e962239fb563f3a8e7331265db5a52"
+    },
+    {
+      "file": "target-detail.png",
+      "sha256": "9c66599dc7e06bfd79ce84403cc1f539965540de38b91917d234abc5c7aea051"
+    }
+  ],
+  "observations": [
+    {
+      "scene_id": "S2B_MSIL1C_20190313T083739_N0207_R064_T36UYA_20190313T122406",
+      "date": "2019-03-13",
+      "target_state": "uncertain",
+      "controls": {
+        "control-1": "obscured",
+        "control-2": "obscured",
+        "control-3": "obscured"
+      },
+      "notes": "A bright/mixed central feature is already visible around the target. The full target context is QA-clear, but the small, irregular reference does not establish homogeneous prior forest. All three control contexts have frozen QA flags; no definite control class is assigned."
+    },
+    {
+      "scene_id": "S2A_MSIL1C_20190318T083701_N0207_R064_T36UYA_20190318T122410",
+      "date": "2019-03-18",
+      "target_state": "obscured",
+      "controls": {
+        "control-1": "obscured",
+        "control-2": "obscured",
+        "control-3": "obscured"
+      },
+      "notes": "Extensive bright cloud/atmospheric obstruction covers the view and all required contexts are flagged. No target or control class claim."
+    },
+    {
+      "scene_id": "S2A_MSIL1C_20190328T084011_N0207_R064_T36UYA_20190328T123410",
+      "date": "2019-03-28",
+      "target_state": "obscured",
+      "controls": {
+        "control-1": "obscured",
+        "control-2": "obscured",
+        "control-3": "obscured"
+      },
+      "notes": "The view is diffuse/hazy and all required contexts have frozen cloud-buffer/haze risk. No definite target or control class claim."
+    },
+    {
+      "scene_id": "S2B_MSIL1C_20190402T083559_N0207_R064_T36UYA_20190402T111852",
+      "date": "2019-04-02",
+      "target_state": "uncertain",
+      "controls": {
+        "control-1": "uncertain",
+        "control-2": "uncertain",
+        "control-3": "uncertain"
+      },
+      "notes": "Fixed pre endpoint: a tan/grey vertical feature and adjoining dark/mixed pixels already occupy the target neighbourhood. The plain enlarged target does not show unambiguous forest across the full reference. C1 is a plausible forest patch, but dark/smooth 10m RGB leaves its whole-ROI class uncertain; C2 includes a bright upper linear margin and C3 has a boundary/mixed-texture concern. All endpoint contexts are numerically clear, which does not resolve class truth."
+    },
+    {
+      "scene_id": "S2A_MSIL1C_20190407T083601_N0207_R064_T36UYA_20190407T104310",
+      "date": "2019-04-07",
+      "target_state": "obscured",
+      "controls": {
+        "control-1": "obscured",
+        "control-2": "obscured",
+        "control-3": "obscured"
+      },
+      "notes": "Bright cloud covers much of the crop and every required context is flagged. No definite target or control class claim."
+    },
+    {
+      "scene_id": "S2B_MSIL1C_20190412T083609_N0207_R064_T36UYA_20190412T122445",
+      "date": "2019-04-12",
+      "target_state": "obscured",
+      "controls": {
+        "control-1": "obscured",
+        "control-2": "obscured",
+        "control-3": "obscured"
+      },
+      "notes": "The central tan/grey feature remains visible, but10 pixels of the full target context have frozen QA flags. Its clean four-pixel supervised interior cannot bypass that margin requirement. All three control contexts are also flagged; no definite class claims."
+    },
+    {
+      "scene_id": "S2A_MSIL1C_20190417T083601_N0207_R064_T36UYA_20190417T101351",
+      "date": "2019-04-17",
+      "target_state": "obscured",
+      "controls": {
+        "control-1": "obscured",
+        "control-2": "obscured",
+        "control-3": "obscured"
+      },
+      "notes": "Clouds and broad frozen buffer/shadow/haze flags affect all required contexts. No definite target or control class claim."
+    },
+    {
+      "scene_id": "S2B_MSIL1C_20190422T083609_N0207_R064_T36UYA_20190422T122243",
+      "date": "2019-04-22",
+      "target_state": "obscured",
+      "controls": {
+        "control-1": "uncertain",
+        "control-2": "obscured",
+        "control-3": "obscured"
+      },
+      "notes": "Annotation image date: the target context is entirely flagged for quality risk, so this image cannot certify onset or clearing. C1 has a QA-clear context but remains visually class-uncertain; C2/C3 contexts are flagged. The annotation date is not treated as a felling date."
+    },
+    {
+      "scene_id": "S2A_MSIL1C_20190427T083601_N0207_R064_T36UYA_20190427T100851",
+      "date": "2019-04-27",
+      "target_state": "uncertain",
+      "controls": {
+        "control-1": "uncertain",
+        "control-2": "uncertain",
+        "control-3": "uncertain"
+      },
+      "notes": "Fixed post endpoint: the crop is greener, but the target retains a similar pale vertical/mixed feature to the pre image. Plain and overlaid views do not establish a new whole-target clearing transition. C1 is plausible forest but not certified across the entire ROI; C2/C3 retain linear-margin or mixed-boundary ambiguity. All three contexts are numerically clear."
+    },
+    {
+      "scene_id": "S2A_MSIL1C_20190517T083601_N0207_R064_T36UYA_20190517T100755",
+      "date": "2019-05-17",
+      "target_state": "uncertain",
+      "controls": {
+        "control-1": "uncertain",
+        "control-2": "obscured",
+        "control-3": "obscured"
+      },
+      "notes": "The surroundings are greener and the narrow pale/mixed central feature persists, but that does not establish forest at the pre endpoint or a new clearing across this target. C1 has a clear context but whole-ROI forest class remains uncertain. C2/C3 have flagged context pixels and support no definite class claim."
+    },
+    {
+      "scene_id": "S2B_MSIL1C_20190601T083609_N0207_R064_T36UYA_20190601T104404",
+      "date": "2019-06-01",
+      "target_state": "obscured",
+      "controls": {
+        "control-1": "obscured",
+        "control-2": "obscured",
+        "control-3": "obscured"
+      },
+      "notes": "The image is overwhelmingly bright/cloud-covered and every target/control context is flagged. No definite class claims."
+    },
+    {
+      "scene_id": "S2A_MSIL1C_20190606T083601_N0207_R064_T36UYA_20190606T104250",
+      "date": "2019-06-06",
+      "target_state": "uncertain",
+      "controls": {
+        "control-1": "uncertain",
+        "control-2": "uncertain",
+        "control-3": "uncertain"
+      },
+      "notes": "The later green crop again contains a pale vertical/mixed feature. This clear later view cannot resolve whether the exact target was forest before the selected pair; no clearing/onset label is assigned. C1 remains the strongest possible forest patch but is not certified across the whole ROI, and C2/C3 retain boundary or mixed-cover ambiguity despite clear contexts."
+    }
+  ],
+  "candidate_controls": [
+    {
+      "control_id": "control-1",
+      "decision_status": "rejected",
+      "notes": "C1 is the strongest plausible stable-forest region, but the dark/smooth pre-image and limited10m RGB detail do not certify homogeneous forest across all256 pixels at both endpoints. Clear-context dates remain uncertain; flagged dates are abstentions. No definite nonforest diagnosis is made."
+    },
+    {
+      "control_id": "control-2",
+      "decision_status": "rejected",
+      "notes": "C2 includes a bright linear upper margin and adjoining dark cover, leaving homogeneous whole-ROI forest uncertain at the clear endpoints. Other dates contain QA exclusions. No resizing, redraw or replacement is attempted."
+    },
+    {
+      "control_id": "control-3",
+      "decision_status": "rejected",
+      "notes": "C3 lies beside a brighter boundary/mixed-texture area, and the whole256-pixel ROI is not unambiguously forest at both endpoints. Later QA flags and mixed-cover ambiguity are retained. No definite nonforest diagnosis is made."
+    }
+  ],
+  "target_evidence_supported": false,
+  "decision_status": "rejected",
+  "selected_control_id": null,
+  "observed_change_interval": null,
+  "rejection_reasons": [
+    "The fixed pre image does not unambiguously show forest across the complete anchor-specific target.",
+    "A substantially similar tan/grey vertical or mixed feature is already visible before the selected post date; greening alone does not establish new whole-target deforestation.",
+    "None of the three precommitted controls is certified as whole-ROI stable forest at both endpoints and a later date under the manual review rule.",
+    "The clear later views do not resolve the pre-forest ambiguity; obscured/uncertain dates cannot supply an observed first-clearing interval."
+  ],
+  "labels_approved": 0,
+  "training_approved": false,
+  "evaluation_approved": false
+}

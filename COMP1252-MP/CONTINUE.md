@@ -6,7 +6,7 @@ agent. Work in this project on **`codex/curated-deforestation-pilot`**. Read
 editing. Preserve other work and commit each completed, verified logical change
 on this same branch with an updated handoff.
 
-Current approved work in progress: **`Docs/Handoffs/2026-11-17-validation-manual.md`**.
+Current completed review/state: **`Docs/Handoffs/2026-11-17-validation-manual.md`**.
 Previous completed audit: `Docs/Handoffs/2026-11-17-validation-context.md`.
 Previous completed audit: `Docs/Handoffs/2026-11-16-validation-support-pool.md`.
 Previous completed review: `Docs/Handoffs/2026-11-16-validation-pilot.md`.
@@ -40,14 +40,15 @@ pass. The separate context audit is now also complete and independently
 verified: target/interior plus two-pixel margins pass both-date QA and all 27
 feature checks, but the fixed NDVI control search yields no proposal. Overall
 numeric eligibility remains false; no validation labels or accuracy exist.
-278 tests pass. The separately predeclared manual image/timeline assessment
-is now approved and in progress, keeping the verified context QA requirements.
-Its V4 protocol and tested implementations are committed before real image
-processing;299tests pass. The complete12-date packet and fixed3control roster
-are prepared, independently verified and committed before image inspection.
-Visual review remains pending and no V4 verdict or labels exist at this checkpoint.
-Do not silently retune completed protocols, repeat training or
-force labels from numeric proxies or rejected cases.
+The separate manual review is now complete and independently verified: all
+12 dates and three precommitted control areas were inspected, but the target's
+prior forest state and control classes remain uncertain. The case is rejected,
+with no labels, observed change interval or accuracy. All 299 tests pass.
+This validation group is now exposed and must not be called fresh in a future
+roster. Next proposed work is a metadata/geometry-only support inventory of the
+606 validation pairs without published QA, retaining unknown quality and all
+reasons. Do not rerun completed processing, silently retune protocols or force
+labels from numeric proxies or rejected cases.
 The handoff identifies proposed next work and what has already finished.
 
 Use one low-priority CPU worker, native/Torch threads one, no GPU, monitored

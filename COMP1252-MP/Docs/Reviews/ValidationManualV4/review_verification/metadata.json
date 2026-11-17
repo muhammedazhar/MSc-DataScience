@@ -1,0 +1,146 @@
+{
+  "verification_status": "passed",
+  "mode": "manual_reviews",
+  "event_id": "event-bf3d28f31dcf19938962",
+  "pair_id": "pair-430ec0ecae32ce98efcb",
+  "protocol_sha256": "c0339f4fc3cd0b088512f2f20da8484587d0bb1b4b2858f384c20809b90a82fe",
+  "prepared_metadata_sha256": "d6f8843a604ebdc3a2464b29b344447045abe862706c6f35d4bb39ae779cdde8",
+  "prepared_metadata_canonical_sha256": "24f8127f67a172e51f98be6ca086281697ada904d0674a61f39e5c6b0f09b8d3",
+  "artifact_sha256": {
+    "pair.png": "f8db69bfdd3a1d1f7090437f9546a9dcd7e962239fb563f3a8e7331265db5a52",
+    "observations.npz": "027642df8ef8a971a295e33aaaa0556dfd290a262016649c9883bf9b46bfa309",
+    "timeline-01.png": "9ee30d804e3ba2c6188ca5bc3cb4cc7a3d0917e4882e926df6458798f4b16457",
+    "timeline-03.png": "be600f40be4e807abbcc713e5a6f88f573041441bf3a89286eb3e0c911e946fb",
+    "timeline-02.png": "3ed6201f0e5dd7fcb255f07781e3114ee41998db6762e3ef1558bc070bc6c327",
+    "target-detail.png": "9c66599dc7e06bfd79ce84403cc1f539965540de38b91917d234abc5c7aea051"
+  },
+  "controls": [
+    {
+      "control_id": "control-1",
+      "row": 2,
+      "col": 2,
+      "height": 16,
+      "width": 16,
+      "pixels": 256,
+      "context_radius_pixels": 2,
+      "context_pixels": 400,
+      "selection_order": 1,
+      "visual_review": "unreviewed",
+      "evaluation_approved": false,
+      "training_approved": false
+    },
+    {
+      "control_id": "control-2",
+      "row": 2,
+      "col": 22,
+      "height": 16,
+      "width": 16,
+      "pixels": 256,
+      "context_radius_pixels": 2,
+      "context_pixels": 400,
+      "selection_order": 2,
+      "visual_review": "unreviewed",
+      "evaluation_approved": false,
+      "training_approved": false
+    },
+    {
+      "control_id": "control-3",
+      "row": 14,
+      "col": 42,
+      "height": 16,
+      "width": 16,
+      "pixels": 256,
+      "context_radius_pixels": 2,
+      "context_pixels": 400,
+      "selection_order": 3,
+      "visual_review": "unreviewed",
+      "evaluation_approved": false,
+      "training_approved": false
+    }
+  ],
+  "timeline_observations_checked": 12,
+  "render_verification": {
+    "timeline_pages_checked": 3,
+    "views_checked": 5,
+    "plain_rgb_panels_checked": 16,
+    "qa_panels_checked": 14,
+    "overlays_scope": "Image hashes and exact saved target/control/context masks are bound; plain and QA panels independently reconstructed."
+  },
+  "cache_sha256": {
+    "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/6557d0c915e2d1b478edb8bc54418c678d8af6195f0f91c19fb327e19be05a1c.npz": "2f1c58180021ba76ff06a16f60fef741ccc8b60504898898470045cc22822b66",
+    "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/2d69c52f75716498b028279c0730872a48947a235761cbee76d2cfb7eadae3a5.npz": "e5f679bfa820f7e486273b9ad0f290356c44082bbd8901666625a6b6f35400c8",
+    "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/89f23ad3cac85a78109e6e4054a9dc3024482a041f465aa882623367f51f1bb0.npz": "f9d326ef1ede18fd39f1675c33f9161785188f3cc5f64e7b18dca44bd348a4ac",
+    "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/4cf62e0c10c18f59c62b3957dc1007bee3b996185a64ea50e4b8efef56e4bd88.npz": "b337db70c303f434d30d8a7e3edfe350a231ce28e40bfde8a38bf160920bcd81",
+    "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/d827f2654888f892c6162e5b8be08d6a48446de161412fc4ddb9f678d60d1f6c.npz": "c7367cc8fc45106a9ade3fe5911571cb56dabbeb6b2a5f496f5f1d1a49e3bc2b",
+    "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/d972b08ccb5250465669b0d135d4dc795f8c2d84b72a03cabb0d3833ce91d03f.npz": "f793ec3ee7c7dc864c28e0a6fa8a6a05a473973db9a28910a4426840a8f17a14",
+    "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/a72eb54ccca2956f6f93f76df1c47946f96c33ce2e925e1e761569de681aa23e.npz": "46629a19cf6f943cd1a4abb51d9a6125c086c691927ae87b2eda2fbb1ce7021b",
+    "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/cbb9175a8768bb66aa4a02d545764c5af5c235fb6585f660b4ba9cc0980d036b.npz": "c1fbaf8fc8a08af3129c15da43604b9aa3ebc918c61de7ae1813a6d43692b889",
+    "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/f6572a62d84d2d3ae852b9533be5897314a348a08c64a3b96d33c205f1ad7ad2.npz": "fe366e9259002d6d5d2630cddb4d6746e2077593620413bddd89798a588acd72",
+    "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/8a81e98a1e85334e22589b72019c6b2d01677550ee066798e3e7a540840bcd3f.npz": "e0bb5b06470e901e0ac512ec3db1b77db9919ed58273d455d7ad0c7bb0ee3043",
+    "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/95a194c40a4c8e4835fe7b925bb063b1787160ad360d046b06afd414a6fb5048.npz": "a53510421d40e8aa4f514784fea94ec5072a1005324a4e58cf5f2389e4ae82fe",
+    "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/6ac745330990359fcfb98253948ad93d00a86d41e7144be9128bc5d3ae549d2b.npz": "1abdb576b561e26aa900d8bb8c1afd240d4f7dd281313631499d9f295f43c4c4"
+  },
+  "source_file_stats_checked": 696,
+  "review_sha256": "58a0f02e5527b7ff6a6d1f0a3ff998629327cab54998f5d5890832eaefd87c81",
+  "review_canonical_sha256": "9ddc30e63b186429affcaf89aaafb42101d7374274a087ec1dcdd59d9b134da0",
+  "decision": {
+    "decision_status": "rejected",
+    "target_evidence_supported": false,
+    "selected_control_id": null,
+    "candidate_controls": [
+      {
+        "control_id": "control-1",
+        "decision_status": "rejected"
+      },
+      {
+        "control_id": "control-2",
+        "decision_status": "rejected"
+      },
+      {
+        "control_id": "control-3",
+        "decision_status": "rejected"
+      }
+    ],
+    "observed_change_interval": null,
+    "labels_approved": 0,
+    "training_approved": false,
+    "evaluation_approved": false
+  },
+  "source_jp2_pixel_reads": 0,
+  "model_executions": 0,
+  "cloud_model_executions": 0,
+  "labels_approved": 0,
+  "training_approved": false,
+  "evaluation_approved": false,
+  "new_imagery_reviewed": 0,
+  "torch_imported": false,
+  "preparation_resources": {
+    "peak_worker_mib": 399.52,
+    "minimum_available_gib": 5.2,
+    "elapsed_seconds": 16.81
+  },
+  "verification_implementation_sha256": "7d36cd810a036ee31a8c426d278ddc93601746230bf258c7ae5587a210cf374b",
+  "limitations": [
+    "This verifies evidence consistency and review rules, not independent visual truth.",
+    "Later RGB/NDVI values and frozen QA were not independently re-extracted from satellite bands.",
+    "V3 automatic control eligibility remains false; manual evidence never approves labels here."
+  ],
+  "resources": {
+    "logical_cpu_count": 11,
+    "machine_ram_gib": 18.0,
+    "worker_peak_rss_mib_sampled": 149.0,
+    "worker_high_water_rss_mib": 149.16,
+    "minimum_available_gib_sampled": 5.11,
+    "elapsed_seconds": 1.27,
+    "worker_limit_mib": 512,
+    "minimum_available_gib_limit": 1.5,
+    "runtime_limit_seconds": 300,
+    "workers": 1,
+    "native_thread_limit": 1,
+    "nice_increment": 10,
+    "gdal_cache_mib": 16,
+    "warp_memory_mib": 0,
+    "gpu_used": false,
+    "monitor_interval_seconds": 0.25
+  }
+}

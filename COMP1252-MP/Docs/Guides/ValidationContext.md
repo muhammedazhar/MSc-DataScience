@@ -87,6 +87,12 @@ and `checks/` test logs. `CONTINUE.md` links the complete cross-agent handoff.
 
 ## Next task
 
+The subsequent [manual timeline review](ValidationManual.md) is now complete
+and independently verified. It rejects this case: the target's prior forest
+state and whole-ROI forest controls remain ambiguous. No labels or timing
+interval follow. The completed numeric protocol and its no-control result are
+unchanged. The paragraph below records the separate review method proposed here.
+
 Prepare a separately predeclared, prediction-blind image timeline for manual
 assessment of the target and possible forest controls. The current numeric
 protocol is complete and remains negative; do not silently retune its NDVI

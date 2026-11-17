@@ -5,16 +5,20 @@ transition at the fixed target and stable forest in a nearby control. The
 completed [V3 context audit](ValidationContext.md) showed clear target inputs
 but found no control meeting its automatic NDVI rules. V3 remains negative.
 
-Current status: all12dates are prepared and independently verified. The exact
-three-control roster and artifacts are committed before image inspection.
-No visual verdict, labels or validation accuracy exist at this checkpoint.
+**Completed result: rejected.** All 12 dates and all three locked controls were
+inspected. The pre-image does not unambiguously show forest across the target;
+a similar pale/mixed feature is visible at both endpoints. Whole-ROI forest
+control classes also remain uncertain. No labels, first-visible interval or
+validation accuracy were produced. See the complete
+[visual review](../Reviews/ValidationManualV4/visual_review.md) and
+[independent verification](../Reviews/ValidationManualV4/review_verification/report.md).
 
 ## What is fixed before inspection
 
 The sole case is `event-bf3d28f31dcf19938962`, pair
 `pair-430ec0ecae32ce98efcb`, validation group `group-45f0c39e787ca8622918`.
 The original images are 2019-04-02 and 2019-04-27; the annotation image date is
-2019-04-22. The unchanged 64x64 grid has 10m pixels, a 36-pixel target and
+2019-04-22. The unchanged 64 x 64 grid has 10 m pixels, a 36-pixel target and
 four-pixel eroded supervised interior. Both target regions' two-pixel input
 margins are quality-clear and finite in all 27 endpoint model features.
 
@@ -31,7 +35,7 @@ frozen cloud classifier four times. It does not re-extract the endpoint
 Before viewing images, a deterministic search locks at most three square
 controls: sizes 16, 12 and 8, largest first, then ascending row and column.
 Every full two-pixel margin must be inside the grid, clear and finite at both
-endpoints, and outside all catalogue geometries buffered by 20m, the target
+endpoints, and outside all catalogue geometries buffered by 20 m, the target
 context, and earlier control contexts. No NDVI threshold, image class or model
 prediction enters this roster. The roster and artifacts are committed before
 inspection; candidates cannot later be shrunk, redrawn or replaced.
@@ -62,6 +66,13 @@ is rejected and supplies no positive or negative validation labels.
 
 ## How to interpret the result
 
+Five target-context-clear dates remain visually uncertain; seven other dates
+have flagged required context and are retained as abstentions. Clear numerical
+quality does not establish forest/clearing truth. C1 is a plausible forest
+control, while C2/C3 have additional boundary or mixed-cover ambiguity; none
+is certified across its whole ROI. These are uncertainty findings rather than
+claims that forest is absent. The case supplies no negative-only validation labels.
+
 This is assistant image assessment in one selected validation group. It is
 not independent expert annotation or representative sampling. Selecting a
 visually qualifying control from a small quality-filtered roster also conditions
@@ -78,8 +89,19 @@ V4 prepares and reviews evidence only. Exported validation labels, dataset
 verification, a committed label lock and frozen-checkpoint evaluation are
 separate subsequent work. Test groups remain untouched.
 
+All 299 tests passed. Preparation used 399.52 MiB in 16.81 s; packet verification
+used 144.40 MiB in 1.27 s and final review verification 149.16 MiB in 1.27 s. Minimum
+sampled available memory across these jobs was 5.11 GiB. No job remains active.
+The completed preparation and four newly published caches must not be repeated.
+
+The next proposed task is a metadata/geometry-only support inventory of the
+606 validation pairs without published QA, retaining unknown quality and
+excluding all previously inspected groups, including this newly exposed group.
+Such an inventory can identify whether a separate bounded QA roster is worth
+predeclaring; it cannot approve classes, select until success or generate labels.
+
 Evidence: `Docs/Reviews/ValidationManualV4/`. Protocol:
 `Docs/Reviews/ValidationManualV4/protocol.json`. Continuation:
-`Docs/Handoffs/2026-11-17-validation-manual.md`. All processing uses one nice+10
-CPU worker, native threads one, no GPU, the unchanged 512MiB RSS guard,
-1.5GiB available-memory reserve and 300s maximum per worker.
+`Docs/Handoffs/2026-11-17-validation-manual.md`. All processing uses one nice +10
+CPU worker, native threads one, no GPU, the unchanged 512 MiB RSS guard,
+1.5 GiB available-memory reserve and 300 s maximum per worker.
