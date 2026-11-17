@@ -13,13 +13,13 @@ handoffs for frozen provenance, QA, split, model and resource constraints.
 The user authorized the next visual timeline review. The separate V4 protocol
 is `Docs/Reviews/ValidationManualV4/protocol.json`, declared BEFORE new images,
 pixel processing or visual assessment. V3's negative eligibility stays unchanged.
-Preparation and independent verification implementations/tests are complete;
-both source hashes are frozen in the protocol BEFORE processing. All299tests
-pass. No V4 real-image worker, preview inspection, manual verdict, labels or
-forest-model inference has completed at this checkpoint. Frozen existing
-sources remain unchanged. Pushed checkpoints: original protocol `4950a0c`,
-tested preparation `fc6e976`. The following checkpoint contains the independent
-verifier, source freeze, synthetic rendering fix and full-suite proof.
+The complete12-date packet is prepared and independently VERIFIED. All299tests
+pass. Both implementations were frozen before processing. No preview inspection,
+manual verdict, labels or forest-model inference has occurred at this checkpoint.
+Frozen existing sources remain unchanged. Pushed checkpoints: protocol `4950a0c`,
+tested preparation `fc6e976`, verifier/source freeze and299tests `3f70d93`.
+The following checkpoint contains the exact unreviewed control roster and all
+image/array artifacts BEFORE visual inspection, plus independent packet proof.
 
 ## Fixed task and boundaries
 
@@ -63,6 +63,23 @@ ground truth and this one-group convenience case is not a benchmark.
 
 ## Remaining work
 
+Preparation is COMPLETE: `Docs/Reviews/ValidationManualV4/preparation/` contains
+`metadata.json`, safe `observations.npz`, `timeline-01/02/03.png`, `pair.png`
+and `target-detail.png`. EXACT locked control ROIs are16x16 with400-pixel full
+contexts: C1 row2/col2, C2 row2/col22, C3 row14/col42. All remain unreviewed.
+No new proposal or replacement is allowed after viewing these artifacts.
+The worker used16.81s, peak399.52MiB, minimum5.20GiB available. It filled exactly
+four QA caches, made44fused/28include-feature requests and four cloud-model
+calls; no forest model, Torch or endpoint27-channel extraction. All12 caches
+and696timeline source-file statistics are bound in the saved metadata.
+
+Packet-only independent verification PASSED in1.27s/144.40MiB sampled peak,
+minimum5.14GiB available. Exact roster, contexts, source/cache identities,
+all12dates, six artifacts,16plainRGB/14QA panel pixels and false approval states
+were verified. Proof is in `Docs/Reviews/ValidationManualV4/packet_verification/`.
+No jobs remain active. Do NOT rerun preparation: its four formerly missing
+caches are now published and hash-bound by the completed packet.
+
 Preparation: `Solutions/prepare_validation_manual.py`, with eight passing
 `Tests/test_validation_manual_preparation.py` tests. Guard receipt/log:
 `Docs/Reviews/ValidationManualV4/checks/preparation_helpers/`. Worker1.78s,
@@ -77,8 +94,8 @@ square halos, geometry-only roster, per-date metrics and review rules, checks
 all5 renderedviews/all12dates, and independently compares16plainRGB/14QA panels
 to saved arrays. Overlay image hashes, masks and source code are bound; overlay
 pixels are not independently re-rendered. It verifies evidence integrity and
-decision rules, not visual truth. Both packet-only and final-review modes are
-implemented but not yet run on real data.
+decision rules, not visual truth. Packet-only verification is complete;
+final-review verification remains pending.
 
 An actual-render SYNTHETIC integration test caught overlay coordinate labels
 touching one column of the adjacent plain panel. Moving their origin fromx-15
@@ -91,9 +108,9 @@ rerun is needed without a new source change or concern.
 
 1. Implementations and pre-execution tests are complete. Do not repeat them or
    edit either frozen source while processing/reviewing this protocol.
-2. Run one guarded preparation; retain all12 dates, raw evidence and resources.
-   Commit exact control roster/artifacts BEFORE image inspection.
-3. Independently verify source/array/QA/roster integrity. Inspect all plain and
+2. Preparation and independent packet verification are complete. The exact
+   roster/artifacts are committed BEFORE image inspection in this checkpoint.
+3. Inspect all plain and
    overlay images, record every date/control state with uncertainty, and verify
    the final hash-bound review disposition independently.
 4. Archive proof/test receipts, update guide and handoff, commit/push completion.

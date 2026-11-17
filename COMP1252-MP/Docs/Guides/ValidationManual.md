@@ -5,9 +5,9 @@ transition at the fixed target and stable forest in a nearby control. The
 completed [V3 context audit](ValidationContext.md) showed clear target inputs
 but found no control meeting its automatic NDVI rules. V3 remains negative.
 
-Current status: protocol committed before processing or image inspection;
-preparation and independent verification are in progress. No visual verdict,
-labels or validation accuracy exist at this checkpoint.
+Current status: all12dates are prepared and independently verified. The exact
+three-control roster and artifacts are committed before image inspection.
+No visual verdict, labels or validation accuracy exist at this checkpoint.
 
 ## What is fixed before inspection
 

@@ -43,8 +43,10 @@ numeric eligibility remains false; no validation labels or accuracy exist.
 278 tests pass. The separately predeclared manual image/timeline assessment
 is now approved and in progress, keeping the verified context QA requirements.
 Its V4 protocol and tested implementations are committed before real image
-processing;299tests pass. Actual preparation/review remain pending and no V4
-verdict or labels exist at this checkpoint. Do not silently retune completed protocols, repeat training or
+processing;299tests pass. The complete12-date packet and fixed3control roster
+are prepared, independently verified and committed before image inspection.
+Visual review remains pending and no V4 verdict or labels exist at this checkpoint.
+Do not silently retune completed protocols, repeat training or
 force labels from numeric proxies or rejected cases.
 The handoff identifies proposed next work and what has already finished.
 
