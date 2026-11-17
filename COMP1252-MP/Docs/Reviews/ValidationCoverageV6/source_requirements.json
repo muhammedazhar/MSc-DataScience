@@ -1,0 +1,96 @@
+{
+  "status": "metadata_requirements_only_no_catalogue_query_or_download",
+  "group_id": "group-96c27871459d03c08bcc",
+  "crs": "EPSG:32636",
+  "core_union_bounds": [
+    663380.0,
+    5604740.0,
+    664280.0,
+    5605640.0
+  ],
+  "qa_context_union_bounds": [
+    662180.0,
+    5603540.0,
+    665480.0,
+    5606840.0
+  ],
+  "context_padding_metres": 1200,
+  "fixed_pair_dates": [
+    "2018-07-26",
+    "2018-07-31",
+    "2018-08-05",
+    "2018-08-10",
+    "2018-08-15",
+    "2018-08-20",
+    "2018-08-25"
+  ],
+  "events": [
+    {
+      "event_id": "event-71d8da17cbbfd9babdee",
+      "annotation_image_date": "2018-07-31",
+      "crop_grid": {
+        "crs": "EPSG:32636",
+        "transform": [
+          10.0,
+          0.0,
+          663640.0,
+          0.0,
+          -10.0,
+          5605640.0
+        ],
+        "width": 64,
+        "height": 64,
+        "bounds": [
+          663640.0,
+          5605000.0,
+          664280.0,
+          5605640.0
+        ]
+      },
+      "required_qa_context_bounds": [
+        662440.0,
+        5603800.0,
+        665480.0,
+        5606840.0
+      ],
+      "later_persistence_window_end": "2018-09-14"
+    },
+    {
+      "event_id": "event-ce1c1df8d02be33bb3c8",
+      "annotation_image_date": "2018-07-31",
+      "crop_grid": {
+        "crs": "EPSG:32636",
+        "transform": [
+          10.0,
+          0.0,
+          663380.0,
+          0.0,
+          -10.0,
+          5605380.0
+        ],
+        "width": 64,
+        "height": 64,
+        "bounds": [
+          663380.0,
+          5604740.0,
+          664020.0,
+          5605380.0
+        ]
+      },
+      "required_qa_context_bounds": [
+        662180.0,
+        5603540.0,
+        665220.0,
+        5606580.0
+      ],
+      "later_persistence_window_end": "2018-09-14"
+    }
+  ],
+  "constraints": [
+    "Keep original grids, labels/provenance, geographic split and no image/model-based source ranking.",
+    "One geographic group, not two independent locations.",
+    "Catalogue availability, licensing, file sizes, processing baseline and frozen-reader compatibility remain unchecked.",
+    "Metadata footprint coverage does not establish valid pixels, clear QA or a forest-to-clearing transition.",
+    "Current pairs stay blocked; no substitute source pair or download has been approved by this check."
+  ]
+}

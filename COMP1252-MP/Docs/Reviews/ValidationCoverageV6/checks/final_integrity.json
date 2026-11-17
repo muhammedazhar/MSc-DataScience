@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "checked_on": "2026-11-17",
+  "protocol_sha256": "6f9b9eb37aee3d410a956488c116e24df39d2d280ce533cfbc4236cf86b58cd3",
+  "coverage_metadata_sha256": "ed87d082693ef58549a51b4989f472590835d7da7ffe870ad4b1616d2b399ad9",
+  "coverage_sha256": "796892510e8c32f53ea87f723d1cd16daf87484dac2dabe632a2e626cae494a1",
+  "source_requirements_sha256": "21ed0567806ed1efd2840002b3c30bb6b5f2dcda36d19c0fb5ee51ab0dac2a02",
+  "direct_source_receipts_checked": 6,
+  "inherited_source_receipts_checked": 22,
+  "frozen_implementations_checked": 34,
+  "xml_files_checked": 100,
+  "safe_scenes_in_configured_root": 50,
+  "comparisons_checked": 100,
+  "covering_or_overlapping_crop_comparisons": 0,
+  "tests_passed": 311,
+  "archive_matches_local_outputs": true,
+  "active_processing_workers": 0,
+  "satellite_pixel_reads": 0,
+  "model_executions": 0,
+  "downloads": 0,
+  "labels_approved": 0
+}

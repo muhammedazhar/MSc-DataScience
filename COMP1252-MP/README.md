@@ -41,6 +41,9 @@ supplies no validation labels or first-visible interval; all 299 tests pass.
 The [unscreened-pair inventory](./Docs/Guides/ValidationUnscreened.md) accounts
 for the remaining 606 pairs/630 anchors. All retain original coverage or
 provenance blocks; zero passes all metadata gates. All 305 tests pass.
+The [coverage feasibility check](./Docs/Guides/ValidationCoverage.md) confirms
+that neither of the two fresh supported events intersects any local Sentinel-2
+scene. Exact source requirements are saved; all 311 tests pass.
 
 ## Structure of the repository
 

@@ -6,7 +6,7 @@ agent. Work in this project on **`codex/curated-deforestation-pilot`**. Read
 editing. Preserve other work and commit each completed, verified logical change
 on this same branch with an updated handoff.
 
-Current approved check in progress: **`Docs/Handoffs/2026-11-17-validation-coverage.md`**.
+Current completed check/state: **`Docs/Handoffs/2026-11-17-validation-coverage.md`**.
 Previous completed inventory: `Docs/Handoffs/2026-11-17-validation-unscreened.md`.
 Previous completed review: `Docs/Handoffs/2026-11-17-validation-manual.md`.
 Previous completed audit: `Docs/Handoffs/2026-11-17-validation-context.md`.
@@ -51,8 +51,12 @@ roster. The V5 inventory now covers all 606 unscreened pairs/630 anchors:
 all pairs already have source-coverage or provenance blockers, and zero passes
 all metadata gates. Only 12 supported temporal anchor-pairs (two events in one
 fresh group) remain of interest, but all lack post-scene coverage. QA stays
-unknown; no roster or labels. All 305 tests pass. Next proposed task is a bounded
-metadata-only coverage feasibility check of those two events.
+unknown; no roster or labels. The coverage check is now complete: fresh XML
+and local directory discovery confirm neither crop intersects any of the 50
+local Sentinel-2 scenes. They lie entirely 4.7–5.0km north of source coverage.
+All 311 tests pass; the metadata worker used41.31MiB in0.51s. Next proposed work
+is a bounded catalogue metadata search for compatible covering imagery, with
+exact requirements saved. No download or new QA experiment has been executed.
 Do not rerun completed processing, silently retune protocols or force
 labels from numeric proxies or rejected cases.
 The handoff identifies proposed next work and what has already finished.

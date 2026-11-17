@@ -55,3 +55,7 @@ footprints and identify whether suitable coverage already exists or additional
 source products would be required. Keep their current pairs blocked; do not
 start QA, shift grids or relax provenance merely to obtain validation examples.
 See `Docs/Handoffs/2026-11-17-validation-unscreened.md` for continuation.
+
+That subsequent [coverage check](ValidationCoverage.md) is now complete:
+neither crop intersects any of the 50 local scene footprints. The original
+blocks remain, and exact requirements for a future source search are saved.

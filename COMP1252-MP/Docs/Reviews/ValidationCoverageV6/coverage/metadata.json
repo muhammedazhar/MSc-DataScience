@@ -1,0 +1,58 @@
+{
+  "execution_status": "completed",
+  "protocol_sha256": "6f9b9eb37aee3d410a956488c116e24df39d2d280ce533cfbc4236cf86b58cd3",
+  "summary": {
+    "fixed_events": 2,
+    "fixed_original_pairs": 12,
+    "local_scenes": 50,
+    "tile_scene_counts": {
+      "36UXA": 12,
+      "36UYA": 38
+    },
+    "event_scene_comparisons": 100,
+    "covering_comparisons": 0,
+    "positive_overlap_comparisons": 0,
+    "qa_context_covering_comparisons": 0,
+    "original_pair_dates": [
+      "2018-07-26",
+      "2018-07-31",
+      "2018-08-05",
+      "2018-08-10",
+      "2018-08-15",
+      "2018-08-20",
+      "2018-08-25"
+    ],
+    "scope": "Rectangular XML coverage only; no valid-pixel, cloud or class approval."
+  },
+  "implementation_sha256": "011417f1e207414d0b39b218459a555c0c4a92703be31b3eaf6dfd0f6bd425b9",
+  "artifact_sha256": {
+    "coverage.json": "796892510e8c32f53ea87f723d1cd16daf87484dac2dabe632a2e626cae494a1",
+    "report.md": "9fb138b65ea8a21b6a1282735584b488b33fdb4d769aa3fc5ecc3029939ced2e"
+  },
+  "satellite_pixel_reads": 0,
+  "qa_or_cache_reads": 0,
+  "model_executions": 0,
+  "new_imagery_reviewed": 0,
+  "downloads": 0,
+  "labels_approved": 0,
+  "xml_files_checked": 100,
+  "verification_scope": "Fresh XML versus frozen inventory; rectangle containment independently agrees with native-pixel window bounds. Directory inventory covers the configured Sentinel-2 root only.",
+  "resources": {
+    "logical_cpu_count": 11,
+    "machine_ram_gib": 18.0,
+    "worker_peak_rss_mib_sampled": 39.1,
+    "worker_high_water_rss_mib": 41.31,
+    "minimum_available_gib_sampled": 4.64,
+    "elapsed_seconds": 0.51,
+    "worker_limit_mib": 512,
+    "minimum_available_gib_limit": 1.5,
+    "runtime_limit_seconds": 300,
+    "workers": 1,
+    "native_thread_limit": 1,
+    "nice_increment": 10,
+    "gdal_cache_mib": 0,
+    "warp_memory_mib": 0,
+    "gpu_used": false,
+    "monitor_interval_seconds": 0.25
+  }
+}
