@@ -1,0 +1,239 @@
+{
+  "schema_version": 3,
+  "status": "predeclared_context_quality_only_before_new_visual_review",
+  "scope": "One fixed fresh validation candidate: target/interior and proposed forest-control QA plus exact tiny-CNN input context. Numeric audit only; no labels or accuracy.",
+  "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+  "selection": {
+    "rule": "The UNIQUE V2 record with eligibility_reasons exactly [endpoint_crop_qa_flags]; every other V2 gate stays required. No replacement or fallback.",
+    "maximum_cases": 1,
+    "candidate": {
+      "event_id": "event-bf3d28f31dcf19938962",
+      "pair_id": "pair-430ec0ecae32ce98efcb",
+      "group_id": "group-45f0c39e787ca8622918",
+      "stratum": "36UYA_Spring_time-dependent",
+      "split": "validation",
+      "annotation_date": "2019-04-22",
+      "pre_date": "2019-04-02",
+      "post_date": "2019-04-27",
+      "interval_days": 25,
+      "grid": {
+        "crs": "EPSG:32636",
+        "transform": [
+          10.0,
+          0.0,
+          771700.0,
+          0.0,
+          -10.0,
+          5537480.0
+        ],
+        "width": 64,
+        "height": 64,
+        "bounds": [
+          771700.0,
+          5536840.0,
+          772340.0,
+          5537480.0
+        ]
+      },
+      "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+      "qa_status": "passed_automatic_screen_pending_visual_review",
+      "endpoint_crop_unusable_pixels": [
+        56,
+        0
+      ],
+      "endpoint_target_unusable_pixels": [
+        0,
+        0
+      ],
+      "footprint_isolated": true,
+      "later_usable_scene_ids": [
+        "S2A_MSIL1C_20190517T083601_N0207_R064_T36UYA_20190517T100755",
+        "S2B_MSIL1C_20190601T083609_N0207_R064_T36UYA_20190601T104404",
+        "S2A_MSIL1C_20190606T083601_N0207_R064_T36UYA_20190606T104250"
+      ],
+      "published_qa_file": "Datasets/PixelQA/v1/batches/00050/masks/pair-430ec0ecae32ce98efcb.tif",
+      "published_qa_sha256": "5d0df4dcec28c590c6b69b2a8f6d1aaf03fa93133d017de5a990dccc5f463648",
+      "anchor_pixels": 36,
+      "anchor_interior_pixels": 4,
+      "temporal_union_pixels": 54,
+      "target_pixels": 36,
+      "temporal_clipped_pixels": 0,
+      "positive_interior_pixels": 4,
+      "interior_unusable_pixels": 0,
+      "target_mask_sha256": "452f86c9e823979fe0f80b1765cab22cec266c45b3900b96e21ffbb0894d6f62",
+      "positive_interior_sha256": "a4fd188156fbc3277e3067b53231241b037219bc5415f9b3ef36630e743d3848",
+      "training_approved": false,
+      "evaluation_approved": false,
+      "eligibility_reasons": [
+        "endpoint_crop_qa_flags"
+      ],
+      "eligible_for_fresh_review_shortlist": false
+    }
+  },
+  "source_files": {
+    "v2_audit": {
+      "path": "Docs/Reviews/ValidationSupportV2/audit/audit.json",
+      "sha256": "e36dbf5aaf20fcbaf3da22458d27763b5e3f29c40c9db535f42fa67bbf794c99"
+    },
+    "v2_metadata": {
+      "path": "Docs/Reviews/ValidationSupportV2/audit/metadata.json",
+      "sha256": "345f082d50dc5d61450014ec829f0b9cc3b3582c1cd5cdb7753fc4b53b1b73eb"
+    },
+    "v2_verification": {
+      "path": "Docs/Reviews/ValidationSupportV2/verification/metadata.json",
+      "sha256": "1787ec665e2f8a16beb3270321dc55bd228dd512de4fdc0ca16535084aca49ed"
+    },
+    "v2_protocol": {
+      "path": "Docs/Reviews/ValidationSupportV2/protocol.json",
+      "sha256": "afe7ee41222489693c1944b35edf265885a48fd204ff530066caffafb95241d5"
+    },
+    "v2_selection": {
+      "path": "Docs/Reviews/ValidationSupportV2/audit/selection.json",
+      "sha256": "8807e48e61558c3aa589abf50345cfe0f9b1f5927ac356c495da2db9f87c5462"
+    },
+    "prior_protocol": {
+      "path": "Docs/Reviews/ValidationPilotV1/protocol.json",
+      "sha256": "732d220785ff1dd6339ee8ccb7c136e835c3856a857df607642811053a486c40"
+    },
+    "catalogue": {
+      "path": "Datasets/AnnotationAudit/v1/annotations_clean.geojson",
+      "sha256": "06a1090c8451d670929163ff7be067d63454cb1893a3e8cbee97519fbb69cbce"
+    },
+    "pairs": {
+      "path": "Datasets/AnnotationAudit/v1/candidate_pairs.jsonl",
+      "sha256": "74d8d229470b4ef4aa968199768772fffd010aaab28f6d44775afb27c1601cd6"
+    },
+    "quality": {
+      "path": "Datasets/PixelQA/v1/summary/quality_manifest.jsonl",
+      "sha256": "6ea1147bd2ec1f904c999c252457bd97022214f85f4e23b7a29fcf5a1a4dab99"
+    },
+    "quality_index": {
+      "path": "Datasets/PixelQA/v1/review/quality_result_index.jsonl",
+      "sha256": "6b29f6c8dc2c512506f36d79089310c1b94643514876e55e94b59038b093eb2c"
+    },
+    "quality_summary": {
+      "path": "Datasets/PixelQA/v1/summary/metadata.json",
+      "sha256": "6f79faf30d815d0a504772a08b322da7d2e242764faefa0d6d47cebaf0208e4e"
+    },
+    "splits": {
+      "path": "Datasets/AnnotationAudit/v1/splits.json",
+      "sha256": "6c29ca5ab841dfe452ccccb1df826f1b2ae1613aea0cb9f463ab4302c5dd806d"
+    },
+    "scenes": {
+      "path": "Datasets/AnnotationAudit/v1/scene_inventory.jsonl",
+      "sha256": "78a3006c508ac008af5f9d879fa59907475ca28641e63866c2c95bf3a2ede740"
+    },
+    "training_manifest": {
+      "path": "Datasets/CuratedPilot/v1/dataset/training_manifest.jsonl",
+      "sha256": "138713e6a0b57e5491015fe42438d1a5d1702c68c753289bf52abb5caf7949aa"
+    },
+    "training_metadata": {
+      "path": "Datasets/CuratedPilot/v1/dataset/metadata.json",
+      "sha256": "5d929465f148c1823f6332222f56430dac9a5b0d1985d8545c2eb17c99ec3e71"
+    },
+    "trained_metadata": {
+      "path": "Docs/Reviews/PixelPilotV1/run/metadata.json",
+      "sha256": "ebcc690faa15aad5eff235a3b173b10b77448aeddbc3acd228a875d71c1f241c"
+    },
+    "pre_cache": {
+      "path": "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/4cf62e0c10c18f59c62b3957dc1007bee3b996185a64ea50e4b8efef56e4bd88.npz",
+      "sha256": "b337db70c303f434d30d8a7e3edfe350a231ce28e40bfde8a38bf160920bcd81"
+    },
+    "post_cache": {
+      "path": "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/f6572a62d84d2d3ae852b9533be5897314a348a08c64a3b96d33c205f1ad7ad2.npz",
+      "sha256": "fe366e9259002d6d5d2630cddb4d6746e2077593620413bddd89798a588acd72"
+    },
+    "published_qa": {
+      "path": "Datasets/PixelQA/v1/batches/00050/masks/pair-430ec0ecae32ce98efcb.tif",
+      "sha256": "5d0df4dcec28c590c6b69b2a8f6d1aaf03fa93133d017de5a990dccc5f463648"
+    }
+  },
+  "immutable_sources_sha256": {
+    "assess_pixel_quality.py": "4e0b77922cd478322912cb4116801502ec13bdcb740fc7696a1010e94fbd535f",
+    "pixelqa_masks.py": "cdbac7d70b94cc2043cbfa94a8201a232320b634c7c23d987b33f3948617897f",
+    "pixelqa_scene_metadata.py": "4d783446400c33f2bfb9d6e8730d3ab8e5178d35559a39cf714735384d542b72",
+    "validate_sample.py": "475f641ed582af37eedc2ee9e94065e280202db08eb381441e1403c3eb001fba",
+    "annotation_scene_inventory.py": "5c35020ccf12f5e5f689c1f7130d64d9cabd5e6e3e04cdede291c9a912688318",
+    "prepare_curated_pilot.py": "1a8d5ec426bd657cd0eb7f1ed2e08c125f8a9f879aad799c395168536e777f82",
+    "curated_pilot_review.py": "222bfc332959d2e597644d881ea295b43a29d08606ce8326750e3dd2176e918f",
+    "curated_pilot_exports.py": "caf67918894fa13ad62c3f9e6b8aad58ac69c414e999df9a988901d2166a9958",
+    "build_curated_pilot.py": "302c6fb3aedd13facaf0f83abcb3c234f4ff1b2257d303ce7b5cdc5cd470cc4c",
+    "verify_curated_pilot.py": "12f27b43a15d26e7bd3fc6c3df9363ed9b5b1eb3e017a2665548d1895830e8df",
+    "pilot_dataset.py": "bb0e58cfb61ac8980d77ed0cc88f99266fa1c35fe1aba5a19780cef4e53af7b7",
+    "pilot_objectives.py": "bccfd912cfdafcd7a04df1fb997b05627a995b5f89496241508e00dc97430d61",
+    "pilot_pixel_objective.py": "6020e42610e7e371000a2667958ddb3a8ce1acbe5a2ff7b3c721bfb27b1a1599",
+    "train_reviewed_pilot.py": "389ecb205b7fa91624964c6eb030352827001b0b38b74b7c12e30c833ec24813",
+    "reviewed_pilot_worker.py": "7e826d6f4cb3d9ed9d2c32e23838c479926261284a274879a2989dc78df43252",
+    "train_pilot_baseline.py": "259f367ddc613b0095a93ddcf7b9ae8f0a14553fa4fc5fc28665c76ae6059995",
+    "run_pilot_checks.py": "9f76cd6c4dd8ceb956102d503e9069c89f63f1ac5a481515391e9393598adceb",
+    "diagnose_pilot_overfit.py": "e190a95b153498df138bb000d9edbf2dcab5c3b14058391e0a8e1a234637f27b",
+    "pilot_overfit_worker.py": "2da2fc63c99f9ca4533e6d22061870301a7d8985d827621dae7ae96cf480bb4c",
+    "verify_pixel_pilot.py": "f6684643e4ea536b69a48a2da00581b9644e408e27715b0645c7fbc84a611c97",
+    "select_validation_cases.py": "0a137b5a343e21a1e6daf10ba21abf10d1efc69eee36f77761ee30b3e0689ca7",
+    "prepare_validation_review.py": "239f42dba0086c5dc1d8cae7ff448df44b6d4b85c76008ed94d220a1e46ace1d",
+    "validation_review.py": "b73853c8ac3229aad82e1b1e11b50395d51ca80d9ed486c30015320919777f62",
+    "audit_validation_geometry.py": "1d0e3f5ffc3d755c1f53a5c1eafa36d5af7336cb51826508efc4e5b2fe7fe2ee",
+    "audit_validation_support_pool.py": "27bebf952e323708b28e9cf9772fdb516dbeea934e2fe7e44802e88e0ba1e508",
+    "verify_validation_support_pool.py": "b4a398da0a44f264520992aa8d0b8708e9281516abc56d22353aac86a4ed8a80",
+    "verify_validation_dataset.py": "785f5cea93311196070f71160a63680bd49d629758a91f5bdec3bdbf4bdf1f22"
+  },
+  "rule": {
+    "context_radius_pixels": 2,
+    "context_metric": "Chebyshev square; union of5x5 input regions",
+    "require_full_halo_inside_core": true,
+    "require_full_target_and_interior_context": true,
+    "minimum_positive_interior_pixels": 4,
+    "target_erosion_pixels": 1,
+    "require_zero_qa_at_both_dates": true,
+    "qa_components": [
+      "cloud",
+      "cloud_buffer",
+      "shadow_risk",
+      "haze_risk",
+      "invalid"
+    ],
+    "require_finite_all27_features_on_context": true,
+    "retain_unchanged_full_crop_flags": true,
+    "control_sizes": [
+      16,
+      12,
+      8
+    ],
+    "minimum_control_pixels": 64,
+    "control_search_order": "Largest declared size, then ascending row, then ascending column; no best-NDVI or model ranking.",
+    "control_minimum_endpoint_ndvi_exclusive": 0.6,
+    "control_maximum_absolute_ndvi_difference_exclusive": 0.1,
+    "control_full_halo_avoids_catalogue_buffer_and_target_context": true,
+    "catalogue_exclusion_buffer_metres": 20,
+    "control_ndvi_rule_applies_to": "ROI only; halo still requires QA and finite inputs.",
+    "no_control_is_valid_negative_outcome": true,
+    "ready_for_visual_review_requires": "Both target contexts pass AND a proposed control/context passes; no label approval follows."
+  },
+  "architecture": {
+    "factory_file": "Solutions/train_pilot_baseline.py",
+    "factory_sha256": "259f367ddc613b0095a93ddcf7b9ae8f0a14553fa4fc5fc28665c76ae6059995",
+    "spatial_receptive_field_pixels": 5,
+    "context_radius_pixels": 2,
+    "parameter_count": 2545,
+    "global_context_operations": false,
+    "proof": "Static factory architecture check plus guarded synthetic gradient test; no learned weights or real validation input in synthetic test."
+  },
+  "resources": {
+    "workers": 1,
+    "native_threads": 1,
+    "gpu_used": false,
+    "nice_increment": 10,
+    "worker_rss_mib": 512,
+    "available_memory_reserve_gib": 1.5,
+    "max_seconds_per_worker": 300,
+    "maximum_cases": 1,
+    "feature_band_window_requests": 14
+  },
+  "limitations": [
+    "Numeric QA/NDVI control proposals do not certify forest stability or a forest-to-clearing event.",
+    "This changes only the separate V3 audit criteria; original V1/V2 rules, empty shortlist and artifacts remain intact.",
+    "Two-pixel context is specific to the frozen tiny CNN, not larger/global-context models.",
+    "No partial ROI shrinking, halo clipping, extra candidates, new visual previews, model inference or training.",
+    "Actual27featurechannels are read from14boundedbandwindows in one worker; independent verifier checks saved values and source fingerprints without repeating raw extraction."
+  ]
+}

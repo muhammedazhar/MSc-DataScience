@@ -6,7 +6,8 @@ agent. Work in this project on **`codex/curated-deforestation-pilot`**. Read
 editing. Preserve other work and commit each completed, verified logical change
 on this same branch with an updated handoff.
 
-Current completed audit/state: **`Docs/Handoffs/2026-11-16-validation-support-pool.md`**.
+Current work/state: **`Docs/Handoffs/2026-11-17-validation-context.md`**.
+Previous completed audit: `Docs/Handoffs/2026-11-16-validation-support-pool.md`.
 Previous completed review: `Docs/Handoffs/2026-11-16-validation-pilot.md`.
 Previous completed milestone: `Docs/Handoffs/2026-11-16-pixel-pilot.md`.
 Previous completed milestone: `Docs/Handoffs/2026-11-16-overfit-diagnostic.md`.
