@@ -14,8 +14,13 @@ local XML verification. Fixed V5 events `event-71d8da17cbbfd9babdee` and
 metadata shows the crops wholly north of all 50 scene bounds; confirm against
 fresh tile XML and directory discovery before treating this as a completed result.
 
-Remaining: implement/test small metadata-only coverage check, freeze source, run
-one guarded worker, archive report and update this handoff. Preserve existing
+Protocol checkpoint `2c5aa82` is pushed. The new metadata-only implementation
+`Solutions/audit_validation_coverage.py` and six regression tests are complete;
+source is frozen in the protocol. All311tests pass: worker4.07s, sampled peak
+358.20MiB, minimum4.54GiB available. Proof: V6 `checks/pre_execution_tests/`.
+No real XML coverage worker has run yet at this checkpoint.
+
+Remaining: run one guarded worker, archive report and update this handoff. Preserve existing
 blocks. No grid shifts, source corrections, downloads, QA or labels authorized
 in this step. No inventory worker has run at this checkpoint.
 
