@@ -17,8 +17,19 @@ The worker/helpers and architecture checks are implemented. Fourteen focused
 tests pass, including the actual factory's synthetic gradient proof of its
 5x5 dependency, full-halo failure cases, finite inputs and protocol bounds.
 All twelve worker source hashes are now frozen in the protocol before execution.
-No candidate context calculation, feature extraction or image review has run yet.
-The independent verifier is being finalized; no result is approved yet.
+The single context/feature audit is now COMPLETE and archived in
+`Docs/Reviews/ValidationContextV3/audit/`. Target36/context136 and
+interior4/context36 are fully inside the grid, QA-clear at BOTH dates and
+finite in all27 model channels. Original full-crop flags remain shadow-risk56/0.
+No numerical control proposal met every fixed rule, so overall numeric
+eligibility is FALSE; this is not evidence that forest is absent. The audit
+took6.56s, peak205.62MiB, minimum3.03GiB available. Fourteen bounded feature-band
+window requests were made; no model/Torch/cloud-model execution or visual
+preview/label approval. Do not rerun this completed worker.
+
+Independent verification and report-only control-search diagnostic counts remain
+pending. They must retain the no-control outcome, not change thresholds or pick
+a replacement region/candidate. No validation dataset or accuracy exists.
 
 ## Fixed rules and boundaries
 
