@@ -6,7 +6,7 @@ agent. Work in this project on **`codex/curated-deforestation-pilot`**. Read
 editing. Preserve other work and commit each completed, verified logical change
 on this same branch with an updated handoff.
 
-Current in-progress check/state: **`Docs/Handoffs/2026-11-17-validation-acquisition.md`**.
+Current completed check/state: **`Docs/Handoffs/2026-11-17-validation-acquisition.md`**.
 Previous completed check/state: `Docs/Handoffs/2026-11-17-validation-catalogue.md`.
 Previous completed inventory: `Docs/Handoffs/2026-11-17-validation-unscreened.md`.
 Previous completed review: `Docs/Handoffs/2026-11-17-validation-manual.md`.
@@ -59,10 +59,16 @@ QA context by Sentinel-2 tile 36UXB on relative orbit R064 across all 7 original
 pair dates. Copernicus products use baseline 05.00 with -1000 DN radiometric offset
 (incompatible with the frozen reader without offset handling; 4.69 GiB download
 size for 7 scenes). AWS Earth Search retains baseline 02.06 with 0 offset matching
-local data, but distributes COG assets requiring assembly. All 316 tests pass; the
-guarded worker used 37.59 MiB in 5.34 s. No download, raster read, QA model or
-label inference was executed; the original pairs remain blocked. Do not rerun
-completed processing, silently retune protocols or force labels from numeric
+local data, but distributes COG assets requiring assembly (316 tests passed).
+The acquisition feasibility check and reader adaptation analysis are now complete:
+minimal pair (2018-07-26 and 2018-07-31) in tile 36UXB on orbit R064 is available
+via public AWS open data under Baseline 02.06 with zero radiometric offset, matching
+the local 50-scene inventory and passing frozen reader SAFE layout verification.
+Combined required-7-bands download size is 870.07 MiB (0.85 GiB), well within the
+32 GiB Mac capacity reserve. All 319 tests pass; the guarded worker used 17.89 MiB
+in 0.26 s. No uncurated training, full downloads or labels were executed; the pairs
+remain blocked. Do not rerun completed processing, silently retune protocols or
+force labels from numeric proxies or rejected cases.
 proxies or rejected cases.
 The handoff identifies proposed next work and what has already finished.
 

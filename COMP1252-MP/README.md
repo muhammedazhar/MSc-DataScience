@@ -48,6 +48,9 @@ The [source catalogue audit](./Docs/Guides/ValidationCatalogue.md) identifies
 covering Sentinel-2 tile 36UXB on relative orbit R064 across all 7 original pair dates,
 documents CDSE baseline 05.00 offset incompatibility and download size (4.69 GiB for 7 scenes);
 all 316 tests pass.
+The [source acquisition and reader adaptation guide](./Docs/Guides/ValidationAcquisition.md)
+establishes direct reader compatibility and SAFE assembly for the minimal pair (2018-07-26 and 2018-07-31)
+via AWS open data Baseline 02.06 (870.07 MiB combined for 7 required bands); all 319 tests pass.
 
 ## Structure of the repository
 

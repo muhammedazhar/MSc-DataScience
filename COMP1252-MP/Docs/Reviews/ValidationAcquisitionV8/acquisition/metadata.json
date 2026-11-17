@@ -1,0 +1,118 @@
+{
+  "execution_status": "completed",
+  "protocol_sha256": "293f035491b6317492605a5d15764d5e6585e64df626dff220d15aa75466697c",
+  "summary": {
+    "plan_scope": "Minimal validation pair acquisition and SAFE assembly feasibility",
+    "target_events": [
+      {
+        "event_id": "event-71d8da17cbbfd9babdee",
+        "annotation_image_date": "2018-07-31",
+        "crop_grid": {
+          "crs": "EPSG:32636",
+          "transform": [
+            10.0,
+            0.0,
+            663640.0,
+            0.0,
+            -10.0,
+            5605640.0
+          ],
+          "width": 64,
+          "height": 64,
+          "bounds": [
+            663640.0,
+            5605000.0,
+            664280.0,
+            5605640.0
+          ]
+        },
+        "required_qa_context_bounds": [
+          662440.0,
+          5603800.0,
+          665480.0,
+          5606840.0
+        ],
+        "later_persistence_window_end": "2018-09-14"
+      },
+      {
+        "event_id": "event-ce1c1df8d02be33bb3c8",
+        "annotation_image_date": "2018-07-31",
+        "crop_grid": {
+          "crs": "EPSG:32636",
+          "transform": [
+            10.0,
+            0.0,
+            663380.0,
+            0.0,
+            -10.0,
+            5605380.0
+          ],
+          "width": 64,
+          "height": 64,
+          "bounds": [
+            663380.0,
+            5604740.0,
+            664020.0,
+            5605380.0
+          ]
+        },
+        "required_qa_context_bounds": [
+          662180.0,
+          5603540.0,
+          665220.0,
+          5606580.0
+        ],
+        "later_persistence_window_end": "2018-09-14"
+      }
+    ],
+    "minimal_pair_dates": [
+      "2018-07-26",
+      "2018-07-31"
+    ],
+    "target_tile": "36UXB",
+    "target_orbit": "R064",
+    "source_repository": "AWS Open Data (sentinel-s2-l1c)",
+    "processing_baseline": "02.06 (N0206)",
+    "radiometric_offset": 0,
+    "quantification_value": 10000.0,
+    "total_pair_download_size_bytes": 912332678,
+    "total_pair_download_size_mib": 870.07,
+    "total_pair_download_size_gib": 0.85,
+    "available_disk_space_gib": 32.0,
+    "capacity_safety_margin_gib": 31.15,
+    "reader_compatibility_assessment": "AWS open data Baseline 02.06 matches the local 50-scene inventory; zero radiometric offset means no reader modification is required.",
+    "cdse_alternative_assessment": "CDSE Baseline 05.00 has -1000 DN offset requiring reader adaptation, and requires OAuth credentials.",
+    "recommended_acquisition_source": "AWS Open Data (sentinel-s2-l1c, baseline 02.06)"
+  },
+  "implementation_sha256": "c1d7d8354efd6ae11798a49a3dc717707f1f51f46d71db250ba42b07938d72b8",
+  "artifact_sha256": {
+    "acquisition_plan.json": "19cd00699e2a59ad121841c063a2713cb31b6014727cc4226a6436ba45b9ecc7",
+    "report.md": "936e780b54dfe75c880309998004f2998e85007337019ad314322a67fde80da4"
+  },
+  "satellite_pixel_reads": 0,
+  "qa_or_cache_reads": 0,
+  "model_executions": 0,
+  "new_imagery_reviewed": 0,
+  "downloads": 0,
+  "labels_approved": 0,
+  "planned_scenes": 2,
+  "verification_scope": "Acquisition feasibility and SAFE layout compatibility verified against frozen reader specification.",
+  "resources": {
+    "logical_cpu_count": 11,
+    "machine_ram_gib": 18.0,
+    "worker_peak_rss_mib_sampled": 0.5,
+    "worker_high_water_rss_mib": 17.89,
+    "minimum_available_gib_sampled": 3.74,
+    "elapsed_seconds": 0.26,
+    "worker_limit_mib": 512,
+    "minimum_available_gib_limit": 1.5,
+    "runtime_limit_seconds": 300,
+    "workers": 1,
+    "native_thread_limit": 1,
+    "nice_increment": 10,
+    "gdal_cache_mib": 0,
+    "warp_memory_mib": 0,
+    "gpu_used": false,
+    "monitor_interval_seconds": 0.25
+  }
+}
