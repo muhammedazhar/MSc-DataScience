@@ -13,8 +13,16 @@ before geometry processing. The exact V2 complement has 606 pairs, 630 anchors,
 retain those flags rather than treating absent QA as the only obstacle.
 No images, caches, satellite pixels or models are needed for this task.
 
-Remaining: implement/test bounded inventory and separate independent geometry
-reconstruction; freeze implementation; run once; preserve every pair/anchor,
+Protocol checkpoint `61feefc` is pushed. New inventory and verification modes in
+`Solutions/audit_validation_unscreened.py` are tested and source-hash frozen.
+All 305 tests pass (299 previous + 6 new): 3.82s worker, peak342.75MiB,
+minimum3.46GiB available. Evidence: `checks/pre_execution_tests/` under V5 Docs.
+No actual inventory or imagery work has run at this checkpoint. Verification
+independently reconstructs catalogue projection, cumulative masks and NumPy
+erosion; metadata gate/summary helpers are shared, not an independent class/QA
+certification. This deliberately reuses existing helpers to keep the task bounded.
+
+Remaining: run one guarded inventory and its geometry verification; preserve every pair/anchor,
 all original blockers, unknown QA, support masks/counts, full footprint isolation,
 later metadata opportunities and all V1/V4 group exclusions. No shortlist or
 labels. Geometry support must never override provenance/coverage blocks.
