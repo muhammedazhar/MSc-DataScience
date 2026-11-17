@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "checked_on": "2026-11-17",
+  "protocol_sha256": "6b6c27c155bd06d3e3c2dc4ebd34fced99abfd54d85dd7e83bce97959bf24bc3",
+  "catalogue_metadata_sha256": "62b5c0d518825ae03aa04c6a83ca6b075e2d8515195321b9b1e37b2e42a58ce6",
+  "catalogue_sha256": "03d51407e5090d45717319f1bc99e610d2c582fef0fee35086ec16f32a5caa98",
+  "report_sha256": "f2802464485486850ed0d4ef50580ce1e64c2f0445fabb5db673384f40043fcc",
+  "direct_source_receipts_checked": 5,
+  "frozen_implementations_checked": 35,
+  "cdse_products_audited": 21,
+  "earthsearch_products_audited": 32,
+  "covering_tile_identified": "36UXB",
+  "covering_relative_orbit": "R064",
+  "pairs_evaluated": 12,
+  "all_pairs_covered_in_catalogue": true,
+  "tests_passed": 316,
+  "archive_matches_local_outputs": true,
+  "active_processing_workers": 0,
+  "satellite_pixel_reads": 0,
+  "model_executions": 0,
+  "downloads": 0,
+  "labels_approved": 0
+}

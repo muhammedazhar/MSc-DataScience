@@ -44,6 +44,10 @@ provenance blocks; zero passes all metadata gates. All 305 tests pass.
 The [coverage feasibility check](./Docs/Guides/ValidationCoverage.md) confirms
 that neither of the two fresh supported events intersects any local Sentinel-2
 scene. Exact source requirements are saved; all 311 tests pass.
+The [source catalogue audit](./Docs/Guides/ValidationCatalogue.md) identifies
+covering Sentinel-2 tile 36UXB on relative orbit R064 across all 7 original pair dates,
+documents CDSE baseline 05.00 offset incompatibility and download size (4.69 GiB for 7 scenes);
+all 316 tests pass.
 
 ## Structure of the repository
 

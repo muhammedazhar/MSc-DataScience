@@ -6,7 +6,7 @@ agent. Work in this project on **`codex/curated-deforestation-pilot`**. Read
 editing. Preserve other work and commit each completed, verified logical change
 on this same branch with an updated handoff.
 
-Current in-progress check/state: **`Docs/Handoffs/2026-11-17-validation-catalogue.md`**.
+Current completed check/state: **`Docs/Handoffs/2026-11-17-validation-catalogue.md`**.
 Previous completed check/state: `Docs/Handoffs/2026-11-17-validation-coverage.md`.
 Previous completed inventory: `Docs/Handoffs/2026-11-17-validation-unscreened.md`.
 Previous completed review: `Docs/Handoffs/2026-11-17-validation-manual.md`.
@@ -52,14 +52,18 @@ roster. The V5 inventory now covers all 606 unscreened pairs/630 anchors:
 all pairs already have source-coverage or provenance blockers, and zero passes
 all metadata gates. Only 12 supported temporal anchor-pairs (two events in one
 fresh group) remain of interest, but all lack post-scene coverage. QA stays
-unknown; no roster or labels. The coverage check is now complete: fresh XML
-and local directory discovery confirm neither crop intersects any of the 50
-local Sentinel-2 scenes. They lie entirely 4.7–5.0km north of source coverage.
-All 311 tests pass; the metadata worker used41.31MiB in0.51s. Next proposed work
-is a bounded catalogue metadata search for compatible covering imagery, with
-exact requirements saved. No download or new QA experiment has been executed.
-Do not rerun completed processing, silently retune protocols or force
-labels from numeric proxies or rejected cases.
+unknown; no roster or labels. The coverage check confirmed neither crop intersects any of the 50 local
+Sentinel-2 scenes (lying 4.7–5.0 km north). The source catalogue audit is now
+complete: external queries confirm full spatial coverage of both fixed crops and
+QA context by Sentinel-2 tile 36UXB on relative orbit R064 across all 7 original
+pair dates. Copernicus products use baseline 05.00 with -1000 DN radiometric offset
+(incompatible with the frozen reader without offset handling; 4.69 GiB download
+size for 7 scenes). AWS Earth Search retains baseline 02.06 with 0 offset matching
+local data, but distributes COG assets requiring assembly. All 316 tests pass; the
+guarded worker used 37.59 MiB in 5.34 s. No download, raster read, QA model or
+label inference was executed; the original pairs remain blocked. Do not rerun
+completed processing, silently retune protocols or force labels from numeric
+proxies or rejected cases.
 The handoff identifies proposed next work and what has already finished.
 
 Use one low-priority CPU worker, native/Torch threads one, no GPU, monitored
