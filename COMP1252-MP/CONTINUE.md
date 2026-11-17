@@ -6,7 +6,8 @@ agent. Work in this project on **`codex/curated-deforestation-pilot`**. Read
 editing. Preserve other work and commit each completed, verified logical change
 on this same branch with an updated handoff.
 
-Current completed audit/state: **`Docs/Handoffs/2026-11-17-validation-context.md`**.
+Current approved work in progress: **`Docs/Handoffs/2026-11-17-validation-manual.md`**.
+Previous completed audit: `Docs/Handoffs/2026-11-17-validation-context.md`.
 Previous completed audit: `Docs/Handoffs/2026-11-16-validation-support-pool.md`.
 Previous completed review: `Docs/Handoffs/2026-11-16-validation-pilot.md`.
 Previous completed milestone: `Docs/Handoffs/2026-11-16-pixel-pilot.md`.
@@ -39,9 +40,10 @@ pass. The separate context audit is now also complete and independently
 verified: target/interior plus two-pixel margins pass both-date QA and all 27
 feature checks, but the fixed NDVI control search yields no proposal. Overall
 numeric eligibility remains false; no validation labels or accuracy exist.
-278 tests pass. Next is separately predeclared manual image/timeline assessment
-of the target and potential forest controls, keeping the verified context QA
-requirements. Do not silently retune completed protocols, repeat training or
+278 tests pass. The separately predeclared manual image/timeline assessment
+is now approved and in progress, keeping the verified context QA requirements.
+Its V4 protocol is committed before processing/images; no V4 verdict or labels
+exist at this checkpoint. Do not silently retune completed protocols, repeat training or
 force labels from numeric proxies or rejected cases.
 The handoff identifies proposed next work and what has already finished.
 
