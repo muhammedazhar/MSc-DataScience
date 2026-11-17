@@ -14,8 +14,15 @@ from public AWS open data into `Datasets/Sentinel-2/` (assembled into standard S
 Register both scenes using `inventory_scenes()`, bringing the local inventory from 50 to 52 scenes,
 and verify that both fresh events now have full core and QA context coverage.
 
-Remaining: implement/test ingestion worker with rate-limiting, checksum verification and offline mock tests,
-freeze source, run one guarded worker, archive report, verify final integrity and update
+Protocol checkpoint `1fc954e` is pushed. The new scene ingestion worker implementation
+`Solutions/ingest_validation_scenes.py` and five unit/regression tests in
+`Tests/test_validation_ingestion.py` are complete; source is frozen in the protocol
+(`0f368c5d9b63048ccc689838cd21cedc44a6aa55b15ebfc4e5ae4af3dd42cb01`).
+All 324 tests pass: test suite 1.74 s, sampled peak 353.5 MiB (high-water 354.67 MiB),
+minimum 3.81 GiB available. Proof: V9 `checks/pre_execution_tests/`.
+No real ingestion worker has run yet at this checkpoint.
+
+Remaining: run one guarded worker, archive report, verify final integrity and update
 this handoff. Preserve existing blocks. No uncurated training, threshold tuning or labels authorized
 in this step. No download worker has run at this checkpoint.
 
