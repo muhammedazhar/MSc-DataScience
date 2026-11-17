@@ -1,0 +1,13 @@
+test_clipped_or_redrawn_context_cannot_be_used_for_visual_quality_claim (test_validation_manual_preparation.ManualPreparationTests) ... ok
+test_flag_exclusion_or_nonfinite_value_only_in_halo_rejects_that_entire_square (test_validation_manual_preparation.ManualPreparationTests) ... ok
+test_largest_fitting_size_first_then_exhaustion_keeps_short_roster (test_validation_manual_preparation.ManualPreparationTests) ... ok
+test_no_safe_square_is_explicit_empty_roster_not_clipped_control (test_validation_manual_preparation.ManualPreparationTests) ... ok
+test_protocol_requires_distinct_manual_scope_and_frozen_capacity_rules (test_validation_manual_preparation.ManualPreparationTests) ... ok
+test_roster_uses_geometry_order_and_disjoint_full_halos_without_ndvi_class_gate (test_validation_manual_preparation.ManualPreparationTests) ... ok
+test_visual_context_requires_finite_rgb_ndvi_without_greenness_claim (test_validation_manual_preparation.ManualPreparationTests) ... ok
+test_visual_metrics_distinguish_roi_from_full_context_and_union_overlap (test_validation_manual_preparation.ManualPreparationTests) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.259s
+
+OK

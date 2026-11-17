@@ -290,9 +290,11 @@
       "2019-06-01",
       "2019-06-06"
     ],
-    "missing_cache_policy": "Compute exactly the four missing observations with the unchanged frozen QA/cloud policy inside one guarded CPU worker; retain all12 dates. No forest-model execution or raw feature re-extraction. Fail rather than mark an extant usable scene unavailable merely because cache was absent.",
-    "new_feature_band_window_reads": 0,
-    "frozen_cloud_model_for_missing_quality_observations_only": true
+    "missing_cache_policy": "Compute exactly the four missing observations with the unchanged frozen QA/cloud policy inside one guarded CPU worker; retain all12 dates. Each missing QA observation reads11 union-band windows (seven include-feature requests for per-date RGB/NDVI and validity), total44 fused/28 include-feature requests and4 cloud-model calls. No forest model or re-extraction of the endpoint27-channel feature stack. Fail rather than call an extant usable scene unavailable merely because cache was absent.",
+    "frozen_cloud_model_for_missing_quality_observations_only": true,
+    "new_endpoint_feature_band_window_reads": 0,
+    "expected_quality_fused_band_window_requests": 44,
+    "expected_quality_include_feature_window_requests": 28
   },
   "timeline_window": {
     "start": "2019-03-08",
@@ -3273,5 +3275,8 @@
     "Only the exact frozen tiny CNN has the proved radius2 input contract.",
     "Later supporting images use cached QA/finite RGB/NDVI; all27 finite feature proof belongs to the fixed endpoint pair.",
     "No approved labels or unseen-location accuracy follows from preparing or reviewing images."
-  ]
+  ],
+  "implementation_sha256": {
+    "prepare_validation_manual.py": "5ef0d5b3a199b47433a18b97c149bfe96ef76f5e6df1695daa20f28966d4de6e"
+  }
 }

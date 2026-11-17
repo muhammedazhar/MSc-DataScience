@@ -13,9 +13,12 @@ handoffs for frozen provenance, QA, split, model and resource constraints.
 The user authorized the next visual timeline review. The separate V4 protocol
 is `Docs/Reviews/ValidationManualV4/protocol.json`, declared BEFORE new images,
 pixel processing or visual assessment. V3's negative eligibility stays unchanged.
-No V4 code, worker, preview, manual verdict, labels or model inference has yet
-completed at this checkpoint. Preparation and independent verification are in
-progress in new files; frozen existing sources must remain unchanged.
+The new preparation implementation and eight focused tests are complete.
+Its source hash is frozen in the protocol before processing. Independent
+verification code/tests are still in progress in separate new files. No V4
+pixel worker, preview inspection, manual verdict, labels or forest-model
+inference has completed at this checkpoint. Frozen existing sources remain
+unchanged. The original protocol checkpoint is `4950a0c` and is pushed.
 
 ## Fixed task and boundaries
 
@@ -34,6 +37,10 @@ QA/cloud policy in a single guarded worker. This is quality preparation, not
 deforestation prediction. Do not substitute cache absence for unavailable imagery
 or omit difficult dates. No new endpoint feature extraction is needed; reuse
 the V3 saved original27-channel features and validity evidence.
+The four QA observations themselves require 44 fused-band window requests,
+including 28 per-date feature requests for RGB/NDVI/validity, and four cloud
+screening calls. Only endpoint27-channel re-extraction is zero. This receipt
+wording was clarified before processing; no raw-source-zero claim is made.
 
 Before opening images, select and COMMIT at most three control squares using
 only endpoint QA, finite inputs and exclusions: largest16/12/8 then ascending
@@ -55,8 +62,18 @@ ground truth and this one-group convenience case is not a benchmark.
 
 ## Remaining work
 
-1. Finish/test new separate V4 preparation and independent verifier. Bind source
-   hashes before processing, preserving all old immutable files.
+Preparation: `Solutions/prepare_validation_manual.py`, with eight passing
+`Tests/test_validation_manual_preparation.py` tests. Guard receipt/log:
+`Docs/Reviews/ValidationManualV4/checks/preparation_helpers/`. Worker1.78s,
+peak191.53MiB, minimum5.25GiB available. Tests cover geometry-order/no-NDVI
+selection, disjoint FULL halos, flags/exclusions/nonfinite values only in a
+margin, exhaustion/empty roster, exact visual contexts and capacity limits.
+No real validation imagery or QA model ran during these synthetic tests.
+
+1. Finish/test new separate independent verifier, including complete rendered
+   image coverage and plain pixels matching saved RGB. Freeze its source before
+   actual processing, preserving all old immutable files. New verifier file may
+   be uncommitted while this work is in progress; it has not run.
 2. Run one guarded preparation; retain all12 dates, raw evidence and resources.
    Commit exact control roster/artifacts BEFORE image inspection.
 3. Independently verify source/array/QA/roster integrity. Inspect all plain and
