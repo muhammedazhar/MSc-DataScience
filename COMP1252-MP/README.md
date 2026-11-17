@@ -38,6 +38,9 @@ The separate [manual timeline review](./Docs/Guides/ValidationManual.md) is now
 complete: all 12 dates and three fixed controls were inspected, but the target
 transition and forest-control classes remain uncertain. The rejected case
 supplies no validation labels or first-visible interval; all 299 tests pass.
+The [unscreened-pair inventory](./Docs/Guides/ValidationUnscreened.md) accounts
+for the remaining 606 pairs/630 anchors. All retain original coverage or
+provenance blocks; zero passes all metadata gates. All 305 tests pass.
 
 ## Structure of the repository
 

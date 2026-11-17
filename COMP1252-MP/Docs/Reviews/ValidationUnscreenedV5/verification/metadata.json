@@ -1,0 +1,61 @@
+{
+  "execution_status": "completed",
+  "mode": "verify",
+  "protocol_sha256": "25a7189ce4327acb415a75dcd4492e558cf7b89942c07dc1de19dd09c64a5fb1",
+  "summary": {
+    "pairs": 606,
+    "anchor_pairs": 630,
+    "events": 67,
+    "groups": 9,
+    "pair_status_counts": {
+      "blocked_for_temporal_training": 606
+    },
+    "pair_blocking_reason_counts_overlapping": {
+      "baseline_only_provenance": 79,
+      "crop_crosses_tile_edge": 347,
+      "post_scene_does_not_cover_crop": 347,
+      "unverified_temporal_label_in_crop": 259
+    },
+    "anchor_pairs_with_interior_at_least_four": 37,
+    "supported_events": 6,
+    "supported_groups": 4,
+    "anchor_pairs_with_temporal_clipping": 111,
+    "anchor_pairs_footprint_isolated": 630,
+    "anchor_pairs_with_later_metadata_opportunity": 566,
+    "anchor_pairs_in_exposed_groups": 203,
+    "passes_metadata_geometry_gates": 0,
+    "qa_status": "unknown_no_published_qa",
+    "approved_labels": 0
+  },
+  "source_jp2_pixel_reads": 0,
+  "qa_mask_files_read": 0,
+  "cache_files_read": 0,
+  "model_executions": 0,
+  "cloud_model_executions": 0,
+  "new_imagery_reviewed": 0,
+  "labels_approved": 0,
+  "torch_imported": false,
+  "implementation_sha256": "e0b1d5fa6bd4e1f6c67f3fbd294d00772c1242625cbaac134118f47d5a906d6e",
+  "verification_status": "passed",
+  "audit_metadata_sha256": "2fff4df8c5714ff3ab71b7348f04e2c7d62e9ea43aab5559c709ed6294ce6fc1",
+  "inventory_sha256": "f6f61b5ac7ec520b49864423936b3b40bad4b1230977d3a853f44988c1c1b492",
+  "independence_scope": "Independent catalogue projection, cumulative temporal masks and NumPy erosion; metadata joins/gates and summary helpers shared, not an independent class/QA approval.",
+  "resources": {
+    "logical_cpu_count": 11,
+    "machine_ram_gib": 18.0,
+    "worker_peak_rss_mib_sampled": 232.2,
+    "worker_high_water_rss_mib": 236.5,
+    "minimum_available_gib_sampled": 3.24,
+    "elapsed_seconds": 3.9,
+    "worker_limit_mib": 512,
+    "minimum_available_gib_limit": 1.5,
+    "runtime_limit_seconds": 300,
+    "workers": 1,
+    "native_thread_limit": 1,
+    "nice_increment": 10,
+    "gdal_cache_mib": 16,
+    "warp_memory_mib": 0,
+    "gpu_used": false,
+    "monitor_interval_seconds": 0.25
+  }
+}

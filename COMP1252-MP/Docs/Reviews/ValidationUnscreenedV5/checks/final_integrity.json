@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "checked_on": "2026-11-17",
+  "protocol_sha256": "25a7189ce4327acb415a75dcd4492e558cf7b89942c07dc1de19dd09c64a5fb1",
+  "inventory_sha256": "f6f61b5ac7ec520b49864423936b3b40bad4b1230977d3a853f44988c1c1b492",
+  "verification_metadata_sha256": "ceb6f9f4c1685d941e67254acce0026c6998276464318a026958724d7b231625",
+  "planning_counts_sha256": "bab2bc028a54f009bfc1e60f831d574da91c408f05408f1f906882036ee10e4a",
+  "source_inputs_checked": 22,
+  "frozen_sources_checked": 33,
+  "pairs_checked": 606,
+  "anchor_pairs_checked": 630,
+  "all_original_pairs_blocked": true,
+  "all_qa_counts_unknown": true,
+  "metadata_geometry_passes": 0,
+  "tests_passed": 305,
+  "archive_matches_local_outputs": true,
+  "active_processing_workers": 0,
+  "satellite_pixel_reads": 0,
+  "models_executed": 0,
+  "labels_approved": 0
+}

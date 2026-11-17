@@ -1,0 +1,12 @@
+{
+  "temporal_supported_anchor_pairs": 12,
+  "events": [
+    "event-71d8da17cbbfd9babdee",
+    "event-ce1c1df8d02be33bb3c8"
+  ],
+  "groups": [
+    "group-96c27871459d03c08bcc"
+  ],
+  "previously_inspected_anchor_pairs": 0,
+  "scope": "Planning counts only, no selection or approval; every original coverage blocker remains."
+}

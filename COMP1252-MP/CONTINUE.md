@@ -6,7 +6,7 @@ agent. Work in this project on **`codex/curated-deforestation-pilot`**. Read
 editing. Preserve other work and commit each completed, verified logical change
 on this same branch with an updated handoff.
 
-Current approved inventory in progress: **`Docs/Handoffs/2026-11-17-validation-unscreened.md`**.
+Current completed inventory/state: **`Docs/Handoffs/2026-11-17-validation-unscreened.md`**.
 Previous completed review: `Docs/Handoffs/2026-11-17-validation-manual.md`.
 Previous completed audit: `Docs/Handoffs/2026-11-17-validation-context.md`.
 Previous completed audit: `Docs/Handoffs/2026-11-16-validation-support-pool.md`.
@@ -46,9 +46,13 @@ The separate manual review is now complete and independently verified: all
 prior forest state and control classes remain uncertain. The case is rejected,
 with no labels, observed change interval or accuracy. All 299 tests pass.
 This validation group is now exposed and must not be called fresh in a future
-roster. Next proposed work is a metadata/geometry-only support inventory of the
-606 validation pairs without published QA, retaining unknown quality and all
-reasons. Do not rerun completed processing, silently retune protocols or force
+roster. The V5 inventory now covers all 606 unscreened pairs/630 anchors:
+all pairs already have source-coverage or provenance blockers, and zero passes
+all metadata gates. Only 12 supported temporal anchor-pairs (two events in one
+fresh group) remain of interest, but all lack post-scene coverage. QA stays
+unknown; no roster or labels. All 305 tests pass. Next proposed task is a bounded
+metadata-only coverage feasibility check of those two events.
+Do not rerun completed processing, silently retune protocols or force
 labels from numeric proxies or rejected cases.
 The handoff identifies proposed next work and what has already finished.
 
