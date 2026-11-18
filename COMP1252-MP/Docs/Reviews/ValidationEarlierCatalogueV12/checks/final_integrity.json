@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "checked_on": "2026-11-18",
+  "protocol_sha256": "da75b7618ff466d4617a51a73de1b43020d1cecfe90f198b8b6fb71ab7bd0179",
+  "inventory_metadata_sha256": "8d55f5138302e05bd5095628d801252836171334a61c4b205bb5233c55faca7c",
+  "inventory_sha256": "41c0ac58161fb8a40000407a174422608e026ab343618c2b5e21649b9202c179",
+  "raw_response_pages_checked": 2,
+  "raw_response_items": 18,
+  "distinct_items_preserved": 18,
+  "raw_response_bytes": 191206,
+  "provider_matched_count": 18,
+  "terminal_page_has_no_next": true,
+  "nominal_metadata_followup_dates": [
+    "2018-07-01",
+    "2018-07-06",
+    "2018-07-11",
+    "2018-07-16",
+    "2018-07-21"
+  ],
+  "all_input_hashes_unchanged": 47,
+  "v11_source_file_stats_unchanged": 116,
+  "v11_excluded_outcomes_preserved": 2,
+  "v10_transaction_state": "complete",
+  "docs_copy_byte_identical": true,
+  "tests_passed": 349,
+  "active_guarded_workers": 0,
+  "image_downloads": 0,
+  "new_qa_or_model_executions": 0,
+  "source_approvals": 0,
+  "selected_roster_items": 0,
+  "labels_approved": 0,
+  "verification_scope": "Raw item/product joins, hashes, terminal pagination and independent simple identity/date eligibility recomputation; coverage booleans from tested worker, no independent geometry/QA truth. Prior raw source integrity uses unchanged size/mtime receipts; no source rasters decoded or rehashed."
+}

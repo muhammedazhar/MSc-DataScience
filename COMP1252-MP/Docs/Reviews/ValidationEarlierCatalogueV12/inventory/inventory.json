@@ -1,0 +1,2327 @@
+{
+  "schema_version": 12,
+  "status": "complete_metadata_inventory_no_roster",
+  "protocol_sha256": "da75b7618ff466d4617a51a73de1b43020d1cecfe90f198b8b6fb71ab7bd0179",
+  "group_id": "group-96c27871459d03c08bcc",
+  "pagination_complete": true,
+  "provider_number_matched": 18,
+  "pages": [
+    {
+      "response": "raw/page-01.json",
+      "sha256": "39f9872cac2c4f53564849a72b76efd42eada450cd9c4b52caff329b932d2619",
+      "bytes": 190930,
+      "request": {
+        "url": "https://earth-search.aws.element84.com/v1/search",
+        "method": "POST",
+        "body": {
+          "collections": [
+            "sentinel-2-l1c"
+          ],
+          "datetime": "2018-07-01T00:00:00Z/2018-07-30T23:59:59.999999Z",
+          "bbox": [
+            35.28984765236421,
+            50.56032891638623,
+            35.33786814756776,
+            50.59090766070277
+          ],
+          "limit": 100
+        }
+      },
+      "returned_items": 18
+    },
+    {
+      "response": "raw/page-02.json",
+      "sha256": "f8740f2ff2361c1c6938dfb11f1f0c86564f5a240b93461d84659ccf1e3581bd",
+      "bytes": 276,
+      "request": {
+        "url": "https://earth-search.aws.element84.com/v1/search",
+        "method": "POST",
+        "body": {
+          "datetime": "2018-07-01T00:00:00Z/2018-07-30T23:59:59.999999Z",
+          "collections": [
+            "sentinel-2-l1c"
+          ],
+          "bbox": [
+            35.28984765236421,
+            50.56032891638623,
+            35.33786814756776,
+            50.59090766070277
+          ],
+          "limit": 100,
+          "next": "2018-07-01T08:39:05.460000Z,S2A_36UXB_20180701_0_L1C,sentinel-2-l1c"
+        }
+      },
+      "returned_items": 0
+    }
+  ],
+  "summary": {
+    "distinct_items": 18,
+    "distinct_product_uris": 18,
+    "acquisition_dates": [
+      "2018-07-01",
+      "2018-07-04",
+      "2018-07-06",
+      "2018-07-09",
+      "2018-07-11",
+      "2018-07-14",
+      "2018-07-16",
+      "2018-07-19",
+      "2018-07-21",
+      "2018-07-24",
+      "2018-07-26",
+      "2018-07-29"
+    ],
+    "baselines": [
+      "N0206",
+      "N0500"
+    ],
+    "nominal_metadata_followup_items": 5,
+    "nominal_metadata_followup_dates": [
+      "2018-07-01",
+      "2018-07-06",
+      "2018-07-11",
+      "2018-07-16",
+      "2018-07-21"
+    ],
+    "known_cloudy_date_items_retained": 2,
+    "items_with_issues": 0,
+    "source_approvals": 0,
+    "selected_roster_items": 0,
+    "geographic_groups": 1
+  },
+  "items": [
+    {
+      "collection": "sentinel-2-l1c",
+      "item_id": "S2A_36UXB_20180701_0_L1C",
+      "product_uri": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE",
+      "product_identity": {
+        "satellite": "S2A",
+        "acquisition": "20180701T083601",
+        "baseline": "N0206",
+        "orbit": "R064",
+        "tile": "36UXB",
+        "generation": "20180701T104347"
+      },
+      "acquisition_date": "2018-07-01",
+      "provider_datetime": "2018-07-01T08:39:05.460000Z",
+      "provider_tile_fields": [
+        "MGRS-36UXB",
+        "36UXB"
+      ],
+      "provider_baseline": "02.06",
+      "provider_relative_orbit": null,
+      "provider_platform": "sentinel-2a",
+      "catalogue_cloud_percentage": 60.6924,
+      "catalogue_cloud_percentage_used_for_selection": false,
+      "supplied_offset_properties": null,
+      "supplied_asset_band_offsets": {
+        "blue": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "cirrus": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "coastal": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "green": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "nir": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "nir08": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "nir09": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "red": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "rededge1": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "rededge2": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "rededge3": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "swir16": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "swir22": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ]
+      },
+      "reader_compatibility": "unverified",
+      "source_approved": false,
+      "roster_selected": false,
+      "interval_to_post_days": 30,
+      "known_cloudy_acquisition_date": false,
+      "own_qa_status": "unexamined",
+      "catalogue_footprint_covers": {
+        "core": true,
+        "qa_context": true
+      },
+      "issues": [],
+      "nominal_metadata_followup_eligible": true,
+      "followup_blockers": [],
+      "raw_item_sha256": "3215101ad83527fd9b743fcb676e67038a27ef8e894874a26a2f53e2e283733d",
+      "occurrence_pages": [
+        1
+      ]
+    },
+    {
+      "collection": "sentinel-2-l1c",
+      "item_id": "S2A_36UXB_20180701_1_L1C",
+      "product_uri": "S2A_MSIL1C_20180701T083601_N0500_R064_T36UXB_20230811T132658.SAFE",
+      "product_identity": {
+        "satellite": "S2A",
+        "acquisition": "20180701T083601",
+        "baseline": "N0500",
+        "orbit": "R064",
+        "tile": "36UXB",
+        "generation": "20230811T132658"
+      },
+      "acquisition_date": "2018-07-01",
+      "provider_datetime": "2018-07-01T08:46:05.784000Z",
+      "provider_tile_fields": [
+        "MGRS-36UXB",
+        "36UXB"
+      ],
+      "provider_baseline": "05.00",
+      "provider_relative_orbit": null,
+      "provider_platform": "sentinel-2a",
+      "catalogue_cloud_percentage": 61.4896709921755,
+      "catalogue_cloud_percentage_used_for_selection": false,
+      "supplied_offset_properties": null,
+      "supplied_asset_band_offsets": {
+        "blue": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "cirrus": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "coastal": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "green": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "nir": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "nir08": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "nir09": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "red": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "rededge1": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "rededge2": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "rededge3": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "swir16": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "swir22": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ]
+      },
+      "reader_compatibility": "unverified",
+      "source_approved": false,
+      "roster_selected": false,
+      "interval_to_post_days": 30,
+      "known_cloudy_acquisition_date": false,
+      "own_qa_status": "unexamined",
+      "catalogue_footprint_covers": {
+        "core": true,
+        "qa_context": true
+      },
+      "issues": [],
+      "nominal_metadata_followup_eligible": false,
+      "followup_blockers": [
+        "different_baseline"
+      ],
+      "raw_item_sha256": "fe2ce87d0806f50b4a50a25f9a082f2304bd1dbdf3b6e7a8c25f456cb2935ea1",
+      "occurrence_pages": [
+        1
+      ]
+    },
+    {
+      "collection": "sentinel-2-l1c",
+      "item_id": "S2A_36UXB_20180704_0_L1C",
+      "product_uri": "S2A_MSIL1C_20180704T085021_N0206_R107_T36UXB_20180704T142359.SAFE",
+      "product_identity": {
+        "satellite": "S2A",
+        "acquisition": "20180704T085021",
+        "baseline": "N0206",
+        "orbit": "R107",
+        "tile": "36UXB",
+        "generation": "20180704T142359"
+      },
+      "acquisition_date": "2018-07-04",
+      "provider_datetime": "2018-07-04T08:52:58.805000Z",
+      "provider_tile_fields": [
+        "MGRS-36UXB",
+        "36UXB"
+      ],
+      "provider_baseline": "02.06",
+      "provider_relative_orbit": null,
+      "provider_platform": "sentinel-2a",
+      "catalogue_cloud_percentage": 47.8917,
+      "catalogue_cloud_percentage_used_for_selection": false,
+      "supplied_offset_properties": null,
+      "supplied_asset_band_offsets": {
+        "blue": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "cirrus": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "coastal": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "green": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "nir": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "nir08": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "nir09": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "red": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "rededge1": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "rededge2": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "rededge3": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "swir16": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "swir22": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ]
+      },
+      "reader_compatibility": "unverified",
+      "source_approved": false,
+      "roster_selected": false,
+      "interval_to_post_days": 27,
+      "known_cloudy_acquisition_date": false,
+      "own_qa_status": "unexamined",
+      "catalogue_footprint_covers": {
+        "core": true,
+        "qa_context": true
+      },
+      "issues": [],
+      "nominal_metadata_followup_eligible": false,
+      "followup_blockers": [
+        "different_orbit"
+      ],
+      "raw_item_sha256": "ca4c4cc1a460e0b4c878bc7c686e316d591509aa4c40aa53c178c6ece13f55ac",
+      "occurrence_pages": [
+        1
+      ]
+    },
+    {
+      "collection": "sentinel-2-l1c",
+      "item_id": "S2A_36UXB_20180704_1_L1C",
+      "product_uri": "S2A_MSIL1C_20180704T085021_N0500_R107_T36UXB_20230805T010705.SAFE",
+      "product_identity": {
+        "satellite": "S2A",
+        "acquisition": "20180704T085021",
+        "baseline": "N0500",
+        "orbit": "R107",
+        "tile": "36UXB",
+        "generation": "20230805T010705"
+      },
+      "acquisition_date": "2018-07-04",
+      "provider_datetime": "2018-07-04T08:56:02.784000Z",
+      "provider_tile_fields": [
+        "MGRS-36UXB",
+        "36UXB"
+      ],
+      "provider_baseline": "05.00",
+      "provider_relative_orbit": null,
+      "provider_platform": "sentinel-2a",
+      "catalogue_cloud_percentage": 38.2624443847233,
+      "catalogue_cloud_percentage_used_for_selection": false,
+      "supplied_offset_properties": null,
+      "supplied_asset_band_offsets": {
+        "blue": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "cirrus": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "coastal": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "green": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "nir": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "nir08": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "nir09": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "red": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "rededge1": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "rededge2": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "rededge3": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "swir16": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "swir22": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ]
+      },
+      "reader_compatibility": "unverified",
+      "source_approved": false,
+      "roster_selected": false,
+      "interval_to_post_days": 27,
+      "known_cloudy_acquisition_date": false,
+      "own_qa_status": "unexamined",
+      "catalogue_footprint_covers": {
+        "core": true,
+        "qa_context": true
+      },
+      "issues": [],
+      "nominal_metadata_followup_eligible": false,
+      "followup_blockers": [
+        "different_baseline",
+        "different_orbit"
+      ],
+      "raw_item_sha256": "666f4a069c918b2028190a84338284a73fe21abdb7ac810f45542b88f6b47ef0",
+      "occurrence_pages": [
+        1
+      ]
+    },
+    {
+      "collection": "sentinel-2-l1c",
+      "item_id": "S2A_36UXB_20180711_0_L1C",
+      "product_uri": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE",
+      "product_identity": {
+        "satellite": "S2A",
+        "acquisition": "20180711T083601",
+        "baseline": "N0206",
+        "orbit": "R064",
+        "tile": "36UXB",
+        "generation": "20180711T122613"
+      },
+      "acquisition_date": "2018-07-11",
+      "provider_datetime": "2018-07-11T08:44:30.159000Z",
+      "provider_tile_fields": [
+        "MGRS-36UXB",
+        "36UXB"
+      ],
+      "provider_baseline": "02.06",
+      "provider_relative_orbit": null,
+      "provider_platform": "sentinel-2a",
+      "catalogue_cloud_percentage": 87.1639,
+      "catalogue_cloud_percentage_used_for_selection": false,
+      "supplied_offset_properties": null,
+      "supplied_asset_band_offsets": {
+        "blue": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "cirrus": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "coastal": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "green": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "nir": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "nir08": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "nir09": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "red": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "rededge1": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "rededge2": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "rededge3": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "swir16": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "swir22": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ]
+      },
+      "reader_compatibility": "unverified",
+      "source_approved": false,
+      "roster_selected": false,
+      "interval_to_post_days": 20,
+      "known_cloudy_acquisition_date": false,
+      "own_qa_status": "unexamined",
+      "catalogue_footprint_covers": {
+        "core": true,
+        "qa_context": true
+      },
+      "issues": [],
+      "nominal_metadata_followup_eligible": true,
+      "followup_blockers": [],
+      "raw_item_sha256": "aa2d938f1fabc22496e6f834a6b1a8bf6ef1a55314db8963fd9d963b65029ac6",
+      "occurrence_pages": [
+        1
+      ]
+    },
+    {
+      "collection": "sentinel-2-l1c",
+      "item_id": "S2A_36UXB_20180714_0_L1C",
+      "product_uri": "S2A_MSIL1C_20180714T084601_N0206_R107_T36UXB_20180714T110425.SAFE",
+      "product_identity": {
+        "satellite": "S2A",
+        "acquisition": "20180714T084601",
+        "baseline": "N0206",
+        "orbit": "R107",
+        "tile": "36UXB",
+        "generation": "20180714T110425"
+      },
+      "acquisition_date": "2018-07-14",
+      "provider_datetime": "2018-07-14T08:55:36.702000Z",
+      "provider_tile_fields": [
+        "MGRS-36UXB",
+        "36UXB"
+      ],
+      "provider_baseline": "02.06",
+      "provider_relative_orbit": null,
+      "provider_platform": "sentinel-2a",
+      "catalogue_cloud_percentage": 31.3391,
+      "catalogue_cloud_percentage_used_for_selection": false,
+      "supplied_offset_properties": null,
+      "supplied_asset_band_offsets": {
+        "blue": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "cirrus": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "coastal": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "green": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "nir": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "nir08": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "nir09": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "red": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "rededge1": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "rededge2": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "rededge3": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "swir16": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "swir22": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ]
+      },
+      "reader_compatibility": "unverified",
+      "source_approved": false,
+      "roster_selected": false,
+      "interval_to_post_days": 17,
+      "known_cloudy_acquisition_date": false,
+      "own_qa_status": "unexamined",
+      "catalogue_footprint_covers": {
+        "core": true,
+        "qa_context": true
+      },
+      "issues": [],
+      "nominal_metadata_followup_eligible": false,
+      "followup_blockers": [
+        "different_orbit"
+      ],
+      "raw_item_sha256": "7ecfceca5147eb9e558906ef1834dedc9812ae961c91f2959325c40c3aee3332",
+      "occurrence_pages": [
+        1
+      ]
+    },
+    {
+      "collection": "sentinel-2-l1c",
+      "item_id": "S2A_36UXB_20180721_0_L1C",
+      "product_uri": "S2A_MSIL1C_20180721T083601_N0206_R064_T36UXB_20180721T105541.SAFE",
+      "product_identity": {
+        "satellite": "S2A",
+        "acquisition": "20180721T083601",
+        "baseline": "N0206",
+        "orbit": "R064",
+        "tile": "36UXB",
+        "generation": "20180721T105541"
+      },
+      "acquisition_date": "2018-07-21",
+      "provider_datetime": "2018-07-21T08:42:34.710000Z",
+      "provider_tile_fields": [
+        "MGRS-36UXB",
+        "36UXB"
+      ],
+      "provider_baseline": "02.06",
+      "provider_relative_orbit": null,
+      "provider_platform": "sentinel-2a",
+      "catalogue_cloud_percentage": 42.0056,
+      "catalogue_cloud_percentage_used_for_selection": false,
+      "supplied_offset_properties": null,
+      "supplied_asset_band_offsets": {
+        "blue": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "cirrus": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "coastal": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "green": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "nir": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "nir08": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "nir09": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "red": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "rededge1": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "rededge2": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "rededge3": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "swir16": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "swir22": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ]
+      },
+      "reader_compatibility": "unverified",
+      "source_approved": false,
+      "roster_selected": false,
+      "interval_to_post_days": 10,
+      "known_cloudy_acquisition_date": false,
+      "own_qa_status": "unexamined",
+      "catalogue_footprint_covers": {
+        "core": true,
+        "qa_context": true
+      },
+      "issues": [],
+      "nominal_metadata_followup_eligible": true,
+      "followup_blockers": [],
+      "raw_item_sha256": "ba4d5766cddb84dd4efd3391535eaa72f9b1205a020aca419801c5b182e937b5",
+      "occurrence_pages": [
+        1
+      ]
+    },
+    {
+      "collection": "sentinel-2-l1c",
+      "item_id": "S2A_36UXB_20180721_1_L1C",
+      "product_uri": "S2A_MSIL1C_20180721T083601_N0500_R064_T36UXB_20230813T125605.SAFE",
+      "product_identity": {
+        "satellite": "S2A",
+        "acquisition": "20180721T083601",
+        "baseline": "N0500",
+        "orbit": "R064",
+        "tile": "36UXB",
+        "generation": "20230813T125605"
+      },
+      "acquisition_date": "2018-07-21",
+      "provider_datetime": "2018-07-21T08:46:06.072000Z",
+      "provider_tile_fields": [
+        "MGRS-36UXB",
+        "36UXB"
+      ],
+      "provider_baseline": "05.00",
+      "provider_relative_orbit": null,
+      "provider_platform": "sentinel-2a",
+      "catalogue_cloud_percentage": 47.5294944932301,
+      "catalogue_cloud_percentage_used_for_selection": false,
+      "supplied_offset_properties": null,
+      "supplied_asset_band_offsets": {
+        "blue": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "cirrus": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "coastal": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "green": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "nir": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "nir08": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "nir09": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "red": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "rededge1": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "rededge2": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "rededge3": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "swir16": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "swir22": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ]
+      },
+      "reader_compatibility": "unverified",
+      "source_approved": false,
+      "roster_selected": false,
+      "interval_to_post_days": 10,
+      "known_cloudy_acquisition_date": false,
+      "own_qa_status": "unexamined",
+      "catalogue_footprint_covers": {
+        "core": true,
+        "qa_context": true
+      },
+      "issues": [],
+      "nominal_metadata_followup_eligible": false,
+      "followup_blockers": [
+        "different_baseline"
+      ],
+      "raw_item_sha256": "ad1154b0c1449defb0a9ba902ed7a7830cd5ac9cd942688f401dadebb0273348",
+      "occurrence_pages": [
+        1
+      ]
+    },
+    {
+      "collection": "sentinel-2-l1c",
+      "item_id": "S2A_36UXB_20180724_0_L1C",
+      "product_uri": "S2A_MSIL1C_20180724T084601_N0206_R107_T36UXB_20180724T110348.SAFE",
+      "product_identity": {
+        "satellite": "S2A",
+        "acquisition": "20180724T084601",
+        "baseline": "N0206",
+        "orbit": "R107",
+        "tile": "36UXB",
+        "generation": "20180724T110348"
+      },
+      "acquisition_date": "2018-07-24",
+      "provider_datetime": "2018-07-24T08:50:44.473000Z",
+      "provider_tile_fields": [
+        "MGRS-36UXB",
+        "36UXB"
+      ],
+      "provider_baseline": "02.06",
+      "provider_relative_orbit": null,
+      "provider_platform": "sentinel-2a",
+      "catalogue_cloud_percentage": 41.1034,
+      "catalogue_cloud_percentage_used_for_selection": false,
+      "supplied_offset_properties": null,
+      "supplied_asset_band_offsets": {
+        "blue": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "cirrus": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "coastal": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "green": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "nir": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "nir08": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "nir09": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "red": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "rededge1": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "rededge2": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "rededge3": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "swir16": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "swir22": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ]
+      },
+      "reader_compatibility": "unverified",
+      "source_approved": false,
+      "roster_selected": false,
+      "interval_to_post_days": 7,
+      "known_cloudy_acquisition_date": false,
+      "own_qa_status": "unexamined",
+      "catalogue_footprint_covers": {
+        "core": true,
+        "qa_context": true
+      },
+      "issues": [],
+      "nominal_metadata_followup_eligible": false,
+      "followup_blockers": [
+        "different_orbit"
+      ],
+      "raw_item_sha256": "3854df28ef2667f898601bad0583fbb2415ef76493837558f12c9d69a495bd72",
+      "occurrence_pages": [
+        1
+      ]
+    },
+    {
+      "collection": "sentinel-2-l1c",
+      "item_id": "S2B_36UXB_20180706_0_L1C",
+      "product_uri": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE",
+      "product_identity": {
+        "satellite": "S2B",
+        "acquisition": "20180706T083559",
+        "baseline": "N0206",
+        "orbit": "R064",
+        "tile": "36UXB",
+        "generation": "20180706T123246"
+      },
+      "acquisition_date": "2018-07-06",
+      "provider_datetime": "2018-07-06T08:43:11.388000Z",
+      "provider_tile_fields": [
+        "MGRS-36UXB",
+        "36UXB"
+      ],
+      "provider_baseline": "02.06",
+      "provider_relative_orbit": null,
+      "provider_platform": "sentinel-2b",
+      "catalogue_cloud_percentage": 16.2856,
+      "catalogue_cloud_percentage_used_for_selection": false,
+      "supplied_offset_properties": null,
+      "supplied_asset_band_offsets": {
+        "blue": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "cirrus": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "coastal": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "green": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "nir": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "nir08": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "nir09": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "red": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "rededge1": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "rededge2": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "rededge3": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "swir16": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "swir22": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ]
+      },
+      "reader_compatibility": "unverified",
+      "source_approved": false,
+      "roster_selected": false,
+      "interval_to_post_days": 25,
+      "known_cloudy_acquisition_date": false,
+      "own_qa_status": "unexamined",
+      "catalogue_footprint_covers": {
+        "core": true,
+        "qa_context": true
+      },
+      "issues": [],
+      "nominal_metadata_followup_eligible": true,
+      "followup_blockers": [],
+      "raw_item_sha256": "240e23af9e7dad88c77e0457ab01e7c6d7cb66b13f65a8d90ae80906728c4af0",
+      "occurrence_pages": [
+        1
+      ]
+    },
+    {
+      "collection": "sentinel-2-l1c",
+      "item_id": "S2B_36UXB_20180706_1_L1C",
+      "product_uri": "S2B_MSIL1C_20180706T083559_N0500_R064_T36UXB_20230806T005543.SAFE",
+      "product_identity": {
+        "satellite": "S2B",
+        "acquisition": "20180706T083559",
+        "baseline": "N0500",
+        "orbit": "R064",
+        "tile": "36UXB",
+        "generation": "20230806T005543"
+      },
+      "acquisition_date": "2018-07-06",
+      "provider_datetime": "2018-07-06T08:46:03.867000Z",
+      "provider_tile_fields": [
+        "MGRS-36UXB",
+        "36UXB"
+      ],
+      "provider_baseline": "05.00",
+      "provider_relative_orbit": null,
+      "provider_platform": "sentinel-2b",
+      "catalogue_cloud_percentage": 44.1272872388715,
+      "catalogue_cloud_percentage_used_for_selection": false,
+      "supplied_offset_properties": null,
+      "supplied_asset_band_offsets": {
+        "blue": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "cirrus": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "coastal": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "green": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "nir": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "nir08": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "nir09": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "red": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "rededge1": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "rededge2": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "rededge3": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "swir16": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "swir22": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ]
+      },
+      "reader_compatibility": "unverified",
+      "source_approved": false,
+      "roster_selected": false,
+      "interval_to_post_days": 25,
+      "known_cloudy_acquisition_date": false,
+      "own_qa_status": "unexamined",
+      "catalogue_footprint_covers": {
+        "core": true,
+        "qa_context": true
+      },
+      "issues": [],
+      "nominal_metadata_followup_eligible": false,
+      "followup_blockers": [
+        "different_baseline"
+      ],
+      "raw_item_sha256": "e32019a33508de5e07951b17ebd4a25d6f35965a6d19e20798c8ab37899e5a73",
+      "occurrence_pages": [
+        1
+      ]
+    },
+    {
+      "collection": "sentinel-2-l1c",
+      "item_id": "S2B_36UXB_20180709_0_L1C",
+      "product_uri": "S2B_MSIL1C_20180709T084559_N0206_R107_T36UXB_20180709T123737.SAFE",
+      "product_identity": {
+        "satellite": "S2B",
+        "acquisition": "20180709T084559",
+        "baseline": "N0206",
+        "orbit": "R107",
+        "tile": "36UXB",
+        "generation": "20180709T123737"
+      },
+      "acquisition_date": "2018-07-09",
+      "provider_datetime": "2018-07-09T08:48:39.806000Z",
+      "provider_tile_fields": [
+        "MGRS-36UXB",
+        "36UXB"
+      ],
+      "provider_baseline": "02.06",
+      "provider_relative_orbit": null,
+      "provider_platform": "sentinel-2b",
+      "catalogue_cloud_percentage": 9.8448,
+      "catalogue_cloud_percentage_used_for_selection": false,
+      "supplied_offset_properties": null,
+      "supplied_asset_band_offsets": {
+        "blue": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "cirrus": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "coastal": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "green": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "nir": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "nir08": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "nir09": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "red": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "rededge1": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "rededge2": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "rededge3": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "swir16": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "swir22": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ]
+      },
+      "reader_compatibility": "unverified",
+      "source_approved": false,
+      "roster_selected": false,
+      "interval_to_post_days": 22,
+      "known_cloudy_acquisition_date": false,
+      "own_qa_status": "unexamined",
+      "catalogue_footprint_covers": {
+        "core": true,
+        "qa_context": true
+      },
+      "issues": [],
+      "nominal_metadata_followup_eligible": false,
+      "followup_blockers": [
+        "different_orbit"
+      ],
+      "raw_item_sha256": "034c4dfd9f762c0bc875c8655e459ab4f4d38a253943419540061656716dd23d",
+      "occurrence_pages": [
+        1
+      ]
+    },
+    {
+      "collection": "sentinel-2-l1c",
+      "item_id": "S2B_36UXB_20180716_0_L1C",
+      "product_uri": "S2B_MSIL1C_20180716T084009_N0206_R064_T36UXB_20180716T122805.SAFE",
+      "product_identity": {
+        "satellite": "S2B",
+        "acquisition": "20180716T084009",
+        "baseline": "N0206",
+        "orbit": "R064",
+        "tile": "36UXB",
+        "generation": "20180716T122805"
+      },
+      "acquisition_date": "2018-07-16",
+      "provider_datetime": "2018-07-16T08:40:11.461000Z",
+      "provider_tile_fields": [
+        "MGRS-36UXB",
+        "36UXB"
+      ],
+      "provider_baseline": "02.06",
+      "provider_relative_orbit": null,
+      "provider_platform": "sentinel-2b",
+      "catalogue_cloud_percentage": 89.453,
+      "catalogue_cloud_percentage_used_for_selection": false,
+      "supplied_offset_properties": null,
+      "supplied_asset_band_offsets": {
+        "blue": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "cirrus": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "coastal": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "green": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "nir": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "nir08": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "nir09": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "red": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "rededge1": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "rededge2": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "rededge3": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "swir16": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "swir22": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ]
+      },
+      "reader_compatibility": "unverified",
+      "source_approved": false,
+      "roster_selected": false,
+      "interval_to_post_days": 15,
+      "known_cloudy_acquisition_date": false,
+      "own_qa_status": "unexamined",
+      "catalogue_footprint_covers": {
+        "core": true,
+        "qa_context": true
+      },
+      "issues": [],
+      "nominal_metadata_followup_eligible": true,
+      "followup_blockers": [],
+      "raw_item_sha256": "33d12e12f69088062c3298fa94ae779ee0089becad1ab8f9fc41986e4ff3e646",
+      "occurrence_pages": [
+        1
+      ]
+    },
+    {
+      "collection": "sentinel-2-l1c",
+      "item_id": "S2B_36UXB_20180716_1_L1C",
+      "product_uri": "S2B_MSIL1C_20180716T084009_N0500_R064_T36UXB_20230822T113551.SAFE",
+      "product_identity": {
+        "satellite": "S2B",
+        "acquisition": "20180716T084009",
+        "baseline": "N0500",
+        "orbit": "R064",
+        "tile": "36UXB",
+        "generation": "20230822T113551"
+      },
+      "acquisition_date": "2018-07-16",
+      "provider_datetime": "2018-07-16T08:46:03.387000Z",
+      "provider_tile_fields": [
+        "MGRS-36UXB",
+        "36UXB"
+      ],
+      "provider_baseline": "05.00",
+      "provider_relative_orbit": null,
+      "provider_platform": "sentinel-2b",
+      "catalogue_cloud_percentage": 98.831406586285,
+      "catalogue_cloud_percentage_used_for_selection": false,
+      "supplied_offset_properties": null,
+      "supplied_asset_band_offsets": {
+        "blue": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "cirrus": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "coastal": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "green": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "nir": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "nir08": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "nir09": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "red": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "rededge1": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "rededge2": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "rededge3": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "swir16": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "swir22": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ]
+      },
+      "reader_compatibility": "unverified",
+      "source_approved": false,
+      "roster_selected": false,
+      "interval_to_post_days": 15,
+      "known_cloudy_acquisition_date": false,
+      "own_qa_status": "unexamined",
+      "catalogue_footprint_covers": {
+        "core": true,
+        "qa_context": true
+      },
+      "issues": [],
+      "nominal_metadata_followup_eligible": false,
+      "followup_blockers": [
+        "different_baseline"
+      ],
+      "raw_item_sha256": "57ea8e30381f071d95e0f20c2552c234444ad7864bc7a88263bf6cf934e56f23",
+      "occurrence_pages": [
+        1
+      ]
+    },
+    {
+      "collection": "sentinel-2-l1c",
+      "item_id": "S2B_36UXB_20180719_0_L1C",
+      "product_uri": "S2B_MSIL1C_20180719T084559_N0206_R107_T36UXB_20180719T124224.SAFE",
+      "product_identity": {
+        "satellite": "S2B",
+        "acquisition": "20180719T084559",
+        "baseline": "N0206",
+        "orbit": "R107",
+        "tile": "36UXB",
+        "generation": "20180719T124224"
+      },
+      "acquisition_date": "2018-07-19",
+      "provider_datetime": "2018-07-19T08:52:40.526000Z",
+      "provider_tile_fields": [
+        "MGRS-36UXB",
+        "36UXB"
+      ],
+      "provider_baseline": "02.06",
+      "provider_relative_orbit": null,
+      "provider_platform": "sentinel-2b",
+      "catalogue_cloud_percentage": 60.0419,
+      "catalogue_cloud_percentage_used_for_selection": false,
+      "supplied_offset_properties": null,
+      "supplied_asset_band_offsets": {
+        "blue": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "cirrus": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "coastal": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "green": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "nir": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "nir08": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "nir09": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "red": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "rededge1": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "rededge2": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "rededge3": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "swir16": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "swir22": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ]
+      },
+      "reader_compatibility": "unverified",
+      "source_approved": false,
+      "roster_selected": false,
+      "interval_to_post_days": 12,
+      "known_cloudy_acquisition_date": false,
+      "own_qa_status": "unexamined",
+      "catalogue_footprint_covers": {
+        "core": true,
+        "qa_context": true
+      },
+      "issues": [],
+      "nominal_metadata_followup_eligible": false,
+      "followup_blockers": [
+        "different_orbit"
+      ],
+      "raw_item_sha256": "c0e2a2ff8b4e627e547f9b10ae1e2747d0287a878fa7147afe8ef89162427e55",
+      "occurrence_pages": [
+        1
+      ]
+    },
+    {
+      "collection": "sentinel-2-l1c",
+      "item_id": "S2B_36UXB_20180726_0_L1C",
+      "product_uri": "S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227.SAFE",
+      "product_identity": {
+        "satellite": "S2B",
+        "acquisition": "20180726T084009",
+        "baseline": "N0206",
+        "orbit": "R064",
+        "tile": "36UXB",
+        "generation": "20180726T104227"
+      },
+      "acquisition_date": "2018-07-26",
+      "provider_datetime": "2018-07-26T08:44:37.430000Z",
+      "provider_tile_fields": [
+        "MGRS-36UXB",
+        "36UXB"
+      ],
+      "provider_baseline": "02.06",
+      "provider_relative_orbit": null,
+      "provider_platform": "sentinel-2b",
+      "catalogue_cloud_percentage": 33.9981,
+      "catalogue_cloud_percentage_used_for_selection": false,
+      "supplied_offset_properties": null,
+      "supplied_asset_band_offsets": {
+        "blue": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "cirrus": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "coastal": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "green": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "nir": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "nir08": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "nir09": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "red": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "rededge1": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "rededge2": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "rededge3": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "swir16": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "swir22": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ]
+      },
+      "reader_compatibility": "unverified",
+      "source_approved": false,
+      "roster_selected": false,
+      "interval_to_post_days": 5,
+      "known_cloudy_acquisition_date": true,
+      "own_qa_status": "excluded_by_V11_automatic_quality_screen",
+      "catalogue_footprint_covers": {
+        "core": true,
+        "qa_context": true
+      },
+      "issues": [],
+      "nominal_metadata_followup_eligible": false,
+      "followup_blockers": [
+        "not_a_fresh_earlier_date"
+      ],
+      "raw_item_sha256": "89ca608637197828c043fac25af6f6257044d806c5c0a26912f5ffc4b3ef208d",
+      "occurrence_pages": [
+        1
+      ]
+    },
+    {
+      "collection": "sentinel-2-l1c",
+      "item_id": "S2B_36UXB_20180726_1_L1C",
+      "product_uri": "S2B_MSIL1C_20180726T084009_N0500_R064_T36UXB_20230627T191010.SAFE",
+      "product_identity": {
+        "satellite": "S2B",
+        "acquisition": "20180726T084009",
+        "baseline": "N0500",
+        "orbit": "R064",
+        "tile": "36UXB",
+        "generation": "20230627T191010"
+      },
+      "acquisition_date": "2018-07-26",
+      "provider_datetime": "2018-07-26T08:46:02.403000Z",
+      "provider_tile_fields": [
+        "MGRS-36UXB",
+        "36UXB"
+      ],
+      "provider_baseline": "05.00",
+      "provider_relative_orbit": null,
+      "provider_platform": "sentinel-2b",
+      "catalogue_cloud_percentage": 39.1234073089047,
+      "catalogue_cloud_percentage_used_for_selection": false,
+      "supplied_offset_properties": null,
+      "supplied_asset_band_offsets": {
+        "blue": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "cirrus": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "coastal": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "green": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "nir": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "nir08": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "nir09": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "red": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "rededge1": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "rededge2": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "rededge3": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "swir16": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ],
+        "swir22": [
+          {
+            "band_index": 0,
+            "offset": -0.1
+          }
+        ]
+      },
+      "reader_compatibility": "unverified",
+      "source_approved": false,
+      "roster_selected": false,
+      "interval_to_post_days": 5,
+      "known_cloudy_acquisition_date": true,
+      "own_qa_status": "unexamined",
+      "catalogue_footprint_covers": {
+        "core": true,
+        "qa_context": true
+      },
+      "issues": [],
+      "nominal_metadata_followup_eligible": false,
+      "followup_blockers": [
+        "different_baseline",
+        "not_a_fresh_earlier_date"
+      ],
+      "raw_item_sha256": "80296b222bd5c1662b166eead70737523d068318128dcba0b70f7e9cf594f50d",
+      "occurrence_pages": [
+        1
+      ]
+    },
+    {
+      "collection": "sentinel-2-l1c",
+      "item_id": "S2B_36UXB_20180729_0_L1C",
+      "product_uri": "S2B_MSIL1C_20180729T084559_N0206_R107_T36UXB_20180729T125123.SAFE",
+      "product_identity": {
+        "satellite": "S2B",
+        "acquisition": "20180729T084559",
+        "baseline": "N0206",
+        "orbit": "R107",
+        "tile": "36UXB",
+        "generation": "20180729T125123"
+      },
+      "acquisition_date": "2018-07-29",
+      "provider_datetime": "2018-07-29T08:52:35.922000Z",
+      "provider_tile_fields": [
+        "MGRS-36UXB",
+        "36UXB"
+      ],
+      "provider_baseline": "02.06",
+      "provider_relative_orbit": null,
+      "provider_platform": "sentinel-2b",
+      "catalogue_cloud_percentage": 79.0147,
+      "catalogue_cloud_percentage_used_for_selection": false,
+      "supplied_offset_properties": null,
+      "supplied_asset_band_offsets": {
+        "blue": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "cirrus": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "coastal": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "green": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "nir": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "nir08": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "nir09": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "red": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "rededge1": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "rededge2": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "rededge3": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "swir16": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ],
+        "swir22": [
+          {
+            "band_index": 0,
+            "offset": 0
+          }
+        ]
+      },
+      "reader_compatibility": "unverified",
+      "source_approved": false,
+      "roster_selected": false,
+      "interval_to_post_days": 2,
+      "known_cloudy_acquisition_date": false,
+      "own_qa_status": "unexamined",
+      "catalogue_footprint_covers": {
+        "core": true,
+        "qa_context": true
+      },
+      "issues": [],
+      "nominal_metadata_followup_eligible": false,
+      "followup_blockers": [
+        "different_orbit",
+        "not_a_fresh_earlier_date",
+        "outside_forward_interval"
+      ],
+      "raw_item_sha256": "747ffee8bbc4996531da187924132a1ae126d88b2a5171f6524a2de0bdbb2dfc",
+      "occurrence_pages": [
+        1
+      ]
+    }
+  ],
+  "limitations": [
+    "Catalogue footprint is not valid-pixel coverage or cloud QA.",
+    "Nominal N0206 follow-up is not offset/reader/source approval.",
+    "Known-cloudy 26 July and all product variants remain retained.",
+    "Earlier dates require new lineage and cumulative target calculation.",
+    "Two events are one geographic location; no labels or unseen accuracy."
+  ]
+}

@@ -5,7 +5,7 @@ status, then the latest handoff before edits. Commit every completed verified
 logical change with the handoff updated and push to the SAME branch. This entry
 point works for Codex, Gemini Antigravity or another agent without chat history.
 
-Current V12 metadata-only continuation (implementation tested and frozen; query pending):
+Current completed V12 metadata-only catalogue state:
 **`Docs/Handoffs/2026-11-18-earlier-preimage-catalogue.md`**.
 Completed review/repair/QA state:
 **`Docs/Handoffs/2026-11-18-validation-source-review.md`**.
@@ -52,16 +52,23 @@ Four cache observations, two six-plane QA masks and all numeric context outcomes
 were replay-verified. No visual images were opened, labels approved or date/
 accuracy estimated. This phase does NOT prove all 27 feature channels finite.
 
-**341 tests pass.** No worker is active. Next proposed bounded task: metadata-only
-catalogue inventory of earlier pre-image dates within 30 days before 31 July 2018,
-retaining the current cloudy pair and defining any new roster BEFORE pixel work.
-No automatic replacements, downloads, grid shifts, mask shrinking or labels.
+V12 retained 18 catalogue products (12 N0206/6 N0500) across 12 dates and both
+known-cloudy 26 July variants. Five nominal earlier metadata follow-up dates match
+the fixed tile/orbit/baseline/footprint rules: 1, 6, 11, 16 and 21 July 2018. Their pixels
+and QA remain unexamined; reader compatibility is unverified and no roster was
+selected. Two raw pages (18 items + empty terminal) and all variants are backed up.
+
+**349 tests pass.** No worker is active. Next bounded task: predeclare a small
+metadata/compatibility roster from the five earlier dates, then verify actual
+provider XML, complete 58-file QA asset availability and byte/disk budgets BEFORE
+imagery acquisition. No automatic replacements, grid shifts, mask shrinking or labels.
 Both events share ONE geographic group and are not independent locations.
 
 Use one nice +10 CPU worker, native/Torch threads 1, no GPU, unchanged
 `validate_sample.run_guarded`, 512 MiB RSS and 1.5 GiB available-system-memory
 reserve, 300 s maximum. Actual latest peaks: source repair 58.36 MiB, QA 265.44 MiB,
-replay 144.88 MiB, full tests 298.27 MiB. Preserve masks 0 forest/1 clearing/255 unknown,
+replay 144.88 MiB, V12 inventory ~60 MiB, full 349 tests 320.53 MiB. Preserve masks
+0 forest/1 clearing/255 unknown,
 all original frozen sources and full train/test footprint barriers.
 
 Completed output directories have `metadata.json`; never overwrite or duplicate
