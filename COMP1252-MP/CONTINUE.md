@@ -6,7 +6,8 @@ agent. Work in this project on **`codex/curated-deforestation-pilot`**. Read
 editing. Preserve other work and commit each completed, verified logical change
 on this same branch with an updated handoff.
 
-Current in-progress check/state: **`Docs/Handoffs/2026-11-17-validation-ingestion.md`**.
+Current review/repair in progress: **`Docs/Handoffs/2026-11-18-validation-source-review.md`**.
+Previous partial source ingestion: `Docs/Handoffs/2026-11-17-validation-ingestion.md`.
 Previous completed check/state: `Docs/Handoffs/2026-11-17-validation-acquisition.md`.
 Previous completed inventory: `Docs/Handoffs/2026-11-17-validation-unscreened.md`.
 Previous completed review: `Docs/Handoffs/2026-11-17-validation-manual.md`.
@@ -76,7 +77,12 @@ All 324 tests pass; the guarded worker used 79.66 MiB high-water RSS in 46.48 s 
 network transfer for 933.72 MiB). No uncurated training, threshold tuning or labels were
 executed; QA screening remains required before any validation use. Do not rerun completed
 processing, silently retune protocols or force labels from numeric proxies or rejected cases.
-The handoff identifies proposed next work and what has already finished.
+Review correction on 18 November: those scenes pass the seven-band inventory
+but FAIL the actual frozen pixel-QA metadata gate, missing four cloud bands and
+44 quality GMLs each. V10 supplement repair is now predeclared; historical V8/V9
+compatibility claims are superseded by the review, not silently rewritten.
+Do not run QA until both strict prerequisites pass. The new handoff identifies
+the verified correction, remaining work and frozen-source boundaries.
 
 Use one low-priority CPU worker, native/Torch threads one, no GPU, monitored
 512 MiB worker RSS and 1.5 GiB available-system-memory reserve. Use the existing

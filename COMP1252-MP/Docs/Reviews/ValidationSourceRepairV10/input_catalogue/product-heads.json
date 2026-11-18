@@ -1,0 +1,12 @@
+{
+  "S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227": {
+    "url": "https://sentinel-s2-l1c.s3.amazonaws.com/products/2018/7/26/S2B_MSIL1C_20180726T084009_N0206_R064_T36UXB_20180726T104227/metadata.xml",
+    "size": 44316,
+    "etag": "\"91c62bd1afb236fda28b43988056b1c5\""
+  },
+  "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233": {
+    "url": "https://sentinel-s2-l1c.s3.amazonaws.com/products/2018/7/31/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233/metadata.xml",
+    "size": 44478,
+    "etag": "\"608d67f64c8d454950cb55ffc788bba2\""
+  }
+}
