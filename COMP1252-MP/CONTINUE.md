@@ -5,7 +5,7 @@ status, then the latest handoff before edits. Commit every completed verified
 logical change with the handoff updated and push to the SAME branch. This entry
 point works for Codex, Gemini Antigravity or another agent without chat history.
 
-Current V13 metadata preflight (tested and frozen; live check pending):
+Current completed V13 earlier-source metadata state:
 **`Docs/Handoffs/2026-11-18-earlier-source-metadata.md`**.
 Completed V12 metadata-only catalogue state:
 **`Docs/Handoffs/2026-11-18-earlier-preimage-catalogue.md`**.
@@ -60,16 +60,24 @@ the fixed tile/orbit/baseline/footprint rules: 1, 6, 11, 16 and 21 July 2018. Th
 and QA remain unexamined; reader compatibility is unverified and no roster was
 selected. Two raw pages (18 items + empty terminal) and all variants are backed up.
 
-**349 tests pass.** No worker is active. Next bounded task: predeclare a small
-metadata/compatibility roster from the five earlier dates, then verify actual
-provider XML, complete 58-file QA asset availability and byte/disk budgets BEFORE
-imagery acquisition. No automatic replacements, grid shifts, mask shrinking or labels.
+V13 fixed the metadata roster to 21 then 16 July by date alone. Genuine L1C
+product/tile XML and complete 58-file listings pass for both. The STAC records'
+L2A asset hrefs were preserved as a catalogue anomaly and never fetched; use the
+explicit verified L1C provider manifest. No imagery/GML content was downloaded,
+source published, QA run or label approved. Total future payload 1,050,527,541 bytes.
+
+**358 tests pass.** No worker is active. Next bounded task: predeclare strict
+acquisition of these two pinned manifests, with streaming integrity checks,
+scene-sized guarded jobs, recoverable staging outside source discovery, actual
+local frozen QA metadata validation and fresh capacity checks before publication.
+No pixel/model execution, automatic replacements, grid shifts, mask shrinking or labels.
 Both events share ONE geographic group and are not independent locations.
 
 Use one nice +10 CPU worker, native/Torch threads 1, no GPU, unchanged
 `validate_sample.run_guarded`, 512 MiB RSS and 1.5 GiB available-system-memory
 reserve, 300 s maximum. Actual latest peaks: source repair 58.36 MiB, QA 265.44 MiB,
-replay 144.88 MiB, V12 inventory ~60 MiB, full 349 tests 320.53 MiB. Preserve masks
+replay 144.88 MiB, V12 inventory ~60 MiB, V13 metadata 45.56 MiB, full 358 tests
+361.52 MiB high-water / 378.6 MiB sampled. Preserve masks
 0 forest/1 clearing/255 unknown,
 all original frozen sources and full train/test footprint barriers.
 

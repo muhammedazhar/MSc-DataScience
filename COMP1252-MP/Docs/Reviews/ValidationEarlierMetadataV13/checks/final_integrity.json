@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "checked_on": "2026-11-18",
+  "protocol_sha256": "a26fad9e764ab69453e09be255582c55d69692df40c3d032504eb8043b929d8e",
+  "preflight_sha256": "6d7fe1f914c7ff6a8e6a2cd57bb1d03e9f4087a28bc197b4da7e97a8c1e7be89",
+  "metadata_sha256": "03ef1c08822595ef1b8b2d2bcce1b1c8c39163fb52f809307d69c750eee785ad",
+  "frozen_input_hashes_checked": 50,
+  "fixed_roster_dates": [
+    "2018-07-21",
+    "2018-07-16"
+  ],
+  "metadata_requests": 8,
+  "verified_original_xml_files": 4,
+  "complete_listings": 2,
+  "pinned_required_assets": 116,
+  "future_complete_payload_bytes": 1050527541,
+  "conservative_future_disk_peak_bytes": 2222938761,
+  "disk_reserve_bytes": 2147483648,
+  "measured_free_disk_bytes": 25819086848,
+  "v11_source_file_stats_unchanged": 116,
+  "v11_excluded_outcomes_preserved": 2,
+  "v10_transaction_state": "complete",
+  "docs_copy_byte_identical": true,
+  "tests_passed": 358,
+  "active_guarded_workers": 0,
+  "image_downloads": 0,
+  "gml_downloads": 0,
+  "source_publications": 0,
+  "pixel_or_model_executions": 0,
+  "labels_approved": 0,
+  "verification_scope": "Raw XML identity/orbit/scale, raw listing size/ETag joins, XML MD5/SHA/headers, exact request allowlist, manifest counts, disk arithmetic, source stats and frozen hashes. Reuses saved grid coverage booleans; no independent raster/QA truth, unread payload integrity or future free-space guarantee."
+}

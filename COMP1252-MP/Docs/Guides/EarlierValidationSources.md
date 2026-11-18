@@ -32,3 +32,8 @@ Next, predeclare a small metadata/compatibility roster and check actual XML and
 all 58 required source assets per scene with measured sizes/disk budget. Preserve
 the cloudy pair, all frozen grids/QA/splits and one geographic-group identity.
 Earlier dates require new temporal-label lineage before any later pixel work.
+
+Follow-up qualification: V13 verified actual L1C XML and full required-object
+listings for 21 and 16 July. Those saved STAC records have L2A asset hrefs; never
+use those hrefs as L1C source evidence. See `EarlierSourceMetadata.md` and the
+new metadata handoff. V12 remains a nominal catalogue inventory, not approval.
