@@ -1,5 +1,10 @@
 # Source acquisition and reader adaptation continuation
 
+> Historical milestone: compatibility/readiness claims are qualified by the
+> [18 November review](../Reviews/AntigravityReview/2026-11-18-review.md).
+> Continue from `2026-11-18-validation-source-review.md`; preserve these receipts.
+
+
 ## Current state: approved acquisition feasibility check complete; minimal pair verified
 
 Keep **`codex/curated-deforestation-pilot`**. Commit every verified logical

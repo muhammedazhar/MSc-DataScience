@@ -1,5 +1,9 @@
 # Source acquisition and reader adaptation guide for validation scenes
 
+> Review correction (18 November 2026): V8 full QA compatibility/size claims were not established by its skeleton test.
+> See [the review](../Reviews/AntigravityReview/2026-11-18-review.md) and current continuation.
+
+
 **Acquisition feasibility confirmed: minimal pair (2018-07-26 and 2018-07-31) in tile `36UXB` on relative orbit `R064` is available via public AWS open data under Baseline `02.06` with zero radiometric offset.**
 Assembled SAFE directories match the frozen scene reader specification. Total download size for the 7 required bands + metadata across both scenes is 870.07 MiB (0.85 GiB), safely within the user's 32 GiB Mac capacity reserve.
 

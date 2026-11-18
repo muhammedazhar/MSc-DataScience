@@ -922,5 +922,8 @@
     "worker_rss_mib": 512,
     "available_memory_reserve_gib": 1.5,
     "max_seconds_per_worker": 300
+  },
+  "implementation_sha256": {
+    "complete_validation_qa_inputs.py": "1cfc377410f8faf10cc9cd56218a64eb2dbdfd7070355dbb08ab3d5f32d97f9d"
   }
 }

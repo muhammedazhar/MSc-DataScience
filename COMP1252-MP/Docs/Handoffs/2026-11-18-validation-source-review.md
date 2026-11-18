@@ -29,8 +29,12 @@ frozen parents. New source scene paths/IDs and derived IDs must be explicit;
 original missing-coverage pairs stay blocked. No class review, forest prediction,
 training or labels in this phase. All27-channel eligibility is a later check.
 
-Code in progress: `complete_validation_qa_inputs.py` and
-`screen_repaired_validation.py` with new tests, outside frozen originals.
+Both new implementations and their tests are complete, outside frozen originals:
+`complete_validation_qa_inputs.py` (8 tests) and `screen_repaired_validation.py`
+(9 tests). All341tests pass, no errors/failures; worker7.94s, peak298.27MiB,
+minimum2.70GiB available. Full proof and focused8-test receipt are archived under
+`Docs/Reviews/ValidationSourceRepairV10/checks/`. V10 source hash is frozen.
+Review/protocol checkpoint `ddb55da` is pushed; this checkpoint adds tested code.
 No supplement download or QA job has run at this checkpoint. Existing2scenes
 and prior20asset receipts are retained; no active pixel/model job.
 

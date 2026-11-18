@@ -1,5 +1,10 @@
 # Source catalogue search and compatibility continuation
 
+> Historical milestone: compatibility/readiness claims are qualified by the
+> [18 November review](../Reviews/AntigravityReview/2026-11-18-review.md).
+> Continue from `2026-11-18-validation-source-review.md`; preserve these receipts.
+
+
 ## Current state: approved catalogue audit complete; tile 36UXB covers fixed crops
 
 Keep **`codex/curated-deforestation-pilot`**. Commit every verified logical

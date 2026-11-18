@@ -1,5 +1,9 @@
 # Source catalogue audit for two validation events
 
+> Review correction (18 November 2026): V7 AWS baseline summaries mix source-specific results and must not establish N0206 compatibility.
+> See [the review](../Reviews/AntigravityReview/2026-11-18-review.md) and current continuation.
+
+
 **External source catalogues confirm full spatial coverage of both fixed validation crops and their QA context by Sentinel-2 tile `36UXB` on relative orbit `R064` across all 7 original pair dates.**
 No imagery was downloaded, no satellite raster pixels were opened, no QA masks or caches were created, and no cloud or forest models were run. The original blocking status of the 12 pairs remains unchanged.
 

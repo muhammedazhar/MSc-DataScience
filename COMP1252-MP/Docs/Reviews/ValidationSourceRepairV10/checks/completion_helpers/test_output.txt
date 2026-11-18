@@ -1,0 +1,13 @@
+test_crash_between_original_backup_and_publish_is_recovered (test_validation_qa_completion.QACompletionTests) ... ok
+test_download_pins_if_match_and_records_content_identity (test_validation_qa_completion.QACompletionTests) ... ok
+test_download_rejects_size_md5_and_etag_failures_without_final_asset (test_validation_qa_completion.QACompletionTests) ... ok
+test_nonempty_original_with_source_md5_mismatch_is_rejected (test_validation_qa_completion.QACompletionTests) ... ok
+test_recovery_preserves_unexpected_user_tree_and_original_backup (test_validation_qa_completion.QACompletionTests) ... ok
+test_second_scene_publication_failure_restores_both_original_inodes (test_validation_qa_completion.QACompletionTests) ... ok
+test_seven_band_inventory_identity_does_not_replace_frozen_qa_gate (test_validation_qa_completion.QACompletionTests) ... ok
+test_staging_failure_never_changes_either_discoverable_original (test_validation_qa_completion.QACompletionTests) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.130s
+
+OK

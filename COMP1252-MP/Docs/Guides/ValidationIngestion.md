@@ -1,5 +1,9 @@
 # Sentinel-2 minimal pair scene ingestion and local registration guide
 
+> Review correction (18 November 2026): V9 verified the seven-band inventory only; the actual frozen pixel-QA prerequisites were incomplete.
+> See [the review](../Reviews/AntigravityReview/2026-11-18-review.md) and current continuation.
+
+
 **Scene ingestion and local SAFE registration completed: minimal pair (2018-07-26 and 2018-07-31) in tile `36UXB` on relative orbit `R064` successfully ingested from AWS Open Data and registered in `Datasets/Sentinel-2/`, bringing total local registered scenes from 50 to 52.**
 Both scenes pass frozen reader verification (`inventory_scenes`) with `metadata_usable == True` and zero radiometric offset. Both fresh validation events now have full core crop and QA context containment on both pair dates.
 
