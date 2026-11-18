@@ -1,0 +1,31 @@
+{
+  "execution_status": "completed",
+  "protocol_sha256": "86bd6f26e9cbcf9df993439852658fe60b7aeb400c2969b030fd866a901b74c4",
+  "implementation_sha256": "1cfc377410f8faf10cc9cd56218a64eb2dbdfd7070355dbb08ab3d5f32d97f9d",
+  "transaction_journal": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/ValidationPilot/v10/source_transaction/journal.json",
+  "artifact_sha256": {
+    "completion.json": "6f3f6015df3d6cff7b6f913c926abce59e1376d633e817857e25db8b82840b46",
+    "report.md": "01a69ec396a5059548f641a862faa0299b73b595fa220987e5d47752af2f6067"
+  },
+  "satellite_pixel_reads": 0,
+  "model_executions": 0,
+  "labels_approved": 0,
+  "resources": {
+    "logical_cpu_count": 11,
+    "machine_ram_gib": 18.0,
+    "worker_peak_rss_mib_sampled": 57.7,
+    "worker_high_water_rss_mib": 58.36,
+    "minimum_available_gib_sampled": 2.79,
+    "elapsed_seconds": 43.19,
+    "worker_limit_mib": 512,
+    "minimum_available_gib_limit": 1.5,
+    "runtime_limit_seconds": 300,
+    "workers": 1,
+    "native_thread_limit": 1,
+    "nice_increment": 10,
+    "gdal_cache_mib": 0,
+    "warp_memory_mib": 0,
+    "gpu_used": false,
+    "monitor_interval_seconds": 0.25
+  }
+}

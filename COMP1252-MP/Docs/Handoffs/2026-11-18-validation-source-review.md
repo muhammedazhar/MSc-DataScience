@@ -35,8 +35,21 @@ Both new implementations and their tests are complete, outside frozen originals:
 minimum2.70GiB available. Full proof and focused8-test receipt are archived under
 `Docs/Reviews/ValidationSourceRepairV10/checks/`. V10 source hash is frozen.
 Review/protocol checkpoint `ddb55da` is pushed; this checkpoint adds tested code.
-No supplement download or QA job has run at this checkpoint. Existing2scenes
-and prior20asset receipts are retained; no active pixel/model job.
+Supplement completion is now DONE and guarded: all96source assets/74,541,437bytes
+verified, all20original files match V9 SHA/source MD5/size, and BOTH final scenes
+pass actual frozen `qa_scene_metadata` with no issues. Metadata worker43.19s,
+peak58.36MiB, minimum2.79GiB available. Free disk measured24.33GiB before,
+24.26GiB after; original trees are retained in transaction backups.
+Evidence: `Docs/Reviews/ValidationSourceRepairV10/completion/`. Persistent journal
+state is complete; never rerun old V9 ingestion or remove these recovery backups.
+Source-code/checkpoint `2eda56d` is pushed. This checkpoint saves completed repair
+and separately predeclares V11 QA-only screen before any new pixel work.
+
+V11 protocol: `Docs/Reviews/ValidationSourceScreenV11/protocol.json`, exactly
+two derived pairs/four observations, max44fusedband requests/four cloud-model
+calls using unchanged QA policy. Original grids/provenance/splits are fixed;
+old blocked parents remain unchanged. No source JP2s or QA models have run
+yet at this checkpoint; next run screen mode then cache/TIF replay verification.
 
 Use one nice+10 CPU worker, threads1, no GPU, unchanged `validate_sample.run_guarded`,
 512MiB RSS,1.5GiB available-system-memory reserve,300s maximum. Working paths:
