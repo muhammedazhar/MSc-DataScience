@@ -1,0 +1,26 @@
+[
+  {
+    "original_cache_path": "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/722053f16fd20b5d743c8dd73e3e054633f060accda360b9bd73c9633ebc11b1.npz",
+    "evidence_path": "cache_evidence/722053f16fd20b5d743c8dd73e3e054633f060accda360b9bd73c9633ebc11b1.npz",
+    "sha256": "d73dc6080a70058cdc11c5872d4d015141803935bddcf9624acaa251ddd9505d",
+    "scope": "Byte-identical bounded copy; no image rendering or class review."
+  },
+  {
+    "original_cache_path": "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/81ecf2b1919537de0ab2e811a7618cf711472ea74f36af7733684ea6b0eb2e70.npz",
+    "evidence_path": "cache_evidence/81ecf2b1919537de0ab2e811a7618cf711472ea74f36af7733684ea6b0eb2e70.npz",
+    "sha256": "f61b34c6a77b0c72e75e65420bb34c65f62beffba8f9c06d03e4c1b15a4df065",
+    "scope": "Byte-identical bounded copy; no image rendering or class review."
+  },
+  {
+    "original_cache_path": "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/2541e73d06030b0c8a985ba6cb9c03e01c10ba9806d6c5f940601aa65a6d1b51.npz",
+    "evidence_path": "cache_evidence/2541e73d06030b0c8a985ba6cb9c03e01c10ba9806d6c5f940601aa65a6d1b51.npz",
+    "sha256": "c7d777ddbcb3b9f79b710ad1bf4eaca200f7304d058118cf172de33a7780f9d2",
+    "scope": "Byte-identical bounded copy; no image rendering or class review."
+  },
+  {
+    "original_cache_path": "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/f54199f875435ca09e90338d88a99272f60537ccc3c4910a578aa9a28da4a78b.npz",
+    "evidence_path": "cache_evidence/f54199f875435ca09e90338d88a99272f60537ccc3c4910a578aa9a28da4a78b.npz",
+    "sha256": "e5a76d36b10481d6471622302c9db0acedb20da6d5dd630e277ee26a22dab068",
+    "scope": "Byte-identical bounded copy; no image rendering or class review."
+  }
+]

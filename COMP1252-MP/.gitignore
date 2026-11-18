@@ -209,4 +209,5 @@ Keys/
 
 # Preserve all review-bound validation arrays; keep further working outputs local.
 !/Docs/Reviews/ValidationPilotV1/prepared_cases/**/*.tif
+!/Docs/Reviews/ValidationSourceScreenV11/screen/masks/*.tif
 /Datasets/ValidationPilot/

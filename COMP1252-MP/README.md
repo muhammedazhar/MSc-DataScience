@@ -41,21 +41,15 @@ supplies no validation labels or first-visible interval; all 299 tests pass.
 The [unscreened-pair inventory](./Docs/Guides/ValidationUnscreened.md) accounts
 for the remaining 606 pairs/630 anchors. All retain original coverage or
 provenance blocks; zero passes all metadata gates. All 305 tests pass.
-The [coverage feasibility check](./Docs/Guides/ValidationCoverage.md) confirms
-that neither of the two fresh supported events intersects any local Sentinel-2
-scene. Exact source requirements are saved; all 311 tests pass.
-The [source catalogue audit](./Docs/Guides/ValidationCatalogue.md) identifies
-covering Sentinel-2 tile 36UXB on relative orbit R064 across all 7 original pair dates,
-documents CDSE baseline 05.00 offset incompatibility and download size (4.69 GiB for 7 scenes);
-all 316 tests pass.
-The [source acquisition and reader adaptation guide](./Docs/Guides/ValidationAcquisition.md)
-establishes direct reader compatibility and SAFE assembly for the minimal pair (2018-07-26 and 2018-07-31)
-via AWS open data Baseline 02.06 (870.07 MiB combined for 7 required bands); all 319 tests pass.
-The [scene ingestion and registration guide](./Docs/Guides/ValidationIngestion.md)
-documents the successful acquisition and SAFE registration of minimal validation pair
-scenes (2018-07-26 and 2018-07-31) in tile 36UXB from AWS open data, bringing total
-registered scenes to 52 and providing full core and QA context coverage for both fresh events;
-all 324 tests pass.
+The [coverage feasibility check](./Docs/Guides/ValidationCoverage.md) found that
+neither event intersected the original 50 local scenes. Catalogue/acquisition
+work then located and registered two covering 36UXB scenes. The subsequent
+[source review and repair](./Docs/Guides/ValidationSourceReview.md) corrected
+missing cloud-QA inputs, source-integrity checks and unsafe partial publication.
+Both scenes now meet actual QA prerequisites, but the two explicitly derived
+pairs are excluded by cloud flags in their 26 July pre-image. Original pairs
+and frozen sources remain intact. No labels or accuracy were produced;
+all 341 tests pass.
 
 ## Structure of the repository
 

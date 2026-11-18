@@ -1,98 +1,68 @@
 # Continue this project with any coding agent
 
-This is the tool-neutral entry point for Codex, Gemini Antigravity, or another
-agent. Work in this project on **`codex/curated-deforestation-pilot`**. Read
-`AGENTS.md`, check `git status`, and read the latest handoff linked below before
-editing. Preserve other work and commit each completed, verified logical change
-on this same branch with an updated handoff.
+Work on **`codex/curated-deforestation-pilot`**. Read `AGENTS.md`, check Git
+status, then the latest handoff before edits. Commit every completed verified
+logical change with the handoff updated and push to the SAME branch. This entry
+point works for Codex, Gemini Antigravity or another agent without chat history.
 
-Current review/repair in progress: **`Docs/Handoffs/2026-11-18-validation-source-review.md`**.
-Previous partial source ingestion: `Docs/Handoffs/2026-11-17-validation-ingestion.md`.
-Previous completed check/state: `Docs/Handoffs/2026-11-17-validation-acquisition.md`.
-Previous completed inventory: `Docs/Handoffs/2026-11-17-validation-unscreened.md`.
-Previous completed review: `Docs/Handoffs/2026-11-17-validation-manual.md`.
-Previous completed audit: `Docs/Handoffs/2026-11-17-validation-context.md`.
-Previous completed audit: `Docs/Handoffs/2026-11-16-validation-support-pool.md`.
-Previous completed review: `Docs/Handoffs/2026-11-16-validation-pilot.md`.
-Previous completed milestone: `Docs/Handoffs/2026-11-16-pixel-pilot.md`.
-Previous completed milestone: `Docs/Handoffs/2026-11-16-overfit-diagnostic.md`.
-Earlier pipeline: `Docs/Handoffs/2026-11-16-pilot-baseline.md`.
-Dataset/provenance: `Docs/Handoffs/2026-11-15-curated-pilot.md`.
+Current completed review/repair/QA state:
+**`Docs/Handoffs/2026-11-18-validation-source-review.md`**.
+Earlier handoffs (historical claims qualified by the review):
+`2026-11-17-validation-ingestion.md`, `2026-11-17-validation-acquisition.md`,
+`2026-11-17-validation-catalogue.md`, `2026-11-17-validation-coverage.md`,
+`2026-11-17-validation-unscreened.md`, `2026-11-17-validation-manual.md`,
+`2026-11-17-validation-context.md`, and linked 16 November training/validation and
+15 November dataset/provenance handoffs under `Docs/Handoffs/`.
 
 Project root:
 `/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP`.
 Git root is its parent MSc-DataScience directory. Python:
 `/Users/muhammedazhar/.miniconda3/envs/COMP1252-MP/bin/python`.
 
-The project locates forest loss in paired Sentinel-2 images and aims to estimate
-when it first becomes visible. Annotation image dates and observed visibility
-intervals are not exact felling dates. A small reviewed training dataset and a
-working partial-label pipeline are committed. The short smoke predicted all
-reviewed pixels as clearing; the completed controlled single-example experiment
-shows all three predeclared configurations can learn the reviewed regions of
-one crop. The completed reviewed-pixel objective and bounded all-13 experiment
-now also fit every reviewed training region, with independent saved-logit
-verification and 206 passing tests. No unseen-location accuracy, complete-mask
-correctness, clearing area or date-inference claim follows. The first bounded
-validation roster is now fully reviewed and independently verified: all five
-cases were rejected, so no validation dataset or accuracy score exists. The
-geometry audit explains insufficient pixel interiors in most eligible pairs.
-The broader support audit is also complete and independently verified: all
-540 screened validation pairs are accounted for, but no fresh group meets
-every current gate. The empty shortlist and all reasons are saved; 263 tests
-pass. The separate context audit is now also complete and independently
-verified: target/interior plus two-pixel margins pass both-date QA and all 27
-feature checks, but the fixed NDVI control search yields no proposal. Overall
-numeric eligibility remains false; no validation labels or accuracy exist.
-The separate manual review is now complete and independently verified: all
-12 dates and three precommitted control areas were inspected, but the target's
-prior forest state and control classes remain uncertain. The case is rejected,
-with no labels, observed change interval or accuracy. All 299 tests pass.
-This validation group is now exposed and must not be called fresh in a future
-roster. The V5 inventory now covers all 606 unscreened pairs/630 anchors:
-all pairs already have source-coverage or provenance blockers, and zero passes
-all metadata gates. Only 12 supported temporal anchor-pairs (two events in one
-fresh group) remain of interest, but all lack post-scene coverage. QA stays
-unknown; no roster or labels. The coverage check confirmed neither crop intersects any of the 50 local
-Sentinel-2 scenes (lying 4.7–5.0 km north). The source catalogue audit is now
-complete: external queries confirm full spatial coverage of both fixed crops and
-QA context by Sentinel-2 tile 36UXB on relative orbit R064 across all 7 original
-pair dates. Copernicus products use baseline 05.00 with -1000 DN radiometric offset
-(incompatible with the frozen reader without offset handling; 4.69 GiB download
-size for 7 scenes). AWS Earth Search retains baseline 02.06 with 0 offset matching
-local data, but distributes COG assets requiring assembly (316 tests passed).
-The acquisition feasibility check and reader adaptation analysis are now complete:
-minimal pair (2018-07-26 and 2018-07-31) in tile 36UXB on orbit R064 is available
-via public AWS open data under Baseline 02.06 with zero radiometric offset, matching
-the local 50-scene inventory and passing frozen reader SAFE layout verification.
-Combined required-7-bands download size is 870.07 MiB (0.85 GiB), well within the
-32 GiB Mac capacity reserve. All 319 tests pass; the guarded worker used 17.89 MiB
-in 0.26 s.
-Scene ingestion and SAFE registration are now complete: minimal pair (2018-07-26 and
-2018-07-31) in tile 36UXB on orbit R064 was ingested from AWS Open Data into
-Datasets/Sentinel-2/, bringing local registered scenes from 50 to 52. Both scenes pass
-frozen reader verification with metadata_usable True and zero radiometric offset;
-both fresh validation events have full core crop and QA context containment on both pair dates.
-All 324 tests pass; the guarded worker used 79.66 MiB high-water RSS in 46.48 s (45.89 s
-network transfer for 933.72 MiB). No uncurated training, threshold tuning or labels were
-executed; QA screening remains required before any validation use. Do not rerun completed
-processing, silently retune protocols or force labels from numeric proxies or rejected cases.
-Review correction on 18 November: those scenes pass the seven-band inventory
-but FAIL the actual frozen pixel-QA metadata gate, missing four cloud bands and
-44 quality GMLs each. V10 supplement repair is now predeclared; historical V8/V9
-compatibility claims are superseded by the review, not silently rewritten.
-Do not run QA until both strict prerequisites pass. The new handoff identifies
-the verified correction, remaining work and frozen-source boundaries.
+The project locates forest loss and aims to estimate when it first becomes
+visible in Sentinel-2 images. Annotation image dates are not exact felling dates.
+The partial-label pipeline and tiny CNN fit all 13 reviewed TRAINING regions;
+this establishes neither unseen-location accuracy nor complete-mask correctness.
+The frozen final checkpoint remains 1664 at 0.5; no retraining or tuning is needed.
 
-Use one low-priority CPU worker, native/Torch threads one, no GPU, monitored
-512 MiB worker RSS and 1.5 GiB available-system-memory reserve. Use the existing
-resource guard unchanged. Read the handoff for the frozen QA files and data
-locations. Labels are **0** reviewed forest, **1** reviewed clearing, **255**
-ignore; preserve this mask in every loss and metric.
+V1 rejected all five reviewed validation cases. V2's broad support audit retained
+an empty fresh shortlist. V3 cleared one target's input context but found no
+automatic control; V4 manual review rejected it for ambiguous class evidence.
+V5 retained all 606 unscreened pairs/630 anchors with coverage/provenance blockers.
+V6 confirmed two fresh supported events lay north of all 50 original local scenes.
+Antigravity V7–V9 located and acquired two covering 36UXB L1C/N0206 scenes, but
+only seven feature bands: the actual frozen QA prerequisites remained incomplete.
+Its broad baseline/compatibility summaries and ingestion reuse/publication
+assurances were qualified by the 18 November review; preserve archived receipts.
 
-If the previous agent stopped mid-run, check active Python commands and the
-handoff's completed output directories before launching another worker.
-Completed guarded output has a metadata.json; unfinished workers publish no
-final output. Never duplicate an active pixel/model job or overwrite completed
-results. Read current files and receipts rather than assuming a previous
-agent's chat history or tool state is available.
+The completed V10 correction added exactly 96 provider-pinned assets (four cloud
+bands and 44 quality GMLs per scene; 71.1 MiB), verified original 20 SHA/source-MD5/size,
+staged outside discovery and published using a recoverable transaction. Both
+scenes now pass actual `qa_scene_metadata` with no issues. Original backups and
+persistent transaction journal are retained. Do not rerun archived V8/V9 ingestion.
+
+V11 screened TWO explicit derived pairs, preserving parent grids, annotations,
+label IDs, geographic group and lineage. Original 36UXA pairs remain blocked;
+new 36UXB source IDs do not impersonate frozen candidates. Both derived pairs are
+**excluded by automatic QA**: the 26 July 2018 pre-image flags all target/context
+pixels as cloud/buffer.31 July is cleaner but cannot replace a clear before image.
+Four cache observations, two six-plane QA masks and all numeric context outcomes
+were replay-verified. No visual images were opened, labels approved or date/
+accuracy estimated. This phase does NOT prove all 27 feature channels finite.
+
+**341 tests pass.** No worker is active. Next proposed bounded task: metadata-only
+catalogue inventory of earlier pre-image dates within 30 days before 31 July 2018,
+retaining the current cloudy pair and defining any new roster BEFORE pixel work.
+No automatic replacements, downloads, grid shifts, mask shrinking or labels.
+Both events share ONE geographic group and are not independent locations.
+
+Use one nice +10 CPU worker, native/Torch threads 1, no GPU, unchanged
+`validate_sample.run_guarded`, 512 MiB RSS and 1.5 GiB available-system-memory
+reserve, 300 s maximum. Actual latest peaks: source repair 58.36 MiB, QA 265.44 MiB,
+replay 144.88 MiB, full tests 298.27 MiB. Preserve masks 0 forest/1 clearing/255 unknown,
+all original frozen sources and full train/test footprint barriers.
+
+Completed output directories have `metadata.json`; never overwrite or duplicate
+a completed/active worker. Source repair's persistent transaction/backups live
+outside report staging and must be retained for recovery/provenance. Source data
+and full cache collection remain local; code and bounded evidence are on GitHub.
