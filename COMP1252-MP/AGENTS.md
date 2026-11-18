@@ -6,7 +6,7 @@
   work. Keep incomplete work explicitly identified in any interruption checkpoint.
 - Push completed checkpoints to GitHub on this same branch, as requested by
   the user. Keep the local and remote branch names identical.
-- Read `CONTINUE.md` and `Docs/Handoffs/2026-11-18-earlier-source-metadata.md` before
+- Read `CONTINUE.md` and `Docs/Handoffs/2026-11-18-earlier-source-acquisition.md` before
   continuing, then the linked prior handoffs for provenance and frozen QA constraints.
 - Preserve the user's Mac capacity limits documented in that handoff. Use one
   low-priority worker for pixel/model processing and bounded smoke checks.
