@@ -1,6 +1,6 @@
 # Earlier source metadata continuation
 
-## Current checkpoint: V13 predeclared; implementation and execution pending
+## Current checkpoint: V13 tested and frozen; live preflight pending
 
 Continue on `codex/curated-deforestation-pilot`; update this handoff, commit and
 push each completed verified logical change to the same branch. Read
@@ -38,11 +38,19 @@ payload copies plus the largest temporary asset, metadata bytes and 2 GiB reserv
 Use unchanged `validate_sample.run_guarded`, one nice +10 CPU worker, native
 threads 1, no GPU, 512 MiB RSS, 1.5 GiB available-system-memory reserve and 300 s
 maximum (tests 120 s). Never overlap guarded workers or overwrite completed output.
-349 tests passed at V12. No V13 operational requests or test jobs have run yet.
-Implementation, offline tests and all results remain INCOMPLETE at this checkpoint.
+358 tests pass (349 previous plus nine new preflight tests), 4.41 s guarded time,
+361.52 MiB RSS high-water / 378.6 MiB monitor peak, minimum 3.95 GiB available.
+No operational V13 requests have run yet. Live preflight and final integrity/
+evidence remain INCOMPLETE at this checkpoint. Protocol checkpoint `643e792`
+is pushed. Implementation/test hashes and passing-suite receipt are frozen.
 
-Next: implement/test the separate metadata preflight, freeze its hashes before
-operational requests, execute once, preserve both outcomes and verify evidence.
+Read-only review identified per-source timeout preservation and strict image/
+granule path joins. Both were fixed before tests; original frozen helpers remain
+unchanged. Network allowlist, source pin failures, missing quality GMLs, complete
+58-asset counts, grid/solar/identity conflicts and disk budget bounds are tested.
+
+Next: execute the frozen metadata preflight once, preserve both outcomes and
+verify raw evidence.
 No earlier-pre-date derived pairs, recalculated labels, acquisition, pixel work,
 predictions or training are part of this phase. Both events are still ONE group
 `group-96c27871459d03c08bcc`. Preserve QA/model/splits and 0/1/255 masks.
