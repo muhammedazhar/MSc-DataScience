@@ -1,89 +1,163 @@
 # Earlier source acquisition continuation
 
-## Current checkpoint: both scenes staged/verified; publication pending
+## Current state: V14 complete; both new sources published and metadata-ready
 
-Continue on `codex/curated-deforestation-pilot`; commit each verified logical
-change with this handoff updated and push to the same GitHub branch. Read
-`2026-11-18-earlier-source-metadata.md` and linked V12/V11/V10/older handoffs
-for exact provenance, frozen QA and prior failures. Last completion is `01bf245`.
+Continue on `codex/curated-deforestation-pilot`; update this handoff, commit and
+push each verified logical change to the same GitHub branch. Read
+`2026-11-18-earlier-source-metadata.md` and linked V12/V11/V10/older handoffs for
+provenance, frozen QA/model/split constraints and prior failures. `CONTINUE.md`
+works for Codex, Gemini Antigravity or another agent without chat history.
 
-The user approved continuing. V14 acquires exactly the two V13 pinned sources:
-21 July 2018 S2A then 16 July 2018 S2B, both N0206/R064/36UXB. Each has 58 required
-files; combined payload 1,050,527,541 bytes. No fallback, source substitution,
-catalogue cloud ranking or extra date. Use the explicit genuine L1C provider
-manifest, NOT the saved STAC hrefs that point to the L2A bucket.
+The approved acquisition task is COMPLETE. **21 July and 16 July 2018 are both
+published under Sentinel-2 with all 58 genuine required files per scene.**
+116 files / 1,050,527,541 bytes (1001.86 MiB) passed exact provider size/MD5 ETag,
+If-Match, Content-Length and saved SHA256 checks. Actual unchanged frozen
+`qa_scene_metadata` passes for both with no issues. There are now 54 local L1C
+product folders; this statement does not assert all 54 pass strict QA.
+No pixel decoding, cloud/forest model, new temporal pairs/targets, manual imagery
+review, labels, training or evaluation occurred. Pixel clarity remains UNKNOWN.
+No worker is active. All 369 tests pass. Do NOT repeat completed downloads.
+
+Checkpoints: `4cde3e4` predeclared protocol; `e79eabe` tested/frozen acquisition;
+`cba52ed` verified 21 July staging; `98ba410` both sources verified in staging.
+All are pushed. One push returned HTTP 408; per-command HTTP/1.1 retry succeeded
+and remote was checked. The completion checkpoint contains publication evidence,
+final integrity and this handoff. No force push or global Git config change.
+
+## Fixed source scope and verified acquisition
 
 Protocol: `Docs/Reviews/ValidationEarlierAcquisitionV14/protocol.json`.
-Both dates are acquired and locally metadata-ready in STAGING only. Each has
-58 assets with pinned source MD5/size plus SHA256; actual unchanged frozen QA
-metadata prerequisites pass without issues. Nothing is published.
-16 July is also acquired and metadata-ready in STAGING. Final publication
-remains INCOMPLETE. Protocol `4cde3e4`
-and tested/frozen implementation `e79eabe` are pushed.
+Implementation: `Solutions/acquire_earlier_validation_sources.py`.
+Exactly the V13 pinned roster, ordered only by date: no cloud ranking, alternate
+dates, source substitution or fallback. Use genuine explicit L1C provider URLs,
+NOT the L2A hrefs in the saved L1C catalogue records. V13 preserves that anomaly.
 
-Stage under persistent `Datasets/ValidationPilot/v14/source_transaction`, outside
-Sentinel-2 discovery and guard report staging. Stream exact pinned objects with
-If-Match/Content-Length/ETag/MD5/SHA checks. Reuse only verified complete files;
-record partial-file ownership durably and remove only matching owned partials
-after interruption. Ambiguous ownership or unexpected files requires inspection.
-Use one exclusive lock and guarded scene-sized jobs; no automatic retries.
+| Date | Scene ID | Verified payload |
+| --- | --- | ---: |
+| 2018-07-21 | `S2A_MSIL1C_20180721T083601_N0206_R064_T36UXB_20180721T105541` | 559,954,114 bytes / 534.01 MiB |
+| 2018-07-16 | `S2B_MSIL1C_20180716T084009_N0206_R064_T36UXB_20180716T122805` | 490,573,427 bytes / 467.85 MiB |
 
-Before publication, both complete scenes must pass unchanged actual
-`qa_scene_metadata` without placeholders. Publication adds two NEW directories
-using exclusive no-replace renames and a durable inode journal. It is recoverable,
-not an atomic pair swap. Never overwrite/replace old or user-owned trees.
-Retain all old scenes, V10 transaction/backups and known-cloudy V11 outcomes.
+Each has 11 JP2 bands B01/B02/B03/B04/B05/B08/B8A/B09/B10/B11/B12, 44 genuine
+per-band NODATA/SATURA/DEFECT/TECQUA GMLs, cloud GML, product XML and tile XML.
+B06/B07 are not required by the frozen feature/cloud band union. All actual
+files were streamed once from anonymous pinned L1C URLs, no redirects/paid
+access/retries/reused files/partial recoveries. Four XML contents also match
+V13 originals. No placeholder metadata, raster or empty masks were fabricated.
 
-Mac: unchanged `validate_sample.run_guarded`, one nice +10 CPU worker, native
-threads 1, no GPU, 512 MiB RSS, 1.5 GiB available-system-memory reserve, maximum
-300 s per worker (tests 120 s). Initial check found 2.84 GiB available memory and
-19.6 GiB free disk; these change with other Mac activity. Recheck capacity before
-each job/file, require conservative initial staging allowance plus 2 GiB disk
-reserve and preserve the reserve during transfers. No active project worker.
+Files were staged OUTSIDE scene discovery and guard report staging, with durable
+per-file ownership/receipts and complete error/recovery history. Both actual
+staged products passed the frozen metadata checker before publication. The
+publisher rehashed both complete sources before and after native exclusive
+no-replace directory renames, then rechecked actual final metadata. This adds
+two NEW directories; it does not replace old/user trees or claim an atomic pair
+swap. All 116 prior V11 source size/mtime receipts, both known-cloudy exclusions,
+V10 complete transaction and original backups remain unchanged.
 
-369 tests pass (358 prior plus 11 new offline tests). Initial 368-test suite
-passed; read-only review then identified the frozen helper's predictable journal
-.tmp writer as an ownership risk. V14 now uses its own exclusive random temporary
-writer; the extra symlink regression and full 369 suite pass. No frozen helper
-was edited. Hardened suite 5.09 s, RSS 360.27 MiB high-water / 366.6 MiB sampled,
-minimum 3.67 GiB available. Tests cover HTTP pin/payload failures, corrupt nonempty
-reuse, partial inode/path refusal, existing user trees, exclusive rename,
-publication rollback/crash resume and local QA refusal. No pixel/model jobs.
-Persistent completion plus read-only verify support a crash after publication
-but before guard report completion. Error/recovery history is retained.
+Final metadata: genuine L1C / baseline 02.06 / orbit R064 / tile 36UXB, quantification
+10000, no nonzero offsets, EPSG:32636 10 m grids covering original crops and full
+QA contexts. Metadata/cloud/shadow prerequisites are all usable with no issues;
+actual radiometric/grid/solar fields match V13. This is local metadata readiness,
+not proof of clear inputs, valid decoded pixels, full 27-channel finiteness or
+forest-to-clearing class truth. Both events remain ONE geographic group
+`group-96c27871459d03c08bcc`, not independent validation locations.
 
-Next: acquire the two sources separately, verify full payloads/local
-prerequisites and recoverably publish. Preserve every outcome and exact evidence.
-No raster decoding, cloud/forest model, new temporal pairs/targets, labels,
-training or evaluation is part of V14. Local metadata readiness will not prove
-clear pixels, full 27-channel eligibility or a forest-to-clearing transition.
-Both events remain one group; original grids/splits/QA/model and 0/1/255 masks stay
-frozen. Later earlier-pre-date pairs need distinct lineage and recalculated
-cumulative targets, not V11's hardcoded dates/masks.
+## Durable transaction, receipts and recovery
+
+Persistent `Datasets/ValidationPilot/v14/source_transaction/journal.json` is
+**complete**. `completion.json` was durably written before the final journal
+state. Both new directories are at `Datasets/Sentinel-2/<scene_id>/`; staged
+scene directories are absent. Keep this transaction/completion receipt. The
+staging parent is empty; no `.download` partial remains. Event history contains
+116 transfer starts, 116 verified transfers, 2 prepared scenes and 1 publication
+completion, with no transfer/worker failures or rollback.
+
+All source receipts use scene ID + `target_relpath` under the FINAL product
+folder; no old staging asset path needs to be trusted. Stage metadata paths in
+the download reports are HISTORICAL. Each download report's journal hash refers
+to its exact saved `journal_snapshot.json`, not the later live journal. Final
+publication metadata hash matches the complete live/snapshotted journal.
+
+Completed local report outputs (ignored, never overwrite):
+`Datasets/ValidationPilot/v14/{download_21,download_16,publication}/`.
+Tracked byte-identical evidence under `Docs/Reviews/ValidationEarlierAcquisitionV14/`:
+`protocol.json`, both `download_*` result/metadata/report/journal snapshots,
+`publication/` result/metadata/report/final journal/persistent completion copy,
+`checks/pre_execution_tests{,_hardened}/`, `checks/final_integrity.json`.
+Guide: `Docs/Guides/EarlierSourceAcquisition.md`.
+GitHub backs up code and bounded receipts; full raw imagery remains on this Mac.
+
+If a future interrupted acquisition needs recovery, use the same protocol,
+transaction and scene index with a NEW report output. Completed files are
+rehashed against source MD5/size/saved SHA; only allowed partial paths with
+matching recorded device/inode may be removed. Ambiguous ownership, unexpected
+files or changed user trees cause refusal, never deletion/overwrite. An
+interrupted owned publication may resume, and ordinary failures restore owned
+published trees to staging. Native exclusive moves also refuse empty user dirs.
+For complete transactions whose guard report was interrupted, read-only verify
+mode can check final files and regenerate a report under a new output; it does
+not redownload or republish. No such recovery was needed in this execution.
+
+## Tests, integrity and Mac capacity
+
+369 tests pass (358 previous + 11 acquisition tests). The initial 368 suite
+passed; review identified a predictable journal temporary-file ownership risk
+in a frozen imported helper. V14 uses a NEW exclusive random temporary writer,
+with a regression proving foreign temporary/destination symlinks are preserved.
+The hardened 369 suite passed; no implementation changed afterwards. Frozen V10
+and QA helpers remain unchanged. Tests cover pin/length/MD5 failures, corrupt
+nonempty reuse, partial inode/target refusal, existing user trees, exclusive
+rename, publication rollback/crash resume and refusal of unusable local metadata.
+
+| Completed guarded job | Elapsed | RSS high-water / sampled peak | Minimum available |
+| --- | ---: | ---: | ---: |
+| Hardened 369-test suite | 5.09 s | 360.27 / 366.6 MiB | 3.67 GiB |
+| 21 July download | 142.87 s | 62.84 / 61.2 MiB | 3.51 GiB |
+| 16 July download | 265.82 s | 65.53 / 61.9 MiB | 4.09 GiB |
+| Rehash/local metadata/publication | 4.40 s | 51.39 / 50.8 MiB | 4.29 GiB |
+
+All jobs used unchanged `validate_sample.run_guarded`, one nice +10 CPU worker,
+native threads 1, no GPU, 512 MiB RSS and 1.5 GiB available-system-memory reserve,
+300 s max (tests 120 s), sequentially. The second download approached the time
+budget; preserve resumable checkpoints rather than increasing limits for slower
+future transfers. The acquisition/publication workers imported no NumPy,
+rasterio, Torch or cloud-model library. Full tests retain their CPU Torch setup.
+
+Actual free disk was 20.623 GiB before source 21, 20.066 after; 20.060 before
+source 16, 19.513 after; 19.510 before/after publication. Earlier pre-implementation
+capacity checks varied from 19.6 to 20.6 GiB due to other Mac activity. These are
+measured snapshots, not guaranteed future capacity. Conservative download-job
+allowance 2.070 GiB plus 2 GiB reserve and per-file/chunk reserve checks passed.
+Publication uses same-filesystem renames and requires the 2 GiB reserve, without
+allocating another full payload. Recheck live disk/memory before future work.
+
+Final integrity passed: all 51 frozen input/code hashes; both historical download
+snapshots and final persistent completion; all 116 final file stat/source-pin/
+receipt joins; owned final directory inodes; four actual XML hashes; 369-test
+receipt; prior 116 source stats, prior QA exclusions and V10 backups; zero active
+workers/models/labels. Publisher performed full actual file MD5/SHA/size checks;
+the final separate audit uses unchanged stats and receipt joins for JP2/GML,
+not another expensive rehash or independent pixel/QA truth. Full stats/SHAs are
+saved in `checks/final_integrity.json` for subsequent source fingerprint checks.
+
+## Next bounded task
+
+Predeclare a separate QA-only roster for **four distinct earlier-date source
+pairs**: two fixed earlier pre-dates x two existing events, with fixed 31 July
+post and original grids/group/split/anchor provenance. Derive explicit new IDs;
+original 36UXA parents and V11's 26 July cloudy source pairs stay unchanged.
+Recalculate cumulative post-minus-pre temporal targets from frozen catalogue
+geometry; do NOT reuse V11's hardcoded dates, derivation or reference masks.
+Validate full original train/test footprint barriers before any source pixels.
+
+Then run unchanged automatic QA on the full fixed roster under the same Mac
+limits, retaining every outcome and prior automatic-QA exposure. Do not rank
+by model predictions, shrink ROIs/margins, relax QA, try extra dates until success
+or approve labels. Valid controls/later persistence/manual class evidence,
+full 27-channel proof and a label lock remain outstanding. No first-visible
+interval or frozen-final unseen accuracy exists. Frozen model 1664 at 0.5 and
+masks 0 forest/1 clearing/255 unknown remain unchanged. Retain all source data,
+V10 backups and V14 transaction/receipts.
 
 Python: `/Users/muhammedazhar/.miniconda3/envs/COMP1252-MP/bin/python`.
 Project: `/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP`;
-Git root is its parent. Completed outputs must never be overwritten.
-
-## Verified 21 July acquisition checkpoint
-
-Completed `Datasets/ValidationPilot/v14/download_21/`: 142.87 s, RSS 62.84 MiB high-water / 61.2 MiB sampled, minimum 3.51 GiB available. 58 new downloads, 0 reused; free disk 20.623 to 20.066 GiB.
-Evidence and exact journal-at-job-completion snapshot are under
-`Docs/Reviews/ValidationEarlierAcquisitionV14/download_21/`. Its recorded journal
-hash is historical; future steps change the live journal. Persistent state is
-`acquiring`, scene 0 prepared, scene 1 new, no partials/errors. Completed source
-files remain under transaction/staged, not Sentinel-2. Do NOT rerun this worker.
-Next: one guarded download of scene index 1 into NEW `v14/download_16/`, then
-publication only after both full sources pass. No pixel/model/label work.
-
-## Verified 16 July acquisition checkpoint
-
-Completed `Datasets/ValidationPilot/v14/download_16/`: 265.82 s, RSS 65.53 MiB high-water / 61.9 MiB sampled, minimum 4.09 GiB available. 58 new downloads, 0 reused; 490,573,427 bytes; free disk 20.060 to 19.513 GiB.
-Evidence/snapshot: `Docs/Reviews/ValidationEarlierAcquisitionV14/download_16/`.
-Both sources have 58 verified files; persistent state is READY, both prepared,
-no partials/errors/retries. Source 21 checkpoint `cba52ed` is pushed; older
-checkpoint's pending-next-step statements are historical. Do NOT rerun either
-download. Next: publish mode (no scene index), NEW `v14/publication/` report.
-Publisher rehashes both complete sources, checks actual frozen metadata, then
-uses journaled native no-replace renames and verifies final sources. Original
-sources remain untouched. Pixel/model/label work is still outside this phase.
+Git root is its parent. Check branch/status, existing outputs and active jobs.

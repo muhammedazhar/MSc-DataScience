@@ -5,7 +5,7 @@ status, then the latest handoff before edits. Commit every completed verified
 logical change with the handoff updated and push to the SAME branch. This entry
 point works for Codex, Gemini Antigravity or another agent without chat history.
 
-Current V14 acquisition continuation (both scenes staged; publication pending):
+Current completed V14 earlier-source acquisition state:
 **`Docs/Handoffs/2026-11-18-earlier-source-acquisition.md`**.
 Completed V13 earlier-source metadata state:
 **`Docs/Handoffs/2026-11-18-earlier-source-metadata.md`**.
@@ -68,18 +68,24 @@ L2A asset hrefs were preserved as a catalogue anomaly and never fetched; use the
 explicit verified L1C provider manifest. No imagery/GML content was downloaded,
 source published, QA run or label approved. Total future payload 1,050,527,541 bytes.
 
-**358 tests pass.** No worker is active. Next bounded task: predeclare strict
-acquisition of these two pinned manifests, with streaming integrity checks,
-scene-sized guarded jobs, recoverable staging outside source discovery, actual
-local frozen QA metadata validation and fresh capacity checks before publication.
-No pixel/model execution, automatic replacements, grid shifts, mask shrinking or labels.
+V14 acquired/verified/published both sources: 116 genuine files, 1,050,527,541 bytes.
+Actual frozen QA metadata passes with no issues for both; 54 local L1C product
+folders now exist. Transaction is COMPLETE; no partials/retries/failures or source
+replacements. Prior sources and cloudy outcomes are unchanged. No pixels decoded,
+models run, new pairs/targets created or labels approved; clarity is unknown.
+
+**369 tests pass.** No worker is active. Next bounded task: predeclare four
+explicit earlier-date source pairs (two pre-dates x two events, fixed 31 July post),
+recalculate cumulative temporal targets, verify full split/grid/group lineage
+and run unchanged QA on the entire fixed roster. Preserve all outcomes and
+Mac limits; no ROI shrinking, extra-date search or labels.
 Both events share ONE geographic group and are not independent locations.
 
 Use one nice +10 CPU worker, native/Torch threads 1, no GPU, unchanged
 `validate_sample.run_guarded`, 512 MiB RSS and 1.5 GiB available-system-memory
 reserve, 300 s maximum. Actual latest peaks: source repair 58.36 MiB, QA 265.44 MiB,
-replay 144.88 MiB, V12 inventory ~60 MiB, V13 metadata 45.56 MiB, full 358 tests
-361.52 MiB high-water / 378.6 MiB sampled. Preserve masks
+replay 144.88 MiB, V12 inventory ~60 MiB, V13 metadata 45.56 MiB, V14 acquisition
+65.53 MiB, publication 51.39 MiB, hardened 369 tests 360.27 / 366.6 MiB. Preserve masks
 0 forest/1 clearing/255 unknown,
 all original frozen sources and full train/test footprint barriers.
 

@@ -36,3 +36,13 @@ conservative live staging capacity before operations and space before each file/
 stream chunk. Source data stays local; GitHub stores code and bounded receipts.
 Local metadata readiness does not establish pixel clarity, forest labels, full
 27-channel eligibility or unseen accuracy. New temporal pairs/QA come later.
+
+Completed V14: both sources are published with 116 verified files / 1,050,527,541
+bytes. Actual local frozen QA metadata passes for both; clarity remains unknown.
+369 tests pass. Download workers took 142.87/265.82 s and peaked at 62.84/65.53 MiB;
+publication 4.40 s / 51.39 MiB. All were sequential, with at least 3.51 GiB available.
+Final transaction/completion receipts and full file fingerprints are retained;
+there are 54 local L1C product folders. No partials, retries or failures occurred.
+Do not rerun the completed jobs. Source files stay on this Mac; GitHub contains
+code/bounded evidence. See the final handoff for next explicit source-pair
+lineage and cumulative-target/QA-only phase; no labels or predictions exist.
