@@ -1,6 +1,6 @@
 # Earlier source acquisition continuation
 
-## Current checkpoint: V14 tested and frozen; acquisition pending
+## Current checkpoint: 21 July staged/verified; 16 July and publication pending
 
 Continue on `codex/curated-deforestation-pilot`; commit each verified logical
 change with this handoff updated and push to the same GitHub branch. Read
@@ -14,9 +14,11 @@ catalogue cloud ranking or extra date. Use the explicit genuine L1C provider
 manifest, NOT the saved STAC hrefs that point to the L2A bucket.
 
 Protocol: `Docs/Reviews/ValidationEarlierAcquisitionV14/protocol.json`.
-No imagery has been downloaded at this checkpoint. Implementation and offline
-tests are complete and hashes frozen; actual acquisition/local QA readiness and
-publication remain INCOMPLETE. Protocol checkpoint `4cde3e4` is pushed.
+21 July is acquired and locally metadata-ready in STAGING only. All 58 assets,
+559,954,114 bytes, have pinned source MD5/size plus SHA256 and unchanged actual
+frozen QA metadata prerequisites pass without issues. Nothing is published.
+16 July acquisition and final publication remain INCOMPLETE. Protocol `4cde3e4`
+and tested/frozen implementation `e79eabe` are pushed.
 
 Stage under persistent `Datasets/ValidationPilot/v14/source_transaction`, outside
 Sentinel-2 discovery and guard report staging. Stream exact pinned objects with
@@ -61,3 +63,14 @@ cumulative targets, not V11's hardcoded dates/masks.
 Python: `/Users/muhammedazhar/.miniconda3/envs/COMP1252-MP/bin/python`.
 Project: `/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP`;
 Git root is its parent. Completed outputs must never be overwritten.
+
+## Verified 21 July acquisition checkpoint
+
+Completed `Datasets/ValidationPilot/v14/download_21/`: 142.87 s, RSS 62.84 MiB high-water / 61.2 MiB sampled, minimum 3.51 GiB available. 58 new downloads, 0 reused; free disk 20.623 to 20.066 GiB.
+Evidence and exact journal-at-job-completion snapshot are under
+`Docs/Reviews/ValidationEarlierAcquisitionV14/download_21/`. Its recorded journal
+hash is historical; future steps change the live journal. Persistent state is
+`acquiring`, scene 0 prepared, scene 1 new, no partials/errors. Completed source
+files remain under transaction/staged, not Sentinel-2. Do NOT rerun this worker.
+Next: one guarded download of scene index 1 into NEW `v14/download_16/`, then
+publication only after both full sources pass. No pixel/model/label work.

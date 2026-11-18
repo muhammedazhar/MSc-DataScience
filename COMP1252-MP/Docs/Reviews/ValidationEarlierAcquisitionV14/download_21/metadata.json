@@ -1,0 +1,239 @@
+{
+  "execution_status": "completed",
+  "mode": "download",
+  "scene_index": 0,
+  "protocol_sha256": "fce284c222c8547f30684bf8acfa5d6ad238d72fdae6a5f4f5d0cef2140f8955",
+  "input_receipts": {
+    "metadata_protocol": {
+      "path": "Docs/Reviews/ValidationEarlierMetadataV13/protocol.json",
+      "sha256": "a26fad9e764ab69453e09be255582c55d69692df40c3d032504eb8043b929d8e"
+    },
+    "preflight": {
+      "path": "Docs/Reviews/ValidationEarlierMetadataV13/preflight/preflight.json",
+      "sha256": "6d7fe1f914c7ff6a8e6a2cd57bb1d03e9f4087a28bc197b4da7e97a8c1e7be89"
+    },
+    "preflight_metadata": {
+      "path": "Docs/Reviews/ValidationEarlierMetadataV13/preflight/metadata.json",
+      "sha256": "03ef1c08822595ef1b8b2d2bcce1b1c8c39163fb52f809307d69c750eee785ad"
+    },
+    "preflight_integrity": {
+      "path": "Docs/Reviews/ValidationEarlierMetadataV13/checks/final_integrity.json",
+      "sha256": "ac3cba32b0147aa8c92af1c90041032bc98fa1326e6162f640a99299838a0b9f"
+    },
+    "requirements": {
+      "path": "Docs/Reviews/ValidationCoverageV6/source_requirements.json",
+      "sha256": "21ed0567806ed1efd2840002b3c30bb6b5f2dcda36d19c0fb5ee51ab0dac2a02"
+    },
+    "v11_screen": {
+      "path": "Docs/Reviews/ValidationSourceScreenV11/screen/screen.json",
+      "sha256": "e87ec098dc30d62046ba0cc387ac390c50d70c9459db8fb2142ec8c9319f4786"
+    },
+    "code/Solutions/assess_pixel_quality.py": {
+      "path": "Solutions/assess_pixel_quality.py",
+      "sha256": "4e0b77922cd478322912cb4116801502ec13bdcb740fc7696a1010e94fbd535f"
+    },
+    "code/Solutions/pixelqa_masks.py": {
+      "path": "Solutions/pixelqa_masks.py",
+      "sha256": "cdbac7d70b94cc2043cbfa94a8201a232320b634c7c23d987b33f3948617897f"
+    },
+    "code/Solutions/pixelqa_scene_metadata.py": {
+      "path": "Solutions/pixelqa_scene_metadata.py",
+      "sha256": "4d783446400c33f2bfb9d6e8730d3ab8e5178d35559a39cf714735384d542b72"
+    },
+    "code/Solutions/validate_sample.py": {
+      "path": "Solutions/validate_sample.py",
+      "sha256": "475f641ed582af37eedc2ee9e94065e280202db08eb381441e1403c3eb001fba"
+    },
+    "code/Solutions/annotation_scene_inventory.py": {
+      "path": "Solutions/annotation_scene_inventory.py",
+      "sha256": "5c35020ccf12f5e5f689c1f7130d64d9cabd5e6e3e04cdede291c9a912688318"
+    },
+    "code/Solutions/prepare_curated_pilot.py": {
+      "path": "Solutions/prepare_curated_pilot.py",
+      "sha256": "1a8d5ec426bd657cd0eb7f1ed2e08c125f8a9f879aad799c395168536e777f82"
+    },
+    "code/Solutions/curated_pilot_review.py": {
+      "path": "Solutions/curated_pilot_review.py",
+      "sha256": "222bfc332959d2e597644d881ea295b43a29d08606ce8326750e3dd2176e918f"
+    },
+    "code/Solutions/curated_pilot_exports.py": {
+      "path": "Solutions/curated_pilot_exports.py",
+      "sha256": "caf67918894fa13ad62c3f9e6b8aad58ac69c414e999df9a988901d2166a9958"
+    },
+    "code/Solutions/build_curated_pilot.py": {
+      "path": "Solutions/build_curated_pilot.py",
+      "sha256": "302c6fb3aedd13facaf0f83abcb3c234f4ff1b2257d303ce7b5cdc5cd470cc4c"
+    },
+    "code/Solutions/verify_curated_pilot.py": {
+      "path": "Solutions/verify_curated_pilot.py",
+      "sha256": "12f27b43a15d26e7bd3fc6c3df9363ed9b5b1eb3e017a2665548d1895830e8df"
+    },
+    "code/Solutions/pilot_dataset.py": {
+      "path": "Solutions/pilot_dataset.py",
+      "sha256": "bb0e58cfb61ac8980d77ed0cc88f99266fa1c35fe1aba5a19780cef4e53af7b7"
+    },
+    "code/Solutions/pilot_objectives.py": {
+      "path": "Solutions/pilot_objectives.py",
+      "sha256": "bccfd912cfdafcd7a04df1fb997b05627a995b5f89496241508e00dc97430d61"
+    },
+    "code/Solutions/pilot_pixel_objective.py": {
+      "path": "Solutions/pilot_pixel_objective.py",
+      "sha256": "6020e42610e7e371000a2667958ddb3a8ce1acbe5a2ff7b3c721bfb27b1a1599"
+    },
+    "code/Solutions/train_reviewed_pilot.py": {
+      "path": "Solutions/train_reviewed_pilot.py",
+      "sha256": "389ecb205b7fa91624964c6eb030352827001b0b38b74b7c12e30c833ec24813"
+    },
+    "code/Solutions/reviewed_pilot_worker.py": {
+      "path": "Solutions/reviewed_pilot_worker.py",
+      "sha256": "7e826d6f4cb3d9ed9d2c32e23838c479926261284a274879a2989dc78df43252"
+    },
+    "code/Solutions/train_pilot_baseline.py": {
+      "path": "Solutions/train_pilot_baseline.py",
+      "sha256": "259f367ddc613b0095a93ddcf7b9ae8f0a14553fa4fc5fc28665c76ae6059995"
+    },
+    "code/Solutions/run_pilot_checks.py": {
+      "path": "Solutions/run_pilot_checks.py",
+      "sha256": "9f76cd6c4dd8ceb956102d503e9069c89f63f1ac5a481515391e9393598adceb"
+    },
+    "code/Solutions/diagnose_pilot_overfit.py": {
+      "path": "Solutions/diagnose_pilot_overfit.py",
+      "sha256": "e190a95b153498df138bb000d9edbf2dcab5c3b14058391e0a8e1a234637f27b"
+    },
+    "code/Solutions/pilot_overfit_worker.py": {
+      "path": "Solutions/pilot_overfit_worker.py",
+      "sha256": "2da2fc63c99f9ca4533e6d22061870301a7d8985d827621dae7ae96cf480bb4c"
+    },
+    "code/Solutions/verify_pixel_pilot.py": {
+      "path": "Solutions/verify_pixel_pilot.py",
+      "sha256": "f6684643e4ea536b69a48a2da00581b9644e408e27715b0645c7fbc84a611c97"
+    },
+    "code/Solutions/select_validation_cases.py": {
+      "path": "Solutions/select_validation_cases.py",
+      "sha256": "0a137b5a343e21a1e6daf10ba21abf10d1efc69eee36f77761ee30b3e0689ca7"
+    },
+    "code/Solutions/prepare_validation_review.py": {
+      "path": "Solutions/prepare_validation_review.py",
+      "sha256": "239f42dba0086c5dc1d8cae7ff448df44b6d4b85c76008ed94d220a1e46ace1d"
+    },
+    "code/Solutions/validation_review.py": {
+      "path": "Solutions/validation_review.py",
+      "sha256": "b73853c8ac3229aad82e1b1e11b50395d51ca80d9ed486c30015320919777f62"
+    },
+    "code/Solutions/audit_validation_geometry.py": {
+      "path": "Solutions/audit_validation_geometry.py",
+      "sha256": "1d0e3f5ffc3d755c1f53a5c1eafa36d5af7336cb51826508efc4e5b2fe7fe2ee"
+    },
+    "code/Solutions/audit_validation_support_pool.py": {
+      "path": "Solutions/audit_validation_support_pool.py",
+      "sha256": "27bebf952e323708b28e9cf9772fdb516dbeea934e2fe7e44802e88e0ba1e508"
+    },
+    "code/Solutions/verify_validation_support_pool.py": {
+      "path": "Solutions/verify_validation_support_pool.py",
+      "sha256": "b4a398da0a44f264520992aa8d0b8708e9281516abc56d22353aac86a4ed8a80"
+    },
+    "code/Solutions/verify_validation_dataset.py": {
+      "path": "Solutions/verify_validation_dataset.py",
+      "sha256": "785f5cea93311196070f71160a63680bd49d629758a91f5bdec3bdbf4bdf1f22"
+    },
+    "code/Solutions/validation_context_worker.py": {
+      "path": "Solutions/validation_context_worker.py",
+      "sha256": "5bc30e1023679bee956430be92544f709257d0b07202e1e19736378430a707a8"
+    },
+    "code/Solutions/audit_validation_context.py": {
+      "path": "Solutions/audit_validation_context.py",
+      "sha256": "894d676e8ad728505a2d31db9c971e0910fc258f469b806a392747f362bc3c42"
+    },
+    "code/Solutions/verify_validation_context.py": {
+      "path": "Solutions/verify_validation_context.py",
+      "sha256": "f36b39950c336bd6cae6601f4281c9137f8de8c0424b2a67142f4cccd2450c39"
+    },
+    "code/Solutions/prepare_validation_manual.py": {
+      "path": "Solutions/prepare_validation_manual.py",
+      "sha256": "dc8e008ae86705fb45b6b04cb3b7d3cdc220f17416271e1efc9a57b7020d6919"
+    },
+    "code/Solutions/verify_validation_manual.py": {
+      "path": "Solutions/verify_validation_manual.py",
+      "sha256": "7d36cd810a036ee31a8c426d278ddc93601746230bf258c7ae5587a210cf374b"
+    },
+    "code/Solutions/audit_validation_unscreened.py": {
+      "path": "Solutions/audit_validation_unscreened.py",
+      "sha256": "e0b1d5fa6bd4e1f6c67f3fbd294d00772c1242625cbaac134118f47d5a906d6e"
+    },
+    "code/Solutions/audit_validation_coverage.py": {
+      "path": "Solutions/audit_validation_coverage.py",
+      "sha256": "011417f1e207414d0b39b218459a555c0c4a92703be31b3eaf6dfd0f6bd425b9"
+    },
+    "code/Solutions/audit_validation_catalogue.py": {
+      "path": "Solutions/audit_validation_catalogue.py",
+      "sha256": "0ac1c09f7db1c1ad442c5e85f6a068b2e9beebcfa9e86ba9cb6835746b28b1bd"
+    },
+    "code/Solutions/adapt_validation_scenes.py": {
+      "path": "Solutions/adapt_validation_scenes.py",
+      "sha256": "c1d7d8354efd6ae11798a49a3dc717707f1f51f46d71db250ba42b07938d72b8"
+    },
+    "code/Solutions/ingest_validation_scenes.py": {
+      "path": "Solutions/ingest_validation_scenes.py",
+      "sha256": "0f368c5d9b63048ccc689838cd21cedc44a6aa55b15ebfc4e5ae4af3dd42cb01"
+    },
+    "code/Solutions/complete_validation_qa_inputs.py": {
+      "path": "Solutions/complete_validation_qa_inputs.py",
+      "sha256": "1cfc377410f8faf10cc9cd56218a64eb2dbdfd7070355dbb08ab3d5f32d97f9d"
+    },
+    "code/Solutions/screen_repaired_validation.py": {
+      "path": "Solutions/screen_repaired_validation.py",
+      "sha256": "f1ff3da38a77c1af85c6fc51eeadbcace3e4ec7011438ba137aab991de070e9b"
+    },
+    "code/Solutions/inventory_earlier_validation_sources.py": {
+      "path": "Solutions/inventory_earlier_validation_sources.py",
+      "sha256": "91ed9c71e8fc39699801a76f088197b775301477a66d8baac867c5b6971fee1b"
+    },
+    "code/Tests/test_earlier_validation_inventory.py": {
+      "path": "Tests/test_earlier_validation_inventory.py",
+      "sha256": "957342284de3c122ce84cb229ac1d0c324f76254d7084cdc4c5bb57013a32c77"
+    },
+    "code/Solutions/preflight_earlier_validation_metadata.py": {
+      "path": "Solutions/preflight_earlier_validation_metadata.py",
+      "sha256": "116fddb8966ed5d95f4c8f5b9a42f4fac7e1240d442a3f55dd140b213f2d0980"
+    },
+    "code/Tests/test_earlier_metadata_preflight.py": {
+      "path": "Tests/test_earlier_metadata_preflight.py",
+      "sha256": "5760e9de621160982f08b435c07329f5bb6b2a2335f71945e592835834f3178b"
+    },
+    "code/Solutions/acquire_earlier_validation_sources.py": {
+      "path": "Solutions/acquire_earlier_validation_sources.py",
+      "sha256": "c76e69b0c12a47324cade08e8c7c4c1ca594ba7b3f6732bdd88f4d958a9564af"
+    },
+    "code/Tests/test_earlier_source_acquisition.py": {
+      "path": "Tests/test_earlier_source_acquisition.py",
+      "sha256": "21ad862912dcaec4ffd83d6f086a836f80d6ae3453ef660091f92710c1db2d6a"
+    }
+  },
+  "transaction_journal": "/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP/Datasets/ValidationPilot/v14/source_transaction/journal.json",
+  "transaction_journal_sha256": "978739ee0f32a0dcb22b3aa78ed64a36ff8b8d409171a7890d85a204a232b28b",
+  "artifact_sha256": {
+    "result.json": "83983a7f58f1552993155d06fe70d99d3d5ae95a42902a7375289c7c0b27f9f6",
+    "report.md": "7d4d4ca0818782ddecc4a0f98e17f648dca6fd7da6cab3b7baf6e776e4c1e3fe"
+  },
+  "satellite_pixel_reads": 0,
+  "model_executions": 0,
+  "labels_approved": 0,
+  "resources": {
+    "logical_cpu_count": 11,
+    "machine_ram_gib": 18.0,
+    "worker_peak_rss_mib_sampled": 61.2,
+    "worker_high_water_rss_mib": 62.84,
+    "minimum_available_gib_sampled": 3.51,
+    "elapsed_seconds": 142.87,
+    "worker_limit_mib": 512,
+    "minimum_available_gib_limit": 1.5,
+    "runtime_limit_seconds": 300,
+    "workers": 1,
+    "native_thread_limit": 1,
+    "nice_increment": 10,
+    "gdal_cache_mib": 0,
+    "warp_memory_mib": 0,
+    "gpu_used": false,
+    "monitor_interval_seconds": 0.25
+  }
+}
