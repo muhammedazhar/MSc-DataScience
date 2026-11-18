@@ -110,5 +110,15 @@
     "worker_rss_mib": 512,
     "available_memory_reserve_gib": 1.5,
     "max_seconds_per_worker": 300
+  },
+  "implementation_sha256": {
+    "Solutions/acquire_earlier_validation_sources.py": "c76e69b0c12a47324cade08e8c7c4c1ca594ba7b3f6732bdd88f4d958a9564af",
+    "Tests/test_earlier_source_acquisition.py": "21ad862912dcaec4ffd83d6f086a836f80d6ae3453ef660091f92710c1db2d6a"
+  },
+  "validation": {
+    "tests_run": 369,
+    "new_offline_tests": 11,
+    "receipt": "Docs/Reviews/ValidationEarlierAcquisitionV14/checks/pre_execution_tests_hardened/metadata.json",
+    "receipt_sha256": "05bb5f4bf4f64e9c6ac85b43aa36c2560706d1b5cb642196c1e7a30b45522273"
   }
 }

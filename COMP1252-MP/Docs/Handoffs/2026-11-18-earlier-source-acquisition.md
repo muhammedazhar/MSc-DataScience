@@ -1,6 +1,6 @@
 # Earlier source acquisition continuation
 
-## Current checkpoint: V14 predeclared; implementation and acquisition pending
+## Current checkpoint: V14 tested and frozen; acquisition pending
 
 Continue on `codex/curated-deforestation-pilot`; commit each verified logical
 change with this handoff updated and push to the same GitHub branch. Read
@@ -14,8 +14,9 @@ catalogue cloud ranking or extra date. Use the explicit genuine L1C provider
 manifest, NOT the saved STAC hrefs that point to the L2A bucket.
 
 Protocol: `Docs/Reviews/ValidationEarlierAcquisitionV14/protocol.json`.
-No imagery has been downloaded at this checkpoint. Implementation, tests,
-actual local QA readiness and publication are INCOMPLETE.
+No imagery has been downloaded at this checkpoint. Implementation and offline
+tests are complete and hashes frozen; actual acquisition/local QA readiness and
+publication remain INCOMPLETE. Protocol checkpoint `4cde3e4` is pushed.
 
 Stage under persistent `Datasets/ValidationPilot/v14/source_transaction`, outside
 Sentinel-2 discovery and guard report staging. Stream exact pinned objects with
@@ -37,8 +38,18 @@ threads 1, no GPU, 512 MiB RSS, 1.5 GiB available-system-memory reserve, maximum
 each job/file, require conservative initial staging allowance plus 2 GiB disk
 reserve and preserve the reserve during transfers. No active project worker.
 
-358 tests passed at V13. Next: implement and test strict acquisition/recovery,
-freeze hashes, acquire the two sources separately, verify full payloads/local
+369 tests pass (358 prior plus 11 new offline tests). Initial 368-test suite
+passed; read-only review then identified the frozen helper's predictable journal
+.tmp writer as an ownership risk. V14 now uses its own exclusive random temporary
+writer; the extra symlink regression and full 369 suite pass. No frozen helper
+was edited. Hardened suite 5.09 s, RSS 360.27 MiB high-water / 366.6 MiB sampled,
+minimum 3.67 GiB available. Tests cover HTTP pin/payload failures, corrupt nonempty
+reuse, partial inode/path refusal, existing user trees, exclusive rename,
+publication rollback/crash resume and local QA refusal. No pixel/model jobs.
+Persistent completion plus read-only verify support a crash after publication
+but before guard report completion. Error/recovery history is retained.
+
+Next: acquire the two sources separately, verify full payloads/local
 prerequisites and recoverably publish. Preserve every outcome and exact evidence.
 No raster decoding, cloud/forest model, new temporal pairs/targets, labels,
 training or evaluation is part of V14. Local metadata readiness will not prove
