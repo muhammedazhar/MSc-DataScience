@@ -1,6 +1,6 @@
 # Earlier source acquisition continuation
 
-## Current checkpoint: 21 July staged/verified; 16 July and publication pending
+## Current checkpoint: both scenes staged/verified; publication pending
 
 Continue on `codex/curated-deforestation-pilot`; commit each verified logical
 change with this handoff updated and push to the same GitHub branch. Read
@@ -14,10 +14,11 @@ catalogue cloud ranking or extra date. Use the explicit genuine L1C provider
 manifest, NOT the saved STAC hrefs that point to the L2A bucket.
 
 Protocol: `Docs/Reviews/ValidationEarlierAcquisitionV14/protocol.json`.
-21 July is acquired and locally metadata-ready in STAGING only. All 58 assets,
-559,954,114 bytes, have pinned source MD5/size plus SHA256 and unchanged actual
-frozen QA metadata prerequisites pass without issues. Nothing is published.
-16 July acquisition and final publication remain INCOMPLETE. Protocol `4cde3e4`
+Both dates are acquired and locally metadata-ready in STAGING only. Each has
+58 assets with pinned source MD5/size plus SHA256; actual unchanged frozen QA
+metadata prerequisites pass without issues. Nothing is published.
+16 July is also acquired and metadata-ready in STAGING. Final publication
+remains INCOMPLETE. Protocol `4cde3e4`
 and tested/frozen implementation `e79eabe` are pushed.
 
 Stage under persistent `Datasets/ValidationPilot/v14/source_transaction`, outside
@@ -74,3 +75,15 @@ hash is historical; future steps change the live journal. Persistent state is
 files remain under transaction/staged, not Sentinel-2. Do NOT rerun this worker.
 Next: one guarded download of scene index 1 into NEW `v14/download_16/`, then
 publication only after both full sources pass. No pixel/model/label work.
+
+## Verified 16 July acquisition checkpoint
+
+Completed `Datasets/ValidationPilot/v14/download_16/`: 265.82 s, RSS 65.53 MiB high-water / 61.9 MiB sampled, minimum 4.09 GiB available. 58 new downloads, 0 reused; 490,573,427 bytes; free disk 20.060 to 19.513 GiB.
+Evidence/snapshot: `Docs/Reviews/ValidationEarlierAcquisitionV14/download_16/`.
+Both sources have 58 verified files; persistent state is READY, both prepared,
+no partials/errors/retries. Source 21 checkpoint `cba52ed` is pushed; older
+checkpoint's pending-next-step statements are historical. Do NOT rerun either
+download. Next: publish mode (no scene index), NEW `v14/publication/` report.
+Publisher rehashes both complete sources, checks actual frozen metadata, then
+uses journaled native no-replace renames and verifies final sources. Original
+sources remain untouched. Pixel/model/label work is still outside this phase.
