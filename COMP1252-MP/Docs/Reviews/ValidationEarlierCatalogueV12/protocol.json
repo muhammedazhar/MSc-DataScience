@@ -1,0 +1,124 @@
+{
+  "schema_version": 12,
+  "scope": "Bounded metadata-only earlier-preimage catalogue inventory; retain every product variant and the known-cloudy 26 July 2018 source. No image assets, SAFE assembly, source substitution, pixel QA, labels, training or predictions. No acquisition/review roster selected.",
+  "source_files": {
+    "screen_protocol": {
+      "path": "Docs/Reviews/ValidationSourceScreenV11/protocol.json",
+      "sha256": "1b29c6c186b2c6dc92d9c8ee2dd26db33c8cbf9c3f15d3bc55abb7d7c780ad94"
+    },
+    "screen": {
+      "path": "Docs/Reviews/ValidationSourceScreenV11/screen/screen.json",
+      "sha256": "e87ec098dc30d62046ba0cc387ac390c50d70c9459db8fb2142ec8c9319f4786"
+    },
+    "screen_metadata": {
+      "path": "Docs/Reviews/ValidationSourceScreenV11/screen/metadata.json",
+      "sha256": "8a11f10479abd294a38d7133bc1ce25aa622a8ae22640564242371df63615c76"
+    },
+    "replay_metadata": {
+      "path": "Docs/Reviews/ValidationSourceScreenV11/verification/metadata.json",
+      "sha256": "a2d10576efece57a9ddfe590ece8c1bc5486a8c55390ca4903c0fac933f55fcc"
+    },
+    "requirements": {
+      "path": "Docs/Reviews/ValidationCoverageV6/source_requirements.json",
+      "sha256": "21ed0567806ed1efd2840002b3c30bb6b5f2dcda36d19c0fb5ee51ab0dac2a02"
+    },
+    "source_completion": {
+      "path": "Docs/Reviews/ValidationSourceRepairV10/completion/completion.json",
+      "sha256": "6f3f6015df3d6cff7b6f913c926abce59e1376d633e817857e25db8b82840b46"
+    }
+  },
+  "immutable_sources_sha256": {
+    "assess_pixel_quality.py": "4e0b77922cd478322912cb4116801502ec13bdcb740fc7696a1010e94fbd535f",
+    "pixelqa_masks.py": "cdbac7d70b94cc2043cbfa94a8201a232320b634c7c23d987b33f3948617897f",
+    "pixelqa_scene_metadata.py": "4d783446400c33f2bfb9d6e8730d3ab8e5178d35559a39cf714735384d542b72",
+    "validate_sample.py": "475f641ed582af37eedc2ee9e94065e280202db08eb381441e1403c3eb001fba",
+    "annotation_scene_inventory.py": "5c35020ccf12f5e5f689c1f7130d64d9cabd5e6e3e04cdede291c9a912688318",
+    "prepare_curated_pilot.py": "1a8d5ec426bd657cd0eb7f1ed2e08c125f8a9f879aad799c395168536e777f82",
+    "curated_pilot_review.py": "222bfc332959d2e597644d881ea295b43a29d08606ce8326750e3dd2176e918f",
+    "curated_pilot_exports.py": "caf67918894fa13ad62c3f9e6b8aad58ac69c414e999df9a988901d2166a9958",
+    "build_curated_pilot.py": "302c6fb3aedd13facaf0f83abcb3c234f4ff1b2257d303ce7b5cdc5cd470cc4c",
+    "verify_curated_pilot.py": "12f27b43a15d26e7bd3fc6c3df9363ed9b5b1eb3e017a2665548d1895830e8df",
+    "pilot_dataset.py": "bb0e58cfb61ac8980d77ed0cc88f99266fa1c35fe1aba5a19780cef4e53af7b7",
+    "pilot_objectives.py": "bccfd912cfdafcd7a04df1fb997b05627a995b5f89496241508e00dc97430d61",
+    "pilot_pixel_objective.py": "6020e42610e7e371000a2667958ddb3a8ce1acbe5a2ff7b3c721bfb27b1a1599",
+    "train_reviewed_pilot.py": "389ecb205b7fa91624964c6eb030352827001b0b38b74b7c12e30c833ec24813",
+    "reviewed_pilot_worker.py": "7e826d6f4cb3d9ed9d2c32e23838c479926261284a274879a2989dc78df43252",
+    "train_pilot_baseline.py": "259f367ddc613b0095a93ddcf7b9ae8f0a14553fa4fc5fc28665c76ae6059995",
+    "run_pilot_checks.py": "9f76cd6c4dd8ceb956102d503e9069c89f63f1ac5a481515391e9393598adceb",
+    "diagnose_pilot_overfit.py": "e190a95b153498df138bb000d9edbf2dcab5c3b14058391e0a8e1a234637f27b",
+    "pilot_overfit_worker.py": "2da2fc63c99f9ca4533e6d22061870301a7d8985d827621dae7ae96cf480bb4c",
+    "verify_pixel_pilot.py": "f6684643e4ea536b69a48a2da00581b9644e408e27715b0645c7fbc84a611c97",
+    "select_validation_cases.py": "0a137b5a343e21a1e6daf10ba21abf10d1efc69eee36f77761ee30b3e0689ca7",
+    "prepare_validation_review.py": "239f42dba0086c5dc1d8cae7ff448df44b6d4b85c76008ed94d220a1e46ace1d",
+    "validation_review.py": "b73853c8ac3229aad82e1b1e11b50395d51ca80d9ed486c30015320919777f62",
+    "audit_validation_geometry.py": "1d0e3f5ffc3d755c1f53a5c1eafa36d5af7336cb51826508efc4e5b2fe7fe2ee",
+    "audit_validation_support_pool.py": "27bebf952e323708b28e9cf9772fdb516dbeea934e2fe7e44802e88e0ba1e508",
+    "verify_validation_support_pool.py": "b4a398da0a44f264520992aa8d0b8708e9281516abc56d22353aac86a4ed8a80",
+    "verify_validation_dataset.py": "785f5cea93311196070f71160a63680bd49d629758a91f5bdec3bdbf4bdf1f22",
+    "validation_context_worker.py": "5bc30e1023679bee956430be92544f709257d0b07202e1e19736378430a707a8",
+    "audit_validation_context.py": "894d676e8ad728505a2d31db9c971e0910fc258f469b806a392747f362bc3c42",
+    "verify_validation_context.py": "f36b39950c336bd6cae6601f4281c9137f8de8c0424b2a67142f4cccd2450c39",
+    "prepare_validation_manual.py": "dc8e008ae86705fb45b6b04cb3b7d3cdc220f17416271e1efc9a57b7020d6919",
+    "verify_validation_manual.py": "7d36cd810a036ee31a8c426d278ddc93601746230bf258c7ae5587a210cf374b",
+    "audit_validation_unscreened.py": "e0b1d5fa6bd4e1f6c67f3fbd294d00772c1242625cbaac134118f47d5a906d6e",
+    "audit_validation_coverage.py": "011417f1e207414d0b39b218459a555c0c4a92703be31b3eaf6dfd0f6bd425b9",
+    "audit_validation_catalogue.py": "0ac1c09f7db1c1ad442c5e85f6a068b2e9beebcfa9e86ba9cb6835746b28b1bd",
+    "adapt_validation_scenes.py": "c1d7d8354efd6ae11798a49a3dc717707f1f51f46d71db250ba42b07938d72b8",
+    "ingest_validation_scenes.py": "0f368c5d9b63048ccc689838cd21cedc44a6aa55b15ebfc4e5ae4af3dd42cb01",
+    "complete_validation_qa_inputs.py": "1cfc377410f8faf10cc9cd56218a64eb2dbdfd7070355dbb08ab3d5f32d97f9d",
+    "screen_repaired_validation.py": "f1ff3da38a77c1af85c6fc51eeadbcace3e4ec7011438ba137aab991de070e9b"
+  },
+  "query": {
+    "url": "https://earth-search.aws.element84.com/v1/search",
+    "collection": "sentinel-2-l1c",
+    "start_inclusive": "2018-07-01T00:00:00Z",
+    "end_exclusive": "2018-07-31T00:00:00Z",
+    "page_limit": 100,
+    "maximum_pages": 10,
+    "maximum_response_bytes": 2097152,
+    "timeout_seconds": 20,
+    "target_tile": "36UXB",
+    "relative_orbit": "R064",
+    "post_date": "2018-07-31",
+    "known_cloudy_date": "2018-07-26",
+    "minimum_interval_days": 5,
+    "maximum_interval_days": 30,
+    "nominal_followup_baseline": "N0206",
+    "catalogue_cloud_percentage_used_for_selection": false,
+    "select_roster": false,
+    "source_crs": "EPSG:32636",
+    "core_union_bounds": [
+      663380,
+      5604740,
+      664280,
+      5605640
+    ],
+    "qa_context_union_bounds": [
+      662180,
+      5603540,
+      665480,
+      5606840
+    ],
+    "stac_datetime": "2018-07-01T00:00:00Z/2018-07-30T23:59:59.999999Z",
+    "request_bbox": "EPSG:4326 transform_bounds of full QA context union, densify_pts=21; no tile/orbit/cloud filter in request; eligibility assessed per row",
+    "pagination": "Save each raw page and request; follow only HTTPS earth-search.aws.element84.com/v1/search next links with GET or POST merge semantics; max 10 pages; require no remaining next link; fail on loops or conflicting item identities"
+  },
+  "resources": {
+    "workers": 1,
+    "native_threads": 1,
+    "nice_increment": 10,
+    "gpu_used": false,
+    "worker_rss_mib": 512,
+    "available_memory_reserve_gib": 1.5,
+    "max_seconds_per_worker": 300
+  },
+  "normalization_policy": {
+    "all_product_variants_retained": true,
+    "exact_duplicate_item_policy": "Coalesce only identical canonical JSON for same collection/item ID, preserving occurrence pages; conflict aborts",
+    "identity": "Parse tile, orbit, baseline and acquisition date from each s2:product_uri; compare provider fields where supplied; retain issues and unknowns",
+    "offsets": "Record actual supplied metadata only; absent is unknown, never inferred from baseline",
+    "geometry": "Full valid Polygon/MultiPolygon with holes in EPSG:32636; shapely covers for fixed core and QA rectangles; missing/invalid unknown",
+    "known_cloudy": "26 July acquisition retained; exact V11 product has measured QA exclusion; same-date variants have untested own QA and are not fresh earlier sources",
+    "eligibility": "Nominal metadata follow-up only: target tile/orbit, acquisition date July1-25, interval5-30, matching nominal N0206 baseline, no identity issues, full footprint coverage. No selection or ranking by cloud, no source approval."
+  }
+}
