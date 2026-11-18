@@ -1,6 +1,6 @@
 # Earlier pre-image catalogue continuation
 
-## Current checkpoint: V12 protocol declared; execution pending
+## Current checkpoint: implementation tested and frozen; query pending
 
 Continue on `codex/curated-deforestation-pilot`; commit each verified logical
 change with this handoff updated and push to the same GitHub branch. Read
@@ -12,7 +12,8 @@ The user approved continuing the next bounded task. V12 is a METADATA-ONLY
 catalogue inventory of earlier pre-images for the fixed 31 July 2018 post-image.
 Protocol: `Docs/Reviews/ValidationEarlierCatalogueV12/protocol.json`. No query
 has run, roster been selected, source imagery downloaded or pixel work started
-at this checkpoint. Implementation and offline tests remain INCOMPLETE.
+at this checkpoint. Implementation and offline tests are complete; live query
+and final integrity/evidence remain INCOMPLETE.
 
 ## Fixed scope
 
@@ -43,14 +44,20 @@ not fresh earlier sources. No validation labels, date estimates or accuracy exis
 ## Capacity and verification
 
 Use unchanged `validate_sample.run_guarded`, one nice +10 CPU worker, native
-threads1, no GPU, 512 MiB RSS, 1.5 GiB available-system-memory reserve and 300 s
-maximum (tests120 s). Do not overlap guarded workers. Source rasters, cached
+threads 1, no GPU, 512 MiB RSS, 1.5 GiB available-system-memory reserve and 300 s
+maximum (tests 120 s). Do not overlap guarded workers. Source rasters, cached
 observations, models and QA are outside V12. Do not overwrite completed outputs.
-341 tests passed at V11; no code/test execution has occurred in V12 yet. An
+349 tests pass (341 previous plus eight new offline catalogue tests). The suite
+took 18.83 s, peaked at 320.53 MiB and retained at least 2.53 GiB available. An
 initial read-only process check found no active guarded project worker.
 
-Next: implement and test the separate inventory, freeze its hashes, then one
-bounded query. Record all outcomes, resource measurements and source integrity
+Protocol checkpoint `1da24ee` is pushed. The implementation and test hashes are
+frozen in the protocol, alongside the passing suite receipt. Read-only review
+checked variants, pagination, holes, timestamp date semantics and unknown
+offsets; asset-band offsets and malformed URI handling were corrected before
+tests. The new implementation does not modify any archived V7 or frozen QA code.
+
+Next: run one bounded metadata query using the frozen inventory. Record all outcomes, resource measurements and source integrity
 before marking V12 complete. Later work requires a separately predeclared small
 metadata/compatibility roster and acquisition scope before any imagery/QA.
 Earlier pre-dates will also require explicit new pair lineage and recalculated

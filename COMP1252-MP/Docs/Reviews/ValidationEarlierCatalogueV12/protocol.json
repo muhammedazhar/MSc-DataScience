@@ -120,5 +120,15 @@
     "geometry": "Full valid Polygon/MultiPolygon with holes in EPSG:32636; shapely covers for fixed core and QA rectangles; missing/invalid unknown",
     "known_cloudy": "26 July acquisition retained; exact V11 product has measured QA exclusion; same-date variants have untested own QA and are not fresh earlier sources",
     "eligibility": "Nominal metadata follow-up only: target tile/orbit, acquisition date July1-25, interval5-30, matching nominal N0206 baseline, no identity issues, full footprint coverage. No selection or ranking by cloud, no source approval."
+  },
+  "implementation_sha256": {
+    "Solutions/inventory_earlier_validation_sources.py": "91ed9c71e8fc39699801a76f088197b775301477a66d8baac867c5b6971fee1b",
+    "Tests/test_earlier_validation_inventory.py": "957342284de3c122ce84cb229ac1d0c324f76254d7084cdc4c5bb57013a32c77"
+  },
+  "validation": {
+    "tests_run": 349,
+    "new_offline_tests": 8,
+    "receipt": "Docs/Reviews/ValidationEarlierCatalogueV12/checks/pre_execution_tests/metadata.json",
+    "receipt_sha256": "6c7d654a8a4b19208aab9c480c48e7c1dea808b51615372268744be8c7e6ad98"
   }
 }

@@ -5,7 +5,7 @@ status, then the latest handoff before edits. Commit every completed verified
 logical change with the handoff updated and push to the SAME branch. This entry
 point works for Codex, Gemini Antigravity or another agent without chat history.
 
-Current V12 metadata-only continuation (protocol declared, implementation/query pending):
+Current V12 metadata-only continuation (implementation tested and frozen; query pending):
 **`Docs/Handoffs/2026-11-18-earlier-preimage-catalogue.md`**.
 Completed review/repair/QA state:
 **`Docs/Handoffs/2026-11-18-validation-source-review.md`**.
