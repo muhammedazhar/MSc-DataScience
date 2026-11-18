@@ -46,3 +46,9 @@ there are 54 local L1C product folders. No partials, retries or failures occurre
 Do not rerun the completed jobs. Source files stay on this Mac; GitHub contains
 code/bounded evidence. See the final handoff for next explicit source-pair
 lineage and cumulative-target/QA-only phase; no labels or predictions exist.
+
+GitHub transport workaround: HTTPS receive-pack returned HTTP 408 even for a
+54 KiB pack. SSH authentication to `ssh.github.com:443` succeeded. Push the same
+branch via `ssh://git@ssh.github.com:443/muhammedazhar/MSc-DataScience.git`, with
+BatchMode/StrictHostKeyChecking enabled; then fetch origin and compare HEADs.
+This does not require changing the configured origin URL or force-pushing.

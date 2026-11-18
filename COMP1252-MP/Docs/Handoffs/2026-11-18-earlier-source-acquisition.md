@@ -20,9 +20,13 @@ No worker is active. All 369 tests pass. Do NOT repeat completed downloads.
 
 Checkpoints: `4cde3e4` predeclared protocol; `e79eabe` tested/frozen acquisition;
 `cba52ed` verified 21 July staging; `98ba410` both sources verified in staging.
-All are pushed. One push returned HTTP 408; per-command HTTP/1.1 retry succeeded
-and remote was checked. The completion checkpoint contains publication evidence,
-final integrity and this handoff. No force push or global Git config change.
+Source checkpoints are pushed. HTTPS receive-pack repeatedly returned HTTP 408;
+HTTP/1.1 succeeded for 98ba410 but later retries still timed out. SSH to
+`ssh.github.com:443` authenticated as the same GitHub user. Use an explicit SSH
+URL for the remaining checkpoint push, then fetch/check origin tracking and
+compare local/remote HEAD. No force push or global Git config/remote change.
+The completion checkpoint contains publication evidence and final integrity;
+the transport follow-up preserves the same contents and signed commit history.
 
 ## Fixed source scope and verified acquisition
 
