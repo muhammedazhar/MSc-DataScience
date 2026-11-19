@@ -150,5 +150,16 @@
     "worker_rss_mib": 512,
     "available_memory_reserve_gib": 1.5,
     "max_seconds_per_worker": 300
-  }
+  },
+  "implementation_sha256": {
+    "Solutions/screen_earlier_validation.py": "fea7a7c54c89b431638d3ab236f9f1dcda679c72bc37ad685ea785faa3718474",
+    "Tests/test_earlier_pair_qa.py": "fa90cd8817ec42b90075a10f7729801565b6d23e9b0731f777f9aa9b69790a2f"
+  },
+  "validation": {
+    "tests_run": 380,
+    "new_offline_tests": 11,
+    "receipt": "Docs/Reviews/ValidationEarlierScreenV15/checks/pre_execution_tests/metadata.json",
+    "receipt_sha256": "1576d2bf4cc068ac77f96ca8f4179cb292aef9ea408ed11c0d1cbefff9d5bc0b"
+  },
+  "failure_handling": "Attempt every fixed pair; retain per-pair processing errors as incomplete_processing_errors artifact with missing-cache slots. Failed observation keys are not automatically retried. Only error-free completed screens may replay/pass; source integrity issues remain explicit."
 }
