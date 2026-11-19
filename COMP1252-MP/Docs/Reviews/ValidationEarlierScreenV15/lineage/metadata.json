@@ -1,0 +1,48 @@
+{
+  "execution_status": "completed",
+  "schema_version": 15,
+  "mode": "prepare",
+  "protocol_sha256": "980e2f34596266304140b169997174df9c6ba39cf0e835b9d4d09f6baf7b9efa",
+  "implementation_sha256": "fea7a7c54c89b431638d3ab236f9f1dcda679c72bc37ad685ea785faa3718474",
+  "pair_count": 4,
+  "group_count": 1,
+  "labels_approved": 0,
+  "new_imagery_reviewed": 0,
+  "forest_model_executions": 0,
+  "validation_predictions_run": false,
+  "all_27_channels_checked": false,
+  "validation_eligible": false,
+  "training_approved": false,
+  "evaluation_approved": false,
+  "checks": {
+    "exact_date_aware_lineage": true,
+    "full_train_test_isolation": true,
+    "cumulative_reference_recomputed": true,
+    "source_hashes_and_prerequisites": true
+  },
+  "satellite_pixel_decodes": 0,
+  "cloud_model_executions": 0,
+  "artifact_sha256": {
+    "derived_pairs.jsonl": "29bc9768d88bfbbabc638e1c0b4c84745f388e77671fd5bee32a017e5b69f9ac",
+    "lineage.json": "783b4d4831d7ebc12dc3ac784f7c50fdc5076b928ccf6254466057aee47237c1",
+    "report.md": "35d262ba7639492ece264285098ce09ae7a8b8f3b275638c9f26635b092beda5"
+  },
+  "resources": {
+    "logical_cpu_count": 11,
+    "machine_ram_gib": 18.0,
+    "worker_peak_rss_mib_sampled": 159.2,
+    "worker_high_water_rss_mib": 167.03,
+    "minimum_available_gib_sampled": 3.23,
+    "elapsed_seconds": 2.3,
+    "worker_limit_mib": 512,
+    "minimum_available_gib_limit": 1.5,
+    "runtime_limit_seconds": 300,
+    "workers": 1,
+    "native_thread_limit": 1,
+    "nice_increment": 10,
+    "gdal_cache_mib": 32,
+    "warp_memory_mib": 16,
+    "gpu_used": false,
+    "monitor_interval_seconds": 0.25
+  }
+}

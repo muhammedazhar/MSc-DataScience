@@ -1,6 +1,6 @@
 # Earlier pair QA continuation
 
-## Current checkpoint: V15 tested/frozen; lineage preparation and QA pending
+## Current checkpoint: four lineages/targets verified; automatic QA pending
 
 Continue on `codex/curated-deforestation-pilot`; update this handoff, commit and
 push each verified logical change to the SAME branch. Read
@@ -15,8 +15,8 @@ original grids/group/split/anchors. One geographic group, not independent locati
 Preserve original blocked 36UXA parents and both V11 cloudy 26 July source pairs.
 No new source dates, replacements, labels, forest predictions, training, accuracy,
 manual imagery or 27-channel approval. No V15 pixel work has run at this checkpoint.
-Implementation and 11 offline tests are complete/frozen. Lineage/geometry, screen
-and replay remain INCOMPLETE. Protocol checkpoint 48af981 is pushed.
+Implementation and 11 offline tests are complete/frozen. Lineage/geometry preparation is now complete; screen and replay remain
+INCOMPLETE. Protocol checkpoint 48af981 and tested code c63618c are pushed.
 
 Derive new identities with explicit parent hashes, date changes and source lineage.
 Update interval_days to 10/15. Recompute intersecting context/post/pre temporal
@@ -61,3 +61,19 @@ evidence are backed up. Python:
 `/Users/muhammedazhar/.miniconda3/envs/COMP1252-MP/bin/python`.
 Project `/Users/muhammedazhar/Developer/Learning/MSc-DataScience/COMP1252-MP`;
 Git root is its parent. Preserve model 1664 at 0.5 and masks 0/1/255.
+
+## Completed pre-pixel lineage checkpoint
+
+Four distinct derived IDs, intervals 10/15 days, exact parent hashes, recomputed
+context/post/pre catalogue sets and full train/test barriers passed. Both earlier
+dates produce the SAME cumulative reference as the original 26 July parent
+(0 changed pixels), because relevant temporal dates are 21 June, 6 July and 31 July;
+future 5 August remains context only. This equality was recalculated, not copied.
+Anchor target/interior counts remain 55/8 and 92/25 for both dates. No mask or margin
+was shrunk and no class label approved. 174 actual source files were SHA-checked
+and their actual frozen metadata passed. V11 exclusions/exposure are retained.
+Preparation used 2.3 s, RSS 167.03 MiB, minimum 3.23 GiB available.
+Completed local output `Datasets/ValidationPilot/v15/lineage/`; byte-identical
+tracked copy `Docs/Reviews/ValidationEarlierScreenV15/lineage/`. Never overwrite.
+Next: screen all four using this exact completed lineage, NEW `v15/screen/`.
+No satellite pixels decoded or QA models run in preparation.
