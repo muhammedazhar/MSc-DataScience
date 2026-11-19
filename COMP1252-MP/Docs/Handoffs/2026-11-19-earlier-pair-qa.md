@@ -1,6 +1,6 @@
 # Earlier pair QA continuation
 
-## Current checkpoint: four lineages/targets verified; automatic QA pending
+## Current checkpoint: all four QA-excluded; replay/final integrity pending
 
 Continue on `codex/curated-deforestation-pilot`; update this handoff, commit and
 push each verified logical change to the SAME branch. Read
@@ -15,7 +15,7 @@ original grids/group/split/anchors. One geographic group, not independent locati
 Preserve original blocked 36UXA parents and both V11 cloudy 26 July source pairs.
 No new source dates, replacements, labels, forest predictions, training, accuracy,
 manual imagery or 27-channel approval. No V15 pixel work has run at this checkpoint.
-Implementation and 11 offline tests are complete/frozen. Lineage/geometry preparation is now complete; screen and replay remain
+Implementation and 11 offline tests are complete/frozen. Lineage/geometry and screen are complete. Replay and final integrity remain
 INCOMPLETE. Protocol checkpoint 48af981 and tested code c63618c are pushed.
 
 Derive new identities with explicit parent hashes, date changes and source lineage.
@@ -77,3 +77,18 @@ Completed local output `Datasets/ValidationPilot/v15/lineage/`; byte-identical
 tracked copy `Docs/Reviews/ValidationEarlierScreenV15/lineage/`. Never overwrite.
 Next: screen all four using this exact completed lineage, NEW `v15/screen/`.
 No satellite pixels decoded or QA models run in preparation.
+
+## Completed fixed-roster automatic QA checkpoint
+
+All FOUR pairs are `excluded_by_automatic_quality_screen`: cloud/buffer covers
+all 147/144 cumulative target pixels for both 21 and 16 July pre-images. Haze risk
+also flags 21 July; all crops exceed the fixed 10 percent quality-flag threshold.
+No ROI/margins were shrunk. Zero processing errors; all four outcomes retained.
+Eight observation requests / six unique caches, 4 hits/4 new caches/cloud calls,
+44 fused-band window requests. Old V11 post-cache hashes remained identical.
+Screen used 11.2 s, RSS 360.02 MiB, minimum 3.39 GiB available.
+Completed local `v15/screen/`; tracked byte-identical `ValidationEarlierScreenV15/screen/`
+contains all results, four six-plane TIFFs, exact references/contexts/cache bindings.
+Next: guarded cached-output verify with this lineage/screen into NEW `v15/verification/`;
+no source JP2 windows/cloud model rerun. No validation labels, first-visible interval,
+full 27-channel proof or unseen accuracy. Prior cloudy 26 July remains preserved.

@@ -1,0 +1,53 @@
+{
+  "execution_status": "completed",
+  "schema_version": 15,
+  "mode": "screen",
+  "protocol_sha256": "980e2f34596266304140b169997174df9c6ba39cf0e835b9d4d09f6baf7b9efa",
+  "implementation_sha256": "fea7a7c54c89b431638d3ab236f9f1dcda679c72bc37ad685ea785faa3718474",
+  "pair_count": 4,
+  "group_count": 1,
+  "labels_approved": 0,
+  "new_imagery_reviewed": 0,
+  "forest_model_executions": 0,
+  "validation_predictions_run": false,
+  "all_27_channels_checked": false,
+  "validation_eligible": false,
+  "training_approved": false,
+  "evaluation_approved": false,
+  "cloud_model_executions": 4,
+  "fused_band_window_requests": 44,
+  "checks": {
+    "exact_lineage": true,
+    "cumulative_targets": true,
+    "full_train_test_isolation": true,
+    "source_hashes_and_stats": true,
+    "zero_processing_errors": true
+  },
+  "artifact_sha256": {
+    "derived_pairs.jsonl": "29bc9768d88bfbbabc638e1c0b4c84745f388e77671fd5bee32a017e5b69f9ac",
+    "masks/derived-earlier-7da954e9ab94479ec0dd.tif": "40b11659373fc15867ff68c76a54535c6aa23004be1c22783a29ef3c78b49df8",
+    "masks/derived-earlier-badde8347026296b30b7.tif": "e623bd9ef5b158f259d54091796843d31ee4d4d387bb16b4a64a88a579dd7609",
+    "masks/derived-earlier-bc76a605bd7930ec58f2.tif": "fb1eb4ef49a02d5e0552335a015c4ef8aa8ec8c5ce5a0e69115abe539e76b068",
+    "masks/derived-earlier-fca71802356890bf7db8.tif": "382ba4c868f87424d316d8449c5e48bda4a52554887215d8695d58ac38239fd0",
+    "report.md": "80704df9d143c46b7d8c1c775df19cc04aff69a0c8499bfc1772413ce23c04d0",
+    "screen.json": "db314301966f2057c64ba5379c6229361c531e8dd224f33a713cb24691300fa2"
+  },
+  "resources": {
+    "logical_cpu_count": 11,
+    "machine_ram_gib": 18.0,
+    "worker_peak_rss_mib_sampled": 355.1,
+    "worker_high_water_rss_mib": 360.02,
+    "minimum_available_gib_sampled": 3.39,
+    "elapsed_seconds": 11.2,
+    "worker_limit_mib": 512,
+    "minimum_available_gib_limit": 1.5,
+    "runtime_limit_seconds": 300,
+    "workers": 1,
+    "native_thread_limit": 1,
+    "nice_increment": 10,
+    "gdal_cache_mib": 32,
+    "warp_memory_mib": 16,
+    "gpu_used": false,
+    "monitor_interval_seconds": 0.25
+  }
+}
