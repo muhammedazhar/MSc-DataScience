@@ -5,7 +5,7 @@ status, then the latest handoff before edits. Commit every completed verified
 logical change with the handoff updated and push to the SAME branch. This entry
 point works for Codex, Gemini Antigravity or another agent without chat history.
 
-Current V15 earlier-pair QA (all four excluded; replay/final checks pending):
+Current completed V15 earlier-pair QA state:
 **`Docs/Handoffs/2026-11-19-earlier-pair-qa.md`**.
 Completed V14 earlier-source acquisition state:
 **`Docs/Handoffs/2026-11-18-earlier-source-acquisition.md`**.
@@ -76,18 +76,25 @@ folders now exist. Transaction is COMPLETE; no partials/retries/failures or sour
 replacements. Prior sources and cloudy outcomes are unchanged. No pixels decoded,
 models run, new pairs/targets created or labels approved; clarity is unknown.
 
-**369 tests pass.** No worker is active. Next bounded task: predeclare four
-explicit earlier-date source pairs (two pre-dates x two events, fixed 31 July post),
-recalculate cumulative temporal targets, verify full split/grid/group lineage
-and run unchanged QA on the entire fixed roster. Preserve all outcomes and
-Mac limits; no ROI shrinking, extra-date search or labels.
+V15 derived all four fixed earlier-date pairs with new IDs, 10/15-day intervals
+and recalculated cumulative targets before pixel work. All four are automatically
+QA-excluded: both 21/16 July pre-images flag every target/context pixel cloud/buffer.
+All outcomes, four QA masks and six safe cache snapshots were replay-verified;
+old 26 July failures/exposure/source hashes remain intact. No labels, manual
+images, forest models, full 27-channel proof, date estimate or accuracy.
+
+**380 tests pass.** No worker is active. Next proposed bounded task: predeclare
+metadata-only compatibility checks for the three remaining finite V12 nominal
+dates (11, 6, 1 July 2018). No extra source/date pixels in V15. Preserve all failures,
+Mac limits and fixed QA; no ROI shrinking, label forcing or search until success.
 Both events share ONE geographic group and are not independent locations.
 
 Use one nice +10 CPU worker, native/Torch threads 1, no GPU, unchanged
 `validate_sample.run_guarded`, 512 MiB RSS and 1.5 GiB available-system-memory
 reserve, 300 s maximum. Actual latest peaks: source repair 58.36 MiB, QA 265.44 MiB,
 replay 144.88 MiB, V12 inventory ~60 MiB, V13 metadata 45.56 MiB, V14 acquisition
-65.53 MiB, publication 51.39 MiB, hardened 369 tests 360.27 / 366.6 MiB. Preserve masks
+65.53 MiB, publication 51.39 MiB, V15 QA 360.02 MiB, replay 179.27 MiB, 380 tests
+333.52 / 334.0 MiB. Preserve masks
 0 forest/1 clearing/255 unknown,
 all original frozen sources and full train/test footprint barriers.
 
