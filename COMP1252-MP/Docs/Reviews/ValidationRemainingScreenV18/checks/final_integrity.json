@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "checked_on": "2026-11-20",
+  "protocol_sha256": "bf31ba500f44446dc48baa3b97b4c1f7972125c514c17cf59e35a51e04979e86",
+  "lineage_sha256": "80b034947c37afc976de75a751d9d787ca15ad508fee5f36842ff3b5e985a981",
+  "screen_sha256": "c39c2373aaac6b1b208b80341344602066f1b85a5f1a1d0f0de27b944f5c3751",
+  "verification_metadata_sha256": "30ee779d8b32615fefef6600e690ca26aa5be8fcabec71516948f1ccdb86d616",
+  "cache_index_sha256": "2336d5e938040ccfa4fa10d19f666048a9bb0b8a7258df50b58d0a76b149c267",
+  "pinned_input_hashes_checked": 71,
+  "source_hashes_checked_per_worker": 232,
+  "distinct_prior_or_current_file_stats_checked": 406,
+  "prior_qa_exclusions_preserved": 6,
+  "prior_transactions_complete": true,
+  "pair_count": 6,
+  "geographic_groups": 1,
+  "status_counts": {
+    "excluded_by_automatic_quality_screen": 4,
+    "passed_automatic_screen_pending_visual_review": 2
+  },
+  "passed_pairs_pending_visual_review": [
+    "derived-remaining-9a36abc2df4bc919d207",
+    "derived-remaining-e61a8a8e623222b69efb"
+  ],
+  "qa_tifs_replayed": 6,
+  "observation_bindings_replayed": 12,
+  "distinct_cache_snapshots": 8,
+  "prior_cache_snapshots_unchanged": 2,
+  "cache_snapshot_bytes": 347170,
+  "cloud_model_calls": 6,
+  "fused_band_window_requests": 66,
+  "processing_errors": 0,
+  "labels_approved": 0,
+  "forest_model_executions": 0,
+  "manual_imagery_reviews": 0,
+  "tests_passed": 391,
+  "active_guarded_workers": 0,
+  "verification_scope": "Replayed numeric QA, reference masks and anchor context with frozen functions and saved arrays. The replay read zero JP2 windows and ran zero models."
+}

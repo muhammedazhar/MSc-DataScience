@@ -1,0 +1,130 @@
+[
+  {
+    "path": "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/35e892c72941afa2c4be84a137c1e8e03c6c62903dbf1a92ef7dc44ab7f3399d.npz",
+    "bytes": 47083,
+    "sha256": "9ce8be9ea7bd8645258ce28bede7de8c7ccc61a195811fe9e70c20b14cd8238b",
+    "cache_key": "35e892c72941afa2c4be84a137c1e8e03c6c62903dbf1a92ef7dc44ab7f3399d",
+    "snapshot": "cache_evidence/35e892c72941afa2c4be84a137c1e8e03c6c62903dbf1a92ef7dc44ab7f3399d.npz",
+    "prior_cache": false,
+    "bindings": [
+      {
+        "pair_id": "derived-remaining-2348f64c864abf619670",
+        "side": "pre"
+      }
+    ]
+  },
+  {
+    "path": "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/81ecf2b1919537de0ab2e811a7618cf711472ea74f36af7733684ea6b0eb2e70.npz",
+    "bytes": 41599,
+    "sha256": "f61b34c6a77b0c72e75e65420bb34c65f62beffba8f9c06d03e4c1b15a4df065",
+    "cache_key": "81ecf2b1919537de0ab2e811a7618cf711472ea74f36af7733684ea6b0eb2e70",
+    "snapshot": "cache_evidence/81ecf2b1919537de0ab2e811a7618cf711472ea74f36af7733684ea6b0eb2e70.npz",
+    "prior_cache": true,
+    "bindings": [
+      {
+        "pair_id": "derived-remaining-2348f64c864abf619670",
+        "side": "post"
+      },
+      {
+        "pair_id": "derived-remaining-9a36abc2df4bc919d207",
+        "side": "post"
+      },
+      {
+        "pair_id": "derived-remaining-0f85dedc53d3cb9903fc",
+        "side": "post"
+      }
+    ]
+  },
+  {
+    "path": "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/2974d440a48f4a240a491c5e241d658908a6c45ac44e1b36d925e4617d223484.npz",
+    "bytes": 47490,
+    "sha256": "a83fd9ae69b273c39e73cedcb4b5d0f3a1e7a85eef39211e0f64e2b566087c3a",
+    "cache_key": "2974d440a48f4a240a491c5e241d658908a6c45ac44e1b36d925e4617d223484",
+    "snapshot": "cache_evidence/2974d440a48f4a240a491c5e241d658908a6c45ac44e1b36d925e4617d223484.npz",
+    "prior_cache": false,
+    "bindings": [
+      {
+        "pair_id": "derived-remaining-0cfc619f2f76e007cc1f",
+        "side": "pre"
+      }
+    ]
+  },
+  {
+    "path": "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/f54199f875435ca09e90338d88a99272f60537ccc3c4910a578aa9a28da4a78b.npz",
+    "bytes": 40971,
+    "sha256": "e5a76d36b10481d6471622302c9db0acedb20da6d5dd630e277ee26a22dab068",
+    "cache_key": "f54199f875435ca09e90338d88a99272f60537ccc3c4910a578aa9a28da4a78b",
+    "snapshot": "cache_evidence/f54199f875435ca09e90338d88a99272f60537ccc3c4910a578aa9a28da4a78b.npz",
+    "prior_cache": true,
+    "bindings": [
+      {
+        "pair_id": "derived-remaining-0cfc619f2f76e007cc1f",
+        "side": "post"
+      },
+      {
+        "pair_id": "derived-remaining-e61a8a8e623222b69efb",
+        "side": "post"
+      },
+      {
+        "pair_id": "derived-remaining-b10fbe8a2b8f56fa9bf9",
+        "side": "post"
+      }
+    ]
+  },
+  {
+    "path": "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/1e4ac99977ef5b74ee4cbef8f03670411f50aeeb5047238ccda3c9aa3ff5dfb7.npz",
+    "bytes": 40332,
+    "sha256": "d0a9b2f1696316a87ca701c1e7024987881766f40af5938742d7c7ffb0a12bd0",
+    "cache_key": "1e4ac99977ef5b74ee4cbef8f03670411f50aeeb5047238ccda3c9aa3ff5dfb7",
+    "snapshot": "cache_evidence/1e4ac99977ef5b74ee4cbef8f03670411f50aeeb5047238ccda3c9aa3ff5dfb7.npz",
+    "prior_cache": false,
+    "bindings": [
+      {
+        "pair_id": "derived-remaining-9a36abc2df4bc919d207",
+        "side": "pre"
+      }
+    ]
+  },
+  {
+    "path": "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/1491ec98902f02a521b483282b4a66b2e0489ca599be0aea5366bd70adb8e1f8.npz",
+    "bytes": 39014,
+    "sha256": "d5bfbc8142ca689d4729238ab64baea647d755b4680fa7aef7237fdf05d49d61",
+    "cache_key": "1491ec98902f02a521b483282b4a66b2e0489ca599be0aea5366bd70adb8e1f8",
+    "snapshot": "cache_evidence/1491ec98902f02a521b483282b4a66b2e0489ca599be0aea5366bd70adb8e1f8.npz",
+    "prior_cache": false,
+    "bindings": [
+      {
+        "pair_id": "derived-remaining-e61a8a8e623222b69efb",
+        "side": "pre"
+      }
+    ]
+  },
+  {
+    "path": "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/c59f9eab0f87306d1879688eac052808bc3dbc362020240e29377c92332f16ab.npz",
+    "bytes": 45917,
+    "sha256": "8ba099a6041b93c72295da01aa2cc002f96d2b39aa033f9d1de1f5ef256199af",
+    "cache_key": "c59f9eab0f87306d1879688eac052808bc3dbc362020240e29377c92332f16ab",
+    "snapshot": "cache_evidence/c59f9eab0f87306d1879688eac052808bc3dbc362020240e29377c92332f16ab.npz",
+    "prior_cache": false,
+    "bindings": [
+      {
+        "pair_id": "derived-remaining-0f85dedc53d3cb9903fc",
+        "side": "pre"
+      }
+    ]
+  },
+  {
+    "path": "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/3ec26c79dbf78bb9b285226a6b880dff94aff82e6bb84a461f2cfd0e3b75a388.npz",
+    "bytes": 44764,
+    "sha256": "54f35d2248a07619f6cba455fbe5f7e6185e1ed6d7beb95ffc98732116da8fca",
+    "cache_key": "3ec26c79dbf78bb9b285226a6b880dff94aff82e6bb84a461f2cfd0e3b75a388",
+    "snapshot": "cache_evidence/3ec26c79dbf78bb9b285226a6b880dff94aff82e6bb84a461f2cfd0e3b75a388.npz",
+    "prior_cache": false,
+    "bindings": [
+      {
+        "pair_id": "derived-remaining-b10fbe8a2b8f56fa9bf9",
+        "side": "pre"
+      }
+    ]
+  }
+]

@@ -5,7 +5,7 @@ status, then the latest handoff before edits. Commit every completed verified
 logical change with the handoff updated and push to the SAME branch. This entry
 point works for Codex, Gemini Antigravity or another agent without chat history.
 
-V18 remaining July pair QA:
+Completed V18 remaining July pair QA:
 **`Docs/Handoffs/2026-11-20-remaining-pair-qa.md`**.
 Completed V17 source acquisition:
 **`Docs/Handoffs/2026-11-20-remaining-source-acquisition.md`**.
@@ -97,9 +97,12 @@ V17 acquired all three scenes and verified 174 files against their provider
 pins and saved SHA-256 checksums. All three passed the frozen local metadata
 checks and are published under `Datasets/Sentinel-2/`. Download workers peaked
 at 66.94 MiB RSS. The six earlier QA exclusions remain recorded.
-**388 tests pass.** No worker is active. Pixel QA for the new dates should use
-six derived pairs with recomputed cumulative targets. See the V17 handoff
-for final paths, source receipts, and validation.
+V18 prepared and screened six pairs with cumulative references. Both 6 July
+to 31 July pairs passed automatic QA and await visual review. Both 1 July
+and both 11 July pairs were excluded for cloud or its buffer. Replay verified
+all six masks and the numeric results. QA peaked at 370.62 MiB.
+**391 tests pass.** No worker is active. See the V18 handoff for pair IDs,
+context flags, and verification.
 Both events share ONE geographic group and are not independent locations.
 
 Use one nice +10 CPU worker, native/Torch threads 1, no GPU, unchanged
