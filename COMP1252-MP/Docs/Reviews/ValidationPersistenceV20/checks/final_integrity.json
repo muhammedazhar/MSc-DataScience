@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "protocol_sha256": "92e69e1217318a1527831a120eb0a944c08f6429cf5546388483a4feb5f40790",
+  "visual_review_sha256": "77f0e82256c320b105c37d19c2a1a2e6908655785b8f712f6454cd6e6d490a0e",
+  "reviews_sha256": "b08012815e89be143c8b6f9d8f1bfdf1a5a04feed017205b72032ff6438e710b",
+  "metadata_receipts_sha256": {
+    "preflight": "18b7541b475e25da2fe7f622ff320f947ac54b65ab7a019c6632da7035c66fe1",
+    "download_05": "69f7f8a299849339491c2edc8bf20a9a68f05d9d2cdcdf153baf964edb8e9850",
+    "download_10": "0fc7e2b1c7d649583beae885459f1fe756f6978bf111dc4c1a0a1173bdac0f60",
+    "publication": "f8fc31f6ae73ce3d22132e07d1cef0aa635c5004d1a5d148b12abef2f395964b",
+    "publication_verification": "9f278258f3ee8d6374b215ebef2ae66cb75b7705ba99c917f17695ed27f1ae35",
+    "screen": "3c1cfda5832a059ec40fc74a3bbbb9cfc661c7ec19ea0a1ae7af64dcafa07b5b",
+    "screen_verification": "c3098ff50ca9e9f37c0ae5298ed3399651a163366bfd96f3abb48e4e87466ae7",
+    "checks/tests": "a950a88d647dd1d87fd165ac1eb519bf933b94f923b82830d5a5c9c8affb569e"
+  },
+  "immutable_source_inputs_checked": 8,
+  "implementation_hashes_checked": 58,
+  "prior_source_stats_rechecked_in_publication": 406,
+  "published_assets_verified": 116,
+  "completed_transaction": true,
+  "cached_observations_replayed": 2,
+  "reviewed_views_replayed": 3,
+  "fixed_followup_dates": [
+    "2018-08-05",
+    "2018-08-10"
+  ],
+  "qa_excluded_dates": [
+    "2018-08-05"
+  ],
+  "visual_persistence_observation_date": "2018-08-10",
+  "first_visible_deforestation_intervals": 0,
+  "labels_approved": 0,
+  "tests_passed": 391,
+  "active_guarded_workers": 0
+}

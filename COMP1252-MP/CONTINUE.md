@@ -5,7 +5,7 @@ status, then the latest handoff before edits. Commit every completed verified
 logical change with the handoff updated and push to the SAME branch. This entry
 point works for Codex, Gemini Antigravity or another agent without chat history.
 
-Current V20 Area B persistence check:
+Completed V20 Area B persistence check:
 **`Docs/Handoffs/2026-11-20-august-persistence.md`**.
 Completed V19 visual endpoint review:
 **`Docs/Handoffs/2026-11-20-july-visual-review.md`**.
@@ -118,6 +118,12 @@ visually exposed. Both assessments, six views and their exact replay are
 archived. The next bounded task is a later-observation metadata inventory for
 persistence. Stable-forest control review and full 27-channel eligibility
 remain requirements for label approval.
+
+V20 checked the fixed 5 and 10 August 2018 sources on Area B's original grid.
+5 August had 17 shadow-risk flags in the 274-pixel target context. The clear
+10 August comparison shows the same broad lower opening ten days after 31
+July. The record supports persistence of that local expansion, with original
+onset unresolved. See the V20 handoff for the next full-channel and control checks.
 
 Use one nice +10 CPU worker, native/Torch threads 1, no GPU, unchanged
 `validate_sample.run_guarded`, 512 MiB RSS and 1.5 GiB available-system-memory

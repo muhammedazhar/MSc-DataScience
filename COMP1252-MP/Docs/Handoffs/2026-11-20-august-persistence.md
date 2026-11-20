@@ -1,7 +1,9 @@
 # Area B August persistence check
 
-V20 checks whether the lower opening that appeared by 31 July 2018 remains
-visible on the same Area B grid after July. Continue on
+V20 is complete. The lower opening visible on 31 July 2018 remains visible
+on 10 August, ten days later, on the same Area B grid. The provisional
+optical bracket of after 6 July and by 31 July still applies to the lower
+expansion. First-visible deforestation timing remains unresolved. Continue on
 `codex/curated-deforestation-pilot` and push verified checkpoints to that branch.
 
 The local scene and cache inventories stop at 31 July on the required tile.
@@ -49,8 +51,24 @@ August image has zero flags across the complete crop and is ready for visual
 comparison. Both dates used the original grid. Screening made two cloud-model
 calls and 22 fused-band requests, with peak RSS 337.00 MiB. Replay reproduced
 both QA rows, two snapshot archives and three views with no band reads or cloud
-model calls at 142.50 MiB peak RSS. Visual disposition is pending.
+model calls at 142.50 MiB peak RSS. Checkpoint `8337af9` pins those outcomes
+and the clear comparison before visual inspection.
+
+Both reviewers opened the plain RGB comparison before detail and NDVI. The
+10 August lower block remains in the same location, with the same straight
+southern edge and narrow connection to the older opening. NDVI remains low
+within the block. `visual_review.md` records the findings and all three views.
+`reviews.json` binds the visual dispositions for both dates to the replay,
+exact images and V19 review. `checks/final_integrity.json` checks the complete
+archived evidence and resource receipts. All 391 tests passed. No job is active.
 
 Keep one nice +10 CPU
 worker, one native thread, 512 MiB RSS, 1.5 GiB system memory reserve and a
 300-second job limit. Maintain at least 2 GiB disk reserve during acquisition.
+
+The next bounded task is to verify Area B's full frozen 27-channel endpoint
+eligibility and predefine stable-forest control support on the original grid
+before class approval. Keep the spatially limited persistence result, all earlier
+exclusions, and the existing exposed geographic group. The two completed source
+folders and transaction are local. GitHub holds the code and bounded receipts,
+snapshots and previews. Do not repeat the completed downloads or screening.

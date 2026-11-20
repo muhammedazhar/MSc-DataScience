@@ -1,0 +1,80 @@
+{
+  "schema_version": 20,
+  "status": "visual_persistence_review_completed",
+  "protocol_sha256": "92e69e1217318a1527831a120eb0a944c08f6429cf5546388483a4feb5f40790",
+  "july_review_sha256": "fd363f6062ec58717f4f6b258551a9dbe7f28519fd506adc0cf7a9cfff66ec4c",
+  "screen_metadata_sha256": "3c1cfda5832a059ec40fc74a3bbbb9cfc661c7ec19ea0a1ae7af64dcafa07b5b",
+  "screen_verification_metadata_sha256": "c3098ff50ca9e9f37c0ae5298ed3399651a163366bfd96f3abb48e4e87466ae7",
+  "pair_id": "derived-remaining-e61a8a8e623222b69efb",
+  "event_id": "event-ce1c1df8d02be33bb3c8",
+  "group_id": "group-96c27871459d03c08bcc",
+  "manual_exposed_group_ids": [
+    "group-0d4c6841d965abf62969",
+    "group-45f0c39e787ca8622918",
+    "group-594ecdcf428fc819f662",
+    "group-646504159ec8034a1565",
+    "group-6bef49e5258e9f579324",
+    "group-96c27871459d03c08bcc",
+    "group-a177948c08d55f377549"
+  ],
+  "new_manual_exposed_group_ids": [],
+  "observed_expansion_interval": {
+    "after": "2018-07-06",
+    "by": "2018-07-31",
+    "scope": "New pale block across the lower part of the anchor on the matched RGB views",
+    "status": "provisional_optical_observation"
+  },
+  "first_visible_deforestation_interval": null,
+  "labels_approved": 0,
+  "all_27_channels_checked": false,
+  "validation_eligible": false,
+  "followups": [
+    {
+      "date": "2018-08-05",
+      "scene_id": "S2B_MSIL1C_20180805T083559_N0206_R064_T36UXB_20180805T123757",
+      "status": "excluded_by_full_context_qa",
+      "target_context_pixels": 274,
+      "shadow_risk_pixels": 17,
+      "views_opened": [],
+      "persistence": null
+    },
+    {
+      "date": "2018-08-10",
+      "scene_id": "S2A_MSIL1C_20180810T083601_N0206_R064_T36UXB_20180810T124435",
+      "status": "localized_optical_persistence_supported",
+      "target_context_pixels": 274,
+      "qa_flagged_context_pixels": 0,
+      "days_after_31_july": 10,
+      "view_sha256": {
+        "2018-08-10-plain.png": "cf3f7f884204987732ff69be5ee6a9c45c983ddd1fc436585e162711f017eae8",
+        "2018-08-10-detail.png": "ba19ca124f5f1e8855b534c655efd00d9198dcb03b05b35de81934a2e389ce78",
+        "2018-08-10-ndvi.png": "66f132a636422ecf8f6a72523ccae183ff0de743bf10e364e53bc6d2bcbff4bd"
+      },
+      "persistence": "The broad lower block remains visible across the same lower interior, with a matching southern margin, eastern side and narrow northern connector.",
+      "ndvi_descriptive_only": {
+        "target": {
+          "pixels": 92,
+          "median_6_july": 0.6923032999038696,
+          "median_31_july": 0.31356120109558105,
+          "median_followup": 0.2917988896369934,
+          "median_followup_minus_31_july": -0.032847121357917786,
+          "followup_below_6_july_pixels": 92
+        },
+        "interior": {
+          "pixels": 25,
+          "median_6_july": 0.6982008218765259,
+          "median_31_july": 0.2988741099834442,
+          "median_followup": 0.2663877308368683,
+          "median_followup_minus_31_july": -0.03323924541473389,
+          "followup_below_6_july_pixels": 25
+        }
+      }
+    }
+  ],
+  "review_order": [
+    "plain RGB",
+    "outlined RGB detail",
+    "NDVI"
+  ],
+  "review_scope": "Two assistant readings of the same three boards. The 10 August image provides a later clear observation at 10 m. Class and original onset remain unresolved."
+}
