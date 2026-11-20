@@ -1,0 +1,171 @@
+{
+  "schema_version": 19,
+  "protocol_sha256": "35f638e8db3652bd81bc6fc3e8bedfe56d98c9e9ffac376fed17de4fc0ab4c1d",
+  "cases": [
+    {
+      "area": "A",
+      "pair_id": "derived-remaining-9a36abc2df4bc919d207",
+      "event_id": "event-71d8da17cbbfd9babdee",
+      "pre_date": "2018-07-06",
+      "post_date": "2018-07-31",
+      "grid": {
+        "crs": "EPSG:32636",
+        "transform": [
+          10.0,
+          0.0,
+          663640.0,
+          0.0,
+          -10.0,
+          5605640.0
+        ],
+        "width": 64,
+        "height": 64,
+        "bounds": [
+          663640.0,
+          5605000.0,
+          664280.0,
+          5605640.0
+        ]
+      },
+      "detail_col_row_bounds": [
+        22,
+        17,
+        41,
+        46
+      ],
+      "cache_receipts": [
+        {
+          "path": "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/1e4ac99977ef5b74ee4cbef8f03670411f50aeeb5047238ccda3c9aa3ff5dfb7.npz",
+          "bytes": 40332,
+          "sha256": "d0a9b2f1696316a87ca701c1e7024987881766f40af5938742d7c7ffb0a12bd0",
+          "cache_key": "1e4ac99977ef5b74ee4cbef8f03670411f50aeeb5047238ccda3c9aa3ff5dfb7"
+        },
+        {
+          "path": "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/81ecf2b1919537de0ab2e811a7618cf711472ea74f36af7733684ea6b0eb2e70.npz",
+          "bytes": 41599,
+          "sha256": "f61b34c6a77b0c72e75e65420bb34c65f62beffba8f9c06d03e4c1b15a4df065",
+          "cache_key": "81ecf2b1919537de0ab2e811a7618cf711472ea74f36af7733684ea6b0eb2e70"
+        }
+      ],
+      "qa_mask_sha256": "35185c2437d2ba94d654790927e4ec72d1c4e01e4a9b81749fdbd7c2e1e8dd91",
+      "target_mask_sha256": "6bd943bbf621430bb9a09022cfe38b6d0f27cadbef0ab5c1e57c2f4c8b4b9df2",
+      "interior_mask_sha256": "58cfe083c1b73c70e48709202997037c15550f208fd160d9cd6e2bdc22f9bdeb",
+      "shadow_context_row_col": [
+        [],
+        [
+          [
+            38,
+            29
+          ],
+          [
+            39,
+            29
+          ],
+          [
+            40,
+            29
+          ],
+          [
+            41,
+            29
+          ]
+        ]
+      ],
+      "ndvi_descriptive_only": {
+        "target": {
+          "pixels": 55,
+          "median_pre": 0.6743766665458679,
+          "median_post": 0.3080213963985443,
+          "median_change": -0.3567635416984558,
+          "decreased_pixels": 55
+        },
+        "eroded_interior": {
+          "pixels": 8,
+          "median_pre": 0.7052042484283447,
+          "median_post": 0.28132596611976624,
+          "median_change": -0.43540602922439575,
+          "decreased_pixels": 8
+        }
+      },
+      "files": [
+        "area-a-plain.png",
+        "area-a-detail.png",
+        "area-a-ndvi.png"
+      ]
+    },
+    {
+      "area": "B",
+      "pair_id": "derived-remaining-e61a8a8e623222b69efb",
+      "event_id": "event-ce1c1df8d02be33bb3c8",
+      "pre_date": "2018-07-06",
+      "post_date": "2018-07-31",
+      "grid": {
+        "crs": "EPSG:32636",
+        "transform": [
+          10.0,
+          0.0,
+          663380.0,
+          0.0,
+          -10.0,
+          5605380.0
+        ],
+        "width": 64,
+        "height": 64,
+        "bounds": [
+          663380.0,
+          5604740.0,
+          664020.0,
+          5605380.0
+        ]
+      },
+      "detail_col_row_bounds": [
+        20,
+        13,
+        45,
+        45
+      ],
+      "cache_receipts": [
+        {
+          "path": "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/1491ec98902f02a521b483282b4a66b2e0489ca599be0aea5366bd70adb8e1f8.npz",
+          "bytes": 39014,
+          "sha256": "d5bfbc8142ca689d4729238ab64baea647d755b4680fa7aef7237fdf05d49d61",
+          "cache_key": "1491ec98902f02a521b483282b4a66b2e0489ca599be0aea5366bd70adb8e1f8"
+        },
+        {
+          "path": "Datasets/PixelQA/cache/fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560/f54199f875435ca09e90338d88a99272f60537ccc3c4910a578aa9a28da4a78b.npz",
+          "bytes": 40971,
+          "sha256": "e5a76d36b10481d6471622302c9db0acedb20da6d5dd630e277ee26a22dab068",
+          "cache_key": "f54199f875435ca09e90338d88a99272f60537ccc3c4910a578aa9a28da4a78b"
+        }
+      ],
+      "qa_mask_sha256": "4368ada7e781ac6d6e0b5b9921a95879eed2fa01d8e47f1bff8b978bb39eb009",
+      "target_mask_sha256": "f7c27baf3a1a82ef061c2d2968cc81ee82974cb575b0fa9b67b20cee8b6d73b8",
+      "interior_mask_sha256": "2fdfdf896fc225bb57fcc35a131f48bf32f11bc657c767e6a53696e7648151db",
+      "shadow_context_row_col": [
+        [],
+        []
+      ],
+      "ndvi_descriptive_only": {
+        "target": {
+          "pixels": 92,
+          "median_pre": 0.6923032999038696,
+          "median_post": 0.31356120109558105,
+          "median_change": -0.3047725558280945,
+          "decreased_pixels": 92
+        },
+        "eroded_interior": {
+          "pixels": 25,
+          "median_pre": 0.6982008218765259,
+          "median_post": 0.2988741099834442,
+          "median_change": -0.3944249749183655,
+          "decreased_pixels": 25
+        }
+      },
+      "files": [
+        "area-b-plain.png",
+        "area-b-detail.png",
+        "area-b-ndvi.png"
+      ]
+    }
+  ]
+}

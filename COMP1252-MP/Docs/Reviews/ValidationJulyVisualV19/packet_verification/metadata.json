@@ -1,0 +1,37 @@
+{
+  "execution_status": "completed",
+  "mode": "verify",
+  "protocol_sha256": "35f638e8db3652bd81bc6fc3e8bedfe56d98c9e9ffac376fed17de4fc0ab4c1d",
+  "artifact_sha256": {
+    "area-a-detail.png": "1dc267910c312da36b178db993f3c25a1b12b9ccb6863213561cc970d81c7a64",
+    "area-a-ndvi.png": "4e2f84c23497fab22bac3caef21244c37f67e1fe54fee9638a0c7449ff3141d1",
+    "area-a-plain.png": "8a9a1f5270eb0aaa25567df63d0a371f0a3b31c264218f0cc636b87f42b3fad5",
+    "area-b-detail.png": "1573e39444086ef577b7ee800fa637b26e8714ebe37950d3ce2b26e8ae23cdd1",
+    "area-b-ndvi.png": "feb3810e8f8d25f80753c7f7ba47ba9d635c93b8d17e7b6fcc6648e3d797b56f",
+    "area-b-plain.png": "3e4581a3807f7fd454e07a43a88bdafb8cef786a7eb8f6794d2961f07d0ccea8",
+    "packet.json": "9661c6061051f9d29968c6793476c294e07bc195fa744e3001ec469ff23895bf"
+  },
+  "pair_count": 2,
+  "cache_bindings_checked": 4,
+  "source_jp2_reads": 0,
+  "model_executions": 0,
+  "labels_approved": 0,
+  "resources": {
+    "logical_cpu_count": 11,
+    "machine_ram_gib": 18.0,
+    "worker_peak_rss_mib_sampled": 131.0,
+    "worker_high_water_rss_mib": 159.02,
+    "minimum_available_gib_sampled": 3.32,
+    "elapsed_seconds": 0.77,
+    "worker_limit_mib": 512,
+    "minimum_available_gib_limit": 1.5,
+    "runtime_limit_seconds": 300,
+    "workers": 1,
+    "native_thread_limit": 1,
+    "nice_increment": 10,
+    "gdal_cache_mib": 16,
+    "warp_memory_mib": 0,
+    "gpu_used": false,
+    "monitor_interval_seconds": 0.25
+  }
+}

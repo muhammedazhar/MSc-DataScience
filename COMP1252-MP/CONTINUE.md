@@ -5,6 +5,8 @@ status, then the latest handoff before edits. Commit every completed verified
 logical change with the handoff updated and push to the SAME branch. This entry
 point works for Codex, Gemini Antigravity or another agent without chat history.
 
+V19 visual endpoint review:
+**`Docs/Handoffs/2026-11-20-july-visual-review.md`**.
 Completed V18 remaining July pair QA:
 **`Docs/Handoffs/2026-11-20-remaining-pair-qa.md`**.
 Completed V17 source acquisition:
