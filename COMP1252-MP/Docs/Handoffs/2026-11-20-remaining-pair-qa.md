@@ -2,7 +2,10 @@
 
 V18 lineage is complete. All six pairs have distinct IDs, and cumulative
 references, full source hashes, and train/test isolation are verified.
-Pixel QA and saved-evidence verification are pending. All 391 tests passed,
+Automatic QA is complete and saved-evidence verification is pending.
+Both 6 July pairs passed automatic screening for visual review. The 11 and
+1 July pairs were excluded for cloud or its buffer. The screen finished in
+16.02 seconds and peaked at 370.62 MiB RSS. All 391 tests passed,
 including the 30-day boundary, unique IDs, and cumulative date cutoffs.
 Lineage preparation took 2.79 seconds and peaked at 239.48 MiB. Continue on `codex/curated-deforestation-pilot`
 and push verified checkpoints to the same branch.
