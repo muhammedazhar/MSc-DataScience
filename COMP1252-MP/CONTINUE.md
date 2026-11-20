@@ -5,7 +5,9 @@ status, then the latest handoff before edits. Commit every completed verified
 logical change with the handoff updated and push to the SAME branch. This entry
 point works for Codex, Gemini Antigravity or another agent without chat history.
 
-Current completed V15 earlier-pair QA state:
+Current V16 metadata preflight:
+**`Docs/Handoffs/2026-11-20-remaining-source-metadata.md`**.
+Completed V15 earlier-pair QA state:
 **`Docs/Handoffs/2026-11-19-earlier-pair-qa.md`**.
 Completed V14 earlier-source acquisition state:
 **`Docs/Handoffs/2026-11-18-earlier-source-acquisition.md`**.
