@@ -35,8 +35,12 @@ The 5 August scene is staged with all 58 assets verified against the provider
 pins and hashed. Staging passed the local frozen metadata checks. Its guarded
 download took 32.00 seconds at 68.09 MiB peak RSS. Checkpoint `09ed6e5` saves
 its receipt. The 10 August scene also passed staging with 58 verified assets.
-It took 41.91 seconds at 62.66 MiB peak RSS. Publication of both scenes, crop
-QA and visual dispositions are pending.
+It took 41.91 seconds at 62.66 MiB peak RSS, recorded at `4cfd4f5`.
+
+Both scenes are published under `Datasets/Sentinel-2/`. Independent
+publication verification matched all 116 asset hashes, local metadata and
+the completed transaction receipt. Publication and verification peaked at
+52.14 and 56.53 MiB RSS. Crop QA and visual dispositions are pending.
 
 Keep one nice +10 CPU
 worker, one native thread, 512 MiB RSS, 1.5 GiB system memory reserve and a

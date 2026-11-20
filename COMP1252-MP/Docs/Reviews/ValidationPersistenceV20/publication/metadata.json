@@ -1,0 +1,33 @@
+{
+  "execution_status": "completed",
+  "mode": "publish",
+  "scene_index": null,
+  "protocol_sha256": "92e69e1217318a1527831a120eb0a944c08f6429cf5546388483a4feb5f40790",
+  "preflight_metadata_sha256": "18b7541b475e25da2fe7f622ff320f947ac54b65ab7a019c6632da7035c66fe1",
+  "transaction_journal": "Datasets/ValidationPilot/v20/source_transaction/journal.json",
+  "artifact_sha256": {
+    "result.json": "d91b62d76f6a5376681c1dbde2d0b490da6ebfd1f3ef2ac697c8d663c3e813fc",
+    "journal_snapshot.json": "af6e3b621668666dfabfc78fa3de8bd02ea12288e5bd0b4062de5a1d7409c897"
+  },
+  "satellite_pixel_reads": 0,
+  "model_executions": 0,
+  "labels_approved": 0,
+  "resources": {
+    "logical_cpu_count": 11,
+    "machine_ram_gib": 18.0,
+    "worker_peak_rss_mib_sampled": 52.1,
+    "worker_high_water_rss_mib": 52.14,
+    "minimum_available_gib_sampled": 3.53,
+    "elapsed_seconds": 3.83,
+    "worker_limit_mib": 512,
+    "minimum_available_gib_limit": 1.5,
+    "runtime_limit_seconds": 300,
+    "workers": 1,
+    "native_thread_limit": 1,
+    "nice_increment": 10,
+    "gdal_cache_mib": 0,
+    "warp_memory_mib": 0,
+    "gpu_used": false,
+    "monitor_interval_seconds": 0.25
+  }
+}
