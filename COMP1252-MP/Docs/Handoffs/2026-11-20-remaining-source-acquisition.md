@@ -23,3 +23,5 @@ scene. Publish the roster after all three scenes pass local metadata checks.
 Protocol evidence is under `Docs/Reviews/ValidationRemainingAcquisitionV17/`.
 
 - 2018-07-11 is staged with all 58 files verified. The guarded run took 52.74 seconds and peaked at 63.03 MiB RSS. It downloaded 58 files and reused 0 verified files. See the `download_11` receipt and journal snapshot.
+
+- 2018-07-06 is staged with all 58 files verified. The guarded run took 47.42 seconds and peaked at 59.58 MiB RSS. It downloaded 58 files and reused 0 verified files. See the `download_06` receipt and journal snapshot.
