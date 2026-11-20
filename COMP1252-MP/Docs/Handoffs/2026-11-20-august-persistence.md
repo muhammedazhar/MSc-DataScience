@@ -40,7 +40,16 @@ It took 41.91 seconds at 62.66 MiB peak RSS, recorded at `4cfd4f5`.
 Both scenes are published under `Datasets/Sentinel-2/`. Independent
 publication verification matched all 116 asset hashes, local metadata and
 the completed transaction receipt. Publication and verification peaked at
-52.14 and 56.53 MiB RSS. Crop QA and visual dispositions are pending.
+52.14 and 56.53 MiB RSS. Checkpoint `0db0e35` saves publication and verification.
+
+Crop QA and cached replay are complete. The 5 August image has 17 shadow-risk
+pixels in the full 274-pixel target context and fails the visual review gate.
+The target itself and its eroded interior context have zero flags. The 10
+August image has zero flags across the complete crop and is ready for visual
+comparison. Both dates used the original grid. Screening made two cloud-model
+calls and 22 fused-band requests, with peak RSS 337.00 MiB. Replay reproduced
+both QA rows, two snapshot archives and three views with no band reads or cloud
+model calls at 142.50 MiB peak RSS. Visual disposition is pending.
 
 Keep one nice +10 CPU
 worker, one native thread, 512 MiB RSS, 1.5 GiB system memory reserve and a

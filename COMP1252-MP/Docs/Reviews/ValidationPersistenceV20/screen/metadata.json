@@ -1,0 +1,32 @@
+{
+  "execution_status": "completed",
+  "mode": "screen",
+  "protocol_sha256": "92e69e1217318a1527831a120eb0a944c08f6429cf5546388483a4feb5f40790",
+  "artifact_sha256": {
+    "2018-08-05-observation.npz": "48fd8c3ba2eb17f844e3c7a8584a7f73bc51d8ac22e11ff4ea8101d0955a2523",
+    "2018-08-10-detail.png": "ba19ca124f5f1e8855b534c655efd00d9198dcb03b05b35de81934a2e389ce78",
+    "2018-08-10-ndvi.png": "66f132a636422ecf8f6a72523ccae183ff0de743bf10e364e53bc6d2bcbff4bd",
+    "2018-08-10-observation.npz": "0ec46e311cb49221aeb358c255464ffe612327458c80282dcc644652c0b67a88",
+    "2018-08-10-plain.png": "cf3f7f884204987732ff69be5ee6a9c45c983ddd1fc436585e162711f017eae8",
+    "result.json": "0e01115ad18c4bc1201f9a229326bd4917bf34f329a33cbbec583f1690878e3e"
+  },
+  "labels_approved": 0,
+  "resources": {
+    "logical_cpu_count": 11,
+    "machine_ram_gib": 18.0,
+    "worker_peak_rss_mib_sampled": 335.4,
+    "worker_high_water_rss_mib": 337.0,
+    "minimum_available_gib_sampled": 3.47,
+    "elapsed_seconds": 7.38,
+    "worker_limit_mib": 512,
+    "minimum_available_gib_limit": 1.5,
+    "runtime_limit_seconds": 300,
+    "workers": 1,
+    "native_thread_limit": 1,
+    "nice_increment": 10,
+    "gdal_cache_mib": 32,
+    "warp_memory_mib": 0,
+    "gpu_used": false,
+    "monitor_interval_seconds": 0.25
+  }
+}

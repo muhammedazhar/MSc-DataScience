@@ -1,0 +1,27 @@
+{
+  "execution_status": "completed",
+  "mode": "verify",
+  "protocol_sha256": "92e69e1217318a1527831a120eb0a944c08f6429cf5546388483a4feb5f40790",
+  "artifact_sha256": {
+    "result.json": "f0c8c46276260c6b95e6ddf9429f3a6c1de06cf01ff07a8a06d97c05c79964e3"
+  },
+  "labels_approved": 0,
+  "resources": {
+    "logical_cpu_count": 11,
+    "machine_ram_gib": 18.0,
+    "worker_peak_rss_mib_sampled": 138.2,
+    "worker_high_water_rss_mib": 142.5,
+    "minimum_available_gib_sampled": 2.49,
+    "elapsed_seconds": 1.27,
+    "worker_limit_mib": 512,
+    "minimum_available_gib_limit": 1.5,
+    "runtime_limit_seconds": 300,
+    "workers": 1,
+    "native_thread_limit": 1,
+    "nice_increment": 10,
+    "gdal_cache_mib": 32,
+    "warp_memory_mib": 0,
+    "gpu_used": false,
+    "monitor_interval_seconds": 0.25
+  }
+}
