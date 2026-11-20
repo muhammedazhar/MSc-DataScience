@@ -29,7 +29,12 @@ confirmed full footprint, matching L1C XML, and 58 pinned files per scene.
 The total listed payload is 899,759,383 bytes and the conservative staging
 allowance is 1,927,511,952 bytes plus a 2 GiB disk reserve. The source volume
 had 26,831,347,712 bytes available at preflight. The preflight peaked at
-68.19 MiB RSS. Acquisition, QA and visual dispositions are pending.
+68.19 MiB RSS. Checkpoint `ffe6fc1` saves the raw metadata and exact replay.
+
+The 5 August scene is staged with all 58 assets verified against the provider
+pins and hashed. Staging passed the local frozen metadata checks. Its guarded
+download took 32.00 seconds at 68.09 MiB peak RSS. The 10 August acquisition,
+publication of both scenes, crop QA and visual dispositions are pending.
 
 Keep one nice +10 CPU
 worker, one native thread, 512 MiB RSS, 1.5 GiB system memory reserve and a
