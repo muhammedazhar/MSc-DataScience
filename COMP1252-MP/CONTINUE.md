@@ -5,7 +5,7 @@ status, then the latest handoff before edits. Commit every completed verified
 logical change with the handoff updated and push to the SAME branch. This entry
 point works for Codex, Gemini Antigravity or another agent without chat history.
 
-V19 visual endpoint review:
+Completed V19 visual endpoint review:
 **`Docs/Handoffs/2026-11-20-july-visual-review.md`**.
 Completed V18 remaining July pair QA:
 **`Docs/Handoffs/2026-11-20-remaining-pair-qa.md`**.
@@ -106,6 +106,16 @@ all six masks and the numeric results. QA peaked at 370.62 MiB.
 **391 tests pass.** No worker is active. See the V18 handoff for pair IDs,
 context flags, and verification.
 Both events share ONE geographic group and are not independent locations.
+
+V19 visually reviewed both 6–31 July pairs from the four verified V18 caches.
+Area A shows plausible expansion near a narrow older strip and four flagged
+context cells. Area B supports a provisional optical bracket of (6, 31] July
+for the lower expansion. Earlier pale ground leaves the first-visible
+deforestation date unresolved for both targets. The shared group is now
+visually exposed. Both assessments, six views and their exact replay are
+archived. The next bounded task is a later-observation metadata inventory for
+persistence. Stable-forest control review and full 27-channel eligibility
+remain requirements for label approval.
 
 Use one nice +10 CPU worker, native/Torch threads 1, no GPU, unchanged
 `validate_sample.run_guarded`, 512 MiB RSS and 1.5 GiB available-system-memory

@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "scope": "Artifact, source, roster, guard and decision-record consistency checks",
+  "review_sha256": "fd363f6062ec58717f4f6b258551a9dbe7f28519fd506adc0cf7a9cfff66ec4c",
+  "report_sha256": "f69355bc3ec4020a4dc069422e5badf8363fb4b0d6a9138f65e0f70b906e408e",
+  "protocol_sha256": "35f638e8db3652bd81bc6fc3e8bedfe56d98c9e9ffac376fed17de4fc0ab4c1d",
+  "packet_metadata_sha256": "08ffd75b98bf0095a40dd44026368e7c6661325c3ef45b241000c17390693755",
+  "packet_verification_metadata_sha256": "062e7ca9ee0523cda067262cb476281dbf623e568ac52c73dd7317b9bc347215",
+  "test_metadata_sha256": "46471f49cc40c76dd352c1d77d251ecf5b13b1559ae3bd504d3de99cfe5aeb29",
+  "pinned_source_hashes_checked": 8,
+  "pinned_implementation_hashes_checked": 54,
+  "replayed_artifacts_matching_archives": 7,
+  "reviewed_views": 6,
+  "reviewed_cases": 2,
+  "new_manual_exposed_group_ids": [
+    "group-96c27871459d03c08bcc"
+  ],
+  "prior_manual_exposed_groups_preserved": 6,
+  "provisional_optical_expansion_brackets": 1,
+  "first_visible_deforestation_intervals": 0,
+  "labels_approved": 0,
+  "tests_passed": 391,
+  "active_guarded_workers": 0
+}

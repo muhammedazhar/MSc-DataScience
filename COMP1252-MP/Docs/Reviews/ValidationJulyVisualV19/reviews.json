@@ -1,0 +1,149 @@
+{
+  "schema_version": 19,
+  "status": "visual_review_completed",
+  "group_id": "group-96c27871459d03c08bcc",
+  "prior_manual_exposed_group_ids": [
+    "group-0d4c6841d965abf62969",
+    "group-45f0c39e787ca8622918",
+    "group-594ecdcf428fc819f662",
+    "group-646504159ec8034a1565",
+    "group-6bef49e5258e9f579324",
+    "group-a177948c08d55f377549"
+  ],
+  "new_manual_exposed_group_ids": [
+    "group-96c27871459d03c08bcc"
+  ],
+  "manual_exposed_group_ids": [
+    "group-0d4c6841d965abf62969",
+    "group-45f0c39e787ca8622918",
+    "group-594ecdcf428fc819f662",
+    "group-646504159ec8034a1565",
+    "group-6bef49e5258e9f579324",
+    "group-96c27871459d03c08bcc",
+    "group-a177948c08d55f377549"
+  ],
+  "protocol_sha256": "35f638e8db3652bd81bc6fc3e8bedfe56d98c9e9ffac376fed17de4fc0ab4c1d",
+  "packet_sha256": "9661c6061051f9d29968c6793476c294e07bc195fa744e3001ec469ff23895bf",
+  "packet_metadata_sha256": "08ffd75b98bf0095a40dd44026368e7c6661325c3ef45b241000c17390693755",
+  "packet_verification_metadata_sha256": "062e7ca9ee0523cda067262cb476281dbf623e568ac52c73dd7317b9bc347215",
+  "view_sha256": {
+    "area-a-detail.png": "1dc267910c312da36b178db993f3c25a1b12b9ccb6863213561cc970d81c7a64",
+    "area-a-ndvi.png": "4e2f84c23497fab22bac3caef21244c37f67e1fe54fee9638a0c7449ff3141d1",
+    "area-a-plain.png": "8a9a1f5270eb0aaa25567df63d0a371f0a3b31c264218f0cc636b87f42b3fad5",
+    "area-b-detail.png": "1573e39444086ef577b7ee800fa637b26e8714ebe37950d3ce2b26e8ae23cdd1",
+    "area-b-ndvi.png": "feb3810e8f8d25f80753c7f7ba47ba9d635c93b8d17e7b6fcc6648e3d797b56f",
+    "area-b-plain.png": "3e4581a3807f7fd454e07a43a88bdafb8cef786a7eb8f6794d2961f07d0ccea8"
+  },
+  "review_scope": "Both complete plain RGB pairs were opened before the annotated details and NDVI boards. A second assistant inspected the same six boards and also found plausible expansion, stronger in B. The imagery interpretation has no field confirmation.",
+  "required_before_approval": [
+    "Confirm earlier forest and persistent later clearing at the area assigned the transition",
+    "Inspect a geometrically isolated stable-forest control",
+    "Verify finite inputs across all 27 frozen feature channels",
+    "Obtain explicit label approval and verify the label-lock export"
+  ],
+  "labels_approved": 0,
+  "all_27_channels_checked": false,
+  "validation_eligible": false,
+  "cases": [
+    {
+      "area": "A",
+      "pair_id": "derived-remaining-9a36abc2df4bc919d207",
+      "event_id": "event-71d8da17cbbfd9babdee",
+      "pre_date": "2018-07-06",
+      "post_date": "2018-07-31",
+      "pre_observation": "A pale linear opening is already visible on the west and upper margins. The darker central interior is partly continuous with forest-like cover to the east.",
+      "post_observation": "The opening widens south through the previously darker interior, where pale pixels coincide with a coherent NDVI decline.",
+      "ambiguity": "Earlier cover is mixed near the narrow opening. Four flagged context cells border the dark southwestern flank. Interior brightening and vegetation-index decline occur away from these cells.",
+      "observed_expansion_interval": null,
+      "outcome": "plausible_transition_needs_confirmation",
+      "first_visible_deforestation_interval": null,
+      "shadow_context_row_col": [
+        [],
+        [
+          [
+            38,
+            29
+          ],
+          [
+            39,
+            29
+          ],
+          [
+            40,
+            29
+          ],
+          [
+            41,
+            29
+          ]
+        ]
+      ],
+      "ndvi_descriptive_only": {
+        "target": {
+          "pixels": 55,
+          "median_pre": 0.6743766665458679,
+          "median_post": 0.3080213963985443,
+          "median_change": -0.3567635416984558,
+          "decreased_pixels": 55
+        },
+        "eroded_interior": {
+          "pixels": 8,
+          "median_pre": 0.7052042484283447,
+          "median_post": 0.28132596611976624,
+          "median_change": -0.43540602922439575,
+          "decreased_pixels": 8
+        }
+      },
+      "views_opened": [
+        "area-a-plain.png",
+        "area-a-detail.png",
+        "area-a-ndvi.png"
+      ],
+      "label_approved": false
+    },
+    {
+      "area": "B",
+      "pair_id": "derived-remaining-e61a8a8e623222b69efb",
+      "event_id": "event-ce1c1df8d02be33bb3c8",
+      "pre_date": "2018-07-06",
+      "post_date": "2018-07-31",
+      "pre_observation": "The upper corridor and western lobe are already pale. The broader lower interior remains dark blue-green and continuous with forest-like cover.",
+      "post_observation": "A broad pale block with a straight southern edge fills the lower part of the target. Its footprint coincides with the strongest NDVI decline, and the full context is QA-clear.",
+      "ambiguity": "The opening pre-dates the pair. Cover near the upper corridor and mixed boundaries cannot be classified confidently at 10 m. Persistence and a reviewed control remain pending.",
+      "observed_expansion_interval": {
+        "after": "2018-07-06",
+        "by": "2018-07-31",
+        "scope": "New pale block across the lower part of the anchor on the matched RGB views",
+        "status": "provisional_optical_observation"
+      },
+      "outcome": "plausible_transition_needs_confirmation",
+      "first_visible_deforestation_interval": null,
+      "shadow_context_row_col": [
+        [],
+        []
+      ],
+      "ndvi_descriptive_only": {
+        "target": {
+          "pixels": 92,
+          "median_pre": 0.6923032999038696,
+          "median_post": 0.31356120109558105,
+          "median_change": -0.3047725558280945,
+          "decreased_pixels": 92
+        },
+        "eroded_interior": {
+          "pixels": 25,
+          "median_pre": 0.6982008218765259,
+          "median_post": 0.2988741099834442,
+          "median_change": -0.3944249749183655,
+          "decreased_pixels": 25
+        }
+      },
+      "views_opened": [
+        "area-b-plain.png",
+        "area-b-detail.png",
+        "area-b-ndvi.png"
+      ],
+      "label_approved": false
+    }
+  ]
+}
