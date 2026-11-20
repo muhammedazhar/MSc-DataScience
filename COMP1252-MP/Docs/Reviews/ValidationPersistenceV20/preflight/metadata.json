@@ -1,0 +1,38 @@
+{
+  "execution_status": "completed",
+  "mode": "persistence_source_preflight",
+  "protocol_sha256": "92e69e1217318a1527831a120eb0a944c08f6429cf5546388483a4feb5f40790",
+  "artifact_sha256": {
+    "catalogue-2018-08-05.json": "f047056b200f717b580a0e6c2ba721c3fad7167fff757ddd77df65150e5ffe80",
+    "catalogue-2018-08-10.json": "7e900ff560a95512de597a96f4a66fa19212ad7fdb8dbc12978a9a7d6b1d666d",
+    "preflight.json": "cecb5a70771f91a27923415e599bd54dca35c1e2969d805e0c7e82735ca3ff9f",
+    "requests.json": "417114a8b2cf5da5190c9cb5020359eeb492e054bfba8952bbc31f0f5181b3b2",
+    "source-01/listing.xml": "4cdac95528aaa471188650830d2dedc5b04ee0cd263955d0f0fcf82584c6278d",
+    "source-01/product.xml": "0cce9e8de4a3264942bf90f7798db9f5d1b70ca100dabcef3c21925f51c45515",
+    "source-01/tile.xml": "8f7f6c62faeed738ce67de00d028b164b71052a9e22ec7a508d3664284354c9c",
+    "source-02/listing.xml": "559ec012b01e0d1bfafbae6a7447e67522082a7e3652abf346e56267e7ed14c0",
+    "source-02/product.xml": "f09d6deaa9aadb2c318c7e158fb2d17cd98ebb5a2149f247594f13df3d6c860e",
+    "source-02/tile.xml": "980eb7d79a3f28038072950abb76e017a54a3fecb406dee8c99a6965609f8230"
+  },
+  "image_asset_downloads": 0,
+  "satellite_pixel_reads": 0,
+  "model_executions": 0,
+  "resources": {
+    "logical_cpu_count": 11,
+    "machine_ram_gib": 18.0,
+    "worker_peak_rss_mib_sampled": 66.8,
+    "worker_high_water_rss_mib": 68.19,
+    "minimum_available_gib_sampled": 4.13,
+    "elapsed_seconds": 4.32,
+    "worker_limit_mib": 512,
+    "minimum_available_gib_limit": 1.5,
+    "runtime_limit_seconds": 300,
+    "workers": 1,
+    "native_thread_limit": 1,
+    "nice_increment": 10,
+    "gdal_cache_mib": 16,
+    "warp_memory_mib": 0,
+    "gpu_used": false,
+    "monitor_interval_seconds": 0.25
+  }
+}

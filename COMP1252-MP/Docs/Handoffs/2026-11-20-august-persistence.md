@@ -20,7 +20,17 @@ exclusions and the visually exposed group remain recorded as they were.
 
 The protocol and four runner implementations are pinned under
 `Docs/Reviews/ValidationPersistenceV20/`. The fixed roster and syntax checks
-passed. All 391 existing tests passed under the guard. Live metadata, acquisition,
-QA and visual dispositions are pending. Keep one nice +10 CPU
+passed. All 391 existing tests passed under the guard. Checkpoint `6feff78`
+pinned the two dates and the runners before network requests.
+
+Both 5 and 10 August passed the live metadata preflight and exact offline
+replay. Raw catalogue items and four provider metadata requests per date
+confirmed full footprint, matching L1C XML, and 58 pinned files per scene.
+The total listed payload is 899,759,383 bytes and the conservative staging
+allowance is 1,927,511,952 bytes plus a 2 GiB disk reserve. The source volume
+had 26,831,347,712 bytes available at preflight. The preflight peaked at
+68.19 MiB RSS. Acquisition, QA and visual dispositions are pending.
+
+Keep one nice +10 CPU
 worker, one native thread, 512 MiB RSS, 1.5 GiB system memory reserve and a
 300-second job limit. Maintain at least 2 GiB disk reserve during acquisition.
