@@ -5,7 +5,7 @@ status, then the latest handoff before edits. Commit every completed verified
 logical change with the handoff updated and push to the SAME branch. This entry
 point works for Codex, Gemini Antigravity or another agent without chat history.
 
-Current V21 Area B inputs and control review:
+Completed V21 Area B inputs and control review:
 **`Docs/Handoffs/2026-11-20-area-b-inputs.md`**.
 Completed V20 Area B persistence check:
 **`Docs/Handoffs/2026-11-20-august-persistence.md`**.
@@ -126,6 +126,13 @@ V20 checked the fixed 5 and 10 August 2018 sources on Area B's original grid.
 10 August comparison shows the same broad lower opening ten days after 31
 July. The record supports persistence of that local expansion, with original
 onset unresolved. See the V20 handoff for the next full-channel and control checks.
+
+V21 verified all 27 July features are finite across all 4,096 Area B crop
+pixels and both complete target contexts pass QA. Three fixed 16 × 16 control
+squares pass context checks at both July endpoints and 10 August. All look
+stable and forest-like, with class uncertainty at 10 m. The complete visual
+dispositions, source-bound tensor and replay are archived. Class approval
+and a label lock remain pending.
 
 Use one nice +10 CPU worker, native/Torch threads 1, no GPU, unchanged
 `validate_sample.run_guarded`, 512 MiB RSS and 1.5 GiB available-system-memory

@@ -1,8 +1,8 @@
 # Area B endpoint inputs and control review
 
-V21 follows the July comparison and clear 10 August persistence observation.
-It audits the 27 frozen July model-input channels and fixes the control
-candidate locations before their detailed visual inspection. Work on
+V21 is complete. All 27 July model-input channels pass the Area B feature
+audit. Three fixed control squares pass QA and appear stable and forest-like
+on 6 July, 31 July and 10 August. Forest class remains provisional. Work on
 `codex/curated-deforestation-pilot` and push verified checkpoints to that branch.
 
 The fixed case is Area B, `derived-remaining-e61a8a8e623222b69efb`, one existing
@@ -26,8 +26,22 @@ pass endpoint QA and finiteness. The three fixed 16 × 16 control squares
 start at zero-based (row, column) (2, 2), (22, 2) and (42, 2). Each 400-pixel
 context is QA-clear on all three dates. Independent roster replay and exact
 view reproduction passed using the saved arrays. Feature audit and replay
-peaked at 174.95 and 159.86 MiB RSS respectively. Control class disposition
-is pending visual inspection of the frozen packet.
+peaked at 174.95 and 159.86 MiB RSS respectively. Checkpoint `552153b` saves
+the tensor, frozen control roster and all eight boards before inspection.
+
+Both reviewers opened the plain boards before the outlines. All three fixed
+squares have continuous dark cover and show no coherent opening or advancing
+patch. The third square is the smoothest and has the weakest visible texture
+to identify the class. `visual_review.md` and `reviews.json` record each
+provisional control candidate, the three dates and limitations, under
+`Docs/Reviews/ValidationAreaBInputsV21/`. Final integrity verifies the
+archived evidence, resources, source and replay bindings. No workers are active.
+
+Preserve the V19 expansion bracket and V20 10 August persistence observation.
+An independent class review should corroborate the earlier cover of the lower
+expansion and at least one complete stable-forest square before label approval.
+The present case is an already visually exposed location. Keep the existing
+split barriers and approval/label-lock gates for any model evaluation.
 
 Keep one nice +10 CPU worker,
 one native thread, no GPU, the existing 512 MiB cap and 1.5 GiB reserve.

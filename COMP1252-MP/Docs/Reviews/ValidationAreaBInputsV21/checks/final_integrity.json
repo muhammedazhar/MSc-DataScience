@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "protocol_sha256": "e0a9f420fe116e7b18f8781e08b18b0161dc231ca0753d97b4be865be41bb3ee",
+  "review_sha256": "2c3a9629c7d6404a245cdd923206ecde8de75972ddbe0b633e236dda461797c9",
+  "review_report_sha256": "2d116cf25a0b24baf8f3db923a9a00c723e68033e80781c55802ff4401ea86df",
+  "metadata_sha256": {
+    "audit": "d2afc4b25d8969d24698ea899c92ca4bf0717cf76a8c7b32cb5e4cd2a134fb0a",
+    "verification": "6afefd9240808939a57ffc28bf89e6256763c5c52f9f75f32061d7e530bfbdff",
+    "checks/tests": "0e8bf8c510776f2199483404dc23f30df73a613d852f362519cd14afe5e40778"
+  },
+  "pinned_sources_checked": 15,
+  "pinned_implementations_checked": 60,
+  "july_source_fingerprints_checked": 116,
+  "finite_endpoint_channels": 27,
+  "finite_crop_pixels": 4096,
+  "target_and_interior_passed": true,
+  "controls_replayed_and_reviewed": 3,
+  "exact_view_replays": 8,
+  "labels_approved": 0,
+  "tests_passed": 391,
+  "active_guarded_workers": 0
+}

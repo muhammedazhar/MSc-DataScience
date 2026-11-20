@@ -1,0 +1,96 @@
+{
+  "schema_version": 21,
+  "status": "control_review_completed",
+  "protocol_sha256": "e0a9f420fe116e7b18f8781e08b18b0161dc231ca0753d97b4be865be41bb3ee",
+  "audit_metadata_sha256": "d2afc4b25d8969d24698ea899c92ca4bf0717cf76a8c7b32cb5e4cd2a134fb0a",
+  "replay_metadata_sha256": "6afefd9240808939a57ffc28bf89e6256763c5c52f9f75f32061d7e530bfbdff",
+  "v20_review_sha256": "b08012815e89be143c8b6f9d8f1bfdf1a5a04feed017205b72032ff6438e710b",
+  "group_id": "group-96c27871459d03c08bcc",
+  "pair_id": "derived-remaining-e61a8a8e623222b69efb",
+  "manual_exposed_group_ids": [
+    "group-0d4c6841d965abf62969",
+    "group-45f0c39e787ca8622918",
+    "group-594ecdcf428fc819f662",
+    "group-646504159ec8034a1565",
+    "group-6bef49e5258e9f579324",
+    "group-96c27871459d03c08bcc",
+    "group-a177948c08d55f377549"
+  ],
+  "new_manual_exposed_group_ids": [],
+  "view_sha256": {
+    "controls-plain.png": "cff8120f8602ea4897c947bbb1e2ee678b2f52b5e5c125deeea06a4adb878199",
+    "controls-outlined.png": "051e0bf4c434316839c7c76fc94aaa000775ed1f0d09d4cc0eabe2fe4048b005",
+    "control-1-plain.png": "b206cccde9e54671d36ac27329f0b691409fb185ebd3f80e39f3dee5d5621222",
+    "control-1-outlined.png": "d63d944d7d4a1542f687d723f1bec655007197f5621599cfbecfc802035d4eba",
+    "control-2-plain.png": "3d155a4a6d79225bb6c2da0223d734dc4563cdd1f0e3b4ecf15fe53bc3127347",
+    "control-2-outlined.png": "aa2667061e674706258af663ad019736effc3bfec34ef6ebdf963254a5f5751b",
+    "control-3-plain.png": "d39d1ab9fa9d50248ab3645b26bc8eefff7718f7823191ad4bc8742464d08cd9",
+    "control-3-outlined.png": "2ba2d93d28510b4ecddf081e51b2720cec4052f74f59f3be6326af1090f80a88"
+  },
+  "review_order": [
+    "plain full crop and plain control views",
+    "fixed full crop and control outlines"
+  ],
+  "scope": "Two assistant reviews of the same low-contrast 10 m RGB boards. All three squares look stable and forest-like. Whole-square forest class requires corroboration.",
+  "controls": [
+    {
+      "control_id": "control-1",
+      "row": 2,
+      "col": 2,
+      "size": 16,
+      "roi_sha256": "735e65f2e0de93ca25623d1aa9c389c9ecd35882d501381aa8eadcb7db600bbd",
+      "context_sha256": "343d6375491164c7cfc23e1abd953b2efb4ee5234468ef3cc057db6ff278962f",
+      "dates_reviewed": [
+        "2018-07-06",
+        "2018-07-31",
+        "2018-08-10"
+      ],
+      "observation": "Continuous dark blue-green, faintly mottled cover across the full northwest square, with no visible opening or linear feature crossing the square.",
+      "disposition": "provisional_stable_forest_candidate",
+      "label_approved": false
+    },
+    {
+      "control_id": "control-2",
+      "row": 22,
+      "col": 2,
+      "size": 16,
+      "roi_sha256": "c412353ba2b4eb8f73e95f76ec4b7ffb053f1776265b90a70d616251d60161f5",
+      "context_sha256": "5d93b0be4123188e22942eeaa4b43666593ba8f9528078770e192d0eee7622e9",
+      "dates_reviewed": [
+        "2018-07-06",
+        "2018-07-31",
+        "2018-08-10"
+      ],
+      "observation": "Continuous dark cover across the middle western square. Subtle lower-right tonal variation persists without a distinct boundary or a new bright patch.",
+      "disposition": "provisional_stable_forest_candidate",
+      "label_approved": false
+    },
+    {
+      "control_id": "control-3",
+      "row": 42,
+      "col": 2,
+      "size": 16,
+      "roi_sha256": "9c12fbcc2464840269b274049b3bce6ff37fbfa540820b4fd0d7b12b89411ad7",
+      "context_sha256": "23d16e90e4b8558ea5230512dc75efc5537b5ecda95c30fc36980c49c06e9241",
+      "dates_reviewed": [
+        "2018-07-06",
+        "2018-07-31",
+        "2018-08-10"
+      ],
+      "observation": "Smooth dark cover across the southwest square, west of the stronger southeastern boundary. Apparent stability is clear, with less texture for identifying class.",
+      "disposition": "provisional_stable_forest_candidate",
+      "label_approved": false
+    }
+  ],
+  "target_endpoint_inputs_eligible": true,
+  "observed_expansion_interval": {
+    "after": "2018-07-06",
+    "by": "2018-07-31",
+    "scope": "New pale block across the lower part of the anchor on the matched RGB views",
+    "status": "provisional_optical_observation"
+  },
+  "later_persistence_observation": "2018-08-10",
+  "first_visible_deforestation_interval": null,
+  "labels_approved": 0,
+  "validation_eligible": false
+}
