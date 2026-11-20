@@ -1,29 +1,49 @@
 # Remaining July source acquisition
 
-The V17 runner and protocol are tested and pinned. Download and publication
-are pending. All 388 tests passed in 4.58 seconds, with a sampled peak of
-346.4 MiB and at least 3.07 GiB available memory. The four new offline tests
-cover the complete roster, missing and duplicate scenes, duplicate and foreign
-asset mappings, and payload totals.
-Continue on `codex/curated-deforestation-pilot`. See the V16 metadata handoff
-for the three pinned manifests and the V15 handoff for frozen QA constraints.
+V17 is complete. All three L1C scenes passed file integrity and the frozen
+local scene metadata checks. Their directories are published under
+`Datasets/Sentinel-2/`. The 174 files total 1,664,246,549 bytes. Pixel clarity
+for these dates remains untested. Continue on `codex/curated-deforestation-pilot`
+and push verified checkpoints to the same branch.
 
-The acquisition roster is 11, 6, and 1 July 2018. It contains 174 files and
-1,664,246,549 bytes. Initial capacity was 28.98 GiB free on the source
-filesystem and 3.39 GiB system memory available. Recheck capacity for each
-guarded run. The disk allowance is 3.22 GiB plus a separate 2 GiB reserve.
+| Date | Local scene directory | Files | Guarded download | Peak RSS |
+| --- | --- | ---: | ---: | ---: |
+| 11 July 2018 | `S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613` | 58 | 52.74 s | 63.03 MiB |
+| 6 July 2018 | `S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246` | 58 | 47.42 s | 59.58 MiB |
+| 1 July 2018 | `S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347` | 58 | 47.75 s | 66.94 MiB |
 
-Use the existing V14 transfer, recovery, and publication functions with a
-separate journal under `Datasets/ValidationPilot/v17/source_transaction`.
-Run one low-priority worker at a time with a single native thread, 512 MiB
-RSS, 1.5 GiB available memory reserve, and a 300-second cap. Download and
-validate each scene in staging. Keep reports and verified receipts after each
-scene. Publish the roster after all three scenes pass local metadata checks.
+The acquisition runner uses the frozen V14 streaming and transaction
+functions with a V17 journal. It followed the V16 L1C asset pins and checked
+size and provider MD5 on transfer. Publication rehashed every file against
+the saved SHA-256 and reran the frozen metadata checks before and after
+moving the scene directories. All six local product and tile XML files matched
+the V16 evidence byte for byte. The final check confirms the prior 232 file
+size and mtime records, both earlier transactions, and all six cloud
+exclusions. The V17 journal records 174 verified transfers, three prepared
+scenes, and one completed publication. The staging directory is empty.
 
-Protocol evidence is under `Docs/Reviews/ValidationRemainingAcquisitionV17/`.
+Acquisition and publication used one nice +10 worker at a time, one native
+thread, a 512 MiB RSS cap, a 1.5 GiB available memory reserve, and a
+300-second limit per run. Publication took 7.12 seconds, peaked at 51.80 MiB,
+and finished with 23,820,689,408 bytes free on the source filesystem.
+All 388 guarded tests passed. No workers are active.
 
-- 2018-07-11 is staged with all 58 files verified. The guarded run took 52.74 seconds and peaked at 63.03 MiB RSS. It downloaded 58 files and reused 0 verified files. See the `download_11` receipt and journal snapshot.
+Checkpoint `4aecdad` pins the tested wrapper, exact three-scene roster, and
+resource limits. Checkpoints `84a94f8`, `094b939`, and `8431c82` preserve the
+verified staging results in acquisition order. The completion checkpoint
+records the published directories, asset receipts and final integrity check.
+See `Docs/Reviews/ValidationRemainingAcquisitionV17/` for the protocol,
+guard reports, journal snapshots and final file stats. The live transaction
+and durable completion receipt are under
+`Datasets/ValidationPilot/v17/source_transaction/`. Raw imagery is local.
+The repository contains verified receipts and checksums. Journal schema 14
+is the internal format of the reused engine. The outer V17 protocol and its
+hash bind the journal to this run.
 
-- 2018-07-06 is staged with all 58 files verified. The guarded run took 47.42 seconds and peaked at 59.58 MiB RSS. It downloaded 58 files and reused 0 verified files. See the `download_06` receipt and journal snapshot.
-
-- 2018-07-01 is staged with all 58 files verified. The guarded run took 47.75 seconds and peaked at 66.94 MiB RSS. It downloaded 58 files and reused 0 verified files. See the `download_01` receipt and journal snapshot.
+Future pixel QA should derive six explicit pairs from the three pre-images,
+the fixed 31 July post-image, and the two original event grids. Recalculate
+cumulative temporal references for each new date, including the 30-day
+boundary and the earlier baseline on 1 July. See the V15 handoff for lineage,
+split isolation and frozen cloud screening. The six pairs share one
+geographic group and any first-visible interval still requires clear pixels
+and class evidence.
