@@ -1,0 +1,329 @@
+[
+  {
+    "method": "GET",
+    "url": "https://sentinel-s2-l1c.s3.amazonaws.com/?list-type=2&prefix=tiles%2F36%2FU%2FXB%2F2018%2F7%2F11%2F0%2F&max-keys=300",
+    "request_headers": {
+      "Accept-Encoding": "identity",
+      "User-Agent": "COMP1252-source-metadata/13"
+    },
+    "artifact": "source-01/listing.xml",
+    "status": 200,
+    "response_headers": {
+      "x-amz-id-2": "S0w13WqDo2eH5F4Qd0SdA67ctCKQeb2cAYFxHhLbliNaPUwcyyxZMu4Rv6POpmp/kDw8CSOZOXc=",
+      "x-amz-request-id": "WDT83R86N1GGM94R",
+      "Server": "AmazonS3",
+      "Date": "Fri, 20 Nov 2026 02:33:57 GMT",
+      "x-amz-bucket-region": "eu-central-1",
+      "Content-Type": "application/xml",
+      "Transfer-Encoding": "chunked",
+      "Connection": "close"
+    },
+    "bytes": 25353,
+    "sha256": "501f2a44164a91671f3305aefa1808fa96c53b57fe767c918760cfdd434cc1da",
+    "verified": true
+  },
+  {
+    "method": "HEAD",
+    "url": "https://sentinel-s2-l1c.s3.amazonaws.com/products/2018/7/11/S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613/metadata.xml",
+    "request_headers": {
+      "Accept-Encoding": "identity",
+      "User-Agent": "COMP1252-source-metadata/13"
+    },
+    "artifact": null,
+    "status": 200,
+    "response_headers": {
+      "x-amz-id-2": "Kh6YoJnh9db9mwoHDY3e5eA/tsRv/efbfj+ohumy5w8FS3/89VIiKL2Z2CsNMRoX/H98MEy1wq0=",
+      "x-amz-request-id": "WDTBJ6QH00DJPNWC",
+      "Server": "AmazonS3",
+      "Date": "Fri, 20 Nov 2026 02:33:57 GMT",
+      "Last-Modified": "Wed, 11 Jul 2018 20:37:04 GMT",
+      "ETag": "\"0eec0406c8bd64c3c353b3675b08c3af\"",
+      "Accept-Ranges": "bytes",
+      "Content-Length": "44514",
+      "Content-Type": "application/xml",
+      "Connection": "close"
+    },
+    "pin": {
+      "size": 44514,
+      "etag": "\"0eec0406c8bd64c3c353b3675b08c3af\""
+    },
+    "verified": true
+  },
+  {
+    "method": "GET",
+    "url": "https://sentinel-s2-l1c.s3.amazonaws.com/products/2018/7/11/S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613/metadata.xml",
+    "request_headers": {
+      "Accept-Encoding": "identity",
+      "User-Agent": "COMP1252-source-metadata/13",
+      "If-Match": "\"0eec0406c8bd64c3c353b3675b08c3af\""
+    },
+    "artifact": "source-01/product.xml",
+    "status": 200,
+    "response_headers": {
+      "x-amz-id-2": "uRj+/bH4R3QgXS/IT3VPUTYSaZMoYBZcL/FSQ3mLQZ+6es3bnL7QgziEwG9lOegVCIsLs2LjyS8=",
+      "x-amz-request-id": "EMVYVET249HQNF73",
+      "Server": "AmazonS3",
+      "Date": "Fri, 20 Nov 2026 02:33:58 GMT",
+      "Last-Modified": "Wed, 11 Jul 2018 20:37:04 GMT",
+      "ETag": "\"0eec0406c8bd64c3c353b3675b08c3af\"",
+      "Accept-Ranges": "bytes",
+      "Content-Type": "application/xml",
+      "Content-Length": "44514",
+      "Connection": "close"
+    },
+    "bytes": 44514,
+    "sha256": "c069352aabc788d3f36f356262d6ce06116a9ee234498d156cc5e10e3ae051af",
+    "md5": "0eec0406c8bd64c3c353b3675b08c3af",
+    "if_match_verified": true,
+    "content_length_verified": true,
+    "verified": true
+  },
+  {
+    "method": "GET",
+    "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/metadata.xml",
+    "request_headers": {
+      "Accept-Encoding": "identity",
+      "User-Agent": "COMP1252-source-metadata/13",
+      "If-Match": "\"6cd510b9ab2ad20bce21228a36fa1676\""
+    },
+    "artifact": "source-01/tile.xml",
+    "status": 200,
+    "response_headers": {
+      "x-amz-id-2": "Phetk0N0emoG2vltYebUNq8GYM1qPgzW/bseS7A04ZbSLpj08jI3607nq0ijm8GdJKo8TUZENH8=",
+      "x-amz-request-id": "EMVKFJZR6YHTVFZR",
+      "Server": "AmazonS3",
+      "Date": "Fri, 20 Nov 2026 02:33:58 GMT",
+      "Last-Modified": "Wed, 11 Jul 2018 20:37:04 GMT",
+      "ETag": "\"6cd510b9ab2ad20bce21228a36fa1676\"",
+      "x-amz-storage-class": "INTELLIGENT_TIERING",
+      "Accept-Ranges": "bytes",
+      "Content-Type": "application/xml",
+      "Content-Length": "468971",
+      "Connection": "close"
+    },
+    "bytes": 468971,
+    "sha256": "fe34cba2207e6f3bb516add4995bf66343243086197df3575493eae67ceb3efe",
+    "md5": "6cd510b9ab2ad20bce21228a36fa1676",
+    "if_match_verified": true,
+    "content_length_verified": true,
+    "verified": true
+  },
+  {
+    "method": "GET",
+    "url": "https://sentinel-s2-l1c.s3.amazonaws.com/?list-type=2&prefix=tiles%2F36%2FU%2FXB%2F2018%2F7%2F6%2F0%2F&max-keys=300",
+    "request_headers": {
+      "Accept-Encoding": "identity",
+      "User-Agent": "COMP1252-source-metadata/13"
+    },
+    "artifact": "source-02/listing.xml",
+    "status": 200,
+    "response_headers": {
+      "x-amz-id-2": "5++eH1705X2W4aXfQGJ5iBIUZbM6RPy1Q4A1JQ5yYtTL2js1lDGoOenBvEtT5tXrdXXZ8Dqf6ux9UE7wZEhnjd1DS//JnwBl",
+      "x-amz-request-id": "EMVMBGZ6PT1W9GKK",
+      "Server": "AmazonS3",
+      "Date": "Fri, 20 Nov 2026 02:33:58 GMT",
+      "x-amz-bucket-region": "eu-central-1",
+      "Content-Type": "application/xml",
+      "Transfer-Encoding": "chunked",
+      "Connection": "close"
+    },
+    "bytes": 25259,
+    "sha256": "3bbd766eb5ce73a67f8960573fd472609c2a0e31f09a5bb5ed3d49b1f4031628",
+    "verified": true
+  },
+  {
+    "method": "HEAD",
+    "url": "https://sentinel-s2-l1c.s3.amazonaws.com/products/2018/7/6/S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246/metadata.xml",
+    "request_headers": {
+      "Accept-Encoding": "identity",
+      "User-Agent": "COMP1252-source-metadata/13"
+    },
+    "artifact": null,
+    "status": 200,
+    "response_headers": {
+      "x-amz-id-2": "+WjQvCXAmqVcCExcXeAxcI70bii2bRanLN9VdbYrde9/yNu+AjON5oIsEa5JfmtbnMMp34b5R0EYNhrNTP1u31r14vsGjBM9",
+      "x-amz-request-id": "9HTE4BT18RT8RTTQ",
+      "Server": "AmazonS3",
+      "Date": "Fri, 20 Nov 2026 02:33:59 GMT",
+      "Last-Modified": "Fri, 06 Jul 2018 21:56:59 GMT",
+      "ETag": "\"00b262f59a97763bc0b3a53b0f385d19\"",
+      "Accept-Ranges": "bytes",
+      "Content-Length": "44325",
+      "Content-Type": "application/xml",
+      "Connection": "close"
+    },
+    "pin": {
+      "size": 44325,
+      "etag": "\"00b262f59a97763bc0b3a53b0f385d19\""
+    },
+    "verified": true
+  },
+  {
+    "method": "GET",
+    "url": "https://sentinel-s2-l1c.s3.amazonaws.com/products/2018/7/6/S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246/metadata.xml",
+    "request_headers": {
+      "Accept-Encoding": "identity",
+      "User-Agent": "COMP1252-source-metadata/13",
+      "If-Match": "\"00b262f59a97763bc0b3a53b0f385d19\""
+    },
+    "artifact": "source-02/product.xml",
+    "status": 200,
+    "response_headers": {
+      "x-amz-id-2": "CuG3GOR42CnSyDIB4yiDABvC6GlX+v/1yq0CfRDCpz4l0tbnvyU5pOgUxHtbxTi2TXS6j9OjJ8gew1j+shzuhWWTDsx5mkA0",
+      "x-amz-request-id": "9HT5NG7A44HA7D73",
+      "Server": "AmazonS3",
+      "Date": "Fri, 20 Nov 2026 02:33:59 GMT",
+      "Last-Modified": "Fri, 06 Jul 2018 21:56:59 GMT",
+      "ETag": "\"00b262f59a97763bc0b3a53b0f385d19\"",
+      "Accept-Ranges": "bytes",
+      "Content-Type": "application/xml",
+      "Content-Length": "44325",
+      "Connection": "close"
+    },
+    "bytes": 44325,
+    "sha256": "c07aabf0444759e5078d6364487665a10e858ad0def31191596871c32bdb93bf",
+    "md5": "00b262f59a97763bc0b3a53b0f385d19",
+    "if_match_verified": true,
+    "content_length_verified": true,
+    "verified": true
+  },
+  {
+    "method": "GET",
+    "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/metadata.xml",
+    "request_headers": {
+      "Accept-Encoding": "identity",
+      "User-Agent": "COMP1252-source-metadata/13",
+      "If-Match": "\"af7de116cc9c009951575438b2aa58a4\""
+    },
+    "artifact": "source-02/tile.xml",
+    "status": 200,
+    "response_headers": {
+      "x-amz-id-2": "e6FMBffXRb7KM8oNpyhweR4oWlW3sp0xlo4ISouGwjdh5RMo72PMJZLrDRrAbS9uJrvmO713Zzwjhc9yZBZ7RGhLrlQWNbRO",
+      "x-amz-request-id": "9HTC25140B594WEF",
+      "Server": "AmazonS3",
+      "Date": "Fri, 20 Nov 2026 02:33:59 GMT",
+      "Last-Modified": "Fri, 06 Jul 2018 21:56:59 GMT",
+      "ETag": "\"af7de116cc9c009951575438b2aa58a4\"",
+      "x-amz-storage-class": "INTELLIGENT_TIERING",
+      "Accept-Ranges": "bytes",
+      "Content-Type": "application/xml",
+      "Content-Length": "469191",
+      "Connection": "close"
+    },
+    "bytes": 469191,
+    "sha256": "764814f84f257aabe23891e8c9b5c3a03545b812a33c80d8bdef31d54dd23ad4",
+    "md5": "af7de116cc9c009951575438b2aa58a4",
+    "if_match_verified": true,
+    "content_length_verified": true,
+    "verified": true
+  },
+  {
+    "method": "GET",
+    "url": "https://sentinel-s2-l1c.s3.amazonaws.com/?list-type=2&prefix=tiles%2F36%2FU%2FXB%2F2018%2F7%2F1%2F0%2F&max-keys=300",
+    "request_headers": {
+      "Accept-Encoding": "identity",
+      "User-Agent": "COMP1252-source-metadata/13"
+    },
+    "artifact": "source-03/listing.xml",
+    "status": 200,
+    "response_headers": {
+      "x-amz-id-2": "rmdUU3quL6l0XbITbXPHWToNr+TYlpUTnGCxNWi449qe46mSYzyBf3dn+9dJlcbzc9MOXkTGKx3AbyFi90IPWBuDZwBPYYsU",
+      "x-amz-request-id": "BMK9W547ZXQTKCX4",
+      "Server": "AmazonS3",
+      "Date": "Fri, 20 Nov 2026 02:34:00 GMT",
+      "x-amz-bucket-region": "eu-central-1",
+      "Content-Type": "application/xml",
+      "Transfer-Encoding": "chunked",
+      "Connection": "close"
+    },
+    "bytes": 25260,
+    "sha256": "bf7ec55a003ebeb8d406f86efc0429f633af97cc87520ec2711e3726f29d0247",
+    "verified": true
+  },
+  {
+    "method": "HEAD",
+    "url": "https://sentinel-s2-l1c.s3.amazonaws.com/products/2018/7/1/S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347/metadata.xml",
+    "request_headers": {
+      "Accept-Encoding": "identity",
+      "User-Agent": "COMP1252-source-metadata/13"
+    },
+    "artifact": null,
+    "status": 200,
+    "response_headers": {
+      "x-amz-id-2": "xKOK1dpgJLH3EmcMtsg8/UQi2+PXT3Y2UIF6APNDHiLRzmh5DXx9eqrhoVr2BRYUxzHHOxy2bfdFPt518pof4+tLZB3AuapQ",
+      "x-amz-request-id": "BMKE73G0AN7G68F7",
+      "Server": "AmazonS3",
+      "Date": "Fri, 20 Nov 2026 02:34:00 GMT",
+      "Last-Modified": "Sun, 01 Jul 2018 21:28:19 GMT",
+      "ETag": "\"cd1fb8ed73ba2e416a67a7f46aa00655\"",
+      "Accept-Ranges": "bytes",
+      "Content-Length": "44482",
+      "Content-Type": "application/xml",
+      "Connection": "close"
+    },
+    "pin": {
+      "size": 44482,
+      "etag": "\"cd1fb8ed73ba2e416a67a7f46aa00655\""
+    },
+    "verified": true
+  },
+  {
+    "method": "GET",
+    "url": "https://sentinel-s2-l1c.s3.amazonaws.com/products/2018/7/1/S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347/metadata.xml",
+    "request_headers": {
+      "Accept-Encoding": "identity",
+      "User-Agent": "COMP1252-source-metadata/13",
+      "If-Match": "\"cd1fb8ed73ba2e416a67a7f46aa00655\""
+    },
+    "artifact": "source-03/product.xml",
+    "status": 200,
+    "response_headers": {
+      "x-amz-id-2": "EuXjw7g/lLPIOIUouM+YqY2WYjfdsLh/ZOhKphnMoYy1PLacEXncb7I7V8xz8EOQXQwz1GF55iS4jqsDh4al3bbkPuWjofDw",
+      "x-amz-request-id": "BMK16ZNFQT2KEH62",
+      "Server": "AmazonS3",
+      "Date": "Fri, 20 Nov 2026 02:34:00 GMT",
+      "Last-Modified": "Sun, 01 Jul 2018 21:28:19 GMT",
+      "ETag": "\"cd1fb8ed73ba2e416a67a7f46aa00655\"",
+      "Accept-Ranges": "bytes",
+      "Content-Type": "application/xml",
+      "Content-Length": "44482",
+      "Connection": "close"
+    },
+    "bytes": 44482,
+    "sha256": "6dd36e03c1738d10882726fadd68c582e2f99ce4f95ec91297e0f3c05be34cbb",
+    "md5": "cd1fb8ed73ba2e416a67a7f46aa00655",
+    "if_match_verified": true,
+    "content_length_verified": true,
+    "verified": true
+  },
+  {
+    "method": "GET",
+    "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/metadata.xml",
+    "request_headers": {
+      "Accept-Encoding": "identity",
+      "User-Agent": "COMP1252-source-metadata/13",
+      "If-Match": "\"419e58dd75c628d9e83606c9bd1dd507\""
+    },
+    "artifact": "source-03/tile.xml",
+    "status": 200,
+    "response_headers": {
+      "x-amz-id-2": "nXJY3guPFtEpgLhp/D0f/JSQzQhUh/kheSDWogDSn2JAIuMuTPP/6NbQ1TuJ5YzvmmnSLIdmbIsZFTAVXcEl9C7IcwhZd6qp",
+      "x-amz-request-id": "WDTVRH8W51VX0X6X",
+      "Server": "AmazonS3",
+      "Date": "Fri, 20 Nov 2026 02:34:01 GMT",
+      "Last-Modified": "Sun, 01 Jul 2018 21:28:19 GMT",
+      "ETag": "\"419e58dd75c628d9e83606c9bd1dd507\"",
+      "x-amz-storage-class": "INTELLIGENT_TIERING",
+      "Accept-Ranges": "bytes",
+      "Content-Type": "application/xml",
+      "Content-Length": "469034",
+      "Connection": "close"
+    },
+    "bytes": 469034,
+    "sha256": "a0e25517cadd8fcdcd4342f844a2cc648e942060aa030430208bc9ad5a186648",
+    "md5": "419e58dd75c628d9e83606c9bd1dd507",
+    "if_match_verified": true,
+    "content_length_verified": true,
+    "verified": true
+  }
+]

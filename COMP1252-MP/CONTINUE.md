@@ -5,7 +5,7 @@ status, then the latest handoff before edits. Commit every completed verified
 logical change with the handoff updated and push to the SAME branch. This entry
 point works for Codex, Gemini Antigravity or another agent without chat history.
 
-Current V16 metadata preflight:
+Completed V16 metadata preflight:
 **`Docs/Handoffs/2026-11-20-remaining-source-metadata.md`**.
 Completed V15 earlier-pair QA state:
 **`Docs/Handoffs/2026-11-19-earlier-pair-qa.md`**.
@@ -85,10 +85,13 @@ All outcomes, four QA masks and six safe cache snapshots were replay-verified;
 old 26 July failures/exposure/source hashes remain intact. No labels, manual
 images, forest models, full 27-channel proof, date estimate or accuracy.
 
-**380 tests pass.** No worker is active. Next proposed bounded task: predeclare
-metadata-only compatibility checks for the three remaining finite V12 nominal
-dates (11, 6, 1 July 2018). No extra source/date pixels in V15. Preserve all failures,
-Mac limits and fixed QA; no ROI shrinking, label forcing or search until success.
+V16 completed metadata checks for the three remaining nominal V12 dates
+(11, 6, and 1 July 2018). All three passed L1C XML compatibility and had 58
+required assets listed. The combined listed payload is 1,664,246,549 bytes.
+The conservative staging estimate fit the available disk with the 2 GiB reserve.
+The six earlier QA exclusions are preserved and the three new dates await pixel QA.
+**384 tests pass.** No worker is active. See the V16 handoff for exact manifests,
+resource usage, and the boundary between this preflight and future acquisition.
 Both events share ONE geographic group and are not independent locations.
 
 Use one nice +10 CPU worker, native/Torch threads 1, no GPU, unchanged

@@ -1,0 +1,2089 @@
+{
+  "schema_version": 16,
+  "protocol_sha256": "6d092f526ac7469bdf2bf7d5c5be52dd44e8444485cdece775424bdf134068c6",
+  "status": "metadata_preflight_passed_no_acquisition",
+  "group_id": "group-96c27871459d03c08bcc",
+  "results": [
+    {
+      "scene_id": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613",
+      "acquisition_date": "2018-07-11",
+      "interval_days": 20,
+      "item_id": "S2A_36UXB_20180711_0_L1C",
+      "raw_item_sha256": "aa2d938f1fabc22496e6f834a6b1a8bf6ef1a55314db8963fd9d963b65029ac6",
+      "catalogue_asset_href_conflicts": {
+        "blue": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/11/0/B02.jp2",
+        "cirrus": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/11/0/B10.jp2",
+        "coastal": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/11/0/B01.jp2",
+        "granule_metadata": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/11/0/metadata.xml",
+        "green": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/11/0/B03.jp2",
+        "nir": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/11/0/B08.jp2",
+        "nir08": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/11/0/B8A.jp2",
+        "nir09": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/11/0/B09.jp2",
+        "red": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/11/0/B04.jp2",
+        "rededge1": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/11/0/B05.jp2",
+        "rededge2": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/11/0/B06.jp2",
+        "rededge3": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/11/0/B07.jp2",
+        "swir16": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/11/0/B11.jp2",
+        "swir22": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/11/0/B12.jp2",
+        "thumbnail": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/11/0/preview.jpg",
+        "tileinfo_metadata": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/11/0/tileInfo.json",
+        "visual": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/11/0/TCI.jp2"
+      },
+      "status": "remote_metadata_and_asset_listing_passed",
+      "issues": [],
+      "assets": [
+        {
+          "key": "products/2018/7/11/S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613/metadata.xml",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/products/2018/7/11/S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613/metadata.xml",
+          "size": 44514,
+          "etag": "\"0eec0406c8bd64c3c353b3675b08c3af\"",
+          "role": "product_xml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/MTD_MSIL1C.xml",
+          "availability_evidence": "HEAD_and_verified_XML_GET",
+          "payload_integrity_verified": true
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/metadata.xml",
+          "size": 468971,
+          "etag": "\"6cd510b9ab2ad20bce21228a36fa1676\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/metadata.xml",
+          "role": "tile_xml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/MTD_TL.xml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": true
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_CLOUDS_B00.gml",
+          "size": 109657,
+          "etag": "\"939ec30db6e2225c998d7cd8a451a158\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_CLOUDS_B00.gml",
+          "role": "cloud_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_CLOUDS_B00.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/B01.jp2",
+          "size": 3764975,
+          "etag": "\"a023a0890b418e036cd1ac9087ed68cf\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/B01.jp2",
+          "role": "jp2",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/IMG_DATA/T36UXB_20180711T083601_B01.jp2",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_NODATA_B01.gml",
+          "size": 428,
+          "etag": "\"72371f97f5a7481c0541f96f0d36bb27\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_NODATA_B01.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_NODATA_B01.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_SATURA_B01.gml",
+          "size": 428,
+          "etag": "\"1aaa466650c8bc58c221f3ae1ddda2f3\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_SATURA_B01.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_SATURA_B01.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_DEFECT_B01.gml",
+          "size": 428,
+          "etag": "\"9916e7eee068c1d38c27ad7e0c17f908\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_DEFECT_B01.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_DEFECT_B01.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_TECQUA_B01.gml",
+          "size": 428,
+          "etag": "\"23ecdb2377bb8c16ba574567a3005930\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_TECQUA_B01.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_TECQUA_B01.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/B02.jp2",
+          "size": 106547444,
+          "etag": "\"2d84c908044a8b0ce34bd6c910756e4a\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/B02.jp2",
+          "role": "jp2",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/IMG_DATA/T36UXB_20180711T083601_B02.jp2",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_NODATA_B02.gml",
+          "size": 428,
+          "etag": "\"7da02aa6d51f3cfa9d63bdcd87fae8db\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_NODATA_B02.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_NODATA_B02.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_SATURA_B02.gml",
+          "size": 428,
+          "etag": "\"3536da989c6c640530dc3b81d56466ec\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_SATURA_B02.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_SATURA_B02.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_DEFECT_B02.gml",
+          "size": 428,
+          "etag": "\"5bd08a85c9e3f7e9c657d2ca3072e1fd\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_DEFECT_B02.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_DEFECT_B02.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_TECQUA_B02.gml",
+          "size": 428,
+          "etag": "\"34a890d0bd01c7c392cbcba588fe3c93\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_TECQUA_B02.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_TECQUA_B02.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/B03.jp2",
+          "size": 105216851,
+          "etag": "\"ae3f0f1bc37989b602826549d074407b\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/B03.jp2",
+          "role": "jp2",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/IMG_DATA/T36UXB_20180711T083601_B03.jp2",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_NODATA_B03.gml",
+          "size": 428,
+          "etag": "\"3eed6a855e471c5af465e936b916d1a2\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_NODATA_B03.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_NODATA_B03.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_SATURA_B03.gml",
+          "size": 428,
+          "etag": "\"e53dbff3517c45d06b2689cd43aac89e\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_SATURA_B03.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_SATURA_B03.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_DEFECT_B03.gml",
+          "size": 428,
+          "etag": "\"895e569695dd8513dcd0c3c31d23bc4e\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_DEFECT_B03.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_DEFECT_B03.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_TECQUA_B03.gml",
+          "size": 428,
+          "etag": "\"488249725718f4a901435ec675f8c5dd\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_TECQUA_B03.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_TECQUA_B03.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/B04.jp2",
+          "size": 106896584,
+          "etag": "\"0ee3b890fc056c070b7003dffd33ee3c\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/B04.jp2",
+          "role": "jp2",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/IMG_DATA/T36UXB_20180711T083601_B04.jp2",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_NODATA_B04.gml",
+          "size": 428,
+          "etag": "\"49eccef173286150db7d1497ba94abaf\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_NODATA_B04.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_NODATA_B04.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_SATURA_B04.gml",
+          "size": 428,
+          "etag": "\"449e150023ba9ec732444063826361ea\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_SATURA_B04.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_SATURA_B04.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_DEFECT_B04.gml",
+          "size": 428,
+          "etag": "\"2ef0eb629df0eabac11438a4c9e19f3d\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_DEFECT_B04.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_DEFECT_B04.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_TECQUA_B04.gml",
+          "size": 428,
+          "etag": "\"4b5f9e258be82f89dc1e80c8432286eb\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_TECQUA_B04.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_TECQUA_B04.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/B05.jp2",
+          "size": 31366158,
+          "etag": "\"6b2709bb23218340491e536a9ce97086\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/B05.jp2",
+          "role": "jp2",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/IMG_DATA/T36UXB_20180711T083601_B05.jp2",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_NODATA_B05.gml",
+          "size": 428,
+          "etag": "\"90752bfcb7c0ee769d66ad124b2c619f\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_NODATA_B05.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_NODATA_B05.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_SATURA_B05.gml",
+          "size": 428,
+          "etag": "\"f07c097482fb23ac15f7496231971254\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_SATURA_B05.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_SATURA_B05.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_DEFECT_B05.gml",
+          "size": 428,
+          "etag": "\"fd811a745616f8db4c3cc9a33a5cc00d\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_DEFECT_B05.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_DEFECT_B05.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_TECQUA_B05.gml",
+          "size": 428,
+          "etag": "\"7911b2bce8282d49410f489024189676\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_TECQUA_B05.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_TECQUA_B05.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/B08.jp2",
+          "size": 109717790,
+          "etag": "\"4d397479d08eb799f591c1684561dab8\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/B08.jp2",
+          "role": "jp2",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/IMG_DATA/T36UXB_20180711T083601_B08.jp2",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_NODATA_B08.gml",
+          "size": 428,
+          "etag": "\"6b07e00c81d1b335b23567fea4c5b77b\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_NODATA_B08.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_NODATA_B08.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_SATURA_B08.gml",
+          "size": 428,
+          "etag": "\"578103aa1efffc85e41dc43736f14683\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_SATURA_B08.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_SATURA_B08.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_DEFECT_B08.gml",
+          "size": 428,
+          "etag": "\"7bbe6f878464c5206ad3c286d1a1996c\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_DEFECT_B08.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_DEFECT_B08.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_TECQUA_B08.gml",
+          "size": 428,
+          "etag": "\"cc6184967f014072f8d2bd17ee0a9709\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_TECQUA_B08.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_TECQUA_B08.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/B8A.jp2",
+          "size": 32113159,
+          "etag": "\"5907d8460507fd86163133e404920b9b\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/B8A.jp2",
+          "role": "jp2",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/IMG_DATA/T36UXB_20180711T083601_B8A.jp2",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_NODATA_B8A.gml",
+          "size": 428,
+          "etag": "\"7580e5709ba65292bc6e5710f315522c\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_NODATA_B8A.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_NODATA_B8A.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_SATURA_B8A.gml",
+          "size": 428,
+          "etag": "\"9f1a7193a0a120d45497f17ead139acf\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_SATURA_B8A.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_SATURA_B8A.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_DEFECT_B8A.gml",
+          "size": 428,
+          "etag": "\"362b6e49df80f5848a4b4edaa8b78c89\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_DEFECT_B8A.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_DEFECT_B8A.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_TECQUA_B8A.gml",
+          "size": 428,
+          "etag": "\"547d700eb22a6c015e38bc1bc9965351\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_TECQUA_B8A.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_TECQUA_B8A.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/B09.jp2",
+          "size": 3731758,
+          "etag": "\"4661ad63458fa04a0b852084b5019a5c\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/B09.jp2",
+          "role": "jp2",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/IMG_DATA/T36UXB_20180711T083601_B09.jp2",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_NODATA_B09.gml",
+          "size": 428,
+          "etag": "\"6be53793f285c291d219addb08bee5af\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_NODATA_B09.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_NODATA_B09.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_SATURA_B09.gml",
+          "size": 428,
+          "etag": "\"97f6d1f8f732c2be563e2b9776f21a6d\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_SATURA_B09.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_SATURA_B09.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_DEFECT_B09.gml",
+          "size": 428,
+          "etag": "\"f9d7e32a71bd93b766bbe2eebc75caed\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_DEFECT_B09.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_DEFECT_B09.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_TECQUA_B09.gml",
+          "size": 428,
+          "etag": "\"6698f7138848cb1e2387a4c8d053c121\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_TECQUA_B09.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_TECQUA_B09.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/B10.jp2",
+          "size": 2704979,
+          "etag": "\"f5f53de1c907eb3285029c95749409cd\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/B10.jp2",
+          "role": "jp2",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/IMG_DATA/T36UXB_20180711T083601_B10.jp2",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_NODATA_B10.gml",
+          "size": 2998,
+          "etag": "\"912b710f9cfc2c32efbf446886426b5f\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_NODATA_B10.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_NODATA_B10.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_SATURA_B10.gml",
+          "size": 428,
+          "etag": "\"cf2f3057c74d7c163911863ad12a53b5\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_SATURA_B10.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_SATURA_B10.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_DEFECT_B10.gml",
+          "size": 1458,
+          "etag": "\"b377f260a307b722c92ff6ade3c49746\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_DEFECT_B10.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_DEFECT_B10.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_TECQUA_B10.gml",
+          "size": 428,
+          "etag": "\"7b8040acd497492a8cc09bd985856789\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_TECQUA_B10.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_TECQUA_B10.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/B11.jp2",
+          "size": 30029208,
+          "etag": "\"4eb8fed03927bac9a9bd64fe027105c8\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/B11.jp2",
+          "role": "jp2",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/IMG_DATA/T36UXB_20180711T083601_B11.jp2",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_NODATA_B11.gml",
+          "size": 2246,
+          "etag": "\"ad608309201df2cb9dc782e656b97799\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_NODATA_B11.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_NODATA_B11.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_SATURA_B11.gml",
+          "size": 428,
+          "etag": "\"b484396f9acdf66f15af37e24137aaab\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_SATURA_B11.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_SATURA_B11.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_DEFECT_B11.gml",
+          "size": 428,
+          "etag": "\"51123b3bb1bbc3339ec59c7d86d8e4a2\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_DEFECT_B11.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_DEFECT_B11.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_TECQUA_B11.gml",
+          "size": 428,
+          "etag": "\"ab7f7dcc598efb6d2af31dc0db5c377c\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_TECQUA_B11.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_TECQUA_B11.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/B12.jp2",
+          "size": 30172126,
+          "etag": "\"42718f8302250e3bbdde89235b58664b\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/B12.jp2",
+          "role": "jp2",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/IMG_DATA/T36UXB_20180711T083601_B12.jp2",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_NODATA_B12.gml",
+          "size": 1490,
+          "etag": "\"ddf46f2de317e81220ce108d9b969367\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_NODATA_B12.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_NODATA_B12.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_SATURA_B12.gml",
+          "size": 428,
+          "etag": "\"b1ba08dd4d39d2b04318e78eba0fa25d\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_SATURA_B12.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_SATURA_B12.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_DEFECT_B12.gml",
+          "size": 2909,
+          "etag": "\"0e1ca911b03cb7e41b6b3d6cd7b25fe5\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_DEFECT_B12.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_DEFECT_B12.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/11/0/qi/MSK_TECQUA_B12.gml",
+          "size": 428,
+          "etag": "\"857743b987a07151e7431efba283ef4d\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/11/0/qi/MSK_TECQUA_B12.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE/GRANULE/L1C_T36UXB_A015934_20180711T084430/QI_DATA/MSK_TECQUA_B12.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        }
+      ],
+      "required_assets": 58,
+      "measured_payload_bytes": 562911967,
+      "local_qa_ready": false,
+      "image_content_downloaded": false,
+      "source_approved": false,
+      "listed_objects": 103,
+      "metadata": {
+        "identity": {
+          "PRODUCT_URI": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613.SAFE",
+          "PROCESSING_LEVEL": "Level-1C",
+          "PROCESSING_BASELINE": "02.06",
+          "SPACECRAFT_NAME": "Sentinel-2A",
+          "SENSING_ORBIT_NUMBER": "64",
+          "QUANTIFICATION_VALUE": "10000",
+          "PRODUCT_START_TIME": "2018-07-11T08:36:01.024Z"
+        },
+        "actual_relative_orbit": 64,
+        "quantification_value": 10000.0,
+        "radio_add_offsets": {},
+        "xml_offset_elements_present": false,
+        "offset_interpretation": "Absent list in actual N0206 XML; frozen-reader zero-offset convention",
+        "tile_id": "S2A_OPER_MSI_L1C_TL_SGS__20180711T122613_A015934_T36UXB_N02.06",
+        "datastrip_id": "S2A_OPER_MSI_L1C_DS_SGS__20180711T122613_S20180711T084430_N02.06",
+        "tile_sensing_time": "2018-07-11T08:44:30.159Z",
+        "crs": "EPSG:32636",
+        "grid_10m": {
+          "ulx": 600000.0,
+          "uly": 5700000.0,
+          "xdim": 10.0,
+          "ydim": -10.0,
+          "width": 10980,
+          "height": 10980,
+          "transform": [
+            10.0,
+            0.0,
+            600000.0,
+            0.0,
+            -10.0,
+            5700000.0
+          ],
+          "bounds": [
+            600000.0,
+            5590200.0,
+            709800.0,
+            5700000.0
+          ]
+        },
+        "fixed_event_coverage": {
+          "event-71d8da17cbbfd9babdee": {
+            "core": true,
+            "qa_context": true
+          },
+          "event-ce1c1df8d02be33bb3c8": {
+            "core": true,
+            "qa_context": true
+          }
+        },
+        "solar_zenith_deg": 31.0296703894025,
+        "solar_azimuth_deg": 152.973213405919,
+        "granule_folder": "L1C_T36UXB_A015934_20180711T084430",
+        "image_paths": {
+          "B01": "GRANULE/L1C_T36UXB_A015934_20180711T084430/IMG_DATA/T36UXB_20180711T083601_B01.jp2",
+          "B02": "GRANULE/L1C_T36UXB_A015934_20180711T084430/IMG_DATA/T36UXB_20180711T083601_B02.jp2",
+          "B03": "GRANULE/L1C_T36UXB_A015934_20180711T084430/IMG_DATA/T36UXB_20180711T083601_B03.jp2",
+          "B04": "GRANULE/L1C_T36UXB_A015934_20180711T084430/IMG_DATA/T36UXB_20180711T083601_B04.jp2",
+          "B05": "GRANULE/L1C_T36UXB_A015934_20180711T084430/IMG_DATA/T36UXB_20180711T083601_B05.jp2",
+          "B06": "GRANULE/L1C_T36UXB_A015934_20180711T084430/IMG_DATA/T36UXB_20180711T083601_B06.jp2",
+          "B07": "GRANULE/L1C_T36UXB_A015934_20180711T084430/IMG_DATA/T36UXB_20180711T083601_B07.jp2",
+          "B08": "GRANULE/L1C_T36UXB_A015934_20180711T084430/IMG_DATA/T36UXB_20180711T083601_B08.jp2",
+          "B8A": "GRANULE/L1C_T36UXB_A015934_20180711T084430/IMG_DATA/T36UXB_20180711T083601_B8A.jp2",
+          "B09": "GRANULE/L1C_T36UXB_A015934_20180711T084430/IMG_DATA/T36UXB_20180711T083601_B09.jp2",
+          "B10": "GRANULE/L1C_T36UXB_A015934_20180711T084430/IMG_DATA/T36UXB_20180711T083601_B10.jp2",
+          "B11": "GRANULE/L1C_T36UXB_A015934_20180711T084430/IMG_DATA/T36UXB_20180711T083601_B11.jp2",
+          "B12": "GRANULE/L1C_T36UXB_A015934_20180711T084430/IMG_DATA/T36UXB_20180711T083601_B12.jp2"
+        },
+        "issues": []
+      }
+    },
+    {
+      "scene_id": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246",
+      "acquisition_date": "2018-07-06",
+      "interval_days": 25,
+      "item_id": "S2B_36UXB_20180706_0_L1C",
+      "raw_item_sha256": "240e23af9e7dad88c77e0457ab01e7c6d7cb66b13f65a8d90ae80906728c4af0",
+      "catalogue_asset_href_conflicts": {
+        "blue": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/6/0/B02.jp2",
+        "cirrus": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/6/0/B10.jp2",
+        "coastal": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/6/0/B01.jp2",
+        "granule_metadata": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/6/0/metadata.xml",
+        "green": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/6/0/B03.jp2",
+        "nir": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/6/0/B08.jp2",
+        "nir08": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/6/0/B8A.jp2",
+        "nir09": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/6/0/B09.jp2",
+        "red": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/6/0/B04.jp2",
+        "rededge1": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/6/0/B05.jp2",
+        "rededge2": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/6/0/B06.jp2",
+        "rededge3": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/6/0/B07.jp2",
+        "swir16": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/6/0/B11.jp2",
+        "swir22": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/6/0/B12.jp2",
+        "thumbnail": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/6/0/preview.jpg",
+        "tileinfo_metadata": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/6/0/tileInfo.json",
+        "visual": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/6/0/TCI.jp2"
+      },
+      "status": "remote_metadata_and_asset_listing_passed",
+      "issues": [],
+      "assets": [
+        {
+          "key": "products/2018/7/6/S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246/metadata.xml",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/products/2018/7/6/S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246/metadata.xml",
+          "size": 44325,
+          "etag": "\"00b262f59a97763bc0b3a53b0f385d19\"",
+          "role": "product_xml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/MTD_MSIL1C.xml",
+          "availability_evidence": "HEAD_and_verified_XML_GET",
+          "payload_integrity_verified": true
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/metadata.xml",
+          "size": 469191,
+          "etag": "\"af7de116cc9c009951575438b2aa58a4\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/metadata.xml",
+          "role": "tile_xml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/MTD_TL.xml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": true
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_CLOUDS_B00.gml",
+          "size": 773711,
+          "etag": "\"1d07587ddb63a470b84362e0ae8df72b\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_CLOUDS_B00.gml",
+          "role": "cloud_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_CLOUDS_B00.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/B01.jp2",
+          "size": 3255414,
+          "etag": "\"8b4d2668a03dc011bdfdc61105ad8d2e\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/B01.jp2",
+          "role": "jp2",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/IMG_DATA/T36UXB_20180706T083559_B01.jp2",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_NODATA_B01.gml",
+          "size": 1490,
+          "etag": "\"1fb2e8cf506f137ea7d279921f06057c\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_NODATA_B01.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_NODATA_B01.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_SATURA_B01.gml",
+          "size": 428,
+          "etag": "\"04172a96beb65269d73be5a8b9eddec3\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_SATURA_B01.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_SATURA_B01.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_DEFECT_B01.gml",
+          "size": 428,
+          "etag": "\"807619f12322a004fde5ee6dd0cd01f0\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_DEFECT_B01.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_DEFECT_B01.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_TECQUA_B01.gml",
+          "size": 428,
+          "etag": "\"f17a21aeaf4abb028a712f4cf8523bc5\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_TECQUA_B01.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_TECQUA_B01.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/B02.jp2",
+          "size": 87579441,
+          "etag": "\"89a4ad8ffcad59cf04e6c6c54cc409da\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/B02.jp2",
+          "role": "jp2",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/IMG_DATA/T36UXB_20180706T083559_B02.jp2",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_NODATA_B02.gml",
+          "size": 428,
+          "etag": "\"77645faafa62916d8470771e15e2d9f3\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_NODATA_B02.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_NODATA_B02.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_SATURA_B02.gml",
+          "size": 428,
+          "etag": "\"1aecf93d7262a730c02f93a86b6e5f1a\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_SATURA_B02.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_SATURA_B02.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_DEFECT_B02.gml",
+          "size": 428,
+          "etag": "\"1bed81fc0fe81eee1d8cd5b5f859d206\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_DEFECT_B02.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_DEFECT_B02.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_TECQUA_B02.gml",
+          "size": 428,
+          "etag": "\"096a45f26c4ee7bedd4278b0e4ed7c4e\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_TECQUA_B02.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_TECQUA_B02.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/B03.jp2",
+          "size": 91563662,
+          "etag": "\"70bf3cc4b87456258dc330d0940aba06\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/B03.jp2",
+          "role": "jp2",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/IMG_DATA/T36UXB_20180706T083559_B03.jp2",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_NODATA_B03.gml",
+          "size": 428,
+          "etag": "\"3b2c41adf350de4ba67b1b40a248c130\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_NODATA_B03.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_NODATA_B03.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_SATURA_B03.gml",
+          "size": 428,
+          "etag": "\"a791e70ca6555c00cf9cb76d0e8f90a0\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_SATURA_B03.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_SATURA_B03.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_DEFECT_B03.gml",
+          "size": 428,
+          "etag": "\"dfee9f88235ba015595ba1645650c905\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_DEFECT_B03.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_DEFECT_B03.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_TECQUA_B03.gml",
+          "size": 428,
+          "etag": "\"91d5aaaebefa27927d1fab9932434256\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_TECQUA_B03.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_TECQUA_B03.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/B04.jp2",
+          "size": 93986844,
+          "etag": "\"ecb0d75910b1d05dced9cdab905d8e01\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/B04.jp2",
+          "role": "jp2",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/IMG_DATA/T36UXB_20180706T083559_B04.jp2",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_NODATA_B04.gml",
+          "size": 428,
+          "etag": "\"12c1a1f68f3a87ec012aab655757f2f5\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_NODATA_B04.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_NODATA_B04.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_SATURA_B04.gml",
+          "size": 428,
+          "etag": "\"7ed088d10dd0639d86150423b79e10e8\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_SATURA_B04.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_SATURA_B04.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_DEFECT_B04.gml",
+          "size": 428,
+          "etag": "\"5e9074aadeefb6061e71db86faf9bbad\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_DEFECT_B04.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_DEFECT_B04.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_TECQUA_B04.gml",
+          "size": 428,
+          "etag": "\"8539d2d7a53613df691648e24bcc7ddf\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_TECQUA_B04.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_TECQUA_B04.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/B05.jp2",
+          "size": 28472199,
+          "etag": "\"6a06ed75579e75a49b3d6090dcc88029\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/B05.jp2",
+          "role": "jp2",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/IMG_DATA/T36UXB_20180706T083559_B05.jp2",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_NODATA_B05.gml",
+          "size": 428,
+          "etag": "\"32575dbd771433328f7055fef112ec29\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_NODATA_B05.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_NODATA_B05.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_SATURA_B05.gml",
+          "size": 428,
+          "etag": "\"9f8c2cc6825015a6d17e5464860a1632\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_SATURA_B05.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_SATURA_B05.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_DEFECT_B05.gml",
+          "size": 428,
+          "etag": "\"51c0e69d5f055666a5d1af74c7bc5ddc\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_DEFECT_B05.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_DEFECT_B05.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_TECQUA_B05.gml",
+          "size": 428,
+          "etag": "\"9c0f103625359a4642a5659affaec721\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_TECQUA_B05.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_TECQUA_B05.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/B08.jp2",
+          "size": 124481929,
+          "etag": "\"f549ad4d3f89bc95b123f3006d7f14e7\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/B08.jp2",
+          "role": "jp2",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/IMG_DATA/T36UXB_20180706T083559_B08.jp2",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_NODATA_B08.gml",
+          "size": 428,
+          "etag": "\"c122bcd65bd8bac0ed0410b43cc942a5\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_NODATA_B08.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_NODATA_B08.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_SATURA_B08.gml",
+          "size": 428,
+          "etag": "\"8e4041aa1c82e90ddffda7a40b98bb3a\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_SATURA_B08.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_SATURA_B08.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_DEFECT_B08.gml",
+          "size": 428,
+          "etag": "\"996aeac9467eabea8b83595418c30b18\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_DEFECT_B08.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_DEFECT_B08.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_TECQUA_B08.gml",
+          "size": 428,
+          "etag": "\"903db867d43e1035ca7e67707180b59e\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_TECQUA_B08.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_TECQUA_B08.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/B8A.jp2",
+          "size": 33779895,
+          "etag": "\"9d1ff5cb28ed7d0661ee99d7886bd7e6\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/B8A.jp2",
+          "role": "jp2",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/IMG_DATA/T36UXB_20180706T083559_B8A.jp2",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_NODATA_B8A.gml",
+          "size": 428,
+          "etag": "\"907a0e0bffe84704447ca1ed1907af50\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_NODATA_B8A.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_NODATA_B8A.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_SATURA_B8A.gml",
+          "size": 428,
+          "etag": "\"dc06bff29e24df6d13a3391671ea5118\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_SATURA_B8A.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_SATURA_B8A.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_DEFECT_B8A.gml",
+          "size": 428,
+          "etag": "\"cd4da07ff8a547df5d8be4898dd2f2e8\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_DEFECT_B8A.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_DEFECT_B8A.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_TECQUA_B8A.gml",
+          "size": 428,
+          "etag": "\"0cec6c93f51325e4d1c905693faec85c\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_TECQUA_B8A.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_TECQUA_B8A.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/B09.jp2",
+          "size": 3694035,
+          "etag": "\"a906a2409ae2245372eca7e3cf248f10\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/B09.jp2",
+          "role": "jp2",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/IMG_DATA/T36UXB_20180706T083559_B09.jp2",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_NODATA_B09.gml",
+          "size": 1489,
+          "etag": "\"54a58f66e868e1a48086fe00d5d78c3a\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_NODATA_B09.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_NODATA_B09.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_SATURA_B09.gml",
+          "size": 428,
+          "etag": "\"0ee4b591e34686a8727ae4c97f635234\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_SATURA_B09.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_SATURA_B09.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_DEFECT_B09.gml",
+          "size": 428,
+          "etag": "\"437cb2894c265492ffb580f4bdeee578\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_DEFECT_B09.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_DEFECT_B09.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_TECQUA_B09.gml",
+          "size": 428,
+          "etag": "\"1da446ad8c4022cd5ccda791b4554694\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_TECQUA_B09.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_TECQUA_B09.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/B10.jp2",
+          "size": 1949524,
+          "etag": "\"3bcd1d53f2e714fa82bf77ddcc81cea8\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/B10.jp2",
+          "role": "jp2",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/IMG_DATA/T36UXB_20180706T083559_B10.jp2",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_NODATA_B10.gml",
+          "size": 1491,
+          "etag": "\"9f1fdb81e57765d53a4cc1f3c5c0d46d\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_NODATA_B10.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_NODATA_B10.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_SATURA_B10.gml",
+          "size": 428,
+          "etag": "\"f5b56784efc22ae95e2aff2b37261e41\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_SATURA_B10.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_SATURA_B10.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_DEFECT_B10.gml",
+          "size": 428,
+          "etag": "\"a4b0731fe8c3828fecc5ded3121043e1\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_DEFECT_B10.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_DEFECT_B10.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_TECQUA_B10.gml",
+          "size": 428,
+          "etag": "\"477ab615357deb06e2a529f675e2debd\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_TECQUA_B10.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_TECQUA_B10.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/B11.jp2",
+          "size": 30245498,
+          "etag": "\"d40c9bb1524fffbefa066be334290100\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/B11.jp2",
+          "role": "jp2",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/IMG_DATA/T36UXB_20180706T083559_B11.jp2",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_NODATA_B11.gml",
+          "size": 1489,
+          "etag": "\"02840f730a345bd48ab33369efc95170\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_NODATA_B11.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_NODATA_B11.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_SATURA_B11.gml",
+          "size": 428,
+          "etag": "\"d2973ceb8026529387045b74f11e77fd\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_SATURA_B11.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_SATURA_B11.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_DEFECT_B11.gml",
+          "size": 428,
+          "etag": "\"a61818a6f195facf4c13064a328c338a\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_DEFECT_B11.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_DEFECT_B11.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_TECQUA_B11.gml",
+          "size": 428,
+          "etag": "\"1ad8f33207c53109d17d33c68d47128b\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_TECQUA_B11.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_TECQUA_B11.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/B12.jp2",
+          "size": 28999622,
+          "etag": "\"5411359bbfcb45966c921e1d628e3b8c\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/B12.jp2",
+          "role": "jp2",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/IMG_DATA/T36UXB_20180706T083559_B12.jp2",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_NODATA_B12.gml",
+          "size": 428,
+          "etag": "\"79553e1b0f67488b5fce026690d3ce04\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_NODATA_B12.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_NODATA_B12.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_SATURA_B12.gml",
+          "size": 428,
+          "etag": "\"122988e1a99ce50392e259b2f88c6c5d\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_SATURA_B12.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_SATURA_B12.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_DEFECT_B12.gml",
+          "size": 1458,
+          "etag": "\"8c5880b299d9485ac284d4d0d0b03e21\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_DEFECT_B12.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_DEFECT_B12.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/6/0/qi/MSK_TECQUA_B12.gml",
+          "size": 428,
+          "etag": "\"990c964fea3bfb1171dd39c5278e5e34\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/6/0/qi/MSK_TECQUA_B12.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE/GRANULE/L1C_T36UXB_A006954_20180706T084311/QI_DATA/MSK_TECQUA_B12.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        }
+      ],
+      "required_assets": 58,
+      "measured_payload_bytes": 529319399,
+      "local_qa_ready": false,
+      "image_content_downloaded": false,
+      "source_approved": false,
+      "listed_objects": 103,
+      "metadata": {
+        "identity": {
+          "PRODUCT_URI": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246.SAFE",
+          "PROCESSING_LEVEL": "Level-1C",
+          "PROCESSING_BASELINE": "02.06",
+          "SPACECRAFT_NAME": "Sentinel-2B",
+          "SENSING_ORBIT_NUMBER": "64",
+          "QUANTIFICATION_VALUE": "10000",
+          "PRODUCT_START_TIME": "2018-07-06T08:35:59.024Z"
+        },
+        "actual_relative_orbit": 64,
+        "quantification_value": 10000.0,
+        "radio_add_offsets": {},
+        "xml_offset_elements_present": false,
+        "offset_interpretation": "Absent list in actual N0206 XML; frozen-reader zero-offset convention",
+        "tile_id": "S2B_OPER_MSI_L1C_TL_SGS__20180706T123246_A006954_T36UXB_N02.06",
+        "datastrip_id": "S2B_OPER_MSI_L1C_DS_SGS__20180706T123246_S20180706T084311_N02.06",
+        "tile_sensing_time": "2018-07-06T08:43:11.388Z",
+        "crs": "EPSG:32636",
+        "grid_10m": {
+          "ulx": 600000.0,
+          "uly": 5700000.0,
+          "xdim": 10.0,
+          "ydim": -10.0,
+          "width": 10980,
+          "height": 10980,
+          "transform": [
+            10.0,
+            0.0,
+            600000.0,
+            0.0,
+            -10.0,
+            5700000.0
+          ],
+          "bounds": [
+            600000.0,
+            5590200.0,
+            709800.0,
+            5700000.0
+          ]
+        },
+        "fixed_event_coverage": {
+          "event-71d8da17cbbfd9babdee": {
+            "core": true,
+            "qa_context": true
+          },
+          "event-ce1c1df8d02be33bb3c8": {
+            "core": true,
+            "qa_context": true
+          }
+        },
+        "solar_zenith_deg": 30.4199379780805,
+        "solar_azimuth_deg": 152.926969733595,
+        "granule_folder": "L1C_T36UXB_A006954_20180706T084311",
+        "image_paths": {
+          "B01": "GRANULE/L1C_T36UXB_A006954_20180706T084311/IMG_DATA/T36UXB_20180706T083559_B01.jp2",
+          "B02": "GRANULE/L1C_T36UXB_A006954_20180706T084311/IMG_DATA/T36UXB_20180706T083559_B02.jp2",
+          "B03": "GRANULE/L1C_T36UXB_A006954_20180706T084311/IMG_DATA/T36UXB_20180706T083559_B03.jp2",
+          "B04": "GRANULE/L1C_T36UXB_A006954_20180706T084311/IMG_DATA/T36UXB_20180706T083559_B04.jp2",
+          "B05": "GRANULE/L1C_T36UXB_A006954_20180706T084311/IMG_DATA/T36UXB_20180706T083559_B05.jp2",
+          "B06": "GRANULE/L1C_T36UXB_A006954_20180706T084311/IMG_DATA/T36UXB_20180706T083559_B06.jp2",
+          "B07": "GRANULE/L1C_T36UXB_A006954_20180706T084311/IMG_DATA/T36UXB_20180706T083559_B07.jp2",
+          "B08": "GRANULE/L1C_T36UXB_A006954_20180706T084311/IMG_DATA/T36UXB_20180706T083559_B08.jp2",
+          "B8A": "GRANULE/L1C_T36UXB_A006954_20180706T084311/IMG_DATA/T36UXB_20180706T083559_B8A.jp2",
+          "B09": "GRANULE/L1C_T36UXB_A006954_20180706T084311/IMG_DATA/T36UXB_20180706T083559_B09.jp2",
+          "B10": "GRANULE/L1C_T36UXB_A006954_20180706T084311/IMG_DATA/T36UXB_20180706T083559_B10.jp2",
+          "B11": "GRANULE/L1C_T36UXB_A006954_20180706T084311/IMG_DATA/T36UXB_20180706T083559_B11.jp2",
+          "B12": "GRANULE/L1C_T36UXB_A006954_20180706T084311/IMG_DATA/T36UXB_20180706T083559_B12.jp2"
+        },
+        "issues": []
+      }
+    },
+    {
+      "scene_id": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347",
+      "acquisition_date": "2018-07-01",
+      "interval_days": 30,
+      "item_id": "S2A_36UXB_20180701_0_L1C",
+      "raw_item_sha256": "3215101ad83527fd9b743fcb676e67038a27ef8e894874a26a2f53e2e283733d",
+      "catalogue_asset_href_conflicts": {
+        "blue": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/1/0/B02.jp2",
+        "cirrus": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/1/0/B10.jp2",
+        "coastal": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/1/0/B01.jp2",
+        "granule_metadata": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/1/0/metadata.xml",
+        "green": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/1/0/B03.jp2",
+        "nir": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/1/0/B08.jp2",
+        "nir08": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/1/0/B8A.jp2",
+        "nir09": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/1/0/B09.jp2",
+        "red": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/1/0/B04.jp2",
+        "rededge1": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/1/0/B05.jp2",
+        "rededge2": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/1/0/B06.jp2",
+        "rededge3": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/1/0/B07.jp2",
+        "swir16": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/1/0/B11.jp2",
+        "swir22": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/1/0/B12.jp2",
+        "thumbnail": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/1/0/preview.jpg",
+        "tileinfo_metadata": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/1/0/tileInfo.json",
+        "visual": "s3://sentinel-s2-l2a/tiles/36/U/XB/2018/7/1/0/TCI.jp2"
+      },
+      "status": "remote_metadata_and_asset_listing_passed",
+      "issues": [],
+      "assets": [
+        {
+          "key": "products/2018/7/1/S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347/metadata.xml",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/products/2018/7/1/S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347/metadata.xml",
+          "size": 44482,
+          "etag": "\"cd1fb8ed73ba2e416a67a7f46aa00655\"",
+          "role": "product_xml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/MTD_MSIL1C.xml",
+          "availability_evidence": "HEAD_and_verified_XML_GET",
+          "payload_integrity_verified": true
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/metadata.xml",
+          "size": 469034,
+          "etag": "\"419e58dd75c628d9e83606c9bd1dd507\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/metadata.xml",
+          "role": "tile_xml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/MTD_TL.xml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": true
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_CLOUDS_B00.gml",
+          "size": 461295,
+          "etag": "\"909fb7810bd8eac5110ccdbb46c66df4\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_CLOUDS_B00.gml",
+          "role": "cloud_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_CLOUDS_B00.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/B01.jp2",
+          "size": 3758950,
+          "etag": "\"70b22b256b85a1c192f3828af098642d\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/B01.jp2",
+          "role": "jp2",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/IMG_DATA/T36UXB_20180701T083601_B01.jp2",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_NODATA_B01.gml",
+          "size": 428,
+          "etag": "\"9762f047783eb3edab19c63529e442f7\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_NODATA_B01.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_NODATA_B01.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_SATURA_B01.gml",
+          "size": 428,
+          "etag": "\"c9d537b4802cff3680c1d6f2f1ea9b15\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_SATURA_B01.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_SATURA_B01.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_DEFECT_B01.gml",
+          "size": 428,
+          "etag": "\"7a497c1ede8c083f4d3b7c992416eed3\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_DEFECT_B01.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_DEFECT_B01.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_TECQUA_B01.gml",
+          "size": 428,
+          "etag": "\"1c9e1a3887afa0eec79b4d6193099c91\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_TECQUA_B01.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_TECQUA_B01.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/B02.jp2",
+          "size": 105485944,
+          "etag": "\"6952c6e4f6552a2364eab4bb113ebf3e\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/B02.jp2",
+          "role": "jp2",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/IMG_DATA/T36UXB_20180701T083601_B02.jp2",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_NODATA_B02.gml",
+          "size": 428,
+          "etag": "\"b630faedb9aaa079cf143e7eae9f8c15\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_NODATA_B02.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_NODATA_B02.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_SATURA_B02.gml",
+          "size": 428,
+          "etag": "\"355a606e05577fc9fb8605063c296732\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_SATURA_B02.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_SATURA_B02.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_DEFECT_B02.gml",
+          "size": 428,
+          "etag": "\"3f05c00ed3b9912a5adc7b3d9ee7630f\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_DEFECT_B02.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_DEFECT_B02.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_TECQUA_B02.gml",
+          "size": 428,
+          "etag": "\"f41881b3edef2979ce8973599e19114a\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_TECQUA_B02.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_TECQUA_B02.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/B03.jp2",
+          "size": 105634333,
+          "etag": "\"8796e0327c99d9ce1ecd702a20f80e71\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/B03.jp2",
+          "role": "jp2",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/IMG_DATA/T36UXB_20180701T083601_B03.jp2",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_NODATA_B03.gml",
+          "size": 428,
+          "etag": "\"a6bb3472321cf4658b6ee6a415c154d4\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_NODATA_B03.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_NODATA_B03.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_SATURA_B03.gml",
+          "size": 428,
+          "etag": "\"c3b56be8f16e7d9885173d0affdb9d80\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_SATURA_B03.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_SATURA_B03.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_DEFECT_B03.gml",
+          "size": 428,
+          "etag": "\"9a65860198e4336da94e72a2df61cd4a\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_DEFECT_B03.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_DEFECT_B03.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_TECQUA_B03.gml",
+          "size": 428,
+          "etag": "\"a2ab6c58b91d175d14c2e5c5699dc913\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_TECQUA_B03.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_TECQUA_B03.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/B04.jp2",
+          "size": 106591974,
+          "etag": "\"dd8c003be0b0115a5dfd809bd4c62d9b\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/B04.jp2",
+          "role": "jp2",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/IMG_DATA/T36UXB_20180701T083601_B04.jp2",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_NODATA_B04.gml",
+          "size": 428,
+          "etag": "\"b673fb22752f83f2563a1aa53fd07384\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_NODATA_B04.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_NODATA_B04.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_SATURA_B04.gml",
+          "size": 428,
+          "etag": "\"cc73ac8507a087ed28483d9c59cb78bb\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_SATURA_B04.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_SATURA_B04.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_DEFECT_B04.gml",
+          "size": 428,
+          "etag": "\"584615607730e5e9a5e815062523eda5\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_DEFECT_B04.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_DEFECT_B04.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_TECQUA_B04.gml",
+          "size": 428,
+          "etag": "\"cde2a802e204c397a536b4d41a57da70\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_TECQUA_B04.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_TECQUA_B04.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/B05.jp2",
+          "size": 31979045,
+          "etag": "\"174678c48577417fe0364e4a8caeda6d\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/B05.jp2",
+          "role": "jp2",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/IMG_DATA/T36UXB_20180701T083601_B05.jp2",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_NODATA_B05.gml",
+          "size": 428,
+          "etag": "\"9a8ccacf50c014bc9e283897d1969541\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_NODATA_B05.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_NODATA_B05.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_SATURA_B05.gml",
+          "size": 428,
+          "etag": "\"27d2a5de2dd927486c2d402134a5cfef\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_SATURA_B05.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_SATURA_B05.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_DEFECT_B05.gml",
+          "size": 428,
+          "etag": "\"027fd399a5a1234cd363ccaf3c21ae1f\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_DEFECT_B05.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_DEFECT_B05.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_TECQUA_B05.gml",
+          "size": 428,
+          "etag": "\"f2af4eb7154bfbf9abf2f25810b3d330\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_TECQUA_B05.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_TECQUA_B05.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/B08.jp2",
+          "size": 116980406,
+          "etag": "\"a85022b09e28e4945cc05e02598eca10\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/B08.jp2",
+          "role": "jp2",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/IMG_DATA/T36UXB_20180701T083601_B08.jp2",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_NODATA_B08.gml",
+          "size": 428,
+          "etag": "\"381ece0630d6251a3fb8b8c328823d29\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_NODATA_B08.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_NODATA_B08.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_SATURA_B08.gml",
+          "size": 428,
+          "etag": "\"90c6a3733cac73294e20517fa2b0374c\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_SATURA_B08.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_SATURA_B08.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_DEFECT_B08.gml",
+          "size": 428,
+          "etag": "\"7bdc73e57dfdae6a0329ea43d7efcc97\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_DEFECT_B08.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_DEFECT_B08.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_TECQUA_B08.gml",
+          "size": 428,
+          "etag": "\"c91275c66c57daa5eeae687cdf7ffe45\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_TECQUA_B08.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_TECQUA_B08.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/B8A.jp2",
+          "size": 33909633,
+          "etag": "\"a64955dc767e0a6f0553344b8703be90\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/B8A.jp2",
+          "role": "jp2",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/IMG_DATA/T36UXB_20180701T083601_B8A.jp2",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_NODATA_B8A.gml",
+          "size": 428,
+          "etag": "\"c05ac6d2d39ba606463701d2396fe554\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_NODATA_B8A.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_NODATA_B8A.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_SATURA_B8A.gml",
+          "size": 428,
+          "etag": "\"b343c4ee64bad3722fc33a4aa3db39e0\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_SATURA_B8A.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_SATURA_B8A.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_DEFECT_B8A.gml",
+          "size": 428,
+          "etag": "\"258b08b14310d76a5e4f9538af78a4ee\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_DEFECT_B8A.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_DEFECT_B8A.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_TECQUA_B8A.gml",
+          "size": 428,
+          "etag": "\"890cfbe942f4350e461181635cbd91a0\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_TECQUA_B8A.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_TECQUA_B8A.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/B09.jp2",
+          "size": 3717353,
+          "etag": "\"76622380785654d4789268a157b0e6ba\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/B09.jp2",
+          "role": "jp2",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/IMG_DATA/T36UXB_20180701T083601_B09.jp2",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_NODATA_B09.gml",
+          "size": 428,
+          "etag": "\"7449ca35c8b74f2f2986b4085412ac9e\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_NODATA_B09.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_NODATA_B09.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_SATURA_B09.gml",
+          "size": 428,
+          "etag": "\"e049ba279830e7b5ba40704ad7d36b9e\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_SATURA_B09.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_SATURA_B09.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_DEFECT_B09.gml",
+          "size": 428,
+          "etag": "\"1841648f7fa628c093fe2d9e84b8fd8f\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_DEFECT_B09.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_DEFECT_B09.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_TECQUA_B09.gml",
+          "size": 428,
+          "etag": "\"dc4a2fe7591b62293e7185d0e0af816d\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_TECQUA_B09.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_TECQUA_B09.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/B10.jp2",
+          "size": 2165036,
+          "etag": "\"499783d4559be12a3db4f4c8fdee72cb\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/B10.jp2",
+          "role": "jp2",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/IMG_DATA/T36UXB_20180701T083601_B10.jp2",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_NODATA_B10.gml",
+          "size": 3656,
+          "etag": "\"818c74811b2d738b3cc6cdce0c81f831\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_NODATA_B10.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_NODATA_B10.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_SATURA_B10.gml",
+          "size": 428,
+          "etag": "\"cb5b0009cee162c6947e1112b1ff3615\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_SATURA_B10.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_SATURA_B10.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_DEFECT_B10.gml",
+          "size": 1593,
+          "etag": "\"6509fa20e43097c508977ba1750a9806\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_DEFECT_B10.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_DEFECT_B10.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_TECQUA_B10.gml",
+          "size": 428,
+          "etag": "\"2140960c98eb55f4a65dd4d94b14cf37\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_TECQUA_B10.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_TECQUA_B10.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/B11.jp2",
+          "size": 30684592,
+          "etag": "\"acc6ca1c9876c4d8e06e10724d5a9f19\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/B11.jp2",
+          "role": "jp2",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/IMG_DATA/T36UXB_20180701T083601_B11.jp2",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_NODATA_B11.gml",
+          "size": 2449,
+          "etag": "\"3cb8e12938016b2472b5c8a5a862b46d\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_NODATA_B11.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_NODATA_B11.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_SATURA_B11.gml",
+          "size": 428,
+          "etag": "\"bee01852bef963532fcb762810b02181\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_SATURA_B11.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_SATURA_B11.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_DEFECT_B11.gml",
+          "size": 428,
+          "etag": "\"b531ac083fd172c02fc94aa8aecb52a0\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_DEFECT_B11.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_DEFECT_B11.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_TECQUA_B11.gml",
+          "size": 428,
+          "etag": "\"a9b2a240cc82adc291af3fa8ddd96d54\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_TECQUA_B11.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_TECQUA_B11.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/B12.jp2",
+          "size": 30103861,
+          "etag": "\"e9105631f5af78a99ee040d99fc1ef03\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/B12.jp2",
+          "role": "jp2",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/IMG_DATA/T36UXB_20180701T083601_B12.jp2",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_NODATA_B12.gml",
+          "size": 1690,
+          "etag": "\"8beca892d54f540a46d3d7dd0b710e97\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_NODATA_B12.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_NODATA_B12.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_SATURA_B12.gml",
+          "size": 428,
+          "etag": "\"d94e4da602bf5fee645f8d46ac9454d9\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_SATURA_B12.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_SATURA_B12.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_DEFECT_B12.gml",
+          "size": 3165,
+          "etag": "\"b78575ac33387a1f4b781d27912bf30e\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_DEFECT_B12.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_DEFECT_B12.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        },
+        {
+          "key": "tiles/36/U/XB/2018/7/1/0/qi/MSK_TECQUA_B12.gml",
+          "size": 428,
+          "etag": "\"ba62da68cbbfed37f5e9ae39209f9e84\"",
+          "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XB/2018/7/1/0/qi/MSK_TECQUA_B12.gml",
+          "role": "quality_gml",
+          "target_relpath": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE/GRANULE/L1C_T36UXB_A015791_20180701T083905/QI_DATA/MSK_TECQUA_B12.gml",
+          "availability_evidence": "complete_provider_listing",
+          "payload_integrity_verified": false
+        }
+      ],
+      "required_assets": 58,
+      "measured_payload_bytes": 572015183,
+      "local_qa_ready": false,
+      "image_content_downloaded": false,
+      "source_approved": false,
+      "listed_objects": 103,
+      "metadata": {
+        "identity": {
+          "PRODUCT_URI": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347.SAFE",
+          "PROCESSING_LEVEL": "Level-1C",
+          "PROCESSING_BASELINE": "02.06",
+          "SPACECRAFT_NAME": "Sentinel-2A",
+          "SENSING_ORBIT_NUMBER": "64",
+          "QUANTIFICATION_VALUE": "10000",
+          "PRODUCT_START_TIME": "2018-07-01T08:36:01.024Z"
+        },
+        "actual_relative_orbit": 64,
+        "quantification_value": 10000.0,
+        "radio_add_offsets": {},
+        "xml_offset_elements_present": false,
+        "offset_interpretation": "Absent list in actual N0206 XML; frozen-reader zero-offset convention",
+        "tile_id": "S2A_OPER_MSI_L1C_TL_SGS__20180701T104347_A015791_T36UXB_N02.06",
+        "datastrip_id": "S2A_OPER_MSI_L1C_DS_SGS__20180701T104347_S20180701T083905_N02.06",
+        "tile_sensing_time": "2018-07-01T08:39:05.460Z",
+        "crs": "EPSG:32636",
+        "grid_10m": {
+          "ulx": 600000.0,
+          "uly": 5700000.0,
+          "xdim": 10.0,
+          "ydim": -10.0,
+          "width": 10980,
+          "height": 10980,
+          "transform": [
+            10.0,
+            0.0,
+            600000.0,
+            0.0,
+            -10.0,
+            5700000.0
+          ],
+          "bounds": [
+            600000.0,
+            5590200.0,
+            709800.0,
+            5700000.0
+          ]
+        },
+        "fixed_event_coverage": {
+          "event-71d8da17cbbfd9babdee": {
+            "core": true,
+            "qa_context": true
+          },
+          "event-ce1c1df8d02be33bb3c8": {
+            "core": true,
+            "qa_context": true
+          }
+        },
+        "solar_zenith_deg": 29.9509392002123,
+        "solar_azimuth_deg": 153.071807012335,
+        "granule_folder": "L1C_T36UXB_A015791_20180701T083905",
+        "image_paths": {
+          "B01": "GRANULE/L1C_T36UXB_A015791_20180701T083905/IMG_DATA/T36UXB_20180701T083601_B01.jp2",
+          "B02": "GRANULE/L1C_T36UXB_A015791_20180701T083905/IMG_DATA/T36UXB_20180701T083601_B02.jp2",
+          "B03": "GRANULE/L1C_T36UXB_A015791_20180701T083905/IMG_DATA/T36UXB_20180701T083601_B03.jp2",
+          "B04": "GRANULE/L1C_T36UXB_A015791_20180701T083905/IMG_DATA/T36UXB_20180701T083601_B04.jp2",
+          "B05": "GRANULE/L1C_T36UXB_A015791_20180701T083905/IMG_DATA/T36UXB_20180701T083601_B05.jp2",
+          "B06": "GRANULE/L1C_T36UXB_A015791_20180701T083905/IMG_DATA/T36UXB_20180701T083601_B06.jp2",
+          "B07": "GRANULE/L1C_T36UXB_A015791_20180701T083905/IMG_DATA/T36UXB_20180701T083601_B07.jp2",
+          "B08": "GRANULE/L1C_T36UXB_A015791_20180701T083905/IMG_DATA/T36UXB_20180701T083601_B08.jp2",
+          "B8A": "GRANULE/L1C_T36UXB_A015791_20180701T083905/IMG_DATA/T36UXB_20180701T083601_B8A.jp2",
+          "B09": "GRANULE/L1C_T36UXB_A015791_20180701T083905/IMG_DATA/T36UXB_20180701T083601_B09.jp2",
+          "B10": "GRANULE/L1C_T36UXB_A015791_20180701T083905/IMG_DATA/T36UXB_20180701T083601_B10.jp2",
+          "B11": "GRANULE/L1C_T36UXB_A015791_20180701T083905/IMG_DATA/T36UXB_20180701T083601_B11.jp2",
+          "B12": "GRANULE/L1C_T36UXB_A015791_20180701T083905/IMG_DATA/T36UXB_20180701T083601_B12.jp2"
+        },
+        "issues": []
+      }
+    }
+  ],
+  "disk_budget": {
+    "measured_free_bytes": 31193026560,
+    "complete_payload_bytes": 1664246549,
+    "largest_asset_bytes": 124481929,
+    "current_metadata_artifact_bytes": 1628904,
+    "future_two_copy_staging_plus_temporary_bytes": 3454603931,
+    "minimum_free_reserve_bytes": 2147483648,
+    "sufficient_for_conservative_future_acquisition": true,
+    "imagery_acquisition_executed": false,
+    "measured_filesystem_path": "Datasets/Sentinel-2"
+  },
+  "disk_free_before_bytes": 31194460160,
+  "metadata_network_bytes": 1616389,
+  "metadata_request_count": 12,
+  "image_asset_downloads": 0,
+  "gml_content_downloads": 0,
+  "satellite_pixel_reads": 0,
+  "qa_or_model_executions": 0,
+  "labels_approved": 0,
+  "imagery_acquisition_roster_selected": false
+}
