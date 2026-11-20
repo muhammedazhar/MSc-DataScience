@@ -1,0 +1,157 @@
+{
+  "schema_version": 20,
+  "scope": "Area B persistence on the unchanged 10 m crop following the provisional July expansion.",
+  "area": "B",
+  "group_id": "group-96c27871459d03c08bcc",
+  "prior_pair_id": "derived-remaining-e61a8a8e623222b69efb",
+  "candidate_dates": [
+    "2018-08-05",
+    "2018-08-10"
+  ],
+  "catalogue_item_root": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l1c/items/",
+  "catalogue_response_bytes": 1048576,
+  "catalogue_roster": [
+    {
+      "acquisition_date": "2018-08-05",
+      "item_id": "S2B_36UXB_20180805_1_L1C",
+      "scene_id": "S2B_MSIL1C_20180805T083559_N0206_R064_T36UXB_20180805T123757"
+    },
+    {
+      "acquisition_date": "2018-08-10",
+      "item_id": "S2A_36UXB_20180810_0_L1C",
+      "scene_id": "S2A_MSIL1C_20180810T083601_N0206_R064_T36UXB_20180810T124435"
+    }
+  ],
+  "selection_rule": "The two earliest distinct matching N0206 calendar dates in the archived V7 catalogue after July 31. The two exact raw products and their L1C XML must agree with the fixed IDs and cover both original crop and QA envelopes. A blocked date is retained and never replaced.",
+  "provider": {
+    "base_url": "https://sentinel-s2-l1c.s3.amazonaws.com/",
+    "allow_automatic_redirects": false,
+    "listing_max_keys": 300,
+    "maximum_listing_bytes": 2097152,
+    "require_listing_not_truncated": true,
+    "maximum_xml_bytes": 5242880,
+    "maximum_total_response_bytes": 25165824,
+    "maximum_requests": 8,
+    "timeout_seconds": 20,
+    "require_xml_size_etag_content_length_md5_if_match": true,
+    "anonymous_only_no_paid_access": true,
+    "catalogue_asset_bucket_mismatch": "Saved L1C catalogue asset hrefs point to sentinel-s2-l2a; do not use them. Check explicitly declared L1C provider keys against actual XML."
+  },
+  "resources": {
+    "workers": 1,
+    "native_threads": 1,
+    "nice_increment": 10,
+    "gpu_used": false,
+    "worker_rss_mib": 512,
+    "available_memory_reserve_gib": 1.5,
+    "max_seconds_per_worker": 300
+  },
+  "acquisition": {
+    "minimum_free_disk_reserve_bytes": 2147483648,
+    "maximum_scene_count": 2,
+    "required_assets_per_scene": 58,
+    "concurrent_transfers": 1
+  },
+  "review_rule": [
+    "Screen every published roster date with the original QA policy and exact V19 Area B grid and target.",
+    "Inspect only later dates with finite cached RGB/NDVI and zero unusable pixels across the 274-pixel target context with complete padded source context.",
+    "Open unannotated fixed-scale RGB for 6 July, 31 July and the later date before any outlines and NDVI. Assess the same lower block against its neighboring cover.",
+    "Keep the persistence assessment at the pixel-observation level. Original event timing, class approval, stable control and 27-channel gates remain separate."
+  ],
+  "source_files": {
+    "v7_catalogue": {
+      "path": "Docs/Reviews/ValidationCatalogueV7/catalogue/catalogue.json",
+      "sha256": "03d51407e5090d45717319f1bc99e610d2c582fef0fee35086ec16f32a5caa98"
+    },
+    "requirements": {
+      "path": "Docs/Reviews/ValidationCoverageV6/source_requirements.json",
+      "sha256": "21ed0567806ed1efd2840002b3c30bb6b5f2dcda36d19c0fb5ee51ab0dac2a02"
+    },
+    "v18_protocol": {
+      "path": "Docs/Reviews/ValidationRemainingScreenV18/protocol.json",
+      "sha256": "bf31ba500f44446dc48baa3b97b4c1f7972125c514c17cf59e35a51e04979e86"
+    },
+    "v18_screen": {
+      "path": "Docs/Reviews/ValidationRemainingScreenV18/screen/screen.json",
+      "sha256": "c39c2373aaac6b1b208b80341344602066f1b85a5f1a1d0f0de27b944f5c3751"
+    },
+    "v19_protocol": {
+      "path": "Docs/Reviews/ValidationJulyVisualV19/protocol.json",
+      "sha256": "35f638e8db3652bd81bc6fc3e8bedfe56d98c9e9ffac376fed17de4fc0ab4c1d"
+    },
+    "v19_packet": {
+      "path": "Docs/Reviews/ValidationJulyVisualV19/packet/packet.json",
+      "sha256": "9661c6061051f9d29968c6793476c294e07bc195fa744e3001ec469ff23895bf"
+    },
+    "v19_reviews": {
+      "path": "Docs/Reviews/ValidationJulyVisualV19/reviews.json",
+      "sha256": "fd363f6062ec58717f4f6b258551a9dbe7f28519fd506adc0cf7a9cfff66ec4c"
+    },
+    "v19_integrity": {
+      "path": "Docs/Reviews/ValidationJulyVisualV19/checks/final_integrity.json",
+      "sha256": "07cf8a12ace4f7ff31d47f91a144fc84c416692eedde45c537f4665f22ba4324"
+    }
+  },
+  "frozen_implementation_sha256": {
+    "Solutions/assess_pixel_quality.py": "4e0b77922cd478322912cb4116801502ec13bdcb740fc7696a1010e94fbd535f",
+    "Solutions/pixelqa_masks.py": "cdbac7d70b94cc2043cbfa94a8201a232320b634c7c23d987b33f3948617897f",
+    "Solutions/pixelqa_scene_metadata.py": "4d783446400c33f2bfb9d6e8730d3ab8e5178d35559a39cf714735384d542b72",
+    "Solutions/validate_sample.py": "475f641ed582af37eedc2ee9e94065e280202db08eb381441e1403c3eb001fba",
+    "Solutions/annotation_scene_inventory.py": "5c35020ccf12f5e5f689c1f7130d64d9cabd5e6e3e04cdede291c9a912688318",
+    "Solutions/prepare_curated_pilot.py": "1a8d5ec426bd657cd0eb7f1ed2e08c125f8a9f879aad799c395168536e777f82",
+    "Solutions/curated_pilot_review.py": "222bfc332959d2e597644d881ea295b43a29d08606ce8326750e3dd2176e918f",
+    "Solutions/curated_pilot_exports.py": "caf67918894fa13ad62c3f9e6b8aad58ac69c414e999df9a988901d2166a9958",
+    "Solutions/build_curated_pilot.py": "302c6fb3aedd13facaf0f83abcb3c234f4ff1b2257d303ce7b5cdc5cd470cc4c",
+    "Solutions/verify_curated_pilot.py": "12f27b43a15d26e7bd3fc6c3df9363ed9b5b1eb3e017a2665548d1895830e8df",
+    "Solutions/pilot_dataset.py": "bb0e58cfb61ac8980d77ed0cc88f99266fa1c35fe1aba5a19780cef4e53af7b7",
+    "Solutions/pilot_objectives.py": "bccfd912cfdafcd7a04df1fb997b05627a995b5f89496241508e00dc97430d61",
+    "Solutions/pilot_pixel_objective.py": "6020e42610e7e371000a2667958ddb3a8ce1acbe5a2ff7b3c721bfb27b1a1599",
+    "Solutions/train_reviewed_pilot.py": "389ecb205b7fa91624964c6eb030352827001b0b38b74b7c12e30c833ec24813",
+    "Solutions/reviewed_pilot_worker.py": "7e826d6f4cb3d9ed9d2c32e23838c479926261284a274879a2989dc78df43252",
+    "Solutions/train_pilot_baseline.py": "259f367ddc613b0095a93ddcf7b9ae8f0a14553fa4fc5fc28665c76ae6059995",
+    "Solutions/run_pilot_checks.py": "9f76cd6c4dd8ceb956102d503e9069c89f63f1ac5a481515391e9393598adceb",
+    "Solutions/diagnose_pilot_overfit.py": "e190a95b153498df138bb000d9edbf2dcab5c3b14058391e0a8e1a234637f27b",
+    "Solutions/pilot_overfit_worker.py": "2da2fc63c99f9ca4533e6d22061870301a7d8985d827621dae7ae96cf480bb4c",
+    "Solutions/verify_pixel_pilot.py": "f6684643e4ea536b69a48a2da00581b9644e408e27715b0645c7fbc84a611c97",
+    "Solutions/select_validation_cases.py": "0a137b5a343e21a1e6daf10ba21abf10d1efc69eee36f77761ee30b3e0689ca7",
+    "Solutions/prepare_validation_review.py": "239f42dba0086c5dc1d8cae7ff448df44b6d4b85c76008ed94d220a1e46ace1d",
+    "Solutions/validation_review.py": "b73853c8ac3229aad82e1b1e11b50395d51ca80d9ed486c30015320919777f62",
+    "Solutions/audit_validation_geometry.py": "1d0e3f5ffc3d755c1f53a5c1eafa36d5af7336cb51826508efc4e5b2fe7fe2ee",
+    "Solutions/audit_validation_support_pool.py": "27bebf952e323708b28e9cf9772fdb516dbeea934e2fe7e44802e88e0ba1e508",
+    "Solutions/verify_validation_support_pool.py": "b4a398da0a44f264520992aa8d0b8708e9281516abc56d22353aac86a4ed8a80",
+    "Solutions/verify_validation_dataset.py": "785f5cea93311196070f71160a63680bd49d629758a91f5bdec3bdbf4bdf1f22",
+    "Solutions/validation_context_worker.py": "5bc30e1023679bee956430be92544f709257d0b07202e1e19736378430a707a8",
+    "Solutions/audit_validation_context.py": "894d676e8ad728505a2d31db9c971e0910fc258f469b806a392747f362bc3c42",
+    "Solutions/verify_validation_context.py": "f36b39950c336bd6cae6601f4281c9137f8de8c0424b2a67142f4cccd2450c39",
+    "Solutions/prepare_validation_manual.py": "dc8e008ae86705fb45b6b04cb3b7d3cdc220f17416271e1efc9a57b7020d6919",
+    "Solutions/verify_validation_manual.py": "7d36cd810a036ee31a8c426d278ddc93601746230bf258c7ae5587a210cf374b",
+    "Solutions/audit_validation_unscreened.py": "e0b1d5fa6bd4e1f6c67f3fbd294d00772c1242625cbaac134118f47d5a906d6e",
+    "Solutions/audit_validation_coverage.py": "011417f1e207414d0b39b218459a555c0c4a92703be31b3eaf6dfd0f6bd425b9",
+    "Solutions/audit_validation_catalogue.py": "0ac1c09f7db1c1ad442c5e85f6a068b2e9beebcfa9e86ba9cb6835746b28b1bd",
+    "Solutions/adapt_validation_scenes.py": "c1d7d8354efd6ae11798a49a3dc717707f1f51f46d71db250ba42b07938d72b8",
+    "Solutions/ingest_validation_scenes.py": "0f368c5d9b63048ccc689838cd21cedc44a6aa55b15ebfc4e5ae4af3dd42cb01",
+    "Solutions/complete_validation_qa_inputs.py": "1cfc377410f8faf10cc9cd56218a64eb2dbdfd7070355dbb08ab3d5f32d97f9d",
+    "Solutions/screen_repaired_validation.py": "f1ff3da38a77c1af85c6fc51eeadbcace3e4ec7011438ba137aab991de070e9b",
+    "Solutions/inventory_earlier_validation_sources.py": "91ed9c71e8fc39699801a76f088197b775301477a66d8baac867c5b6971fee1b",
+    "Tests/test_earlier_validation_inventory.py": "957342284de3c122ce84cb229ac1d0c324f76254d7084cdc4c5bb57013a32c77",
+    "Solutions/preflight_earlier_validation_metadata.py": "116fddb8966ed5d95f4c8f5b9a42f4fac7e1240d442a3f55dd140b213f2d0980",
+    "Tests/test_earlier_metadata_preflight.py": "5760e9de621160982f08b435c07329f5bb6b2a2335f71945e592835834f3178b",
+    "Solutions/acquire_earlier_validation_sources.py": "c76e69b0c12a47324cade08e8c7c4c1ca594ba7b3f6732bdd88f4d958a9564af",
+    "Tests/test_earlier_source_acquisition.py": "21ad862912dcaec4ffd83d6f086a836f80d6ae3453ef660091f92710c1db2d6a",
+    "Solutions/screen_earlier_validation.py": "fea7a7c54c89b431638d3ab236f9f1dcda679c72bc37ad685ea785faa3718474",
+    "Tests/test_earlier_pair_qa.py": "fa90cd8817ec42b90075a10f7729801565b6d23e9b0731f777f9aa9b69790a2f",
+    "Solutions/preflight_remaining_validation_metadata.py": "fff6c583871279d65ea91cc7f2b719396d58574923422031d59fc5c2e9c90c5c",
+    "Tests/test_remaining_metadata_preflight.py": "b6f22a11917b17ceb7fb557e0f65449b3c89149783eca22bd3ddf2170aad0c6e",
+    "Solutions/acquire_remaining_validation_sources.py": "149117feb5dad69dbce53806661696d6f8611fa87f99e1df3936cfc64bf2c0ac",
+    "Tests/test_remaining_source_acquisition.py": "aa78f051a99b3edbdd6e191b50c2c590fbc71d7457543e1a919ef4479369f4fa",
+    "Solutions/screen_remaining_validation.py": "05feda4b7778b2adb6e864e09d33bacb918978c1dd94786a654c57e626f58d21",
+    "Tests/test_remaining_pair_qa.py": "78c0e9b02ee5c43dd3bd849595f19e476704e2a23c08f37a3da4ffcd8e8e5e09",
+    "Solutions/prepare_july_visual_review.py": "6650036b87ecfa8f7eaeb2820746cfeb203b6fbe0def06c1bf68bf2e3aa30568"
+  },
+  "implementation_sha256": {
+    "Solutions/preflight_persistence_source.py": "3472c511666664968c1899e10fb789fdda6a09c6b9c51ff5a388e0cccaeb71dc",
+    "Solutions/acquire_persistence_source.py": "06e86cfdf8460f504f5f7250825285fd974e0a97e5884cdb91ffbc40303d46d9",
+    "Solutions/check_persistence_observations.py": "2756867402d83eda0e3989ae9567b422d96314583f79f4b8679c5c7da97fc55a",
+    "Solutions/verify_persistence_preflight.py": "00d44a6afac68195a9e3faf5e1e82f0be2e0df311a7c155688958245a0dc7b26"
+  }
+}
