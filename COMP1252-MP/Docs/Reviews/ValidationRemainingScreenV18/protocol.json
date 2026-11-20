@@ -1,0 +1,183 @@
+{
+  "schema_version": 18,
+  "scope": "Automatic pixel QA and saved evidence replay for the six remaining July pairs.",
+  "source_files": {
+    "catalogue": {
+      "path": "Datasets/AnnotationAudit/v1/annotations_clean.geojson",
+      "sha256": "06a1090c8451d670929163ff7be067d63454cb1893a3e8cbee97519fbb69cbce"
+    },
+    "splits": {
+      "path": "Datasets/AnnotationAudit/v1/splits.json",
+      "sha256": "6c29ca5ab841dfe452ccccb1df826f1b2ae1613aea0cb9f463ab4302c5dd806d"
+    },
+    "training_manifest": {
+      "path": "Datasets/CuratedPilot/v1/dataset/training_manifest.jsonl",
+      "sha256": "138713e6a0b57e5491015fe42438d1a5d1702c68c753289bf52abb5caf7949aa"
+    },
+    "training_metadata": {
+      "path": "Datasets/CuratedPilot/v1/dataset/metadata.json",
+      "sha256": "5d929465f148c1823f6332222f56430dac9a5b0d1985d8545c2eb17c99ec3e71"
+    },
+    "inventory": {
+      "path": "Docs/Reviews/ValidationUnscreenedV5/inventory/inventory.json",
+      "sha256": "f6f61b5ac7ec520b49864423936b3b40bad4b1230977d3a853f44988c1c1b492"
+    },
+    "pairs": {
+      "path": "Datasets/AnnotationAudit/v1/candidate_pairs.jsonl",
+      "sha256": "74d8d229470b4ef4aa968199768772fffd010aaab28f6d44775afb27c1601cd6"
+    },
+    "source_requirements": {
+      "path": "Docs/Reviews/ValidationCoverageV6/source_requirements.json",
+      "sha256": "21ed0567806ed1efd2840002b3c30bb6b5f2dcda36d19c0fb5ee51ab0dac2a02"
+    },
+    "history": {
+      "path": "Docs/Reviews/ValidationUnscreenedV5/protocol.json",
+      "sha256": "25a7189ce4327acb415a75dcd4492e558cf7b89942c07dc1de19dd09c64a5fb1"
+    },
+    "v11_protocol": {
+      "path": "Docs/Reviews/ValidationSourceScreenV11/protocol.json",
+      "sha256": "1b29c6c186b2c6dc92d9c8ee2dd26db33c8cbf9c3f15d3bc55abb7d7c780ad94"
+    },
+    "v11_screen": {
+      "path": "Docs/Reviews/ValidationSourceScreenV11/screen/screen.json",
+      "sha256": "e87ec098dc30d62046ba0cc387ac390c50d70c9459db8fb2142ec8c9319f4786"
+    },
+    "v11_metadata": {
+      "path": "Docs/Reviews/ValidationSourceScreenV11/screen/metadata.json",
+      "sha256": "8a11f10479abd294a38d7133bc1ce25aa622a8ae22640564242371df63615c76"
+    },
+    "acquisition_protocol": {
+      "path": "Docs/Reviews/ValidationRemainingAcquisitionV17/protocol.json",
+      "sha256": "a03f9255fccf86bf5b1e80c8b6959fdf77c23b4440c52067c79b10e6c45bc4c2"
+    },
+    "acquisition_result": {
+      "path": "Docs/Reviews/ValidationRemainingAcquisitionV17/publication/result.json",
+      "sha256": "6eb99a3ed446f0b7c1fa60d4e55b1462d190e68c901aee817176f6849e3f9aaf"
+    },
+    "acquisition_metadata": {
+      "path": "Docs/Reviews/ValidationRemainingAcquisitionV17/publication/metadata.json",
+      "sha256": "a60e37d6001db3e809d4f8bf13ccda4e697d0f08dd6f00d04307396a80df6767"
+    },
+    "acquisition_integrity": {
+      "path": "Docs/Reviews/ValidationRemainingAcquisitionV17/checks/final_integrity.json",
+      "sha256": "3cae2ccdc6cca06737a94beea0dcf3650ef2edd8ca7e92b406ea9d16220db873"
+    },
+    "v15_screen": {
+      "path": "Docs/Reviews/ValidationEarlierScreenV15/screen/screen.json",
+      "sha256": "db314301966f2057c64ba5379c6229361c531e8dd224f33a713cb24691300fa2"
+    },
+    "v15_metadata": {
+      "path": "Docs/Reviews/ValidationEarlierScreenV15/screen/metadata.json",
+      "sha256": "743baa449ec38ec663be8a4d8fc4e8c32a76762ab71c778f89edb8c13f9b7adf"
+    },
+    "v15_integrity": {
+      "path": "Docs/Reviews/ValidationEarlierScreenV15/checks/final_integrity.json",
+      "sha256": "cbc631d93b17cc7c18566a809894f82c86ea3e3bc4fb7e06d839a0abaf5c9ab1"
+    }
+  },
+  "frozen_implementation_sha256": {
+    "Solutions/assess_pixel_quality.py": "4e0b77922cd478322912cb4116801502ec13bdcb740fc7696a1010e94fbd535f",
+    "Solutions/pixelqa_masks.py": "cdbac7d70b94cc2043cbfa94a8201a232320b634c7c23d987b33f3948617897f",
+    "Solutions/pixelqa_scene_metadata.py": "4d783446400c33f2bfb9d6e8730d3ab8e5178d35559a39cf714735384d542b72",
+    "Solutions/validate_sample.py": "475f641ed582af37eedc2ee9e94065e280202db08eb381441e1403c3eb001fba",
+    "Solutions/annotation_scene_inventory.py": "5c35020ccf12f5e5f689c1f7130d64d9cabd5e6e3e04cdede291c9a912688318",
+    "Solutions/prepare_curated_pilot.py": "1a8d5ec426bd657cd0eb7f1ed2e08c125f8a9f879aad799c395168536e777f82",
+    "Solutions/curated_pilot_review.py": "222bfc332959d2e597644d881ea295b43a29d08606ce8326750e3dd2176e918f",
+    "Solutions/curated_pilot_exports.py": "caf67918894fa13ad62c3f9e6b8aad58ac69c414e999df9a988901d2166a9958",
+    "Solutions/build_curated_pilot.py": "302c6fb3aedd13facaf0f83abcb3c234f4ff1b2257d303ce7b5cdc5cd470cc4c",
+    "Solutions/verify_curated_pilot.py": "12f27b43a15d26e7bd3fc6c3df9363ed9b5b1eb3e017a2665548d1895830e8df",
+    "Solutions/pilot_dataset.py": "bb0e58cfb61ac8980d77ed0cc88f99266fa1c35fe1aba5a19780cef4e53af7b7",
+    "Solutions/pilot_objectives.py": "bccfd912cfdafcd7a04df1fb997b05627a995b5f89496241508e00dc97430d61",
+    "Solutions/pilot_pixel_objective.py": "6020e42610e7e371000a2667958ddb3a8ce1acbe5a2ff7b3c721bfb27b1a1599",
+    "Solutions/train_reviewed_pilot.py": "389ecb205b7fa91624964c6eb030352827001b0b38b74b7c12e30c833ec24813",
+    "Solutions/reviewed_pilot_worker.py": "7e826d6f4cb3d9ed9d2c32e23838c479926261284a274879a2989dc78df43252",
+    "Solutions/train_pilot_baseline.py": "259f367ddc613b0095a93ddcf7b9ae8f0a14553fa4fc5fc28665c76ae6059995",
+    "Solutions/run_pilot_checks.py": "9f76cd6c4dd8ceb956102d503e9069c89f63f1ac5a481515391e9393598adceb",
+    "Solutions/diagnose_pilot_overfit.py": "e190a95b153498df138bb000d9edbf2dcab5c3b14058391e0a8e1a234637f27b",
+    "Solutions/pilot_overfit_worker.py": "2da2fc63c99f9ca4533e6d22061870301a7d8985d827621dae7ae96cf480bb4c",
+    "Solutions/verify_pixel_pilot.py": "f6684643e4ea536b69a48a2da00581b9644e408e27715b0645c7fbc84a611c97",
+    "Solutions/select_validation_cases.py": "0a137b5a343e21a1e6daf10ba21abf10d1efc69eee36f77761ee30b3e0689ca7",
+    "Solutions/prepare_validation_review.py": "239f42dba0086c5dc1d8cae7ff448df44b6d4b85c76008ed94d220a1e46ace1d",
+    "Solutions/validation_review.py": "b73853c8ac3229aad82e1b1e11b50395d51ca80d9ed486c30015320919777f62",
+    "Solutions/audit_validation_geometry.py": "1d0e3f5ffc3d755c1f53a5c1eafa36d5af7336cb51826508efc4e5b2fe7fe2ee",
+    "Solutions/audit_validation_support_pool.py": "27bebf952e323708b28e9cf9772fdb516dbeea934e2fe7e44802e88e0ba1e508",
+    "Solutions/verify_validation_support_pool.py": "b4a398da0a44f264520992aa8d0b8708e9281516abc56d22353aac86a4ed8a80",
+    "Solutions/verify_validation_dataset.py": "785f5cea93311196070f71160a63680bd49d629758a91f5bdec3bdbf4bdf1f22",
+    "Solutions/validation_context_worker.py": "5bc30e1023679bee956430be92544f709257d0b07202e1e19736378430a707a8",
+    "Solutions/audit_validation_context.py": "894d676e8ad728505a2d31db9c971e0910fc258f469b806a392747f362bc3c42",
+    "Solutions/verify_validation_context.py": "f36b39950c336bd6cae6601f4281c9137f8de8c0424b2a67142f4cccd2450c39",
+    "Solutions/prepare_validation_manual.py": "dc8e008ae86705fb45b6b04cb3b7d3cdc220f17416271e1efc9a57b7020d6919",
+    "Solutions/verify_validation_manual.py": "7d36cd810a036ee31a8c426d278ddc93601746230bf258c7ae5587a210cf374b",
+    "Solutions/audit_validation_unscreened.py": "e0b1d5fa6bd4e1f6c67f3fbd294d00772c1242625cbaac134118f47d5a906d6e",
+    "Solutions/audit_validation_coverage.py": "011417f1e207414d0b39b218459a555c0c4a92703be31b3eaf6dfd0f6bd425b9",
+    "Solutions/audit_validation_catalogue.py": "0ac1c09f7db1c1ad442c5e85f6a068b2e9beebcfa9e86ba9cb6835746b28b1bd",
+    "Solutions/adapt_validation_scenes.py": "c1d7d8354efd6ae11798a49a3dc717707f1f51f46d71db250ba42b07938d72b8",
+    "Solutions/ingest_validation_scenes.py": "0f368c5d9b63048ccc689838cd21cedc44a6aa55b15ebfc4e5ae4af3dd42cb01",
+    "Solutions/complete_validation_qa_inputs.py": "1cfc377410f8faf10cc9cd56218a64eb2dbdfd7070355dbb08ab3d5f32d97f9d",
+    "Solutions/screen_repaired_validation.py": "f1ff3da38a77c1af85c6fc51eeadbcace3e4ec7011438ba137aab991de070e9b",
+    "Solutions/inventory_earlier_validation_sources.py": "91ed9c71e8fc39699801a76f088197b775301477a66d8baac867c5b6971fee1b",
+    "Tests/test_earlier_validation_inventory.py": "957342284de3c122ce84cb229ac1d0c324f76254d7084cdc4c5bb57013a32c77",
+    "Solutions/preflight_earlier_validation_metadata.py": "116fddb8966ed5d95f4c8f5b9a42f4fac7e1240d442a3f55dd140b213f2d0980",
+    "Tests/test_earlier_metadata_preflight.py": "5760e9de621160982f08b435c07329f5bb6b2a2335f71945e592835834f3178b",
+    "Solutions/acquire_earlier_validation_sources.py": "c76e69b0c12a47324cade08e8c7c4c1ca594ba7b3f6732bdd88f4d958a9564af",
+    "Tests/test_earlier_source_acquisition.py": "21ad862912dcaec4ffd83d6f086a836f80d6ae3453ef660091f92710c1db2d6a",
+    "Solutions/screen_earlier_validation.py": "fea7a7c54c89b431638d3ab236f9f1dcda679c72bc37ad685ea785faa3718474",
+    "Tests/test_earlier_pair_qa.py": "fa90cd8817ec42b90075a10f7729801565b6d23e9b0731f777f9aa9b69790a2f",
+    "Solutions/preflight_remaining_validation_metadata.py": "fff6c583871279d65ea91cc7f2b719396d58574923422031d59fc5c2e9c90c5c",
+    "Tests/test_remaining_metadata_preflight.py": "b6f22a11917b17ceb7fb557e0f65449b3c89149783eca22bd3ddf2170aad0c6e",
+    "Solutions/acquire_remaining_validation_sources.py": "149117feb5dad69dbce53806661696d6f8611fa87f99e1df3936cfc64bf2c0ac",
+    "Tests/test_remaining_source_acquisition.py": "aa78f051a99b3edbdd6e191b50c2c590fbc71d7457543e1a919ef4479369f4fa"
+  },
+  "rule": {
+    "group_id": "group-96c27871459d03c08bcc",
+    "events": {
+      "event-71d8da17cbbfd9babdee": "pair-4644e1fb9fe295425239",
+      "event-ce1c1df8d02be33bb3c8": "pair-7250e1f130f05c216746"
+    },
+    "pre_dates": [
+      "2018-07-11",
+      "2018-07-06",
+      "2018-07-01"
+    ],
+    "post_date": "2018-07-31",
+    "source_scenes": {
+      "2018-07-11": "S2A_MSIL1C_20180711T083601_N0206_R064_T36UXB_20180711T122613",
+      "2018-07-06": "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXB_20180706T123246",
+      "2018-07-01": "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXB_20180701T104347",
+      "2018-07-31": "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXB_20180731T110233"
+    },
+    "pair_order": "11, 6, then 1 July pre-date, with the two frozen events in declared order.",
+    "source_tile": "36UXB",
+    "source_crs": "EPSG:32636",
+    "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+    "context_padding_m": 1200,
+    "context_radius_pixels": 2,
+    "expected_pairs": 6,
+    "observation_requests": 12,
+    "maximum_distinct_observations": 8,
+    "maximum_cloud_model_calls": 8,
+    "maximum_fused_band_requests": 88,
+    "temporal_target": "Cumulative post AND NOT cumulative pre on each original crop, with inclusive observation date cutoffs and unchanged temporal provenance.",
+    "provenance": "Recompute complete intersecting context/post/pre temporal event sets and expanded-interval blockers; retain original annotation tile/source IDs. Reject extra provenance blockers before satellite pixels.",
+    "source_integrity": "Recheck all 232 used source hashes and the prior source stat receipts before pixel work.",
+    "phase": "qa_only_no_27_channel_eligibility"
+  },
+  "resources": {
+    "workers": 1,
+    "native_threads": 1,
+    "nice_increment": 10,
+    "gpu_used": false,
+    "worker_rss_mib": 512,
+    "available_memory_reserve_gib": 1.5,
+    "max_seconds_per_worker": 300
+  },
+  "implementation_sha256": {
+    "Solutions/screen_remaining_validation.py": "05feda4b7778b2adb6e864e09d33bacb918978c1dd94786a654c57e626f58d21",
+    "Tests/test_remaining_pair_qa.py": "78c0e9b02ee5c43dd3bd849595f19e476704e2a23c08f37a3da4ffcd8e8e5e09"
+  },
+  "validation": {
+    "tests_run": 391,
+    "receipt": "Docs/Reviews/ValidationRemainingScreenV18/checks/pre_execution_tests/metadata.json",
+    "sha256": "92115bb2d40dd4012caf8d26ad87bf63f3e04956d1604d5ee5b909edbda0a124"
+  }
+}
