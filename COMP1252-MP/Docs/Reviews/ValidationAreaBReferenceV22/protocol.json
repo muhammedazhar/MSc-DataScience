@@ -1,0 +1,121 @@
+{
+  "schema_version": 22,
+  "purpose": "Corroborate land cover before the lower expansion and at the original stable-forest controls using independent dated observations.",
+  "pair_id": "derived-remaining-e61a8a8e623222b69efb",
+  "group_id": "group-96c27871459d03c08bcc",
+  "grid": {
+    "crs": "EPSG:32636",
+    "transform": [
+      10.0,
+      0.0,
+      663380.0,
+      0.0,
+      -10.0,
+      5605380.0
+    ],
+    "width": 64,
+    "height": 64,
+    "bounds": [
+      663380.0,
+      5604740.0,
+      664020.0,
+      5605380.0
+    ]
+  },
+  "review_target": "Lower opening assessed in V19/V20, located against the unchanged Area B anchor and eroded interior. Confirm exact overlap before assigning evidentiary weight.",
+  "area_mask_sha256": {
+    "target": "f7c27baf3a1a82ef061c2d2968cc81ee82974cb575b0fa9b67b20cee8b6d73b8",
+    "interior": "2fdfdf896fc225bb57fcc35a131f48bf32f11bc657c767e6a53696e7648151db",
+    "context": "c9b05e9f4f9d2ebb0045ec1da1a14bbc0e33be23e117a8a48dea2aaeb0d26f33",
+    "interior_context": "6b8b78302cf670273b0206173174a3d151fc3c931bd111977cca2e31c67281eb"
+  },
+  "control_roster": [
+    {
+      "control_id": "control-1",
+      "row": 2,
+      "col": 2,
+      "width": 16,
+      "roi_bounds": [
+        663400.0,
+        5605200.0,
+        663560.0,
+        5605360.0
+      ],
+      "roi_sha256": "735e65f2e0de93ca25623d1aa9c389c9ecd35882d501381aa8eadcb7db600bbd"
+    },
+    {
+      "control_id": "control-2",
+      "row": 22,
+      "col": 2,
+      "width": 16,
+      "roi_bounds": [
+        663400.0,
+        5605000.0,
+        663560.0,
+        5605160.0
+      ],
+      "roi_sha256": "c412353ba2b4eb8f73e95f76ec4b7ffb053f1776265b90a70d616251d60161f5"
+    },
+    {
+      "control_id": "control-3",
+      "row": 42,
+      "col": 2,
+      "width": 16,
+      "roi_bounds": [
+        663400.0,
+        5604800.0,
+        663560.0,
+        5604960.0
+      ],
+      "roi_sha256": "9c12fbcc2464840269b274049b3bce6ff37fbfa540820b4fd0d7b12b89411ad7"
+    }
+  ],
+  "target_dates": {
+    "earlier_forest_reference": "2018-07-06",
+    "visible_expansion_by": "2018-07-31",
+    "later_persistence": "2018-08-10"
+  },
+  "reference_sources": [
+    "Esri World Imagery Wayback",
+    "Google Earth historical imagery",
+    "OpenAerialMap/Maxar open archives",
+    "USGS Landsat 7/8 official collections"
+  ],
+  "evidence_rule": [
+    "Check source footprint, actual capture date, native resolution, access and registration. Record weaker or rejected options with reasons.",
+    "Prefer usable high-resolution reference acquisitions near July 6 and August 10. Older or substantially later acquisitions can add historical context and cannot resolve what happened in the gaps.",
+    "Use the fixed original area and all three complete controls. No class labels from catalogue coverage, release dates, scene-wide cloud metadata, upsampling, or ambiguous pixels.",
+    "Review actual imagery if a usable independent reference is accessible. Record uncertainty, keep prior optical observations intact, and require explicit approval before adding class labels."
+  ],
+  "resources": {
+    "workers": 1,
+    "native_threads": 1,
+    "nice_increment": 10,
+    "gpu_used": false,
+    "worker_rss_mib": 512,
+    "available_memory_reserve_gib": 1.5,
+    "max_seconds_per_worker": 300
+  },
+  "source_files": {
+    "july_assessment": {
+      "path": "Docs/Reviews/ValidationJulyVisualV19/reviews.json",
+      "sha256": "fd363f6062ec58717f4f6b258551a9dbe7f28519fd506adc0cf7a9cfff66ec4c"
+    },
+    "august_assessment": {
+      "path": "Docs/Reviews/ValidationPersistenceV20/reviews.json",
+      "sha256": "b08012815e89be143c8b6f9d8f1bfdf1a5a04feed017205b72032ff6438e710b"
+    },
+    "area_b_audit": {
+      "path": "Docs/Reviews/ValidationAreaBInputsV21/audit/audit.json",
+      "sha256": "2dc79757adabd6c401d36f92075e7a46827e452d7b84b2f7ba656ee8f331d2ec"
+    },
+    "area_b_reviews": {
+      "path": "Docs/Reviews/ValidationAreaBInputsV21/reviews.json",
+      "sha256": "2c3a9629c7d6404a245cdd923206ecde8de75972ddbe0b633e236dda461797c9"
+    },
+    "area_b_integrity": {
+      "path": "Docs/Reviews/ValidationAreaBInputsV21/checks/final_integrity.json",
+      "sha256": "9c06bf1cf9fe7b100a9f8f3afcc12e5b4ee930c53bce8e6638f4708c760e8a43"
+    }
+  }
+}
