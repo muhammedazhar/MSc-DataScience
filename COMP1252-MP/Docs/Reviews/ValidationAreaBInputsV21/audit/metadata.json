@@ -1,0 +1,39 @@
+{
+  "execution_status": "completed",
+  "mode": "prepare",
+  "protocol_sha256": "e0a9f420fe116e7b18f8781e08b18b0161dc231ca0753d97b4be865be41bb3ee",
+  "artifact_sha256": {
+    "audit.json": "2dc79757adabd6c401d36f92075e7a46827e452d7b84b2f7ba656ee8f331d2ec",
+    "control-1-outlined.png": "d63d944d7d4a1542f687d723f1bec655007197f5621599cfbecfc802035d4eba",
+    "control-1-plain.png": "b206cccde9e54671d36ac27329f0b691409fb185ebd3f80e39f3dee5d5621222",
+    "control-2-outlined.png": "aa2667061e674706258af663ad019736effc3bfec34ef6ebdf963254a5f5751b",
+    "control-2-plain.png": "3d155a4a6d79225bb6c2da0223d734dc4563cdd1f0e3b4ecf15fe53bc3127347",
+    "control-3-outlined.png": "2ba2d93d28510b4ecddf081e51b2720cec4052f74f59f3be6326af1090f80a88",
+    "control-3-plain.png": "d39d1ab9fa9d50248ab3645b26bc8eefff7718f7823191ad4bc8742464d08cd9",
+    "controls-outlined.png": "051e0bf4c434316839c7c76fc94aaa000775ed1f0d09d4cc0eabe2fe4048b005",
+    "controls-plain.png": "cff8120f8602ea4897c947bbb1e2ee678b2f52b5e5c125deeea06a4adb878199",
+    "endpoint-features.npz": "9ec627c764687d0423ecb0d5528cac1f94271febd5ad0b785e8407e56495f495"
+  },
+  "feature_band_window_requests": 14,
+  "cloud_model_executions": 0,
+  "forest_model_executions": 0,
+  "labels_approved": 0,
+  "resources": {
+    "logical_cpu_count": 11,
+    "machine_ram_gib": 18.0,
+    "worker_peak_rss_mib_sampled": 172.5,
+    "worker_high_water_rss_mib": 174.95,
+    "minimum_available_gib_sampled": 2.8,
+    "elapsed_seconds": 4.32,
+    "worker_limit_mib": 512,
+    "minimum_available_gib_limit": 1.5,
+    "runtime_limit_seconds": 300,
+    "workers": 1,
+    "native_thread_limit": 1,
+    "nice_increment": 10,
+    "gdal_cache_mib": 32,
+    "warp_memory_mib": 0,
+    "gpu_used": false,
+    "monitor_interval_seconds": 0.25
+  }
+}

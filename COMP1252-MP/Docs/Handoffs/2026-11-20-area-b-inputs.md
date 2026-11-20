@@ -18,8 +18,16 @@ from other contexts, the target context and the 20 m all-catalogue exclusion.
 Check 10 August on those fixed squares. Retain every outcome and class
 uncertainty. First-visible deforestation timing and label approval remain open.
 
-The protocol and runners are pinned. The source, parent pair and architecture
-bindings are recorded. All 391 existing tests passed under the resource guard.
-Feature audit, control placement, replay and visual disposition are pending.
+Checkpoint `1a89f14` pins the protocol and runners. All 391 existing tests
+passed under the resource guard. The feature audit read 14 bounded band
+windows and confirmed all 27 channels finite in all 4,096 crop pixels.
+Both the 274-pixel full target context and the 104-pixel interior context
+pass endpoint QA and finiteness. The three fixed 16 × 16 control squares
+start at zero-based (row, column) (2, 2), (22, 2) and (42, 2). Each 400-pixel
+context is QA-clear on all three dates. Independent roster replay and exact
+view reproduction passed using the saved arrays. Feature audit and replay
+peaked at 174.95 and 159.86 MiB RSS respectively. Control class disposition
+is pending visual inspection of the frozen packet.
+
 Keep one nice +10 CPU worker,
 one native thread, no GPU, the existing 512 MiB cap and 1.5 GiB reserve.
