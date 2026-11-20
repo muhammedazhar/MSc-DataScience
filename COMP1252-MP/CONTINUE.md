@@ -5,6 +5,8 @@ status, then the latest handoff before edits. Commit every completed verified
 logical change with the handoff updated and push to the SAME branch. This entry
 point works for Codex, Gemini Antigravity or another agent without chat history.
 
+Current V21 Area B inputs and control review:
+**`Docs/Handoffs/2026-11-20-area-b-inputs.md`**.
 Completed V20 Area B persistence check:
 **`Docs/Handoffs/2026-11-20-august-persistence.md`**.
 Completed V19 visual endpoint review:
