@@ -189,5 +189,14 @@
     "worker_rss_mib": 512,
     "available_memory_reserve_gib": 1.5,
     "max_seconds_per_worker": 300
+  },
+  "implementation_sha256": {
+    "Solutions/preflight_remaining_validation_metadata.py": "fff6c583871279d65ea91cc7f2b719396d58574923422031d59fc5c2e9c90c5c",
+    "Tests/test_remaining_metadata_preflight.py": "b6f22a11917b17ceb7fb557e0f65449b3c89149783eca22bd3ddf2170aad0c6e"
+  },
+  "validation": {
+    "tests_run": 384,
+    "receipt": "Docs/Reviews/ValidationRemainingMetadataV16/checks/pre_execution_tests/metadata.json",
+    "sha256": "5eca776dfa7f5e7ce53c9afe48d7b66cc866e68e81cb00c0183950e0c7c6a85c"
   }
 }

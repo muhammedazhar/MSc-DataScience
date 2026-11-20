@@ -1,6 +1,6 @@
 # Remaining July source metadata
 
-V16 is predeclared. Implementation, live checks, and verification are pending.
+V16 implementation is tested and pinned. Live checks and verification are pending.
 Continue on `codex/curated-deforestation-pilot` and push verified checkpoints to
 the same branch. Read the linked V15 handoff for the original grids, existing
 cloud exclusions, and Mac capacity limits.
@@ -19,7 +19,10 @@ and a separate 2 GiB reserve. This phase covers metadata only.
 
 The existing guard allows one nice +10 CPU worker, one native thread, 512 MiB
 RSS, 1.5 GiB available system memory, and a maximum of 300 seconds. Use 120
-seconds for tests. The latest verified suite has 380 passing tests.
+seconds for tests. All 384 tests passed in 4.84 seconds. Peak sampled RSS was
+370.6 MiB. Available system memory stayed at or above 3.34 GiB. The four added
+tests cover the exact dates and identities, missing and duplicate eligible dates,
+raw catalogue hash binding, and retaining all outcomes after a request failure.
 
 See `Docs/Reviews/ValidationRemainingMetadataV16/protocol.json` for the fixed
 inputs and request limits.
