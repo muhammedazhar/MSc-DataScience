@@ -13,6 +13,15 @@ clear post observations. The protocol fixes their unchanged crop grids and
 earlier-source catalogue window before the new catalogue query. The shared
 original tile and orbit bound the number of potential satellite products.
 
-Current status is a predeclared source feasibility check. The fresh roster,
-provider results, and any later source or pixel work remain pending. Keep the
+The local planning worker independently reconciled the prior pair coverage
+and original scene and split metadata. V2 retains 194 fresh anchors and V5
+retains 398. Neither has an eligible fresh pair. Twenty screened pairs from
+four fresh groups have clear original post-images and failed pre-images.
+The two fixed groups share a single bounded 36UXA/R064/N0206 source search
+from 11 through 25 July 2018. Both frozen post scenes have usable local
+metadata and cover their full padded crop contexts. The locked planning
+artifact keeps all four groups and the original QA outcomes. It was produced
+without satellite pixel reads at 172.97 MiB peak RSS.
+
+Provider results and subsequent source or pixel work are pending. Keep the
 one low-priority worker, one native thread, 512 MiB RSS cap and 1.5 GiB reserve.

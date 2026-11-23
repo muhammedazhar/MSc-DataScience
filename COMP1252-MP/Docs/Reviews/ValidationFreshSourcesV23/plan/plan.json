@@ -1,0 +1,1958 @@
+{
+  "schema_version": 23,
+  "status": "fresh_catalogue_plan_ready",
+  "summary": {
+    "screened": {
+      "anchor_pairs": 540,
+      "fresh_anchor_pairs": 194,
+      "supported_fresh_anchor_pairs": 30,
+      "supported_fresh_groups": 4,
+      "eligible_fresh_anchor_pairs": 0
+    },
+    "unscreened": {
+      "anchor_pairs": 630,
+      "fresh_anchor_pairs": 398,
+      "supported_fresh_anchor_pairs": 4,
+      "supported_fresh_groups": 1,
+      "eligible_fresh_anchor_pairs": 0
+    }
+  },
+  "excluded_previous_review_groups": [
+    "group-0d4c6841d965abf62969",
+    "group-45f0c39e787ca8622918",
+    "group-594ecdcf428fc819f662",
+    "group-646504159ec8034a1565",
+    "group-6bef49e5258e9f579324",
+    "group-96c27871459d03c08bcc",
+    "group-a177948c08d55f377549"
+  ],
+  "clear_post_alternatives": {
+    "group-01d258e68b5c4e02152b": [
+      {
+        "event_id": "event-011bc19e1e0f43eaa1ea",
+        "pair_id": "pair-73bad06c9e0d3fe6b7fc",
+        "group_id": "group-01d258e68b5c4e02152b",
+        "stratum": "36UYA_Spring_time-dependent",
+        "split": "validation",
+        "annotation_date": "2019-05-27",
+        "pre_date": "2019-05-17",
+        "post_date": "2019-06-06",
+        "interval_days": 20,
+        "grid": {
+          "crs": "EPSG:32636",
+          "transform": [
+            10.0,
+            0.0,
+            769800.0,
+            0.0,
+            -10.0,
+            5575020.0
+          ],
+          "width": 64,
+          "height": 64,
+          "bounds": [
+            769800.0,
+            5574380.0,
+            770440.0,
+            5575020.0
+          ]
+        },
+        "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+        "qa_status": "excluded_by_automatic_quality_screen",
+        "endpoint_crop_unusable_pixels": [
+          4096,
+          0
+        ],
+        "endpoint_target_unusable_pixels": [
+          46,
+          0
+        ],
+        "footprint_isolated": true,
+        "later_usable_scene_ids": [
+          "S2B_MSIL1C_20190611T083609_N0207_R064_T36UYA_20190611T122426",
+          "S2A_MSIL1C_20190616T083601_N0207_R064_T36UYA_20190616T105922",
+          "S2B_MSIL1C_20190621T083609_N0207_R064_T36UYA_20190621T104242",
+          "S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306",
+          "S2B_MSIL1C_20190701T083609_N0207_R064_T36UYA_20190701T113927",
+          "S2A_MSIL1C_20190706T083611_N0207_R064_T36UYA_20190706T104407"
+        ],
+        "published_qa_file": "Datasets/PixelQA/v1/batches/00050/masks/pair-73bad06c9e0d3fe6b7fc.tif",
+        "published_qa_sha256": "1b384f67598a162d70fe6a8fcadabd4d7008ec4255cda8538f291ee0075fe865",
+        "anchor_pixels": 46,
+        "anchor_interior_pixels": 13,
+        "temporal_union_pixels": 46,
+        "target_pixels": 46,
+        "temporal_clipped_pixels": 0,
+        "positive_interior_pixels": 13,
+        "interior_unusable_pixels": 13,
+        "target_mask_sha256": "456d74648a3c53c4c66cfd4db31602020f0cb316200b91f93323fb131bd845a6",
+        "positive_interior_sha256": "f53a5c62555900afc98aff5fa84722555efe76f45811f0c26633ce8d382bf9be",
+        "training_approved": false,
+        "evaluation_approved": false,
+        "eligibility_reasons": [
+          "not_automatic_quality_pass",
+          "endpoint_crop_qa_flags",
+          "endpoint_target_qa_flags",
+          "actual_interior_qa_flags"
+        ],
+        "eligible_for_fresh_review_shortlist": false
+      },
+      {
+        "event_id": "event-011bc19e1e0f43eaa1ea",
+        "pair_id": "pair-1c39681fc137d005b931",
+        "group_id": "group-01d258e68b5c4e02152b",
+        "stratum": "36UYA_Spring_time-dependent",
+        "split": "validation",
+        "annotation_date": "2019-05-27",
+        "pre_date": "2019-05-17",
+        "post_date": "2019-06-11",
+        "interval_days": 25,
+        "grid": {
+          "crs": "EPSG:32636",
+          "transform": [
+            10.0,
+            0.0,
+            769800.0,
+            0.0,
+            -10.0,
+            5575020.0
+          ],
+          "width": 64,
+          "height": 64,
+          "bounds": [
+            769800.0,
+            5574380.0,
+            770440.0,
+            5575020.0
+          ]
+        },
+        "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+        "qa_status": "excluded_by_automatic_quality_screen",
+        "endpoint_crop_unusable_pixels": [
+          4096,
+          0
+        ],
+        "endpoint_target_unusable_pixels": [
+          46,
+          0
+        ],
+        "footprint_isolated": true,
+        "later_usable_scene_ids": [
+          "S2A_MSIL1C_20190616T083601_N0207_R064_T36UYA_20190616T105922",
+          "S2B_MSIL1C_20190621T083609_N0207_R064_T36UYA_20190621T104242",
+          "S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306",
+          "S2B_MSIL1C_20190701T083609_N0207_R064_T36UYA_20190701T113927",
+          "S2A_MSIL1C_20190706T083611_N0207_R064_T36UYA_20190706T104407"
+        ],
+        "published_qa_file": "Datasets/PixelQA/v1/batches/00050/masks/pair-1c39681fc137d005b931.tif",
+        "published_qa_sha256": "1b384f67598a162d70fe6a8fcadabd4d7008ec4255cda8538f291ee0075fe865",
+        "anchor_pixels": 46,
+        "anchor_interior_pixels": 13,
+        "temporal_union_pixels": 46,
+        "target_pixels": 46,
+        "temporal_clipped_pixels": 0,
+        "positive_interior_pixels": 13,
+        "interior_unusable_pixels": 13,
+        "target_mask_sha256": "456d74648a3c53c4c66cfd4db31602020f0cb316200b91f93323fb131bd845a6",
+        "positive_interior_sha256": "f53a5c62555900afc98aff5fa84722555efe76f45811f0c26633ce8d382bf9be",
+        "training_approved": false,
+        "evaluation_approved": false,
+        "eligibility_reasons": [
+          "not_automatic_quality_pass",
+          "endpoint_crop_qa_flags",
+          "endpoint_target_qa_flags",
+          "actual_interior_qa_flags"
+        ],
+        "eligible_for_fresh_review_shortlist": false
+      }
+    ],
+    "group-a77532f92e6bf57d35aa": [
+      {
+        "event_id": "event-09d8404da019897e1147",
+        "pair_id": "pair-f113871fa642d1296fbc",
+        "group_id": "group-a77532f92e6bf57d35aa",
+        "stratum": "36UYA_Spring_time-dependent",
+        "split": "validation",
+        "annotation_date": "2019-03-28",
+        "pre_date": "2019-03-18",
+        "post_date": "2019-04-02",
+        "interval_days": 15,
+        "grid": {
+          "crs": "EPSG:32636",
+          "transform": [
+            10.0,
+            0.0,
+            725820.0,
+            0.0,
+            -10.0,
+            5511140.0
+          ],
+          "width": 64,
+          "height": 64,
+          "bounds": [
+            725820.0,
+            5510500.0,
+            726460.0,
+            5511140.0
+          ]
+        },
+        "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+        "qa_status": "excluded_by_automatic_quality_screen",
+        "endpoint_crop_unusable_pixels": [
+          4096,
+          0
+        ],
+        "endpoint_target_unusable_pixels": [
+          180,
+          0
+        ],
+        "footprint_isolated": true,
+        "later_usable_scene_ids": [
+          "S2A_MSIL1C_20190407T083601_N0207_R064_T36UYA_20190407T104310",
+          "S2B_MSIL1C_20190412T083609_N0207_R064_T36UYA_20190412T122445",
+          "S2A_MSIL1C_20190417T083601_N0207_R064_T36UYA_20190417T101351",
+          "S2B_MSIL1C_20190422T083609_N0207_R064_T36UYA_20190422T122243",
+          "S2A_MSIL1C_20190427T083601_N0207_R064_T36UYA_20190427T100851"
+        ],
+        "published_qa_file": "Datasets/PixelQA/v1/batches/00053/masks/pair-f113871fa642d1296fbc.tif",
+        "published_qa_sha256": "5b044c366e5601aa5009bd6c46d5ca0ab0ce0762d711a2da2428f31e5f2218ad",
+        "anchor_pixels": 170,
+        "anchor_interior_pixels": 73,
+        "temporal_union_pixels": 180,
+        "target_pixels": 170,
+        "temporal_clipped_pixels": 0,
+        "positive_interior_pixels": 73,
+        "interior_unusable_pixels": 73,
+        "target_mask_sha256": "4f4466235c12a3153fdff666cd0c87f41fa1de62d8250bcd86020e8fac603762",
+        "positive_interior_sha256": "e5fa4fa3f63bd81c5dae7e06c1353d6611e461c956af2de0919c2d41e896d7b3",
+        "training_approved": false,
+        "evaluation_approved": false,
+        "eligibility_reasons": [
+          "not_automatic_quality_pass",
+          "endpoint_crop_qa_flags",
+          "endpoint_target_qa_flags",
+          "actual_interior_qa_flags"
+        ],
+        "eligible_for_fresh_review_shortlist": false
+      },
+      {
+        "event_id": "event-09d8404da019897e1147",
+        "pair_id": "pair-17b0224ff08c0b562235",
+        "group_id": "group-a77532f92e6bf57d35aa",
+        "stratum": "36UYA_Spring_time-dependent",
+        "split": "validation",
+        "annotation_date": "2019-03-28",
+        "pre_date": "2019-03-13",
+        "post_date": "2019-04-02",
+        "interval_days": 20,
+        "grid": {
+          "crs": "EPSG:32636",
+          "transform": [
+            10.0,
+            0.0,
+            725820.0,
+            0.0,
+            -10.0,
+            5511140.0
+          ],
+          "width": 64,
+          "height": 64,
+          "bounds": [
+            725820.0,
+            5510500.0,
+            726460.0,
+            5511140.0
+          ]
+        },
+        "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+        "qa_status": "excluded_by_automatic_quality_screen",
+        "endpoint_crop_unusable_pixels": [
+          544,
+          0
+        ],
+        "endpoint_target_unusable_pixels": [
+          13,
+          0
+        ],
+        "footprint_isolated": true,
+        "later_usable_scene_ids": [
+          "S2A_MSIL1C_20190407T083601_N0207_R064_T36UYA_20190407T104310",
+          "S2B_MSIL1C_20190412T083609_N0207_R064_T36UYA_20190412T122445",
+          "S2A_MSIL1C_20190417T083601_N0207_R064_T36UYA_20190417T101351",
+          "S2B_MSIL1C_20190422T083609_N0207_R064_T36UYA_20190422T122243",
+          "S2A_MSIL1C_20190427T083601_N0207_R064_T36UYA_20190427T100851"
+        ],
+        "published_qa_file": "Datasets/PixelQA/v1/batches/00053/masks/pair-17b0224ff08c0b562235.tif",
+        "published_qa_sha256": "3f893ef317147ac3b8083733a8ddd1fc93b13d6d575304082d1b6a899c537de2",
+        "anchor_pixels": 170,
+        "anchor_interior_pixels": 73,
+        "temporal_union_pixels": 180,
+        "target_pixels": 170,
+        "temporal_clipped_pixels": 0,
+        "positive_interior_pixels": 73,
+        "interior_unusable_pixels": 3,
+        "target_mask_sha256": "4f4466235c12a3153fdff666cd0c87f41fa1de62d8250bcd86020e8fac603762",
+        "positive_interior_sha256": "e5fa4fa3f63bd81c5dae7e06c1353d6611e461c956af2de0919c2d41e896d7b3",
+        "training_approved": false,
+        "evaluation_approved": false,
+        "eligibility_reasons": [
+          "not_automatic_quality_pass",
+          "endpoint_crop_qa_flags",
+          "endpoint_target_qa_flags",
+          "actual_interior_qa_flags"
+        ],
+        "eligible_for_fresh_review_shortlist": false
+      },
+      {
+        "event_id": "event-09d8404da019897e1147",
+        "pair_id": "pair-b49de72c7d294a751eea",
+        "group_id": "group-a77532f92e6bf57d35aa",
+        "stratum": "36UYA_Spring_time-dependent",
+        "split": "validation",
+        "annotation_date": "2019-03-28",
+        "pre_date": "2019-03-18",
+        "post_date": "2019-04-07",
+        "interval_days": 20,
+        "grid": {
+          "crs": "EPSG:32636",
+          "transform": [
+            10.0,
+            0.0,
+            725820.0,
+            0.0,
+            -10.0,
+            5511140.0
+          ],
+          "width": 64,
+          "height": 64,
+          "bounds": [
+            725820.0,
+            5510500.0,
+            726460.0,
+            5511140.0
+          ]
+        },
+        "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+        "qa_status": "excluded_by_automatic_quality_screen",
+        "endpoint_crop_unusable_pixels": [
+          4096,
+          0
+        ],
+        "endpoint_target_unusable_pixels": [
+          180,
+          0
+        ],
+        "footprint_isolated": true,
+        "later_usable_scene_ids": [
+          "S2B_MSIL1C_20190412T083609_N0207_R064_T36UYA_20190412T122445",
+          "S2A_MSIL1C_20190417T083601_N0207_R064_T36UYA_20190417T101351",
+          "S2B_MSIL1C_20190422T083609_N0207_R064_T36UYA_20190422T122243",
+          "S2A_MSIL1C_20190427T083601_N0207_R064_T36UYA_20190427T100851"
+        ],
+        "published_qa_file": "Datasets/PixelQA/v1/batches/00053/masks/pair-b49de72c7d294a751eea.tif",
+        "published_qa_sha256": "5b044c366e5601aa5009bd6c46d5ca0ab0ce0762d711a2da2428f31e5f2218ad",
+        "anchor_pixels": 170,
+        "anchor_interior_pixels": 73,
+        "temporal_union_pixels": 180,
+        "target_pixels": 170,
+        "temporal_clipped_pixels": 0,
+        "positive_interior_pixels": 73,
+        "interior_unusable_pixels": 73,
+        "target_mask_sha256": "4f4466235c12a3153fdff666cd0c87f41fa1de62d8250bcd86020e8fac603762",
+        "positive_interior_sha256": "e5fa4fa3f63bd81c5dae7e06c1353d6611e461c956af2de0919c2d41e896d7b3",
+        "training_approved": false,
+        "evaluation_approved": false,
+        "eligibility_reasons": [
+          "not_automatic_quality_pass",
+          "endpoint_crop_qa_flags",
+          "endpoint_target_qa_flags",
+          "actual_interior_qa_flags"
+        ],
+        "eligible_for_fresh_review_shortlist": false
+      },
+      {
+        "event_id": "event-09d8404da019897e1147",
+        "pair_id": "pair-8d1aee9bf3677a33c888",
+        "group_id": "group-a77532f92e6bf57d35aa",
+        "stratum": "36UYA_Spring_time-dependent",
+        "split": "validation",
+        "annotation_date": "2019-03-28",
+        "pre_date": "2019-03-13",
+        "post_date": "2019-04-07",
+        "interval_days": 25,
+        "grid": {
+          "crs": "EPSG:32636",
+          "transform": [
+            10.0,
+            0.0,
+            725820.0,
+            0.0,
+            -10.0,
+            5511140.0
+          ],
+          "width": 64,
+          "height": 64,
+          "bounds": [
+            725820.0,
+            5510500.0,
+            726460.0,
+            5511140.0
+          ]
+        },
+        "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+        "qa_status": "excluded_by_automatic_quality_screen",
+        "endpoint_crop_unusable_pixels": [
+          544,
+          0
+        ],
+        "endpoint_target_unusable_pixels": [
+          13,
+          0
+        ],
+        "footprint_isolated": true,
+        "later_usable_scene_ids": [
+          "S2B_MSIL1C_20190412T083609_N0207_R064_T36UYA_20190412T122445",
+          "S2A_MSIL1C_20190417T083601_N0207_R064_T36UYA_20190417T101351",
+          "S2B_MSIL1C_20190422T083609_N0207_R064_T36UYA_20190422T122243",
+          "S2A_MSIL1C_20190427T083601_N0207_R064_T36UYA_20190427T100851"
+        ],
+        "published_qa_file": "Datasets/PixelQA/v1/batches/00053/masks/pair-8d1aee9bf3677a33c888.tif",
+        "published_qa_sha256": "3f893ef317147ac3b8083733a8ddd1fc93b13d6d575304082d1b6a899c537de2",
+        "anchor_pixels": 170,
+        "anchor_interior_pixels": 73,
+        "temporal_union_pixels": 180,
+        "target_pixels": 170,
+        "temporal_clipped_pixels": 0,
+        "positive_interior_pixels": 73,
+        "interior_unusable_pixels": 3,
+        "target_mask_sha256": "4f4466235c12a3153fdff666cd0c87f41fa1de62d8250bcd86020e8fac603762",
+        "positive_interior_sha256": "e5fa4fa3f63bd81c5dae7e06c1353d6611e461c956af2de0919c2d41e896d7b3",
+        "training_approved": false,
+        "evaluation_approved": false,
+        "eligibility_reasons": [
+          "not_automatic_quality_pass",
+          "endpoint_crop_qa_flags",
+          "endpoint_target_qa_flags",
+          "actual_interior_qa_flags"
+        ],
+        "eligible_for_fresh_review_shortlist": false
+      },
+      {
+        "event_id": "event-09d8404da019897e1147",
+        "pair_id": "pair-f0910c4e73bc20301f76",
+        "group_id": "group-a77532f92e6bf57d35aa",
+        "stratum": "36UYA_Spring_time-dependent",
+        "split": "validation",
+        "annotation_date": "2019-03-28",
+        "pre_date": "2019-03-18",
+        "post_date": "2019-04-12",
+        "interval_days": 25,
+        "grid": {
+          "crs": "EPSG:32636",
+          "transform": [
+            10.0,
+            0.0,
+            725820.0,
+            0.0,
+            -10.0,
+            5511140.0
+          ],
+          "width": 64,
+          "height": 64,
+          "bounds": [
+            725820.0,
+            5510500.0,
+            726460.0,
+            5511140.0
+          ]
+        },
+        "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+        "qa_status": "excluded_by_automatic_quality_screen",
+        "endpoint_crop_unusable_pixels": [
+          4096,
+          0
+        ],
+        "endpoint_target_unusable_pixels": [
+          180,
+          0
+        ],
+        "footprint_isolated": true,
+        "later_usable_scene_ids": [
+          "S2A_MSIL1C_20190417T083601_N0207_R064_T36UYA_20190417T101351",
+          "S2B_MSIL1C_20190422T083609_N0207_R064_T36UYA_20190422T122243",
+          "S2A_MSIL1C_20190427T083601_N0207_R064_T36UYA_20190427T100851"
+        ],
+        "published_qa_file": "Datasets/PixelQA/v1/batches/00053/masks/pair-f0910c4e73bc20301f76.tif",
+        "published_qa_sha256": "5b044c366e5601aa5009bd6c46d5ca0ab0ce0762d711a2da2428f31e5f2218ad",
+        "anchor_pixels": 170,
+        "anchor_interior_pixels": 73,
+        "temporal_union_pixels": 180,
+        "target_pixels": 170,
+        "temporal_clipped_pixels": 0,
+        "positive_interior_pixels": 73,
+        "interior_unusable_pixels": 73,
+        "target_mask_sha256": "4f4466235c12a3153fdff666cd0c87f41fa1de62d8250bcd86020e8fac603762",
+        "positive_interior_sha256": "e5fa4fa3f63bd81c5dae7e06c1353d6611e461c956af2de0919c2d41e896d7b3",
+        "training_approved": false,
+        "evaluation_approved": false,
+        "eligibility_reasons": [
+          "not_automatic_quality_pass",
+          "endpoint_crop_qa_flags",
+          "endpoint_target_qa_flags",
+          "actual_interior_qa_flags"
+        ],
+        "eligible_for_fresh_review_shortlist": false
+      },
+      {
+        "event_id": "event-09d8404da019897e1147",
+        "pair_id": "pair-99a1c88ad2ee25bc8231",
+        "group_id": "group-a77532f92e6bf57d35aa",
+        "stratum": "36UYA_Spring_time-dependent",
+        "split": "validation",
+        "annotation_date": "2019-03-28",
+        "pre_date": "2019-03-13",
+        "post_date": "2019-04-12",
+        "interval_days": 30,
+        "grid": {
+          "crs": "EPSG:32636",
+          "transform": [
+            10.0,
+            0.0,
+            725820.0,
+            0.0,
+            -10.0,
+            5511140.0
+          ],
+          "width": 64,
+          "height": 64,
+          "bounds": [
+            725820.0,
+            5510500.0,
+            726460.0,
+            5511140.0
+          ]
+        },
+        "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+        "qa_status": "excluded_by_automatic_quality_screen",
+        "endpoint_crop_unusable_pixels": [
+          544,
+          0
+        ],
+        "endpoint_target_unusable_pixels": [
+          13,
+          0
+        ],
+        "footprint_isolated": true,
+        "later_usable_scene_ids": [
+          "S2A_MSIL1C_20190417T083601_N0207_R064_T36UYA_20190417T101351",
+          "S2B_MSIL1C_20190422T083609_N0207_R064_T36UYA_20190422T122243",
+          "S2A_MSIL1C_20190427T083601_N0207_R064_T36UYA_20190427T100851"
+        ],
+        "published_qa_file": "Datasets/PixelQA/v1/batches/00053/masks/pair-99a1c88ad2ee25bc8231.tif",
+        "published_qa_sha256": "3f893ef317147ac3b8083733a8ddd1fc93b13d6d575304082d1b6a899c537de2",
+        "anchor_pixels": 170,
+        "anchor_interior_pixels": 73,
+        "temporal_union_pixels": 180,
+        "target_pixels": 170,
+        "temporal_clipped_pixels": 0,
+        "positive_interior_pixels": 73,
+        "interior_unusable_pixels": 3,
+        "target_mask_sha256": "4f4466235c12a3153fdff666cd0c87f41fa1de62d8250bcd86020e8fac603762",
+        "positive_interior_sha256": "e5fa4fa3f63bd81c5dae7e06c1353d6611e461c956af2de0919c2d41e896d7b3",
+        "training_approved": false,
+        "evaluation_approved": false,
+        "eligibility_reasons": [
+          "not_automatic_quality_pass",
+          "endpoint_crop_qa_flags",
+          "endpoint_target_qa_flags",
+          "actual_interior_qa_flags"
+        ],
+        "eligible_for_fresh_review_shortlist": false
+      }
+    ],
+    "group-ef94cffb16622f217e6d": [
+      {
+        "event_id": "event-817385ac6f2e57d66996",
+        "pair_id": "pair-21bb6f74457c8d1631a5",
+        "group_id": "group-ef94cffb16622f217e6d",
+        "stratum": "36UXA_time-dependent",
+        "split": "validation",
+        "annotation_date": "2018-08-05",
+        "pre_date": "2018-07-31",
+        "post_date": "2018-08-10",
+        "interval_days": 10,
+        "grid": {
+          "crs": "EPSG:32636",
+          "transform": [
+            10.0,
+            0.0,
+            632060.0,
+            0.0,
+            -10.0,
+            5588440.0
+          ],
+          "width": 64,
+          "height": 64,
+          "bounds": [
+            632060.0,
+            5587800.0,
+            632700.0,
+            5588440.0
+          ]
+        },
+        "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+        "qa_status": "excluded_by_automatic_quality_screen",
+        "endpoint_crop_unusable_pixels": [
+          624,
+          0
+        ],
+        "endpoint_target_unusable_pixels": [
+          78,
+          0
+        ],
+        "footprint_isolated": true,
+        "later_usable_scene_ids": [
+          "S2B_MSIL1C_20180815T084009_N0206_R064_T36UXA_20180815T123155",
+          "S2A_MSIL1C_20180820T083601_N0206_R064_T36UXA_20180820T105651",
+          "S2B_MSIL1C_20180825T083549_N0206_R064_T36UXA_20180825T124942",
+          "S2A_MSIL1C_20180830T083601_N0206_R064_T36UXA_20180830T105527",
+          "S2B_MSIL1C_20180904T083549_N0206_R064_T36UXA_20180904T123955",
+          "S2A_MSIL1C_20180919T083621_N0206_R064_T36UXA_20180919T105540"
+        ],
+        "published_qa_file": "Datasets/PixelQA/v1/batches/00054/masks/pair-21bb6f74457c8d1631a5.tif",
+        "published_qa_sha256": "3dcb588a86d68455702c6c2f76395810b278390ed9bf626282f89488899da80e",
+        "anchor_pixels": 239,
+        "anchor_interior_pixels": 129,
+        "temporal_union_pixels": 246,
+        "target_pixels": 239,
+        "temporal_clipped_pixels": 0,
+        "positive_interior_pixels": 129,
+        "interior_unusable_pixels": 30,
+        "target_mask_sha256": "b610f66a22ae761608cd4321dbee0870349e4291fd385d4129be0df4f47e3339",
+        "positive_interior_sha256": "5defb97e176f848f594d24b2fb9b1e4f85f2e0e4272964bd7ddbe0dfbcc7f81b",
+        "training_approved": false,
+        "evaluation_approved": false,
+        "eligibility_reasons": [
+          "not_automatic_quality_pass",
+          "endpoint_crop_qa_flags",
+          "endpoint_target_qa_flags",
+          "actual_interior_qa_flags"
+        ],
+        "eligible_for_fresh_review_shortlist": false
+      },
+      {
+        "event_id": "event-817385ac6f2e57d66996",
+        "pair_id": "pair-bd3972fed9b4a7e0bb51",
+        "group_id": "group-ef94cffb16622f217e6d",
+        "stratum": "36UXA_time-dependent",
+        "split": "validation",
+        "annotation_date": "2018-08-05",
+        "pre_date": "2018-07-26",
+        "post_date": "2018-08-10",
+        "interval_days": 15,
+        "grid": {
+          "crs": "EPSG:32636",
+          "transform": [
+            10.0,
+            0.0,
+            632060.0,
+            0.0,
+            -10.0,
+            5588440.0
+          ],
+          "width": 64,
+          "height": 64,
+          "bounds": [
+            632060.0,
+            5587800.0,
+            632700.0,
+            5588440.0
+          ]
+        },
+        "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+        "qa_status": "excluded_by_automatic_quality_screen",
+        "endpoint_crop_unusable_pixels": [
+          4096,
+          0
+        ],
+        "endpoint_target_unusable_pixels": [
+          246,
+          0
+        ],
+        "footprint_isolated": true,
+        "later_usable_scene_ids": [
+          "S2B_MSIL1C_20180815T084009_N0206_R064_T36UXA_20180815T123155",
+          "S2A_MSIL1C_20180820T083601_N0206_R064_T36UXA_20180820T105651",
+          "S2B_MSIL1C_20180825T083549_N0206_R064_T36UXA_20180825T124942",
+          "S2A_MSIL1C_20180830T083601_N0206_R064_T36UXA_20180830T105527",
+          "S2B_MSIL1C_20180904T083549_N0206_R064_T36UXA_20180904T123955",
+          "S2A_MSIL1C_20180919T083621_N0206_R064_T36UXA_20180919T105540"
+        ],
+        "published_qa_file": "Datasets/PixelQA/v1/batches/00054/masks/pair-bd3972fed9b4a7e0bb51.tif",
+        "published_qa_sha256": "fef7389385223505e8de06276038c35c3f716cf2641de0a6729c4417f93ede48",
+        "anchor_pixels": 239,
+        "anchor_interior_pixels": 129,
+        "temporal_union_pixels": 246,
+        "target_pixels": 239,
+        "temporal_clipped_pixels": 0,
+        "positive_interior_pixels": 129,
+        "interior_unusable_pixels": 129,
+        "target_mask_sha256": "b610f66a22ae761608cd4321dbee0870349e4291fd385d4129be0df4f47e3339",
+        "positive_interior_sha256": "5defb97e176f848f594d24b2fb9b1e4f85f2e0e4272964bd7ddbe0dfbcc7f81b",
+        "training_approved": false,
+        "evaluation_approved": false,
+        "eligibility_reasons": [
+          "not_automatic_quality_pass",
+          "endpoint_crop_qa_flags",
+          "endpoint_target_qa_flags",
+          "actual_interior_qa_flags"
+        ],
+        "eligible_for_fresh_review_shortlist": false
+      },
+      {
+        "event_id": "event-817385ac6f2e57d66996",
+        "pair_id": "pair-060e1d3a15cfcad5d26a",
+        "group_id": "group-ef94cffb16622f217e6d",
+        "stratum": "36UXA_time-dependent",
+        "split": "validation",
+        "annotation_date": "2018-08-05",
+        "pre_date": "2018-07-31",
+        "post_date": "2018-08-20",
+        "interval_days": 20,
+        "grid": {
+          "crs": "EPSG:32636",
+          "transform": [
+            10.0,
+            0.0,
+            632060.0,
+            0.0,
+            -10.0,
+            5588440.0
+          ],
+          "width": 64,
+          "height": 64,
+          "bounds": [
+            632060.0,
+            5587800.0,
+            632700.0,
+            5588440.0
+          ]
+        },
+        "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+        "qa_status": "excluded_by_automatic_quality_screen",
+        "endpoint_crop_unusable_pixels": [
+          624,
+          0
+        ],
+        "endpoint_target_unusable_pixels": [
+          91,
+          0
+        ],
+        "footprint_isolated": true,
+        "later_usable_scene_ids": [
+          "S2B_MSIL1C_20180825T083549_N0206_R064_T36UXA_20180825T124942",
+          "S2A_MSIL1C_20180830T083601_N0206_R064_T36UXA_20180830T105527",
+          "S2B_MSIL1C_20180904T083549_N0206_R064_T36UXA_20180904T123955",
+          "S2A_MSIL1C_20180919T083621_N0206_R064_T36UXA_20180919T105540"
+        ],
+        "published_qa_file": "Datasets/PixelQA/v1/batches/00054/masks/pair-060e1d3a15cfcad5d26a.tif",
+        "published_qa_sha256": "793ebcfee51d859dd0d3e1fdf22e1447921fb2aa8e0ca5d0259a8c0730d67662",
+        "anchor_pixels": 239,
+        "anchor_interior_pixels": 129,
+        "temporal_union_pixels": 259,
+        "target_pixels": 239,
+        "temporal_clipped_pixels": 0,
+        "positive_interior_pixels": 129,
+        "interior_unusable_pixels": 30,
+        "target_mask_sha256": "b610f66a22ae761608cd4321dbee0870349e4291fd385d4129be0df4f47e3339",
+        "positive_interior_sha256": "5defb97e176f848f594d24b2fb9b1e4f85f2e0e4272964bd7ddbe0dfbcc7f81b",
+        "training_approved": false,
+        "evaluation_approved": false,
+        "eligibility_reasons": [
+          "not_automatic_quality_pass",
+          "endpoint_crop_qa_flags",
+          "endpoint_target_qa_flags",
+          "actual_interior_qa_flags"
+        ],
+        "eligible_for_fresh_review_shortlist": false
+      },
+      {
+        "event_id": "event-817385ac6f2e57d66996",
+        "pair_id": "pair-7a6187105b58ecc19d6b",
+        "group_id": "group-ef94cffb16622f217e6d",
+        "stratum": "36UXA_time-dependent",
+        "split": "validation",
+        "annotation_date": "2018-08-05",
+        "pre_date": "2018-07-26",
+        "post_date": "2018-08-20",
+        "interval_days": 25,
+        "grid": {
+          "crs": "EPSG:32636",
+          "transform": [
+            10.0,
+            0.0,
+            632060.0,
+            0.0,
+            -10.0,
+            5588440.0
+          ],
+          "width": 64,
+          "height": 64,
+          "bounds": [
+            632060.0,
+            5587800.0,
+            632700.0,
+            5588440.0
+          ]
+        },
+        "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+        "qa_status": "excluded_by_automatic_quality_screen",
+        "endpoint_crop_unusable_pixels": [
+          4096,
+          0
+        ],
+        "endpoint_target_unusable_pixels": [
+          259,
+          0
+        ],
+        "footprint_isolated": true,
+        "later_usable_scene_ids": [
+          "S2B_MSIL1C_20180825T083549_N0206_R064_T36UXA_20180825T124942",
+          "S2A_MSIL1C_20180830T083601_N0206_R064_T36UXA_20180830T105527",
+          "S2B_MSIL1C_20180904T083549_N0206_R064_T36UXA_20180904T123955",
+          "S2A_MSIL1C_20180919T083621_N0206_R064_T36UXA_20180919T105540"
+        ],
+        "published_qa_file": "Datasets/PixelQA/v1/batches/00054/masks/pair-7a6187105b58ecc19d6b.tif",
+        "published_qa_sha256": "cfdf9dd4dab5310d390d815a879ea072a203ec2bd5b906b758301abd04baafee",
+        "anchor_pixels": 239,
+        "anchor_interior_pixels": 129,
+        "temporal_union_pixels": 259,
+        "target_pixels": 239,
+        "temporal_clipped_pixels": 0,
+        "positive_interior_pixels": 129,
+        "interior_unusable_pixels": 129,
+        "target_mask_sha256": "b610f66a22ae761608cd4321dbee0870349e4291fd385d4129be0df4f47e3339",
+        "positive_interior_sha256": "5defb97e176f848f594d24b2fb9b1e4f85f2e0e4272964bd7ddbe0dfbcc7f81b",
+        "training_approved": false,
+        "evaluation_approved": false,
+        "eligibility_reasons": [
+          "not_automatic_quality_pass",
+          "endpoint_crop_qa_flags",
+          "endpoint_target_qa_flags",
+          "actual_interior_qa_flags"
+        ],
+        "eligible_for_fresh_review_shortlist": false
+      },
+      {
+        "event_id": "event-817385ac6f2e57d66996",
+        "pair_id": "pair-05bb7e3830d48eccb26d",
+        "group_id": "group-ef94cffb16622f217e6d",
+        "stratum": "36UXA_time-dependent",
+        "split": "validation",
+        "annotation_date": "2018-08-05",
+        "pre_date": "2018-07-31",
+        "post_date": "2018-08-25",
+        "interval_days": 25,
+        "grid": {
+          "crs": "EPSG:32636",
+          "transform": [
+            10.0,
+            0.0,
+            632060.0,
+            0.0,
+            -10.0,
+            5588440.0
+          ],
+          "width": 64,
+          "height": 64,
+          "bounds": [
+            632060.0,
+            5587800.0,
+            632700.0,
+            5588440.0
+          ]
+        },
+        "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+        "qa_status": "excluded_by_automatic_quality_screen",
+        "endpoint_crop_unusable_pixels": [
+          624,
+          0
+        ],
+        "endpoint_target_unusable_pixels": [
+          91,
+          0
+        ],
+        "footprint_isolated": true,
+        "later_usable_scene_ids": [
+          "S2A_MSIL1C_20180830T083601_N0206_R064_T36UXA_20180830T105527",
+          "S2B_MSIL1C_20180904T083549_N0206_R064_T36UXA_20180904T123955",
+          "S2A_MSIL1C_20180919T083621_N0206_R064_T36UXA_20180919T105540"
+        ],
+        "published_qa_file": "Datasets/PixelQA/v1/batches/00054/masks/pair-05bb7e3830d48eccb26d.tif",
+        "published_qa_sha256": "793ebcfee51d859dd0d3e1fdf22e1447921fb2aa8e0ca5d0259a8c0730d67662",
+        "anchor_pixels": 239,
+        "anchor_interior_pixels": 129,
+        "temporal_union_pixels": 259,
+        "target_pixels": 239,
+        "temporal_clipped_pixels": 0,
+        "positive_interior_pixels": 129,
+        "interior_unusable_pixels": 30,
+        "target_mask_sha256": "b610f66a22ae761608cd4321dbee0870349e4291fd385d4129be0df4f47e3339",
+        "positive_interior_sha256": "5defb97e176f848f594d24b2fb9b1e4f85f2e0e4272964bd7ddbe0dfbcc7f81b",
+        "training_approved": false,
+        "evaluation_approved": false,
+        "eligibility_reasons": [
+          "not_automatic_quality_pass",
+          "endpoint_crop_qa_flags",
+          "endpoint_target_qa_flags",
+          "actual_interior_qa_flags"
+        ],
+        "eligible_for_fresh_review_shortlist": false
+      },
+      {
+        "event_id": "event-817385ac6f2e57d66996",
+        "pair_id": "pair-51be0aa1c7eea3626737",
+        "group_id": "group-ef94cffb16622f217e6d",
+        "stratum": "36UXA_time-dependent",
+        "split": "validation",
+        "annotation_date": "2018-08-05",
+        "pre_date": "2018-07-26",
+        "post_date": "2018-08-25",
+        "interval_days": 30,
+        "grid": {
+          "crs": "EPSG:32636",
+          "transform": [
+            10.0,
+            0.0,
+            632060.0,
+            0.0,
+            -10.0,
+            5588440.0
+          ],
+          "width": 64,
+          "height": 64,
+          "bounds": [
+            632060.0,
+            5587800.0,
+            632700.0,
+            5588440.0
+          ]
+        },
+        "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+        "qa_status": "excluded_by_automatic_quality_screen",
+        "endpoint_crop_unusable_pixels": [
+          4096,
+          0
+        ],
+        "endpoint_target_unusable_pixels": [
+          259,
+          0
+        ],
+        "footprint_isolated": true,
+        "later_usable_scene_ids": [
+          "S2A_MSIL1C_20180830T083601_N0206_R064_T36UXA_20180830T105527",
+          "S2B_MSIL1C_20180904T083549_N0206_R064_T36UXA_20180904T123955",
+          "S2A_MSIL1C_20180919T083621_N0206_R064_T36UXA_20180919T105540"
+        ],
+        "published_qa_file": "Datasets/PixelQA/v1/batches/00054/masks/pair-51be0aa1c7eea3626737.tif",
+        "published_qa_sha256": "cfdf9dd4dab5310d390d815a879ea072a203ec2bd5b906b758301abd04baafee",
+        "anchor_pixels": 239,
+        "anchor_interior_pixels": 129,
+        "temporal_union_pixels": 259,
+        "target_pixels": 239,
+        "temporal_clipped_pixels": 0,
+        "positive_interior_pixels": 129,
+        "interior_unusable_pixels": 129,
+        "target_mask_sha256": "b610f66a22ae761608cd4321dbee0870349e4291fd385d4129be0df4f47e3339",
+        "positive_interior_sha256": "5defb97e176f848f594d24b2fb9b1e4f85f2e0e4272964bd7ddbe0dfbcc7f81b",
+        "training_approved": false,
+        "evaluation_approved": false,
+        "eligibility_reasons": [
+          "not_automatic_quality_pass",
+          "endpoint_crop_qa_flags",
+          "endpoint_target_qa_flags",
+          "actual_interior_qa_flags"
+        ],
+        "eligible_for_fresh_review_shortlist": false
+      },
+      {
+        "event_id": "event-817385ac6f2e57d66996",
+        "pair_id": "pair-388b10d8a3ea86b9988e",
+        "group_id": "group-ef94cffb16622f217e6d",
+        "stratum": "36UXA_time-dependent",
+        "split": "validation",
+        "annotation_date": "2018-08-05",
+        "pre_date": "2018-07-31",
+        "post_date": "2018-08-30",
+        "interval_days": 30,
+        "grid": {
+          "crs": "EPSG:32636",
+          "transform": [
+            10.0,
+            0.0,
+            632060.0,
+            0.0,
+            -10.0,
+            5588440.0
+          ],
+          "width": 64,
+          "height": 64,
+          "bounds": [
+            632060.0,
+            5587800.0,
+            632700.0,
+            5588440.0
+          ]
+        },
+        "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+        "qa_status": "excluded_by_automatic_quality_screen",
+        "endpoint_crop_unusable_pixels": [
+          624,
+          0
+        ],
+        "endpoint_target_unusable_pixels": [
+          91,
+          0
+        ],
+        "footprint_isolated": true,
+        "later_usable_scene_ids": [
+          "S2B_MSIL1C_20180904T083549_N0206_R064_T36UXA_20180904T123955",
+          "S2A_MSIL1C_20180919T083621_N0206_R064_T36UXA_20180919T105540"
+        ],
+        "published_qa_file": "Datasets/PixelQA/v1/batches/00054/masks/pair-388b10d8a3ea86b9988e.tif",
+        "published_qa_sha256": "793ebcfee51d859dd0d3e1fdf22e1447921fb2aa8e0ca5d0259a8c0730d67662",
+        "anchor_pixels": 239,
+        "anchor_interior_pixels": 129,
+        "temporal_union_pixels": 259,
+        "target_pixels": 239,
+        "temporal_clipped_pixels": 0,
+        "positive_interior_pixels": 129,
+        "interior_unusable_pixels": 30,
+        "target_mask_sha256": "b610f66a22ae761608cd4321dbee0870349e4291fd385d4129be0df4f47e3339",
+        "positive_interior_sha256": "5defb97e176f848f594d24b2fb9b1e4f85f2e0e4272964bd7ddbe0dfbcc7f81b",
+        "training_approved": false,
+        "evaluation_approved": false,
+        "eligibility_reasons": [
+          "not_automatic_quality_pass",
+          "endpoint_crop_qa_flags",
+          "endpoint_target_qa_flags",
+          "actual_interior_qa_flags"
+        ],
+        "eligible_for_fresh_review_shortlist": false
+      }
+    ],
+    "group-02bd5553d6c38aef4100": [
+      {
+        "event_id": "event-a04d970e7db3b282b437",
+        "pair_id": "pair-4da0c1fed3e02525a046",
+        "group_id": "group-02bd5553d6c38aef4100",
+        "stratum": "36UXA_time-dependent",
+        "split": "validation",
+        "annotation_date": "2018-07-31",
+        "pre_date": "2018-07-26",
+        "post_date": "2018-07-31",
+        "interval_days": 5,
+        "grid": {
+          "crs": "EPSG:32636",
+          "transform": [
+            10.0,
+            0.0,
+            630380.0,
+            0.0,
+            -10.0,
+            5584340.0
+          ],
+          "width": 64,
+          "height": 64,
+          "bounds": [
+            630380.0,
+            5583700.0,
+            631020.0,
+            5584340.0
+          ]
+        },
+        "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+        "qa_status": "excluded_by_automatic_quality_screen",
+        "endpoint_crop_unusable_pixels": [
+          4096,
+          0
+        ],
+        "endpoint_target_unusable_pixels": [
+          81,
+          0
+        ],
+        "footprint_isolated": true,
+        "later_usable_scene_ids": [
+          "S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757",
+          "S2A_MSIL1C_20180810T083601_N0206_R064_T36UXA_20180810T124435",
+          "S2B_MSIL1C_20180815T084009_N0206_R064_T36UXA_20180815T123155",
+          "S2A_MSIL1C_20180820T083601_N0206_R064_T36UXA_20180820T105651",
+          "S2B_MSIL1C_20180825T083549_N0206_R064_T36UXA_20180825T124942",
+          "S2A_MSIL1C_20180830T083601_N0206_R064_T36UXA_20180830T105527",
+          "S2B_MSIL1C_20180904T083549_N0206_R064_T36UXA_20180904T123955"
+        ],
+        "published_qa_file": "Datasets/PixelQA/v1/batches/00050/masks/pair-4da0c1fed3e02525a046.tif",
+        "published_qa_sha256": "b83fc03da3f108564171ffe07433abc6374061bc045303f5f538383b99ae0126",
+        "anchor_pixels": 63,
+        "anchor_interior_pixels": 16,
+        "temporal_union_pixels": 81,
+        "target_pixels": 63,
+        "temporal_clipped_pixels": 0,
+        "positive_interior_pixels": 16,
+        "interior_unusable_pixels": 16,
+        "target_mask_sha256": "d8974caaf9d2afb1c21cea5ed31815916f1a872ca9b45a67406182ac7a5ec33d",
+        "positive_interior_sha256": "e0b2b7d7840732fd31e5e58c4552cbe6cd3f3bfc3c6018af168c614b4d6183ab",
+        "training_approved": false,
+        "evaluation_approved": false,
+        "eligibility_reasons": [
+          "not_automatic_quality_pass",
+          "endpoint_crop_qa_flags",
+          "endpoint_target_qa_flags",
+          "actual_interior_qa_flags"
+        ],
+        "eligible_for_fresh_review_shortlist": false
+      },
+      {
+        "event_id": "event-a04d970e7db3b282b437",
+        "pair_id": "pair-9f4ae7ee18af8aaf7f6d",
+        "group_id": "group-02bd5553d6c38aef4100",
+        "stratum": "36UXA_time-dependent",
+        "split": "validation",
+        "annotation_date": "2018-07-31",
+        "pre_date": "2018-07-26",
+        "post_date": "2018-08-05",
+        "interval_days": 10,
+        "grid": {
+          "crs": "EPSG:32636",
+          "transform": [
+            10.0,
+            0.0,
+            630380.0,
+            0.0,
+            -10.0,
+            5584340.0
+          ],
+          "width": 64,
+          "height": 64,
+          "bounds": [
+            630380.0,
+            5583700.0,
+            631020.0,
+            5584340.0
+          ]
+        },
+        "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+        "qa_status": "excluded_by_automatic_quality_screen",
+        "endpoint_crop_unusable_pixels": [
+          4096,
+          0
+        ],
+        "endpoint_target_unusable_pixels": [
+          81,
+          0
+        ],
+        "footprint_isolated": true,
+        "later_usable_scene_ids": [
+          "S2A_MSIL1C_20180810T083601_N0206_R064_T36UXA_20180810T124435",
+          "S2B_MSIL1C_20180815T084009_N0206_R064_T36UXA_20180815T123155",
+          "S2A_MSIL1C_20180820T083601_N0206_R064_T36UXA_20180820T105651",
+          "S2B_MSIL1C_20180825T083549_N0206_R064_T36UXA_20180825T124942",
+          "S2A_MSIL1C_20180830T083601_N0206_R064_T36UXA_20180830T105527",
+          "S2B_MSIL1C_20180904T083549_N0206_R064_T36UXA_20180904T123955"
+        ],
+        "published_qa_file": "Datasets/PixelQA/v1/batches/00050/masks/pair-9f4ae7ee18af8aaf7f6d.tif",
+        "published_qa_sha256": "b83fc03da3f108564171ffe07433abc6374061bc045303f5f538383b99ae0126",
+        "anchor_pixels": 63,
+        "anchor_interior_pixels": 16,
+        "temporal_union_pixels": 81,
+        "target_pixels": 63,
+        "temporal_clipped_pixels": 0,
+        "positive_interior_pixels": 16,
+        "interior_unusable_pixels": 16,
+        "target_mask_sha256": "d8974caaf9d2afb1c21cea5ed31815916f1a872ca9b45a67406182ac7a5ec33d",
+        "positive_interior_sha256": "e0b2b7d7840732fd31e5e58c4552cbe6cd3f3bfc3c6018af168c614b4d6183ab",
+        "training_approved": false,
+        "evaluation_approved": false,
+        "eligibility_reasons": [
+          "not_automatic_quality_pass",
+          "endpoint_crop_qa_flags",
+          "endpoint_target_qa_flags",
+          "actual_interior_qa_flags"
+        ],
+        "eligible_for_fresh_review_shortlist": false
+      },
+      {
+        "event_id": "event-a04d970e7db3b282b437",
+        "pair_id": "pair-53c02d9d0dba80e38b72",
+        "group_id": "group-02bd5553d6c38aef4100",
+        "stratum": "36UXA_time-dependent",
+        "split": "validation",
+        "annotation_date": "2018-07-31",
+        "pre_date": "2018-07-26",
+        "post_date": "2018-08-10",
+        "interval_days": 15,
+        "grid": {
+          "crs": "EPSG:32636",
+          "transform": [
+            10.0,
+            0.0,
+            630380.0,
+            0.0,
+            -10.0,
+            5584340.0
+          ],
+          "width": 64,
+          "height": 64,
+          "bounds": [
+            630380.0,
+            5583700.0,
+            631020.0,
+            5584340.0
+          ]
+        },
+        "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+        "qa_status": "excluded_by_automatic_quality_screen",
+        "endpoint_crop_unusable_pixels": [
+          4096,
+          0
+        ],
+        "endpoint_target_unusable_pixels": [
+          81,
+          0
+        ],
+        "footprint_isolated": true,
+        "later_usable_scene_ids": [
+          "S2B_MSIL1C_20180815T084009_N0206_R064_T36UXA_20180815T123155",
+          "S2A_MSIL1C_20180820T083601_N0206_R064_T36UXA_20180820T105651",
+          "S2B_MSIL1C_20180825T083549_N0206_R064_T36UXA_20180825T124942",
+          "S2A_MSIL1C_20180830T083601_N0206_R064_T36UXA_20180830T105527",
+          "S2B_MSIL1C_20180904T083549_N0206_R064_T36UXA_20180904T123955"
+        ],
+        "published_qa_file": "Datasets/PixelQA/v1/batches/00050/masks/pair-53c02d9d0dba80e38b72.tif",
+        "published_qa_sha256": "b83fc03da3f108564171ffe07433abc6374061bc045303f5f538383b99ae0126",
+        "anchor_pixels": 63,
+        "anchor_interior_pixels": 16,
+        "temporal_union_pixels": 81,
+        "target_pixels": 63,
+        "temporal_clipped_pixels": 0,
+        "positive_interior_pixels": 16,
+        "interior_unusable_pixels": 16,
+        "target_mask_sha256": "d8974caaf9d2afb1c21cea5ed31815916f1a872ca9b45a67406182ac7a5ec33d",
+        "positive_interior_sha256": "e0b2b7d7840732fd31e5e58c4552cbe6cd3f3bfc3c6018af168c614b4d6183ab",
+        "training_approved": false,
+        "evaluation_approved": false,
+        "eligibility_reasons": [
+          "not_automatic_quality_pass",
+          "endpoint_crop_qa_flags",
+          "endpoint_target_qa_flags",
+          "actual_interior_qa_flags"
+        ],
+        "eligible_for_fresh_review_shortlist": false
+      },
+      {
+        "event_id": "event-a04d970e7db3b282b437",
+        "pair_id": "pair-3470aed09abde6bf361e",
+        "group_id": "group-02bd5553d6c38aef4100",
+        "stratum": "36UXA_time-dependent",
+        "split": "validation",
+        "annotation_date": "2018-07-31",
+        "pre_date": "2018-07-26",
+        "post_date": "2018-08-20",
+        "interval_days": 25,
+        "grid": {
+          "crs": "EPSG:32636",
+          "transform": [
+            10.0,
+            0.0,
+            630380.0,
+            0.0,
+            -10.0,
+            5584340.0
+          ],
+          "width": 64,
+          "height": 64,
+          "bounds": [
+            630380.0,
+            5583700.0,
+            631020.0,
+            5584340.0
+          ]
+        },
+        "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+        "qa_status": "excluded_by_automatic_quality_screen",
+        "endpoint_crop_unusable_pixels": [
+          4096,
+          0
+        ],
+        "endpoint_target_unusable_pixels": [
+          81,
+          0
+        ],
+        "footprint_isolated": true,
+        "later_usable_scene_ids": [
+          "S2B_MSIL1C_20180825T083549_N0206_R064_T36UXA_20180825T124942",
+          "S2A_MSIL1C_20180830T083601_N0206_R064_T36UXA_20180830T105527",
+          "S2B_MSIL1C_20180904T083549_N0206_R064_T36UXA_20180904T123955"
+        ],
+        "published_qa_file": "Datasets/PixelQA/v1/batches/00050/masks/pair-3470aed09abde6bf361e.tif",
+        "published_qa_sha256": "b83fc03da3f108564171ffe07433abc6374061bc045303f5f538383b99ae0126",
+        "anchor_pixels": 63,
+        "anchor_interior_pixels": 16,
+        "temporal_union_pixels": 81,
+        "target_pixels": 63,
+        "temporal_clipped_pixels": 0,
+        "positive_interior_pixels": 16,
+        "interior_unusable_pixels": 16,
+        "target_mask_sha256": "d8974caaf9d2afb1c21cea5ed31815916f1a872ca9b45a67406182ac7a5ec33d",
+        "positive_interior_sha256": "e0b2b7d7840732fd31e5e58c4552cbe6cd3f3bfc3c6018af168c614b4d6183ab",
+        "training_approved": false,
+        "evaluation_approved": false,
+        "eligibility_reasons": [
+          "not_automatic_quality_pass",
+          "endpoint_crop_qa_flags",
+          "endpoint_target_qa_flags",
+          "actual_interior_qa_flags"
+        ],
+        "eligible_for_fresh_review_shortlist": false
+      },
+      {
+        "event_id": "event-a04d970e7db3b282b437",
+        "pair_id": "pair-f7ae67033b43ce20e98e",
+        "group_id": "group-02bd5553d6c38aef4100",
+        "stratum": "36UXA_time-dependent",
+        "split": "validation",
+        "annotation_date": "2018-07-31",
+        "pre_date": "2018-07-26",
+        "post_date": "2018-08-25",
+        "interval_days": 30,
+        "grid": {
+          "crs": "EPSG:32636",
+          "transform": [
+            10.0,
+            0.0,
+            630380.0,
+            0.0,
+            -10.0,
+            5584340.0
+          ],
+          "width": 64,
+          "height": 64,
+          "bounds": [
+            630380.0,
+            5583700.0,
+            631020.0,
+            5584340.0
+          ]
+        },
+        "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+        "qa_status": "excluded_by_automatic_quality_screen",
+        "endpoint_crop_unusable_pixels": [
+          4096,
+          0
+        ],
+        "endpoint_target_unusable_pixels": [
+          81,
+          0
+        ],
+        "footprint_isolated": true,
+        "later_usable_scene_ids": [
+          "S2A_MSIL1C_20180830T083601_N0206_R064_T36UXA_20180830T105527",
+          "S2B_MSIL1C_20180904T083549_N0206_R064_T36UXA_20180904T123955"
+        ],
+        "published_qa_file": "Datasets/PixelQA/v1/batches/00050/masks/pair-f7ae67033b43ce20e98e.tif",
+        "published_qa_sha256": "b83fc03da3f108564171ffe07433abc6374061bc045303f5f538383b99ae0126",
+        "anchor_pixels": 63,
+        "anchor_interior_pixels": 16,
+        "temporal_union_pixels": 81,
+        "target_pixels": 63,
+        "temporal_clipped_pixels": 0,
+        "positive_interior_pixels": 16,
+        "interior_unusable_pixels": 16,
+        "target_mask_sha256": "d8974caaf9d2afb1c21cea5ed31815916f1a872ca9b45a67406182ac7a5ec33d",
+        "positive_interior_sha256": "e0b2b7d7840732fd31e5e58c4552cbe6cd3f3bfc3c6018af168c614b4d6183ab",
+        "training_approved": false,
+        "evaluation_approved": false,
+        "eligibility_reasons": [
+          "not_automatic_quality_pass",
+          "endpoint_crop_qa_flags",
+          "endpoint_target_qa_flags",
+          "actual_interior_qa_flags"
+        ],
+        "eligible_for_fresh_review_shortlist": false
+      }
+    ]
+  },
+  "supported_unscreened_original_rows": [
+    {
+      "event_id": "event-8b39e073a87184794fd6",
+      "pair_id": "pair-410ed8b544ca17090bdc",
+      "group_id": "group-ad1f9acc0d07fd0409f6",
+      "split": "validation",
+      "temporal_source_ids": [],
+      "annotation_date": "2018-09-19",
+      "pre_date": "2018-08-20",
+      "post_date": "2018-09-19",
+      "grid": {
+        "crs": "EPSG:32636",
+        "transform": [
+          10.0,
+          0.0,
+          658720.0,
+          0.0,
+          -10.0,
+          5521400.0
+        ],
+        "width": 64,
+        "height": 64,
+        "bounds": [
+          658720.0,
+          5520760.0,
+          659360.0,
+          5521400.0
+        ]
+      },
+      "original_status": "blocked_for_temporal_training",
+      "original_blocking_reasons": [
+        "baseline_only_provenance",
+        "unverified_temporal_label_in_crop"
+      ],
+      "anchor_pixels": 34,
+      "anchor_interior_pixels": 13,
+      "temporal_union_pixels": 42,
+      "target_pixels": 29,
+      "temporal_clipped_pixels": 5,
+      "positive_interior_pixels": 8,
+      "mask_sha256": {
+        "anchor": "18e6f8137f048c15f172915141bd0a204bdb7c9b42e280555ae5c1312f5dde85",
+        "raw_interior": "105654949076a9115f28bac8d9183c8dff0d163c1d7f1bbfa20718f36d1f3eb2",
+        "reference": "994f3c7eef97bf1f90d89d298a5b771bddcd64697862d328d9dcec7cf6112310",
+        "target": "17afeaa8c1c21ae7a7de77b3c6e7eb01c5337778b669a56b5603494455a4a273",
+        "interior": "90008e428416304197dc138b73a66ffa29076376a8ede6ac832cd55ddad65c26"
+      },
+      "footprint_isolated": true,
+      "endpoint_metadata_usable": true,
+      "later_usable_scene_ids": [],
+      "previously_inspected_group": false,
+      "metadata_geometry_reasons": [
+        "original:baseline_only_provenance",
+        "original:unverified_temporal_label_in_crop",
+        "original_pair_status_blocked",
+        "no_later_metadata_usable_observation"
+      ],
+      "passes_metadata_geometry_gates": false,
+      "quality_status": "unknown_no_published_qa",
+      "endpoint_unusable_pixels": null,
+      "interior_unusable_pixels": null,
+      "training_approved": false,
+      "evaluation_approved": false
+    },
+    {
+      "event_id": "event-8b39e073a87184794fd6",
+      "pair_id": "pair-5b3ffad5c85e3bbf6281",
+      "group_id": "group-ad1f9acc0d07fd0409f6",
+      "split": "validation",
+      "temporal_source_ids": [],
+      "annotation_date": "2018-09-19",
+      "pre_date": "2018-09-04",
+      "post_date": "2018-09-19",
+      "grid": {
+        "crs": "EPSG:32636",
+        "transform": [
+          10.0,
+          0.0,
+          658720.0,
+          0.0,
+          -10.0,
+          5521400.0
+        ],
+        "width": 64,
+        "height": 64,
+        "bounds": [
+          658720.0,
+          5520760.0,
+          659360.0,
+          5521400.0
+        ]
+      },
+      "original_status": "blocked_for_temporal_training",
+      "original_blocking_reasons": [
+        "baseline_only_provenance",
+        "unverified_temporal_label_in_crop"
+      ],
+      "anchor_pixels": 34,
+      "anchor_interior_pixels": 13,
+      "temporal_union_pixels": 30,
+      "target_pixels": 29,
+      "temporal_clipped_pixels": 5,
+      "positive_interior_pixels": 8,
+      "mask_sha256": {
+        "anchor": "18e6f8137f048c15f172915141bd0a204bdb7c9b42e280555ae5c1312f5dde85",
+        "raw_interior": "105654949076a9115f28bac8d9183c8dff0d163c1d7f1bbfa20718f36d1f3eb2",
+        "reference": "5e8ff546d12847ec952a783972262cef7895b0d016c9b28200de0c209c48a97a",
+        "target": "17afeaa8c1c21ae7a7de77b3c6e7eb01c5337778b669a56b5603494455a4a273",
+        "interior": "90008e428416304197dc138b73a66ffa29076376a8ede6ac832cd55ddad65c26"
+      },
+      "footprint_isolated": true,
+      "endpoint_metadata_usable": true,
+      "later_usable_scene_ids": [],
+      "previously_inspected_group": false,
+      "metadata_geometry_reasons": [
+        "original:baseline_only_provenance",
+        "original:unverified_temporal_label_in_crop",
+        "original_pair_status_blocked",
+        "no_later_metadata_usable_observation"
+      ],
+      "passes_metadata_geometry_gates": false,
+      "quality_status": "unknown_no_published_qa",
+      "endpoint_unusable_pixels": null,
+      "interior_unusable_pixels": null,
+      "training_approved": false,
+      "evaluation_approved": false
+    },
+    {
+      "event_id": "event-8b39e073a87184794fd6",
+      "pair_id": "pair-832d8780be84bb63ff71",
+      "group_id": "group-ad1f9acc0d07fd0409f6",
+      "split": "validation",
+      "temporal_source_ids": [],
+      "annotation_date": "2018-09-19",
+      "pre_date": "2018-08-25",
+      "post_date": "2018-09-19",
+      "grid": {
+        "crs": "EPSG:32636",
+        "transform": [
+          10.0,
+          0.0,
+          658720.0,
+          0.0,
+          -10.0,
+          5521400.0
+        ],
+        "width": 64,
+        "height": 64,
+        "bounds": [
+          658720.0,
+          5520760.0,
+          659360.0,
+          5521400.0
+        ]
+      },
+      "original_status": "blocked_for_temporal_training",
+      "original_blocking_reasons": [
+        "baseline_only_provenance",
+        "unverified_temporal_label_in_crop"
+      ],
+      "anchor_pixels": 34,
+      "anchor_interior_pixels": 13,
+      "temporal_union_pixels": 42,
+      "target_pixels": 29,
+      "temporal_clipped_pixels": 5,
+      "positive_interior_pixels": 8,
+      "mask_sha256": {
+        "anchor": "18e6f8137f048c15f172915141bd0a204bdb7c9b42e280555ae5c1312f5dde85",
+        "raw_interior": "105654949076a9115f28bac8d9183c8dff0d163c1d7f1bbfa20718f36d1f3eb2",
+        "reference": "994f3c7eef97bf1f90d89d298a5b771bddcd64697862d328d9dcec7cf6112310",
+        "target": "17afeaa8c1c21ae7a7de77b3c6e7eb01c5337778b669a56b5603494455a4a273",
+        "interior": "90008e428416304197dc138b73a66ffa29076376a8ede6ac832cd55ddad65c26"
+      },
+      "footprint_isolated": true,
+      "endpoint_metadata_usable": true,
+      "later_usable_scene_ids": [],
+      "previously_inspected_group": false,
+      "metadata_geometry_reasons": [
+        "original:baseline_only_provenance",
+        "original:unverified_temporal_label_in_crop",
+        "original_pair_status_blocked",
+        "no_later_metadata_usable_observation"
+      ],
+      "passes_metadata_geometry_gates": false,
+      "quality_status": "unknown_no_published_qa",
+      "endpoint_unusable_pixels": null,
+      "interior_unusable_pixels": null,
+      "training_approved": false,
+      "evaluation_approved": false
+    },
+    {
+      "event_id": "event-8b39e073a87184794fd6",
+      "pair_id": "pair-88fc194aa91e43efbe05",
+      "group_id": "group-ad1f9acc0d07fd0409f6",
+      "split": "validation",
+      "temporal_source_ids": [],
+      "annotation_date": "2018-09-19",
+      "pre_date": "2018-08-30",
+      "post_date": "2018-09-19",
+      "grid": {
+        "crs": "EPSG:32636",
+        "transform": [
+          10.0,
+          0.0,
+          658720.0,
+          0.0,
+          -10.0,
+          5521400.0
+        ],
+        "width": 64,
+        "height": 64,
+        "bounds": [
+          658720.0,
+          5520760.0,
+          659360.0,
+          5521400.0
+        ]
+      },
+      "original_status": "blocked_for_temporal_training",
+      "original_blocking_reasons": [
+        "baseline_only_provenance",
+        "unverified_temporal_label_in_crop"
+      ],
+      "anchor_pixels": 34,
+      "anchor_interior_pixels": 13,
+      "temporal_union_pixels": 30,
+      "target_pixels": 29,
+      "temporal_clipped_pixels": 5,
+      "positive_interior_pixels": 8,
+      "mask_sha256": {
+        "anchor": "18e6f8137f048c15f172915141bd0a204bdb7c9b42e280555ae5c1312f5dde85",
+        "raw_interior": "105654949076a9115f28bac8d9183c8dff0d163c1d7f1bbfa20718f36d1f3eb2",
+        "reference": "5e8ff546d12847ec952a783972262cef7895b0d016c9b28200de0c209c48a97a",
+        "target": "17afeaa8c1c21ae7a7de77b3c6e7eb01c5337778b669a56b5603494455a4a273",
+        "interior": "90008e428416304197dc138b73a66ffa29076376a8ede6ac832cd55ddad65c26"
+      },
+      "footprint_isolated": true,
+      "endpoint_metadata_usable": true,
+      "later_usable_scene_ids": [],
+      "previously_inspected_group": false,
+      "metadata_geometry_reasons": [
+        "original:baseline_only_provenance",
+        "original:unverified_temporal_label_in_crop",
+        "original_pair_status_blocked",
+        "no_later_metadata_usable_observation"
+      ],
+      "passes_metadata_geometry_gates": false,
+      "quality_status": "unknown_no_published_qa",
+      "endpoint_unusable_pixels": null,
+      "interior_unusable_pixels": null,
+      "training_approved": false,
+      "evaluation_approved": false
+    }
+  ],
+  "selection_rule": "Keep the four fresh groups with an isolated supported target, complete original post crop and target clear, retained pre QA failure and later metadata opportunity. Rank each group by exact annotation-date post, earlier post, shorter interval, then pair ID. Select the unique two-group window sharing tile, orbit and baseline.",
+  "roster": [
+    {
+      "pair_id": "pair-4da0c1fed3e02525a046",
+      "group_id": "group-02bd5553d6c38aef4100",
+      "grid": {
+        "crs": "EPSG:32636",
+        "transform": [
+          10.0,
+          0.0,
+          630380.0,
+          0.0,
+          -10.0,
+          5584340.0
+        ],
+        "width": 64,
+        "height": 64,
+        "bounds": [
+          630380.0,
+          5583700.0,
+          631020.0,
+          5584340.0
+        ]
+      },
+      "pre_date": "2018-07-26",
+      "post_date": "2018-07-31",
+      "pre_scene_id": "S2B_MSIL1C_20180726T084009_N0206_R064_T36UXA_20180726T104227",
+      "post_scene_id": "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233",
+      "post_path": "Datasets/Sentinel-2/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233/S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233.SAFE",
+      "event_id": "event-a04d970e7db3b282b437",
+      "annotation_date": "2018-07-31",
+      "parent_pair_sha256": "dfb97cf7813f9bd42770739ca88116d602bb24b366b2a000ca1066edcc9130e2",
+      "qa_context_bounds": [
+        629180.0,
+        5582500.0,
+        632220.0,
+        5585540.0
+      ],
+      "post_metadata_usable": true,
+      "verified_post_metadata": {
+        "scene_id": "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233",
+        "acquisition_date": "2018-07-31",
+        "crs": "EPSG:32636",
+        "tile": "36UXA",
+        "baseline_code": "N0206",
+        "grid_10m": {
+          "ulx": 600000.0,
+          "uly": 5600040.0,
+          "xdim": 10.0,
+          "ydim": -10.0,
+          "width": 10980,
+          "height": 10980,
+          "transform": [
+            10.0,
+            0.0,
+            600000.0,
+            0.0,
+            -10.0,
+            5600040.0
+          ],
+          "bounds": [
+            600000.0,
+            5490240.0,
+            709800.0,
+            5600040.0
+          ]
+        },
+        "metadata_sha256": {
+          "product_metadata": "0b946297f0e4dc08c7a26b4f586b86a1632352fa0637f4906145fef156af24c6",
+          "tile_metadata": "52be3445c8970f8dfa2429c93dff846db1032a2826e8623665ebfaf3011b0be2",
+          "cloud_qa": "da8be0bade26d17a5c8c7b32e4ecb1cdeae97e2c7a528dd740993101f2d25254"
+        },
+        "metadata_uid": "e58c069f44f575e265a54fc28e89354c7f502a938245b071e8998506bb92aed7"
+      },
+      "pre_search_start_inclusive": "2018-07-01T00:00:00Z",
+      "pre_search_end_exclusive": "2018-07-26T00:00:00Z",
+      "evidence": {
+        "event_id": "event-a04d970e7db3b282b437",
+        "pair_id": "pair-4da0c1fed3e02525a046",
+        "group_id": "group-02bd5553d6c38aef4100",
+        "stratum": "36UXA_time-dependent",
+        "split": "validation",
+        "annotation_date": "2018-07-31",
+        "pre_date": "2018-07-26",
+        "post_date": "2018-07-31",
+        "interval_days": 5,
+        "grid": {
+          "crs": "EPSG:32636",
+          "transform": [
+            10.0,
+            0.0,
+            630380.0,
+            0.0,
+            -10.0,
+            5584340.0
+          ],
+          "width": 64,
+          "height": 64,
+          "bounds": [
+            630380.0,
+            5583700.0,
+            631020.0,
+            5584340.0
+          ]
+        },
+        "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+        "qa_status": "excluded_by_automatic_quality_screen",
+        "endpoint_crop_unusable_pixels": [
+          4096,
+          0
+        ],
+        "endpoint_target_unusable_pixels": [
+          81,
+          0
+        ],
+        "footprint_isolated": true,
+        "later_usable_scene_ids": [
+          "S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757",
+          "S2A_MSIL1C_20180810T083601_N0206_R064_T36UXA_20180810T124435",
+          "S2B_MSIL1C_20180815T084009_N0206_R064_T36UXA_20180815T123155",
+          "S2A_MSIL1C_20180820T083601_N0206_R064_T36UXA_20180820T105651",
+          "S2B_MSIL1C_20180825T083549_N0206_R064_T36UXA_20180825T124942",
+          "S2A_MSIL1C_20180830T083601_N0206_R064_T36UXA_20180830T105527",
+          "S2B_MSIL1C_20180904T083549_N0206_R064_T36UXA_20180904T123955"
+        ],
+        "published_qa_file": "Datasets/PixelQA/v1/batches/00050/masks/pair-4da0c1fed3e02525a046.tif",
+        "published_qa_sha256": "b83fc03da3f108564171ffe07433abc6374061bc045303f5f538383b99ae0126",
+        "anchor_pixels": 63,
+        "anchor_interior_pixels": 16,
+        "temporal_union_pixels": 81,
+        "target_pixels": 63,
+        "temporal_clipped_pixels": 0,
+        "positive_interior_pixels": 16,
+        "interior_unusable_pixels": 16,
+        "target_mask_sha256": "d8974caaf9d2afb1c21cea5ed31815916f1a872ca9b45a67406182ac7a5ec33d",
+        "positive_interior_sha256": "e0b2b7d7840732fd31e5e58c4552cbe6cd3f3bfc3c6018af168c614b4d6183ab",
+        "training_approved": false,
+        "evaluation_approved": false,
+        "eligibility_reasons": [
+          "not_automatic_quality_pass",
+          "endpoint_crop_qa_flags",
+          "endpoint_target_qa_flags",
+          "actual_interior_qa_flags"
+        ],
+        "eligible_for_fresh_review_shortlist": false
+      }
+    },
+    {
+      "pair_id": "pair-21bb6f74457c8d1631a5",
+      "group_id": "group-ef94cffb16622f217e6d",
+      "grid": {
+        "crs": "EPSG:32636",
+        "transform": [
+          10.0,
+          0.0,
+          632060.0,
+          0.0,
+          -10.0,
+          5588440.0
+        ],
+        "width": 64,
+        "height": 64,
+        "bounds": [
+          632060.0,
+          5587800.0,
+          632700.0,
+          5588440.0
+        ]
+      },
+      "pre_date": "2018-07-31",
+      "post_date": "2018-08-10",
+      "pre_scene_id": "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233",
+      "post_scene_id": "S2A_MSIL1C_20180810T083601_N0206_R064_T36UXA_20180810T124435",
+      "post_path": "Datasets/Sentinel-2/S2A_MSIL1C_20180810T083601_N0206_R064_T36UXA_20180810T124435/S2A_MSIL1C_20180810T083601_N0206_R064_T36UXA_20180810T124435.SAFE",
+      "event_id": "event-817385ac6f2e57d66996",
+      "annotation_date": "2018-08-05",
+      "parent_pair_sha256": "7f9a765f82fe68e7a799279277d87e41478894e745382e6b5f85314e2ced8598",
+      "qa_context_bounds": [
+        630860.0,
+        5586600.0,
+        633900.0,
+        5589640.0
+      ],
+      "post_metadata_usable": true,
+      "verified_post_metadata": {
+        "scene_id": "S2A_MSIL1C_20180810T083601_N0206_R064_T36UXA_20180810T124435",
+        "acquisition_date": "2018-08-10",
+        "crs": "EPSG:32636",
+        "tile": "36UXA",
+        "baseline_code": "N0206",
+        "grid_10m": {
+          "ulx": 600000.0,
+          "uly": 5600040.0,
+          "xdim": 10.0,
+          "ydim": -10.0,
+          "width": 10980,
+          "height": 10980,
+          "transform": [
+            10.0,
+            0.0,
+            600000.0,
+            0.0,
+            -10.0,
+            5600040.0
+          ],
+          "bounds": [
+            600000.0,
+            5490240.0,
+            709800.0,
+            5600040.0
+          ]
+        },
+        "metadata_sha256": {
+          "product_metadata": "38ca7cfe5bad36bee294fafed269de349ec9284e4337029e9a765a49219b4688",
+          "tile_metadata": "04ad9f687360a0c4f9b3eb135fbf03bad8ec3767c8ab92f414bbb7fc6198bb23",
+          "cloud_qa": "15624541c8fd11f88b5e3282080928248d71ee523567a302c24620dae0d37d8f"
+        },
+        "metadata_uid": "a1bf5033d0b6f9edf5f0367fda3d2ba1c88e0495834f7dcd6de7a81011f396c2"
+      },
+      "pre_search_start_inclusive": "2018-07-11T00:00:00Z",
+      "pre_search_end_exclusive": "2018-07-31T00:00:00Z",
+      "evidence": {
+        "event_id": "event-817385ac6f2e57d66996",
+        "pair_id": "pair-21bb6f74457c8d1631a5",
+        "group_id": "group-ef94cffb16622f217e6d",
+        "stratum": "36UXA_time-dependent",
+        "split": "validation",
+        "annotation_date": "2018-08-05",
+        "pre_date": "2018-07-31",
+        "post_date": "2018-08-10",
+        "interval_days": 10,
+        "grid": {
+          "crs": "EPSG:32636",
+          "transform": [
+            10.0,
+            0.0,
+            632060.0,
+            0.0,
+            -10.0,
+            5588440.0
+          ],
+          "width": 64,
+          "height": 64,
+          "bounds": [
+            632060.0,
+            5587800.0,
+            632700.0,
+            5588440.0
+          ]
+        },
+        "qa_policy_id": "fe2472ec030f466bebbb9dc2cb033ed6175de489bcf022f650081dd8e9347560",
+        "qa_status": "excluded_by_automatic_quality_screen",
+        "endpoint_crop_unusable_pixels": [
+          624,
+          0
+        ],
+        "endpoint_target_unusable_pixels": [
+          78,
+          0
+        ],
+        "footprint_isolated": true,
+        "later_usable_scene_ids": [
+          "S2B_MSIL1C_20180815T084009_N0206_R064_T36UXA_20180815T123155",
+          "S2A_MSIL1C_20180820T083601_N0206_R064_T36UXA_20180820T105651",
+          "S2B_MSIL1C_20180825T083549_N0206_R064_T36UXA_20180825T124942",
+          "S2A_MSIL1C_20180830T083601_N0206_R064_T36UXA_20180830T105527",
+          "S2B_MSIL1C_20180904T083549_N0206_R064_T36UXA_20180904T123955",
+          "S2A_MSIL1C_20180919T083621_N0206_R064_T36UXA_20180919T105540"
+        ],
+        "published_qa_file": "Datasets/PixelQA/v1/batches/00054/masks/pair-21bb6f74457c8d1631a5.tif",
+        "published_qa_sha256": "3dcb588a86d68455702c6c2f76395810b278390ed9bf626282f89488899da80e",
+        "anchor_pixels": 239,
+        "anchor_interior_pixels": 129,
+        "temporal_union_pixels": 246,
+        "target_pixels": 239,
+        "temporal_clipped_pixels": 0,
+        "positive_interior_pixels": 129,
+        "interior_unusable_pixels": 30,
+        "target_mask_sha256": "b610f66a22ae761608cd4321dbee0870349e4291fd385d4129be0df4f47e3339",
+        "positive_interior_sha256": "5defb97e176f848f594d24b2fb9b1e4f85f2e0e4272964bd7ddbe0dfbcc7f81b",
+        "training_approved": false,
+        "evaluation_approved": false,
+        "eligibility_reasons": [
+          "not_automatic_quality_pass",
+          "endpoint_crop_qa_flags",
+          "endpoint_target_qa_flags",
+          "actual_interior_qa_flags"
+        ],
+        "eligible_for_fresh_review_shortlist": false
+      }
+    }
+  ],
+  "catalogue_requirements": {
+    "crs": "EPSG:32636",
+    "target_tile": "36UXA",
+    "relative_orbit": "R064",
+    "nominal_followup_baseline": "N0206",
+    "start_inclusive": "2018-07-11T00:00:00Z",
+    "end_exclusive": "2018-07-26T00:00:00Z",
+    "required_post_dates": [
+      "2018-07-31",
+      "2018-08-10"
+    ],
+    "core_union_bounds": [
+      630380.0,
+      5583700.0,
+      632700.0,
+      5588440.0
+    ],
+    "qa_context_union_bounds": [
+      629180.0,
+      5582500.0,
+      633900.0,
+      5589640.0
+    ]
+  },
+  "labels_approved": 0,
+  "validation_eligible": false,
+  "protocol_sha256": "893857666912be4e94ec4eeeb0d1dd29556462e632a3a90fa58914618867f095"
+}
