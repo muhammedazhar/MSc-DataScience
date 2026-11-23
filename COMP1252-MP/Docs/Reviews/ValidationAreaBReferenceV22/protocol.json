@@ -116,6 +116,45 @@
     "area_b_integrity": {
       "path": "Docs/Reviews/ValidationAreaBInputsV21/checks/final_integrity.json",
       "sha256": "9c06bf1cf9fe7b100a9f8f3afcc12e5b4ee930c53bce8e6638f4708c760e8a43"
+    },
+    "reference_roster": {
+      "path": "Docs/Reviews/ValidationAreaBReferenceV22/reference_roster.json",
+      "sha256": "6fc7c7c2378d943bba80711329d5d64891f6e8adb789250ea5ef920691f24ec0"
+    },
+    "metadata_landsat-fixed-scenes": {
+      "path": "Docs/Reviews/ValidationAreaBReferenceV22/metadata/landsat-fixed-scenes.json",
+      "sha256": "ebfba946e1bcc3cf5104c72db3ca103b3aef42a57324d729fec3dcff3d435a6c"
+    },
+    "metadata_landsat-service": {
+      "path": "Docs/Reviews/ValidationAreaBReferenceV22/metadata/landsat-service.json",
+      "sha256": "d33f016b469308ac9787091028cde48fde91bdf34cb6e0a7d5a9f99ba63e2356"
+    },
+    "metadata_open-aerial-2018": {
+      "path": "Docs/Reviews/ValidationAreaBReferenceV22/metadata/open-aerial-2018.json",
+      "sha256": "30eea2709e1cbb1ac59920b7c0891b34967c121a019daa973afb54148405e956"
+    },
+    "metadata_queries": {
+      "path": "Docs/Reviews/ValidationAreaBReferenceV22/metadata/queries.json",
+      "sha256": "01b43f51b58c7a54f160547b3e3a2cd527cae70f7d6e8a9424533485ad6b5bb5"
+    },
+    "metadata_wayback-2018_r09": {
+      "path": "Docs/Reviews/ValidationAreaBReferenceV22/metadata/wayback-2018_r09.json",
+      "sha256": "143ced98061139047624fa373a8a5381c09cefec67b674268ef6f77a56a66c90"
+    },
+    "metadata_wayback-2018_r10": {
+      "path": "Docs/Reviews/ValidationAreaBReferenceV22/metadata/wayback-2018_r10.json",
+      "sha256": "a01f528829740272b628f6d645df631e77d323196cc853af64a29ae95405a615"
+    },
+    "metadata_wayback-2018_r11": {
+      "path": "Docs/Reviews/ValidationAreaBReferenceV22/metadata/wayback-2018_r11.json",
+      "sha256": "ff050e2dc3f110eff9a87fc010a359a97c851f8f34f04c5438c968abfafd47cc"
+    },
+    "metadata_wayback-2022_r07": {
+      "path": "Docs/Reviews/ValidationAreaBReferenceV22/metadata/wayback-2022_r07.json",
+      "sha256": "33e9f89acb9a9890fdc20ae44ea1057cb5fc06de4690174791db7ae11cdc9e77"
     }
+  },
+  "implementation_sha256": {
+    "Solutions/prepare_area_b_reference.py": "589202168d711581980cbd62fac4a5ede8f6576a0ae8cf20b442b15c46dc3649"
   }
 }

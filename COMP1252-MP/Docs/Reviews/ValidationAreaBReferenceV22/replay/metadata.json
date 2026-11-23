@@ -1,0 +1,52 @@
+{
+  "execution_status": "completed",
+  "protocol_sha256": "bd739bee6a60868170fdea345407718e472a406c64bcf552bfa536e5dcb6881a",
+  "artifact_sha256": {
+    "reference_map.html": "7cdb48e8cdfeca0a718e5e06f7efdf91c63c4ff8eb4073d259c74b2713a6719a"
+  },
+  "pair_id": "derived-remaining-e61a8a8e623222b69efb",
+  "review_layer_ids": [
+    "wayback-2010",
+    "wayback-2020",
+    "landsat-2018-07-05",
+    "landsat-2018-07-30",
+    "landsat-2018-08-06",
+    "landsat-2018-08-15"
+  ],
+  "remote_images": [
+    20,
+    20,
+    1,
+    1,
+    1,
+    1
+  ],
+  "display_zoom": 17,
+  "display_size": 872,
+  "display_top_left_world_pixel": [
+    20068095,
+    11295568
+  ],
+  "image_pixel_reads": 0,
+  "network_requests": 0,
+  "model_executions": 0,
+  "labels_approved": 0,
+  "resources": {
+    "logical_cpu_count": 11,
+    "machine_ram_gib": 18.0,
+    "worker_peak_rss_mib_sampled": 131.5,
+    "worker_high_water_rss_mib": 146.42,
+    "minimum_available_gib_sampled": 4.67,
+    "elapsed_seconds": 0.76,
+    "worker_limit_mib": 512,
+    "minimum_available_gib_limit": 1.5,
+    "runtime_limit_seconds": 300,
+    "workers": 1,
+    "native_thread_limit": 1,
+    "nice_increment": 10,
+    "gdal_cache_mib": 32,
+    "warp_memory_mib": 0,
+    "gpu_used": false,
+    "monitor_interval_seconds": 0.25
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "schema_version": 22,
+  "layers": [
+    {
+      "id": "wayback-2010",
+      "kind": "wayback",
+      "date": "2010-06-14",
+      "release": 11334,
+      "label": "2010-06-14 WV02 | historical context",
+      "publication_date": "2018-06-27",
+      "native_resolution_m": 0.5,
+      "declared_horizontal_accuracy_m": 10.2,
+      "metadata_file": "metadata/wayback-2018_r09.json",
+      "provider": "DigitalGlobe",
+      "source": "https://livingatlas.arcgis.com/wayback/#active=11334&mapCenter=35.31196,50.57449,17"
+    },
+    {
+      "id": "wayback-2020",
+      "kind": "wayback",
+      "date": "2020-08-31",
+      "release": 44710,
+      "label": "2020-08-31 WV03 | historical context",
+      "publication_date": "2022-06-08",
+      "native_resolution_m": 0.5,
+      "declared_horizontal_accuracy_m": 5,
+      "metadata_file": "metadata/wayback-2022_r07.json",
+      "provider": "Maxar",
+      "source": "https://livingatlas.arcgis.com/wayback/#active=44710&mapCenter=35.31196,50.57449,17"
+    },
+    {
+      "id": "landsat-2018-07-05",
+      "kind": "landsat",
+      "label": "2018-07-05 Landsat 8 | coarse context",
+      "date": "2018-07-05",
+      "image_url": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer/exportImage?bbox=3930390.800095197%2C6545847.345886175%2C3931432.25460558%2C6546888.80039656&bboxSR=3857&imageSR=3857&size=43%2C43&format=png24&mosaicRule=%7B%22mosaicMethod%22%3A+%22esriMosaicLockRaster%22%2C+%22lockRasterIds%22%3A+%5B1682382%5D%7D&renderingRule=%7B%22rasterFunction%22%3A+%22Pansharpened+Natural+Color%22%7D&f=image",
+      "objectid": 1682382,
+      "scene_id": "LC08_L1TP_179025_20180705_20200831_02_T1",
+      "pan_resolution_m": 15,
+      "color_resolution_m": 30,
+      "metadata_scene_cloud_percent": 0.3265,
+      "source": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer",
+      "bounds_3857": [
+        3930390.800095197,
+        6545847.345886175,
+        3931432.25460558,
+        6546888.80039656
+      ]
+    },
+    {
+      "id": "landsat-2018-07-30",
+      "kind": "landsat",
+      "label": "2018-07-30 Landsat 8 | coarse context",
+      "date": "2018-07-30",
+      "image_url": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer/exportImage?bbox=3930390.800095197%2C6545847.345886175%2C3931432.25460558%2C6546888.80039656&bboxSR=3857&imageSR=3857&size=43%2C43&format=png24&mosaicRule=%7B%22mosaicMethod%22%3A+%22esriMosaicLockRaster%22%2C+%22lockRasterIds%22%3A+%5B1662906%5D%7D&renderingRule=%7B%22rasterFunction%22%3A+%22Pansharpened+Natural+Color%22%7D&f=image",
+      "objectid": 1662906,
+      "scene_id": "LC08_L1TP_178025_20180730_20200831_02_T1",
+      "pan_resolution_m": 15,
+      "color_resolution_m": 30,
+      "metadata_scene_cloud_percent": 0.0297,
+      "source": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer",
+      "bounds_3857": [
+        3930390.800095197,
+        6545847.345886175,
+        3931432.25460558,
+        6546888.80039656
+      ]
+    },
+    {
+      "id": "landsat-2018-08-06",
+      "kind": "landsat",
+      "label": "2018-08-06 Landsat 8 | coarse context",
+      "date": "2018-08-06",
+      "image_url": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer/exportImage?bbox=3930390.800095197%2C6545847.345886175%2C3931432.25460558%2C6546888.80039656&bboxSR=3857&imageSR=3857&size=43%2C43&format=png24&mosaicRule=%7B%22mosaicMethod%22%3A+%22esriMosaicLockRaster%22%2C+%22lockRasterIds%22%3A+%5B1682384%5D%7D&renderingRule=%7B%22rasterFunction%22%3A+%22Pansharpened+Natural+Color%22%7D&f=image",
+      "objectid": 1682384,
+      "scene_id": "LC08_L1TP_179025_20180806_20200831_02_T1",
+      "pan_resolution_m": 15,
+      "color_resolution_m": 30,
+      "metadata_scene_cloud_percent": 0.0646,
+      "source": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer",
+      "bounds_3857": [
+        3930390.800095197,
+        6545847.345886175,
+        3931432.25460558,
+        6546888.80039656
+      ]
+    },
+    {
+      "id": "landsat-2018-08-15",
+      "kind": "landsat",
+      "label": "2018-08-15 Landsat 8 | coarse context",
+      "date": "2018-08-15",
+      "image_url": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer/exportImage?bbox=3930390.800095197%2C6545847.345886175%2C3931432.25460558%2C6546888.80039656&bboxSR=3857&imageSR=3857&size=43%2C43&format=png24&mosaicRule=%7B%22mosaicMethod%22%3A+%22esriMosaicLockRaster%22%2C+%22lockRasterIds%22%3A+%5B1662907%5D%7D&renderingRule=%7B%22rasterFunction%22%3A+%22Pansharpened+Natural+Color%22%7D&f=image",
+      "objectid": 1662907,
+      "scene_id": "LC08_L1TP_178025_20180815_20200831_02_T1",
+      "pan_resolution_m": 15,
+      "color_resolution_m": 30,
+      "metadata_scene_cloud_percent": 0.1271,
+      "source": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer",
+      "bounds_3857": [
+        3930390.800095197,
+        6545847.345886175,
+        3931432.25460558,
+        6546888.80039656
+      ]
+    }
+  ],
+  "basis": "Date, identity and coverage metadata only. Listed layers retain all dispositions after viewing.",
+  "google_earth": {
+    "method": "Historical imagery in public Google Earth web at crop center",
+    "observed_adjacent_dates": [
+      "2010-06-14",
+      "2018-11-06"
+    ],
+    "attribution": "Maxar Technologies; older\u201306/11/2018 as shown in the November view",
+    "scope": "Map mosaic for later visual context. Capture and alignment at each complete control are unresolved."
+  }
+}
