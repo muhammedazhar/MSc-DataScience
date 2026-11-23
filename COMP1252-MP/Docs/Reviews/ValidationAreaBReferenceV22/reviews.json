@@ -1,0 +1,135 @@
+{
+  "schema_version": 22,
+  "status": "independent_reference_review_completed",
+  "review_date": "2026-11-23",
+  "protocol_sha256": "bd739bee6a60868170fdea345407718e472a406c64bcf552bfa536e5dcb6881a",
+  "reference_map_sha256": "7cdb48e8cdfeca0a718e5e06f7efdf91c63c4ff8eb4073d259c74b2713a6719a",
+  "v21_reviews_sha256": "2c3a9629c7d6404a245cdd923206ecde8de75972ddbe0b633e236dda461797c9",
+  "pair_id": "derived-remaining-e61a8a8e623222b69efb",
+  "group_id": "group-96c27871459d03c08bcc",
+  "dates_and_roi_support": {
+    "earlier_forest_reference": "2018-07-06",
+    "visible_expansion_by": "2018-07-31",
+    "later_persistence": "2018-08-10"
+  },
+  "manual_exposed_group_ids": [
+    "group-0d4c6841d965abf62969",
+    "group-45f0c39e787ca8622918",
+    "group-594ecdcf428fc819f662",
+    "group-646504159ec8034a1565",
+    "group-6bef49e5258e9f579324",
+    "group-96c27871459d03c08bcc",
+    "group-a177948c08d55f377549"
+  ],
+  "new_manual_exposed_group_ids": [],
+  "fixed_views": [
+    {
+      "id": "wayback-2010",
+      "date": "2010-06-14",
+      "loaded_images": 20,
+      "view_order": [
+        "plain",
+        "fixed outlines"
+      ],
+      "disposition": "historical_forest_context",
+      "observation": "Crowns occupy the lower target and three fixed controls in the 2010 view."
+    },
+    {
+      "id": "wayback-2020",
+      "date": "2020-08-31",
+      "loaded_images": 20,
+      "view_order": [
+        "plain",
+        "fixed outlines"
+      ],
+      "disposition": "later_clearing_context",
+      "observation": "Open ground with rows overlaps the lower target. Controls 1 and 2 show canopy. Open ground occupies a substantial western part of control 3."
+    },
+    {
+      "id": "landsat-2018-07-05",
+      "date": "2018-07-05",
+      "loaded_images": 1,
+      "view_order": [
+        "plain",
+        "fixed outlines"
+      ],
+      "disposition": "visually_obscured",
+      "observation": "Diffuse bright cloud-like cover obscures the lower target and much of controls 2 and 3."
+    },
+    {
+      "id": "landsat-2018-07-30",
+      "date": "2018-07-30",
+      "loaded_images": 1,
+      "view_order": [
+        "plain",
+        "fixed outlines"
+      ],
+      "disposition": "independent_coarse_opening_visible",
+      "observation": "Broad pale lower shape and narrow upper connector align with the target. Pixel edges are coarse."
+    },
+    {
+      "id": "landsat-2018-08-06",
+      "date": "2018-08-06",
+      "loaded_images": 1,
+      "view_order": [
+        "plain",
+        "fixed outlines"
+      ],
+      "disposition": "indeterminate",
+      "observation": "Diffuse brightness weakens local contrast. Exact target and whole-square cover are indeterminate."
+    },
+    {
+      "id": "landsat-2018-08-15",
+      "date": "2018-08-15",
+      "loaded_images": 1,
+      "view_order": [
+        "plain",
+        "fixed outlines"
+      ],
+      "disposition": "independent_coarse_persistence",
+      "observation": "A similar broad bright shape remains visible, with diffuse background brightness and coarse edges."
+    }
+  ],
+  "google_earth": {
+    "selection_date": "2018-11-06",
+    "previous_selection_date": "2010-06-14",
+    "attribution": "Maxar Technologies",
+    "scope": "The later opening is visible. A visible seam and older-to-November mixed date range prevent treating the whole crop as a November capture."
+  },
+  "controls": [
+    {
+      "control_id": "control-1",
+      "roi_sha256": "735e65f2e0de93ca25623d1aa9c389c9ecd35882d501381aa8eadcb7db600bbd",
+      "disposition": "strongest_provisional_forest_control",
+      "observation": "Canopy is visible across the complete square in the two WorldView views. Whole-square stability through July and August 2018 remains unresolved.",
+      "label_approved": false
+    },
+    {
+      "control_id": "control-2",
+      "roi_sha256": "c412353ba2b4eb8f73e95f76ec4b7ffb053f1776265b90a70d616251d60161f5",
+      "disposition": "provisional_forest_control",
+      "observation": "Canopy is visible on both high-resolution dates, with the lower-left edge nearer the 2020 opening. Whole-square stability in 2018 remains unresolved.",
+      "label_approved": false
+    },
+    {
+      "control_id": "control-3",
+      "roi_sha256": "9c12fbcc2464840269b274049b3bce6ff37fbfa540820b4fd0d7b12b89411ad7",
+      "disposition": "long_term_stability_not_supported",
+      "observation": "Canopy in 2010 and a substantial opening in the western part by 2020. The date of the clearing within this gap remains unresolved.",
+      "label_approved": false
+    }
+  ],
+  "sentinel2_local_expansion_interval": {
+    "after": "2018-07-06",
+    "by": "2018-07-31",
+    "scope": "New pale block across the lower part of the anchor on the matched RGB views",
+    "status": "provisional_optical_observation"
+  },
+  "sentinel2_persistence_observation": "2018-08-10",
+  "independent_coarse_opening_observation": "2018-07-30",
+  "earlier_forest_on_or_near_6_july": "unresolved_at_exact_support",
+  "whole_square_stable_forest_in_2018": "unresolved",
+  "first_visible_deforestation_interval": null,
+  "labels_approved": 0,
+  "validation_eligible": false
+}

@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "protocol_sha256": "bd739bee6a60868170fdea345407718e472a406c64bcf552bfa536e5dcb6881a",
+  "live_reference_map_sha256": "7cdb48e8cdfeca0a718e5e06f7efdf91c63c4ff8eb4073d259c74b2713a6719a",
+  "reviews_sha256": "c820a67e8bcfa58c59cde9457e525da169b6bdc3c08c13c5f407364e082ea359",
+  "review_report_sha256": "56b12ed608554d39066cc513e187e889d7a6547fae0019a24fea5a3d106d09c2",
+  "guarded_metadata_sha256": {
+    "preparation": "ec2d02b904e738c5c9cbf785750ee3a71025cd9e813bb6b4e949e45db526bc7d",
+    "replay": "8d1b7dbc476f1403f1ba0f10feb89836913ad475756e783cb3e4f9bbb0b73a12",
+    "checks/tests": "d3de64237019684ad4e9da1d2e94a6bf7affcdebc135a9e0547985bc2bb3f67c"
+  },
+  "pinned_source_files_checked": 14,
+  "fixed_reference_layers_viewed": 6,
+  "controls_retained": 3,
+  "live_commercial_images_archived": 0,
+  "tests_passed": 391,
+  "active_reference_workers": 0,
+  "labels_approved": 0
+}

@@ -5,7 +5,7 @@ status, then the latest handoff before edits. Commit every completed verified
 logical change with the handoff updated and push to the SAME branch. This entry
 point works for Codex, Gemini Antigravity or another agent without chat history.
 
-Current V22 Area B independent reference review:
+Completed V22 Area B independent reference review:
 **`Docs/Handoffs/2026-11-20-area-b-independent-reference.md`**.
 Completed V21 Area B inputs and control review:
 **`Docs/Handoffs/2026-11-20-area-b-inputs.md`**.
@@ -135,6 +135,13 @@ squares pass context checks at both July endpoints and 10 August. All look
 stable and forest-like, with class uncertainty at 10 m. The complete visual
 dispositions, source-bound tensor and replay are archived. Class approval
 and a label lock remain pending.
+
+V22 independently corroborated historical tree cover in Area B's lower target
+and a broad opening in Landsat on 30 July 2018. The 5 July Landsat view is
+obscured. WorldView references from 2010 and 2020 strengthen controls 1 and 2
+and show an opening across part of control 3 by 2020. The finer reference dates
+leave the exact 2018 class checks unresolved. The original optical bracket,
+persistence observation and existing exposed-group record are preserved.
 
 Use one nice +10 CPU worker, native/Torch threads 1, no GPU, unchanged
 `validate_sample.run_guarded`, 512 MiB RSS and 1.5 GiB available-system-memory
