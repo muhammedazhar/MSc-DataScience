@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "protocol_sha256": "893857666912be4e94ec4eeeb0d1dd29556462e632a3a90fa58914618867f095",
+  "plan_sha256": "8673ef4e28de946d0f78f6fe98513177a0fe8631caff98bd08a37e209c2abb5f",
+  "inventory_metadata_sha256": "996f43c4148a4e977f791623b7642637f8d3b215dc3b17fbe64454050a4257fa",
+  "inventory_artifact_sha256": {
+    "inventory.json": "3320227258dbf2457137e84b79c189a9d2df6f267776b5691e36a1bd62491580",
+    "raw/page-01.json": "441ef713e978245bb8c6427dec1e72512d772d7a04788aceae638958b41b8038",
+    "raw/page-02.json": "aa2d366c5a3d5264dc2944ec0c7088f6d5ab740f4c5d59b296a50ccee67dc53c",
+    "raw/request-01.json": "2c28704cb55bdf093c5857610a1438e3dbb747b89a97b2bc0880e2f8c93fc7a4",
+    "raw/request-02.json": "4ab218a404dc4224d6e60f68d36acef7dd1ed6b488457fe8d153e48222c0e9e7",
+    "report.md": "9fb05d695126d07e77e455c9094fde87c3dd85a57a46c4455378d953dfa9ceed"
+  },
+  "raw_pages_replayed": 2,
+  "items_replayed": 7,
+  "nominal_roster_items": 2,
+  "network_requests": 0
+}

@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "protocol_sha256": "893857666912be4e94ec4eeeb0d1dd29556462e632a3a90fa58914618867f095",
+  "plan_sha256": "8673ef4e28de946d0f78f6fe98513177a0fe8631caff98bd08a37e209c2abb5f",
+  "inventory_sha256": "3320227258dbf2457137e84b79c189a9d2df6f267776b5691e36a1bd62491580",
+  "replay_sha256": "76258bc3f175c4429cfd1a4d820325da9cd5c6f2c743cfe423ebfb60aa3cf29e",
+  "area_b_reference_sha256": {
+    "additional_checks.json": "738969d4ac4d5bff82b0b567263544d3767717b3dd476cd7c1651412df034f1f",
+    "all-dates-count-14.json": "26740ea14fc8ecfabfa2201df44dabec5b4131b9c5a113acaa8d4dc11723c782",
+    "all-dates-count-4.json": "d086d346fbb21cce7fd033131dbc339e86fd2416ddc29c726c6708825c13f382",
+    "all-dates-count-9.json": "a801e3865bd6b93fa0f4735ca65ca39157d0351f446ccecbb37ba7501a2e8faf",
+    "eocat-ccm-odata.json": "2c400091d744458bd0deea59021efafbdfc70bcbbef614a13c45e1cbd5a8e6ee",
+    "eocat-ccm-summary.json": "7e83fcee730a32db1b0ea4b4112547f784f96c7b6ae797534132bbaf83930d32",
+    "land-info-review.json": "eec806f8bf0d11743636d3fe1c9111038bcd171aa7c7fc0a3e671d97b2315987",
+    "layer-14.geojson": "5c389083e7dcd785c3d685329fa703d8b676340c14265fa2c63f7f930705dc80",
+    "layer-4.geojson": "5c389083e7dcd785c3d685329fa703d8b676340c14265fa2c63f7f930705dc80",
+    "layer-9.geojson": "5c389083e7dcd785c3d685329fa703d8b676340c14265fa2c63f7f930705dc80",
+    "pleiades-20180610-layer-7.geojson": "5c389083e7dcd785c3d685329fa703d8b676340c14265fa2c63f7f930705dc80",
+    "pleiades-20180610-layer-8.geojson": "77a6b2b9c74991b44fb35dbe8da861652a256e6288f338f6d2846fc7e4d72295",
+    "pleiades-20180610-layer-9.geojson": "77a6b2b9c74991b44fb35dbe8da861652a256e6288f338f6d2846fc7e4d72295",
+    "pleiades-20190505-layer-7.geojson": "5c389083e7dcd785c3d685329fa703d8b676340c14265fa2c63f7f930705dc80",
+    "pleiades-20190505-layer-8.geojson": "17a24440e2868c1c4cf72ddb9a29d2e3c0633b54928656940be8c85218f27582",
+    "pleiades-20190505-layer-9.geojson": "17a24440e2868c1c4cf72ddb9a29d2e3c0633b54928656940be8c85218f27582",
+    "summary.json": "697b8dd8160a2d83601f19a157a365e57043ff074ef154019590f987706c6a2f"
+  },
+  "fresh_geographic_groups": 2,
+  "nominated_source_dates": [
+    "2018-07-21",
+    "2018-07-16"
+  ],
+  "labels_approved": 0,
+  "source_assets_downloaded": 0,
+  "satellite_pixel_reads": 0
+}

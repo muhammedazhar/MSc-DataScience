@@ -1,0 +1,131 @@
+{
+  "notes": "All-date positive control counts and nearest Pl\u00e9iades before- and after-window leads. None are July/August 2018 and ALBUM metadata carries no image access.",
+  "queries": [
+    {
+      "url": "https://portal.intelligence-airbusds.com/arcgis/rest/services/OneAtlas/OADConstellationArchive/MapServer/4/query?geometry=663380%2C5604740%2C664020%2C5605380&geometryType=esriGeometryEnvelope&inSR=32636&spatialRel=esriSpatialRelIntersects&where=1%3D1&returnCountOnly=true&f=json",
+      "http_status": 200,
+      "response_file": "all-dates-count-4.json",
+      "sha256": "d086d346fbb21cce7fd033131dbc339e86fd2416ddc29c726c6708825c13f382",
+      "bytes": 12,
+      "layer_id": 4,
+      "count": 14,
+      "items": []
+    },
+    {
+      "url": "https://portal.intelligence-airbusds.com/arcgis/rest/services/OneAtlas/OADConstellationArchive/MapServer/9/query?geometry=663380%2C5604740%2C664020%2C5605380&geometryType=esriGeometryEnvelope&inSR=32636&spatialRel=esriSpatialRelIntersects&where=1%3D1&returnCountOnly=true&f=json",
+      "http_status": 200,
+      "response_file": "all-dates-count-9.json",
+      "sha256": "a801e3865bd6b93fa0f4735ca65ca39157d0351f446ccecbb37ba7501a2e8faf",
+      "bytes": 12,
+      "layer_id": 9,
+      "count": 13,
+      "items": []
+    },
+    {
+      "url": "https://portal.intelligence-airbusds.com/arcgis/rest/services/OneAtlas/OADConstellationArchive/MapServer/14/query?geometry=663380%2C5604740%2C664020%2C5605380&geometryType=esriGeometryEnvelope&inSR=32636&spatialRel=esriSpatialRelIntersects&where=1%3D1&returnCountOnly=true&f=json",
+      "http_status": 200,
+      "response_file": "all-dates-count-14.json",
+      "sha256": "26740ea14fc8ecfabfa2201df44dabec5b4131b9c5a113acaa8d4dc11723c782",
+      "bytes": 13,
+      "layer_id": 14,
+      "count": 130,
+      "items": []
+    },
+    {
+      "url": "https://portal.intelligence-airbusds.com/arcgis/rest/services/OneAtlas/OADConstellationArchive/MapServer/7/query?geometry=663380%2C5604740%2C664020%2C5605380&geometryType=esriGeometryEnvelope&inSR=32636&spatialRel=esriSpatialRelIntersects&where=parentidentifier+%3D+%27DS_PHR1B_201806100844585_FR1_PX_E035N50_0617_03147%27&outSR=32636&returnGeometry=true&outFields=%2A&resultRecordCount=10&f=geojson",
+      "http_status": 200,
+      "response_file": "pleiades-20180610-layer-7.geojson",
+      "sha256": "5c389083e7dcd785c3d685329fa703d8b676340c14265fa2c63f7f930705dc80",
+      "bytes": 99,
+      "layer_id": 7,
+      "count": 0,
+      "items": []
+    },
+    {
+      "url": "https://portal.intelligence-airbusds.com/arcgis/rest/services/OneAtlas/OADConstellationArchive/MapServer/7/query?geometry=663380%2C5604740%2C664020%2C5605380&geometryType=esriGeometryEnvelope&inSR=32636&spatialRel=esriSpatialRelIntersects&where=parentidentifier+%3D+%27DS_PHR1B_201905050905000_FR1_PX_E035N50_0615_01728%27&outSR=32636&returnGeometry=true&outFields=%2A&resultRecordCount=10&f=geojson",
+      "http_status": 200,
+      "response_file": "pleiades-20190505-layer-7.geojson",
+      "sha256": "5c389083e7dcd785c3d685329fa703d8b676340c14265fa2c63f7f930705dc80",
+      "bytes": 99,
+      "layer_id": 7,
+      "count": 0,
+      "items": []
+    },
+    {
+      "url": "https://portal.intelligence-airbusds.com/arcgis/rest/services/OneAtlas/OADConstellationArchive/MapServer/8/query?geometry=663380%2C5604740%2C664020%2C5605380&geometryType=esriGeometryEnvelope&inSR=32636&spatialRel=esriSpatialRelIntersects&where=parentidentifier+%3D+%27DS_PHR1B_201806100844585_FR1_PX_E035N50_0617_03147%27&outSR=32636&returnGeometry=true&outFields=%2A&resultRecordCount=10&f=geojson",
+      "http_status": 200,
+      "response_file": "pleiades-20180610-layer-8.geojson",
+      "sha256": "77a6b2b9c74991b44fb35dbe8da861652a256e6288f338f6d2846fc7e4d72295",
+      "bytes": 789,
+      "layer_id": 8,
+      "count": 1,
+      "items": [
+        {
+          "parentidentifier": "DS_PHR1B_201806100844585_FR1_PX_E035N50_0617_03147",
+          "acquisition_time_utc": "2018-06-10T11:58:59+00:00",
+          "scene_cloud_percent": 14.8,
+          "status": "ALBUM",
+          "full_crop_covered": true,
+          "aoI_coverage_fraction": 1.0
+        }
+      ]
+    },
+    {
+      "url": "https://portal.intelligence-airbusds.com/arcgis/rest/services/OneAtlas/OADConstellationArchive/MapServer/8/query?geometry=663380%2C5604740%2C664020%2C5605380&geometryType=esriGeometryEnvelope&inSR=32636&spatialRel=esriSpatialRelIntersects&where=parentidentifier+%3D+%27DS_PHR1B_201905050905000_FR1_PX_E035N50_0615_01728%27&outSR=32636&returnGeometry=true&outFields=%2A&resultRecordCount=10&f=geojson",
+      "http_status": 200,
+      "response_file": "pleiades-20190505-layer-8.geojson",
+      "sha256": "17a24440e2868c1c4cf72ddb9a29d2e3c0633b54928656940be8c85218f27582",
+      "bytes": 1292,
+      "layer_id": 8,
+      "count": 1,
+      "items": [
+        {
+          "parentidentifier": "DS_PHR1B_201905050905000_FR1_PX_E035N50_0615_01728",
+          "acquisition_time_utc": "2019-05-05T09:05:00+00:00",
+          "scene_cloud_percent": 4.5,
+          "status": "ALBUM",
+          "full_crop_covered": true,
+          "aoI_coverage_fraction": 1.0
+        }
+      ]
+    },
+    {
+      "url": "https://portal.intelligence-airbusds.com/arcgis/rest/services/OneAtlas/OADConstellationArchive/MapServer/9/query?geometry=663380%2C5604740%2C664020%2C5605380&geometryType=esriGeometryEnvelope&inSR=32636&spatialRel=esriSpatialRelIntersects&where=parentidentifier+%3D+%27DS_PHR1B_201806100844585_FR1_PX_E035N50_0617_03147%27&outSR=32636&returnGeometry=true&outFields=%2A&resultRecordCount=10&f=geojson",
+      "http_status": 200,
+      "response_file": "pleiades-20180610-layer-9.geojson",
+      "sha256": "77a6b2b9c74991b44fb35dbe8da861652a256e6288f338f6d2846fc7e4d72295",
+      "bytes": 789,
+      "layer_id": 9,
+      "count": 1,
+      "items": [
+        {
+          "parentidentifier": "DS_PHR1B_201806100844585_FR1_PX_E035N50_0617_03147",
+          "acquisition_time_utc": "2018-06-10T11:58:59+00:00",
+          "scene_cloud_percent": 14.8,
+          "status": "ALBUM",
+          "full_crop_covered": true,
+          "aoI_coverage_fraction": 1.0
+        }
+      ]
+    },
+    {
+      "url": "https://portal.intelligence-airbusds.com/arcgis/rest/services/OneAtlas/OADConstellationArchive/MapServer/9/query?geometry=663380%2C5604740%2C664020%2C5605380&geometryType=esriGeometryEnvelope&inSR=32636&spatialRel=esriSpatialRelIntersects&where=parentidentifier+%3D+%27DS_PHR1B_201905050905000_FR1_PX_E035N50_0615_01728%27&outSR=32636&returnGeometry=true&outFields=%2A&resultRecordCount=10&f=geojson",
+      "http_status": 200,
+      "response_file": "pleiades-20190505-layer-9.geojson",
+      "sha256": "17a24440e2868c1c4cf72ddb9a29d2e3c0633b54928656940be8c85218f27582",
+      "bytes": 1292,
+      "layer_id": 9,
+      "count": 1,
+      "items": [
+        {
+          "parentidentifier": "DS_PHR1B_201905050905000_FR1_PX_E035N50_0615_01728",
+          "acquisition_time_utc": "2019-05-05T09:05:00+00:00",
+          "scene_cloud_percent": 4.5,
+          "status": "ALBUM",
+          "full_crop_covered": true,
+          "aoI_coverage_fraction": 1.0
+        }
+      ]
+    }
+  ]
+}

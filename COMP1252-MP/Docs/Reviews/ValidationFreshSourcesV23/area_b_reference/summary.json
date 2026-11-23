@@ -1,0 +1,48 @@
+{
+  "queried_at_utc": "2026-11-23T21:25:52.448385+00:00",
+  "scope": "Public Airbus archive index. Its empty response does not establish coverage of a commercial archive",
+  "bbox_32636": [
+    663380,
+    5604740,
+    664020,
+    5605380
+  ],
+  "dates_inclusive": [
+    "2018-06-15",
+    "2018-08-20"
+  ],
+  "official_viewer": "https://space-solutions.airbus.com/imagery/how-to-order-imagery-and-data/archive-preview-tool/",
+  "queries": [
+    {
+      "url": "https://portal.intelligence-airbusds.com/arcgis/rest/services/OneAtlas/OADConstellationArchive/MapServer/4/query?where=acquisitiondate+%3E%3D+DATE+%272018-06-15%27+AND+acquisitiondate+%3C+DATE+%272018-08-21%27&geometry=663380%2C5604740%2C664020%2C5605380&geometryType=esriGeometryEnvelope&inSR=32636&outSR=32636&spatialRel=esriSpatialRelIntersects&outFields=%2A&returnGeometry=true&f=geojson&resultRecordCount=100&orderByFields=acquisitiondate+ASC",
+      "http_status": 200,
+      "response_file": "layer-4.geojson",
+      "sha256": "5c389083e7dcd785c3d685329fa703d8b676340c14265fa2c63f7f930705dc80",
+      "bytes": 99,
+      "matches": 0,
+      "layer_id": 4,
+      "layer_label": "Pleiades Neo"
+    },
+    {
+      "url": "https://portal.intelligence-airbusds.com/arcgis/rest/services/OneAtlas/OADConstellationArchive/MapServer/9/query?where=acquisitiondate+%3E%3D+DATE+%272018-06-15%27+AND+acquisitiondate+%3C+DATE+%272018-08-21%27&geometry=663380%2C5604740%2C664020%2C5605380&geometryType=esriGeometryEnvelope&inSR=32636&outSR=32636&spatialRel=esriSpatialRelIntersects&outFields=%2A&returnGeometry=true&f=geojson&resultRecordCount=100&orderByFields=acquisitiondate+ASC",
+      "http_status": 200,
+      "response_file": "layer-9.geojson",
+      "sha256": "5c389083e7dcd785c3d685329fa703d8b676340c14265fa2c63f7f930705dc80",
+      "bytes": 99,
+      "matches": 0,
+      "layer_id": 9,
+      "layer_label": "Pleiades"
+    },
+    {
+      "url": "https://portal.intelligence-airbusds.com/arcgis/rest/services/OneAtlas/OADConstellationArchive/MapServer/14/query?where=acquisitiondate+%3E%3D+DATE+%272018-06-15%27+AND+acquisitiondate+%3C+DATE+%272018-08-21%27&geometry=663380%2C5604740%2C664020%2C5605380&geometryType=esriGeometryEnvelope&inSR=32636&outSR=32636&spatialRel=esriSpatialRelIntersects&outFields=%2A&returnGeometry=true&f=geojson&resultRecordCount=100&orderByFields=acquisitiondate+ASC",
+      "http_status": 200,
+      "response_file": "layer-14.geojson",
+      "sha256": "5c389083e7dcd785c3d685329fa703d8b676340c14265fa2c63f7f930705dc80",
+      "bytes": 99,
+      "matches": 0,
+      "layer_id": 14,
+      "layer_label": "SPOT"
+    }
+  ],
+  "pixels_downloaded": 0
+}

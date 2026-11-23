@@ -1,0 +1,7 @@
+{
+  "url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?%24filter=Collection%2FName+eq+%27CCM%27+and+OData.CSC.Intersects%28area%3Dgeography%27SRID%3D4326%3BPOLYGON%28%2835.3073028+50.5715234%2C35.3166156+50.5715234%2C35.3166156+50.5774538%2C35.3073028+50.5774538%2C35.3073028+50.5715234%29%29%27%29+and+ContentDate%2FStart+ge+2018-06-15T00%3A00%3A00.000Z+and+ContentDate%2FStart+lt+2018-08-21T00%3A00%3A00.000Z&%24count=true&%24top=10",
+  "status": 200,
+  "sha256": "2c400091d744458bd0deea59021efafbdfc70bcbbef614a13c45e1cbd5a8e6ee",
+  "count": 0,
+  "returned_products": []
+}

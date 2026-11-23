@@ -1,0 +1,29 @@
+{
+  "url": "https://search.landinfo.com/",
+  "dates_inclusive": [
+    "2018-06-15",
+    "2018-08-20"
+  ],
+  "coordinate_rectangle_wgs84": [
+    35.3073028,
+    50.5715234,
+    35.3166156,
+    50.5774538
+  ],
+  "cloud_percent_filter": [
+    0,
+    30
+  ],
+  "off_nadir_degrees_filter": [
+    0,
+    30
+  ],
+  "resolution_metres_filter": [
+    0.3,
+    4.0
+  ],
+  "sensor_filter": "The provider default selected sensors were retained.",
+  "matches_reported_by_ui": 0,
+  "review_date": "2026-11-23",
+  "purchase_or_order_submitted": false
+}
