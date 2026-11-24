@@ -1,6 +1,8 @@
 # Fresh validation acquisition and QA
 
-V24 follows the completed V23 source search. Continue on
+V24 is complete. Both 21 and 16 July pre-images flag every crop pixel at
+both fresh sites. All four fixed pairs are excluded by automatic QA and the
+review roster is empty. Continue on
 `codex/curated-deforestation-pilot` and push verified checkpoints to that branch.
 The two exact 36UXA/R064/N0206 scenes are 21 and 16 July 2018. The two
 original validation groups, post dates, and 64 × 64 crop grids stay fixed.
@@ -30,4 +32,38 @@ saves the durable publication and replay receipts. Lineage preparation is
 complete. Four distinct comparisons preserve both original crops and group
 assignments. Each recomputes cumulative temporal geometry from its actual
 pre-date and fixed post-date and passes split isolation. The guarded lineage
-worker peaked at 274.25 MiB. Crop QA is pending.
+worker peaked at 274.25 MiB. Checkpoint `8b7fa50` saves the exact four derived
+identities, temporal masks' geometry counts and source bindings before pixel
+processing. Both dates preserve the corresponding original reference masks
+after cumulative recomputation.
+
+## Crop quality results
+
+| Pre-date | Fixed post-date | Anchor / eroded pixels | Full target context flagged pre → post | Eroded interior context flagged pre → post |
+| --- | --- | ---: | ---: | ---: |
+| 21 July | 31 July | 63 / 16 | 174 / 174 → 0 | 92 / 92 → 0 |
+| 21 July | 10 August | 239 / 129 | 464 / 464 → 0 | 320 / 320 → 0 |
+| 16 July | 31 July | 63 / 16 | 174 / 174 → 0 | 92 / 92 → 0 |
+| 16 July | 10 August | 239 / 129 | 464 / 464 → 0 | 320 / 320 → 0 |
+
+Each pre-crop has 4,096 flagged pixels. The frozen screen reports cloud or
+its buffer over the target alongside suspected haze. Both unchanged post
+crops remain clear. Screening read 44 fused-band windows, used four cloud
+classifier calls, and reused the two frozen post caches across four pair
+bindings. The four masks, numeric outcomes and eight cache bindings replay
+exactly from six distinct observations. Replay used zero source band reads
+and zero cloud classifier calls. There were zero processing errors.
+
+Screening peaked at 372.27 MiB worker RSS and replay at 253.64 MiB. All 391
+guarded tests passed. The workers were sequential and the memory reserve
+held. The live transaction is complete and no workers are active. Raw scenes
+remain local. Smaller receipts, all four masks and the six bounded QA
+snapshots are archived under `Docs/Reviews/ValidationFreshSourcesV24/`.
+
+There are still no approved validation labels or label lock. The positive
+support, split isolation and successful publication are available for future
+planning. Preserve these two failed dates and the original post observations.
+The remaining fresh 2019 groups retained in V23 give a distinct metadata-only
+alternative. Check available dates and reference imagery before fixing a new
+bounded roster. Keep the already exposed groups and Area B case study separate
+from new-site validation.

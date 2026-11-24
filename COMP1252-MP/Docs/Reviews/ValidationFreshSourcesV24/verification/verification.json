@@ -1,0 +1,17 @@
+{
+  "checks": {
+    "exact_lineage": true,
+    "cumulative_targets": true,
+    "safe_cache_bindings": true,
+    "numeric_qa_outcomes": true,
+    "qa_masks": true,
+    "anchor_contexts": true,
+    "candidate_gate": true
+  },
+  "pairs_replayed": 4,
+  "cache_bindings_replayed": 8,
+  "verified_screen_metadata_sha256": "c7b3211c5f51dc9af4c081f184027f668e2fc4316979c8e496aa74e5b1a57bcc",
+  "review_candidate_pair_ids": [],
+  "cloud_model_executions": 0,
+  "source_jp2_window_reads": 0
+}

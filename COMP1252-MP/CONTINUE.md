@@ -5,7 +5,7 @@ status, then the latest handoff before edits. Commit every completed verified
 logical change with the handoff updated and push to the SAME branch. This entry
 point works for Codex, Gemini Antigravity or another agent without chat history.
 
-Current V24 fresh validation acquisition and QA:
+Completed V24 fresh validation acquisition and QA:
 **`Docs/Handoffs/2026-11-24-fresh-validation-qa.md`**.
 Completed V23 fresh validation source feasibility:
 **`Docs/Handoffs/2026-11-23-fresh-validation-sources.md`**.
@@ -146,6 +146,13 @@ obscured. WorldView references from 2010 and 2020 strengthen controls 1 and 2
 and show an opening across part of control 3 by 2020. The finer reference dates
 leave the exact 2018 class checks unresolved. The original optical bracket,
 persistence observation and existing exposed-group record are preserved.
+
+V23 narrowed the existing catalogue to two fresh groups with clear original
+post images and nominated two common earlier 36UXA acquisitions. V24 verified
+and published both 21 and 16 July scenes, then screened and replayed all four
+fixed comparisons. Both pre-dates flag every pixel in both crops. The roster
+for visual review remains empty. The V24 handoff records the retained failures
+and the other 2019 groups available for a separate metadata-first plan.
 
 Use one nice +10 CPU worker, native/Torch threads 1, no GPU, unchanged
 `validate_sample.run_guarded`, 512 MiB RSS and 1.5 GiB available-system-memory

@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "protocol_sha256": "9bbb2f358057eab87396898093dbd05e8211f2f317a92af5f87ca0a4b2deb419",
+  "metadata_sha256": {
+    "preflight": "11e25a7f5abeeba00fc22cd19eeb1b3b4c7b7fe6cd16bf57573f90de6d4b1746",
+    "preflight_verification": "a7842fae9c1dfc1dbc05f188751fdf6dbfdb9fadbb3adbccc460b163cdeaeb05",
+    "download_21": "b364fc87b2b90d5d5788b26aa5b3ce1c351c37d60e57a541e1ca6526927fc8d5",
+    "download_16": "78a21b95d7b569bad291573caaa364fc2140371f3982d6f3eea98b429e4a42e2",
+    "publication": "427665ed91705c26550d950a5a62abf87e2c844133d96d2c11d1e934b61880be",
+    "publication_verification": "08b2b16573234c171f7563e747ffb31fa9c826b2c3df62b565babbb46f07aab3",
+    "lineage": "c04e7558706fc2842133f92fcdd14ffa1c8e70875539a8f85a0f613d4e9bdf1f",
+    "screen": "c7b3211c5f51dc9af4c081f184027f668e2fc4316979c8e496aa74e5b1a57bcc",
+    "verification": "6127350d1e8aab818102bd074b16a565cb3134307981b51e1f156a4f4d132811",
+    "checks/tests": "9c093f87b0dc0d6a342c7c58786e4b06e225a4aeeee81e619de0b55663b854e8"
+  },
+  "pinned_sources_checked": 22,
+  "pinned_implementations_checked": 65,
+  "published_assets_verified": 116,
+  "original_source_fingerprints_rechecked": 2146,
+  "transaction_state": "complete",
+  "screen_sha256": "1205ccce1f38b2fca7a3624a227bf1a47bf49d6b345d4816aff526d0423c0dc8",
+  "replay_sha256": "0aced51b5b3b06f6b9f3dbd6f3c0c4fa1e81ce6f0ff31e11c22c1b574e249db3",
+  "geographic_groups_screened": 2,
+  "comparisons_replayed": 4,
+  "cache_bindings_replayed": 8,
+  "excluded_comparisons": 4,
+  "passed_comparisons": 0,
+  "processing_errors": 0,
+  "labels_approved": 0,
+  "tests_passed": 391,
+  "active_worker_count": 0
+}
