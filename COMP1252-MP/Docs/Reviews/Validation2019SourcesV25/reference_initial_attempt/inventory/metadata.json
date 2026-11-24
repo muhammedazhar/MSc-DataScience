@@ -1,0 +1,36 @@
+{
+  "execution_status": "completed",
+  "mode": "2019_reference_inventory",
+  "protocol_sha256": "2f75e8f2941fe7de687c01dd83d95b39578dc12f4b5c366166e82f2500a8cec2",
+  "artifact_sha256": {
+    "raw/march-airbus-14.response": "5c389083e7dcd785c3d685329fa703d8b676340c14265fa2c63f7f930705dc80",
+    "raw/march-airbus-9.response": "5c389083e7dcd785c3d685329fa703d8b676340c14265fa2c63f7f930705dc80",
+    "raw/may-airbus-14.response": "5c389083e7dcd785c3d685329fa703d8b676340c14265fa2c63f7f930705dc80",
+    "raw/may-airbus-9.response": "5c389083e7dcd785c3d685329fa703d8b676340c14265fa2c63f7f930705dc80",
+    "raw/wayback-config.response": "d637e43e81490fb0516b4c6b96704f2455ead97acaa75e2d91b8b0c6e6e913d1",
+    "references.json": "a27c602afd2116615853f3b840e35bb933de62662acb774f77d03e980efd09c5"
+  },
+  "network_requests": 5,
+  "satellite_pixel_reads": 0,
+  "image_asset_downloads": 0,
+  "model_executions": 0,
+  "labels_approved": 0,
+  "resources": {
+    "logical_cpu_count": 11,
+    "machine_ram_gib": 18.0,
+    "worker_peak_rss_mib_sampled": 93.8,
+    "worker_high_water_rss_mib": 93.81,
+    "minimum_available_gib_sampled": 3.73,
+    "elapsed_seconds": 6.1,
+    "worker_limit_mib": 512,
+    "minimum_available_gib_limit": 1.5,
+    "runtime_limit_seconds": 300,
+    "workers": 1,
+    "native_thread_limit": 1,
+    "nice_increment": 10,
+    "gdal_cache_mib": 0,
+    "warp_memory_mib": 0,
+    "gpu_used": false,
+    "monitor_interval_seconds": 0.25
+  }
+}

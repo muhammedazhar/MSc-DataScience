@@ -28,6 +28,7 @@ AIRBUS_LAYERS = {9: 'Pléiades', 14: 'SPOT'}
 WAYBACK_CONFIG = 'https://s3-us-west-2.amazonaws.com/config.maptiles.arcgis.com/waybackconfig.json'
 WAYBACK = 'https://metadata.maptiles.arcgis.com/arcgis/rest/services/World_Imagery_Metadata_'
 WAYBACK_SERVICE = re.compile(r'^'+re.escape(WAYBACK)+r'(\d{4}_r\d{2})/MapServer/?$')
+WAYBACK_TITLE = re.compile(r'World Imagery \(Wayback (\d{4}-\d{2}-\d{2})\)')
 WAYBACK_LAYER = 6
 WKID = 32636
 PAGE_LIMIT = 100
@@ -192,22 +193,20 @@ def airbus_records(payload, site):
 
 def wayback_releases(config):
     releases = []
-    for entry in config.values():
-        if not isinstance(entry, dict):
-            continue
-        services = {match[1] for value in entry.values() if isinstance(value, str)
-                    and (match := WAYBACK_SERVICE.fullmatch(value))}
-        if not services:
-            continue
-        require(len(services) == 1, 'Ambiguous Wayback metadata service for release')
-        date_label = metadata_date(entry.get('releaseDateLabel'))
-        date_value = metadata_date(entry.get('releaseDate'))
-        released = date_label or date_value
-        require(released and (not date_label or not date_value or date_label == date_value),
-                'Missing or inconsistent Wayback release date')
-        releases.append({'metadata_release': next(iter(services)), 'release_date': released,
-                         'release_title': entry.get('itemTitle'), 'release_num': entry.get('releaseNum')})
+    for tile_release, entry in config.items():
+        require(isinstance(entry, dict) and tile_release.isascii() and tile_release.isdecimal(),
+                'Unexpected Wayback release configuration entry')
+        title = entry.get('itemTitle', '')
+        title_match = WAYBACK_TITLE.fullmatch(title)
+        service = WAYBACK_SERVICE.fullmatch(entry.get('metadataLayerUrl', ''))
+        require(title_match and service,
+                'Wayback title or metadata service differs from the configured release')
+        releases.append({'metadata_release': service[1],
+                         'release_date': date.fromisoformat(title_match[1]).isoformat(),
+                         'release_title': title, 'release_num': int(tile_release)})
     require(releases, 'No trusted Wayback release entries')
+    require(len({release['metadata_release'] for release in releases}) == len(releases),
+            'Duplicate Wayback metadata release')
     return sorted(releases, key=lambda item: (item['release_date'], item['metadata_release']))
 
 
@@ -260,7 +259,7 @@ def build(output, sites, protocol_sha, queried_at, fetcher):
     if payload is not None:
         try:
             releases = wayback_releases(payload)
-        except ValueError as error:
+        except (TypeError, ValueError) as error:
             config.update(status='invalid_response', error=str(error))
         else:
             config.update(status='complete', parsed_releases=len(releases))

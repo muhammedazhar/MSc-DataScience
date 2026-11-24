@@ -38,3 +38,15 @@ All matches cover the entire crop and QA margin according to the catalogue.
 The four raw pages and their normalized outputs replayed byte for byte without
 network calls. Worker RSS peaked at 120.48 MiB and available memory stayed at
 or above 3.40 GiB. This checkpoint leaves independent reference checks pending.
+
+## Reference configuration correction
+
+The first guarded reference run returned four empty Airbus layer results. The
+Wayback configuration request succeeded but the parser expected a separate
+release date field. The live config gives each release date in its item title.
+The [initial attempt](../Reviews/Validation2019SourcesV25/reference_initial_attempt/inventory/references.json)
+and exact replay preserve that outcome. The corrected parser validated all 199
+archived release entries and selected the six expected crop/release combinations
+offline. The dates and coverage rules are unchanged. Pending work is the
+corrected live reference and offline replay, and rebinding both inventories to
+this revised protocol hash.

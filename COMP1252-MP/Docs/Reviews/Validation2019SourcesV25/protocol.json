@@ -174,7 +174,8 @@
     "wayback_selection": "First available release on or after each of reference start, fixed post and reference end. Deduplicate selected releases and retain the separate source capture date.",
     "airbus_result_limit_per_layer": 100,
     "maximum_response_bytes": 2097152,
-    "request_timeout_seconds": 15
+    "request_timeout_seconds": 15,
+    "wayback_release_date_field": "ISO date in the World Imagery Wayback item title"
   },
   "source_files": {
     "pairs": {
@@ -347,7 +348,7 @@
   },
   "implementation_sha256": {
     "Solutions/inventory_2019_validation_sources.py": "6479f4e8dbeb74430eee27f3dc3b8ad8a8d8859530c587adb1c1d469d0945c06",
-    "Solutions/inventory_2019_reference_sources.py": "da8ed2bd0c12df9d613c34322bdf29ab987cf938546284ae2cfa5119d060daa5"
+    "Solutions/inventory_2019_reference_sources.py": "5123e823b2ccba80b84655c319b1c1558db02743dbf9a596901a879ea1eab990"
   },
   "metadata_only": true,
   "select_roster": false,

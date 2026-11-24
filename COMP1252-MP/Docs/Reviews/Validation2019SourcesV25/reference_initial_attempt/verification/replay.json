@@ -1,0 +1,15 @@
+{
+  "schema_version": 25,
+  "result": "byte_identical",
+  "protocol_sha256": "2f75e8f2941fe7de687c01dd83d95b39578dc12f4b5c366166e82f2500a8cec2",
+  "network_requests": 0,
+  "inventory_artifact_sha256": {
+    "raw/march-airbus-14.response": "5c389083e7dcd785c3d685329fa703d8b676340c14265fa2c63f7f930705dc80",
+    "raw/march-airbus-9.response": "5c389083e7dcd785c3d685329fa703d8b676340c14265fa2c63f7f930705dc80",
+    "raw/may-airbus-14.response": "5c389083e7dcd785c3d685329fa703d8b676340c14265fa2c63f7f930705dc80",
+    "raw/may-airbus-9.response": "5c389083e7dcd785c3d685329fa703d8b676340c14265fa2c63f7f930705dc80",
+    "raw/wayback-config.response": "d637e43e81490fb0516b4c6b96704f2455ead97acaa75e2d91b8b0c6e6e913d1",
+    "references.json": "a27c602afd2116615853f3b840e35bb933de62662acb774f77d03e980efd09c5"
+  },
+  "queries_replayed": 5
+}
