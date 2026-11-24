@@ -23,7 +23,11 @@ is 2,208,628,047 bytes across 232 files. Available disk before download was
 reserve and the existing 300 second guard. Each run writes a distinct
 `publication/YYYY-MM-DD` report.
 
-The roster and four downloader inputs are ready. Imagery transfer,
-publication verification, comparison lineage, cloud screening, replay and
-project results closeout are pending. Preserve prior cloudy observations,
-exposure records and the frozen training checkpoint during the assessment.
+## Verified publication
+
+| Date | Files | Bytes | Elapsed | Peak worker RSS |
+| --- | ---: | ---: | ---: | ---: |
+| 2019-03-03 | 58 | 679,536,761 | 134.50 s | 59.41 MiB |
+
+Pending work includes publication dates absent from the table, comparison lineage,
+cloud screening, replay and the project results closeout.
