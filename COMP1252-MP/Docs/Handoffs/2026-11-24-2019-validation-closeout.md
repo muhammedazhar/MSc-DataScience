@@ -28,6 +28,7 @@ reserve and the existing 300 second guard. Each run writes a distinct
 | Date | Files | Bytes | Elapsed | Peak worker RSS |
 | --- | ---: | ---: | ---: | ---: |
 | 2019-03-03 | 58 | 679,536,761 | 134.50 s | 59.41 MiB |
+| 2019-03-08 | 58 | 610,837,722 | 108.34 s | 64.20 MiB |
 
 Pending work includes publication dates absent from the table, comparison lineage,
 cloud screening, replay and the project results closeout.
