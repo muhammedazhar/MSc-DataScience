@@ -42,5 +42,39 @@ The revised parser accepts the native timestamp precision and uses the UTC
 date verified by the exact native identities. It records both time values and
 their signed difference. Source bytes and crop rules are preserved. The
 offline smoke identified all 58 required objects for each archived candidate
-and rejected a changed UTC date or granule ID. The guarded recheck and final
-byte-for-byte replay are pending. The acquisition roster remains open.
+and rejected a changed UTC date or granule ID. Checkpoint `a7c8c70` pins that
+correction and the initial evidence.
+
+## Completed preflight
+
+| Candidate | Required files listed | Listed payload |
+| --- | ---: | ---: |
+| 3 March 2019 | 58 | 679,536,761 bytes |
+| 8 March 2019 | 58 | 610,837,722 bytes |
+| 7 May 2019 | 58 | 347,466,958 bytes |
+| 12 May 2019 | 58 | 570,786,606 bytes |
+| Total | 232 | 2,208,628,047 bytes |
+
+All four native L1C XML pairs confirm the required 02.07 baseline, orbit 64,
+36UYA tile, quantification 10,000 and compatible absent offset lists. Each
+EPSG:32636 native 10 m grid is aligned with its assigned crop and covers its
+full QA margin. Solar angles pass. Each complete listing pins 11 JP2 bands,
+44 band-quality masks, one cloud mask and two XML files. Only the XML file
+contents were verified against the provider MD5 pins. The image and GML files
+remain listed assets pending acquisition and content verification.
+
+The guarded recheck used the 16 pinned initial receipts with zero new network
+requests. Final replay reproduced the corrected metadata, all listing and XML
+bytes and the manifest byte for byte. The volume had 69.28 GiB free at the
+live check. The two-copy staging estimate is 4.24 GiB including temporary
+space, plus the 2 GiB reserve. Peak worker RSS across V26 was 127.39 MiB.
+The lowest sampled available memory was 3.38 GiB. The four guarded jobs ran
+sequentially. [Preflight](../Reviews/Validation2019PreflightV26/preflight/preflight.json)
+· [Replay](../Reviews/Validation2019PreflightV26/verification/verification.json)
+· [Integrity](../Reviews/Validation2019PreflightV26/final_integrity.json).
+
+The acquisition roster remains open. The next bounded phase can choose an
+explicit roster from these verified manifests, recheck free disk and stage
+one scene at a time. Preserve the fixed post images, the three old cloudy
+dates, the seven exposed groups and the independent reference results. Local
+cloud screening, visual class checks and first-visible timing are pending.

@@ -5,7 +5,7 @@ status, then the latest handoff before edits. Commit every completed verified
 logical change with the handoff updated and push to the SAME branch. This entry
 point works for Codex, Gemini Antigravity or another agent without chat history.
 
-Current V26 2019 Sentinel-2 native metadata preflight:
+Completed V26 2019 Sentinel-2 native metadata preflight:
 **`Docs/Handoffs/2026-11-24-2019-native-preflight.md`**.
 Completed V25 2019 validation site source feasibility:
 **`Docs/Handoffs/2026-11-24-2019-validation-feasibility.md`**.
@@ -163,8 +163,14 @@ are 3 and 8 March and the May matches are 7 and 12 May. The Airbus and sampled
 Wayback archives supplied zero full-crop in-window independent captures. May’s
 Wayback capture is from September 2017. The archived queries and exact replays
 retain the three prior cloudy 2019 dates and all catalogue variants. No new
-roster is fixed. Native L1C XML and asset-list preflight are the next possible
-check before any imagery acquisition.
+roster was fixed. V25 handed off all four matches for native L1C preflight.
+
+V26 verified native L1C XML and all 58 required file listings for each of the
+four candidates. All crops and QA margins are covered. The listed total is
+2,208,628,047 bytes. The guarded offline recheck and replay passed. The native
+and catalogue sensing timestamps are preserved separately, with all exact
+scene identities and UTC dates in agreement. A future bounded acquisition
+phase should pin its exact roster and recheck disk before any imagery transfer.
 
 Use one nice +10 CPU worker, native/Torch threads 1, no GPU, unchanged
 `validate_sample.run_guarded`, 512 MiB RSS and 1.5 GiB available-system-memory

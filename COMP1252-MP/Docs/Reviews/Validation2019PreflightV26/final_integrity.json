@@ -1,0 +1,79 @@
+{
+  "status": "passed",
+  "protocol_sha256": "a13b69b0bd7bf935fece35fa6ddbb5b090c0f2791524b50c43a0aeff20bdcae9",
+  "items": {
+    "2019-03-03": {
+      "scene_id": "S2B_MSIL1C_20190303T084009_N0207_R064_T36UYA_20190303T123109",
+      "required_assets": 58,
+      "listed_bytes": 679536761,
+      "catalogue_minus_native_seconds": 27.63684,
+      "catalogue_l2a_href_conflicts": 17
+    },
+    "2019-03-08": {
+      "scene_id": "S2A_MSIL1C_20190308T083811_N0207_R064_T36UYA_20190308T122407",
+      "required_assets": 58,
+      "listed_bytes": 610837722,
+      "catalogue_minus_native_seconds": 622.146231,
+      "catalogue_l2a_href_conflicts": 17
+    },
+    "2019-05-07": {
+      "scene_id": "S2A_MSIL1C_20190507T083601_N0207_R064_T36UYA_20190507T104302",
+      "required_assets": 58,
+      "listed_bytes": 347466958,
+      "catalogue_minus_native_seconds": -0.000199,
+      "catalogue_l2a_href_conflicts": 17
+    },
+    "2019-05-12": {
+      "scene_id": "S2B_MSIL1C_20190512T083609_N0207_R064_T36UYA_20190512T105433",
+      "required_assets": 58,
+      "listed_bytes": 570786606,
+      "catalogue_minus_native_seconds": -0.000249,
+      "catalogue_l2a_href_conflicts": 0
+    }
+  },
+  "disk_budget": {
+    "measured_free_bytes": 74386792448,
+    "complete_payload_bytes": 2208628047,
+    "largest_asset_bytes": 135629373,
+    "current_metadata_artifact_bytes": 2479159,
+    "future_two_copy_staging_plus_temporary_bytes": 4555364626,
+    "minimum_free_reserve_bytes": 2147483648,
+    "sufficient_for_conservative_future_acquisition": true,
+    "imagery_acquisition_executed": false,
+    "included_ready_scenes": [
+      "S2B_MSIL1C_20190303T084009_N0207_R064_T36UYA_20190303T123109",
+      "S2A_MSIL1C_20190308T083811_N0207_R064_T36UYA_20190308T122407",
+      "S2A_MSIL1C_20190507T083601_N0207_R064_T36UYA_20190507T104302",
+      "S2B_MSIL1C_20190512T083609_N0207_R064_T36UYA_20190512T105433"
+    ]
+  },
+  "worker_receipts": {
+    "initial_attempt/preflight": {
+      "worker_high_water_rss_mib": 127.39,
+      "minimum_available_gib_sampled": 3.89,
+      "elapsed_seconds": 3.56
+    },
+    "initial_attempt/verification": {
+      "worker_high_water_rss_mib": 90.94,
+      "minimum_available_gib_sampled": 3.38,
+      "elapsed_seconds": 0.76
+    },
+    "preflight": {
+      "worker_high_water_rss_mib": 116.75,
+      "minimum_available_gib_sampled": 3.81,
+      "elapsed_seconds": 0.51
+    },
+    "verification": {
+      "worker_high_water_rss_mib": 115.06,
+      "minimum_available_gib_sampled": 3.73,
+      "elapsed_seconds": 0.51
+    }
+  },
+  "pinned_provider_requests": 16,
+  "rechecked_network_requests": 0,
+  "replayed_network_requests": 0,
+  "archived_artifacts_match_git_index": true,
+  "candidate_files_published": 0,
+  "satellite_pixel_reads": 0,
+  "new_roster_selected": false
+}
