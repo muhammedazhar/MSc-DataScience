@@ -1,0 +1,99 @@
+{
+  "schema_version": 27,
+  "scope": "All four V26 candidates, one scene per guarded download.py run.",
+  "resources": {
+    "workers": 1,
+    "native_threads": 1,
+    "nice_increment": 10,
+    "gpu_used": false,
+    "worker_rss_mib": 512,
+    "available_memory_reserve_gib": 1.5,
+    "max_seconds_per_worker": 300
+  },
+  "source_sha256": {
+    "Docs/Reviews/Validation2019PreflightV26/protocol.json": "a13b69b0bd7bf935fece35fa6ddbb5b090c0f2791524b50c43a0aeff20bdcae9",
+    "Docs/Reviews/Validation2019PreflightV26/preflight/preflight.json": "cfd804cd305202c6b9b41fd563537746e68abd63d35126b7191014ee76809b26",
+    "Docs/Reviews/Validation2019PreflightV26/preflight/metadata.json": "b659f4c2bd87087cf1c0a1b4b9a663dfb1031c6d0bdbf1c281fab6a26f9af352",
+    "Docs/Reviews/Validation2019PreflightV26/verification/verification.json": "78f98127bd46a08327141b2816ea0537841ede51d91c2aa2a1caa13e96c03f57",
+    "Docs/Reviews/Validation2019PreflightV26/final_integrity.json": "299a10b776636d2618632c9461fbcfe20a2d46805f9bd42ffa7e46ed17a1a98d",
+    "Solutions/download.py": "2034ad34839755d1097cfcb7c8c16374240d431c850c065087f418b8bced45cb",
+    "Solutions/bbox_sentinel_transfer.py": "76176e6d19668dc4d33cd3c7ed0216ba0112c3cf733a3ac072cb3739406ca13a",
+    "Solutions/acquire_earlier_validation_sources.py": "c76e69b0c12a47324cade08e8c7c4c1ca594ba7b3f6732bdd88f4d958a9564af",
+    "Solutions/validate_sample.py": "475f641ed582af37eedc2ee9e94065e280202db08eb381441e1403c3eb001fba"
+  },
+  "listed_bytes": 2208628047,
+  "minimum_free_disk_reserve_bytes": 2147483648,
+  "initial_free_disk_bytes": 71819395072,
+  "roster": [
+    {
+      "acquisition_date": "2019-03-03",
+      "scene_id": "S2B_MSIL1C_20190303T084009_N0207_R064_T36UYA_20190303T123109",
+      "site_id": "march",
+      "event_id": "event-09d8404da019897e1147",
+      "group_id": "group-a77532f92e6bf57d35aa",
+      "pair_id": "pair-f113871fa642d1296fbc",
+      "post_date": "2019-04-02",
+      "post_scene_id": "S2B_MSIL1C_20190402T083559_N0207_R064_T36UYA_20190402T111852",
+      "interval_to_post_days": 30,
+      "measured_payload_bytes": 679536761,
+      "download_input_sha256": "02925de9417ba96c2b157c64b81172a111ab32d09237c6ed364ab7f3bbf575d4",
+      "asset_count": 58,
+      "asset_manifest_sha256": "0790213f3c12c53b8370f89af6ff2aea06ad6172d6a0954a857c0a37af13b9c4"
+    },
+    {
+      "acquisition_date": "2019-03-08",
+      "scene_id": "S2A_MSIL1C_20190308T083811_N0207_R064_T36UYA_20190308T122407",
+      "site_id": "march",
+      "event_id": "event-09d8404da019897e1147",
+      "group_id": "group-a77532f92e6bf57d35aa",
+      "pair_id": "pair-f113871fa642d1296fbc",
+      "post_date": "2019-04-02",
+      "post_scene_id": "S2B_MSIL1C_20190402T083559_N0207_R064_T36UYA_20190402T111852",
+      "interval_to_post_days": 25,
+      "measured_payload_bytes": 610837722,
+      "download_input_sha256": "c5149200a14c6d4fde9e0880d68fb6097dc964d6a4e7450cf0391ce5dde50dd3",
+      "asset_count": 58,
+      "asset_manifest_sha256": "febb9206aa053d42558df81ab8bf964636ee0ae4cb5985b4cfe7a521b0f6de35"
+    },
+    {
+      "acquisition_date": "2019-05-07",
+      "scene_id": "S2A_MSIL1C_20190507T083601_N0207_R064_T36UYA_20190507T104302",
+      "site_id": "may",
+      "event_id": "event-011bc19e1e0f43eaa1ea",
+      "group_id": "group-01d258e68b5c4e02152b",
+      "pair_id": "pair-73bad06c9e0d3fe6b7fc",
+      "post_date": "2019-06-06",
+      "post_scene_id": "S2A_MSIL1C_20190606T083601_N0207_R064_T36UYA_20190606T104250",
+      "interval_to_post_days": 30,
+      "measured_payload_bytes": 347466958,
+      "download_input_sha256": "2397ee99306f108c0500ebcdd057dcee380ee93c60ef08e7cb4b2de3703fcba7",
+      "asset_count": 58,
+      "asset_manifest_sha256": "783b55b01c2bd5cb85e5db34ca8f5d44d1dfe6ced74a36d2980ded2fcb289b16"
+    },
+    {
+      "acquisition_date": "2019-05-12",
+      "scene_id": "S2B_MSIL1C_20190512T083609_N0207_R064_T36UYA_20190512T105433",
+      "site_id": "may",
+      "event_id": "event-011bc19e1e0f43eaa1ea",
+      "group_id": "group-01d258e68b5c4e02152b",
+      "pair_id": "pair-73bad06c9e0d3fe6b7fc",
+      "post_date": "2019-06-06",
+      "post_scene_id": "S2A_MSIL1C_20190606T083601_N0207_R064_T36UYA_20190606T104250",
+      "interval_to_post_days": 25,
+      "measured_payload_bytes": 570786606,
+      "download_input_sha256": "b908f6b70213d459827ef549d7c7008eff1dffc1c3b9ab64d5026efe28046d43",
+      "asset_count": 58,
+      "asset_manifest_sha256": "2530679ec6163daba18900249c88c8f0a5a45bff6037345b5617c6ded0e3119b"
+    }
+  ],
+  "only_frozen_crop_qa_after_publication": true,
+  "prior_rejected_dates": {
+    "march": [
+      "2019-03-13",
+      "2019-03-18"
+    ],
+    "may": [
+      "2019-05-17"
+    ]
+  }
+}

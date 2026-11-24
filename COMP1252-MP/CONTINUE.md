@@ -5,6 +5,8 @@ status, then the latest handoff before edits. Commit every completed verified
 logical change with the handoff updated and push to the SAME branch. This entry
 point works for Codex, Gemini Antigravity or another agent without chat history.
 
+Current V27 Ukraine acquisition, screening and results closeout:
+**`Docs/Handoffs/2026-11-24-2019-validation-closeout.md`**.
 Completed bounding-box Sentinel-2 downloader:
 **`Docs/Handoffs/2026-11-24-bounding-box-downloader.md`**.
 Completed V26 2019 Sentinel-2 native metadata preflight:

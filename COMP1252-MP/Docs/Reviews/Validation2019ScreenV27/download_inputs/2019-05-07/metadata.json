@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "command": "preflight",
+  "artifact_sha256": {
+    "preflight.json": "2397ee99306f108c0500ebcdd057dcee380ee93c60ef08e7cb4b2de3703fcba7"
+  },
+  "source": "Docs/Reviews/Validation2019PreflightV26/preflight/preflight.json",
+  "source_sha256": "cfd804cd305202c6b9b41fd563537746e68abd63d35126b7191014ee76809b26"
+}
