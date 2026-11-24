@@ -1,0 +1,485 @@
+{
+  "schema_version": 25,
+  "protocol_sha256": "a1f4d933e917d53d1eef1dd36087aef6062b1ce64bbc1f3ccc56b78b7b7694f0",
+  "queried_at_utc": "2026-11-24T14:47:42+00:00",
+  "reference_scope": "public independent reference metadata for the exact frozen crop",
+  "sites": [
+    {
+      "site_id": "march",
+      "event_id": "event-09d8404da019897e1147",
+      "pair_id": "pair-f113871fa642d1296fbc",
+      "group_id": "group-a77532f92e6bf57d35aa",
+      "grid": {
+        "crs": "EPSG:32636",
+        "transform": [
+          10.0,
+          0.0,
+          725820.0,
+          0.0,
+          -10.0,
+          5511140.0
+        ],
+        "width": 64,
+        "height": 64,
+        "bounds": [
+          725820.0,
+          5510500.0,
+          726460.0,
+          5511140.0
+        ]
+      },
+      "qa_context_bounds": [
+        724620.0,
+        5509300.0,
+        727660.0,
+        5512340.0
+      ],
+      "annotation_date": "2019-03-28",
+      "pre_date": "2019-03-18",
+      "post_date": "2019-04-02",
+      "pre_scene_id": "S2A_MSIL1C_20190318T083701_N0207_R064_T36UYA_20190318T122410",
+      "post_scene_id": "S2B_MSIL1C_20190402T083559_N0207_R064_T36UYA_20190402T111852",
+      "eroded_support_pixels": 73,
+      "prior_rejected_pre_dates": [
+        "2019-03-13",
+        "2019-03-18"
+      ],
+      "later_usable_scene_ids": [
+        "S2A_MSIL1C_20190407T083601_N0207_R064_T36UYA_20190407T104310",
+        "S2B_MSIL1C_20190412T083609_N0207_R064_T36UYA_20190412T122445",
+        "S2A_MSIL1C_20190417T083601_N0207_R064_T36UYA_20190417T101351",
+        "S2B_MSIL1C_20190422T083609_N0207_R064_T36UYA_20190422T122243",
+        "S2A_MSIL1C_20190427T083601_N0207_R064_T36UYA_20190427T100851"
+      ],
+      "reference_start_inclusive": "2019-03-03",
+      "reference_end_inclusive": "2019-05-12",
+      "query": {
+        "url": "https://earth-search.aws.element84.com/v1/search",
+        "collection": "sentinel-2-l1c",
+        "start_inclusive": "2019-03-03T00:00:00Z",
+        "end_exclusive": "2019-03-18T00:00:00Z",
+        "stac_datetime": "2019-03-03T00:00:00Z/2019-03-17T23:59:59.999999Z",
+        "page_limit": 100,
+        "maximum_pages": 5,
+        "maximum_response_bytes": 2097152,
+        "timeout_seconds": 20,
+        "target_tile": "36UYA",
+        "relative_orbit": "R064",
+        "known_cloudy_date": "2019-03-18",
+        "post_date": "2019-04-02",
+        "nominal_followup_baseline": "N0207",
+        "minimum_interval_days": 5,
+        "maximum_interval_days": 30,
+        "source_crs": "EPSG:32636",
+        "catalogue_cloud_percentage_used_for_selection": false,
+        "select_roster": false
+      }
+    },
+    {
+      "site_id": "may",
+      "event_id": "event-011bc19e1e0f43eaa1ea",
+      "pair_id": "pair-73bad06c9e0d3fe6b7fc",
+      "group_id": "group-01d258e68b5c4e02152b",
+      "grid": {
+        "crs": "EPSG:32636",
+        "transform": [
+          10.0,
+          0.0,
+          769800.0,
+          0.0,
+          -10.0,
+          5575020.0
+        ],
+        "width": 64,
+        "height": 64,
+        "bounds": [
+          769800.0,
+          5574380.0,
+          770440.0,
+          5575020.0
+        ]
+      },
+      "qa_context_bounds": [
+        768600.0,
+        5573180.0,
+        771640.0,
+        5576220.0
+      ],
+      "annotation_date": "2019-05-27",
+      "pre_date": "2019-05-17",
+      "post_date": "2019-06-06",
+      "pre_scene_id": "S2A_MSIL1C_20190517T083601_N0207_R064_T36UYA_20190517T100755",
+      "post_scene_id": "S2A_MSIL1C_20190606T083601_N0207_R064_T36UYA_20190606T104250",
+      "eroded_support_pixels": 13,
+      "prior_rejected_pre_dates": [
+        "2019-05-17"
+      ],
+      "later_usable_scene_ids": [
+        "S2B_MSIL1C_20190611T083609_N0207_R064_T36UYA_20190611T122426",
+        "S2A_MSIL1C_20190616T083601_N0207_R064_T36UYA_20190616T105922",
+        "S2B_MSIL1C_20190621T083609_N0207_R064_T36UYA_20190621T104242",
+        "S2A_MSIL1C_20190626T083601_N0207_R064_T36UYA_20190626T104306",
+        "S2B_MSIL1C_20190701T083609_N0207_R064_T36UYA_20190701T113927",
+        "S2A_MSIL1C_20190706T083611_N0207_R064_T36UYA_20190706T104407"
+      ],
+      "reference_start_inclusive": "2019-05-07",
+      "reference_end_inclusive": "2019-07-11",
+      "query": {
+        "url": "https://earth-search.aws.element84.com/v1/search",
+        "collection": "sentinel-2-l1c",
+        "start_inclusive": "2019-05-07T00:00:00Z",
+        "end_exclusive": "2019-05-17T00:00:00Z",
+        "stac_datetime": "2019-05-07T00:00:00Z/2019-05-16T23:59:59.999999Z",
+        "page_limit": 100,
+        "maximum_pages": 5,
+        "maximum_response_bytes": 2097152,
+        "timeout_seconds": 20,
+        "target_tile": "36UYA",
+        "relative_orbit": "R064",
+        "known_cloudy_date": "2019-05-17",
+        "post_date": "2019-06-06",
+        "nominal_followup_baseline": "N0207",
+        "minimum_interval_days": 5,
+        "maximum_interval_days": 30,
+        "source_crs": "EPSG:32636",
+        "catalogue_cloud_percentage_used_for_selection": false,
+        "select_roster": false
+      }
+    }
+  ],
+  "wayback_release_selections": {
+    "march": [
+      {
+        "metadata_release": "2019_r03",
+        "release_date": "2019-03-13",
+        "release_title": "World Imagery (Wayback 2019-03-13)",
+        "release_num": 4383,
+        "anchors": [
+          {
+            "field": "reference_start_inclusive",
+            "date": "2019-03-03"
+          }
+        ]
+      },
+      {
+        "metadata_release": "2019_r04",
+        "release_date": "2019-04-03",
+        "release_title": "World Imagery (Wayback 2019-04-03)",
+        "release_num": 18691,
+        "anchors": [
+          {
+            "field": "post_date",
+            "date": "2019-04-02"
+          }
+        ]
+      },
+      {
+        "metadata_release": "2019_r06",
+        "release_date": "2019-05-15",
+        "release_title": "World Imagery (Wayback 2019-05-15)",
+        "release_num": 9598,
+        "anchors": [
+          {
+            "field": "reference_end_inclusive",
+            "date": "2019-05-12"
+          }
+        ]
+      }
+    ],
+    "may": [
+      {
+        "metadata_release": "2019_r06",
+        "release_date": "2019-05-15",
+        "release_title": "World Imagery (Wayback 2019-05-15)",
+        "release_num": 9598,
+        "anchors": [
+          {
+            "field": "reference_start_inclusive",
+            "date": "2019-05-07"
+          }
+        ]
+      },
+      {
+        "metadata_release": "2019_r08",
+        "release_date": "2019-06-26",
+        "release_title": "World Imagery (Wayback 2019-06-26)",
+        "release_num": 645,
+        "anchors": [
+          {
+            "field": "post_date",
+            "date": "2019-06-06"
+          }
+        ]
+      },
+      {
+        "metadata_release": "2019_r09",
+        "release_date": "2019-07-17",
+        "release_title": "World Imagery (Wayback 2019-07-17)",
+        "release_num": 16681,
+        "anchors": [
+          {
+            "field": "reference_end_inclusive",
+            "date": "2019-07-11"
+          }
+        ]
+      }
+    ]
+  },
+  "queries": [
+    {
+      "query_id": "wayback-config",
+      "url": "https://s3-us-west-2.amazonaws.com/config.maptiles.arcgis.com/waybackconfig.json",
+      "transport_status": "received",
+      "http_status": 200,
+      "transport_error": null,
+      "response_file": "raw/wayback-config.response",
+      "response_sha256": "d637e43e81490fb0516b4c6b96704f2455ead97acaa75e2d91b8b0c6e6e913d1",
+      "response_bytes": 107333,
+      "status": "complete",
+      "parsed_releases": 199
+    },
+    {
+      "query_id": "march-airbus-9",
+      "url": "https://portal.intelligence-airbusds.com/arcgis/rest/services/OneAtlas/OADConstellationArchive/MapServer/9/query?where=acquisitiondate+%3E%3D+DATE+%272019-03-03%27+AND+acquisitiondate+%3C+DATE+%272019-05-13%27&geometry=725820.0%2C5510500.0%2C726460.0%2C5511140.0&geometryType=esriGeometryEnvelope&inSR=32636&outSR=32636&spatialRel=esriSpatialRelIntersects&outFields=%2A&returnGeometry=true&f=geojson&resultRecordCount=100&orderByFields=acquisitiondate+ASC",
+      "transport_status": "received",
+      "http_status": 200,
+      "transport_error": null,
+      "response_file": "raw/march-airbus-9.response",
+      "response_sha256": "5c389083e7dcd785c3d685329fa703d8b676340c14265fa2c63f7f930705dc80",
+      "response_bytes": 99,
+      "status": "complete",
+      "records": [],
+      "site_id": "march",
+      "catalogue": "Airbus",
+      "layer": 9,
+      "platform": "Pl\u00e9iades"
+    },
+    {
+      "query_id": "march-airbus-14",
+      "url": "https://portal.intelligence-airbusds.com/arcgis/rest/services/OneAtlas/OADConstellationArchive/MapServer/14/query?where=acquisitiondate+%3E%3D+DATE+%272019-03-03%27+AND+acquisitiondate+%3C+DATE+%272019-05-13%27&geometry=725820.0%2C5510500.0%2C726460.0%2C5511140.0&geometryType=esriGeometryEnvelope&inSR=32636&outSR=32636&spatialRel=esriSpatialRelIntersects&outFields=%2A&returnGeometry=true&f=geojson&resultRecordCount=100&orderByFields=acquisitiondate+ASC",
+      "transport_status": "received",
+      "http_status": 200,
+      "transport_error": null,
+      "response_file": "raw/march-airbus-14.response",
+      "response_sha256": "5c389083e7dcd785c3d685329fa703d8b676340c14265fa2c63f7f930705dc80",
+      "response_bytes": 99,
+      "status": "complete",
+      "records": [],
+      "site_id": "march",
+      "catalogue": "Airbus",
+      "layer": 14,
+      "platform": "SPOT"
+    },
+    {
+      "query_id": "march-wayback-2019_r03",
+      "url": "https://metadata.maptiles.arcgis.com/arcgis/rest/services/World_Imagery_Metadata_2019_r03/MapServer/6/query?where=1%3D1&geometry=%7B%22xmin%22%3A725820.0%2C%22ymin%22%3A5510500.0%2C%22xmax%22%3A726460.0%2C%22ymax%22%3A5511140.0%2C%22spatialReference%22%3A%7B%22wkid%22%3A32636%7D%7D&geometryType=esriGeometryEnvelope&inSR=32636&spatialRel=esriSpatialRelWithin&outFields=OBJECTID%2CSRC_DATE2%2CNICE_DESC%2CSRC_DESC%2CSAMP_RES%2CSRC_ACC&returnGeometry=false&f=json",
+      "transport_status": "received",
+      "http_status": 200,
+      "transport_error": null,
+      "response_file": "raw/march-wayback-2019_r03.response",
+      "response_sha256": "bb94532446500b54a0cb02bc8de12517dd441195278c7cc17254b991e22b5c6d",
+      "response_bytes": 648,
+      "status": "complete",
+      "records": [],
+      "site_id": "march",
+      "catalogue": "Esri Wayback",
+      "layer": 6,
+      "release": {
+        "metadata_release": "2019_r03",
+        "release_date": "2019-03-13",
+        "release_title": "World Imagery (Wayback 2019-03-13)",
+        "release_num": 4383,
+        "anchors": [
+          {
+            "field": "reference_start_inclusive",
+            "date": "2019-03-03"
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "march-wayback-2019_r04",
+      "url": "https://metadata.maptiles.arcgis.com/arcgis/rest/services/World_Imagery_Metadata_2019_r04/MapServer/6/query?where=1%3D1&geometry=%7B%22xmin%22%3A725820.0%2C%22ymin%22%3A5510500.0%2C%22xmax%22%3A726460.0%2C%22ymax%22%3A5511140.0%2C%22spatialReference%22%3A%7B%22wkid%22%3A32636%7D%7D&geometryType=esriGeometryEnvelope&inSR=32636&spatialRel=esriSpatialRelWithin&outFields=OBJECTID%2CSRC_DATE2%2CNICE_DESC%2CSRC_DESC%2CSAMP_RES%2CSRC_ACC&returnGeometry=false&f=json",
+      "transport_status": "received",
+      "http_status": 200,
+      "transport_error": null,
+      "response_file": "raw/march-wayback-2019_r04.response",
+      "response_sha256": "bb94532446500b54a0cb02bc8de12517dd441195278c7cc17254b991e22b5c6d",
+      "response_bytes": 648,
+      "status": "complete",
+      "records": [],
+      "site_id": "march",
+      "catalogue": "Esri Wayback",
+      "layer": 6,
+      "release": {
+        "metadata_release": "2019_r04",
+        "release_date": "2019-04-03",
+        "release_title": "World Imagery (Wayback 2019-04-03)",
+        "release_num": 18691,
+        "anchors": [
+          {
+            "field": "post_date",
+            "date": "2019-04-02"
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "march-wayback-2019_r06",
+      "url": "https://metadata.maptiles.arcgis.com/arcgis/rest/services/World_Imagery_Metadata_2019_r06/MapServer/6/query?where=1%3D1&geometry=%7B%22xmin%22%3A725820.0%2C%22ymin%22%3A5510500.0%2C%22xmax%22%3A726460.0%2C%22ymax%22%3A5511140.0%2C%22spatialReference%22%3A%7B%22wkid%22%3A32636%7D%7D&geometryType=esriGeometryEnvelope&inSR=32636&spatialRel=esriSpatialRelWithin&outFields=OBJECTID%2CSRC_DATE2%2CNICE_DESC%2CSRC_DESC%2CSAMP_RES%2CSRC_ACC&returnGeometry=false&f=json",
+      "transport_status": "request_failed",
+      "http_status": null,
+      "transport_error": "The read operation timed out",
+      "status": "request_failed",
+      "records": [],
+      "site_id": "march",
+      "catalogue": "Esri Wayback",
+      "layer": 6,
+      "release": {
+        "metadata_release": "2019_r06",
+        "release_date": "2019-05-15",
+        "release_title": "World Imagery (Wayback 2019-05-15)",
+        "release_num": 9598,
+        "anchors": [
+          {
+            "field": "reference_end_inclusive",
+            "date": "2019-05-12"
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "may-airbus-9",
+      "url": "https://portal.intelligence-airbusds.com/arcgis/rest/services/OneAtlas/OADConstellationArchive/MapServer/9/query?where=acquisitiondate+%3E%3D+DATE+%272019-05-07%27+AND+acquisitiondate+%3C+DATE+%272019-07-12%27&geometry=769800.0%2C5574380.0%2C770440.0%2C5575020.0&geometryType=esriGeometryEnvelope&inSR=32636&outSR=32636&spatialRel=esriSpatialRelIntersects&outFields=%2A&returnGeometry=true&f=geojson&resultRecordCount=100&orderByFields=acquisitiondate+ASC",
+      "transport_status": "received",
+      "http_status": 200,
+      "transport_error": null,
+      "response_file": "raw/may-airbus-9.response",
+      "response_sha256": "5c389083e7dcd785c3d685329fa703d8b676340c14265fa2c63f7f930705dc80",
+      "response_bytes": 99,
+      "status": "complete",
+      "records": [],
+      "site_id": "may",
+      "catalogue": "Airbus",
+      "layer": 9,
+      "platform": "Pl\u00e9iades"
+    },
+    {
+      "query_id": "may-airbus-14",
+      "url": "https://portal.intelligence-airbusds.com/arcgis/rest/services/OneAtlas/OADConstellationArchive/MapServer/14/query?where=acquisitiondate+%3E%3D+DATE+%272019-05-07%27+AND+acquisitiondate+%3C+DATE+%272019-07-12%27&geometry=769800.0%2C5574380.0%2C770440.0%2C5575020.0&geometryType=esriGeometryEnvelope&inSR=32636&outSR=32636&spatialRel=esriSpatialRelIntersects&outFields=%2A&returnGeometry=true&f=geojson&resultRecordCount=100&orderByFields=acquisitiondate+ASC",
+      "transport_status": "received",
+      "http_status": 200,
+      "transport_error": null,
+      "response_file": "raw/may-airbus-14.response",
+      "response_sha256": "5c389083e7dcd785c3d685329fa703d8b676340c14265fa2c63f7f930705dc80",
+      "response_bytes": 99,
+      "status": "complete",
+      "records": [],
+      "site_id": "may",
+      "catalogue": "Airbus",
+      "layer": 14,
+      "platform": "SPOT"
+    },
+    {
+      "query_id": "may-wayback-2019_r06",
+      "url": "https://metadata.maptiles.arcgis.com/arcgis/rest/services/World_Imagery_Metadata_2019_r06/MapServer/6/query?where=1%3D1&geometry=%7B%22xmin%22%3A769800.0%2C%22ymin%22%3A5574380.0%2C%22xmax%22%3A770440.0%2C%22ymax%22%3A5575020.0%2C%22spatialReference%22%3A%7B%22wkid%22%3A32636%7D%7D&geometryType=esriGeometryEnvelope&inSR=32636&spatialRel=esriSpatialRelWithin&outFields=OBJECTID%2CSRC_DATE2%2CNICE_DESC%2CSRC_DESC%2CSAMP_RES%2CSRC_ACC&returnGeometry=false&f=json",
+      "transport_status": "request_failed",
+      "http_status": null,
+      "transport_error": "The read operation timed out",
+      "status": "request_failed",
+      "records": [],
+      "site_id": "may",
+      "catalogue": "Esri Wayback",
+      "layer": 6,
+      "release": {
+        "metadata_release": "2019_r06",
+        "release_date": "2019-05-15",
+        "release_title": "World Imagery (Wayback 2019-05-15)",
+        "release_num": 9598,
+        "anchors": [
+          {
+            "field": "reference_start_inclusive",
+            "date": "2019-05-07"
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "may-wayback-2019_r08",
+      "url": "https://metadata.maptiles.arcgis.com/arcgis/rest/services/World_Imagery_Metadata_2019_r08/MapServer/6/query?where=1%3D1&geometry=%7B%22xmin%22%3A769800.0%2C%22ymin%22%3A5574380.0%2C%22xmax%22%3A770440.0%2C%22ymax%22%3A5575020.0%2C%22spatialReference%22%3A%7B%22wkid%22%3A32636%7D%7D&geometryType=esriGeometryEnvelope&inSR=32636&spatialRel=esriSpatialRelWithin&outFields=OBJECTID%2CSRC_DATE2%2CNICE_DESC%2CSRC_DESC%2CSAMP_RES%2CSRC_ACC&returnGeometry=false&f=json",
+      "transport_status": "received",
+      "http_status": 200,
+      "transport_error": null,
+      "response_file": "raw/may-wayback-2019_r08.response",
+      "response_sha256": "4db343b83872a4ce1f472f8e0782e4a9e5898ab402afd215a17ab8067ec6d5d2",
+      "response_bytes": 813,
+      "status": "complete",
+      "records": [
+        {
+          "feature_index": 0,
+          "object_id": 748615,
+          "capture_date_utc": "2017-09-26",
+          "release_date": "2019-06-26",
+          "capture_in_reference_window": false,
+          "capture_on_or_before_release": true,
+          "source": "DigitalGlobe",
+          "sensor": "GE01",
+          "sampling_m": 0.46,
+          "accuracy_m": 8.47,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "access": "public Wayback display metadata; image use terms and pixels unexamined"
+        }
+      ],
+      "site_id": "may",
+      "catalogue": "Esri Wayback",
+      "layer": 6,
+      "release": {
+        "metadata_release": "2019_r08",
+        "release_date": "2019-06-26",
+        "release_title": "World Imagery (Wayback 2019-06-26)",
+        "release_num": 645,
+        "anchors": [
+          {
+            "field": "post_date",
+            "date": "2019-06-06"
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "may-wayback-2019_r09",
+      "url": "https://metadata.maptiles.arcgis.com/arcgis/rest/services/World_Imagery_Metadata_2019_r09/MapServer/6/query?where=1%3D1&geometry=%7B%22xmin%22%3A769800.0%2C%22ymin%22%3A5574380.0%2C%22xmax%22%3A770440.0%2C%22ymax%22%3A5575020.0%2C%22spatialReference%22%3A%7B%22wkid%22%3A32636%7D%7D&geometryType=esriGeometryEnvelope&inSR=32636&spatialRel=esriSpatialRelWithin&outFields=OBJECTID%2CSRC_DATE2%2CNICE_DESC%2CSRC_DESC%2CSAMP_RES%2CSRC_ACC&returnGeometry=false&f=json",
+      "transport_status": "request_failed",
+      "http_status": null,
+      "transport_error": "The read operation timed out",
+      "status": "request_failed",
+      "records": [],
+      "site_id": "may",
+      "catalogue": "Esri Wayback",
+      "layer": 6,
+      "release": {
+        "metadata_release": "2019_r09",
+        "release_date": "2019-07-17",
+        "release_title": "World Imagery (Wayback 2019-07-17)",
+        "release_num": 16681,
+        "anchors": [
+          {
+            "field": "reference_end_inclusive",
+            "date": "2019-07-11"
+          }
+        ]
+      }
+    }
+  ],
+  "limitations": [
+    "Archive visibility and public access vary. Empty responses cover the queried public layers and dates.",
+    "Airbus acquisition and publication dates are distinct. Catalogue cloud is scene-level metadata.",
+    "Airbus scene sample spacing and scene imagery access remain unverified.",
+    "Wayback release dates date the mosaic version. SRC_DATE2 dates the source listed in that version.",
+    "A full footprint is spatial metadata. Crop clarity, land cover and event timing require pixel evidence."
+  ],
+  "reference_imagery_acquired": false,
+  "reference_roster_selected": false,
+  "labels_approved": 0
+}

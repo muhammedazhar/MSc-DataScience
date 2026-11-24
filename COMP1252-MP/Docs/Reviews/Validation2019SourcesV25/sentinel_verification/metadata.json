@@ -1,9 +1,9 @@
 {
   "execution_status": "completed",
   "mode": "validation_2019_sentinel_inventory_replay",
-  "protocol_sha256": "2f75e8f2941fe7de687c01dd83d95b39578dc12f4b5c366166e82f2500a8cec2",
+  "protocol_sha256": "a1f4d933e917d53d1eef1dd36087aef6062b1ce64bbc1f3ccc56b78b7b7694f0",
   "artifact_sha256": {
-    "verification.json": "e9326385b0c585d3b9606942660846061378989c724d6cb398673bf6898050cb"
+    "verification.json": "421a83bd87c5e5294aa040dff3de454663a18464aa1bb82a0a207b57079f3c02"
   },
   "catalogue_requests": 0,
   "satellite_pixel_reads": 0,
@@ -15,9 +15,9 @@
   "resources": {
     "logical_cpu_count": 11,
     "machine_ram_gib": 18.0,
-    "worker_peak_rss_mib_sampled": 109.6,
-    "worker_high_water_rss_mib": 109.83,
-    "minimum_available_gib_sampled": 3.71,
+    "worker_peak_rss_mib_sampled": 112.0,
+    "worker_high_water_rss_mib": 112.16,
+    "minimum_available_gib_sampled": 3.3,
     "elapsed_seconds": 0.51,
     "worker_limit_mib": 512,
     "minimum_available_gib_limit": 1.5,

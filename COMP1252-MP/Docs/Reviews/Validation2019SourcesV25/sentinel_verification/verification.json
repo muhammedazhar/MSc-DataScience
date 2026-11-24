@@ -1,9 +1,9 @@
 {
   "status": "passed",
-  "protocol_sha256": "2f75e8f2941fe7de687c01dd83d95b39578dc12f4b5c366166e82f2500a8cec2",
-  "inventory_metadata_sha256": "c766c5ee5beb316262aa74e192c32a40bddf47b3d050abec9ea703151c5dd18f",
+  "protocol_sha256": "a1f4d933e917d53d1eef1dd36087aef6062b1ce64bbc1f3ccc56b78b7b7694f0",
+  "inventory_metadata_sha256": "99beab60e7ad6fcbae0f32d84eda1e0cb30cb0d8e3c9b1b081ffb15ee9d9cb6a",
   "inventory_artifact_sha256": {
-    "inventory.json": "a577fb6d8c03803a21d2ff30854e57d5da81b818aeec908a37c24572cae325ae",
+    "inventory.json": "ca500ca5adc46a0e1c3a956bdc5c160bbf173993608f86260215edf04d9351ca",
     "march/raw/page-01.json": "d726dd8a186546f23838bfb8369886586561f375a1e6934e80cb989df91b777d",
     "march/raw/page-02.json": "aeed75ce6caaee97a9f36263bac972852a6864a33ccb2d78cdbb0961c1f80762",
     "march/raw/request-01.json": "ef1f38aab6d6248084c63d77704588c82fadfc5f4edc19dbecf1db0887df5e6c",

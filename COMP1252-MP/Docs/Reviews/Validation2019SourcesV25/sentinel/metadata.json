@@ -1,9 +1,9 @@
 {
   "execution_status": "completed",
   "mode": "validation_2019_sentinel_inventory",
-  "protocol_sha256": "2f75e8f2941fe7de687c01dd83d95b39578dc12f4b5c366166e82f2500a8cec2",
+  "protocol_sha256": "a1f4d933e917d53d1eef1dd36087aef6062b1ce64bbc1f3ccc56b78b7b7694f0",
   "artifact_sha256": {
-    "inventory.json": "a577fb6d8c03803a21d2ff30854e57d5da81b818aeec908a37c24572cae325ae",
+    "inventory.json": "ca500ca5adc46a0e1c3a956bdc5c160bbf173993608f86260215edf04d9351ca",
     "march/raw/page-01.json": "d726dd8a186546f23838bfb8369886586561f375a1e6934e80cb989df91b777d",
     "march/raw/page-02.json": "aeed75ce6caaee97a9f36263bac972852a6864a33ccb2d78cdbb0961c1f80762",
     "march/raw/request-01.json": "ef1f38aab6d6248084c63d77704588c82fadfc5f4edc19dbecf1db0887df5e6c",
@@ -24,10 +24,10 @@
   "resources": {
     "logical_cpu_count": 11,
     "machine_ram_gib": 18.0,
-    "worker_peak_rss_mib_sampled": 120.3,
-    "worker_high_water_rss_mib": 120.48,
-    "minimum_available_gib_sampled": 3.4,
-    "elapsed_seconds": 4.58,
+    "worker_peak_rss_mib_sampled": 118.7,
+    "worker_high_water_rss_mib": 118.97,
+    "minimum_available_gib_sampled": 3.15,
+    "elapsed_seconds": 3.56,
     "worker_limit_mib": 512,
     "minimum_available_gib_limit": 1.5,
     "runtime_limit_seconds": 300,

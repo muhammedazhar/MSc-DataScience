@@ -1,7 +1,7 @@
 {
   "schema_version": 25,
   "status": "complete_2019_sentinel_catalogue_inventory",
-  "protocol_sha256": "2f75e8f2941fe7de687c01dd83d95b39578dc12f4b5c366166e82f2500a8cec2",
+  "protocol_sha256": "a1f4d933e917d53d1eef1dd36087aef6062b1ce64bbc1f3ccc56b78b7b7694f0",
   "prior_manual_exposed_group_ids": [
     "group-0d4c6841d965abf62969",
     "group-45f0c39e787ca8622918",

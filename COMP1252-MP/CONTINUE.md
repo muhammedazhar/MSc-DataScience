@@ -5,7 +5,7 @@ status, then the latest handoff before edits. Commit every completed verified
 logical change with the handoff updated and push to the SAME branch. This entry
 point works for Codex, Gemini Antigravity or another agent without chat history.
 
-Current V25 2019 validation site source feasibility:
+Completed V25 2019 validation site source feasibility:
 **`Docs/Handoffs/2026-11-24-2019-validation-feasibility.md`**.
 Completed V24 fresh validation acquisition and QA:
 **`Docs/Handoffs/2026-11-24-fresh-validation-qa.md`**.
@@ -155,6 +155,14 @@ and published both 21 and 16 July scenes, then screened and replayed all four
 fixed comparisons. Both pre-dates flag every pixel in both crops. The roster
 for visual review remains empty. The V24 handoff records the retained failures
 and the other 2019 groups available for a separate metadata-first plan.
+
+V25 found two earlier metadata matches per fixed 2019 crop. The March matches
+are 3 and 8 March and the May matches are 7 and 12 May. The Airbus and sampled
+Wayback archives supplied zero full-crop in-window independent captures. May’s
+Wayback capture is from September 2017. The archived queries and exact replays
+retain the three prior cloudy 2019 dates and all catalogue variants. No new
+roster is fixed. Native L1C XML and asset-list preflight are the next possible
+check before any imagery acquisition.
 
 Use one nice +10 CPU worker, native/Torch threads 1, no GPU, unchanged
 `validate_sample.run_guarded`, 512 MiB RSS and 1.5 GiB available-system-memory

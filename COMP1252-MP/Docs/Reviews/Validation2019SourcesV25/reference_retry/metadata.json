@@ -1,0 +1,41 @@
+{
+  "execution_status": "completed",
+  "mode": "2019_reference_inventory",
+  "protocol_sha256": "a1f4d933e917d53d1eef1dd36087aef6062b1ce64bbc1f3ccc56b78b7b7694f0",
+  "artifact_sha256": {
+    "raw/march-airbus-14.response": "5c389083e7dcd785c3d685329fa703d8b676340c14265fa2c63f7f930705dc80",
+    "raw/march-airbus-9.response": "5c389083e7dcd785c3d685329fa703d8b676340c14265fa2c63f7f930705dc80",
+    "raw/march-wayback-2019_r04.response": "bb94532446500b54a0cb02bc8de12517dd441195278c7cc17254b991e22b5c6d",
+    "raw/march-wayback-2019_r06.response": "bb94532446500b54a0cb02bc8de12517dd441195278c7cc17254b991e22b5c6d",
+    "raw/may-airbus-14.response": "5c389083e7dcd785c3d685329fa703d8b676340c14265fa2c63f7f930705dc80",
+    "raw/may-airbus-9.response": "5c389083e7dcd785c3d685329fa703d8b676340c14265fa2c63f7f930705dc80",
+    "raw/may-wayback-2019_r06.response": "c823765db55f5754c6ebbef8977f03cbd4a4083d1e45cce69913476db6bb9a21",
+    "raw/may-wayback-2019_r08.response": "4db343b83872a4ce1f472f8e0782e4a9e5898ab402afd215a17ab8067ec6d5d2",
+    "raw/may-wayback-2019_r09.response": "738db3ae2e542fe4186a45e4d4884d1934267c8f7b31fe4f02aa6922a6150d20",
+    "raw/wayback-config.response": "d637e43e81490fb0516b4c6b96704f2455ead97acaa75e2d91b8b0c6e6e913d1",
+    "references.json": "f41f6667888d881a3127e2cf4039d72be58e49fccd9fcd9762b4d1c938d40145"
+  },
+  "network_requests": 11,
+  "satellite_pixel_reads": 0,
+  "image_asset_downloads": 0,
+  "model_executions": 0,
+  "labels_approved": 0,
+  "resources": {
+    "logical_cpu_count": 11,
+    "machine_ram_gib": 18.0,
+    "worker_peak_rss_mib_sampled": 94.9,
+    "worker_high_water_rss_mib": 94.89,
+    "minimum_available_gib_sampled": 3.21,
+    "elapsed_seconds": 50.79,
+    "worker_limit_mib": 512,
+    "minimum_available_gib_limit": 1.5,
+    "runtime_limit_seconds": 300,
+    "workers": 1,
+    "native_thread_limit": 1,
+    "nice_increment": 10,
+    "gdal_cache_mib": 0,
+    "warp_memory_mib": 0,
+    "gpu_used": false,
+    "monitor_interval_seconds": 0.25
+  }
+}

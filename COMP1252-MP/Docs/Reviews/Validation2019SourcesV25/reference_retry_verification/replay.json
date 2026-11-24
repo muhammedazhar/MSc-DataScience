@@ -1,0 +1,20 @@
+{
+  "schema_version": 25,
+  "result": "byte_identical",
+  "protocol_sha256": "a1f4d933e917d53d1eef1dd36087aef6062b1ce64bbc1f3ccc56b78b7b7694f0",
+  "network_requests": 0,
+  "inventory_artifact_sha256": {
+    "raw/march-airbus-14.response": "5c389083e7dcd785c3d685329fa703d8b676340c14265fa2c63f7f930705dc80",
+    "raw/march-airbus-9.response": "5c389083e7dcd785c3d685329fa703d8b676340c14265fa2c63f7f930705dc80",
+    "raw/march-wayback-2019_r04.response": "bb94532446500b54a0cb02bc8de12517dd441195278c7cc17254b991e22b5c6d",
+    "raw/march-wayback-2019_r06.response": "bb94532446500b54a0cb02bc8de12517dd441195278c7cc17254b991e22b5c6d",
+    "raw/may-airbus-14.response": "5c389083e7dcd785c3d685329fa703d8b676340c14265fa2c63f7f930705dc80",
+    "raw/may-airbus-9.response": "5c389083e7dcd785c3d685329fa703d8b676340c14265fa2c63f7f930705dc80",
+    "raw/may-wayback-2019_r06.response": "c823765db55f5754c6ebbef8977f03cbd4a4083d1e45cce69913476db6bb9a21",
+    "raw/may-wayback-2019_r08.response": "4db343b83872a4ce1f472f8e0782e4a9e5898ab402afd215a17ab8067ec6d5d2",
+    "raw/may-wayback-2019_r09.response": "738db3ae2e542fe4186a45e4d4884d1934267c8f7b31fe4f02aa6922a6150d20",
+    "raw/wayback-config.response": "d637e43e81490fb0516b4c6b96704f2455ead97acaa75e2d91b8b0c6e6e913d1",
+    "references.json": "f41f6667888d881a3127e2cf4039d72be58e49fccd9fcd9762b4d1c938d40145"
+  },
+  "queries_replayed": 11
+}

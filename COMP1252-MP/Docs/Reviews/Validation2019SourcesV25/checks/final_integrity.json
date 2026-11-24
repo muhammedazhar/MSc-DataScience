@@ -1,0 +1,121 @@
+{
+  "status": "passed",
+  "protocol_sha256": "a1f4d933e917d53d1eef1dd36087aef6062b1ce64bbc1f3ccc56b78b7b7694f0",
+  "pinned_inputs_checked": 25,
+  "pinned_implementations_and_tests_checked": 67,
+  "archived_artifacts_match_git_index": true,
+  "sentinel_catalogue_items_by_site": {
+    "march": 3,
+    "may": 10
+  },
+  "sentinel_raw_pages_replayed": 4,
+  "nominal_earlier_dates": {
+    "march": [
+      "2019-03-03",
+      "2019-03-08"
+    ],
+    "may": [
+      "2019-05-07",
+      "2019-05-12"
+    ]
+  },
+  "reference_unique_queries_complete_across_runs": 11,
+  "reference_attempt_statuses": {
+    "wayback-config": [
+      "complete",
+      "complete"
+    ],
+    "march-airbus-9": [
+      "complete",
+      "complete"
+    ],
+    "march-airbus-14": [
+      "complete",
+      "complete"
+    ],
+    "march-wayback-2019_r03": [
+      "complete",
+      "request_failed"
+    ],
+    "march-wayback-2019_r04": [
+      "complete",
+      "complete"
+    ],
+    "march-wayback-2019_r06": [
+      "request_failed",
+      "complete"
+    ],
+    "may-airbus-9": [
+      "complete",
+      "complete"
+    ],
+    "may-airbus-14": [
+      "complete",
+      "complete"
+    ],
+    "may-wayback-2019_r06": [
+      "request_failed",
+      "complete"
+    ],
+    "may-wayback-2019_r08": [
+      "complete",
+      "complete"
+    ],
+    "may-wayback-2019_r09": [
+      "request_failed",
+      "complete"
+    ]
+  },
+  "full_crop_in_window_reference_records": 0,
+  "may_older_reference_capture_dates": [
+    "2017-09-26"
+  ],
+  "prior_manual_exposed_groups": 7,
+  "worker_results": {
+    "sentinel": {
+      "peak_mib": 118.97,
+      "available_memory_minimum_gib": 3.15,
+      "seconds": 3.56
+    },
+    "sentinel_verification": {
+      "peak_mib": 112.16,
+      "available_memory_minimum_gib": 3.3,
+      "seconds": 0.51
+    },
+    "references": {
+      "peak_mib": 93.97,
+      "available_memory_minimum_gib": 3.2,
+      "seconds": 77.98
+    },
+    "reference_verification": {
+      "peak_mib": 87.86,
+      "available_memory_minimum_gib": 3.36,
+      "seconds": 0.25
+    },
+    "reference_retry": {
+      "peak_mib": 94.89,
+      "available_memory_minimum_gib": 3.21,
+      "seconds": 50.79
+    },
+    "reference_retry_verification": {
+      "peak_mib": 85.81,
+      "available_memory_minimum_gib": 3.92,
+      "seconds": 0.26
+    },
+    "reference_initial_attempt/inventory": {
+      "peak_mib": 93.81,
+      "available_memory_minimum_gib": 3.73,
+      "seconds": 6.1
+    },
+    "reference_initial_attempt/verification": {
+      "peak_mib": 84.73,
+      "available_memory_minimum_gib": 3.8,
+      "seconds": 0.26
+    }
+  },
+  "image_assets_downloaded": 0,
+  "satellite_pixel_reads": 0,
+  "models_executed": 0,
+  "labels_approved": 0,
+  "new_source_roster_selected": false
+}
