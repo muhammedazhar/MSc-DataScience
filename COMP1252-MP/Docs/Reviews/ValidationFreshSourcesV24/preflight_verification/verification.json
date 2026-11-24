@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "protocol_sha256": "9bbb2f358057eab87396898093dbd05e8211f2f317a92af5f87ca0a4b2deb419",
+  "preflight_metadata_sha256": "11e25a7f5abeeba00fc22cd19eeb1b3b4c7b7fe6cd16bf57573f90de6d4b1746",
+  "preflight_artifact_sha256": {
+    "preflight.json": "f3844b39cafbc612e1a80bfde241816dbbaeb93364bc43416ba6f09203e4348f",
+    "report.md": "6fb60bd50b313bcb3d5f50da6a11c9d40a0b27d391e745d202d4233c52159434",
+    "requests.json": "c5e011920b344924b1287007f7a1adeb1e1f26a6dc9617bbfc5ce21aaf1ea582",
+    "source-01/listing.xml": "7ee9271b7b08a086a2a5e85954eb274c2025a0fd6307bf0e474cfd63ab3103dc",
+    "source-01/product.xml": "8dd9652a10d341a61ab6efeac4fea7fcc40130937f689db7862ce93c5731cf7d",
+    "source-01/tile.xml": "d209058ca9833e71aa90616048749b33235dc78a6ff47f3b48ff4b7a0976a966",
+    "source-02/listing.xml": "523922bfae447a4a10e94dcbd46427292fac5a69e876897e5a6b8fb601e9827f",
+    "source-02/product.xml": "4392b6533f2f40c8c3f3a82f655c349d889fd1e67223f089de4e69508a30b589",
+    "source-02/tile.xml": "46d1d3346e19d71f02e90b454ef00ea82958d23f20bb5e6b8607e06b9bb6a26d"
+  },
+  "replayed_requests": 8,
+  "ready_dates": [
+    "2018-07-21",
+    "2018-07-16"
+  ],
+  "network_requests": 0
+}

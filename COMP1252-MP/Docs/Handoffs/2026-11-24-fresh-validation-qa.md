@@ -13,6 +13,9 @@ geometry before decoding new imagery, and retain every QA result. Use one
 nice +10 CPU worker, one native thread, 512 MiB RSS cap, 1.5 GiB available
 memory reserve, and at least 2 GiB disk reserve during download.
 
-Current status is pinned source and QA preparation. Preflight, source
-publication, and the four crop checks are pending. Class approvals and model
-evaluation remain separate from this QA milestone.
+Checkpoint `62b7b76` pins the protocol and three workers. Live preflight and
+offline replay passed for both real 36UXA XML pairs, complete padded footprints,
+and 58 listed asset pins per scene. The listed total is 1,143,754,335 bytes.
+Working memory peaked at 102.83 MiB in preflight and 90.39 MiB in replay.
+Acquisition, source publication, and the four crop checks are pending. Class
+approvals and model evaluation remain separate from this QA milestone.

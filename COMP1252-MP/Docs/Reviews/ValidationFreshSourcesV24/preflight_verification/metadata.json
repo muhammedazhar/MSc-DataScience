@@ -1,0 +1,31 @@
+{
+  "execution_status": "completed",
+  "mode": "fresh_source_preflight_replay",
+  "protocol_sha256": "9bbb2f358057eab87396898093dbd05e8211f2f317a92af5f87ca0a4b2deb419",
+  "artifact_sha256": {
+    "verification.json": "05b523ad8d26a3706bd63e54e42d1d75c820f3fdd6cca61ec9cfc6ad2511b75a"
+  },
+  "network_requests": 0,
+  "image_asset_downloads": 0,
+  "satellite_pixel_reads": 0,
+  "model_executions": 0,
+  "labels_approved": 0,
+  "resources": {
+    "logical_cpu_count": 11,
+    "machine_ram_gib": 18.0,
+    "worker_peak_rss_mib_sampled": 0.4,
+    "worker_high_water_rss_mib": 90.39,
+    "minimum_available_gib_sampled": 3.07,
+    "elapsed_seconds": 0.26,
+    "worker_limit_mib": 512,
+    "minimum_available_gib_limit": 1.5,
+    "runtime_limit_seconds": 300,
+    "workers": 1,
+    "native_thread_limit": 1,
+    "nice_increment": 10,
+    "gdal_cache_mib": 16,
+    "warp_memory_mib": 0,
+    "gpu_used": false,
+    "monitor_interval_seconds": 0.25
+  }
+}
