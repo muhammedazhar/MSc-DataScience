@@ -19,6 +19,7 @@ and 58 listed asset pins per scene. The listed total is 1,143,754,335 bytes.
 Working memory peaked at 102.83 MiB in preflight and 90.39 MiB in replay.
 Checkpoint `6bc801e` saves preflight and exact replay. The 21 July source
 passed staging with 58 files and 596,775,942 bytes verified. The download
-took 79.64 seconds and peaked at 101.56 MiB RSS. The 16 July source, publication
-and the four crop checks are pending. Class approvals and model evaluation
-remain separate from this QA milestone.
+took 79.64 seconds and peaked at 101.56 MiB RSS, recorded at `5b2e405`.
+The 16 July source also passed staging with 58 files and 546,978,393 bytes
+verified. It took 76.94 seconds and peaked at 100.03 MiB RSS. Both sources
+are ready for transaction publication. Publication and crop QA are pending.
