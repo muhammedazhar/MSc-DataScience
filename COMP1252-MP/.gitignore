@@ -212,3 +212,5 @@ Keys/
 !/Docs/Reviews/ValidationSourceScreenV11/screen/masks/*.tif
 !/Docs/Reviews/ValidationEarlierScreenV15/screen/masks/*.tif
 /Datasets/ValidationPilot/
+/Datasets/.sentinel-2-downloads/
+/Datasets/.sentinel-2-acquisition.lock
