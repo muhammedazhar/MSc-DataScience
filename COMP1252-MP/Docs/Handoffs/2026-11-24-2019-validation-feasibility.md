@@ -21,8 +21,20 @@ clarity over the crop require separate verification.
 
 ## Scope checkpoint
 
-The [protocol](../Reviews/Validation2019SourcesV25/protocol.json) pins the site
-identities, query rules, prior evidence and implementations. Catalogue results
-and offline replay remain pending. Keep one nice +10 CPU worker, one native
-thread, a 512 MiB RSS cap, a 1.5 GiB available memory reserve and a 300 second
-runtime cap. Run one job at a time through the existing guard.
+Checkpoint `0851a9b` pins the site identities, query rules, prior evidence and
+implementations in the [protocol](../Reviews/Validation2019SourcesV25/protocol.json).
+Keep one nice +10 CPU worker, one native thread, a 512 MiB RSS cap, a 1.5 GiB
+available memory reserve and a 300 second runtime cap. Run one job at a time
+through the existing guard.
+
+## Sentinel-2 inventory
+
+The [inventory](../Reviews/Validation2019SourcesV25/sentinel/report.md) retained
+all 13 Earth Search products across four raw pages. March has two nominal
+matches (3 and 8 March) among three products, including the original excluded
+13 March product. May has two nominal matches (7 and 12 May) among ten
+products. The other May items have a different baseline, orbit or tile.
+All matches cover the entire crop and QA margin according to the catalogue.
+The four raw pages and their normalized outputs replayed byte for byte without
+network calls. Worker RSS peaked at 120.48 MiB and available memory stayed at
+or above 3.40 GiB. This checkpoint leaves independent reference checks pending.
