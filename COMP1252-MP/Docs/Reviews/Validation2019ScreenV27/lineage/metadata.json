@@ -1,0 +1,43 @@
+{
+  "execution_status": "completed",
+  "schema_version": 27,
+  "mode": "prepare",
+  "protocol_sha256": "6915c7737b8e07179db14e7594ce35b89ad420965dc95223e14cde7be7f2a6b3",
+  "pair_count": 4,
+  "group_count": 2,
+  "labels_approved": 0,
+  "all_27_channels_checked": false,
+  "validation_eligible": false,
+  "forest_model_executions": 0,
+  "new_imagery_reviewed": 0,
+  "prior_source_file_stat_count": 2262,
+  "artifact_sha256": {
+    "derived_pairs.jsonl": "e5fdc7fd9c4a7734689970666304532b71cdf94f89bc7a4e60a9c539a734f1dc",
+    "lineage.json": "31c4bce44fe98c4addbbbeca6c3147fa8eaedf5919e36a822ab864f8bfd9ec39"
+  },
+  "cloud_model_executions": 0,
+  "source_jp2_window_reads": 0,
+  "checks": {
+    "exact_lineage": true,
+    "cumulative_targets": true,
+    "split_isolation": true
+  },
+  "resources": {
+    "logical_cpu_count": 11,
+    "machine_ram_gib": 18.0,
+    "worker_peak_rss_mib_sampled": 151.4,
+    "worker_high_water_rss_mib": 153.16,
+    "minimum_available_gib_sampled": 3.47,
+    "elapsed_seconds": 2.04,
+    "worker_limit_mib": 512,
+    "minimum_available_gib_limit": 1.5,
+    "runtime_limit_seconds": 300,
+    "workers": 1,
+    "native_thread_limit": 1,
+    "nice_increment": 10,
+    "gdal_cache_mib": 32,
+    "warp_memory_mib": 16,
+    "gpu_used": false,
+    "monitor_interval_seconds": 0.25
+  }
+}

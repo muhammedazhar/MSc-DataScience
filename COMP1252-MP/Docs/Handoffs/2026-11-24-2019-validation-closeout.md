@@ -32,5 +32,20 @@ reserve and the existing 300 second guard. Each run writes a distinct
 | 2019-05-07 | 58 | 347,466,958 | 78.70 s | 66.28 MiB |
 | 2019-05-12 | 58 | 570,786,606 | 114.15 s | 63.78 MiB |
 
-Pending work includes publication dates absent from the table, comparison lineage,
-cloud screening, replay and the project results closeout.
+All four downloader transactions are complete. Each publication receipt
+binds 58 verified local files and actual frozen QA metadata to the original
+V26 manifest. The large raw sources and transaction journals remain local.
+
+## Pre-screen lineage
+
+The [screening protocol](../Reviews/Validation2019ScreenV27/protocol.json)
+and [lineage](../Reviews/Validation2019ScreenV27/lineage/lineage.json) bind four
+distinct pairs to the frozen split, fixed post observations, unchanged crops
+and the verified publication receipts. The cumulative new-loss reference
+recomputed to 180 pixels at the March site with 73 eroded anchor pixels, and
+46 at the May site with 13 eroded anchor pixels. All footprints passed the
+split-isolation gate. The guard checked 2,262 prior source file stats and
+preserved the three known cloudy 2019 comparisons and four V24 exclusions.
+Lineage preparation peaked at 153.16 MiB and read zero image band windows.
+
+Cloud screening, replay and the project results closeout are pending.
