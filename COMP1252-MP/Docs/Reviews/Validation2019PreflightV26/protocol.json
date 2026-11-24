@@ -1,0 +1,119 @@
+{
+  "schema_version": 26,
+  "scope": "Native L1C XML and required-asset listing checks for all four V25 metadata candidates.",
+  "resources": {
+    "workers": 1,
+    "native_threads": 1,
+    "nice_increment": 10,
+    "gpu_used": false,
+    "worker_rss_mib": 512,
+    "available_memory_reserve_gib": 1.5,
+    "max_seconds_per_worker": 300
+  },
+  "provider": {
+    "base_url": "https://sentinel-s2-l1c.s3.amazonaws.com/",
+    "allow_automatic_redirects": false,
+    "listing_max_keys": 300,
+    "maximum_listing_bytes": 2097152,
+    "require_listing_not_truncated": true,
+    "maximum_xml_bytes": 5242880,
+    "maximum_total_response_bytes": 50331648,
+    "maximum_requests": 16,
+    "timeout_seconds": 15,
+    "require_xml_size_etag_content_length_md5_if_match": true,
+    "anonymous_only_no_paid_access": true
+  },
+  "required_files_per_scene": 58,
+  "metadata_candidates": [
+    {
+      "site_id": "march",
+      "item_id": "S2B_36UYA_20190303_0_L1C",
+      "scene_id": "S2B_MSIL1C_20190303T084009_N0207_R064_T36UYA_20190303T123109",
+      "acquisition_date": "2019-03-03",
+      "raw_item_sha256": "196ea4117d1a68f55fd83630f7fdca229d1e5ee5f1e4e781dff8cf374df4d350",
+      "sequence": "0",
+      "tile_prefix": "tiles/36/U/YA/2019/3/3/0/",
+      "product_key": "products/2019/3/3/S2B_MSIL1C_20190303T084009_N0207_R064_T36UYA_20190303T123109/metadata.xml",
+      "pair_id": "pair-f113871fa642d1296fbc",
+      "event_id": "event-09d8404da019897e1147",
+      "group_id": "group-a77532f92e6bf57d35aa",
+      "post_date": "2019-04-02",
+      "post_scene_id": "S2B_MSIL1C_20190402T083559_N0207_R064_T36UYA_20190402T111852",
+      "interval_to_post_days": 30
+    },
+    {
+      "site_id": "march",
+      "item_id": "S2A_36UYA_20190308_0_L1C",
+      "scene_id": "S2A_MSIL1C_20190308T083811_N0207_R064_T36UYA_20190308T122407",
+      "acquisition_date": "2019-03-08",
+      "raw_item_sha256": "c691e665a0c544c3b7b6f1a57e9b75a02efb92278b878e00b1163039c817dda5",
+      "sequence": "0",
+      "tile_prefix": "tiles/36/U/YA/2019/3/8/0/",
+      "product_key": "products/2019/3/8/S2A_MSIL1C_20190308T083811_N0207_R064_T36UYA_20190308T122407/metadata.xml",
+      "pair_id": "pair-f113871fa642d1296fbc",
+      "event_id": "event-09d8404da019897e1147",
+      "group_id": "group-a77532f92e6bf57d35aa",
+      "post_date": "2019-04-02",
+      "post_scene_id": "S2B_MSIL1C_20190402T083559_N0207_R064_T36UYA_20190402T111852",
+      "interval_to_post_days": 25
+    },
+    {
+      "site_id": "may",
+      "item_id": "S2A_36UYA_20190507_0_L1C",
+      "scene_id": "S2A_MSIL1C_20190507T083601_N0207_R064_T36UYA_20190507T104302",
+      "acquisition_date": "2019-05-07",
+      "raw_item_sha256": "8cb192df0fb304a1463ae904fea92f1a9dc2926e9c1e2700537a0debed953ee4",
+      "sequence": "0",
+      "tile_prefix": "tiles/36/U/YA/2019/5/7/0/",
+      "product_key": "products/2019/5/7/S2A_MSIL1C_20190507T083601_N0207_R064_T36UYA_20190507T104302/metadata.xml",
+      "pair_id": "pair-73bad06c9e0d3fe6b7fc",
+      "event_id": "event-011bc19e1e0f43eaa1ea",
+      "group_id": "group-01d258e68b5c4e02152b",
+      "post_date": "2019-06-06",
+      "post_scene_id": "S2A_MSIL1C_20190606T083601_N0207_R064_T36UYA_20190606T104250",
+      "interval_to_post_days": 30
+    },
+    {
+      "site_id": "may",
+      "item_id": "S2B_36UYA_20190512_0_L1C",
+      "scene_id": "S2B_MSIL1C_20190512T083609_N0207_R064_T36UYA_20190512T105433",
+      "acquisition_date": "2019-05-12",
+      "raw_item_sha256": "a78b8fce39af7588aa41044eafd44ff9f27ede0ef1079f33f9d1c32aa2e3e100",
+      "sequence": "0",
+      "tile_prefix": "tiles/36/U/YA/2019/5/12/0/",
+      "product_key": "products/2019/5/12/S2B_MSIL1C_20190512T083609_N0207_R064_T36UYA_20190512T105433/metadata.xml",
+      "pair_id": "pair-73bad06c9e0d3fe6b7fc",
+      "event_id": "event-011bc19e1e0f43eaa1ea",
+      "group_id": "group-01d258e68b5c4e02152b",
+      "post_date": "2019-06-06",
+      "post_scene_id": "S2A_MSIL1C_20190606T083601_N0207_R064_T36UYA_20190606T104250",
+      "interval_to_post_days": 25
+    }
+  ],
+  "acquisition_authorized": false,
+  "source_files": {
+    "v25_protocol": {
+      "path": "Docs/Reviews/Validation2019SourcesV25/protocol.json",
+      "sha256": "a1f4d933e917d53d1eef1dd36087aef6062b1ce64bbc1f3ccc56b78b7b7694f0"
+    },
+    "v25_inventory": {
+      "path": "Docs/Reviews/Validation2019SourcesV25/sentinel/inventory.json",
+      "sha256": "ca500ca5adc46a0e1c3a956bdc5c160bbf173993608f86260215edf04d9351ca"
+    },
+    "v25_metadata": {
+      "path": "Docs/Reviews/Validation2019SourcesV25/sentinel/metadata.json",
+      "sha256": "99beab60e7ad6fcbae0f32d84eda1e0cb30cb0d8e3c9b1b081ffb15ee9d9cb6a"
+    },
+    "v25_replay": {
+      "path": "Docs/Reviews/Validation2019SourcesV25/sentinel_verification/verification.json",
+      "sha256": "421a83bd87c5e5294aa040dff3de454663a18464aa1bb82a0a207b57079f3c02"
+    },
+    "v25_integrity": {
+      "path": "Docs/Reviews/Validation2019SourcesV25/checks/final_integrity.json",
+      "sha256": "6ea30cde2d6da7bfaa9da209b699ed2242b375d0dfa34bc2013bbbe21f52f85e"
+    }
+  },
+  "implementation_sha256": {
+    "Solutions/preflight_2019_validation_sources.py": "90465d816b8e03be9d48ff8e44bc78117e836622dbce250024a7363c81cd3004"
+  }
+}
