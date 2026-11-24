@@ -21,5 +21,9 @@ Checkpoint `6bc801e` saves preflight and exact replay. The 21 July source
 passed staging with 58 files and 596,775,942 bytes verified. The download
 took 79.64 seconds and peaked at 101.56 MiB RSS, recorded at `5b2e405`.
 The 16 July source also passed staging with 58 files and 546,978,393 bytes
-verified. It took 76.94 seconds and peaked at 100.03 MiB RSS. Both sources
-are ready for transaction publication. Publication and crop QA are pending.
+verified. It took 76.94 seconds and peaked at 100.03 MiB RSS, recorded at
+`fc22a7f`. Both sources are published and independently reverified under
+`Datasets/Sentinel-2/`. All 116 file hashes and local XML readiness match.
+The original 2,146 source fingerprints were checked and remain unchanged.
+Publication verification peaked at 111.59 MiB RSS. Lineage and crop QA are
+pending.
