@@ -25,5 +25,9 @@ verified. It took 76.94 seconds and peaked at 100.03 MiB RSS, recorded at
 `fc22a7f`. Both sources are published and independently reverified under
 `Datasets/Sentinel-2/`. All 116 file hashes and local XML readiness match.
 The original 2,146 source fingerprints were checked and remain unchanged.
-Publication verification peaked at 111.59 MiB RSS. Lineage and crop QA are
-pending.
+Publication verification peaked at 111.59 MiB RSS. Checkpoint `59aa363`
+saves the durable publication and replay receipts. Lineage preparation is
+complete. Four distinct comparisons preserve both original crops and group
+assignments. Each recomputes cumulative temporal geometry from its actual
+pre-date and fixed post-date and passes split isolation. The guarded lineage
+worker peaked at 274.25 MiB. Crop QA is pending.
