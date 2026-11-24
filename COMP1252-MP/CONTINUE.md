@@ -5,6 +5,8 @@ status, then the latest handoff before edits. Commit every completed verified
 logical change with the handoff updated and push to the SAME branch. This entry
 point works for Codex, Gemini Antigravity or another agent without chat history.
 
+Current V25 2019 validation site source feasibility:
+**`Docs/Handoffs/2026-11-24-2019-validation-feasibility.md`**.
 Completed V24 fresh validation acquisition and QA:
 **`Docs/Handoffs/2026-11-24-fresh-validation-qa.md`**.
 Completed V23 fresh validation source feasibility:
