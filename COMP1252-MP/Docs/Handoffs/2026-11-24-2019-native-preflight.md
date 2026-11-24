@@ -25,7 +25,22 @@ available memory reserve and a 300 second runtime cap. The metadata requests
 are anonymous and capped at 16 per run. Recheck disk for any future imagery
 phase using the measured payload and a 2 GiB reserve.
 
-The scope and worker are pinned. Offline checks verified all raw catalogue
-joins, all 16 allowlisted requests, rejection of an imagery request and parser
-compatibility with a local N0207 XML pair. The live requests and offline
-replay are pending. The acquisition roster remains open.
+Checkpoint `2797e1c` pins the scope and first worker. Offline checks verified
+all raw catalogue joins, all 16 allowlisted requests, rejection of an imagery
+request and parser compatibility with a local N0207 XML pair.
+
+The [initial archive run](../Reviews/Validation2019PreflightV26/initial_attempt/preflight/preflight.json)
+verified all 16 requests and saved 2,461,248 response bytes. Its strict
+timestamp comparison blocked all four candidates. One native time had a
+five-digit fractional second unsupported by the environment's Python parser.
+The native and catalogue times also differ, by under a millisecond in May
+and by 27.636840 and 622.146231 seconds on 3 and 8 March. The product URI,
+granule, datastrip, generation and UTC acquisition date agree in every case.
+The initial reports and raw replies replayed exactly under the first protocol.
+
+The revised parser accepts the native timestamp precision and uses the UTC
+date verified by the exact native identities. It records both time values and
+their signed difference. Source bytes and crop rules are preserved. The
+offline smoke identified all 58 required objects for each archived candidate
+and rejected a changed UTC date or granule ID. The guarded recheck and final
+byte-for-byte replay are pending. The acquisition roster remains open.

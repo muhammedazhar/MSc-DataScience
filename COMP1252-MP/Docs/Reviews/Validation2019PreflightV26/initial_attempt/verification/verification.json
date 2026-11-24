@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "protocol_sha256": "f8c018e606b4434314cd1dad68fc964415294bce7f083ceba2dec9d48c538429",
+  "preflight_metadata_sha256": "0a4b7b2daee5a9b787fdec533cc61b8244be5a05e8db521cca1eb8c8183e02e1",
+  "preflight_artifact_sha256": {
+    "preflight.json": "41398bf82820a65d1ef24d1eae1a005991a3fd528e65b6795d6274698781261f",
+    "raw/S2A_36UYA_20190308_0_L1C/listing.xml": "a4c9262235d614ed6e4530e4f6f886c40f7403ff716fe043032521af98bf5477",
+    "raw/S2A_36UYA_20190308_0_L1C/product.xml": "a45d73580acd6504bdc2f4d3c0672b987c4ad2ecd5793697c9c096d80d8fd1a0",
+    "raw/S2A_36UYA_20190308_0_L1C/tile.xml": "ecec5dd9c8a0866270aab5c3dfd4e094223fafb6170f86de4fb6dc8dbff4bc16",
+    "raw/S2A_36UYA_20190507_0_L1C/listing.xml": "f20b50568d573c5dec955a848bb9cb7641c0f85a76751ca5719c0a6ba3100763",
+    "raw/S2A_36UYA_20190507_0_L1C/product.xml": "4c0ab22b098721e86ee40fb48affd6f5943dbfd13ef114f0d08123228345df13",
+    "raw/S2A_36UYA_20190507_0_L1C/tile.xml": "9072a383e2f06614cd56fa55875ceed16a79ade89fa6c41680931099eb608915",
+    "raw/S2B_36UYA_20190303_0_L1C/listing.xml": "998df8967db0b64c9696a4ec689bc729cd295fc07958f6fd0d936be5ec97e1b3",
+    "raw/S2B_36UYA_20190303_0_L1C/product.xml": "f1c3813e1ce12b032c57fc76a6e6d08e7b300ef978ab671634fe4535a9229ea6",
+    "raw/S2B_36UYA_20190303_0_L1C/tile.xml": "e186a8791b0fc064f8d35296f962bea54db8058b85961b4a06b72042f3fac789",
+    "raw/S2B_36UYA_20190512_0_L1C/listing.xml": "af0007dd528c56977db3790d1c66e5d30816d654ebf4e034ea6b3a838a4fcbdd",
+    "raw/S2B_36UYA_20190512_0_L1C/product.xml": "1a4dec414279bfce77cd55ba70857de2248a6c467374a9a32ca3777f4246f50a",
+    "raw/S2B_36UYA_20190512_0_L1C/tile.xml": "fcca8535d45f5eca28812bf3cf5dda32edd121d9182199e0c25f0b63f0612f32",
+    "requests.json": "a9287594120bdfaa2d1fe4228a4a23badc45c47073d77a13cee29462d51cbd75"
+  },
+  "replayed_metadata_requests": 16,
+  "ready_count": 0,
+  "network_requests": 0
+}

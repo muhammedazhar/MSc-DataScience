@@ -111,9 +111,19 @@
     "v25_integrity": {
       "path": "Docs/Reviews/Validation2019SourcesV25/checks/final_integrity.json",
       "sha256": "6ea30cde2d6da7bfaa9da209b699ed2242b375d0dfa34bc2013bbbe21f52f85e"
+    },
+    "initial_preflight_metadata": {
+      "path": "Docs/Reviews/Validation2019PreflightV26/initial_attempt/preflight/metadata.json",
+      "sha256": "0a4b7b2daee5a9b787fdec533cc61b8244be5a05e8db521cca1eb8c8183e02e1"
+    },
+    "initial_preflight_replay": {
+      "path": "Docs/Reviews/Validation2019PreflightV26/initial_attempt/verification/verification.json",
+      "sha256": "a36002beedb36574fa2e66feefcf8fbcf9cac4bac2f058f0edd55815f3efa1ba"
     }
   },
   "implementation_sha256": {
-    "Solutions/preflight_2019_validation_sources.py": "90465d816b8e03be9d48ff8e44bc78117e836622dbce250024a7363c81cd3004"
-  }
+    "Solutions/preflight_2019_validation_sources.py": "83923aa78bd33e8dd4dce9c4ec28d121db267f1df2e98f165efc86b99afcbf63"
+  },
+  "native_acquisition_day_rule": "Use the UTC date of native tile sensing, tied to exact product URI, tile and datastrip identity and generation. Record both times and intra-day differences.",
+  "initial_protocol_sha256": "f8c018e606b4434314cd1dad68fc964415294bce7f083ceba2dec9d48c538429"
 }

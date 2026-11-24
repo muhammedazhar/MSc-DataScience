@@ -119,6 +119,11 @@ def inputs(protocol_path):
     return protocol, selections, features, {site['site_id']: site for site in sites}
 
 
+def native_timestamp(value):
+    # Python 3.10 accepts three or six fractional digits. SAFE XML can use five.
+    return timestamp(re.sub(r'(\.\d{1,6})(?=Z$)', lambda match: match[1].ljust(7, '0'), value))
+
+
 def parse_metadata(product_bytes, tile_bytes, selection, feature, site):
     from annotation_scene_inventory import _grid
     from pixelqa_scene_metadata import _angle
@@ -129,7 +134,8 @@ def parse_metadata(product_bytes, tile_bytes, selection, feature, site):
             and tile.tag.rsplit('}', 1)[-1] == 'Level-1C_Tile_ID', 'Provider XML must describe L1C')
     scene = selection['scene_id']
     identity = {name: single(product, name) for name in ('PRODUCT_URI', 'PROCESSING_LEVEL', 'PROCESSING_BASELINE',
-                'SPACECRAFT_NAME', 'SENSING_ORBIT_NUMBER', 'QUANTIFICATION_VALUE', 'PRODUCT_START_TIME')}
+                'SPACECRAFT_NAME', 'SENSING_ORBIT_NUMBER', 'QUANTIFICATION_VALUE', 'PRODUCT_START_TIME',
+                'GENERATION_TIME')}
     expected = {'PRODUCT_URI': scene+'.SAFE', 'PROCESSING_LEVEL': 'Level-1C',
                 'PROCESSING_BASELINE': '02.07', 'SPACECRAFT_NAME': 'Sentinel-2'+scene[2]}
     require(all(identity[name] == value for name, value in expected.items()),
@@ -137,9 +143,14 @@ def parse_metadata(product_bytes, tile_bytes, selection, feature, site):
     orbit = int(identity['SENSING_ORBIT_NUMBER'])
     quantification = float(identity['QUANTIFICATION_VALUE'])
     day = selection['acquisition_date']
+    product_start = native_timestamp(identity['PRODUCT_START_TIME'])
+    generation = native_timestamp(identity['GENERATION_TIME'])
+    acquisition = scene.split('_')[2]
     require(orbit == 64 and quantification == 10000
-            and timestamp(identity['PRODUCT_START_TIME']).date().isoformat() == day,
-            'Product orbit, quantification or start date differs')
+            and product_start.date().isoformat() == day
+            and product_start.strftime('%Y%m%dT%H%M%S') == acquisition
+            and generation.strftime('%Y%m%dT%H%M%S') == scene.split('_')[-1],
+            'Product orbit, quantification, start time or generation differs')
     offsets = {}
     for element in product.iter():
         if element.tag.rsplit('}', 1)[-1] != 'RADIO_ADD_OFFSET':
@@ -158,11 +169,16 @@ def parse_metadata(product_bytes, tile_bytes, selection, feature, site):
     datastrip = single(tile, 'DATASTRIP_ID')
     sensed = single(tile, 'SENSING_TIME')
     props = feature['properties']
+    native_time = native_timestamp(sensed)
+    catalogue_time = native_timestamp(props['datetime'])
+    # Comparisons use UTC acquisition days. Exact IDs and generation bind the
+    # native product and tile. Retain any intra-day catalogue time discrepancy.
     require(granule.attrib.get('granuleIdentifier') == tile_id == props.get('s2:granule_id')
             and granule.attrib.get('datastripIdentifier') == datastrip == props.get('s2:datastrip_id')
-            and timestamp(sensed).date().isoformat() == day
-            and timestamp(sensed) == timestamp(props['datetime']),
-            'Product/tile/catalogue identity or sensing time differs')
+            and generation == native_timestamp(props['s2:generation_time'])
+            and native_time.date().isoformat() == catalogue_time.date().isoformat() == day
+            and product_start <= native_time < generation,
+            'Product, tile, catalogue identity, generation or acquisition day differs')
     orbit_code = re.search(r'_A(\d{6})_T36UYA_N02\.07$', tile_id)
     datastrip_stamp = re.search(r'_S(\d{8}T\d{6})_N02\.07$', datastrip)
     require(orbit_code is not None and datastrip_stamp is not None
@@ -170,7 +186,6 @@ def parse_metadata(product_bytes, tile_bytes, selection, feature, site):
             'Tile XML does not identify the native 36UYA N0207 granule and datastrip')
     # Compact SAFE paths use the datastrip stamp even when tile sensing is later.
     folder = f'L1C_T36UYA_A{orbit_code[1]}_{datastrip_stamp[1]}'
-    acquisition = scene.split('_')[2]
     path_pattern = re.compile(rf'GRANULE/{folder}/IMG_DATA/T36UYA_{acquisition}_(B(?:0[1-9]|1[012]|8A)|TCI)')
     image_paths = {}
     for path in texts(granule, 'IMAGE_FILE'):
@@ -203,6 +218,9 @@ def parse_metadata(product_bytes, tile_bytes, selection, feature, site):
             'offset_interpretation': ('Explicit zero offsets in actual XML' if offsets
                 else 'Absent list in actual N0207 XML; frozen-reader zero-offset convention'),
             'tile_id': tile_id, 'datastrip_id': datastrip, 'tile_sensing_time': sensed,
+            'catalogue_datetime': props['datetime'],
+            'catalogue_minus_native_seconds': (catalogue_time-native_time).total_seconds(),
+            'acquisition_day_authority': 'native Level-1C tile sensing time and exact product identity',
             'datastrip_timestamp': datastrip_stamp[1], 'crs': crs, 'grid_10m': grid,
             'fixed_event_coverage': {site['event_id']: covered},
             'solar_zenith_deg': zenith, 'solar_azimuth_deg': azimuth,
@@ -256,11 +274,11 @@ def build_preflight(output, protocol, checksum, candidates, features, sites, *, 
     return len(network.requests)
 
 
-def verify(directory, output, protocol, checksum, candidates, features, sites):
+def rebuild_archive(directory, output, protocol, checksum, candidates, features, sites, archive_checksum):
     directory = directory.resolve()
     metadata = load(directory/'metadata.json')
     require(metadata['mode'] == MODE and metadata['execution_status'] == 'completed'
-            and metadata['protocol_sha256'] == checksum
+            and metadata['protocol_sha256'] == archive_checksum
             and metadata['artifact_sha256'] == evidence_hashes(directory), 'V26 preflight archive differs')
     checked_artifacts(directory, metadata['artifact_sha256'])
     prior = load(directory/'preflight.json')
@@ -283,32 +301,45 @@ def verify(directory, output, protocol, checksum, candidates, features, sites):
             raw = path.read_bytes()
         return ReplayResponse(raw, receipt)
 
+    count = build_preflight(output, protocol, checksum, candidates, features, sites,
+                           free_bytes=prior['disk_budget']['measured_free_bytes'], opener=opener)
+    require(next(receipts, None) is None, 'Archived metadata requests remain unused')
+    return count, metadata
+
+
+def verify(directory, output, protocol, checksum, candidates, features, sites):
     with TemporaryDirectory(dir=output) as temporary:
         stage = Path(temporary)
-        count = build_preflight(stage, protocol, checksum, candidates, features, sites,
-                                free_bytes=prior['disk_budget']['measured_free_bytes'], opener=opener)
-        require(next(receipts, None) is None and evidence_hashes(stage) == metadata['artifact_sha256'],
-                'V26 preflight replay differs')
+        count, metadata = rebuild_archive(directory, stage, protocol, checksum, candidates, features, sites,
+                                          archive_checksum=checksum)
+        require(evidence_hashes(stage) == metadata['artifact_sha256'], 'V26 preflight replay differs')
     write(output/'verification.json', {'status': 'passed', 'protocol_sha256': checksum,
           'preflight_metadata_sha256': digest(directory/'metadata.json'),
           'preflight_artifact_sha256': metadata['artifact_sha256'],
-          'replayed_metadata_requests': count, 'ready_count': prior['ready_count'], 'network_requests': 0})
+          'replayed_metadata_requests': count, 'ready_count': load(directory/'preflight.json')['ready_count'],
+          'network_requests': 0})
 
 
 def worker(args, output):
     checksum = digest(args.protocol)
     protocol, candidates, features, sites = inputs(args.protocol)
-    if args.preflight is None:
-        requests = build_preflight(output, protocol, checksum, candidates, features, sites)
-    else:
+    requests = 0
+    if args.preflight is not None:
         verify(args.preflight, output, protocol, checksum, candidates, features, sites)
-        requests = 0
+    elif args.recheck:
+        record = protocol['source_files']['initial_preflight_metadata']
+        archive = rooted(record['path']).parent
+        rebuild_archive(archive, output, protocol, checksum, candidates, features, sites,
+                        archive_checksum=protocol['initial_protocol_sha256'])
+    else:
+        requests = build_preflight(output, protocol, checksum, candidates, features, sites)
     require(digest(args.protocol) == checksum and not {'torch', 'rasterio', 's2cloudless'} & sys.modules.keys(),
             'Protocol changed or a pixel/model library was imported')
     peak = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
     write(output/'metadata.json', {'mode': MODE if args.preflight is None else MODE+'_replay',
           'execution_status': 'completed', 'protocol_sha256': checksum, 'artifact_sha256': evidence_hashes(output),
-          'network_requests': requests, 'image_asset_downloads': 0, 'satellite_pixel_reads': 0,
+          'network_requests': requests, 'rechecked_archived_provider_responses': args.recheck,
+          'image_asset_downloads': 0, 'satellite_pixel_reads': 0,
           'model_executions': 0, 'labels_approved': 0,
           'worker_high_water_rss_mib': round(peak/(2**20 if sys.platform == 'darwin' else 1024), 2)})
 
@@ -318,7 +349,9 @@ def main():
 
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--protocol', type=Path, default=PROTOCOL)
-    parser.add_argument('--preflight', type=Path, help='Replay an archived preflight without network access')
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument('--preflight', type=Path, help='Replay a completed preflight byte for byte')
+    mode.add_argument('--recheck', action='store_true', help='Recheck the pinned initial provider responses offline')
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--worker-output', type=Path, help=argparse.SUPPRESS)
     parser.set_defaults(max_rss_mib=RESOURCES['worker_rss_mib'],
