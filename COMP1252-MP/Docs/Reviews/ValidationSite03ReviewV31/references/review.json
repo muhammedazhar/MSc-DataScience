@@ -1,0 +1,53 @@
+{
+  "schema_version": 31,
+  "site_id": "site-03",
+  "pair_id": "derived-site03-891e388f6c6aaee1a9ea",
+  "reference_access_sha256": "ba783cb88d2bfefa4a03318c414085fbe6d67543f6694c65708b93627eb4a79a",
+  "model_blind_review_sha256": "33dcdfa534f372d7e8aa11d0ad772774364c0b8b93c47478768b2abd3c8dd4c8",
+  "review_order": "Landsat crops reviewed after recording the Sentinel-2 review; plain before outlines.",
+  "crop": {
+    "crs": "EPSG:32636",
+    "bounds": [
+      621400,
+      5561660,
+      622040,
+      5562300
+    ],
+    "width": 43,
+    "height": 43,
+    "source_pan_m": 15,
+    "source_multispectral_m": 30
+  },
+  "landsat": [
+    {
+      "date": "2018-05-27",
+      "service_raster_id": 1662902,
+      "usgs_item_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l1/items/LC08_L1TP_178025_20180527_20200901_02_T1",
+      "usgs_scene_cloud_percent": 0.02,
+      "locked_export_url": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer/exportImage?bbox=621400%2C5561660%2C622040%2C5562300&bboxSR=32636&imageSR=32636&size=43%2C43&format=png24&interpolation=RSP_NearestNeighbor&mosaicRule=%7B%22mosaicMethod%22%3A%22esriMosaicLockRaster%22%2C%22lockRasterIds%22%3A%5B1662902%5D%2C%22mosaicOperation%22%3A%22MT_FIRST%22%7D&f=image",
+      "retrieved_crop_bytes": 4056,
+      "retrieved_crop_sha256": "62084d1e742ab8fa87f384c2301d8dab011848eff3be6a9cda00f52731dd9432",
+      "visual_status": "broad_opening_visible",
+      "visual_observation": "An elongated bright patch overlaps the target in the same central position as on 30 May. The visible west-side strip and northwest variation also indicate a mixed control context. Pixel-scale class and boundaries remain unresolved."
+    },
+    {
+      "date": "2018-06-03",
+      "service_raster_id": 1681371,
+      "usgs_item_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l1/items/LC08_L1GT_179025_20180603_20200831_02_T2",
+      "usgs_scene_cloud_percent": 99.99,
+      "locked_export_url": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer/exportImage?bbox=621400%2C5561660%2C622040%2C5562300&bboxSR=32636&imageSR=32636&size=43%2C43&format=png24&interpolation=RSP_NearestNeighbor&mosaicRule=%7B%22mosaicMethod%22%3A%22esriMosaicLockRaster%22%2C%22lockRasterIds%22%3A%5B1681371%5D%2C%22mosaicOperation%22%3A%22MT_FIRST%22%7D&f=image",
+      "retrieved_crop_bytes": 2551,
+      "retrieved_crop_sha256": "0c0483d5ce18a8f02cce6df4956c5b26c4c0511aa290660619e77ac13cf35636",
+      "visual_status": "cloud_obscured",
+      "visual_observation": "A broad pale cloud layer obscures the target and control. The corresponding opening and control structures cannot be matched."
+    }
+  ],
+  "spot7_2018_05_23": "Footprint covers the crop. The exact dated image and its clarity were not verified; preview access is authenticated.",
+  "wayback_actual_capture": "2012-09-13",
+  "observed_broad_opening_by": "2018-05-27",
+  "first_visible_deforestation_interval": null,
+  "labels_approved": 0,
+  "validation_eligible": false,
+  "landsat_source_credit": "USGS Landsat 8 via Esri Landsat 8 PanSharpened ImageServer.",
+  "landsat_limit": "Coarse pan-sharpened views corroborate the presence of the broad opening only. Relative alignment and mixed pixels limit interpretation of exact target margins and forest class."
+}

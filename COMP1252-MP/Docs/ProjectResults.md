@@ -92,6 +92,17 @@ No new held-out labels, first-visible intervals or accuracy estimates were
 produced. [Screening](Reviews/Validation2019ScreenV27/screen/screen.json) ·
 [Replay and integrity](Reviews/Validation2019ScreenV27/checks/final_integrity.json)
 
+### Site-03 short-interval candidate
+
+The 30 May–4 June 2018 pair passed automated QA and the 27-channel input audit.
+Two model-blind reviewers observed most of the opening already visible
+on 30 May. The fixed control had a persistent mixed edge and pale strip.
+Independent Landsat imagery shows the broad opening by 27 May. The 3 June
+Landsat crop is cloud-obscured. Site-03 adds no approved validation labels
+or first-visible deforestation interval.
+[Visual review](Reviews/ValidationSite03ReviewV31/visual_review.md) ·
+[Reference review](Reviews/ValidationSite03ReviewV31/references/review.json)
+
 ## Observational case study
 
 Area B provides the strongest observation in the supplementary 2018 reviews.

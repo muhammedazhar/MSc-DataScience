@@ -5,7 +5,7 @@ status, then the latest handoff before edits. Commit every completed verified
 logical change with the handoff updated and push to the SAME branch. This entry
 point works for Codex, Gemini Antigravity or another agent without chat history.
 
-Current V31 site-03 feature audit and model-blind review:
+Completed V31 site-03 feature audit and model-blind review:
 **`Docs/Handoffs/2026-11-25-site-03-inputs-visual-review.md`**.
 Completed V30 site-03 acquisition and crop quality screening:
 **`Docs/Handoffs/2026-11-25-site-03-acquisition-qa.md`**.
@@ -202,9 +202,13 @@ XML and 58 file pins for 10 May, 30 May and 4 June, totaling 1,562,638,464 bytes
 V30 acquired and verified all 174 files. The 30 May to 4 June site-03 pair
 passed automated QA with zero unusable pixels in the crop, target and both
 target contexts. The fixed control and its context passed on all three dates.
-Offline replay verified the result. Next, check all 27 input channels and
-review the target and control without model predictions, with independent
-reference access and class confirmation still pending.
+Offline replay verified the result. V31 verified all 27 input channels and
+replayed the fixed contexts. Both model-blind reviewers saw the target
+opening on 30 May and a mixed control. Landsat shows the broad opening by
+27 May and is obscured on 3 June. The five-day pair and fixed control are
+excluded. There is no new first-visible deforestation interval. Include
+`group-a85fa2022a25e1a72e2c` in future visual-exposure exclusions. The
+frozen geographic split and model checkpoint remain in force.
 
 Use one nice +10 CPU worker, native/Torch threads 1, no GPU, unchanged
 `validate_sample.run_guarded`, 512 MiB RSS and 1.5 GiB available-system-memory

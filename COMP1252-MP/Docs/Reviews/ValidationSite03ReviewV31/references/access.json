@@ -1,0 +1,129 @@
+{
+  "schema_version": 31,
+  "checked_on_utc": "2026-11-25",
+  "site_id": "site-03",
+  "scope": "Independent reference access and metadata. Visual dispositions are recorded separately.",
+  "v28_inventory": {
+    "path": "Docs/Reviews/ValidationUnseenSitesV28/reference_retry/references.json",
+    "sha256": "3707990d11a4f15116faad734d1ab44158bbb303c96067749b4ca8e52a64a75a"
+  },
+  "comparison_dates": ["2018-05-30", "2018-06-04"],
+  "site_crop": {
+    "crs": "EPSG:32636",
+    "bounds": [621400, 5561660, 622040, 5562300]
+  },
+  "reference_class_evidence_from_access_check": false,
+  "image_bytes_fetched_by_access_check": 0,
+  "references": {
+    "spot7_2018_05_23": {
+      "capture_date_utc": "2018-05-23",
+      "scene_id": "DS_SPOT7_201805230809039_FR1_FR1_FR1_FR1_E035N50_01790",
+      "archive_object_id": 652670,
+      "covers_exact_crop": true,
+      "coverage_basis": "Airbus exact-ID spatial Within query on the frozen 640 m crop, consistent with V28 footprint coverage.",
+      "catalogue_scene_cloud_percent": 15.3,
+      "incidence_angle_degrees": 17.49442517,
+      "processing_level": "ALBUM",
+      "scene_sampling_m": null,
+      "access_status": "public_footprint_metadata_authenticated_preview_and_commercial_product_route",
+      "access_limits": "The public layer advertises Map, Query and Data and lists the scene as a feature. Its fields contain no image or quicklook link. The OneAtlas archive guide uses a bearer token for search and identifies quicklook and thumbnail links for ALBUM records. Airbus lists Pléiades and SPOT archive products as pay per order. Preview availability and delivered sampling for this exact scene are unconfirmed. Crop clarity, licence terms for a specific order, and forest class remain unresolved.",
+      "official_sources": {
+        "archive_layer": "https://portal.intelligence-airbusds.com/arcgis/rest/services/OneAtlas/OADConstellationArchive/MapServer/14?f=json",
+        "archive_preview_coverage": "https://space-solutions.airbus.com/imagery/how-to-order-imagery-and-data/archive-preview-tool/",
+        "order_options": "https://space-solutions.airbus.com/imagery/how-to-order-imagery-and-data/",
+        "archive_authentication_and_previews": "https://api.oneatlas.airbus.com/guides/oneatlas-data-pay-per-order/g-odp-spot-pleiade-archive/"
+      },
+      "live_footprint_receipt": {
+        "url": "https://portal.intelligence-airbusds.com/arcgis/rest/services/OneAtlas/OADConstellationArchive/MapServer/14/query?geometry=621400%2C5561660%2C622040%2C5562300&geometryType=esriGeometryEnvelope&inSR=32636&spatialRel=esriSpatialRelWithin&returnGeometry=false&f=json&where=objectid+%3D+652670&outFields=objectid%2Cparentidentifier%2Cacquisitiondate%2Ccloudcover%2Cincidenceangle%2Cprocessinglevel%2Cpublicationdate",
+        "http_status": 200,
+        "bytes": 1147,
+        "sha256": "7605db0ab37168bab6ffb6f40ab6faf32ba91f81e4257285e22929f3e4abf6e9"
+      }
+    },
+    "landsat8_2018_06_03": {
+      "capture_time_utc": "2018-06-03T08:35:36.575202Z",
+      "scene_id": "LC08_L1GT_179025_20180603_20200831_02_T2",
+      "esri_raster_id": 1681371,
+      "covers_exact_crop": true,
+      "coverage_basis": "Esri exact-ID spatial Within query on the frozen crop and matching archived V28 coverage.",
+      "processing_level": "L1GT",
+      "collection_tier": "T2",
+      "usgs_scene_cloud_percent": 99.99,
+      "usgs_land_cloud_percent": 99.99,
+      "esri_catalogue_cloud_fraction": 0.9999,
+      "catalogue_units_note": "The V28 percent-named field stores the raw Esri fraction. The matching USGS product reports 99.99 percent scene cloud. Scene cloud statistics do not establish local crop clarity.",
+      "source_sampling_m": {"panchromatic": 15, "multispectral": 30},
+      "access_status": "public_exact_scene_metadata_and_locked_export_confirmed",
+      "evidence_limit": "The export reports the exact crop and nearest-neighbor output sampling of about 14.88 m from a pan-sharpened image. The source RGB sampling is 30 m. Tier 2 geometry and mixed pixels limit the reference to coarse context. High scene cloud further limits the likelihood of usable near-date corroboration. No pixels, class, or timing interval were reviewed in this access check.",
+      "official_sources": {
+        "esri_exact_record": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer/1681371?f=pjson",
+        "esri_service": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer?f=pjson",
+        "usgs_spatial_resolution": "https://www.usgs.gov/landsat-missions/landsat-8",
+        "usgs_level_1_tiers": "https://www.usgs.gov/landsat-missions/landsat-collection-2-level-1-data",
+        "usgs_landsat_public_domain": "https://www.usgs.gov/landsat-missions/landsat-data-processing-archive-and-distribution"
+      },
+      "usgs_stac_receipt": {
+        "url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l1/items/LC08_L1GT_179025_20180603_20200831_02_T2",
+        "http_status": 200,
+        "bytes": 27756,
+        "sha256": "4984f5541a6d502f9a2f4bdf1f06d68f4b132e85e12416868ba31e73112436a9"
+      },
+      "live_footprint_receipt": {
+        "url": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer/query?geometry=621400%2C5561660%2C622040%2C5562300&geometryType=esriGeometryEnvelope&inSR=32636&spatialRel=esriSpatialRelWithin&returnGeometry=false&f=json&where=OBJECTID+%3D+1681371+AND+Category+%3D+1&outFields=OBJECTID%2CLANDSAT_PRODUCT_ID%2CAcquisitionDate",
+        "http_status": 200,
+        "bytes": 772,
+        "sha256": "e62fd0f35200d7f934fc1c742ab77660c9154e5c2b1708ee2032d7abc17f0aec"
+      },
+      "locked_preview": {
+        "request_url": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer/exportImage?bbox=621400%2C5561660%2C622040%2C5562300&bboxSR=32636&imageSR=32636&size=43%2C43&imageFormat=png24&format=png24&interpolation=RSP_NearestNeighbor&mosaicRule=%7B%22mosaicMethod%22%3A%22esriMosaicLockRaster%22%2C%22lockRasterIds%22%3A%5B1681371%5D%2C%22mosaicOperation%22%3A%22MT_FIRST%22%7D&f=image",
+        "extent": [621400, 5561660, 622040, 5562300],
+        "output_size_pixels": [43, 43],
+        "source_credit": "Esri, USGS, NASA",
+        "metadata_probe": {
+          "query_change": "f=json",
+          "http_status": 200,
+          "bytes": 387,
+          "sha256": "f66b8124d5479f55dca4c73a619668e0dce91cb7ccb5fb86b0a4e4bb6776ec60",
+          "timestamp_utc": "2026-11-25T15:40:10.464734+00:00",
+          "returned_temporary_png_url": true
+        }
+      }
+    },
+    "landsat8_2018_05_27": {
+      "capture_time_utc": "2018-05-27T08:29:30.234363Z",
+      "scene_id": "LC08_L1TP_178025_20180527_20200901_02_T1",
+      "esri_raster_id": 1662902,
+      "covers_exact_crop": true,
+      "coverage_basis": "Archived V28 Esri projected-crop Within query.",
+      "collection_tier": "T1",
+      "usgs_scene_cloud_percent": 0.02,
+      "esri_catalogue_cloud_fraction": 0.0002,
+      "reference_role": "Ancillary coarse context before the five-day comparison. Pixels and local clarity unreviewed by this check.",
+      "esri_record": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer/1662902?f=pjson",
+      "usgs_stac_receipt": {
+        "url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l1/items/LC08_L1TP_178025_20180527_20200901_02_T1",
+        "http_status": 200,
+        "bytes": 28034,
+        "sha256": "59ceec089186a7f2b83cfcc7ce7f553510a2164e29403bc0e75f7ec985266719"
+      }
+    },
+    "wayback_2012_09_13": {
+      "release_dates": ["2018-05-16", "2018-06-06", "2018-07-25"],
+      "source_capture_date_utc": "2012-09-13",
+      "source": "DigitalGlobe WorldView-2",
+      "source_sampling_m": 0.5,
+      "source_accuracy_m": 10.2,
+      "covers_exact_crop": true,
+      "reference_role": "Historical context predating the comparison by several years. The three release dates share the same source capture date at the crop.",
+      "source_capture_documentation": "https://www.esri.com/arcgis-blog/products/arcgis-living-atlas/imagery/wayback-with-world-imagery-metadata",
+      "wayback_terms_reference": "https://github.com/Esri/wayback-core#licensing",
+      "live_receipt": {
+        "archived_query_id": "site-03-wayback-2018_r08",
+        "http_status": 200,
+        "bytes": 797,
+        "sha256": "a3d179dd6f261026fb82eafe25e69e24ab7dc03758ea9b9de7341d622bb0e890",
+        "matches_v28": true
+      }
+    }
+  }
+}

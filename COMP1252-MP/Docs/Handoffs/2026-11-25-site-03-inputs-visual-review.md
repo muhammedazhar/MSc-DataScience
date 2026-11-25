@@ -1,5 +1,8 @@
 # Site-03 feature audit and model-blind review
 
+V31 is complete. Site-03 is excluded from held-out evaluation because most of
+the opening was already visible before the pair and the fixed control is mixed.
+
 Work on `codex/curated-deforestation-pilot` and push verified checkpoints to
 the same branch. Start with the [V30 handoff](2026-11-25-site-03-acquisition-qa.md)
 and keep its exact crop, dates, source lineage, target masks, control and
@@ -45,5 +48,27 @@ its west side and a mixed northwest corner. The whole square cannot serve
 as a confirmed stable-forest control. The [visual review](../Reviews/ValidationSite03ReviewV31/visual_review.md)
 and [dispositions](../Reviews/ValidationSite03ReviewV31/reviews.json) preserve
 the fixed geometry, exclude the pair and control from evaluation and record
-the new visual exposure of `group-a85fa2022a25e1a72e2c`. Independent reference
-access and observations are pending. No labels were approved.
+the new visual exposure of `group-a85fa2022a25e1a72e2c`. No labels were approved.
+
+## Independent reference review
+
+The [access report](../Reviews/ValidationSite03ReviewV31/references/access.json)
+confirms two public Landsat 8 scene-locked crops. The [reference review](../Reviews/ValidationSite03ReviewV31/references/review.json)
+records a broad opening already visible on 27 May in the same location.
+Cloud obscures the 3 June crop. USGS reports 99.99% scene cloud for 3 June.
+The Esri catalogue value 0.9999 is a fraction. Each preview is 43 × 43 with
+15 m pan-sharpened sampling and 30 m source multispectral bands. The preview
+supports the existence of the opening by 27 May and leaves its exact
+boundaries, earlier forest class and onset unresolved. The two small source
+previews are local. The report contains the exact URLs and hashes.
+
+The 23 May SPOT-7 record covers the crop. Its dated pixels and clarity remain
+unverified because archived previews require authenticated access. The
+Wayback leads use a 13 September 2012 capture. Neither resolves the onset.
+
+All 394 existing tests passed under the guard. The
+[final integrity record](../Reviews/ValidationSite03ReviewV31/final_integrity.json)
+binds the feature audit, exact packet replay, class dispositions, reference
+access receipts and tests. There is no newly approved validation case or
+first-visible deforestation interval. For a later search, use an unexposed
+group with credible earlier forest evidence and a homogeneous control.
