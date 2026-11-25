@@ -1,0 +1,192 @@
+{
+  "schema_version": 34,
+  "scope": "Two fixed 43 x 43 Landsat reference crops for the V32 reserve.",
+  "site_id": "site-02",
+  "grid": {
+    "crs": "EPSG:32636",
+    "transform": [
+      10.0,
+      0.0,
+      677420.0,
+      0.0,
+      -10.0,
+      5564060.0
+    ],
+    "width": 64,
+    "height": 64,
+    "bounds": [
+      677420.0,
+      5563420.0,
+      678060.0,
+      5564060.0
+    ]
+  },
+  "control": {
+    "row": 5,
+    "col": 45,
+    "width": 16,
+    "height": 16,
+    "pixels": 256,
+    "bounds": [
+      677870.0,
+      5563850.0,
+      678030.0,
+      5564010.0
+    ],
+    "crs": "EPSG:32636",
+    "context_bounds": [
+      677850.0,
+      5563830.0,
+      678050.0,
+      5564030.0
+    ],
+    "context_width": 20,
+    "context_height": 20,
+    "context_pixels": 400,
+    "context_radius_pixels": 2,
+    "catalogue_exclusion_margin_metres": 20,
+    "control_class_status": "unreviewed",
+    "pixel_qa_status": "unassessed",
+    "independent_site": false,
+    "evaluation_approved": false
+  },
+  "sentinel_pair": {
+    "v28_rank_at_site": 1,
+    "before": {
+      "date": "2017-11-16",
+      "catalogue_time_utc": "2017-11-16T08:54:42.947000Z",
+      "item_id": "S2A_36UXA_20171116_0_L1C",
+      "item_sha256": "afdff81c9471d93f804ecbd9bd25c4b9e899f403a0cc411dd5ba8c78f97a8b02",
+      "scene_id": "S2A_MSIL1C_20171116T085231_N0206_R107_T36UXA_20171116T105520",
+      "catalogue_cloud_percent": 71.0987,
+      "raw_page": "Docs/Reviews/ValidationUnseenSitesV28/sentinel/catalogue/site-02/raw/page-01.json",
+      "raw_page_sha256": "f3aef1c151af30a8e92b0df9b1982eac9bc90d4e9fdfef95495a287157fccba6"
+    },
+    "after": {
+      "date": "2017-12-06",
+      "catalogue_time_utc": "2017-12-06T08:53:34.464000Z",
+      "item_id": "S2A_36UXA_20171206_0_L1C",
+      "item_sha256": "b455babfb67adee664713f9d4b6d38224d359e5f1afe2dc4b7e2401d54bd138f",
+      "scene_id": "S2A_MSIL1C_20171206T085331_N0206_R107_T36UXA_20171206T172644",
+      "catalogue_cloud_percent": 68.0326,
+      "raw_page": "Docs/Reviews/ValidationUnseenSitesV28/sentinel/catalogue/site-02/raw/page-01.json",
+      "raw_page_sha256": "f3aef1c151af30a8e92b0df9b1982eac9bc90d4e9fdfef95495a287157fccba6"
+    },
+    "interval_days": 20,
+    "relative_orbit": 107,
+    "processing_baseline": "02.06",
+    "earlier_stable_only_options": [],
+    "later_metadata_scene_ids": [
+      "S2B_MSIL1C_20171211T085339_N0206_R107_T36UXA_20171211T104822",
+      "S2B_MSIL1C_20180110T085329_N0206_R107_T36UXA_20180110T113039"
+    ],
+    "followup_status": "retained_unselected"
+  },
+  "sources": [
+    {
+      "scene_id": "LC08_L1TP_178025_20171116_20200902_02_T1",
+      "capture_time_utc": "2017-11-16T08:30:53.406076Z",
+      "esri_raster_id": 2392197,
+      "tier": "T1",
+      "caption": "16 November 2017",
+      "usgs_scene_cloud_percent": 75.98,
+      "usgs_item_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l1/items/LC08_L1TP_178025_20171116_20200902_02_T1",
+      "locked_preview_metadata": {
+        "url": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer/exportImage?bbox=677420%2C5563420%2C678060%2C5564060&bboxSR=32636&imageSR=32636&size=43%2C43&format=png24&interpolation=RSP_NearestNeighbor&mosaicRule=%7B%22mosaicMethod%22%3A%22esriMosaicLockRaster%22%2C%22lockRasterIds%22%3A%5B2392197%5D%2C%22mosaicOperation%22%3A%22MT_FIRST%22%7D&f=json",
+        "bounds_epsg32636": [
+          677420,
+          5563420,
+          678060,
+          5564060
+        ]
+      }
+    },
+    {
+      "scene_id": "LC08_L1GT_178025_20180103_20200902_02_T2",
+      "capture_time_utc": "2018-01-03T08:30:47.324424Z",
+      "esri_raster_id": 1662179,
+      "tier": "T2",
+      "caption": "3 January 2018",
+      "usgs_scene_cloud_percent": 91.21,
+      "usgs_item_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l1/items/LC08_L1GT_178025_20180103_20200902_02_T2",
+      "locked_preview_metadata": {
+        "url": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer/exportImage?bbox=677420%2C5563420%2C678060%2C5564060&bboxSR=32636&imageSR=32636&size=43%2C43&format=png24&interpolation=RSP_NearestNeighbor&mosaicRule=%7B%22mosaicMethod%22%3A%22esriMosaicLockRaster%22%2C%22lockRasterIds%22%3A%5B1662179%5D%2C%22mosaicOperation%22%3A%22MT_FIRST%22%7D&f=json",
+        "bounds_epsg32636": [
+          677420,
+          5563420,
+          678060,
+          5564060
+        ]
+      }
+    }
+  ],
+  "max_bytes_per_image": 65536,
+  "preview_size_pixels": [
+    43,
+    43
+  ],
+  "resources": {
+    "workers": 1,
+    "native_threads": 1,
+    "nice_increment": 10,
+    "gpu_used": false,
+    "worker_rss_mib": 512,
+    "available_memory_reserve_gib": 1.5,
+    "max_seconds_per_worker": 300
+  },
+  "view_order": [
+    "landsat-plain.png",
+    "landsat-outlined.png"
+  ],
+  "disposition_rule": "Assess visibility, earlier cover, later opening and the whole fixed control. Treat 3 January as coarse later evidence and preserve ambiguity.",
+  "input_sha256": {
+    "v32_comparison": {
+      "path": "Docs/Reviews/ValidationRemainingSitesV32/comparison.json",
+      "sha256": "9ef54ac5b18f835eac9c6acba35cc45897d0982bfc6a2b2544876591435dcc0c"
+    },
+    "v32_access": {
+      "path": "Docs/Reviews/ValidationRemainingSitesV32/site-02-access.json",
+      "sha256": "5f28079e9b1d1d3265015c57673b26069610ec3b43fc45507c898954483c9787"
+    },
+    "v32_integrity": {
+      "path": "Docs/Reviews/ValidationRemainingSitesV32/final_integrity.json",
+      "sha256": "1b67218998e2df7698e24f030e7f66ab53c159e28071f91080d94626bac19e84"
+    },
+    "exposure_history": {
+      "path": "Docs/Reviews/ValidationSite01ReferenceV33/reviews.json",
+      "sha256": "734479467a9624f2c379c366a9358404f96f66c3740225e981d6c38198e47c5b"
+    },
+    "v28_plan": {
+      "path": "Docs/Reviews/ValidationUnseenSitesV28/plan/plan.json",
+      "sha256": "ba49ec9165937064d787e9941a5609511d86cfa035ab006cb01dbe597aeaf07d"
+    },
+    "v28_protocol": {
+      "path": "Docs/Reviews/ValidationUnseenSitesV28/protocol.json",
+      "sha256": "db0ebb25384afb57470c8841a74eb13d050f904e0e10124d9ea4be6cd7ebff99"
+    },
+    "catalogue": {
+      "path": "Datasets/AnnotationAudit/v1/annotations_clean.geojson",
+      "sha256": "06a1090c8451d670929163ff7be067d63454cb1893a3e8cbee97519fbb69cbce"
+    },
+    "late_metadata": {
+      "path": "Docs/Reviews/ValidationSite02ReferenceV34/late-access.json",
+      "sha256": "0795d5c96da3a1b8d655c69cbfac8fc77dc43623ca7aee318a700e0686bd8cfa"
+    },
+    "implementation": {
+      "path": "Solutions/prepare_site02_reference_review.py",
+      "sha256": "e472880c5aa3a30b605a8bec5e114a8562a333f167cf0c06be0f8e958fb6b174"
+    },
+    "reference_helpers": {
+      "path": "Solutions/prepare_site01_reference_review.py",
+      "sha256": "a112ca3e13fca7c41e3fe8521d2be9dcba63a121ab3adcd8829f7119a2124b49"
+    },
+    "renderer_helpers": {
+      "path": "Solutions/prepare_july_visual_review.py",
+      "sha256": "6650036b87ecfa8f7eaeb2820746cfeb203b6fbe0def06c1bf68bf2e3aa30568"
+    },
+    "resource_guard": {
+      "path": "Solutions/validate_sample.py",
+      "sha256": "475f641ed582af37eedc2ee9e94065e280202db08eb381441e1403c3eb001fba"
+    }
+  }
+}

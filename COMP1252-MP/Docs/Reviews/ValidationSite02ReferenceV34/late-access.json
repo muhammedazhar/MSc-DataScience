@@ -1,0 +1,57 @@
+{
+  "schema_version": 34,
+  "site_id": "site-02",
+  "checked_on_client_date": "2026-11-25",
+  "scene_id": "LC08_L1GT_178025_20180103_20200902_02_T2",
+  "archive_object_id": 1662179,
+  "capture_date_utc": "2018-01-03",
+  "capture_timestamp_utc": "2018-01-03T08:30:47.324424Z",
+  "collection_category": "T2",
+  "correction": "L1GT",
+  "usgs_scene_cloud_percent": 91.21,
+  "sampling_m": {
+    "pan": 15,
+    "multispectral": 30
+  },
+  "usgs_item_receipt": {
+    "url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l1/items/LC08_L1GT_178025_20180103_20200902_02_T2",
+    "http_status": 200,
+    "content_type": "application/geo+json",
+    "bytes": 27764,
+    "sha256": "bdba5daeb39cffd8fec225bb38e2f39530413a04e5ec43bcc8e6da39397b4fcf",
+    "response_date": "Wed, 25 Nov 2026 21:29:24 GMT"
+  },
+  "locked_public_export_metadata": {
+    "extent": {
+      "xmin": 677420,
+      "ymin": 5563420,
+      "xmax": 678060,
+      "ymax": 5564060,
+      "spatialReference": {
+        "wkid": 32636,
+        "latestWkid": 32636
+      }
+    },
+    "width": 43,
+    "height": 43,
+    "provider_returned_ephemeral_image_url": true,
+    "ephemeral_provider_url_followed": false,
+    "receipt": {
+      "url": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer/exportImage?bbox=677420%2C5563420%2C678060%2C5564060&bboxSR=32636&imageSR=32636&size=43%2C43&format=png24&interpolation=RSP_NearestNeighbor&mosaicRule=%7B%22mosaicMethod%22%3A%22esriMosaicLockRaster%22%2C%22lockRasterIds%22%3A%5B1662179%5D%2C%22mosaicOperation%22%3A%22MT_FIRST%22%7D&f=json",
+      "http_status": 200,
+      "content_type": "application/json",
+      "bytes": 387,
+      "sha256": "ba68a944318c265c648eba30c82138be7d55526f0224fa1137dfa2503752466f",
+      "response_date": "Wed, 25 Nov 2026 21:29:27 GMT"
+    }
+  },
+  "fixed_sentinel_before_date": "2017-11-16",
+  "fixed_sentinel_after_date": "2017-12-06",
+  "days_after_fixed_sentinel_after_date": 28,
+  "interpretation": "The January Landsat view can corroborate a later appearance. The 6 December Sentinel-2 endpoint, local visibility and exact boundary remain unverified by this request.",
+  "imagery_bytes_downloaded": 0,
+  "source_pins": {
+    "Docs/Reviews/ValidationRemainingSitesV32/site-02-access.json": "5f28079e9b1d1d3265015c57673b26069610ec3b43fc45507c898954483c9787",
+    "Docs/Reviews/ValidationRemainingSitesV32/comparison.json": "9ef54ac5b18f835eac9c6acba35cc45897d0982bfc6a2b2544876591435dcc0c"
+  }
+}
