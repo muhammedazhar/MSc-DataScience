@@ -1,0 +1,101 @@
+{
+  "status": "passed",
+  "protocol_sha256": "db0ebb25384afb57470c8841a74eb13d050f904e0e10124d9ea4be6cd7ebff99",
+  "pinned_files": 25,
+  "archived_artifacts_verified_against_git_index": 57,
+  "new_geographic_groups": 3,
+  "original_geometry_plan_reproduced": true,
+  "catalogue_items_replayed": 103,
+  "pair_options_by_site": {
+    "site-01": 4,
+    "site-02": 2,
+    "site-03": 18
+  },
+  "independent_reference_unique_queries_complete": 19,
+  "reference_transient_queries_retried": 2,
+  "coarse_reference_records_by_site": {
+    "site-01": 13,
+    "site-02": 5,
+    "site-03": 10
+  },
+  "preflight_priority_site": "site-03",
+  "short_interval_option": {
+    "pre_date": "2018-05-30",
+    "post_date": "2018-06-04",
+    "pre_scene_id": "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+    "post_scene_id": "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147",
+    "interval_days": 5
+  },
+  "control_earlier_observation_opportunity": {
+    "date": "2018-05-10",
+    "scene_id": "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930"
+  },
+  "pre_comparison_spot_reference": {
+    "feature_index": 0,
+    "object_id": 652670,
+    "scene_id": "DS_SPOT7_201805230809039_FR1_FR1_FR1_FR1_E035N50_01790",
+    "capture_date_utc": "2018-05-23",
+    "publication_date_utc": "2020-02-29",
+    "capture_in_reference_window": true,
+    "full_crop_coverage": true,
+    "sampling_m": null,
+    "sampling_basis": "scene sampling unverified in archive metadata",
+    "catalogue_cloud_pct": 15.3,
+    "processing_level": "ALBUM",
+    "access": "public metadata; scene access and terms unresolved"
+  },
+  "in_comparison_landsat_reference": {
+    "feature_index": 4,
+    "object_id": 1681371,
+    "scene_id": "LC08_L1GT_179025_20180603_20200831_02_T2",
+    "capture_date_utc": "2018-06-03",
+    "capture_in_reference_window": true,
+    "full_crop_coverage": true,
+    "coverage_basis": "provider Within query on projected crop",
+    "catalogue_cloud_pct": 0.9999,
+    "panchromatic_sampling_m": 15,
+    "multispectral_sampling_m": 30,
+    "reference_role": "coarse_context_only",
+    "access": "public catalogue metadata; pixels unexamined"
+  },
+  "new_imagery_downloaded": 0,
+  "labels_approved": 0,
+  "acquisition_roster_selected": false,
+  "guarded_workers": {
+    "plan": {
+      "worker_high_water_rss_mib": 162.47,
+      "minimum_available_gib_sampled": 3.97,
+      "elapsed_seconds": 1.02
+    },
+    "sentinel": {
+      "worker_high_water_rss_mib": 104.94,
+      "minimum_available_gib_sampled": 3.58,
+      "elapsed_seconds": 5.33
+    },
+    "sentinel_verification": {
+      "worker_high_water_rss_mib": 93.84,
+      "minimum_available_gib_sampled": 3.91,
+      "elapsed_seconds": 0.51
+    },
+    "references": {
+      "worker_high_water_rss_mib": 70.38,
+      "minimum_available_gib_sampled": 3.39,
+      "elapsed_seconds": 88.58
+    },
+    "reference_verification": {
+      "worker_high_water_rss_mib": 78.98,
+      "minimum_available_gib_sampled": 3.9,
+      "elapsed_seconds": 0.25
+    },
+    "reference_retry": {
+      "worker_high_water_rss_mib": 83.97,
+      "minimum_available_gib_sampled": 3.95,
+      "elapsed_seconds": 0.76
+    },
+    "reference_retry_verification": {
+      "worker_high_water_rss_mib": 80.38,
+      "minimum_available_gib_sampled": 4.0,
+      "elapsed_seconds": 0.26
+    }
+  }
+}

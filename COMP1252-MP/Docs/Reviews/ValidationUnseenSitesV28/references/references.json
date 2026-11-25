@@ -1,0 +1,1459 @@
+{
+  "schema_version": 28,
+  "protocol_sha256": "db0ebb25384afb57470c8841a74eb13d050f904e0e10124d9ea4be6cd7ebff99",
+  "queried_at_utc": "2026-11-25T10:36:41+00:00",
+  "reference_scope": "public independent reference metadata for the exact frozen crop",
+  "sites": [
+    {
+      "site_id": "site-01",
+      "event_id": "event-20011c5fc8f074541ee2",
+      "group_id": "group-c4f441ae55f683f915fa",
+      "tile": "36UXA",
+      "annotation_date": "2018-01-27",
+      "annotation_flags": [],
+      "blockers": [],
+      "control_opportunity": {
+        "row": 2,
+        "col": 2,
+        "width": 16,
+        "height": 16,
+        "pixels": 256,
+        "bounds": [
+          699760.0,
+          5499540.0,
+          699920.0,
+          5499700.0
+        ],
+        "crs": "EPSG:32636",
+        "context_bounds": [
+          699740.0,
+          5499520.0,
+          699940.0,
+          5499720.0
+        ],
+        "context_width": 20,
+        "context_height": 20,
+        "context_pixels": 400,
+        "context_radius_pixels": 2,
+        "catalogue_exclusion_margin_metres": 20,
+        "control_class_status": "unreviewed",
+        "pixel_qa_status": "unassessed",
+        "independent_site": false,
+        "evaluation_approved": false
+      },
+      "anchor_pixels": 237,
+      "positive_target_pixels": 237,
+      "positive_interior_pixels": 151,
+      "anchor_two_pixel_context_inside_crop": true,
+      "positive_interior_sha256": "bc032b198fa4b86f08d7a6399f71bf29fd33150a3b0706b0118a2d34c159bb6d",
+      "split": "validation",
+      "grid": {
+        "crs": "EPSG:32636",
+        "transform": [
+          10.0,
+          0.0,
+          699740.0,
+          0.0,
+          -10.0,
+          5499720.0
+        ],
+        "width": 64,
+        "height": 64,
+        "bounds": [
+          699740.0,
+          5499080.0,
+          700380.0,
+          5499720.0
+        ]
+      },
+      "qa_context_bounds": [
+        698540.0,
+        5497880.0,
+        701580.0,
+        5500920.0
+      ],
+      "event_bounds": [
+        699950.7332194033,
+        5499316.043131021,
+        700245.5004001681,
+        5499496.785351846
+      ],
+      "frozen_group_footprint_bounds": [
+        699736.5845141702,
+        5499056.609877449,
+        700416.5845141702,
+        5499736.609877449
+      ],
+      "core_bounds_wgs84": [
+        35.76499438205709,
+        49.61102591575817,
+        35.77416954516544,
+        49.61698763348575
+      ],
+      "qa_context_bounds_wgs84": [
+        35.74779654860085,
+        49.59984608545725,
+        35.791378575827835,
+        49.62816424296384
+      ],
+      "comparison_start_inclusive": "2017-12-28",
+      "comparison_end_inclusive": "2018-02-06",
+      "reference_start_inclusive": "2017-12-28",
+      "reference_end_inclusive": "2018-03-13",
+      "post_date": "2018-01-27",
+      "post_date_role": "reference release anchor only",
+      "temporal_source_ids": [
+        "36UXA_time-dependent"
+      ],
+      "native_grid_scene_id": "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233",
+      "native_grid_bounds": [
+        600000.0,
+        5490240.0,
+        709800.0,
+        5600040.0
+      ],
+      "context_event_ids": [
+        "event-1d8ee23cf80caed91409",
+        "event-20011c5fc8f074541ee2",
+        "event-3a68d0f6e1ac37421dbe",
+        "event-4163651cb76fe5abb062",
+        "event-96bb21da4c88db3feffb",
+        "event-f2ed3d041419668ccdb7"
+      ],
+      "prior_temporal_context_event_ids": [
+        "event-1d8ee23cf80caed91409",
+        "event-3a68d0f6e1ac37421dbe",
+        "event-4163651cb76fe5abb062",
+        "event-96bb21da4c88db3feffb"
+      ],
+      "eroded_support_pixels": 151
+    },
+    {
+      "site_id": "site-02",
+      "event_id": "event-ef1031ed1843d87d64e1",
+      "group_id": "group-d75dc0544bf1a0e519ad",
+      "tile": "36UXA",
+      "annotation_date": "2017-11-28",
+      "annotation_flags": [],
+      "blockers": [],
+      "control_opportunity": {
+        "row": 2,
+        "col": 2,
+        "width": 16,
+        "height": 16,
+        "pixels": 256,
+        "bounds": [
+          677440.0,
+          5563880.0,
+          677600.0,
+          5564040.0
+        ],
+        "crs": "EPSG:32636",
+        "context_bounds": [
+          677420.0,
+          5563860.0,
+          677620.0,
+          5564060.0
+        ],
+        "context_width": 20,
+        "context_height": 20,
+        "context_pixels": 400,
+        "context_radius_pixels": 2,
+        "catalogue_exclusion_margin_metres": 20,
+        "control_class_status": "unreviewed",
+        "pixel_qa_status": "unassessed",
+        "independent_site": false,
+        "evaluation_approved": false
+      },
+      "anchor_pixels": 194,
+      "positive_target_pixels": 194,
+      "positive_interior_pixels": 131,
+      "anchor_two_pixel_context_inside_crop": true,
+      "positive_interior_sha256": "2df80e5de1786d84aa533f2f8679b67ab969aac533d98c9571f60942863b6141",
+      "split": "validation",
+      "grid": {
+        "crs": "EPSG:32636",
+        "transform": [
+          10.0,
+          0.0,
+          677420.0,
+          0.0,
+          -10.0,
+          5564060.0
+        ],
+        "width": 64,
+        "height": 64,
+        "bounds": [
+          677420.0,
+          5563420.0,
+          678060.0,
+          5564060.0
+        ]
+      },
+      "qa_context_bounds": [
+        676220.0,
+        5562220.0,
+        679260.0,
+        5565260.0
+      ],
+      "event_bounds": [
+        677647.4302122676,
+        5563658.9065840775,
+        677847.9595813106,
+        5563793.473174172
+      ],
+      "frozen_group_footprint_bounds": [
+        677417.7433540128,
+        5563381.769680734,
+        678097.7433540128,
+        5564061.769680734
+      ],
+      "core_bounds_wgs84": [
+        35.48589243609856,
+        50.196159001874534,
+        35.495150600747294,
+        50.20210171666065
+      ],
+      "qa_context_bounds_wgs84": [
+        35.46853916649858,
+        50.185014743109555,
+        35.51251545119198,
+        50.21324263659713
+      ],
+      "comparison_start_inclusive": "2017-10-29",
+      "comparison_end_inclusive": "2017-12-08",
+      "reference_start_inclusive": "2017-10-29",
+      "reference_end_inclusive": "2018-01-12",
+      "post_date": "2017-11-28",
+      "post_date_role": "reference release anchor only",
+      "temporal_source_ids": [
+        "36UXA_time-dependent"
+      ],
+      "native_grid_scene_id": "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233",
+      "native_grid_bounds": [
+        600000.0,
+        5490240.0,
+        709800.0,
+        5600040.0
+      ],
+      "context_event_ids": [
+        "event-ef1031ed1843d87d64e1"
+      ],
+      "prior_temporal_context_event_ids": [],
+      "eroded_support_pixels": 131
+    },
+    {
+      "site_id": "site-03",
+      "event_id": "event-43ee348ffadb94e9458e",
+      "group_id": "group-a85fa2022a25e1a72e2c",
+      "tile": "36UXA",
+      "annotation_date": "2018-06-01",
+      "annotation_flags": [],
+      "blockers": [],
+      "control_opportunity": {
+        "row": 2,
+        "col": 2,
+        "width": 16,
+        "height": 16,
+        "pixels": 256,
+        "bounds": [
+          621420.0,
+          5562120.0,
+          621580.0,
+          5562280.0
+        ],
+        "crs": "EPSG:32636",
+        "context_bounds": [
+          621400.0,
+          5562100.0,
+          621600.0,
+          5562300.0
+        ],
+        "context_width": 20,
+        "context_height": 20,
+        "context_pixels": 400,
+        "context_radius_pixels": 2,
+        "catalogue_exclusion_margin_metres": 20,
+        "control_class_status": "unreviewed",
+        "pixel_qa_status": "unassessed",
+        "independent_site": false,
+        "evaluation_approved": false
+      },
+      "anchor_pixels": 178,
+      "positive_target_pixels": 177,
+      "positive_interior_pixels": 115,
+      "anchor_two_pixel_context_inside_crop": true,
+      "positive_interior_sha256": "78fc509665a581257b0a56f6e3faec09267795c5ed762a18d9057bd8ecc2964f",
+      "split": "validation",
+      "grid": {
+        "crs": "EPSG:32636",
+        "transform": [
+          10.0,
+          0.0,
+          621400.0,
+          0.0,
+          -10.0,
+          5562300.0
+        ],
+        "width": 64,
+        "height": 64,
+        "bounds": [
+          621400.0,
+          5561660.0,
+          622040.0,
+          5562300.0
+        ]
+      },
+      "qa_context_bounds": [
+        620200.0,
+        5560460.0,
+        623240.0,
+        5563500.0
+      ],
+      "event_bounds": [
+        621674.3499288362,
+        5561820.344307881,
+        621771.7836542358,
+        5562068.411980798
+      ],
+      "frozen_group_footprint_bounds": [
+        621386.7116320695,
+        5561626.683939499,
+        622066.7116320695,
+        5562306.683939499
+      ],
+      "core_bounds_wgs84": [
+        34.70086631889127,
+        50.19453989218547,
+        34.710034331947696,
+        50.20042494390973
+      ],
+      "qa_context_bounds_wgs84": [
+        34.68368209458183,
+        50.183503684888514,
+        34.72723015933305,
+        50.21145767881465
+      ],
+      "comparison_start_inclusive": "2018-05-02",
+      "comparison_end_inclusive": "2018-06-11",
+      "reference_start_inclusive": "2018-05-02",
+      "reference_end_inclusive": "2018-07-16",
+      "post_date": "2018-06-01",
+      "post_date_role": "reference release anchor only",
+      "temporal_source_ids": [
+        "36UXA_time-dependent"
+      ],
+      "native_grid_scene_id": "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233",
+      "native_grid_bounds": [
+        600000.0,
+        5490240.0,
+        709800.0,
+        5600040.0
+      ],
+      "context_event_ids": [
+        "event-43ee348ffadb94e9458e",
+        "event-c4beb57e1da6190d9f22"
+      ],
+      "prior_temporal_context_event_ids": [
+        "event-c4beb57e1da6190d9f22"
+      ],
+      "eroded_support_pixels": 115
+    }
+  ],
+  "wayback_release_selections": {
+    "site-01": [
+      {
+        "metadata_release": "2017_r21",
+        "release_date": "2018-01-08",
+        "release_title": "World Imagery (Wayback 2018-01-08)",
+        "release_num": 13161,
+        "anchors": [
+          {
+            "field": "reference_start_inclusive",
+            "date": "2017-12-28"
+          }
+        ]
+      },
+      {
+        "metadata_release": "2018_r01",
+        "release_date": "2018-01-31",
+        "release_title": "World Imagery (Wayback 2018-01-31)",
+        "release_num": 10768,
+        "anchors": [
+          {
+            "field": "post_date",
+            "date": "2018-01-27"
+          }
+        ]
+      },
+      {
+        "metadata_release": "2018_r03",
+        "release_date": "2018-03-14",
+        "release_title": "World Imagery (Wayback 2018-03-14)",
+        "release_num": 8255,
+        "anchors": [
+          {
+            "field": "reference_end_inclusive",
+            "date": "2018-03-13"
+          }
+        ]
+      }
+    ],
+    "site-02": [
+      {
+        "metadata_release": "2017_r19",
+        "release_date": "2017-11-16",
+        "release_title": "World Imagery (Wayback 2017-11-16)",
+        "release_num": 25521,
+        "anchors": [
+          {
+            "field": "reference_start_inclusive",
+            "date": "2017-10-29"
+          }
+        ]
+      },
+      {
+        "metadata_release": "2017_r21",
+        "release_date": "2018-01-08",
+        "release_title": "World Imagery (Wayback 2018-01-08)",
+        "release_num": 13161,
+        "anchors": [
+          {
+            "field": "post_date",
+            "date": "2017-11-28"
+          }
+        ]
+      },
+      {
+        "metadata_release": "2018_r00",
+        "release_date": "2018-01-18",
+        "release_title": "World Imagery (Wayback 2018-01-18)",
+        "release_num": 13045,
+        "anchors": [
+          {
+            "field": "reference_end_inclusive",
+            "date": "2018-01-12"
+          }
+        ]
+      }
+    ],
+    "site-03": [
+      {
+        "metadata_release": "2018_r07",
+        "release_date": "2018-05-16",
+        "release_title": "World Imagery (Wayback 2018-05-16)",
+        "release_num": 32337,
+        "anchors": [
+          {
+            "field": "reference_start_inclusive",
+            "date": "2018-05-02"
+          }
+        ]
+      },
+      {
+        "metadata_release": "2018_r08",
+        "release_date": "2018-06-06",
+        "release_title": "World Imagery (Wayback 2018-06-06)",
+        "release_num": 8249,
+        "anchors": [
+          {
+            "field": "post_date",
+            "date": "2018-06-01"
+          }
+        ]
+      },
+      {
+        "metadata_release": "2018_r10",
+        "release_date": "2018-07-25",
+        "release_title": "World Imagery (Wayback 2018-07-25)",
+        "release_num": 14829,
+        "anchors": [
+          {
+            "field": "reference_end_inclusive",
+            "date": "2018-07-16"
+          }
+        ]
+      }
+    ]
+  },
+  "queries": [
+    {
+      "query_id": "wayback-config",
+      "url": "https://s3-us-west-2.amazonaws.com/config.maptiles.arcgis.com/waybackconfig.json",
+      "transport_status": "received",
+      "http_status": 200,
+      "transport_error": null,
+      "response_file": "raw/wayback-config.response",
+      "response_sha256": "d637e43e81490fb0516b4c6b96704f2455ead97acaa75e2d91b8b0c6e6e913d1",
+      "response_bytes": 107333,
+      "status": "complete",
+      "parsed_releases": 199
+    },
+    {
+      "query_id": "site-01-airbus-9",
+      "url": "https://portal.intelligence-airbusds.com/arcgis/rest/services/OneAtlas/OADConstellationArchive/MapServer/9/query?where=acquisitiondate+%3E%3D+DATE+%272017-12-28%27+AND+acquisitiondate+%3C+DATE+%272018-03-14%27&geometry=699740.0%2C5499080.0%2C700380.0%2C5499720.0&geometryType=esriGeometryEnvelope&inSR=32636&outSR=32636&spatialRel=esriSpatialRelIntersects&outFields=%2A&returnGeometry=true&f=geojson&resultRecordCount=100&orderByFields=acquisitiondate+ASC",
+      "transport_status": "received",
+      "http_status": 200,
+      "transport_error": null,
+      "response_file": "raw/site-01-airbus-9.response",
+      "response_sha256": "5c389083e7dcd785c3d685329fa703d8b676340c14265fa2c63f7f930705dc80",
+      "response_bytes": 99,
+      "status": "complete",
+      "records": [],
+      "site_id": "site-01",
+      "catalogue": "Airbus",
+      "layer": 9,
+      "platform": "Pl\u00e9iades"
+    },
+    {
+      "query_id": "site-01-airbus-14",
+      "url": "https://portal.intelligence-airbusds.com/arcgis/rest/services/OneAtlas/OADConstellationArchive/MapServer/14/query?where=acquisitiondate+%3E%3D+DATE+%272017-12-28%27+AND+acquisitiondate+%3C+DATE+%272018-03-14%27&geometry=699740.0%2C5499080.0%2C700380.0%2C5499720.0&geometryType=esriGeometryEnvelope&inSR=32636&outSR=32636&spatialRel=esriSpatialRelIntersects&outFields=%2A&returnGeometry=true&f=geojson&resultRecordCount=100&orderByFields=acquisitiondate+ASC",
+      "transport_status": "received",
+      "http_status": 200,
+      "transport_error": null,
+      "response_file": "raw/site-01-airbus-14.response",
+      "response_sha256": "5c389083e7dcd785c3d685329fa703d8b676340c14265fa2c63f7f930705dc80",
+      "response_bytes": 99,
+      "status": "complete",
+      "records": [],
+      "site_id": "site-01",
+      "catalogue": "Airbus",
+      "layer": 14,
+      "platform": "SPOT"
+    },
+    {
+      "query_id": "site-01-wayback-2017_r21",
+      "url": "https://metadata.maptiles.arcgis.com/arcgis/rest/services/World_Imagery_Metadata_2017_r21/MapServer/6/query?where=1%3D1&geometry=%7B%22xmin%22%3A699740.0%2C%22ymin%22%3A5499080.0%2C%22xmax%22%3A700380.0%2C%22ymax%22%3A5499720.0%2C%22spatialReference%22%3A%7B%22wkid%22%3A32636%7D%7D&geometryType=esriGeometryEnvelope&inSR=32636&spatialRel=esriSpatialRelWithin&outFields=OBJECTID%2CSRC_DATE2%2CNICE_DESC%2CSRC_DESC%2CSAMP_RES%2CSRC_ACC&returnGeometry=false&f=json",
+      "transport_status": "received",
+      "http_status": 200,
+      "transport_error": null,
+      "response_file": "raw/site-01-wayback-2017_r21.response",
+      "response_sha256": "164303a8539d51e7e9d481780ac1e4a456b2d9f3eb80f2d085ad2561226416eb",
+      "response_bytes": 797,
+      "status": "complete",
+      "records": [
+        {
+          "feature_index": 0,
+          "object_id": 219491,
+          "capture_date_utc": "2011-09-20",
+          "release_date": "2018-01-08",
+          "capture_in_reference_window": false,
+          "capture_on_or_before_release": true,
+          "source": "DigitalGlobe",
+          "sensor": "WV01",
+          "sampling_m": 0.5,
+          "accuracy_m": 10.199999809265137,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "access": "public Wayback display metadata; image use terms and pixels unexamined"
+        }
+      ],
+      "site_id": "site-01",
+      "catalogue": "Esri Wayback",
+      "layer": 6,
+      "release": {
+        "metadata_release": "2017_r21",
+        "release_date": "2018-01-08",
+        "release_title": "World Imagery (Wayback 2018-01-08)",
+        "release_num": 13161,
+        "anchors": [
+          {
+            "field": "reference_start_inclusive",
+            "date": "2017-12-28"
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "site-01-wayback-2018_r01",
+      "url": "https://metadata.maptiles.arcgis.com/arcgis/rest/services/World_Imagery_Metadata_2018_r01/MapServer/6/query?where=1%3D1&geometry=%7B%22xmin%22%3A699740.0%2C%22ymin%22%3A5499080.0%2C%22xmax%22%3A700380.0%2C%22ymax%22%3A5499720.0%2C%22spatialReference%22%3A%7B%22wkid%22%3A32636%7D%7D&geometryType=esriGeometryEnvelope&inSR=32636&spatialRel=esriSpatialRelWithin&outFields=OBJECTID%2CSRC_DATE2%2CNICE_DESC%2CSRC_DESC%2CSAMP_RES%2CSRC_ACC&returnGeometry=false&f=json",
+      "transport_status": "received",
+      "http_status": 200,
+      "transport_error": null,
+      "response_file": "raw/site-01-wayback-2018_r01.response",
+      "response_sha256": "4c09067e5aead1cbcf426985beba8f7a627d3bfa4da7b7594c32cb368cbf6816",
+      "response_bytes": 797,
+      "status": "complete",
+      "records": [
+        {
+          "feature_index": 0,
+          "object_id": 320105,
+          "capture_date_utc": "2011-09-20",
+          "release_date": "2018-01-31",
+          "capture_in_reference_window": false,
+          "capture_on_or_before_release": true,
+          "source": "DigitalGlobe",
+          "sensor": "WV01",
+          "sampling_m": 0.5,
+          "accuracy_m": 10.199999809265137,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "access": "public Wayback display metadata; image use terms and pixels unexamined"
+        }
+      ],
+      "site_id": "site-01",
+      "catalogue": "Esri Wayback",
+      "layer": 6,
+      "release": {
+        "metadata_release": "2018_r01",
+        "release_date": "2018-01-31",
+        "release_title": "World Imagery (Wayback 2018-01-31)",
+        "release_num": 10768,
+        "anchors": [
+          {
+            "field": "post_date",
+            "date": "2018-01-27"
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "site-01-wayback-2018_r03",
+      "url": "https://metadata.maptiles.arcgis.com/arcgis/rest/services/World_Imagery_Metadata_2018_r03/MapServer/6/query?where=1%3D1&geometry=%7B%22xmin%22%3A699740.0%2C%22ymin%22%3A5499080.0%2C%22xmax%22%3A700380.0%2C%22ymax%22%3A5499720.0%2C%22spatialReference%22%3A%7B%22wkid%22%3A32636%7D%7D&geometryType=esriGeometryEnvelope&inSR=32636&spatialRel=esriSpatialRelWithin&outFields=OBJECTID%2CSRC_DATE2%2CNICE_DESC%2CSRC_DESC%2CSAMP_RES%2CSRC_ACC&returnGeometry=false&f=json",
+      "transport_status": "received",
+      "http_status": 200,
+      "transport_error": null,
+      "response_file": "raw/site-01-wayback-2018_r03.response",
+      "response_sha256": "6c3db708efba378666251a12650b8a2d2e349b45efe51d80b34ced5238e18b14",
+      "response_bytes": 797,
+      "status": "complete",
+      "records": [
+        {
+          "feature_index": 0,
+          "object_id": 546993,
+          "capture_date_utc": "2011-09-20",
+          "release_date": "2018-03-14",
+          "capture_in_reference_window": false,
+          "capture_on_or_before_release": true,
+          "source": "DigitalGlobe",
+          "sensor": "WV01",
+          "sampling_m": 0.5,
+          "accuracy_m": 10.199999809265137,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "access": "public Wayback display metadata; image use terms and pixels unexamined"
+        }
+      ],
+      "site_id": "site-01",
+      "catalogue": "Esri Wayback",
+      "layer": 6,
+      "release": {
+        "metadata_release": "2018_r03",
+        "release_date": "2018-03-14",
+        "release_title": "World Imagery (Wayback 2018-03-14)",
+        "release_num": 8255,
+        "anchors": [
+          {
+            "field": "reference_end_inclusive",
+            "date": "2018-03-13"
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "site-02-airbus-9",
+      "url": "https://portal.intelligence-airbusds.com/arcgis/rest/services/OneAtlas/OADConstellationArchive/MapServer/9/query?where=acquisitiondate+%3E%3D+DATE+%272017-10-29%27+AND+acquisitiondate+%3C+DATE+%272018-01-13%27&geometry=677420.0%2C5563420.0%2C678060.0%2C5564060.0&geometryType=esriGeometryEnvelope&inSR=32636&outSR=32636&spatialRel=esriSpatialRelIntersects&outFields=%2A&returnGeometry=true&f=geojson&resultRecordCount=100&orderByFields=acquisitiondate+ASC",
+      "transport_status": "request_failed",
+      "http_status": null,
+      "transport_error": "The read operation timed out",
+      "status": "request_failed",
+      "records": [],
+      "site_id": "site-02",
+      "catalogue": "Airbus",
+      "layer": 9,
+      "platform": "Pl\u00e9iades"
+    },
+    {
+      "query_id": "site-02-airbus-14",
+      "url": "https://portal.intelligence-airbusds.com/arcgis/rest/services/OneAtlas/OADConstellationArchive/MapServer/14/query?where=acquisitiondate+%3E%3D+DATE+%272017-10-29%27+AND+acquisitiondate+%3C+DATE+%272018-01-13%27&geometry=677420.0%2C5563420.0%2C678060.0%2C5564060.0&geometryType=esriGeometryEnvelope&inSR=32636&outSR=32636&spatialRel=esriSpatialRelIntersects&outFields=%2A&returnGeometry=true&f=geojson&resultRecordCount=100&orderByFields=acquisitiondate+ASC",
+      "transport_status": "request_failed",
+      "http_status": null,
+      "transport_error": "The read operation timed out",
+      "status": "request_failed",
+      "records": [],
+      "site_id": "site-02",
+      "catalogue": "Airbus",
+      "layer": 14,
+      "platform": "SPOT"
+    },
+    {
+      "query_id": "site-02-wayback-2017_r19",
+      "url": "https://metadata.maptiles.arcgis.com/arcgis/rest/services/World_Imagery_Metadata_2017_r19/MapServer/6/query?where=1%3D1&geometry=%7B%22xmin%22%3A677420.0%2C%22ymin%22%3A5563420.0%2C%22xmax%22%3A678060.0%2C%22ymax%22%3A5564060.0%2C%22spatialReference%22%3A%7B%22wkid%22%3A32636%7D%7D&geometryType=esriGeometryEnvelope&inSR=32636&spatialRel=esriSpatialRelWithin&outFields=OBJECTID%2CSRC_DATE2%2CNICE_DESC%2CSRC_DESC%2CSAMP_RES%2CSRC_ACC&returnGeometry=false&f=json",
+      "transport_status": "received",
+      "http_status": 200,
+      "transport_error": null,
+      "response_file": "raw/site-02-wayback-2017_r19.response",
+      "response_sha256": "0a329f4aeeba1e781f79294a5d27d7e705c900b504de35013f0c4567d53e7091",
+      "response_bytes": 797,
+      "status": "complete",
+      "records": [
+        {
+          "feature_index": 0,
+          "object_id": 123779,
+          "capture_date_utc": "2010-06-09",
+          "release_date": "2017-11-16",
+          "capture_in_reference_window": false,
+          "capture_on_or_before_release": true,
+          "source": "DigitalGlobe",
+          "sensor": "WV02",
+          "sampling_m": 0.5,
+          "accuracy_m": 10.2,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "access": "public Wayback display metadata; image use terms and pixels unexamined"
+        }
+      ],
+      "site_id": "site-02",
+      "catalogue": "Esri Wayback",
+      "layer": 6,
+      "release": {
+        "metadata_release": "2017_r19",
+        "release_date": "2017-11-16",
+        "release_title": "World Imagery (Wayback 2017-11-16)",
+        "release_num": 25521,
+        "anchors": [
+          {
+            "field": "reference_start_inclusive",
+            "date": "2017-10-29"
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "site-02-wayback-2017_r21",
+      "url": "https://metadata.maptiles.arcgis.com/arcgis/rest/services/World_Imagery_Metadata_2017_r21/MapServer/6/query?where=1%3D1&geometry=%7B%22xmin%22%3A677420.0%2C%22ymin%22%3A5563420.0%2C%22xmax%22%3A678060.0%2C%22ymax%22%3A5564060.0%2C%22spatialReference%22%3A%7B%22wkid%22%3A32636%7D%7D&geometryType=esriGeometryEnvelope&inSR=32636&spatialRel=esriSpatialRelWithin&outFields=OBJECTID%2CSRC_DATE2%2CNICE_DESC%2CSRC_DESC%2CSAMP_RES%2CSRC_ACC&returnGeometry=false&f=json",
+      "transport_status": "received",
+      "http_status": 200,
+      "transport_error": null,
+      "response_file": "raw/site-02-wayback-2017_r21.response",
+      "response_sha256": "35bc71713f8e080bca285e255091618d53d0414a26746b45844b8683689db6ad",
+      "response_bytes": 797,
+      "status": "complete",
+      "records": [
+        {
+          "feature_index": 0,
+          "object_id": 167096,
+          "capture_date_utc": "2010-06-09",
+          "release_date": "2018-01-08",
+          "capture_in_reference_window": false,
+          "capture_on_or_before_release": true,
+          "source": "DigitalGlobe",
+          "sensor": "WV02",
+          "sampling_m": 0.5,
+          "accuracy_m": 10.2,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "access": "public Wayback display metadata; image use terms and pixels unexamined"
+        }
+      ],
+      "site_id": "site-02",
+      "catalogue": "Esri Wayback",
+      "layer": 6,
+      "release": {
+        "metadata_release": "2017_r21",
+        "release_date": "2018-01-08",
+        "release_title": "World Imagery (Wayback 2018-01-08)",
+        "release_num": 13161,
+        "anchors": [
+          {
+            "field": "post_date",
+            "date": "2017-11-28"
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "site-02-wayback-2018_r00",
+      "url": "https://metadata.maptiles.arcgis.com/arcgis/rest/services/World_Imagery_Metadata_2018_r00/MapServer/6/query?where=1%3D1&geometry=%7B%22xmin%22%3A677420.0%2C%22ymin%22%3A5563420.0%2C%22xmax%22%3A678060.0%2C%22ymax%22%3A5564060.0%2C%22spatialReference%22%3A%7B%22wkid%22%3A32636%7D%7D&geometryType=esriGeometryEnvelope&inSR=32636&spatialRel=esriSpatialRelWithin&outFields=OBJECTID%2CSRC_DATE2%2CNICE_DESC%2CSRC_DESC%2CSAMP_RES%2CSRC_ACC&returnGeometry=false&f=json",
+      "transport_status": "received",
+      "http_status": 200,
+      "transport_error": null,
+      "response_file": "raw/site-02-wayback-2018_r00.response",
+      "response_sha256": "065f89e3e35105d10b0f74b57a3a4b1e58125c6e262360bc3ee513cdaa0382e3",
+      "response_bytes": 797,
+      "status": "complete",
+      "records": [
+        {
+          "feature_index": 0,
+          "object_id": 338713,
+          "capture_date_utc": "2010-06-09",
+          "release_date": "2018-01-18",
+          "capture_in_reference_window": false,
+          "capture_on_or_before_release": true,
+          "source": "DigitalGlobe",
+          "sensor": "WV02",
+          "sampling_m": 0.5,
+          "accuracy_m": 10.2,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "access": "public Wayback display metadata; image use terms and pixels unexamined"
+        }
+      ],
+      "site_id": "site-02",
+      "catalogue": "Esri Wayback",
+      "layer": 6,
+      "release": {
+        "metadata_release": "2018_r00",
+        "release_date": "2018-01-18",
+        "release_title": "World Imagery (Wayback 2018-01-18)",
+        "release_num": 13045,
+        "anchors": [
+          {
+            "field": "reference_end_inclusive",
+            "date": "2018-01-12"
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "site-03-airbus-9",
+      "url": "https://portal.intelligence-airbusds.com/arcgis/rest/services/OneAtlas/OADConstellationArchive/MapServer/9/query?where=acquisitiondate+%3E%3D+DATE+%272018-05-02%27+AND+acquisitiondate+%3C+DATE+%272018-07-17%27&geometry=621400.0%2C5561660.0%2C622040.0%2C5562300.0&geometryType=esriGeometryEnvelope&inSR=32636&outSR=32636&spatialRel=esriSpatialRelIntersects&outFields=%2A&returnGeometry=true&f=geojson&resultRecordCount=100&orderByFields=acquisitiondate+ASC",
+      "transport_status": "received",
+      "http_status": 200,
+      "transport_error": null,
+      "response_file": "raw/site-03-airbus-9.response",
+      "response_sha256": "5c389083e7dcd785c3d685329fa703d8b676340c14265fa2c63f7f930705dc80",
+      "response_bytes": 99,
+      "status": "complete",
+      "records": [],
+      "site_id": "site-03",
+      "catalogue": "Airbus",
+      "layer": 9,
+      "platform": "Pl\u00e9iades"
+    },
+    {
+      "query_id": "site-03-airbus-14",
+      "url": "https://portal.intelligence-airbusds.com/arcgis/rest/services/OneAtlas/OADConstellationArchive/MapServer/14/query?where=acquisitiondate+%3E%3D+DATE+%272018-05-02%27+AND+acquisitiondate+%3C+DATE+%272018-07-17%27&geometry=621400.0%2C5561660.0%2C622040.0%2C5562300.0&geometryType=esriGeometryEnvelope&inSR=32636&outSR=32636&spatialRel=esriSpatialRelIntersects&outFields=%2A&returnGeometry=true&f=geojson&resultRecordCount=100&orderByFields=acquisitiondate+ASC",
+      "transport_status": "received",
+      "http_status": 200,
+      "transport_error": null,
+      "response_file": "raw/site-03-airbus-14.response",
+      "response_sha256": "aee119a71e0260a0f617c8f1b92d0b77fe4f351b146f72009ccfa50ee974797d",
+      "response_bytes": 784,
+      "status": "complete",
+      "records": [
+        {
+          "feature_index": 0,
+          "object_id": 652670,
+          "scene_id": "DS_SPOT7_201805230809039_FR1_FR1_FR1_FR1_E035N50_01790",
+          "capture_date_utc": "2018-05-23",
+          "publication_date_utc": "2020-02-29",
+          "capture_in_reference_window": true,
+          "full_crop_coverage": true,
+          "sampling_m": null,
+          "sampling_basis": "scene sampling unverified in archive metadata",
+          "catalogue_cloud_pct": 15.3,
+          "processing_level": "ALBUM",
+          "access": "public metadata; scene access and terms unresolved"
+        }
+      ],
+      "site_id": "site-03",
+      "catalogue": "Airbus",
+      "layer": 14,
+      "platform": "SPOT"
+    },
+    {
+      "query_id": "site-03-wayback-2018_r07",
+      "url": "https://metadata.maptiles.arcgis.com/arcgis/rest/services/World_Imagery_Metadata_2018_r07/MapServer/6/query?where=1%3D1&geometry=%7B%22xmin%22%3A621400.0%2C%22ymin%22%3A5561660.0%2C%22xmax%22%3A622040.0%2C%22ymax%22%3A5562300.0%2C%22spatialReference%22%3A%7B%22wkid%22%3A32636%7D%7D&geometryType=esriGeometryEnvelope&inSR=32636&spatialRel=esriSpatialRelWithin&outFields=OBJECTID%2CSRC_DATE2%2CNICE_DESC%2CSRC_DESC%2CSAMP_RES%2CSRC_ACC&returnGeometry=false&f=json",
+      "transport_status": "received",
+      "http_status": 200,
+      "transport_error": null,
+      "response_file": "raw/site-03-wayback-2018_r07.response",
+      "response_sha256": "5ab4911f39c6e18323f1058865872ec2fd6237606f8f1bca3388c5d8d8933f74",
+      "response_bytes": 797,
+      "status": "complete",
+      "records": [
+        {
+          "feature_index": 0,
+          "object_id": 503312,
+          "capture_date_utc": "2012-09-13",
+          "release_date": "2018-05-16",
+          "capture_in_reference_window": false,
+          "capture_on_or_before_release": true,
+          "source": "DigitalGlobe",
+          "sensor": "WV02",
+          "sampling_m": 0.5,
+          "accuracy_m": 10.2,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "access": "public Wayback display metadata; image use terms and pixels unexamined"
+        }
+      ],
+      "site_id": "site-03",
+      "catalogue": "Esri Wayback",
+      "layer": 6,
+      "release": {
+        "metadata_release": "2018_r07",
+        "release_date": "2018-05-16",
+        "release_title": "World Imagery (Wayback 2018-05-16)",
+        "release_num": 32337,
+        "anchors": [
+          {
+            "field": "reference_start_inclusive",
+            "date": "2018-05-02"
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "site-03-wayback-2018_r08",
+      "url": "https://metadata.maptiles.arcgis.com/arcgis/rest/services/World_Imagery_Metadata_2018_r08/MapServer/6/query?where=1%3D1&geometry=%7B%22xmin%22%3A621400.0%2C%22ymin%22%3A5561660.0%2C%22xmax%22%3A622040.0%2C%22ymax%22%3A5562300.0%2C%22spatialReference%22%3A%7B%22wkid%22%3A32636%7D%7D&geometryType=esriGeometryEnvelope&inSR=32636&spatialRel=esriSpatialRelWithin&outFields=OBJECTID%2CSRC_DATE2%2CNICE_DESC%2CSRC_DESC%2CSAMP_RES%2CSRC_ACC&returnGeometry=false&f=json",
+      "transport_status": "received",
+      "http_status": 200,
+      "transport_error": null,
+      "response_file": "raw/site-03-wayback-2018_r08.response",
+      "response_sha256": "a3d179dd6f261026fb82eafe25e69e24ab7dc03758ea9b9de7341d622bb0e890",
+      "response_bytes": 797,
+      "status": "complete",
+      "records": [
+        {
+          "feature_index": 0,
+          "object_id": 787466,
+          "capture_date_utc": "2012-09-13",
+          "release_date": "2018-06-06",
+          "capture_in_reference_window": false,
+          "capture_on_or_before_release": true,
+          "source": "DigitalGlobe",
+          "sensor": "WV02",
+          "sampling_m": 0.5,
+          "accuracy_m": 10.2,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "access": "public Wayback display metadata; image use terms and pixels unexamined"
+        }
+      ],
+      "site_id": "site-03",
+      "catalogue": "Esri Wayback",
+      "layer": 6,
+      "release": {
+        "metadata_release": "2018_r08",
+        "release_date": "2018-06-06",
+        "release_title": "World Imagery (Wayback 2018-06-06)",
+        "release_num": 8249,
+        "anchors": [
+          {
+            "field": "post_date",
+            "date": "2018-06-01"
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "site-03-wayback-2018_r10",
+      "url": "https://metadata.maptiles.arcgis.com/arcgis/rest/services/World_Imagery_Metadata_2018_r10/MapServer/6/query?where=1%3D1&geometry=%7B%22xmin%22%3A621400.0%2C%22ymin%22%3A5561660.0%2C%22xmax%22%3A622040.0%2C%22ymax%22%3A5562300.0%2C%22spatialReference%22%3A%7B%22wkid%22%3A32636%7D%7D&geometryType=esriGeometryEnvelope&inSR=32636&spatialRel=esriSpatialRelWithin&outFields=OBJECTID%2CSRC_DATE2%2CNICE_DESC%2CSRC_DESC%2CSAMP_RES%2CSRC_ACC&returnGeometry=false&f=json",
+      "transport_status": "received",
+      "http_status": 200,
+      "transport_error": null,
+      "response_file": "raw/site-03-wayback-2018_r10.response",
+      "response_sha256": "3c755a9133ab648d0f394fcb18cc3c8592d7dcc23164979ebd44740ad25804f8",
+      "response_bytes": 797,
+      "status": "complete",
+      "records": [
+        {
+          "feature_index": 0,
+          "object_id": 798960,
+          "capture_date_utc": "2012-09-13",
+          "release_date": "2018-07-25",
+          "capture_in_reference_window": false,
+          "capture_on_or_before_release": true,
+          "source": "DigitalGlobe",
+          "sensor": "WV02",
+          "sampling_m": 0.5,
+          "accuracy_m": 10.2,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "access": "public Wayback display metadata; image use terms and pixels unexamined"
+        }
+      ],
+      "site_id": "site-03",
+      "catalogue": "Esri Wayback",
+      "layer": 6,
+      "release": {
+        "metadata_release": "2018_r10",
+        "release_date": "2018-07-25",
+        "release_title": "World Imagery (Wayback 2018-07-25)",
+        "release_num": 14829,
+        "anchors": [
+          {
+            "field": "reference_end_inclusive",
+            "date": "2018-07-16"
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "site-01-landsat-8",
+      "url": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer/query?where=Category+%3D+1+AND+AcquisitionDate+%3E%3D+DATE+%272017-12-28%27+AND+AcquisitionDate+%3C+DATE+%272018-03-14%27&geometry=699740.0%2C5499080.0%2C700380.0%2C5499720.0&geometryType=esriGeometryEnvelope&inSR=32636&spatialRel=esriSpatialRelWithin&orderByFields=AcquisitionDate+ASC%2COBJECTID+ASC&outFields=OBJECTID%2CLANDSAT_PRODUCT_ID%2CName%2CAcquisitionDate%2CCloudCover%2CSensorName%2CCategory&returnGeometry=false&resultRecordCount=24&f=json",
+      "transport_status": "received",
+      "http_status": 200,
+      "transport_error": null,
+      "response_file": "raw/site-01-landsat-8.response",
+      "response_sha256": "62ec5c4a2e115c3e709449f8b458778c2effdc19206d8d5f00f7c6182d456535",
+      "response_bytes": 8092,
+      "status": "complete",
+      "records": [
+        {
+          "feature_index": 0,
+          "object_id": 1662179,
+          "scene_id": "LC08_L1GT_178025_20180103_20200902_02_T2",
+          "capture_date_utc": "2018-01-03",
+          "capture_in_reference_window": true,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "catalogue_cloud_pct": 0.9121,
+          "panchromatic_sampling_m": 15,
+          "multispectral_sampling_m": 30,
+          "reference_role": "coarse_context_only",
+          "access": "public catalogue metadata; pixels unexamined"
+        },
+        {
+          "feature_index": 1,
+          "object_id": 1647605,
+          "scene_id": "LC08_L1TP_177025_20180112_20200902_02_T1",
+          "capture_date_utc": "2018-01-12",
+          "capture_in_reference_window": true,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "catalogue_cloud_pct": 0.6559,
+          "panchromatic_sampling_m": 15,
+          "multispectral_sampling_m": 30,
+          "reference_role": "coarse_context_only",
+          "access": "public catalogue metadata; pixels unexamined"
+        },
+        {
+          "feature_index": 2,
+          "object_id": 1647619,
+          "scene_id": "LC08_L1TP_177026_20180112_20200902_02_T1",
+          "capture_date_utc": "2018-01-12",
+          "capture_in_reference_window": true,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "catalogue_cloud_pct": 0.5625,
+          "panchromatic_sampling_m": 15,
+          "multispectral_sampling_m": 30,
+          "reference_role": "coarse_context_only",
+          "access": "public catalogue metadata; pixels unexamined"
+        },
+        {
+          "feature_index": 3,
+          "object_id": 1662180,
+          "scene_id": "LC08_L1GT_178025_20180119_20200902_02_T2",
+          "capture_date_utc": "2018-01-19",
+          "capture_in_reference_window": true,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "catalogue_cloud_pct": 1,
+          "panchromatic_sampling_m": 15,
+          "multispectral_sampling_m": 30,
+          "reference_role": "coarse_context_only",
+          "access": "public catalogue metadata; pixels unexamined"
+        },
+        {
+          "feature_index": 4,
+          "object_id": 1646937,
+          "scene_id": "LC08_L1GT_177025_20180128_20200902_02_T2",
+          "capture_date_utc": "2018-01-28",
+          "capture_in_reference_window": true,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "catalogue_cloud_pct": 1,
+          "panchromatic_sampling_m": 15,
+          "multispectral_sampling_m": 30,
+          "reference_role": "coarse_context_only",
+          "access": "public catalogue metadata; pixels unexamined"
+        },
+        {
+          "feature_index": 5,
+          "object_id": 1646946,
+          "scene_id": "LC08_L1GT_177026_20180128_20200902_02_T2",
+          "capture_date_utc": "2018-01-28",
+          "capture_in_reference_window": true,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "catalogue_cloud_pct": 1,
+          "panchromatic_sampling_m": 15,
+          "multispectral_sampling_m": 30,
+          "reference_role": "coarse_context_only",
+          "access": "public catalogue metadata; pixels unexamined"
+        },
+        {
+          "feature_index": 6,
+          "object_id": 1662181,
+          "scene_id": "LC08_L1GT_178025_20180204_20200902_02_T2",
+          "capture_date_utc": "2018-02-04",
+          "capture_in_reference_window": true,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "catalogue_cloud_pct": 1,
+          "panchromatic_sampling_m": 15,
+          "multispectral_sampling_m": 30,
+          "reference_role": "coarse_context_only",
+          "access": "public catalogue metadata; pixels unexamined"
+        },
+        {
+          "feature_index": 7,
+          "object_id": 1646938,
+          "scene_id": "LC08_L1GT_177025_20180213_20200902_02_T2",
+          "capture_date_utc": "2018-02-13",
+          "capture_in_reference_window": true,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "catalogue_cloud_pct": 1,
+          "panchromatic_sampling_m": 15,
+          "multispectral_sampling_m": 30,
+          "reference_role": "coarse_context_only",
+          "access": "public catalogue metadata; pixels unexamined"
+        },
+        {
+          "feature_index": 8,
+          "object_id": 1646947,
+          "scene_id": "LC08_L1GT_177026_20180213_20200902_02_T2",
+          "capture_date_utc": "2018-02-13",
+          "capture_in_reference_window": true,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "catalogue_cloud_pct": 1,
+          "panchromatic_sampling_m": 15,
+          "multispectral_sampling_m": 30,
+          "reference_role": "coarse_context_only",
+          "access": "public catalogue metadata; pixels unexamined"
+        },
+        {
+          "feature_index": 9,
+          "object_id": 1662897,
+          "scene_id": "LC08_L1TP_178025_20180220_20200902_02_T1",
+          "capture_date_utc": "2018-02-20",
+          "capture_in_reference_window": true,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "catalogue_cloud_pct": 0.7196,
+          "panchromatic_sampling_m": 15,
+          "multispectral_sampling_m": 30,
+          "reference_role": "coarse_context_only",
+          "access": "public catalogue metadata; pixels unexamined"
+        },
+        {
+          "feature_index": 10,
+          "object_id": 1646939,
+          "scene_id": "LC08_L1GT_177025_20180301_20200902_02_T2",
+          "capture_date_utc": "2018-03-01",
+          "capture_in_reference_window": true,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "catalogue_cloud_pct": 1,
+          "panchromatic_sampling_m": 15,
+          "multispectral_sampling_m": 30,
+          "reference_role": "coarse_context_only",
+          "access": "public catalogue metadata; pixels unexamined"
+        },
+        {
+          "feature_index": 11,
+          "object_id": 1646948,
+          "scene_id": "LC08_L1GT_177026_20180301_20200902_02_T2",
+          "capture_date_utc": "2018-03-01",
+          "capture_in_reference_window": true,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "catalogue_cloud_pct": 0.9999,
+          "panchromatic_sampling_m": 15,
+          "multispectral_sampling_m": 30,
+          "reference_role": "coarse_context_only",
+          "access": "public catalogue metadata; pixels unexamined"
+        },
+        {
+          "feature_index": 12,
+          "object_id": 1662182,
+          "scene_id": "LC08_L1GT_178025_20180308_20200901_02_T2",
+          "capture_date_utc": "2018-03-08",
+          "capture_in_reference_window": true,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "catalogue_cloud_pct": 1,
+          "panchromatic_sampling_m": 15,
+          "multispectral_sampling_m": 30,
+          "reference_role": "coarse_context_only",
+          "access": "public catalogue metadata; pixels unexamined"
+        }
+      ],
+      "site_id": "site-01",
+      "catalogue": "Esri Landsat 8",
+      "reference_role": "coarse_context_only"
+    },
+    {
+      "query_id": "site-02-landsat-8",
+      "url": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer/query?where=Category+%3D+1+AND+AcquisitionDate+%3E%3D+DATE+%272017-10-29%27+AND+AcquisitionDate+%3C+DATE+%272018-01-13%27&geometry=677420.0%2C5563420.0%2C678060.0%2C5564060.0&geometryType=esriGeometryEnvelope&inSR=32636&spatialRel=esriSpatialRelWithin&orderByFields=AcquisitionDate+ASC%2COBJECTID+ASC&outFields=OBJECTID%2CLANDSAT_PRODUCT_ID%2CName%2CAcquisitionDate%2CCloudCover%2CSensorName%2CCategory&returnGeometry=false&resultRecordCount=24&f=json",
+      "transport_status": "received",
+      "http_status": 200,
+      "transport_error": null,
+      "response_file": "raw/site-02-landsat-8.response",
+      "response_sha256": "f5307e4714a39e9653cae7e783ec2c805a636380f1a2657da3cfb46e93101812",
+      "response_bytes": 3824,
+      "status": "complete",
+      "records": [
+        {
+          "feature_index": 0,
+          "object_id": 2390012,
+          "scene_id": "LC08_L1GT_178025_20171031_20200902_02_T2",
+          "capture_date_utc": "2017-10-31",
+          "capture_in_reference_window": true,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "catalogue_cloud_pct": 1,
+          "panchromatic_sampling_m": 15,
+          "multispectral_sampling_m": 30,
+          "reference_role": "coarse_context_only",
+          "access": "public catalogue metadata; pixels unexamined"
+        },
+        {
+          "feature_index": 1,
+          "object_id": 2392197,
+          "scene_id": "LC08_L1TP_178025_20171116_20200902_02_T1",
+          "capture_date_utc": "2017-11-16",
+          "capture_in_reference_window": true,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "catalogue_cloud_pct": 0.7598,
+          "panchromatic_sampling_m": 15,
+          "multispectral_sampling_m": 30,
+          "reference_role": "coarse_context_only",
+          "access": "public catalogue metadata; pixels unexamined"
+        },
+        {
+          "feature_index": 2,
+          "object_id": 2390013,
+          "scene_id": "LC08_L1GT_178025_20171202_20200902_02_T2",
+          "capture_date_utc": "2017-12-02",
+          "capture_in_reference_window": true,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "catalogue_cloud_pct": 1,
+          "panchromatic_sampling_m": 15,
+          "multispectral_sampling_m": 30,
+          "reference_role": "coarse_context_only",
+          "access": "public catalogue metadata; pixels unexamined"
+        },
+        {
+          "feature_index": 3,
+          "object_id": 2390014,
+          "scene_id": "LC08_L1GT_178025_20171218_20200902_02_T2",
+          "capture_date_utc": "2017-12-18",
+          "capture_in_reference_window": true,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "catalogue_cloud_pct": 1,
+          "panchromatic_sampling_m": 15,
+          "multispectral_sampling_m": 30,
+          "reference_role": "coarse_context_only",
+          "access": "public catalogue metadata; pixels unexamined"
+        },
+        {
+          "feature_index": 4,
+          "object_id": 1662179,
+          "scene_id": "LC08_L1GT_178025_20180103_20200902_02_T2",
+          "capture_date_utc": "2018-01-03",
+          "capture_in_reference_window": true,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "catalogue_cloud_pct": 0.9121,
+          "panchromatic_sampling_m": 15,
+          "multispectral_sampling_m": 30,
+          "reference_role": "coarse_context_only",
+          "access": "public catalogue metadata; pixels unexamined"
+        }
+      ],
+      "site_id": "site-02",
+      "catalogue": "Esri Landsat 8",
+      "reference_role": "coarse_context_only"
+    },
+    {
+      "query_id": "site-03-landsat-8",
+      "url": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer/query?where=Category+%3D+1+AND+AcquisitionDate+%3E%3D+DATE+%272018-05-02%27+AND+AcquisitionDate+%3C+DATE+%272018-07-17%27&geometry=621400.0%2C5561660.0%2C622040.0%2C5562300.0&geometryType=esriGeometryEnvelope&inSR=32636&spatialRel=esriSpatialRelWithin&orderByFields=AcquisitionDate+ASC%2COBJECTID+ASC&outFields=OBJECTID%2CLANDSAT_PRODUCT_ID%2CName%2CAcquisitionDate%2CCloudCover%2CSensorName%2CCategory&returnGeometry=false&resultRecordCount=24&f=json",
+      "transport_status": "received",
+      "http_status": 200,
+      "transport_error": null,
+      "response_file": "raw/site-03-landsat-8.response",
+      "response_sha256": "89dccabce3c759a3df766cbb081374959c01a52497d24d952aaf99da8b84b927",
+      "response_bytes": 6581,
+      "status": "complete",
+      "records": [
+        {
+          "feature_index": 0,
+          "object_id": 1682379,
+          "scene_id": "LC08_L1TP_179025_20180502_20200901_02_T1",
+          "capture_date_utc": "2018-05-02",
+          "capture_in_reference_window": true,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "catalogue_cloud_pct": 0.0001,
+          "panchromatic_sampling_m": 15,
+          "multispectral_sampling_m": 30,
+          "reference_role": "coarse_context_only",
+          "access": "public catalogue metadata; pixels unexamined"
+        },
+        {
+          "feature_index": 1,
+          "object_id": 1662901,
+          "scene_id": "LC08_L1TP_178025_20180511_20200901_02_T1",
+          "capture_date_utc": "2018-05-11",
+          "capture_in_reference_window": true,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "catalogue_cloud_pct": 0.0003,
+          "panchromatic_sampling_m": 15,
+          "multispectral_sampling_m": 30,
+          "reference_role": "coarse_context_only",
+          "access": "public catalogue metadata; pixels unexamined"
+        },
+        {
+          "feature_index": 2,
+          "object_id": 1682380,
+          "scene_id": "LC08_L1TP_179025_20180518_20200901_02_T1",
+          "capture_date_utc": "2018-05-18",
+          "capture_in_reference_window": true,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "catalogue_cloud_pct": 0.8733,
+          "panchromatic_sampling_m": 15,
+          "multispectral_sampling_m": 30,
+          "reference_role": "coarse_context_only",
+          "access": "public catalogue metadata; pixels unexamined"
+        },
+        {
+          "feature_index": 3,
+          "object_id": 1662902,
+          "scene_id": "LC08_L1TP_178025_20180527_20200901_02_T1",
+          "capture_date_utc": "2018-05-27",
+          "capture_in_reference_window": true,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "catalogue_cloud_pct": 0.0002,
+          "panchromatic_sampling_m": 15,
+          "multispectral_sampling_m": 30,
+          "reference_role": "coarse_context_only",
+          "access": "public catalogue metadata; pixels unexamined"
+        },
+        {
+          "feature_index": 4,
+          "object_id": 1681371,
+          "scene_id": "LC08_L1GT_179025_20180603_20200831_02_T2",
+          "capture_date_utc": "2018-06-03",
+          "capture_in_reference_window": true,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "catalogue_cloud_pct": 0.9999,
+          "panchromatic_sampling_m": 15,
+          "multispectral_sampling_m": 30,
+          "reference_role": "coarse_context_only",
+          "access": "public catalogue metadata; pixels unexamined"
+        },
+        {
+          "feature_index": 5,
+          "object_id": 1662903,
+          "scene_id": "LC08_L1TP_178025_20180612_20200831_02_T1",
+          "capture_date_utc": "2018-06-12",
+          "capture_in_reference_window": true,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "catalogue_cloud_pct": 0.6262,
+          "panchromatic_sampling_m": 15,
+          "multispectral_sampling_m": 30,
+          "reference_role": "coarse_context_only",
+          "access": "public catalogue metadata; pixels unexamined"
+        },
+        {
+          "feature_index": 6,
+          "object_id": 1682381,
+          "scene_id": "LC08_L1TP_179025_20180619_20200831_02_T1",
+          "capture_date_utc": "2018-06-19",
+          "capture_in_reference_window": true,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "catalogue_cloud_pct": 0.1735,
+          "panchromatic_sampling_m": 15,
+          "multispectral_sampling_m": 30,
+          "reference_role": "coarse_context_only",
+          "access": "public catalogue metadata; pixels unexamined"
+        },
+        {
+          "feature_index": 7,
+          "object_id": 1662904,
+          "scene_id": "LC08_L1TP_178025_20180628_20200831_02_T1",
+          "capture_date_utc": "2018-06-28",
+          "capture_in_reference_window": true,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "catalogue_cloud_pct": 0.5935,
+          "panchromatic_sampling_m": 15,
+          "multispectral_sampling_m": 30,
+          "reference_role": "coarse_context_only",
+          "access": "public catalogue metadata; pixels unexamined"
+        },
+        {
+          "feature_index": 8,
+          "object_id": 1682382,
+          "scene_id": "LC08_L1TP_179025_20180705_20200831_02_T1",
+          "capture_date_utc": "2018-07-05",
+          "capture_in_reference_window": true,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "catalogue_cloud_pct": 0.3265,
+          "panchromatic_sampling_m": 15,
+          "multispectral_sampling_m": 30,
+          "reference_role": "coarse_context_only",
+          "access": "public catalogue metadata; pixels unexamined"
+        },
+        {
+          "feature_index": 9,
+          "object_id": 1662905,
+          "scene_id": "LC08_L1TP_178025_20180714_20200831_02_T1",
+          "capture_date_utc": "2018-07-14",
+          "capture_in_reference_window": true,
+          "full_crop_coverage": true,
+          "coverage_basis": "provider Within query on projected crop",
+          "catalogue_cloud_pct": 0.3024,
+          "panchromatic_sampling_m": 15,
+          "multispectral_sampling_m": 30,
+          "reference_role": "coarse_context_only",
+          "access": "public catalogue metadata; pixels unexamined"
+        }
+      ],
+      "site_id": "site-03",
+      "catalogue": "Esri Landsat 8",
+      "reference_role": "coarse_context_only"
+    }
+  ],
+  "limitations": [
+    "Archive visibility and public access vary. Empty responses cover the queried public layers and dates.",
+    "Airbus acquisition and publication dates are distinct. Catalogue cloud is scene-level metadata.",
+    "Airbus scene sample spacing and scene imagery access remain unverified.",
+    "Wayback release dates date the mosaic version. SRC_DATE2 dates the source listed in that version.",
+    "A full footprint is spatial metadata. Crop clarity, land cover and event timing require pixel evidence.",
+    "Landsat 8 provides coarse context at 15 m panchromatic and 30 m multispectral sampling."
+  ],
+  "reference_imagery_acquired": false,
+  "reference_roster_selected": false,
+  "labels_approved": 0,
+  "request_origins": {
+    "wayback-config": "network",
+    "site-01-airbus-9": "network",
+    "site-01-airbus-14": "network",
+    "site-01-wayback-2017_r21": "network",
+    "site-01-wayback-2018_r01": "network",
+    "site-01-wayback-2018_r03": "network",
+    "site-02-airbus-9": "network",
+    "site-02-airbus-14": "network",
+    "site-02-wayback-2017_r19": "network",
+    "site-02-wayback-2017_r21": "network",
+    "site-02-wayback-2018_r00": "network",
+    "site-03-airbus-9": "network",
+    "site-03-airbus-14": "network",
+    "site-03-wayback-2018_r07": "network",
+    "site-03-wayback-2018_r08": "network",
+    "site-03-wayback-2018_r10": "network",
+    "site-01-landsat-8": "network",
+    "site-02-landsat-8": "network",
+    "site-03-landsat-8": "network"
+  },
+  "network_requests": 19,
+  "retry_from_sha256": null
+}

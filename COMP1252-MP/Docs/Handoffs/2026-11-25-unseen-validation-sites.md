@@ -50,12 +50,48 @@ plan byte for byte. Checkpoint `e11ce88` froze the plan before live requests.
 
 Every pair option has a compatible later catalogue observation within the
 search window. Site-03 also has a five-day option from 30 May to 4 June 2018
-on orbit 107, with an earlier 25 May observation for a possible stable-only
-control pair. Scene cloud metadata is 0% and 0.3764% for the five-day pair.
+on orbit 107, with an earlier 10 May observation for a possible 20-day
+stable-only control pair ending 30 May. Scene cloud metadata is 0% and
+0.3764% for the five-day pair and 0% for 10 May.
 That figure describes each scene. Whole-crop and context clarity require QA.
 All 103 catalogue items across seven raw pages replayed byte for byte. The
 Sentinel-2 run and replay peaked at 104.94 and 93.84 MiB.
 [Catalogue evidence](../Reviews/ValidationUnseenSitesV28/sentinel/sentinel.json)
 · [Replay](../Reviews/ValidationUnseenSitesV28/sentinel_verification/verification.json).
 
-Independent archive checks remain pending.
+## Independent reference results
+
+| Site | Airbus archive leads | Sampled Wayback capture | Coarse Landsat 8 records |
+| --- | --- | --- | ---: |
+| site-01 | No scene returned in the search window | 20 September 2011 | 13 |
+| site-02 | SPOT-7, 22 November 2017, partial crop coverage | 9 June 2010 | 5 |
+| site-03 | SPOT-7, 23 May 2018, full crop coverage | 13 September 2012 | 10 |
+
+All 19 unique reference queries completed across the first run and one bounded retry.
+The retry recovered both Airbus timeouts for site-02 and reused every other
+response. Both runs replayed byte for byte. Wayback lists 0.5 m historical
+captures for all three sites. Its source captures precede the search windows.
+The SPOT-7 entry for site-03 is an archive lead. Scene sampling, image access
+and crop clarity remain unresolved. Landsat has 15 m panchromatic and 30 m
+multispectral sampling. The 3 June 2018 Landsat record covers the full site-03
+crop according to the provider and falls inside the five-day comparison.
+[Initial reference inventory](../Reviews/ValidationUnseenSitesV28/references/references.json)
+· [Completed reference inventory](../Reviews/ValidationUnseenSitesV28/reference_retry/references.json)
+· [USGS Landsat 8 sampling](https://www.usgs.gov/landsat-missions/landsat-8).
+
+## Feasibility outcome
+
+Site-03 is the first candidate for native Level-1C metadata and asset-list
+preflight. The 30 May and 4 June comparison combines a short interval, low
+scene-level cloud, a same-orbit control opportunity on 10 and 30 May, and
+complementary dated reference leads before and during the comparison. A later
+same-orbit follow-up is available in the catalogue from 9 June. The 2 May to
+1 June pair is the first-ranked option under the archived scene-cloud rule
+and leaves a longer timing interval. The catalogue retains all 24 pair options
+and the other two sites as alternatives.
+
+The shortlist is complete for this metadata phase. Scene transfer, crop QA,
+control classification and source access checks require later work. No labels
+are approved and no imagery acquisition roster is locked. The one-worker
+guard peaked at 162.47 MiB during planning, and available memory stayed at or
+above 3.39 GiB. [Integrity checks](../Reviews/ValidationUnseenSitesV28/checks/final_integrity.json).

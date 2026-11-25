@@ -5,7 +5,7 @@ status, then the latest handoff before edits. Commit every completed verified
 logical change with the handoff updated and push to the SAME branch. This entry
 point works for Codex, Gemini Antigravity or another agent without chat history.
 
-Current V28 metadata feasibility for fresh held-out sites:
+Completed V28 metadata feasibility for fresh held-out sites:
 **`Docs/Handoffs/2026-11-25-unseen-validation-sites.md`**.
 Completed V27 Ukraine acquisition, screening and results closeout:
 **`Docs/Handoffs/2026-11-24-2019-validation-closeout.md`**.
@@ -186,6 +186,13 @@ failed the review gate. All four QA masks and all eight cache bindings replayed.
 There are zero approved held-out labels and no new timing interval. The 394-test
 suite and independent frozen training verification passed. Use the final report
 and closeout handoff for the supported research conclusions.
+
+V28 identified 24 nominal pair options across three previously unused groups.
+The strongest short-interval lead is site-03, 30 May to 4 June 2018, with a
+possible matched control using 10 and 30 May. A 23 May SPOT-7 archive lead
+covers the crop, and a 3 June Landsat record provides coarse in-window context.
+The metadata and offline replays are archived. Native Level-1C preflight,
+reference access and crop QA are pending before any candidate can be approved.
 
 Use one nice +10 CPU worker, native/Torch threads 1, no GPU, unchanged
 `validate_sample.run_guarded`, 512 MiB RSS and 1.5 GiB available-system-memory
