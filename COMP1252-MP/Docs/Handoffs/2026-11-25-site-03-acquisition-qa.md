@@ -23,6 +23,7 @@ recoverable transaction and archive each publication receipt.
 | Date | Verified files | Bytes | Elapsed | Peak worker RSS |
 | --- | ---: | ---: | ---: | ---: |
 | 2018-05-10 | 58 | 511,349,457 | 22.38 s | 63.53 MiB |
+| 2018-05-30 | 58 | 526,754,551 | 22.88 s | 64.30 MiB |
 
 Pending work includes publication dates absent from the table, lineage
 verification, crop and control QA, and replay.
