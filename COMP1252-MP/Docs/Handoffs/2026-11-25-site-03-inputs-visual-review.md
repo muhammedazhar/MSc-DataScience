@@ -1,0 +1,24 @@
+# Site-03 feature audit and model-blind review
+
+Work on `codex/curated-deforestation-pilot` and push verified checkpoints to
+the same branch. Start with the [V30 handoff](2026-11-25-site-03-acquisition-qa.md)
+and keep its exact crop, dates, source lineage, target masks, control and
+geographic split. V31 covers the 177-pixel target, 115-pixel eroded interior
+and their full two-pixel contexts. The 256-pixel control and its 400-pixel
+context stay fixed.
+
+Audit the 27 frozen feature channels on the 30 May–4 June pair in the target,
+interior and control contexts and on the 10–30 May pair in the control context.
+Use one nice +10 CPU worker with one native thread, the unchanged 512 MiB cap,
+1.5 GiB available-memory reserve and 300-second cap. Replay from archived
+arrays. All model weights, splits and class labels remain frozen.
+
+The [visual protocol](../Reviews/ValidationSite03ReviewV31/visual_protocol.json)
+pins the two target dates and three control dates. Open the plain matched RGB
+boards before the outlines and vegetation index. Inspect for earlier
+forest-like cover and a coherent new opening on 4 June. Require the entire
+control to remain consistent with forest across all three observations.
+Investigate traceable dated reference access from V28. Preserve class
+uncertainty and record visual exposure separately from validation status.
+
+Feature processing, visual inspection and the reference disposition are pending.

@@ -1,0 +1,72 @@
+{
+  "schema_version": 31,
+  "site_id": "site-03",
+  "pair_id": "derived-site03-891e388f6c6aaee1a9ea",
+  "group_id": "group-a85fa2022a25e1a72e2c",
+  "target_dates": [
+    "2018-05-30",
+    "2018-06-04"
+  ],
+  "control_dates": [
+    "2018-05-10",
+    "2018-05-30",
+    "2018-06-04"
+  ],
+  "display": {
+    "rgb_reflectance": [
+      0,
+      0.3
+    ],
+    "ndvi": [
+      -0.1,
+      0.9
+    ],
+    "ndvi_difference": [
+      -0.5,
+      0.5
+    ],
+    "resampling": "nearest",
+    "control_display_box_col_row": [
+      0,
+      0,
+      26,
+      26
+    ]
+  },
+  "resources": {
+    "workers": 1,
+    "native_threads": 1,
+    "nice_increment": 10,
+    "gpu_used": false,
+    "worker_rss_mib": 512,
+    "available_memory_reserve_gib": 1.5,
+    "max_seconds_per_worker": 300
+  },
+  "view_order": [
+    "target-rgb-plain.png",
+    "control-rgb-plain.png",
+    "target-rgb-outlined.png",
+    "control-rgb-outlined.png",
+    "target-ndvi.png",
+    "control-ndvi.png"
+  ],
+  "decision_rule": {
+    "prerequisite": "Check finite frozen feature inputs in all fixed required contexts.",
+    "target": "Review earlier cover, coherent localized opening, changed boundary, vegetation response and alternative explanations (field management, phenology, illumination or mixed edges).",
+    "control": "Review the same entire square and context for continuous forest-like cover and stable edges on each date; stable colour alone is insufficient.",
+    "independent_reference": "Use a dated, traceable, adequately resolved and covering source when class needs corroboration; keep coarse imagery and scene access as separate evidence.",
+    "record": "Record report and all unresolved outcomes before any external model or evaluation. Preserve the frozen split, labels and approval gate."
+  },
+  "input_and_code_sha256": {
+    "Docs/Reviews/ValidationSite03ScreenV30/final_integrity.json": "df49d8214a05601fcc74582595e7135e0a18ad70db07a4c8225c227d25325d2e",
+    "Docs/Reviews/ValidationSite03ScreenV30/lineage/metadata.json": "a0df724e3cd08bc2e188801c591e75c5c8237b0c0e04631235e58ed5390dec72",
+    "Docs/Reviews/ValidationSite03ScreenV30/protocol.json": "bb3f0da4e7831646673d8884528a117995c189c37de3163bbeedbd3502021776",
+    "Docs/Reviews/ValidationSite03ScreenV30/publication/2018-05-10/metadata.json": "e14ff2a155b2328d8d85de4ec7e0d9b1cd18c345cb8fdf9eee21f2cde0769d9c",
+    "Docs/Reviews/ValidationSite03ScreenV30/publication/2018-05-30/metadata.json": "8aa04e47dee94e70d987c9254af6de7a3388602006efd5ede59bb483001d15cc",
+    "Docs/Reviews/ValidationSite03ScreenV30/publication/2018-06-04/metadata.json": "cedfa44db8339fe6f10ba695a5f14961a72ccb7f132d141bc3234bd1c63e0e68",
+    "Docs/Reviews/ValidationSite03ScreenV30/screen/metadata.json": "c38f1409dc59cccee8f6fd9702c69eb9e41e7da44798ef6c2479170782ff74fd",
+    "Docs/Reviews/ValidationSite03ScreenV30/verification/metadata.json": "43dcd60ddfa546fa43f94b067507181efbc1d8b815cc2ff2e72ce8789f7c5011",
+    "Solutions/prepare_july_visual_review.py": "6650036b87ecfa8f7eaeb2820746cfeb203b6fbe0def06c1bf68bf2e3aa30568",
+    "Solutions/prepare_site03_visual_review.py": "9ff02a33c7588c15837371bd586dad0ede1029b1c61251f18fd956c4e54a8463"
+  }
+}
