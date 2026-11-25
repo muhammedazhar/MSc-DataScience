@@ -1,0 +1,60 @@
+{
+  "status": "passed",
+  "schema_version": 32,
+  "nomination_status": "nominated_for_bounded_reference_review",
+  "nominated_site": "site-01",
+  "retained_pair_options": 6,
+  "new_map_geometry_candidates": 2,
+  "v28_geometry_plan_identical": true,
+  "v28_catalogue_items_replayed": 103,
+  "v28_reference_queries_replayed": 19,
+  "alt_control_search_byte_identical": true,
+  "regression_tests_passed": 394,
+  "guard_limits_verified": true,
+  "guarded_workers": {
+    "control_search": {
+      "metadata_sha256": "530d70b0a61d6f1f0bdf6d21d8931183b8697f6f540a2101953b624fc317ed36",
+      "peak_rss_mib": 139.81,
+      "min_available_gib": 4.21
+    },
+    "plan_replay": {
+      "metadata_sha256": "6b5649f43821756f1a42a187baf0cd075b54b5adcd24b944b1648c936ce52ae9",
+      "peak_rss_mib": 163.33,
+      "min_available_gib": 4.26
+    },
+    "sentinel_replay": {
+      "metadata_sha256": "867c7f95837679f1cb3b5d1247b278c8d4b841e260d423e6c32c82337e111571",
+      "peak_rss_mib": 97.41,
+      "min_available_gib": 4.24
+    },
+    "reference_replay": {
+      "metadata_sha256": "d973352d1b5cf595b362cd096b60f459889a4448a67d37d27e84ce0500043bc8",
+      "peak_rss_mib": 80.48,
+      "min_available_gib": 4.35
+    },
+    "control_replay": {
+      "metadata_sha256": "1bbc244f4b9660ab916dc5ccb8b54f61b52c582d356f2f3fd965bf61e6ea3ce0",
+      "peak_rss_mib": 138.77,
+      "min_available_gib": 4.31
+    },
+    "full-tests": {
+      "metadata_sha256": "0cfd7a61f8d4f26289c3cf2ccc0af49a61baa0e1cb45b7e49b36d502e0bb1127",
+      "peak_rss_mib": 359.6,
+      "min_available_gib": 3.95
+    }
+  },
+  "full_scene_acquisition_candidates": [],
+  "imagery_downloaded": 0,
+  "labels_approved": 0,
+  "git_index_sha256": {
+    "comparison.json": "9ef54ac5b18f835eac9c6acba35cc45897d0982bfc6a2b2544876591435dcc0c",
+    "control-context.json": "35da6d24fe8a709f94cb400c1cce9c937febd929dcc3fc9110b5fbc910bb6479",
+    "control-map-features.geojson": "9efc11c44ca625fe3dd9c916ec3711399157807b7677a32202bd4f7f5e3207a1",
+    "control_search_protocol.json": "f6221cd44d96b0b671b18a9e2dda17d64e7c251938d0cd0ce2e16957c541bdc5",
+    "controls/controls.json": "c266fc9766341c1d80e30ddafbe872bd10677c617cb7a903e41455bb7768f07d",
+    "controls/metadata.json": "530d70b0a61d6f1f0bdf6d21d8931183b8697f6f540a2101953b624fc317ed36",
+    "protocol.json": "3b2c99bb8179a2d3950384e921428d27daa653296de8bd1320498dca56b4fee8",
+    "site-01-access.json": "f5220f33d074d5f736d562c0f02f6c2828f0dfa31ab79f852cf68b4254be7dfa",
+    "site-02-access.json": "5f28079e9b1d1d3265015c57673b26069610ec3b43fc45507c898954483c9787"
+  }
+}

@@ -5,7 +5,7 @@ status, then the latest handoff before edits. Commit every completed verified
 logical change with the handoff updated and push to the SAME branch. This entry
 point works for Codex, Gemini Antigravity or another agent without chat history.
 
-Current V32 remaining-site metadata comparison:
+Completed V32 remaining-site metadata comparison:
 **`Docs/Handoffs/2026-11-25-remaining-site-selection.md`**.
 Completed V31 site-03 feature audit and model-blind review:
 **`Docs/Handoffs/2026-11-25-site-03-inputs-visual-review.md`**.
@@ -211,6 +211,15 @@ opening on 30 May and a mixed control. Landsat shows the broad opening by
 excluded. There is no new first-visible deforestation interval. Include
 `group-a85fa2022a25e1a72e2c` in future visual-exposure exclusions. The
 frozen geographic split and model checkpoint remain in force.
+
+V32 compared all six remaining V28 pair options. The original site-01 and
+site-02 controls cross mapped paths or roads. The guarded map geometry
+search retained both originals and produced a fixed 16 × 16 alternative
+for each crop. Site-01, 12 January–6 February 2018, is nominated for bounded
+reference review with its alternative at row 44, column 41. Public Landsat
+records on 12 January and 20 February cover the crop. Clarity and class
+remain unknown. Site-02 is a reserve. No full-scene acquisition or label
+approval is recorded.
 
 Use one nice +10 CPU worker, native/Torch threads 1, no GPU, unchanged
 `validate_sample.run_guarded`, 512 MiB RSS and 1.5 GiB available-system-memory

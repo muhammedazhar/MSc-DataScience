@@ -1,0 +1,551 @@
+{
+  "schema_version": 32,
+  "status": "metadata_comparison_completed",
+  "sites": {
+    "site-01": {
+      "event_id": "event-20011c5fc8f074541ee2",
+      "group_id": "group-c4f441ae55f683f915fa",
+      "split": "validation",
+      "tile": "36UXA",
+      "annotation_image_date": "2018-01-27",
+      "grid": {
+        "crs": "EPSG:32636",
+        "transform": [
+          10.0,
+          0.0,
+          699740.0,
+          0.0,
+          -10.0,
+          5499720.0
+        ],
+        "width": 64,
+        "height": 64,
+        "bounds": [
+          699740.0,
+          5499080.0,
+          700380.0,
+          5499720.0
+        ]
+      },
+      "qa_context_bounds": [
+        698540.0,
+        5497880.0,
+        701580.0,
+        5500920.0
+      ],
+      "target_pixels": 237,
+      "eroded_target_pixels": 151,
+      "eroded_target_sha256": "bc032b198fa4b86f08d7a6399f71bf29fd33150a3b0706b0118a2d34c159bb6d",
+      "original_control": {
+        "row": 2,
+        "col": 2,
+        "width": 16,
+        "height": 16,
+        "pixels": 256,
+        "bounds": [
+          699760.0,
+          5499540.0,
+          699920.0,
+          5499700.0
+        ],
+        "crs": "EPSG:32636",
+        "context_bounds": [
+          699740.0,
+          5499520.0,
+          699940.0,
+          5499720.0
+        ],
+        "context_width": 20,
+        "context_height": 20,
+        "context_pixels": 400,
+        "context_radius_pixels": 2,
+        "catalogue_exclusion_margin_metres": 20,
+        "control_class_status": "unreviewed",
+        "pixel_qa_status": "unassessed",
+        "independent_site": false,
+        "evaluation_approved": false
+      },
+      "original_control_disposition": "control_crosses_path_mapped_later_historical_class_unverified",
+      "alternative_control": {
+        "row": 44,
+        "col": 41,
+        "width": 16,
+        "height": 16,
+        "pixels": 256,
+        "bounds": [
+          700150.0,
+          5499120.0,
+          700310.0,
+          5499280.0
+        ],
+        "crs": "EPSG:32636",
+        "context_bounds": [
+          700130.0,
+          5499100.0,
+          700330.0,
+          5499300.0
+        ],
+        "context_width": 20,
+        "context_height": 20,
+        "context_pixels": 400,
+        "context_radius_pixels": 2,
+        "catalogue_exclusion_margin_metres": 20,
+        "control_class_status": "unreviewed",
+        "pixel_qa_status": "unassessed",
+        "independent_site": false,
+        "evaluation_approved": false
+      },
+      "nearest_mapped_road_from_alternative_context_metres": 76.225,
+      "mapped_woodland_margin_for_alternative_context_metres": 184.832,
+      "mapped_woodland_geometry_predates_pair": false,
+      "options": [
+        {
+          "v28_rank_at_site": 1,
+          "before": {
+            "date": "2018-01-12",
+            "catalogue_time_utc": "2018-01-12T08:43:15.461000Z",
+            "item_id": "S2A_36UXA_20180112_0_L1C",
+            "item_sha256": "bb62b3f761059c4457f7fdbd3028b4390979f0f4ed148d95c6d046fddb167832",
+            "scene_id": "S2A_MSIL1C_20180112T084321_N0206_R064_T36UXA_20180112T111338",
+            "catalogue_cloud_percent": 59.4713,
+            "raw_page": "Docs/Reviews/ValidationUnseenSitesV28/sentinel/catalogue/site-01/raw/page-02.json",
+            "raw_page_sha256": "5149a3ca409d94ab1e28779848e5e09a5ad71dc2e653c9032ea3b47877737d4e"
+          },
+          "after": {
+            "date": "2018-02-06",
+            "catalogue_time_utc": "2018-02-06T08:42:29.401000Z",
+            "item_id": "S2B_36UXA_20180206_0_L1C",
+            "item_sha256": "bff2a247db959e5e73637895d223d347a52031cf430e93b2cd14b3caf541f05e",
+            "scene_id": "S2B_MSIL1C_20180206T084129_N0206_R064_T36UXA_20180206T122659",
+            "catalogue_cloud_percent": 75.2523,
+            "raw_page": "Docs/Reviews/ValidationUnseenSitesV28/sentinel/catalogue/site-01/raw/page-01.json",
+            "raw_page_sha256": "8826ac1cbe96d178f438e180cfa6649b0fe3219f7cd1deb5f0445132b7e0d782"
+          },
+          "interval_days": 25,
+          "relative_orbit": 64,
+          "processing_baseline": "02.06",
+          "earlier_stable_only_options": [],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20180221T083951_N0206_R064_T36UXA_20180221T122952",
+            "S2B_MSIL1C_20180308T083759_N0206_R064_T36UXA_20180308T104832",
+            "S2A_MSIL1C_20180313T083731_N0206_R064_T36UXA_20180313T105413"
+          ],
+          "followup_status": "nominated_for_bounded_reference_review"
+        },
+        {
+          "v28_rank_at_site": 2,
+          "before": {
+            "date": "2018-01-12",
+            "catalogue_time_utc": "2018-01-12T08:43:15.461000Z",
+            "item_id": "S2A_36UXA_20180112_0_L1C",
+            "item_sha256": "bb62b3f761059c4457f7fdbd3028b4390979f0f4ed148d95c6d046fddb167832",
+            "scene_id": "S2A_MSIL1C_20180112T084321_N0206_R064_T36UXA_20180112T111338",
+            "catalogue_cloud_percent": 59.4713,
+            "raw_page": "Docs/Reviews/ValidationUnseenSitesV28/sentinel/catalogue/site-01/raw/page-02.json",
+            "raw_page_sha256": "5149a3ca409d94ab1e28779848e5e09a5ad71dc2e653c9032ea3b47877737d4e"
+          },
+          "after": {
+            "date": "2018-02-01",
+            "catalogue_time_utc": "2018-02-01T08:42:35.145000Z",
+            "item_id": "S2A_36UXA_20180201_0_L1C",
+            "item_sha256": "7c6ad9a3b0e747f6eb6f63f2b43216c1cdc5eedd4ada8f1efeab0261ce3ec561",
+            "scene_id": "S2A_MSIL1C_20180201T084201_N0206_R064_T36UXA_20180201T122903",
+            "catalogue_cloud_percent": 95.5304,
+            "raw_page": "Docs/Reviews/ValidationUnseenSitesV28/sentinel/catalogue/site-01/raw/page-01.json",
+            "raw_page_sha256": "8826ac1cbe96d178f438e180cfa6649b0fe3219f7cd1deb5f0445132b7e0d782"
+          },
+          "interval_days": 20,
+          "relative_orbit": 64,
+          "processing_baseline": "02.06",
+          "earlier_stable_only_options": [],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20180206T084129_N0206_R064_T36UXA_20180206T122659",
+            "S2A_MSIL1C_20180221T083951_N0206_R064_T36UXA_20180221T122952",
+            "S2B_MSIL1C_20180308T083759_N0206_R064_T36UXA_20180308T104832",
+            "S2A_MSIL1C_20180313T083731_N0206_R064_T36UXA_20180313T105413"
+          ],
+          "followup_status": "retained_unselected"
+        },
+        {
+          "v28_rank_at_site": 3,
+          "before": {
+            "date": "2018-01-22",
+            "catalogue_time_utc": "2018-01-22T08:43:03.103000Z",
+            "item_id": "S2A_36UXA_20180122_0_L1C",
+            "item_sha256": "6ffeadfb97d85763594ab30e38c225367678b2fa327bc3b8c7062f5e59feeed7",
+            "scene_id": "S2A_MSIL1C_20180122T084241_N0206_R064_T36UXA_20180122T122409",
+            "catalogue_cloud_percent": 100,
+            "raw_page": "Docs/Reviews/ValidationUnseenSitesV28/sentinel/catalogue/site-01/raw/page-01.json",
+            "raw_page_sha256": "8826ac1cbe96d178f438e180cfa6649b0fe3219f7cd1deb5f0445132b7e0d782"
+          },
+          "after": {
+            "date": "2018-02-06",
+            "catalogue_time_utc": "2018-02-06T08:42:29.401000Z",
+            "item_id": "S2B_36UXA_20180206_0_L1C",
+            "item_sha256": "bff2a247db959e5e73637895d223d347a52031cf430e93b2cd14b3caf541f05e",
+            "scene_id": "S2B_MSIL1C_20180206T084129_N0206_R064_T36UXA_20180206T122659",
+            "catalogue_cloud_percent": 75.2523,
+            "raw_page": "Docs/Reviews/ValidationUnseenSitesV28/sentinel/catalogue/site-01/raw/page-01.json",
+            "raw_page_sha256": "8826ac1cbe96d178f438e180cfa6649b0fe3219f7cd1deb5f0445132b7e0d782"
+          },
+          "interval_days": 15,
+          "relative_orbit": 64,
+          "processing_baseline": "02.06",
+          "earlier_stable_only_options": [
+            {
+              "date": "2018-01-12",
+              "scene_id": "S2A_MSIL1C_20180112T084321_N0206_R064_T36UXA_20180112T111338"
+            }
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20180221T083951_N0206_R064_T36UXA_20180221T122952",
+            "S2B_MSIL1C_20180308T083759_N0206_R064_T36UXA_20180308T104832",
+            "S2A_MSIL1C_20180313T083731_N0206_R064_T36UXA_20180313T105413"
+          ],
+          "followup_status": "retained_unselected"
+        },
+        {
+          "v28_rank_at_site": 4,
+          "before": {
+            "date": "2018-01-22",
+            "catalogue_time_utc": "2018-01-22T08:43:03.103000Z",
+            "item_id": "S2A_36UXA_20180122_0_L1C",
+            "item_sha256": "6ffeadfb97d85763594ab30e38c225367678b2fa327bc3b8c7062f5e59feeed7",
+            "scene_id": "S2A_MSIL1C_20180122T084241_N0206_R064_T36UXA_20180122T122409",
+            "catalogue_cloud_percent": 100,
+            "raw_page": "Docs/Reviews/ValidationUnseenSitesV28/sentinel/catalogue/site-01/raw/page-01.json",
+            "raw_page_sha256": "8826ac1cbe96d178f438e180cfa6649b0fe3219f7cd1deb5f0445132b7e0d782"
+          },
+          "after": {
+            "date": "2018-02-01",
+            "catalogue_time_utc": "2018-02-01T08:42:35.145000Z",
+            "item_id": "S2A_36UXA_20180201_0_L1C",
+            "item_sha256": "7c6ad9a3b0e747f6eb6f63f2b43216c1cdc5eedd4ada8f1efeab0261ce3ec561",
+            "scene_id": "S2A_MSIL1C_20180201T084201_N0206_R064_T36UXA_20180201T122903",
+            "catalogue_cloud_percent": 95.5304,
+            "raw_page": "Docs/Reviews/ValidationUnseenSitesV28/sentinel/catalogue/site-01/raw/page-01.json",
+            "raw_page_sha256": "8826ac1cbe96d178f438e180cfa6649b0fe3219f7cd1deb5f0445132b7e0d782"
+          },
+          "interval_days": 10,
+          "relative_orbit": 64,
+          "processing_baseline": "02.06",
+          "earlier_stable_only_options": [
+            {
+              "date": "2018-01-12",
+              "scene_id": "S2A_MSIL1C_20180112T084321_N0206_R064_T36UXA_20180112T111338"
+            }
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20180206T084129_N0206_R064_T36UXA_20180206T122659",
+            "S2A_MSIL1C_20180221T083951_N0206_R064_T36UXA_20180221T122952",
+            "S2B_MSIL1C_20180308T083759_N0206_R064_T36UXA_20180308T104832",
+            "S2A_MSIL1C_20180313T083731_N0206_R064_T36UXA_20180313T105413"
+          ],
+          "followup_status": "retained_unselected"
+        }
+      ]
+    },
+    "site-02": {
+      "event_id": "event-ef1031ed1843d87d64e1",
+      "group_id": "group-d75dc0544bf1a0e519ad",
+      "split": "validation",
+      "tile": "36UXA",
+      "annotation_image_date": "2017-11-28",
+      "grid": {
+        "crs": "EPSG:32636",
+        "transform": [
+          10.0,
+          0.0,
+          677420.0,
+          0.0,
+          -10.0,
+          5564060.0
+        ],
+        "width": 64,
+        "height": 64,
+        "bounds": [
+          677420.0,
+          5563420.0,
+          678060.0,
+          5564060.0
+        ]
+      },
+      "qa_context_bounds": [
+        676220.0,
+        5562220.0,
+        679260.0,
+        5565260.0
+      ],
+      "target_pixels": 194,
+      "eroded_target_pixels": 131,
+      "eroded_target_sha256": "2df80e5de1786d84aa533f2f8679b67ab969aac533d98c9571f60942863b6141",
+      "original_control": {
+        "row": 2,
+        "col": 2,
+        "width": 16,
+        "height": 16,
+        "pixels": 256,
+        "bounds": [
+          677440.0,
+          5563880.0,
+          677600.0,
+          5564040.0
+        ],
+        "crs": "EPSG:32636",
+        "context_bounds": [
+          677420.0,
+          5563860.0,
+          677620.0,
+          5564060.0
+        ],
+        "context_width": 20,
+        "context_height": 20,
+        "context_pixels": 400,
+        "context_radius_pixels": 2,
+        "catalogue_exclusion_margin_metres": 20,
+        "control_class_status": "unreviewed",
+        "pixel_qa_status": "unassessed",
+        "independent_site": false,
+        "evaluation_approved": false
+      },
+      "original_control_disposition": "control_intersects_primary_highway_mapped_before_comparison",
+      "alternative_control": {
+        "row": 5,
+        "col": 45,
+        "width": 16,
+        "height": 16,
+        "pixels": 256,
+        "bounds": [
+          677870.0,
+          5563850.0,
+          678030.0,
+          5564010.0
+        ],
+        "crs": "EPSG:32636",
+        "context_bounds": [
+          677850.0,
+          5563830.0,
+          678050.0,
+          5564030.0
+        ],
+        "context_width": 20,
+        "context_height": 20,
+        "context_pixels": 400,
+        "context_radius_pixels": 2,
+        "catalogue_exclusion_margin_metres": 20,
+        "control_class_status": "unreviewed",
+        "pixel_qa_status": "unassessed",
+        "independent_site": false,
+        "evaluation_approved": false
+      },
+      "nearest_mapped_road_from_alternative_context_metres": 70.204,
+      "mapped_woodland_margin_for_alternative_context_metres": 22.111,
+      "mapped_woodland_geometry_predates_pair": true,
+      "options": [
+        {
+          "v28_rank_at_site": 1,
+          "before": {
+            "date": "2017-11-16",
+            "catalogue_time_utc": "2017-11-16T08:54:42.947000Z",
+            "item_id": "S2A_36UXA_20171116_0_L1C",
+            "item_sha256": "afdff81c9471d93f804ecbd9bd25c4b9e899f403a0cc411dd5ba8c78f97a8b02",
+            "scene_id": "S2A_MSIL1C_20171116T085231_N0206_R107_T36UXA_20171116T105520",
+            "catalogue_cloud_percent": 71.0987,
+            "raw_page": "Docs/Reviews/ValidationUnseenSitesV28/sentinel/catalogue/site-02/raw/page-01.json",
+            "raw_page_sha256": "f3aef1c151af30a8e92b0df9b1982eac9bc90d4e9fdfef95495a287157fccba6"
+          },
+          "after": {
+            "date": "2017-12-06",
+            "catalogue_time_utc": "2017-12-06T08:53:34.464000Z",
+            "item_id": "S2A_36UXA_20171206_0_L1C",
+            "item_sha256": "b455babfb67adee664713f9d4b6d38224d359e5f1afe2dc4b7e2401d54bd138f",
+            "scene_id": "S2A_MSIL1C_20171206T085331_N0206_R107_T36UXA_20171206T172644",
+            "catalogue_cloud_percent": 68.0326,
+            "raw_page": "Docs/Reviews/ValidationUnseenSitesV28/sentinel/catalogue/site-02/raw/page-01.json",
+            "raw_page_sha256": "f3aef1c151af30a8e92b0df9b1982eac9bc90d4e9fdfef95495a287157fccba6"
+          },
+          "interval_days": 20,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "earlier_stable_only_options": [],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20171211T085339_N0206_R107_T36UXA_20171211T104822",
+            "S2B_MSIL1C_20180110T085329_N0206_R107_T36UXA_20180110T113039"
+          ],
+          "followup_status": "retained_unselected"
+        },
+        {
+          "v28_rank_at_site": 2,
+          "before": {
+            "date": "2017-11-18",
+            "catalogue_time_utc": "2017-11-18T08:43:28.396000Z",
+            "item_id": "S2B_36UXA_20171118_0_L1C",
+            "item_sha256": "6168808d8744e8bb26b3bbdab87dcd40372bbfcd1893f65c4d5bc416341a5939",
+            "scene_id": "S2B_MSIL1C_20171118T084229_N0206_R064_T36UXA_20171118T122446",
+            "catalogue_cloud_percent": 87.3738,
+            "raw_page": "Docs/Reviews/ValidationUnseenSitesV28/sentinel/catalogue/site-02/raw/page-01.json",
+            "raw_page_sha256": "f3aef1c151af30a8e92b0df9b1982eac9bc90d4e9fdfef95495a287157fccba6"
+          },
+          "after": {
+            "date": "2017-11-28",
+            "catalogue_time_utc": "2017-11-28T08:43:01.462000Z",
+            "item_id": "S2B_36UXA_20171128_0_L1C",
+            "item_sha256": "eb8b891909dd6a93ddf652712c1d1615c81f288ef741a7250fac5d5b52133977",
+            "scene_id": "S2B_MSIL1C_20171128T084259_N0206_R064_T36UXA_20171129T140038",
+            "catalogue_cloud_percent": 66.6819,
+            "raw_page": "Docs/Reviews/ValidationUnseenSitesV28/sentinel/catalogue/site-02/raw/page-01.json",
+            "raw_page_sha256": "f3aef1c151af30a8e92b0df9b1982eac9bc90d4e9fdfef95495a287157fccba6"
+          },
+          "interval_days": 10,
+          "relative_orbit": 64,
+          "processing_baseline": "02.06",
+          "earlier_stable_only_options": [],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20171218T084339_N0206_R064_T36UXA_20171218T103922",
+            "S2A_MSIL1C_20180112T084321_N0206_R064_T36UXA_20180112T111338"
+          ],
+          "followup_status": "retained_unselected"
+        }
+      ]
+    }
+  },
+  "nomination": {
+    "site_id": "site-01",
+    "group_id": "group-c4f441ae55f683f915fa",
+    "status": "nominated_for_bounded_reference_review",
+    "fixed_pair": {
+      "v28_rank_at_site": 1,
+      "before": {
+        "date": "2018-01-12",
+        "catalogue_time_utc": "2018-01-12T08:43:15.461000Z",
+        "item_id": "S2A_36UXA_20180112_0_L1C",
+        "item_sha256": "bb62b3f761059c4457f7fdbd3028b4390979f0f4ed148d95c6d046fddb167832",
+        "scene_id": "S2A_MSIL1C_20180112T084321_N0206_R064_T36UXA_20180112T111338",
+        "catalogue_cloud_percent": 59.4713,
+        "raw_page": "Docs/Reviews/ValidationUnseenSitesV28/sentinel/catalogue/site-01/raw/page-02.json",
+        "raw_page_sha256": "5149a3ca409d94ab1e28779848e5e09a5ad71dc2e653c9032ea3b47877737d4e"
+      },
+      "after": {
+        "date": "2018-02-06",
+        "catalogue_time_utc": "2018-02-06T08:42:29.401000Z",
+        "item_id": "S2B_36UXA_20180206_0_L1C",
+        "item_sha256": "bff2a247db959e5e73637895d223d347a52031cf430e93b2cd14b3caf541f05e",
+        "scene_id": "S2B_MSIL1C_20180206T084129_N0206_R064_T36UXA_20180206T122659",
+        "catalogue_cloud_percent": 75.2523,
+        "raw_page": "Docs/Reviews/ValidationUnseenSitesV28/sentinel/catalogue/site-01/raw/page-01.json",
+        "raw_page_sha256": "8826ac1cbe96d178f438e180cfa6649b0fe3219f7cd1deb5f0445132b7e0d782"
+      },
+      "interval_days": 25,
+      "relative_orbit": 64,
+      "processing_baseline": "02.06",
+      "earlier_stable_only_options": [],
+      "later_metadata_scene_ids": [
+        "S2A_MSIL1C_20180221T083951_N0206_R064_T36UXA_20180221T122952",
+        "S2B_MSIL1C_20180308T083759_N0206_R064_T36UXA_20180308T104832",
+        "S2A_MSIL1C_20180313T083731_N0206_R064_T36UXA_20180313T105413"
+      ],
+      "followup_status": "nominated_for_bounded_reference_review"
+    },
+    "fixed_alternative_control": {
+      "row": 44,
+      "col": 41,
+      "width": 16,
+      "height": 16,
+      "pixels": 256,
+      "bounds": [
+        700150.0,
+        5499120.0,
+        700310.0,
+        5499280.0
+      ],
+      "crs": "EPSG:32636",
+      "context_bounds": [
+        700130.0,
+        5499100.0,
+        700330.0,
+        5499300.0
+      ],
+      "context_width": 20,
+      "context_height": 20,
+      "context_pixels": 400,
+      "context_radius_pixels": 2,
+      "catalogue_exclusion_margin_metres": 20,
+      "control_class_status": "unreviewed",
+      "pixel_qa_status": "unassessed",
+      "independent_site": false,
+      "evaluation_approved": false
+    },
+    "reference_scene_ids": [
+      "LC08_L1TP_177026_20180112_20200902_02_T1",
+      "LC08_L1TP_178025_20180220_20200902_02_T1"
+    ],
+    "independent_before_scene_lead_seconds": 1098.915,
+    "before_reference_scene_cloud_percent": 56.25,
+    "later_reference_scene_cloud_percent": 71.96,
+    "rationale": [
+      "Site-01 has the stronger accessible dated before lead, with full footprint coverage and 56.25% scene cloud compared with 75.98% at site-02.",
+      "The 12 January\u20136 February option has lower maximum scene cloud than the other site-01 options. It has the same native tile, orbit and baseline and a later same-orbit catalogue follow-up.",
+      "The alternate control lies within the existing crop, 76.225 m from the nearest mapped road and 184.832 m inside mapped woodland at its full context."
+    ],
+    "remaining_evidence": [
+      "Determine crop clarity and earlier cover from the bounded 12 January dated reference, then check the 20 February later reference for broad corroboration.",
+      "Historical woodland class for the nominated control is unverified. There is no earlier same-orbit control observation for this pair in V28.",
+      "Native Level-1C asset preflight and local crop QA belong to a separate acquisition decision."
+    ]
+  },
+  "site_02_reserve": {
+    "reason": "A mapped alternate control with historically traceable geometry is available, but its accessible before reference is cloudier and the in-window SPOT scene does not supply a useful before observation.",
+    "best_nominal_pair_retained": {
+      "v28_rank_at_site": 1,
+      "before": {
+        "date": "2017-11-16",
+        "catalogue_time_utc": "2017-11-16T08:54:42.947000Z",
+        "item_id": "S2A_36UXA_20171116_0_L1C",
+        "item_sha256": "afdff81c9471d93f804ecbd9bd25c4b9e899f403a0cc411dd5ba8c78f97a8b02",
+        "scene_id": "S2A_MSIL1C_20171116T085231_N0206_R107_T36UXA_20171116T105520",
+        "catalogue_cloud_percent": 71.0987,
+        "raw_page": "Docs/Reviews/ValidationUnseenSitesV28/sentinel/catalogue/site-02/raw/page-01.json",
+        "raw_page_sha256": "f3aef1c151af30a8e92b0df9b1982eac9bc90d4e9fdfef95495a287157fccba6"
+      },
+      "after": {
+        "date": "2017-12-06",
+        "catalogue_time_utc": "2017-12-06T08:53:34.464000Z",
+        "item_id": "S2A_36UXA_20171206_0_L1C",
+        "item_sha256": "b455babfb67adee664713f9d4b6d38224d359e5f1afe2dc4b7e2401d54bd138f",
+        "scene_id": "S2A_MSIL1C_20171206T085331_N0206_R107_T36UXA_20171206T172644",
+        "catalogue_cloud_percent": 68.0326,
+        "raw_page": "Docs/Reviews/ValidationUnseenSitesV28/sentinel/catalogue/site-02/raw/page-01.json",
+        "raw_page_sha256": "f3aef1c151af30a8e92b0df9b1982eac9bc90d4e9fdfef95495a287157fccba6"
+      },
+      "interval_days": 20,
+      "relative_orbit": 107,
+      "processing_baseline": "02.06",
+      "earlier_stable_only_options": [],
+      "later_metadata_scene_ids": [
+        "S2B_MSIL1C_20171211T085339_N0206_R107_T36UXA_20171211T104822",
+        "S2B_MSIL1C_20180110T085329_N0206_R107_T36UXA_20180110T113039"
+      ],
+      "followup_status": "retained_unselected"
+    }
+  },
+  "readiness": {
+    "full_scene_acquisition_candidates": [],
+    "native_preflight_completed": false,
+    "control_class_confirmed": false,
+    "crop_clarity_confirmed": false,
+    "labels_approved": 0,
+    "imagery_downloaded": 0,
+    "satellite_pixel_reads": 0,
+    "validation_eligible": false,
+    "first_visible_interval": null
+  },
+  "source_sha256": {
+    "protocol.json": "3b2c99bb8179a2d3950384e921428d27daa653296de8bd1320498dca56b4fee8",
+    "site-01-access.json": "f5220f33d074d5f736d562c0f02f6c2828f0dfa31ab79f852cf68b4254be7dfa",
+    "site-02-access.json": "5f28079e9b1d1d3265015c57673b26069610ec3b43fc45507c898954483c9787",
+    "control-context.json": "35da6d24fe8a709f94cb400c1cce9c937febd929dcc3fc9110b5fbc910bb6479",
+    "control_search_protocol.json": "f6221cd44d96b0b671b18a9e2dda17d64e7c251938d0cd0ce2e16957c541bdc5",
+    "controls/controls.json": "c266fc9766341c1d80e30ddafbe872bd10677c617cb7a903e41455bb7768f07d",
+    "controls/metadata.json": "530d70b0a61d6f1f0bdf6d21d8931183b8697f6f540a2101953b624fc317ed36"
+  }
+}

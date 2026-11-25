@@ -1,0 +1,223 @@
+{
+  "schema_version": 32,
+  "protocol_sha256": "f6221cd44d96b0b671b18a9e2dda17d64e7c251938d0cd0ce2e16957c541bdc5",
+  "sites": [
+    {
+      "site_id": "site-01",
+      "group_id": "group-c4f441ae55f683f915fa",
+      "grid": {
+        "crs": "EPSG:32636",
+        "transform": [
+          10.0,
+          0.0,
+          699740.0,
+          0.0,
+          -10.0,
+          5499720.0
+        ],
+        "width": 64,
+        "height": 64,
+        "bounds": [
+          699740.0,
+          5499080.0,
+          700380.0,
+          5499720.0
+        ]
+      },
+      "original_control": {
+        "row": 2,
+        "col": 2,
+        "width": 16,
+        "height": 16,
+        "pixels": 256,
+        "bounds": [
+          699760.0,
+          5499540.0,
+          699920.0,
+          5499700.0
+        ],
+        "crs": "EPSG:32636",
+        "context_bounds": [
+          699740.0,
+          5499520.0,
+          699940.0,
+          5499720.0
+        ],
+        "context_width": 20,
+        "context_height": 20,
+        "context_pixels": 400,
+        "context_radius_pixels": 2,
+        "catalogue_exclusion_margin_metres": 20,
+        "control_class_status": "unreviewed",
+        "pixel_qa_status": "unassessed",
+        "independent_site": false,
+        "evaluation_approved": false
+      },
+      "alternate_control": {
+        "row": 44,
+        "col": 41,
+        "width": 16,
+        "height": 16,
+        "pixels": 256,
+        "bounds": [
+          700150.0,
+          5499120.0,
+          700310.0,
+          5499280.0
+        ],
+        "crs": "EPSG:32636",
+        "context_bounds": [
+          700130.0,
+          5499100.0,
+          700330.0,
+          5499300.0
+        ],
+        "context_width": 20,
+        "context_height": 20,
+        "context_pixels": 400,
+        "context_radius_pixels": 2,
+        "catalogue_exclusion_margin_metres": 20,
+        "control_class_status": "unreviewed",
+        "pixel_qa_status": "unassessed",
+        "independent_site": false,
+        "evaluation_approved": false
+      },
+      "road_features_checked": 12,
+      "wooded_polygons_checked": 9,
+      "nonwooded_polygons_checked": 10,
+      "map_rule": "Mapped road centerlines and areas outside mapped woodland excluded by 20 m.",
+      "alternate_control_class_status": "unverified",
+      "status": "mapped_geometry_candidate",
+      "wooded_osm_features_covering_context": [
+        {
+          "site_id": "site-01",
+          "osm_type": "way",
+          "osm_way_id": 99865485,
+          "osm_relation_id": null,
+          "osm_version": 3,
+          "last_object_version_utc": "2020-04-09T10:16:54Z",
+          "latest_node_version_utc": "2020-04-09T10:16:54Z",
+          "latest_member_way_version_utc": "2020-04-09T10:16:54Z",
+          "role": "wooded_polygon",
+          "tags": {
+            "landuse": "forest"
+          },
+          "same_mapped_geometry_usable_by_earliest_before_date": false,
+          "unique_geometry_nodes": 25
+        }
+      ],
+      "nearest_mapped_road_metres": 76.225,
+      "mapped_woodland_margin_metres": 184.832
+    },
+    {
+      "site_id": "site-02",
+      "group_id": "group-d75dc0544bf1a0e519ad",
+      "grid": {
+        "crs": "EPSG:32636",
+        "transform": [
+          10.0,
+          0.0,
+          677420.0,
+          0.0,
+          -10.0,
+          5564060.0
+        ],
+        "width": 64,
+        "height": 64,
+        "bounds": [
+          677420.0,
+          5563420.0,
+          678060.0,
+          5564060.0
+        ]
+      },
+      "original_control": {
+        "row": 2,
+        "col": 2,
+        "width": 16,
+        "height": 16,
+        "pixels": 256,
+        "bounds": [
+          677440.0,
+          5563880.0,
+          677600.0,
+          5564040.0
+        ],
+        "crs": "EPSG:32636",
+        "context_bounds": [
+          677420.0,
+          5563860.0,
+          677620.0,
+          5564060.0
+        ],
+        "context_width": 20,
+        "context_height": 20,
+        "context_pixels": 400,
+        "context_radius_pixels": 2,
+        "catalogue_exclusion_margin_metres": 20,
+        "control_class_status": "unreviewed",
+        "pixel_qa_status": "unassessed",
+        "independent_site": false,
+        "evaluation_approved": false
+      },
+      "alternate_control": {
+        "row": 5,
+        "col": 45,
+        "width": 16,
+        "height": 16,
+        "pixels": 256,
+        "bounds": [
+          677870.0,
+          5563850.0,
+          678030.0,
+          5564010.0
+        ],
+        "crs": "EPSG:32636",
+        "context_bounds": [
+          677850.0,
+          5563830.0,
+          678050.0,
+          5564030.0
+        ],
+        "context_width": 20,
+        "context_height": 20,
+        "context_pixels": 400,
+        "context_radius_pixels": 2,
+        "catalogue_exclusion_margin_metres": 20,
+        "control_class_status": "unreviewed",
+        "pixel_qa_status": "unassessed",
+        "independent_site": false,
+        "evaluation_approved": false
+      },
+      "road_features_checked": 3,
+      "wooded_polygons_checked": 1,
+      "nonwooded_polygons_checked": 0,
+      "map_rule": "Mapped road centerlines and areas outside mapped woodland excluded by 20 m.",
+      "alternate_control_class_status": "unverified",
+      "status": "mapped_geometry_candidate",
+      "wooded_osm_features_covering_context": [
+        {
+          "site_id": "site-02",
+          "osm_type": "way",
+          "osm_way_id": 169107369,
+          "osm_relation_id": null,
+          "osm_version": 4,
+          "last_object_version_utc": "2014-03-01T09:52:15Z",
+          "latest_node_version_utc": "2014-03-01T09:52:13Z",
+          "latest_member_way_version_utc": "2014-03-01T09:52:15Z",
+          "role": "wooded_polygon",
+          "tags": {
+            "landuse": "forest"
+          },
+          "same_mapped_geometry_usable_by_earliest_before_date": true,
+          "unique_geometry_nodes": 38
+        }
+      ],
+      "nearest_mapped_road_metres": 70.204,
+      "mapped_woodland_margin_metres": 22.111
+    }
+  ],
+  "satellite_pixel_reads": 0,
+  "image_asset_downloads": 0,
+  "labels_approved": 0
+}
