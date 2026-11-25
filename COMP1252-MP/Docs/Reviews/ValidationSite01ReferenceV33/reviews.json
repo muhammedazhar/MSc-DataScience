@@ -1,0 +1,142 @@
+{
+  "schema_version": 33,
+  "status": "bounded_reference_review_inconclusive",
+  "site_id": "site-01",
+  "group_id": "group-c4f441ae55f683f915fa",
+  "event_id": "event-20011c5fc8f074541ee2",
+  "sentinel_pair": {
+    "v28_rank_at_site": 1,
+    "before": {
+      "date": "2018-01-12",
+      "catalogue_time_utc": "2018-01-12T08:43:15.461000Z",
+      "item_id": "S2A_36UXA_20180112_0_L1C",
+      "item_sha256": "bb62b3f761059c4457f7fdbd3028b4390979f0f4ed148d95c6d046fddb167832",
+      "scene_id": "S2A_MSIL1C_20180112T084321_N0206_R064_T36UXA_20180112T111338",
+      "catalogue_cloud_percent": 59.4713,
+      "raw_page": "Docs/Reviews/ValidationUnseenSitesV28/sentinel/catalogue/site-01/raw/page-02.json",
+      "raw_page_sha256": "5149a3ca409d94ab1e28779848e5e09a5ad71dc2e653c9032ea3b47877737d4e"
+    },
+    "after": {
+      "date": "2018-02-06",
+      "catalogue_time_utc": "2018-02-06T08:42:29.401000Z",
+      "item_id": "S2B_36UXA_20180206_0_L1C",
+      "item_sha256": "bff2a247db959e5e73637895d223d347a52031cf430e93b2cd14b3caf541f05e",
+      "scene_id": "S2B_MSIL1C_20180206T084129_N0206_R064_T36UXA_20180206T122659",
+      "catalogue_cloud_percent": 75.2523,
+      "raw_page": "Docs/Reviews/ValidationUnseenSitesV28/sentinel/catalogue/site-01/raw/page-01.json",
+      "raw_page_sha256": "8826ac1cbe96d178f438e180cfa6649b0fe3219f7cd1deb5f0445132b7e0d782"
+    },
+    "interval_days": 25,
+    "relative_orbit": 64,
+    "processing_baseline": "02.06",
+    "earlier_stable_only_options": [],
+    "later_metadata_scene_ids": [
+      "S2A_MSIL1C_20180221T083951_N0206_R064_T36UXA_20180221T122952",
+      "S2B_MSIL1C_20180308T083759_N0206_R064_T36UXA_20180308T104832",
+      "S2A_MSIL1C_20180313T083731_N0206_R064_T36UXA_20180313T105413"
+    ],
+    "followup_status": "nominated_for_bounded_reference_review"
+  },
+  "fixed_alternative_control": {
+    "row": 44,
+    "col": 41,
+    "width": 16,
+    "height": 16,
+    "pixels": 256,
+    "bounds": [
+      700150.0,
+      5499120.0,
+      700310.0,
+      5499280.0
+    ],
+    "crs": "EPSG:32636",
+    "context_bounds": [
+      700130.0,
+      5499100.0,
+      700330.0,
+      5499300.0
+    ],
+    "context_width": 20,
+    "context_height": 20,
+    "context_pixels": 400,
+    "context_radius_pixels": 2,
+    "catalogue_exclusion_margin_metres": 20,
+    "control_class_status": "unreviewed",
+    "pixel_qa_status": "unassessed",
+    "independent_site": false,
+    "evaluation_approved": false
+  },
+  "prior_manual_exposed_group_ids": [
+    "group-0d4c6841d965abf62969",
+    "group-45f0c39e787ca8622918",
+    "group-594ecdcf428fc819f662",
+    "group-646504159ec8034a1565",
+    "group-6bef49e5258e9f579324",
+    "group-96c27871459d03c08bcc",
+    "group-a177948c08d55f377549",
+    "group-a85fa2022a25e1a72e2c"
+  ],
+  "new_manual_exposed_group_ids": [
+    "group-c4f441ae55f683f915fa"
+  ],
+  "manual_exposed_group_ids": [
+    "group-0d4c6841d965abf62969",
+    "group-45f0c39e787ca8622918",
+    "group-594ecdcf428fc819f662",
+    "group-646504159ec8034a1565",
+    "group-6bef49e5258e9f579324",
+    "group-96c27871459d03c08bcc",
+    "group-a177948c08d55f377549",
+    "group-a85fa2022a25e1a72e2c",
+    "group-c4f441ae55f683f915fa"
+  ],
+  "reviewers": 2,
+  "view_order": [
+    "landsat-plain.png",
+    "landsat-outlined.png"
+  ],
+  "view_sha256": {
+    "landsat-plain.png": "20976acceceaaca0d9d3a82f5105b22a23c55378f1ad249fdbacb5585eacf776",
+    "landsat-outlined.png": "d53150da991fa9f22d2e18891044d276895ea14510b247b54d5c24337c8036c7"
+  },
+  "observations": [
+    {
+      "date": "2018-01-12",
+      "scene_id": "LC08_L1TP_177026_20180112_20200902_02_T1",
+      "target_visibility": "inconclusive_pale_veiling",
+      "target_observation": "Pale diffuse veiling and muted terrain cross the target. Earlier forest and pre-existing opening cannot be resolved.",
+      "control_visibility": "inconclusive_low_contrast",
+      "control_observation": "Pale gray-pink shading leaves canopy texture indistinct in the fixed square and context."
+    },
+    {
+      "date": "2018-02-20",
+      "scene_id": "LC08_L1TP_178025_20180220_20200902_02_T1",
+      "target_visibility": "inconclusive_bright_bands",
+      "target_observation": "Bright swaths and brown-gray patches cross the target. The view does not resolve a distinct new opening.",
+      "control_visibility": "inconclusive_bright_bands",
+      "control_observation": "Pale patches and gray transitions cross the square and context. Uniform stable forest remains unverified."
+    }
+  ],
+  "reference_limits": [
+    "Cloud, snow and illumination effects are difficult to distinguish in the pan-sharpened RGB views.",
+    "The 20 February crop follows the 6 February Sentinel-2 endpoint by 14 days.",
+    "The RGB views cannot resolve exact pixel-scale forest class or target boundaries."
+  ],
+  "earlier_forest_supported": null,
+  "later_opening_supported": null,
+  "stable_control_supported": null,
+  "first_visible_deforestation_interval": null,
+  "labels_approved": 0,
+  "validation_eligible": false,
+  "native_sentinel_preflight": "pending_inconclusive_reference_evidence",
+  "full_scene_acquisition": false,
+  "sentinel_pixel_reads": 0,
+  "forest_model_executions": 0,
+  "evidence_sha256": {
+    "protocol.json": "a792ef3fb5b79c3aa6acbb8b1852f5a7d86a57823c95e7adc15ebbe4519cc5fa",
+    "packet/packet.json": "6c54bd405e68ede8f2af99f2a5d597f19c76fc1063b7cf41b6cba443eb605bef",
+    "packet/metadata.json": "36f137ea816c6d0ab151e57f184725416b41d988b0a3d4eb4faa4640357b0056",
+    "packet_verification.json": "ce8f930705f51a828d0370c8e23a44ada3e102ce100eef40d7dcd304ccac71db",
+    "visual_review.md": "c61ba447fc8517acbc0a56ec7a03653b6a51340ee28d83c853623317e645b8b0"
+  }
+}

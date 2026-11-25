@@ -103,6 +103,13 @@ or first-visible deforestation interval.
 [Visual review](Reviews/ValidationSite03ReviewV31/visual_review.md) ·
 [Reference review](Reviews/ValidationSite03ReviewV31/references/review.json)
 
+### Site-01 dated reference candidate
+
+The site-01 check used two bounded Landsat crops. Pale veiling and
+diffuse bright bands left the earlier forest, later opening and control
+unresolved. Site-01 stayed pending before Sentinel-2 preflight.
+[Site-01 reference review](Reviews/ValidationSite01ReferenceV33/visual_review.md)
+
 ## Observational case study
 
 Area B provides the strongest observation in the supplementary 2018 reviews.

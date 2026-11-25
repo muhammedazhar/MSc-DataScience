@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "schema_version": 33,
+  "site_id": "site-01",
+  "locked_landsat_previews_verified": 2,
+  "reference_preview_bytes": 6917,
+  "boards_replayed_byte_identical": 2,
+  "tests_passed": 394,
+  "test_run_metadata_sha256": "361dbb7f45ab058735991000728110b8cb79e2c02519f4c0b5d64d6207996878",
+  "guard_limits_verified": true,
+  "pinned_local_catalogue_sha256": "06a1090c8451d670929163ff7be067d63454cb1893a3e8cbee97519fbb69cbce",
+  "review_status": "bounded_reference_review_inconclusive",
+  "native_sentinel_preflight": "pending_inconclusive_reference_evidence",
+  "full_scene_acquisition": false,
+  "labels_approved": 0,
+  "git_index_sha256": {
+    "packet/metadata.json": "36f137ea816c6d0ab151e57f184725416b41d988b0a3d4eb4faa4640357b0056",
+    "packet/packet.json": "6c54bd405e68ede8f2af99f2a5d597f19c76fc1063b7cf41b6cba443eb605bef",
+    "packet_verification.json": "ce8f930705f51a828d0370c8e23a44ada3e102ce100eef40d7dcd304ccac71db",
+    "protocol.json": "a792ef3fb5b79c3aa6acbb8b1852f5a7d86a57823c95e7adc15ebbe4519cc5fa",
+    "reviews.json": "734479467a9624f2c379c366a9358404f96f66c3740225e981d6c38198e47c5b",
+    "visual_review.md": "c61ba447fc8517acbc0a56ec7a03653b6a51340ee28d83c853623317e645b8b0"
+  }
+}

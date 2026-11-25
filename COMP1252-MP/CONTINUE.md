@@ -5,7 +5,7 @@ status, then the latest handoff before edits. Commit every completed verified
 logical change with the handoff updated and push to the SAME branch. This entry
 point works for Codex, Gemini Antigravity or another agent without chat history.
 
-Current V33 site-01 bounded Landsat reference review:
+Completed V33 site-01 bounded Landsat reference review:
 **`Docs/Handoffs/2026-11-25-site-01-landsat-review.md`**.
 Completed V32 remaining-site metadata comparison:
 **`Docs/Handoffs/2026-11-25-remaining-site-selection.md`**.
@@ -220,8 +220,14 @@ search retained both originals and produced a fixed 16 × 16 alternative
 for each crop. Site-01, 12 January–6 February 2018, is nominated for bounded
 reference review with its alternative at row 44, column 41. Public Landsat
 records on 12 January and 20 February cover the crop. Clarity and class
-remain unknown. Site-02 is a reserve. No full-scene acquisition or label
-approval is recorded.
+remain unknown at V32. Site-02 is a reserve.
+
+V33 reviewed the two site-01 Landsat crops and replayed both boards byte
+for byte. Pale veiling and diffuse bright bands leave the target and
+control inconclusive on both dates. The nominated pair remains pending
+and did not advance to native preflight. Future visual-exposure exclusions
+include `group-c4f441ae55f683f915fa`. There are no new labels or
+first-visible interval.
 
 Use one nice +10 CPU worker, native/Torch threads 1, no GPU, unchanged
 `validate_sample.run_guarded`, 512 MiB RSS and 1.5 GiB available-system-memory
