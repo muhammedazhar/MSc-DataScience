@@ -1,0 +1,155 @@
+{
+  "schema_version": 33,
+  "site_id": "site-01",
+  "scope": "Two fixed 43 x 43 independent Landsat 8 reference previews.",
+  "resources": {
+    "workers": 1,
+    "native_threads": 1,
+    "nice_increment": 10,
+    "gpu_used": false,
+    "worker_rss_mib": 512,
+    "available_memory_reserve_gib": 1.5,
+    "max_seconds_per_worker": 300
+  },
+  "sentinel_pair": {
+    "v28_rank_at_site": 1,
+    "before": {
+      "date": "2018-01-12",
+      "catalogue_time_utc": "2018-01-12T08:43:15.461000Z",
+      "item_id": "S2A_36UXA_20180112_0_L1C",
+      "item_sha256": "bb62b3f761059c4457f7fdbd3028b4390979f0f4ed148d95c6d046fddb167832",
+      "scene_id": "S2A_MSIL1C_20180112T084321_N0206_R064_T36UXA_20180112T111338",
+      "catalogue_cloud_percent": 59.4713,
+      "raw_page": "Docs/Reviews/ValidationUnseenSitesV28/sentinel/catalogue/site-01/raw/page-02.json",
+      "raw_page_sha256": "5149a3ca409d94ab1e28779848e5e09a5ad71dc2e653c9032ea3b47877737d4e"
+    },
+    "after": {
+      "date": "2018-02-06",
+      "catalogue_time_utc": "2018-02-06T08:42:29.401000Z",
+      "item_id": "S2B_36UXA_20180206_0_L1C",
+      "item_sha256": "bff2a247db959e5e73637895d223d347a52031cf430e93b2cd14b3caf541f05e",
+      "scene_id": "S2B_MSIL1C_20180206T084129_N0206_R064_T36UXA_20180206T122659",
+      "catalogue_cloud_percent": 75.2523,
+      "raw_page": "Docs/Reviews/ValidationUnseenSitesV28/sentinel/catalogue/site-01/raw/page-01.json",
+      "raw_page_sha256": "8826ac1cbe96d178f438e180cfa6649b0fe3219f7cd1deb5f0445132b7e0d782"
+    },
+    "interval_days": 25,
+    "relative_orbit": 64,
+    "processing_baseline": "02.06",
+    "earlier_stable_only_options": [],
+    "later_metadata_scene_ids": [
+      "S2A_MSIL1C_20180221T083951_N0206_R064_T36UXA_20180221T122952",
+      "S2B_MSIL1C_20180308T083759_N0206_R064_T36UXA_20180308T104832",
+      "S2A_MSIL1C_20180313T083731_N0206_R064_T36UXA_20180313T105413"
+    ],
+    "followup_status": "nominated_for_bounded_reference_review"
+  },
+  "grid": {
+    "crs": "EPSG:32636",
+    "transform": [
+      10.0,
+      0.0,
+      699740.0,
+      0.0,
+      -10.0,
+      5499720.0
+    ],
+    "width": 64,
+    "height": 64,
+    "bounds": [
+      699740.0,
+      5499080.0,
+      700380.0,
+      5499720.0
+    ]
+  },
+  "control": {
+    "row": 44,
+    "col": 41,
+    "width": 16,
+    "height": 16,
+    "pixels": 256,
+    "bounds": [
+      700150.0,
+      5499120.0,
+      700310.0,
+      5499280.0
+    ],
+    "crs": "EPSG:32636",
+    "context_bounds": [
+      700130.0,
+      5499100.0,
+      700330.0,
+      5499300.0
+    ],
+    "context_width": 20,
+    "context_height": 20,
+    "context_pixels": 400,
+    "context_radius_pixels": 2,
+    "catalogue_exclusion_margin_metres": 20,
+    "control_class_status": "unreviewed",
+    "pixel_qa_status": "unassessed",
+    "independent_site": false,
+    "evaluation_approved": false
+  },
+  "reference_scene_ids": [
+    "LC08_L1TP_177026_20180112_20200902_02_T1",
+    "LC08_L1TP_178025_20180220_20200902_02_T1"
+  ],
+  "esri_raster_ids": [
+    1647619,
+    1662897
+  ],
+  "preview_size_pixels": [
+    43,
+    43
+  ],
+  "max_bytes_per_image": 65536,
+  "view_order": [
+    "landsat-plain.png",
+    "landsat-outlined.png"
+  ],
+  "disposition_rule": "A visible earlier forest-like target, a coherent later opening and a plausibly stable full control can support a native metadata preflight. Preserve cloud, snow, phenology or mixed-class uncertainty and report timing separately.",
+  "input_sha256": {
+    "selection": {
+      "path": "Docs/Reviews/ValidationRemainingSitesV32/comparison.json",
+      "sha256": "9ef54ac5b18f835eac9c6acba35cc45897d0982bfc6a2b2544876591435dcc0c"
+    },
+    "access": {
+      "path": "Docs/Reviews/ValidationRemainingSitesV32/site-01-access.json",
+      "sha256": "f5220f33d074d5f736d562c0f02f6c2828f0dfa31ab79f852cf68b4254be7dfa"
+    },
+    "selection_integrity": {
+      "path": "Docs/Reviews/ValidationRemainingSitesV32/final_integrity.json",
+      "sha256": "1b67218998e2df7698e24f030e7f66ab53c159e28071f91080d94626bac19e84"
+    },
+    "v28_plan": {
+      "path": "Docs/Reviews/ValidationUnseenSitesV28/plan/plan.json",
+      "sha256": "ba49ec9165937064d787e9941a5609511d86cfa035ab006cb01dbe597aeaf07d"
+    },
+    "v28_protocol": {
+      "path": "Docs/Reviews/ValidationUnseenSitesV28/protocol.json",
+      "sha256": "db0ebb25384afb57470c8841a74eb13d050f904e0e10124d9ea4be6cd7ebff99"
+    },
+    "exposure_history": {
+      "path": "Docs/Reviews/ValidationSite03ReviewV31/reviews.json",
+      "sha256": "33dcdfa534f372d7e8aa11d0ad772774364c0b8b93c47478768b2abd3c8dd4c8"
+    },
+    "catalogue": {
+      "path": "Datasets/AnnotationAudit/v1/annotations_clean.geojson",
+      "sha256": "06a1090c8451d670929163ff7be067d63454cb1893a3e8cbee97519fbb69cbce"
+    },
+    "implementation": {
+      "path": "Solutions/prepare_site01_reference_review.py",
+      "sha256": "a112ca3e13fca7c41e3fe8521d2be9dcba63a121ab3adcd8829f7119a2124b49"
+    },
+    "renderer_helpers": {
+      "path": "Solutions/prepare_july_visual_review.py",
+      "sha256": "6650036b87ecfa8f7eaeb2820746cfeb203b6fbe0def06c1bf68bf2e3aa30568"
+    },
+    "resource_guard": {
+      "path": "Solutions/validate_sample.py",
+      "sha256": "475f641ed582af37eedc2ee9e94065e280202db08eb381441e1403c3eb001fba"
+    }
+  }
+}

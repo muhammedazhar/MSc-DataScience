@@ -5,6 +5,8 @@ status, then the latest handoff before edits. Commit every completed verified
 logical change with the handoff updated and push to the SAME branch. This entry
 point works for Codex, Gemini Antigravity or another agent without chat history.
 
+Current V33 site-01 bounded Landsat reference review:
+**`Docs/Handoffs/2026-11-25-site-01-landsat-review.md`**.
 Completed V32 remaining-site metadata comparison:
 **`Docs/Handoffs/2026-11-25-remaining-site-selection.md`**.
 Completed V31 site-03 feature audit and model-blind review:
