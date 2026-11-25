@@ -1,0 +1,320 @@
+{
+  "schema_version": 35,
+  "site": {
+    "site_id": "site-06",
+    "event_id": "event-b83ef590046f2221e99a",
+    "group_id": "group-fcc40a27555bfbdb9f67",
+    "tile": "36UXA",
+    "annotation_date": "2018-05-02",
+    "annotation_flags": [],
+    "blockers": [],
+    "control_opportunity": {
+      "row": 2,
+      "col": 2,
+      "width": 16,
+      "height": 16,
+      "pixels": 256,
+      "bounds": [
+        660960.0,
+        5523220.0,
+        661120.0,
+        5523380.0
+      ],
+      "crs": "EPSG:32636",
+      "context_bounds": [
+        660940.0,
+        5523200.0,
+        661140.0,
+        5523400.0
+      ],
+      "context_width": 20,
+      "context_height": 20,
+      "context_pixels": 400,
+      "context_radius_pixels": 2,
+      "catalogue_exclusion_margin_metres": 20,
+      "control_class_status": "unreviewed",
+      "pixel_qa_status": "unassessed",
+      "independent_site": false,
+      "evaluation_approved": false
+    },
+    "anchor_pixels": 121,
+    "positive_target_pixels": 121,
+    "positive_interior_pixels": 62,
+    "anchor_two_pixel_context_inside_crop": true,
+    "positive_interior_sha256": "7d0924c566b2e375a3e875d986599c6b384eeb5a9f4d10cb2815e71b70c2651c",
+    "disposition": "eligible_outside_bounded_roster",
+    "split": "validation",
+    "grid": {
+      "crs": "EPSG:32636",
+      "transform": [
+        10.0,
+        0.0,
+        660940.0,
+        0.0,
+        -10.0,
+        5523400.0
+      ],
+      "width": 64,
+      "height": 64,
+      "bounds": [
+        660940.0,
+        5522760.0,
+        661580.0,
+        5523400.0
+      ]
+    },
+    "qa_context_bounds": [
+      659740.0,
+      5521560.0,
+      662780.0,
+      5524600.0
+    ],
+    "event_bounds": [
+      661185.8466169147,
+      5522999.116093924,
+      661367.7328874853,
+      5523150.342972981
+    ],
+    "frozen_group_footprint_bounds": [
+      660933.1108857379,
+      5522736.80581294,
+      661613.1108857379,
+      5523416.80581294
+    ],
+    "core_bounds_wgs84": [
+      35.23813633681443,
+      49.835473282876066,
+      35.247296080503304,
+      49.841397376007464
+    ],
+    "qa_context_bounds_wgs84": [
+      35.22096749450453,
+      49.82436394069261,
+      35.26447627960931,
+      49.85250338133994
+    ],
+    "comparison_start_inclusive": "2018-04-02",
+    "comparison_end_inclusive": "2018-05-12",
+    "reference_start_inclusive": "2018-04-02",
+    "reference_end_inclusive": "2018-06-16",
+    "post_date": "2018-05-02",
+    "post_date_role": "reference release anchor only",
+    "temporal_source_ids": [
+      "36UXA_time-dependent"
+    ],
+    "native_grid_scene_id": "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233",
+    "native_grid_bounds": [
+      600000.0,
+      5490240.0,
+      709800.0,
+      5600040.0
+    ],
+    "context_event_ids": [
+      "event-b83ef590046f2221e99a",
+      "event-db5938bbae69bf2092cc"
+    ],
+    "prior_temporal_context_event_ids": [],
+    "eroded_support_pixels": 62
+  },
+  "control": {
+    "row": 31,
+    "col": 12,
+    "width": 8,
+    "height": 8,
+    "pixels": 64,
+    "bounds": [
+      661060.0,
+      5523010.0,
+      661140.0,
+      5523090.0
+    ],
+    "crs": "EPSG:32636",
+    "context_bounds": [
+      661040.0,
+      5522990.0,
+      661160.0,
+      5523110.0
+    ],
+    "context_width": 12,
+    "context_height": 12,
+    "context_pixels": 144,
+    "context_radius_pixels": 2,
+    "catalogue_exclusion_margin_metres": 20,
+    "control_class_status": "unreviewed",
+    "pixel_qa_status": "unassessed",
+    "independent_site": false,
+    "evaluation_approved": false
+  },
+  "sentinel_pair": {
+    "pre_date": "2018-04-10",
+    "post_date": "2018-05-10",
+    "pre_scene_id": "S2B_MSIL1C_20180410T084559_N0206_R107_T36UXA_20180410T114307",
+    "post_scene_id": "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+    "interval_days": 30,
+    "relative_orbit": 107,
+    "processing_baseline": "02.06",
+    "catalogue_cloud_percent": [
+      0,
+      0
+    ],
+    "later_metadata_scene_ids": [
+      "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+      "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+      "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+      "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147",
+      "S2B_MSIL1C_20180609T084559_N0206_R107_T36UXA_20180609T113934",
+      "S2A_MSIL1C_20180614T084601_N0206_R107_T36UXA_20180614T110529"
+    ],
+    "stable_only_earlier_scene_options": [
+      {
+        "date": "2018-04-05",
+        "scene_id": "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935"
+      }
+    ],
+    "site_id": "site-06",
+    "group_id": "group-fcc40a27555bfbdb9f67",
+    "sentinel_minus_landsat_before_days": 1,
+    "sentinel_minus_landsat_after_days": -1,
+    "date_gap_notes": {
+      "before": "landsat_earlier",
+      "after": "landsat_later",
+      "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+    },
+    "score": [
+      0,
+      1,
+      1,
+      1,
+      0,
+      30,
+      "S2B_MSIL1C_20180410T084559_N0206_R107_T36UXA_20180410T114307",
+      "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930"
+    ],
+    "endpoints": {
+      "before": {
+        "item_id": "S2B_36UXA_20180410_0_L1C",
+        "item_sha256": "716744b9053ed093c5f6758bf065e53dbf6e51f56e3a34b21763569f96402cb8",
+        "catalogue_time_utc": "2018-04-10T08:45:56.457000Z",
+        "raw_page": {
+          "path": "Docs/Reviews/ValidationStage1SearchV35/sentinel/catalogue/site-06/raw/page-01.json",
+          "sha256": "1118222ecc023757942913933f2003340fda74e8ac891b3b3035b4e802436473"
+        }
+      },
+      "after": {
+        "item_id": "S2B_36UXA_20180510_0_L1C",
+        "item_sha256": "61893a0b3e48173e89470967fbd64f88a5d77b84394e615ec121684e6adbde5e",
+        "catalogue_time_utc": "2018-05-10T08:47:56.517000Z",
+        "raw_page": {
+          "path": "Docs/Reviews/ValidationStage1SearchV35/sentinel/catalogue/site-06/raw/page-01.json",
+          "sha256": "1118222ecc023757942913933f2003340fda74e8ac891b3b3035b4e802436473"
+        }
+      }
+    }
+  },
+  "sources": [
+    {
+      "scene_id": "LC08_L1TP_178025_20180409_20201015_02_T1",
+      "esri_raster_id": 1662899,
+      "capture_time_utc": "2018-04-09T08:30:01.457451Z",
+      "caption": "9 April 2018",
+      "tier": "T1",
+      "scene_cloud_percent": 1.65,
+      "usgs_item_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l1/items/LC08_L1TP_178025_20180409_20201015_02_T1",
+      "locked_preview_metadata": {
+        "url": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer/exportImage?bbox=660940.0%2C5522760.0%2C661580.0%2C5523400.0&bboxSR=32636&imageSR=32636&size=43%2C43&format=png24&interpolation=RSP_NearestNeighbor&mosaicRule=%7B%22mosaicMethod%22%3A%22esriMosaicLockRaster%22%2C%22lockRasterIds%22%3A%5B1662899%5D%2C%22mosaicOperation%22%3A%22MT_FIRST%22%7D&f=json",
+        "bounds_epsg32636": [
+          660940,
+          5522760,
+          661580,
+          5523400
+        ]
+      }
+    },
+    {
+      "scene_id": "LC08_L1TP_178025_20180511_20200901_02_T1",
+      "esri_raster_id": 1662901,
+      "capture_time_utc": "2018-05-11T08:29:42.633428Z",
+      "caption": "11 May 2018",
+      "tier": "T1",
+      "scene_cloud_percent": 0.03,
+      "usgs_item_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l1/items/LC08_L1TP_178025_20180511_20200901_02_T1",
+      "locked_preview_metadata": {
+        "url": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer/exportImage?bbox=660940.0%2C5522760.0%2C661580.0%2C5523400.0&bboxSR=32636&imageSR=32636&size=43%2C43&format=png24&interpolation=RSP_NearestNeighbor&mosaicRule=%7B%22mosaicMethod%22%3A%22esriMosaicLockRaster%22%2C%22lockRasterIds%22%3A%5B1662901%5D%2C%22mosaicOperation%22%3A%22MT_FIRST%22%7D&f=json",
+        "bounds_epsg32636": [
+          660940,
+          5522760,
+          661580,
+          5523400
+        ]
+      }
+    }
+  ],
+  "resources": {
+    "workers": 1,
+    "native_threads": 1,
+    "nice_increment": 10,
+    "gpu_used": false,
+    "worker_rss_mib": 512,
+    "available_memory_reserve_gib": 1.5,
+    "max_seconds_per_worker": 300
+  },
+  "max_bytes_per_image": 65536,
+  "preview_size_pixels": [
+    43,
+    43
+  ],
+  "view_order": [
+    "landsat-plain.png",
+    "landsat-outlined.png"
+  ],
+  "input_sha256": {
+    "catalogue": {
+      "path": "Datasets/AnnotationAudit/v1/annotations_clean.geojson",
+      "sha256": "06a1090c8451d670929163ff7be067d63454cb1893a3e8cbee97519fbb69cbce"
+    },
+    "roster": {
+      "path": "Docs/Reviews/ValidationStage1SearchV35/roster/roster.json",
+      "sha256": "b9564b8c1e83dde0d8b38b2863f0ab311b932a26e9d9bb7bf07bbfb7ff5d4ed1"
+    },
+    "reference_access": {
+      "path": "Docs/Reviews/ValidationStage1SearchV35/reference_access_wave01.json",
+      "sha256": "6fd91716eab41506c44d0268d19363ff3d5d3ce119dc5ebf683cc2ecf9d74fc7"
+    },
+    "reference_roster": {
+      "path": "Docs/Reviews/ValidationStage1SearchV35/wave-01.json",
+      "sha256": "dd2b12a696170a07de6e229b4048c742b65fc361cc8e7b6b76903b13fd4f99f0"
+    },
+    "metadata_options": {
+      "path": "Docs/Reviews/ValidationStage1SearchV35/controls/control_and_pair_options.json",
+      "sha256": "bbd937bf639d55bde34d52fc4b747d4c5917fe82994f703ee703479c8fbb1092"
+    },
+    "sentinel_archive": {
+      "path": "Docs/Reviews/ValidationStage1SearchV35/sentinel/metadata.json",
+      "sha256": "60c07e4cd984dc0e6d66e2eb2e6b694d2feb99cd6b72783e02720a7a87da11f6"
+    },
+    "sentinel_replay": {
+      "path": "Docs/Reviews/ValidationStage1SearchV35/sentinel_replay/verification.json",
+      "sha256": "4b246c2d839aef2cb68b79348bcaf04517a2c8d516d2d2829717a13a5750e593"
+    },
+    "map_replay": {
+      "path": "Docs/Reviews/ValidationStage1SearchV35/control_replay/verification.json",
+      "sha256": "4b80374f156cf12526b51fc07770c469c76b3131d7dacdaa67689dbbe877c9e8"
+    },
+    "annotated_renderer": {
+      "path": "Solutions/prepare_stage1_candidate_review.py",
+      "sha256": "a6a7e99507c3ebdd48291dde30b48c31a7c2d94335aa6865302ab177a96b07d0"
+    },
+    "reference_helpers": {
+      "path": "Solutions/prepare_site01_reference_review.py",
+      "sha256": "a112ca3e13fca7c41e3fe8521d2be9dcba63a121ab3adcd8829f7119a2124b49"
+    },
+    "renderer_helpers": {
+      "path": "Solutions/prepare_july_visual_review.py",
+      "sha256": "6650036b87ecfa8f7eaeb2820746cfeb203b6fbe0def06c1bf68bf2e3aa30568"
+    },
+    "resource_guard": {
+      "path": "Solutions/validate_sample.py",
+      "sha256": "475f641ed582af37eedc2ee9e94065e280202db08eb381441e1403c3eb001fba"
+    }
+  }
+}
