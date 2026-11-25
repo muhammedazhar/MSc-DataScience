@@ -23,4 +23,15 @@ a 1.5 GiB available-memory reserve. Save raw small previews locally and
 archive receipts, replay, and every reviewed disposition. Native
 Sentinel-2 preflight and acquisition belong to stage 2.
 
-The geometry reconstruction, reference search and review are pending.
+## Completed roster and reference inventory
+
+The [roster](../Reviews/ValidationStage1SearchV35/roster/roster.json)
+reproduces the V28 plan and retains all 29 eligible events across 14
+unreviewed groups. Every crop has a geometry-only control opportunity.
+All 29 exact-crop Landsat catalogue requests completed. The
+[reference inventory](../Reviews/ValidationStage1SearchV35/references/landsat.json)
+retains the source scenes and chronology. Its
+[offline replay](../Reviews/ValidationStage1SearchV35/reference_replay/replay.json)
+reproduced every response without a network request. Roster reconstruction,
+lookup and replay peaked at 165.52, 46.11 and 34.91 MiB RSS respectively.
+Shortlisting, controls and visual review are pending.
