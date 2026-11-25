@@ -1,0 +1,31 @@
+{
+  "schema_version": 28,
+  "mode": "plan",
+  "execution_status": "completed",
+  "protocol_sha256": "db0ebb25384afb57470c8841a74eb13d050f904e0e10124d9ea4be6cd7ebff99",
+  "artifact_sha256": {
+    "plan.json": "ba49ec9165937064d787e9941a5609511d86cfa035ab006cb01dbe597aeaf07d"
+  },
+  "satellite_pixel_reads": 0,
+  "image_asset_downloads": 0,
+  "model_executions": 0,
+  "labels_approved": 0,
+  "resources": {
+    "logical_cpu_count": 11,
+    "machine_ram_gib": 18.0,
+    "worker_peak_rss_mib_sampled": 147.8,
+    "worker_high_water_rss_mib": 162.47,
+    "minimum_available_gib_sampled": 3.97,
+    "elapsed_seconds": 1.02,
+    "worker_limit_mib": 512,
+    "minimum_available_gib_limit": 1.5,
+    "runtime_limit_seconds": 300,
+    "workers": 1,
+    "native_thread_limit": 1,
+    "nice_increment": 10,
+    "gdal_cache_mib": 0,
+    "warp_memory_mib": 0,
+    "gpu_used": false,
+    "monitor_interval_seconds": 0.25
+  }
+}

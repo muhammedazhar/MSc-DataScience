@@ -1,0 +1,93 @@
+{
+  "schema_version": 28,
+  "scope": "Metadata-only feasibility for at most three original held-out groups absent from prior pair inventory.",
+  "maximum_sites": 3,
+  "resources": {
+    "workers": 1,
+    "native_threads": 1,
+    "nice_increment": 10,
+    "gpu_used": false,
+    "worker_rss_mib": 512,
+    "available_memory_reserve_gib": 1.5,
+    "max_seconds_per_worker": 300
+  },
+  "sentinel_rules": {
+    "url": "https://earth-search.aws.element84.com/v1/search",
+    "collection": "sentinel-2-l1c",
+    "page_limit": 50,
+    "maximum_pages": 4,
+    "maximum_response_bytes": 2097152,
+    "timeout_seconds": 12
+  },
+  "qa_source_padding_metres": 1200,
+  "core_grid_width_height": 64,
+  "native_grid_spacing_metres": 10,
+  "comparison_rule": "Pre before annotation; post at or within 10 days after annotation. Both within query bounds. Same tile/orbit/baseline. Interval 5\u201330 days.",
+  "reference_rule": "Search from annotation minus 30 through plus 45 days. Archive Airbus 9/14, up to three ordered Wayback releases and one coarse Landsat 8 request per site. Preserve source capture dates.",
+  "control_rule": "One geometry-only 16/12/8 square candidate per site using the full 2 pixel context and 20 m catalogue exclusion.",
+  "imagery_and_labels_authorized": false,
+  "source_files": {
+    "catalogue": {
+      "path": "Datasets/AnnotationAudit/v1/annotations_clean.geojson",
+      "sha256": "06a1090c8451d670929163ff7be067d63454cb1893a3e8cbee97519fbb69cbce"
+    },
+    "splits": {
+      "path": "Datasets/AnnotationAudit/v1/splits.json",
+      "sha256": "6c29ca5ab841dfe452ccccb1df826f1b2ae1613aea0cb9f463ab4302c5dd806d"
+    },
+    "pairs": {
+      "path": "Datasets/AnnotationAudit/v1/candidate_pairs.jsonl",
+      "sha256": "74d8d229470b4ef4aa968199768772fffd010aaab28f6d44775afb27c1601cd6"
+    },
+    "training_manifest": {
+      "path": "Datasets/CuratedPilot/v1/dataset/training_manifest.jsonl",
+      "sha256": "138713e6a0b57e5491015fe42438d1a5d1702c68c753289bf52abb5caf7949aa"
+    },
+    "original_scene_inventory": {
+      "path": "Datasets/AnnotationAudit/v1/scene_inventory.jsonl",
+      "sha256": "78a3006c508ac008af5f9d879fa59907475ca28641e63866c2c95bf3a2ede740"
+    },
+    "v23_plan": {
+      "path": "Docs/Reviews/ValidationFreshSourcesV23/plan/plan.json",
+      "sha256": "8673ef4e28de946d0f78f6fe98513177a0fe8631caff98bd08a37e209c2abb5f"
+    },
+    "v24_screen": {
+      "path": "Docs/Reviews/ValidationFreshSourcesV24/screen/screen.json",
+      "sha256": "1205ccce1f38b2fca7a3624a227bf1a47bf49d6b345d4816aff526d0423c0dc8"
+    },
+    "annotation_manifest": {
+      "path": "Datasets/AnnotationAudit/v1/annotation_manifest.jsonl",
+      "sha256": "20511aba811a4d75fd09f317d898b26259e587734f4240807cebf414bf327554"
+    },
+    "original_source_exclusions": {
+      "path": "Datasets/AnnotationAudit/v1/original_source_exclusions.jsonl",
+      "sha256": "468086811490610b73f4f32a97447e0ba6743131d303e0b0d78f9654af37865c"
+    },
+    "v27_screen": {
+      "path": "Docs/Reviews/Validation2019ScreenV27/screen/screen.json",
+      "sha256": "518f0d72af9905b572049d206b366ab493d3bb8d1388ba0afda384a9354b1f18"
+    },
+    "v27_verification": {
+      "path": "Docs/Reviews/Validation2019ScreenV27/verification/verification.json",
+      "sha256": "48ef66ceaa7bc19675fc848983d06e2d5b25c83d45d549ce227886e58e6827c8"
+    }
+  },
+  "frozen_implementation_sha256": {
+    "Solutions/audit_annotations.py": "062d426458c62da070b4e433ec0340e84bc525e425a16d61e856d9b4564547c4",
+    "Solutions/inventory_earlier_validation_sources.py": "91ed9c71e8fc39699801a76f088197b775301477a66d8baac867c5b6971fee1b",
+    "Solutions/inventory_2019_reference_sources.py": "5123e823b2ccba80b84655c319b1c1558db02743dbf9a596901a879ea1eab990",
+    "Solutions/select_validation_cases.py": "0a137b5a343e21a1e6daf10ba21abf10d1efc69eee36f77761ee30b3e0689ca7",
+    "Solutions/validate_sample.py": "475f641ed582af37eedc2ee9e94065e280202db08eb381441e1403c3eb001fba",
+    "Solutions/build_curated_pilot.py": "302c6fb3aedd13facaf0f83abcb3c234f4ff1b2257d303ce7b5cdc5cd470cc4c",
+    "Solutions/bbox_sentinel_preflight.py": "bf96337fecc7d1f13f890e9c59f26fcdb5949dc01d34d020af28ceeda3f8c3eb",
+    "Solutions/preflight_2019_validation_sources.py": "83923aa78bd33e8dd4dce9c4ec28d121db267f1df2e98f165efc86b99afcbf63",
+    "Solutions/preflight_earlier_validation_metadata.py": "116fddb8966ed5d95f4c8f5b9a42f4fac7e1240d442a3f55dd140b213f2d0980",
+    "Solutions/preflight_fresh_validation_sources.py": "2efeccb803b7539f0a6e927497b72cdf83888df15ec1abf41618c5c7e2237edc",
+    "Solutions/preflight_remaining_validation_metadata.py": "fff6c583871279d65ea91cc7f2b719396d58574923422031d59fc5c2e9c90c5c"
+  },
+  "implementation_sha256": {
+    "Solutions/inventory_unseen_validation_sites.py": "075b8416e46059321870101c8049a769f37c5e7b7de44dc410adffb456b0c97c",
+    "Solutions/plan_unseen_validation_sites.py": "720b6d016ce432b541378ff76b47721a8641dc7086f08621ed7b0234e6b562ae",
+    "Solutions/inventory_unseen_validation_references.py": "86e4fa87a705cfa509f51ee63d31202be4d626ff133e81863cd596c14b8156d4"
+  }
+}
