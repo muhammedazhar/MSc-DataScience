@@ -1,0 +1,132 @@
+{
+  "schema_version": 31,
+  "status": "model_blind_visual_review_completed",
+  "site_id": "site-03",
+  "pair_id": "derived-site03-891e388f6c6aaee1a9ea",
+  "group_id": "group-a85fa2022a25e1a72e2c",
+  "prior_manual_exposed_group_ids": [
+    "group-0d4c6841d965abf62969",
+    "group-45f0c39e787ca8622918",
+    "group-594ecdcf428fc819f662",
+    "group-646504159ec8034a1565",
+    "group-6bef49e5258e9f579324",
+    "group-96c27871459d03c08bcc",
+    "group-a177948c08d55f377549"
+  ],
+  "new_manual_exposed_group_ids": [
+    "group-a85fa2022a25e1a72e2c"
+  ],
+  "manual_exposed_group_ids": [
+    "group-0d4c6841d965abf62969",
+    "group-45f0c39e787ca8622918",
+    "group-594ecdcf428fc819f662",
+    "group-646504159ec8034a1565",
+    "group-6bef49e5258e9f579324",
+    "group-96c27871459d03c08bcc",
+    "group-a177948c08d55f377549",
+    "group-a85fa2022a25e1a72e2c"
+  ],
+  "view_order": [
+    "target-rgb-plain.png",
+    "control-rgb-plain.png",
+    "target-rgb-outlined.png",
+    "control-rgb-outlined.png",
+    "target-ndvi.png",
+    "control-ndvi.png"
+  ],
+  "view_sha256": {
+    "target-rgb-plain.png": "70c5d25b0ad5c155499a78702bacf85ff25079ae07bf872b27865d7f893de68e",
+    "control-rgb-plain.png": "71ac8fb13811118a649e36dda4cc63d1dc357e1c2cfa2541da777235b66063e9",
+    "target-rgb-outlined.png": "ec39acc7469fe4feb3fddb3c930ccc3effa06a852b6407bd2fd7e78aaccaf9be",
+    "control-rgb-outlined.png": "1624edd19ed9d87e782ad57a654c1ec1d6c74ca52359e57e9b360e967c91dde0",
+    "target-ndvi.png": "78ef34ba27104138ed1bd051551bf4681ce4642ca9cbab551251834470c03d17",
+    "control-ndvi.png": "938c9fc4e1869ebc7db8893f7d09178c4a2df440e9519cd1370d97e340b75013"
+  },
+  "evidence_sha256": {
+    "visual_protocol.json": "71cf5962241e20822873531023caae61dcba7992fdb500033ad16744e99a8251",
+    "inputs/audit.json": "2ad6862ac9966ec48234beb7aa31b0339f5f9fb92a6fe04cf3f059881dddbc9f",
+    "input_verification/metadata.json": "128758fe1232900f6f50344ae33cb7a4e6c1593e5270f637ca3553add4be638d",
+    "packet/packet.json": "9604878b170bdab530bf98c06727ba25d0777e1d969a3599784320a6089b5678",
+    "packet/metadata.json": "ec5b2e427d4cccbd8095c82811faeef3d1e6d524675d1c3aa6247116011eab6c",
+    "packet_verification/metadata.json": "682b8a3e293a6eeec9ffd5557198ff4d89962f880922532d8818d44259d180f5",
+    "visual_review.md": "a030c3a94d0312ec310562994338e232eea775ba104a264ad90024b08bb5dd0d"
+  },
+  "reviewers": 2,
+  "forest_model_predictions_seen": false,
+  "independent_imagery_seen_during_model_blind_review": false,
+  "target": {
+    "dates": [
+      "2018-05-30",
+      "2018-06-04"
+    ],
+    "pre_observation": "A pale near-rectangular opening already occupies most of the target and its eroded interior.",
+    "post_observation": "The opening persists with a more uniform interior and subtle brightening or widening near the eastern edge.",
+    "status": "excluded_preexisting_visible_opening",
+    "opening_visible_by": "2018-05-30",
+    "first_visible_deforestation_interval": null,
+    "observed_forest_to_clearing_interval": null
+  },
+  "control": {
+    "dates": [
+      "2018-05-10",
+      "2018-05-30",
+      "2018-06-04"
+    ],
+    "observation": "Main block stable and vegetated. A persistent pale strip crosses the western portion; a low-NDVI mixed corner reaches into the square.",
+    "status": "excluded_fixed_square_spatially_mixed",
+    "class_status": "unconfirmed_for_entire_fixed_square",
+    "forest_label_approved": false
+  },
+  "ndvi_descriptive_only": {
+    "anchor_target": {
+      "pixels": 177,
+      "median_by_date": {
+        "2018-05-30": 0.387887179851532,
+        "2018-06-04": 0.33188825845718384
+      },
+      "pair_median_change": -0.06303700804710388,
+      "pair_pixels_decreased": 158
+    },
+    "anchor_interior": {
+      "pixels": 115,
+      "median_by_date": {
+        "2018-05-30": 0.38151779770851135,
+        "2018-06-04": 0.3222421407699585
+      },
+      "pair_median_change": -0.06236135959625244,
+      "pair_pixels_decreased": 110
+    },
+    "anchor_context": {
+      "pixels": 335,
+      "median_by_date": {
+        "2018-05-30": 0.4580055773258209,
+        "2018-06-04": 0.3870726227760315
+      },
+      "pair_median_change": -0.048485755920410156,
+      "pair_pixels_decreased": 272
+    },
+    "control": {
+      "pixels": 256,
+      "median_by_date": {
+        "2018-05-10": 0.782920777797699,
+        "2018-05-30": 0.8246946334838867,
+        "2018-06-04": 0.7691605091094971
+      },
+      "pair_median_change": -0.04842793941497803,
+      "pair_pixels_decreased": 232
+    },
+    "control_context": {
+      "pixels": 400,
+      "median_by_date": {
+        "2018-05-10": 0.7825510501861572,
+        "2018-05-30": 0.8223667144775391,
+        "2018-06-04": 0.7657747268676758
+      },
+      "pair_median_change": -0.0481736958026886,
+      "pair_pixels_decreased": 360
+    }
+  },
+  "all_27_channels_checked": true,
+  "labels_approved": 0,
+  "validation_eligible": false
+}

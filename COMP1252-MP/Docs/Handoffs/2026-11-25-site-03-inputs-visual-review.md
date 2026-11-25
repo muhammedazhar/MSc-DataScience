@@ -34,4 +34,16 @@ The [packet](../Reviews/ValidationSite03ReviewV31/packet/packet.json) and its
 [replay](../Reviews/ValidationSite03ReviewV31/packet_verification/metadata.json)
 bind all six boards and their V30 archive evidence. Packet preparation and
 byte-identical replay used no original band windows and peaked at 146.50
-and 145.12 MiB. Visual inspection and reference disposition are pending.
+and 145.12 MiB.
+
+## Model-blind disposition
+
+Both reviewers saw the pale opening over most of the fixed target and eroded
+interior on 30 May. The June difference is mainly at the margins. The proposed
+control has a stable vegetated main block, with a persistent pale strip across
+its west side and a mixed northwest corner. The whole square cannot serve
+as a confirmed stable-forest control. The [visual review](../Reviews/ValidationSite03ReviewV31/visual_review.md)
+and [dispositions](../Reviews/ValidationSite03ReviewV31/reviews.json) preserve
+the fixed geometry, exclude the pair and control from evaluation and record
+the new visual exposure of `group-a85fa2022a25e1a72e2c`. Independent reference
+access and observations are pending. No labels were approved.
