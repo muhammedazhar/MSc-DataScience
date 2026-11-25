@@ -1,0 +1,132 @@
+{
+  "schema_version": 30,
+  "scope": "Download the three exact V29 site-03 scenes and screen frozen crop quality.",
+  "resources": {
+    "workers": 1,
+    "native_threads": 1,
+    "nice_increment": 10,
+    "gpu_used": false,
+    "worker_rss_mib": 512,
+    "available_memory_reserve_gib": 1.5,
+    "max_seconds_per_worker": 300
+  },
+  "site": {
+    "site_id": "site-03",
+    "event_id": "event-43ee348ffadb94e9458e",
+    "group_id": "group-a85fa2022a25e1a72e2c",
+    "grid": {
+      "crs": "EPSG:32636",
+      "transform": [
+        10.0,
+        0.0,
+        621400.0,
+        0.0,
+        -10.0,
+        5562300.0
+      ],
+      "width": 64,
+      "height": 64,
+      "bounds": [
+        621400.0,
+        5561660.0,
+        622040.0,
+        5562300.0
+      ]
+    },
+    "qa_context_bounds": [
+      620200.0,
+      5560460.0,
+      623240.0,
+      5563500.0
+    ],
+    "control_opportunity": {
+      "row": 2,
+      "col": 2,
+      "width": 16,
+      "height": 16,
+      "pixels": 256,
+      "bounds": [
+        621420.0,
+        5562120.0,
+        621580.0,
+        5562280.0
+      ],
+      "crs": "EPSG:32636",
+      "context_bounds": [
+        621400.0,
+        5562100.0,
+        621600.0,
+        5562300.0
+      ],
+      "context_width": 20,
+      "context_height": 20,
+      "context_pixels": 400,
+      "context_radius_pixels": 2,
+      "catalogue_exclusion_margin_metres": 20,
+      "control_class_status": "unreviewed",
+      "pixel_qa_status": "unassessed",
+      "independent_site": false,
+      "evaluation_approved": false
+    }
+  },
+  "roster": [
+    {
+      "date": "2018-05-10",
+      "scene_id": "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+      "role": "earlier_control_observation",
+      "approved_preflight_path": "Docs/Reviews/ValidationSite03PreflightV29/preflight/2018-05-10",
+      "preflight_sha256": "463f2320092ff920f7fd032157bfbfdd45073263b782670bf8c616a76cc81ba1",
+      "listed_bytes": 511349457,
+      "file_count": 58,
+      "asset_manifest_sha256": "0cb1ce780fe745a8e1d444f5d0f9366c229e1614c83801ade1a27b0579c4d12a"
+    },
+    {
+      "date": "2018-05-30",
+      "scene_id": "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+      "role": "before_observation",
+      "approved_preflight_path": "Docs/Reviews/ValidationSite03PreflightV29/preflight/2018-05-30",
+      "preflight_sha256": "4e9a1b759e888c886d0a651155861587daeed7a7ff43e5f3a5944259faf31cf9",
+      "listed_bytes": 526754551,
+      "file_count": 58,
+      "asset_manifest_sha256": "bd02dcda06c8288b4ef39b3db7a38ba0220cc0641a9a175062ee0655b2ec1018"
+    },
+    {
+      "date": "2018-06-04",
+      "scene_id": "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147",
+      "role": "after_observation",
+      "approved_preflight_path": "Docs/Reviews/ValidationSite03PreflightV29/preflight/2018-06-04",
+      "preflight_sha256": "e5454ea8405183f6c0267a54bc4764fb3eaf648f2ce84c3737f66f35331477b3",
+      "listed_bytes": 524534456,
+      "file_count": 58,
+      "asset_manifest_sha256": "72c79ca97080b87886c210f943f8ce0ff674d22af3bdec1b71e242ba423c1736"
+    }
+  ],
+  "listed_bytes": 1562638464,
+  "minimum_free_disk_reserve_bytes": 2147483648,
+  "initial_free_disk_bytes": 64753053696,
+  "source_sha256": {
+    "Docs/Reviews/ValidationSite03PreflightV29/protocol.json": "eeac602d5a866d1d3d972f197821a389bbeb7236d563d666acd827d4772c9298",
+    "Docs/Reviews/ValidationSite03PreflightV29/verification.json": "e486a36dbff03379721812c75f95dd7a07479ffb657a6a8c1511d314d454a18e",
+    "Docs/Reviews/ValidationUnseenSitesV28/plan/plan.json": "ba49ec9165937064d787e9941a5609511d86cfa035ab006cb01dbe597aeaf07d",
+    "Solutions/download.py": "2034ad34839755d1097cfcb7c8c16374240d431c850c065087f418b8bced45cb",
+    "Solutions/bbox_sentinel_transfer.py": "76176e6d19668dc4d33cd3c7ed0216ba0112c3cf733a3ac072cb3739406ca13a",
+    "Solutions/acquire_earlier_validation_sources.py": "c76e69b0c12a47324cade08e8c7c4c1ca594ba7b3f6732bdd88f4d958a9564af",
+    "Solutions/validate_sample.py": "475f641ed582af37eedc2ee9e94065e280202db08eb381441e1403c3eb001fba",
+    "Docs/Reviews/ValidationSite03PreflightV29/preflight/2018-05-10/metadata.json": "42395e19f480a6173e487e74f7d4890d9729d435aca70a0af22b4427b1fbb20b",
+    "Docs/Reviews/ValidationSite03PreflightV29/preflight/2018-05-10/preflight.json": "463f2320092ff920f7fd032157bfbfdd45073263b782670bf8c616a76cc81ba1",
+    "Docs/Reviews/ValidationSite03PreflightV29/preflight/2018-05-30/metadata.json": "bb43860bdb35b515b13b7768ef6641f5797b3018b589adb9952ea77c3a287c20",
+    "Docs/Reviews/ValidationSite03PreflightV29/preflight/2018-05-30/preflight.json": "4e9a1b759e888c886d0a651155861587daeed7a7ff43e5f3a5944259faf31cf9",
+    "Docs/Reviews/ValidationSite03PreflightV29/preflight/2018-06-04/metadata.json": "2785137d6c68195cd4353468862725fda80bfb887c638f81de58f6ca800bb292",
+    "Docs/Reviews/ValidationSite03PreflightV29/preflight/2018-06-04/preflight.json": "e5454ea8405183f6c0267a54bc4764fb3eaf648f2ce84c3737f66f35331477b3"
+  },
+  "positive_pair": [
+    "2018-05-30",
+    "2018-06-04"
+  ],
+  "control_observations": [
+    "2018-05-10",
+    "2018-05-30",
+    "2018-06-04"
+  ],
+  "visual_review_and_labels": false
+}
