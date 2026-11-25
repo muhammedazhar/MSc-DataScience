@@ -38,4 +38,24 @@ Use the actual source capture date and keep any access or resolution limits.
 Each phase uses one low-priority CPU worker, one native thread, a 512 MiB
 RSS cap, 1.5 GiB available-memory reserve and the 300 second runtime limit.
 Planning passed at 162.47 MiB peak RSS. The second guarded run reproduced the
-plan byte for byte. Live catalogue and reference checks remain pending.
+plan byte for byte. Checkpoint `e11ce88` froze the plan before live requests.
+
+## Sentinel-2 metadata
+
+| Site | Catalogue records | Pair options | Options with an earlier control-pair date | First-ranked dates |
+| --- | ---: | ---: | ---: | --- |
+| site-01 | 51 | 4 | 2 | 12 January–6 February 2018 |
+| site-02 | 10 | 2 | 0 | 16 November–6 December 2017 |
+| site-03 | 42 | 18 | 16 | 2 May–1 June 2018 |
+
+Every pair option has a compatible later catalogue observation within the
+search window. Site-03 also has a five-day option from 30 May to 4 June 2018
+on orbit 107, with an earlier 25 May observation for a possible stable-only
+control pair. Scene cloud metadata is 0% and 0.3764% for the five-day pair.
+That figure describes each scene. Whole-crop and context clarity require QA.
+All 103 catalogue items across seven raw pages replayed byte for byte. The
+Sentinel-2 run and replay peaked at 104.94 and 93.84 MiB.
+[Catalogue evidence](../Reviews/ValidationUnseenSitesV28/sentinel/sentinel.json)
+· [Replay](../Reviews/ValidationUnseenSitesV28/sentinel_verification/verification.json).
+
+Independent archive checks remain pending.

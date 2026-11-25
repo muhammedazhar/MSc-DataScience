@@ -1,0 +1,17 @@
+{
+  "url": "https://earth-search.aws.element84.com/v1/search",
+  "method": "POST",
+  "body": {
+    "collections": [
+      "sentinel-2-l1c"
+    ],
+    "datetime": "2018-05-02T00:00:00Z/2018-07-16T23:59:59.999999Z",
+    "bbox": [
+      34.68368209458183,
+      50.183503684888514,
+      34.72723015933305,
+      50.21145767881465
+    ],
+    "limit": 50
+  }
+}
