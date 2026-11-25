@@ -26,5 +26,19 @@ recoverable transaction and archive each publication receipt.
 | 2018-05-30 | 58 | 526,754,551 | 22.88 s | 64.30 MiB |
 | 2018-06-04 | 58 | 524,534,456 | 22.39 s | 64.88 MiB |
 
-Pending work includes publication dates absent from the table, lineage
-verification, crop and control QA, and replay.
+All three transactions are complete. Each published scene passed the frozen
+local QA metadata checks and has 58 verified file receipts tied to its V29
+manifest. The full source scenes and transaction journals remain local.
+
+## Frozen lineage
+
+The [protocol](../Reviews/ValidationSite03ScreenV30/protocol.json) and
+[lineage](../Reviews/ValidationSite03ScreenV30/lineage/lineage.json) bind the
+five-day comparison to the original site grid and frozen split. The cumulative
+mask changed from 57 pixels before to 234 after, with 177 pixels in the new-loss
+reference and 115 in the eroded target. The target and eroded target contexts
+have 335 and 231 pixels. The 256-pixel proposed control has a 400-pixel context.
+The source checks verified 174 new receipts and 2,494 prior file fingerprints.
+Lineage preparation peaked at 149.48 MiB and read zero image band windows.
+
+Crop and control QA and offline replay are pending.
