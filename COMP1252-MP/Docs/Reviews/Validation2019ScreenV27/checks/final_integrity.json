@@ -1,0 +1,78 @@
+{
+  "status": "passed",
+  "protocol_sha256": "6915c7737b8e07179db14e7594ce35b89ad420965dc95223e14cde7be7f2a6b3",
+  "pinned_files": 101,
+  "published_scenes": 4,
+  "new_verified_assets": 232,
+  "new_payload_bytes": 2208628047,
+  "bound_pre_and_post_assets": 348,
+  "earlier_asset_stats_checked_in_guarded_phases": 2262,
+  "screen_status_counts": {
+    "needs_visual_review": 1,
+    "excluded_by_automatic_quality_screen": 3
+  },
+  "pairs_replayed": 4,
+  "cache_bindings_replayed": 8,
+  "new_review_candidates": 0,
+  "prior_visually_exposed_groups": 7,
+  "labels_approved": 0,
+  "held_out_score_reported": false,
+  "training_checkpoint": 1664,
+  "verified_training_metrics": {
+    "tp": 151,
+    "fp": 0,
+    "fn": 0,
+    "tn": 2640,
+    "supervised_pixels": 2791,
+    "probability_threshold": 0.5
+  },
+  "tests_passed": 394,
+  "archived_files_verified_against_git_index": 29,
+  "guarded_workers": {
+    "publication/2019-03-03": {
+      "worker_high_water_rss_mib": 59.41,
+      "minimum_available_gib_sampled": 3.03,
+      "elapsed_seconds": 134.5
+    },
+    "publication/2019-03-08": {
+      "worker_high_water_rss_mib": 64.2,
+      "minimum_available_gib_sampled": 3.28,
+      "elapsed_seconds": 108.34
+    },
+    "publication/2019-05-07": {
+      "worker_high_water_rss_mib": 66.28,
+      "minimum_available_gib_sampled": 3.2,
+      "elapsed_seconds": 78.7
+    },
+    "publication/2019-05-12": {
+      "worker_high_water_rss_mib": 63.78,
+      "minimum_available_gib_sampled": 3.27,
+      "elapsed_seconds": 114.15
+    },
+    "lineage": {
+      "worker_high_water_rss_mib": 153.16,
+      "minimum_available_gib_sampled": 3.47,
+      "elapsed_seconds": 2.04
+    },
+    "screen": {
+      "worker_high_water_rss_mib": 320.78,
+      "minimum_available_gib_sampled": 2.65,
+      "elapsed_seconds": 14.99
+    },
+    "verification": {
+      "worker_high_water_rss_mib": 163.11,
+      "minimum_available_gib_sampled": 3.54,
+      "elapsed_seconds": 2.55
+    },
+    "checks/training_verification": {
+      "worker_high_water_rss_mib": 78.53,
+      "minimum_available_gib_sampled": 4.29,
+      "elapsed_seconds": 0.51
+    },
+    "checks/test_run": {
+      "worker_high_water_rss_mib": 362.16,
+      "minimum_available_gib_sampled": 3.62,
+      "elapsed_seconds": 5.33
+    }
+  }
+}

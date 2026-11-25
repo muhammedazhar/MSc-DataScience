@@ -1,0 +1,18 @@
+{
+  "protocol_sha256": "6915c7737b8e07179db14e7594ce35b89ad420965dc95223e14cde7be7f2a6b3",
+  "checks": {
+    "exact_lineage": true,
+    "cumulative_targets": true,
+    "safe_cache_bindings": true,
+    "numeric_qa_outcomes": true,
+    "qa_masks": true,
+    "anchor_contexts": true,
+    "candidate_gate": true
+  },
+  "pairs_replayed": 4,
+  "cache_bindings_replayed": 8,
+  "verified_screen_metadata_sha256": "e33623d282820e66e103a67fd9ce2728d43761408664ac5cfd8b5001446cd8ca",
+  "review_candidate_pair_ids": [],
+  "cloud_model_executions": 0,
+  "source_jp2_window_reads": 0
+}

@@ -1,0 +1,53 @@
+{
+  "execution_status": "completed",
+  "schema_version": 27,
+  "mode": "screen",
+  "protocol_sha256": "6915c7737b8e07179db14e7594ce35b89ad420965dc95223e14cde7be7f2a6b3",
+  "pair_count": 4,
+  "group_count": 2,
+  "labels_approved": 0,
+  "all_27_channels_checked": false,
+  "validation_eligible": false,
+  "forest_model_executions": 0,
+  "new_imagery_reviewed": 0,
+  "prior_source_file_stat_count": 2262,
+  "artifact_sha256": {
+    "cache_evidence/36c7b988340b4e3743d860ae7e5624be27a6c2dc753bfe5dbf429afa560ad7ec.npz": "6c1ad4d0625ce45eb6ea6b0ca85ba5365e7891efea799815b8088b1225bb62a3",
+    "cache_evidence/6f3a41070d82480f0fe5439212d7871ddaad1d020711266861098cec05fd5004.npz": "18be2626061ee7feefef23c3e459f4e87c9bb4a4c964f299c589e39794a80710",
+    "cache_evidence/71431d7df5112716a82c6bf44927c95acc7557780350d55ddc6146c553c24a0c.npz": "e94a9498091aaf93dbced25ecd84abc8a7e3d805c63b873824d0966f7f6c8931",
+    "cache_evidence/a0d4a78640085891f879582322149fe951c67059855821611c6de780049ad9cb.npz": "49ab23182a5cb4b05043c4553bb2a10ef50de78246b042e35aa2929a7bad8e44",
+    "cache_evidence/ba0fa5b3dff5860456f3aac66324f480453894d17817193202457760f15d3a95.npz": "2849f601cd9bcceb722af2be2c6fecaf312bd3dc3a88f52875594cb112162d43",
+    "cache_evidence/bb75c569d02fb6ed794fbc6609e6fd34a237958b151dcf27a9fa88cf1fc3cb78.npz": "f437e7c416bfca372250d34b04d11a6d20a61638d58075dd94fea0a0bfc4ac53",
+    "masks/derived-2019-4a053eea7c743a662296.tif": "912838c5d02ce950e19602ea3793b163badda2820e945940eea280932caf0363",
+    "masks/derived-2019-73527c82049cd1c4892c.tif": "f141ece8ee1343171b09e6bc58135c3eaf9e1147f838c0ff8c6eef02428e2971",
+    "masks/derived-2019-bcdeca4a8d7281001479.tif": "885e896859020a821f9611c8083f98a197b564e67f52b7167333bb8f3119efab",
+    "masks/derived-2019-db8dc8557eee78ecc068.tif": "cce93b71fb506904ca459bb941fb1d3e83b109bf28d46c02c00c2236078517f0",
+    "screen.json": "518f0d72af9905b572049d206b366ab493d3bb8d1388ba0afda384a9354b1f18"
+  },
+  "status_counts": {
+    "needs_visual_review": 1,
+    "excluded_by_automatic_quality_screen": 3
+  },
+  "review_candidate_status": "no_candidates_passed_qa",
+  "review_candidate_pair_ids": [],
+  "cloud_model_executions": 4,
+  "source_jp2_window_reads": 44,
+  "resources": {
+    "logical_cpu_count": 11,
+    "machine_ram_gib": 18.0,
+    "worker_peak_rss_mib_sampled": 319.4,
+    "worker_high_water_rss_mib": 320.78,
+    "minimum_available_gib_sampled": 2.65,
+    "elapsed_seconds": 14.99,
+    "worker_limit_mib": 512,
+    "minimum_available_gib_limit": 1.5,
+    "runtime_limit_seconds": 300,
+    "workers": 1,
+    "native_thread_limit": 1,
+    "nice_increment": 10,
+    "gdal_cache_mib": 32,
+    "warp_memory_mib": 16,
+    "gpu_used": false,
+    "monitor_interval_seconds": 0.25
+  }
+}
