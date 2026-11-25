@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "command": "download",
+  "artifact_sha256": {
+    "download.json": "62e92091d4ee1555fe4c9b2dcce9a1d0746a36e166598fd8d12cf34932658d42"
+  },
+  "satellite_pixel_reads": 0,
+  "resources": {
+    "logical_cpu_count": 11,
+    "machine_ram_gib": 18.0,
+    "worker_peak_rss_mib_sampled": 63.3,
+    "worker_high_water_rss_mib": 63.53,
+    "minimum_available_gib_sampled": 3.2,
+    "elapsed_seconds": 22.38,
+    "worker_limit_mib": 512,
+    "minimum_available_gib_limit": 1.5,
+    "runtime_limit_seconds": 300,
+    "workers": 1,
+    "native_thread_limit": 1,
+    "nice_increment": 10,
+    "gdal_cache_mib": 0,
+    "warp_memory_mib": 0,
+    "gpu_used": false,
+    "monitor_interval_seconds": 0.25
+  }
+}
