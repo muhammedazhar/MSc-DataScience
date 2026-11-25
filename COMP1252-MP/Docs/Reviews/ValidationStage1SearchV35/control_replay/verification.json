@@ -1,0 +1,10 @@
+{
+  "schema_version": 35,
+  "network_requests": 0,
+  "verified_map_snapshot_sha256": {
+    "raw/site-06-osm-map.json": "2bb861a8d4bed94bf509e225e317982e91f21266046c12c4cf8407abd70bdda1",
+    "raw/site-07-osm-map.json": "d283bb13aa7661947e91bfeb77ebf415544214e0fa5f1baabdc1b10a977fe7be",
+    "raw/site-09-osm-map.json": "87e4d22958df94528ccd7f47854949e9fb6898407fd90c4acb455b53dd1739af"
+  },
+  "mapped_controls_replayed": 3
+}

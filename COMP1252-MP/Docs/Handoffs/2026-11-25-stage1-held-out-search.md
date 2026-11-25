@@ -34,4 +34,23 @@ retains the source scenes and chronology. Its
 [offline replay](../Reviews/ValidationStage1SearchV35/reference_replay/replay.json)
 reproduced every response without a network request. Roster reconstruction,
 lookup and replay peaked at 165.52, 46.11 and 34.91 MiB RSS respectively.
-Shortlisting, controls and visual review are pending.
+
+## First three prospects
+
+The [first batch](../Reviews/ValidationStage1SearchV35/wave-01.json) fixes
+two dated reference leads each for sites 06, 09 and 07. All three
+[Sentinel-2 searches](../Reviews/ValidationStage1SearchV35/sentinel/sentinel.json)
+completed and replayed. They yielded 98 items and 54 same-orbit,
+same-baseline pair options. Each site's top pair has 0% reported
+scene cloud on both dates. The archived
+[control checks](../Reviews/ValidationStage1SearchV35/controls/control_and_pair_options.json)
+replayed all three current map snapshots. The original site-07 square
+stays fixed. Use the mapped alternatives at sites 06 and 09.
+
+Review site-07 first. It has a full 16 × 16 control, growing-season
+references on 19 August and 20 September, and a 25-day Sentinel-2
+candidate from 18 August to 12 September 2017. The independent before
+reference is one day after the Sentinel-2 before image. The independent
+later reference is eight days after its later image. The sighted
+transition window will depend on the images actually reviewed.
+The stage-one visual disposition is pending.
