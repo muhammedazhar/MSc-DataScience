@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "command": "plan",
+  "source_kind": "archived_catalogue_import",
+  "artifact_sha256": {
+    "plan.json": "b2425f809c18d62fa7cce9575ddf04a9af15ec7ff418e179071d5c74d1dd12f2"
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "schema_version": 29,
+  "scope": "Three exact site-03 native product and asset-list checks using download.py preflight.",
+  "resources": {
+    "workers": 1,
+    "native_threads": 1,
+    "nice_increment": 10,
+    "gpu_used": false,
+    "worker_rss_mib": 512,
+    "available_memory_reserve_gib": 1.5,
+    "max_seconds_per_worker": 300
+  },
+  "required_files_per_scene": 58,
+  "request_cap_per_scene": 4,
+  "site": {
+    "site_id": "site-03",
+    "event_id": "event-43ee348ffadb94e9458e",
+    "group_id": "group-a85fa2022a25e1a72e2c",
+    "grid": {
+      "crs": "EPSG:32636",
+      "transform": [
+        10.0,
+        0.0,
+        621400.0,
+        0.0,
+        -10.0,
+        5562300.0
+      ],
+      "width": 64,
+      "height": 64,
+      "bounds": [
+        621400.0,
+        5561660.0,
+        622040.0,
+        5562300.0
+      ]
+    },
+    "qa_context_bounds": [
+      620200.0,
+      5560460.0,
+      623240.0,
+      5563500.0
+    ],
+    "control_opportunity": {
+      "row": 2,
+      "col": 2,
+      "width": 16,
+      "height": 16,
+      "pixels": 256,
+      "bounds": [
+        621420.0,
+        5562120.0,
+        621580.0,
+        5562280.0
+      ],
+      "crs": "EPSG:32636",
+      "context_bounds": [
+        621400.0,
+        5562100.0,
+        621600.0,
+        5562300.0
+      ],
+      "context_width": 20,
+      "context_height": 20,
+      "context_pixels": 400,
+      "context_radius_pixels": 2,
+      "catalogue_exclusion_margin_metres": 20,
+      "control_class_status": "unreviewed",
+      "pixel_qa_status": "unassessed",
+      "independent_site": false,
+      "evaluation_approved": false
+    }
+  },
+  "roster": [
+    {
+      "item_id": "S2B_36UXA_20180510_0_L1C",
+      "scene_id": "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+      "acquisition_date": "2018-05-10",
+      "tile": "36UXA",
+      "processing_baseline": "02.06",
+      "relative_orbit": 107,
+      "sequence": "0",
+      "tile_prefix": "tiles/36/U/XA/2018/5/10/0/",
+      "product_key": "products/2018/5/10/S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930/metadata.xml",
+      "raw_item_sha256": "61893a0b3e48173e89470967fbd64f88a5d77b84394e615ec121684e6adbde5e",
+      "role": "earlier_control_observation"
+    },
+    {
+      "item_id": "S2B_36UXA_20180530_0_L1C",
+      "scene_id": "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+      "acquisition_date": "2018-05-30",
+      "tile": "36UXA",
+      "processing_baseline": "02.06",
+      "relative_orbit": 107,
+      "sequence": "0",
+      "tile_prefix": "tiles/36/U/XA/2018/5/30/0/",
+      "product_key": "products/2018/5/30/S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442/metadata.xml",
+      "raw_item_sha256": "c7439d3f4f5159a6f77ad9d18cc537ef705499301f7d243b053fcec0a5d3e345",
+      "role": "before_observation"
+    },
+    {
+      "item_id": "S2A_36UXA_20180604_0_L1C",
+      "scene_id": "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147",
+      "acquisition_date": "2018-06-04",
+      "tile": "36UXA",
+      "processing_baseline": "02.06",
+      "relative_orbit": 107,
+      "sequence": "0",
+      "tile_prefix": "tiles/36/U/XA/2018/6/4/0/",
+      "product_key": "products/2018/6/4/S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147/metadata.xml",
+      "raw_item_sha256": "f48448eeee7f18be2a847a2928ea36e1dff17410aa838d4774e3f00b7aaa1c42",
+      "role": "after_observation"
+    }
+  ],
+  "catalogue_import_plan_sha256": "b2425f809c18d62fa7cce9575ddf04a9af15ec7ff418e179071d5c74d1dd12f2",
+  "source_files": [
+    {
+      "path": "Docs/Reviews/ValidationUnseenSitesV28/protocol.json",
+      "sha256": "db0ebb25384afb57470c8841a74eb13d050f904e0e10124d9ea4be6cd7ebff99"
+    },
+    {
+      "path": "Docs/Reviews/ValidationUnseenSitesV28/plan/plan.json",
+      "sha256": "ba49ec9165937064d787e9941a5609511d86cfa035ab006cb01dbe597aeaf07d"
+    },
+    {
+      "path": "Docs/Reviews/ValidationUnseenSitesV28/plan/metadata.json",
+      "sha256": "fba50b9426cc0ad24576f9f310574110b341e4ee03f414cda48a2045d9d264d0"
+    },
+    {
+      "path": "Docs/Reviews/ValidationUnseenSitesV28/sentinel/sentinel.json",
+      "sha256": "c64dd5420a2c345cc677c5ab78bc27e68cd124bfeedb24c1cd3bdb7c35b98a1c"
+    },
+    {
+      "path": "Docs/Reviews/ValidationUnseenSitesV28/sentinel/metadata.json",
+      "sha256": "07aab754a558c427953edd3dd0ecd4ec6921786b11e5774b2d9a29772c47cdf8"
+    },
+    {
+      "path": "Docs/Reviews/ValidationUnseenSitesV28/sentinel_verification/verification.json",
+      "sha256": "5cf4f8cfca3493984e87f8e5e8207b78ea91c337a594e7cd9aa3b78898fb07f5"
+    },
+    {
+      "path": "Docs/Reviews/ValidationUnseenSitesV28/checks/final_integrity.json",
+      "sha256": "ddb7bdae254a6c2a9f9d449b72137544f1dc0e71e3cdaed04e5f1f8eaa5d8338"
+    },
+    {
+      "path": "Docs/Reviews/ValidationUnseenSitesV28/sentinel/catalogue/site-03/raw/page-01.json",
+      "sha256": "255c120d781207600e000067028bf5c5a6a5f4d2d3d0cbe5ac08b71269ae6f58"
+    },
+    {
+      "path": "Docs/Reviews/ValidationSite03PreflightV29/catalogue_import/plan.json",
+      "sha256": "b2425f809c18d62fa7cce9575ddf04a9af15ec7ff418e179071d5c74d1dd12f2"
+    },
+    {
+      "path": "Docs/Reviews/ValidationSite03PreflightV29/catalogue_import/metadata.json",
+      "sha256": "41517a23bd75ca754718eeb49497decdc9616789cc34e562a6ec393e70474bb0"
+    },
+    {
+      "path": "Solutions/download.py",
+      "sha256": "2034ad34839755d1097cfcb7c8c16374240d431c850c065087f418b8bced45cb"
+    },
+    {
+      "path": "Solutions/bbox_sentinel_preflight.py",
+      "sha256": "bf96337fecc7d1f13f890e9c59f26fcdb5949dc01d34d020af28ceeda3f8c3eb"
+    },
+    {
+      "path": "Solutions/inventory_earlier_validation_sources.py",
+      "sha256": "91ed9c71e8fc39699801a76f088197b775301477a66d8baac867c5b6971fee1b"
+    },
+    {
+      "path": "Solutions/preflight_2019_validation_sources.py",
+      "sha256": "83923aa78bd33e8dd4dce9c4ec28d121db267f1df2e98f165efc86b99afcbf63"
+    },
+    {
+      "path": "Solutions/preflight_earlier_validation_metadata.py",
+      "sha256": "116fddb8966ed5d95f4c8f5b9a42f4fac7e1240d442a3f55dd140b213f2d0980"
+    },
+    {
+      "path": "Solutions/preflight_fresh_validation_sources.py",
+      "sha256": "2efeccb803b7539f0a6e927497b72cdf83888df15ec1abf41618c5c7e2237edc"
+    },
+    {
+      "path": "Solutions/annotation_scene_inventory.py",
+      "sha256": "5c35020ccf12f5e5f689c1f7130d64d9cabd5e6e3e04cdede291c9a912688318"
+    },
+    {
+      "path": "Solutions/pixelqa_scene_metadata.py",
+      "sha256": "4d783446400c33f2bfb9d6e8730d3ab8e5178d35559a39cf714735384d542b72"
+    },
+    {
+      "path": "Solutions/validate_sample.py",
+      "sha256": "475f641ed582af37eedc2ee9e94065e280202db08eb381441e1403c3eb001fba"
+    }
+  ],
+  "image_asset_downloads_authorized": false,
+  "labels_authorized": false
+}
