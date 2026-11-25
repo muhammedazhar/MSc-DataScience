@@ -1,0 +1,366 @@
+{
+  "schema_version": 32,
+  "comparison_date_london": "2026-11-25",
+  "scope": "Metadata-only vector intersection on the original two V28 control squares and their full contexts.",
+  "sources": {
+    "Docs/Reviews/ValidationUnseenSitesV28/protocol.json": "db0ebb25384afb57470c8841a74eb13d050f904e0e10124d9ea4be6cd7ebff99",
+    "Docs/Reviews/ValidationUnseenSitesV28/plan/plan.json": "ba49ec9165937064d787e9941a5609511d86cfa035ab006cb01dbe597aeaf07d",
+    "Datasets/AnnotationAudit/v1/annotations_clean.geojson": "06a1090c8451d670929163ff7be067d63454cb1893a3e8cbee97519fbb69cbce",
+    "Datasets/AnnotationAudit/v1/original_source_exclusions.jsonl": "468086811490610b73f4f32a97447e0ba6743131d303e0b0d78f9654af37865c"
+  },
+  "crs": "EPSG:32636",
+  "catalogue_features_checked": 3911,
+  "unresolved_source_footprints_checked": 90,
+  "data_attribution": {
+    "text": "\u00a9 OpenStreetMap contributors, ODbL",
+    "url": "https://www.openstreetmap.org/copyright"
+  },
+  "methods_url": "https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Date",
+  "limitations": [
+    "Annotation exclusion is a geometry test only.",
+    "OSM boundaries and road centrelines are volunteered and may omit features or contain positional error.",
+    "A present-version way and all its present-version nodes dated before the comparison provide evidence of a previously mapped alignment. OSM mapping dates do not date actual landscape change.",
+    "Later mapping cannot establish road presence or forest class at the image dates."
+  ],
+  "sites": {
+    "site-01": {
+      "event_id": "event-20011c5fc8f074541ee2",
+      "group_id": "group-c4f441ae55f683f915fa",
+      "annotation_date": "2018-01-27",
+      "grid_bounds": [
+        699740.0,
+        5499080.0,
+        700380.0,
+        5499720.0
+      ],
+      "control": {
+        "row": 2,
+        "col": 2,
+        "width": 16,
+        "height": 16,
+        "pixels": 256,
+        "bounds": [
+          699760.0,
+          5499540.0,
+          699920.0,
+          5499700.0
+        ],
+        "crs": "EPSG:32636",
+        "context_bounds": [
+          699740.0,
+          5499520.0,
+          699940.0,
+          5499720.0
+        ],
+        "context_width": 20,
+        "context_height": 20,
+        "context_pixels": 400,
+        "context_radius_pixels": 2,
+        "catalogue_exclusion_margin_metres": 20,
+        "control_class_status": "unreviewed",
+        "pixel_qa_status": "unassessed",
+        "independent_site": false,
+        "evaluation_approved": false
+      },
+      "target_anchor_distance": {
+        "id": "event-20011c5fc8f074541ee2",
+        "roi_distance_m": 82.089,
+        "context_distance_m": 53.807
+      },
+      "closest_catalogue_footprint_by_context_distance": {
+        "id": "event-20011c5fc8f074541ee2",
+        "roi_distance_m": 82.089,
+        "context_distance_m": 53.807
+      },
+      "closest_unresolved_source_footprint_by_context_distance": {
+        "id": "line-11",
+        "roi_distance_m": 16778.328,
+        "context_distance_m": 16757.272
+      },
+      "historical_overpass_attempt": {
+        "requested_osm_snapshot_utc": "2018-01-12T00:00:00Z",
+        "search_bbox_s_w_n_e": [
+          49.6073,
+          35.759261,
+          49.620713,
+          35.779905
+        ],
+        "query": "[out:json][timeout:9][date:\"2018-01-12T00:00:00Z\"];(way[\"highway\"](49.607300, 35.759261, 49.620713, 35.779905);way[\"landuse\"~\"^(forest|farmland|meadow|grass|orchard|logging)$\"](49.607300, 35.759261, 49.620713, 35.779905);way[\"natural\"~\"^(wood|scrub|grassland|heath)$\"](49.607300, 35.759261, 49.620713, 35.779905);relation[\"landuse\"~\"^(forest|farmland|meadow|grass|orchard|logging)$\"](49.607300, 35.759261, 49.620713, 35.779905);relation[\"natural\"~\"^(wood|scrub|grassland|heath)$\"](49.607300, 35.759261, 49.620713, 35.779905););out geom;",
+        "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A9%5D%5Bdate%3A%222018-01-12T00%3A00%3A00Z%22%5D%3B%28way%5B%22highway%22%5D%2849.607300%2C+35.759261%2C+49.620713%2C+35.779905%29%3Bway%5B%22landuse%22~%22%5E%28forest%7Cfarmland%7Cmeadow%7Cgrass%7Corchard%7Clogging%29%24%22%5D%2849.607300%2C+35.759261%2C+49.620713%2C+35.779905%29%3Bway%5B%22natural%22~%22%5E%28wood%7Cscrub%7Cgrassland%7Cheath%29%24%22%5D%2849.607300%2C+35.759261%2C+49.620713%2C+35.779905%29%3Brelation%5B%22landuse%22~%22%5E%28forest%7Cfarmland%7Cmeadow%7Cgrass%7Corchard%7Clogging%29%24%22%5D%2849.607300%2C+35.759261%2C+49.620713%2C+35.779905%29%3Brelation%5B%22natural%22~%22%5E%28wood%7Cscrub%7Cgrassland%7Cheath%29%24%22%5D%2849.607300%2C+35.759261%2C+49.620713%2C+35.779905%29%3B%29%3Bout+geom%3B",
+        "status": 502,
+        "status_reason": "Bad Gateway"
+      },
+      "current_osm_request": {
+        "scope": "current vector map snapshot, later than historical comparison",
+        "bbox_w_s_e_n": [
+          35.759261,
+          49.6073,
+          35.779905,
+          49.620713
+        ],
+        "url": "https://api.openstreetmap.org/api/0.6/map.json?bbox=35.759261%2C49.6073%2C35.779905%2C49.620713",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "bytes": 223128,
+        "sha256": "c5d93302dbb9d362164c8ae8c7391b67070a89515bf7704c104fccee96fcbf69",
+        "element_count": 960
+      },
+      "current_roads_complete_geometries": 12,
+      "current_land_cover_complete_geometries": 19,
+      "incomplete_received_geometries": [],
+      "current_highway_context_intersections": [
+        {
+          "id": 1454557050,
+          "type": "way",
+          "version": 1,
+          "last_version_utc": "2025-11-29T00:19:44Z",
+          "latest_node_version_utc": "2025-11-29T00:19:44Z",
+          "geometry_nodes": 27,
+          "present_version_and_node_positions_already_mapped_by_earliest_before_date": false,
+          "metadata_url": "https://api.openstreetmap.org/api/0.6/way/1454557050.json",
+          "highway": "path",
+          "roi_length_m": 168.797,
+          "context_length_m": 211.867,
+          "clipped_context_geometry_epsg_32636": {
+            "type": "LineString",
+            "coordinates": [
+              [
+                699740.0,
+                5499637.68547744
+              ],
+              [
+                699747.0192120627,
+                5499639.62377639
+              ],
+              [
+                699839.5653835324,
+                5499665.613834628
+              ],
+              [
+                699882.9766032443,
+                5499680.413021625
+              ],
+              [
+                699913.0543785704,
+                5499691.805310426
+              ],
+              [
+                699931.474494976,
+                5499702.991049168
+              ],
+              [
+                699940.0,
+                5499705.479417209
+              ]
+            ]
+          }
+        }
+      ],
+      "current_land_cover_context_intersections": [
+        {
+          "id": 99865485,
+          "type": "way",
+          "version": 3,
+          "last_version_utc": "2020-04-09T10:16:54Z",
+          "latest_node_version_utc": "2020-04-09T10:16:54Z",
+          "geometry_nodes": 25,
+          "present_version_and_node_positions_already_mapped_by_earliest_before_date": false,
+          "metadata_url": "https://api.openstreetmap.org/api/0.6/way/99865485.json",
+          "tags": {
+            "landuse": "forest"
+          },
+          "roi_overlap_percent": 0.919,
+          "context_overlap_percent": 4.869,
+          "boundary_intersects_roi": true,
+          "boundary_intersects_context": true
+        },
+        {
+          "id": 810712361,
+          "type": "way",
+          "version": 1,
+          "last_version_utc": "2020-06-02T10:55:03Z",
+          "latest_node_version_utc": "2020-06-02T10:55:03Z",
+          "geometry_nodes": 8,
+          "present_version_and_node_positions_already_mapped_by_earliest_before_date": false,
+          "metadata_url": "https://api.openstreetmap.org/api/0.6/way/810712361.json",
+          "tags": {
+            "natural": "wood"
+          },
+          "roi_overlap_percent": 33.81,
+          "context_overlap_percent": 27.823,
+          "boundary_intersects_roi": true,
+          "boundary_intersects_context": true
+        },
+        {
+          "id": 810712414,
+          "type": "way",
+          "version": 2,
+          "last_version_utc": "2025-11-29T00:19:44Z",
+          "latest_node_version_utc": "2025-11-29T00:19:44Z",
+          "geometry_nodes": 34,
+          "present_version_and_node_positions_already_mapped_by_earliest_before_date": false,
+          "metadata_url": "https://api.openstreetmap.org/api/0.6/way/810712414.json",
+          "tags": {
+            "landuse": "grass"
+          },
+          "roi_overlap_percent": 46.688,
+          "context_overlap_percent": 47.421,
+          "boundary_intersects_roi": true,
+          "boundary_intersects_context": true
+        }
+      ],
+      "disposition": "control_crosses_path_mapped_later_historical_class_unverified",
+      "forest_class_confirmed": false
+    },
+    "site-02": {
+      "event_id": "event-ef1031ed1843d87d64e1",
+      "group_id": "group-d75dc0544bf1a0e519ad",
+      "annotation_date": "2017-11-28",
+      "grid_bounds": [
+        677420.0,
+        5563420.0,
+        678060.0,
+        5564060.0
+      ],
+      "control": {
+        "row": 2,
+        "col": 2,
+        "width": 16,
+        "height": 16,
+        "pixels": 256,
+        "bounds": [
+          677440.0,
+          5563880.0,
+          677600.0,
+          5564040.0
+        ],
+        "crs": "EPSG:32636",
+        "context_bounds": [
+          677420.0,
+          5563860.0,
+          677620.0,
+          5564060.0
+        ],
+        "context_width": 20,
+        "context_height": 20,
+        "context_pixels": 400,
+        "context_radius_pixels": 2,
+        "catalogue_exclusion_margin_metres": 20,
+        "control_class_status": "unreviewed",
+        "pixel_qa_status": "unassessed",
+        "independent_site": false,
+        "evaluation_approved": false
+      },
+      "target_anchor_distance": {
+        "id": "event-ef1031ed1843d87d64e1",
+        "roi_distance_m": 148.181,
+        "context_distance_m": 119.896
+      },
+      "closest_catalogue_footprint_by_context_distance": {
+        "id": "event-ef1031ed1843d87d64e1",
+        "roi_distance_m": 148.181,
+        "context_distance_m": 119.896
+      },
+      "closest_unresolved_source_footprint_by_context_distance": {
+        "id": "line-56",
+        "roi_distance_m": 31091.784,
+        "context_distance_m": 31063.509
+      },
+      "historical_overpass_attempt": {
+        "requested_osm_snapshot_utc": "2017-11-16T00:00:00Z",
+        "search_bbox_s_w_n_e": [
+          50.192444,
+          35.480107,
+          50.205816,
+          35.500938
+        ],
+        "query": "[out:json][timeout:9][date:\"2017-11-16T00:00:00Z\"];(way[\"highway\"](50.192444, 35.480107, 50.205816, 35.500938);way[\"landuse\"~\"^(forest|farmland|meadow|grass|orchard|logging)$\"](50.192444, 35.480107, 50.205816, 35.500938);way[\"natural\"~\"^(wood|scrub|grassland|heath)$\"](50.192444, 35.480107, 50.205816, 35.500938);relation[\"landuse\"~\"^(forest|farmland|meadow|grass|orchard|logging)$\"](50.192444, 35.480107, 50.205816, 35.500938);relation[\"natural\"~\"^(wood|scrub|grassland|heath)$\"](50.192444, 35.480107, 50.205816, 35.500938););out geom;",
+        "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A9%5D%5Bdate%3A%222017-11-16T00%3A00%3A00Z%22%5D%3B%28way%5B%22highway%22%5D%2850.192444%2C+35.480107%2C+50.205816%2C+35.500938%29%3Bway%5B%22landuse%22~%22%5E%28forest%7Cfarmland%7Cmeadow%7Cgrass%7Corchard%7Clogging%29%24%22%5D%2850.192444%2C+35.480107%2C+50.205816%2C+35.500938%29%3Bway%5B%22natural%22~%22%5E%28wood%7Cscrub%7Cgrassland%7Cheath%29%24%22%5D%2850.192444%2C+35.480107%2C+50.205816%2C+35.500938%29%3Brelation%5B%22landuse%22~%22%5E%28forest%7Cfarmland%7Cmeadow%7Cgrass%7Corchard%7Clogging%29%24%22%5D%2850.192444%2C+35.480107%2C+50.205816%2C+35.500938%29%3Brelation%5B%22natural%22~%22%5E%28wood%7Cscrub%7Cgrassland%7Cheath%29%24%22%5D%2850.192444%2C+35.480107%2C+50.205816%2C+35.500938%29%3B%29%3Bout+geom%3B",
+        "status": 502,
+        "status_reason": "Bad Gateway"
+      },
+      "current_osm_request": {
+        "scope": "current vector map snapshot, later than historical comparison",
+        "bbox_w_s_e_n": [
+          35.480107,
+          50.192444,
+          35.500938,
+          50.205816
+        ],
+        "url": "https://api.openstreetmap.org/api/0.6/map.json?bbox=35.480107%2C50.192444%2C35.500938%2C50.205816",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "bytes": 122912,
+        "sha256": "8f248daa033d541c149b698c5d5b0e860c3fafdca8aca654157c254ab29ef192",
+        "element_count": 657
+      },
+      "current_roads_complete_geometries": 3,
+      "current_land_cover_complete_geometries": 1,
+      "incomplete_received_geometries": [],
+      "current_highway_context_intersections": [
+        {
+          "id": 255283249,
+          "type": "way",
+          "version": 2,
+          "last_version_utc": "2017-03-03T07:38:38Z",
+          "latest_node_version_utc": "2014-01-04T19:35:09Z",
+          "geometry_nodes": 30,
+          "present_version_and_node_positions_already_mapped_by_earliest_before_date": true,
+          "metadata_url": "https://api.openstreetmap.org/api/0.6/way/255283249.json",
+          "highway": "primary",
+          "roi_length_m": 9.617,
+          "context_length_m": 74.015,
+          "clipped_context_geometry_epsg_32636": {
+            "type": "LineString",
+            "coordinates": [
+              [
+                677620.0,
+                5563927.741599805
+              ],
+              [
+                677617.0726148317,
+                5563924.621121821
+              ],
+              [
+                677603.0746852186,
+                5563899.702489592
+              ],
+              [
+                677593.6653698456,
+                5563867.647390915
+              ],
+              [
+                677592.4223635123,
+                5563860.0
+              ]
+            ]
+          }
+        }
+      ],
+      "current_land_cover_context_intersections": [
+        {
+          "id": 169107369,
+          "type": "way",
+          "version": 4,
+          "last_version_utc": "2014-03-01T09:52:15Z",
+          "latest_node_version_utc": "2014-03-01T09:52:13Z",
+          "geometry_nodes": 38,
+          "present_version_and_node_positions_already_mapped_by_earliest_before_date": true,
+          "metadata_url": "https://api.openstreetmap.org/api/0.6/way/169107369.json",
+          "tags": {
+            "landuse": "forest"
+          },
+          "roi_overlap_percent": 0.0,
+          "context_overlap_percent": 1.462,
+          "boundary_intersects_roi": false,
+          "boundary_intersects_context": true
+        }
+      ],
+      "disposition": "control_intersects_primary_highway_mapped_before_comparison",
+      "forest_class_confirmed": false
+    }
+  },
+  "imagery_read": false,
+  "controls_reselected": false,
+  "labels_approved": 0
+}

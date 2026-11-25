@@ -1,0 +1,50 @@
+{
+  "schema_version": 32,
+  "scope": "Alternative geometry search under the same V28 crops after both original control flags.",
+  "site_ids": [
+    "site-01",
+    "site-02"
+  ],
+  "resources": {
+    "workers": 1,
+    "native_threads": 1,
+    "nice_increment": 10,
+    "gpu_used": false,
+    "worker_rss_mib": 512,
+    "available_memory_reserve_gib": 1.5,
+    "max_seconds_per_worker": 300
+  },
+  "map_features_path": "Docs/Reviews/ValidationRemainingSitesV32/control-map-features.geojson",
+  "map_response_bounds_wgs84": {
+    "site-01": [
+      35.759261,
+      49.6073,
+      35.779905,
+      49.620713
+    ],
+    "site-02": [
+      35.480107,
+      50.192444,
+      35.500938,
+      50.205816
+    ]
+  },
+  "map_clearance_metres": 20,
+  "preserve_original_dispositions": true,
+  "selection_rule": [
+    "Reproduce the existing proposed square before searching for an alternative.",
+    "Keep the exact V28 grid, group, train/test footprint separation, target, split and annotation clearances.",
+    "Within mapped woodland and its verified request envelope, exclude mapped road centerlines, mapped nonwooded areas and their 20 m buffers for the complete two-pixel context.",
+    "Reuse V28 sizes 16, 12 and 8 pixels in descending order, then ascending row and column for a deterministic choice.",
+    "Current vector tags supply geometry for follow-up only; keep historical and visual class unknown."
+  ],
+  "input_sha256": {
+    "Docs/Reviews/ValidationRemainingSitesV32/protocol.json": "3b2c99bb8179a2d3950384e921428d27daa653296de8bd1320498dca56b4fee8",
+    "Docs/Reviews/ValidationRemainingSitesV32/control-context.json": "35da6d24fe8a709f94cb400c1cce9c937febd929dcc3fc9110b5fbc910bb6479",
+    "Docs/Reviews/ValidationRemainingSitesV32/control-map-features.geojson": "9efc11c44ca625fe3dd9c916ec3711399157807b7677a32202bd4f7f5e3207a1",
+    "Solutions/plan_remaining_site_controls.py": "fc3dd1c63e2d08031c86ff0b4a009b99763dea6599b96da46d32d694142f15aa",
+    "Solutions/plan_unseen_validation_sites.py": "720b6d016ce432b541378ff76b47721a8641dc7086f08621ed7b0234e6b562ae",
+    "Docs/Reviews/ValidationUnseenSitesV28/plan/plan.json": "ba49ec9165937064d787e9941a5609511d86cfa035ab006cb01dbe597aeaf07d",
+    "Docs/Reviews/ValidationUnseenSitesV28/protocol.json": "db0ebb25384afb57470c8841a74eb13d050f904e0e10124d9ea4be6cd7ebff99"
+  }
+}

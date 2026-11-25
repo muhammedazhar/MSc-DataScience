@@ -1,0 +1,604 @@
+{
+  "schema_version": 32,
+  "site_id": "site-01",
+  "event_id": "event-20011c5fc8f074541ee2",
+  "group_id": "group-c4f441ae55f683f915fa",
+  "checked_on_client_date": "2026-11-25",
+  "comparison_window": [
+    "2017-12-28",
+    "2018-02-06"
+  ],
+  "archived_reference_window": [
+    "2017-12-28",
+    "2018-03-13"
+  ],
+  "scope": "Metadata-only access check for archived V28 site-01 and exact independent reference records.",
+  "fixed_crop": {
+    "crs": "EPSG:32636",
+    "transform": [
+      10.0,
+      0.0,
+      699740.0,
+      0.0,
+      -10.0,
+      5499720.0
+    ],
+    "width": 64,
+    "height": 64,
+    "bounds": [
+      699740.0,
+      5499080.0,
+      700380.0,
+      5499720.0
+    ]
+  },
+  "fixed_control": {
+    "row": 2,
+    "col": 2,
+    "width": 16,
+    "height": 16,
+    "pixels": 256,
+    "bounds": [
+      699760.0,
+      5499540.0,
+      699920.0,
+      5499700.0
+    ],
+    "crs": "EPSG:32636",
+    "context_bounds": [
+      699740.0,
+      5499520.0,
+      699940.0,
+      5499720.0
+    ],
+    "context_width": 20,
+    "context_height": 20,
+    "context_pixels": 400,
+    "context_radius_pixels": 2,
+    "catalogue_exclusion_margin_metres": 20,
+    "control_class_status": "unreviewed",
+    "pixel_qa_status": "unassessed",
+    "independent_site": false,
+    "evaluation_approved": false
+  },
+  "v28_evidence_sha256": {
+    "Docs/Reviews/ValidationUnseenSitesV28/plan/plan.json": "ba49ec9165937064d787e9941a5609511d86cfa035ab006cb01dbe597aeaf07d",
+    "Docs/Reviews/ValidationUnseenSitesV28/sentinel/sentinel.json": "c64dd5420a2c345cc677c5ab78bc27e68cd124bfeedb24c1cd3bdb7c35b98a1c",
+    "Docs/Reviews/ValidationUnseenSitesV28/reference_retry/references.json": "3707990d11a4f15116faad734d1ab44158bbb303c96067749b4ca8e52a64a75a"
+  },
+  "sentinel_pair_options": [
+    {
+      "pre_date": "2018-01-12",
+      "post_date": "2018-02-06",
+      "pre_scene_id": "S2A_MSIL1C_20180112T084321_N0206_R064_T36UXA_20180112T111338",
+      "post_scene_id": "S2B_MSIL1C_20180206T084129_N0206_R064_T36UXA_20180206T122659",
+      "interval_days": 25,
+      "relative_orbit": 64,
+      "processing_baseline": "02.06",
+      "catalogue_cloud_percent": [
+        59.4713,
+        75.2523
+      ],
+      "later_metadata_scene_ids": [
+        "S2A_MSIL1C_20180221T083951_N0206_R064_T36UXA_20180221T122952",
+        "S2B_MSIL1C_20180308T083759_N0206_R064_T36UXA_20180308T104832",
+        "S2A_MSIL1C_20180313T083731_N0206_R064_T36UXA_20180313T105413"
+      ],
+      "stable_only_earlier_scene_options": []
+    },
+    {
+      "pre_date": "2018-01-12",
+      "post_date": "2018-02-01",
+      "pre_scene_id": "S2A_MSIL1C_20180112T084321_N0206_R064_T36UXA_20180112T111338",
+      "post_scene_id": "S2A_MSIL1C_20180201T084201_N0206_R064_T36UXA_20180201T122903",
+      "interval_days": 20,
+      "relative_orbit": 64,
+      "processing_baseline": "02.06",
+      "catalogue_cloud_percent": [
+        59.4713,
+        95.5304
+      ],
+      "later_metadata_scene_ids": [
+        "S2B_MSIL1C_20180206T084129_N0206_R064_T36UXA_20180206T122659",
+        "S2A_MSIL1C_20180221T083951_N0206_R064_T36UXA_20180221T122952",
+        "S2B_MSIL1C_20180308T083759_N0206_R064_T36UXA_20180308T104832",
+        "S2A_MSIL1C_20180313T083731_N0206_R064_T36UXA_20180313T105413"
+      ],
+      "stable_only_earlier_scene_options": []
+    },
+    {
+      "pre_date": "2018-01-22",
+      "post_date": "2018-02-06",
+      "pre_scene_id": "S2A_MSIL1C_20180122T084241_N0206_R064_T36UXA_20180122T122409",
+      "post_scene_id": "S2B_MSIL1C_20180206T084129_N0206_R064_T36UXA_20180206T122659",
+      "interval_days": 15,
+      "relative_orbit": 64,
+      "processing_baseline": "02.06",
+      "catalogue_cloud_percent": [
+        100,
+        75.2523
+      ],
+      "later_metadata_scene_ids": [
+        "S2A_MSIL1C_20180221T083951_N0206_R064_T36UXA_20180221T122952",
+        "S2B_MSIL1C_20180308T083759_N0206_R064_T36UXA_20180308T104832",
+        "S2A_MSIL1C_20180313T083731_N0206_R064_T36UXA_20180313T105413"
+      ],
+      "stable_only_earlier_scene_options": [
+        {
+          "date": "2018-01-12",
+          "scene_id": "S2A_MSIL1C_20180112T084321_N0206_R064_T36UXA_20180112T111338"
+        }
+      ]
+    },
+    {
+      "pre_date": "2018-01-22",
+      "post_date": "2018-02-01",
+      "pre_scene_id": "S2A_MSIL1C_20180122T084241_N0206_R064_T36UXA_20180122T122409",
+      "post_scene_id": "S2A_MSIL1C_20180201T084201_N0206_R064_T36UXA_20180201T122903",
+      "interval_days": 10,
+      "relative_orbit": 64,
+      "processing_baseline": "02.06",
+      "catalogue_cloud_percent": [
+        100,
+        95.5304
+      ],
+      "later_metadata_scene_ids": [
+        "S2B_MSIL1C_20180206T084129_N0206_R064_T36UXA_20180206T122659",
+        "S2A_MSIL1C_20180221T083951_N0206_R064_T36UXA_20180221T122952",
+        "S2B_MSIL1C_20180308T083759_N0206_R064_T36UXA_20180308T104832",
+        "S2A_MSIL1C_20180313T083731_N0206_R064_T36UXA_20180313T105413"
+      ],
+      "stable_only_earlier_scene_options": [
+        {
+          "date": "2018-01-12",
+          "scene_id": "S2A_MSIL1C_20180112T084321_N0206_R064_T36UXA_20180112T111338"
+        }
+      ]
+    }
+  ],
+  "landsat_8": {
+    "coverage_basis": "Esri live Within query on the exact EPSG:32636 crop agrees with all archived records. USGS STAC polygon coverage was checked separately.",
+    "source_sampling_m": {
+      "panchromatic": 15,
+      "multispectral": 30
+    },
+    "source_links": {
+      "usgs_sampling": "https://www.usgs.gov/landsat-missions/landsat-8",
+      "usgs_public_domain_notice": "https://www.usgs.gov/faqs/are-there-any-restrictions-use-or-redistribution-landsat-data",
+      "esri_service": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer"
+    },
+    "catalogue_cloud_units": "USGS scene cloud is percent. Esri CloudCover is a fraction for these 13 products.",
+    "live_esri_query": {
+      "url": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer/query?where=Category+%3D+1+AND+AcquisitionDate+%3E%3D+DATE+%272017-12-28%27+AND+AcquisitionDate+%3C+DATE+%272018-03-14%27&geometry=699740.0%2C5499080.0%2C700380.0%2C5499720.0&geometryType=esriGeometryEnvelope&inSR=32636&spatialRel=esriSpatialRelWithin&orderByFields=AcquisitionDate+ASC%2COBJECTID+ASC&outFields=OBJECTID%2CLANDSAT_PRODUCT_ID%2CName%2CAcquisitionDate%2CCloudCover%2CSensorName%2CCategory&returnGeometry=false&resultRecordCount=24&f=json",
+      "http_status": 200,
+      "content_type": "application/json;charset=UTF-8",
+      "response_bytes": 8092,
+      "response_sha256": "62ec5c4a2e115c3e709449f8b458778c2effdc19206d8d5f00f7c6182d456535"
+    },
+    "records": [
+      {
+        "esri_raster_id": 1662179,
+        "scene_id": "LC08_L1GT_178025_20180103_20200902_02_T2",
+        "capture_time_utc": "2018-01-03T08:30:47.324424Z",
+        "platform": "LANDSAT_8",
+        "collection_tier": "T2",
+        "esri_cloud_fraction": 0.9121,
+        "usgs_scene_cloud_percent": 91.21,
+        "usgs_land_cloud_percent": 91.21,
+        "esri_within_exact_crop_metadata": true,
+        "usgs_stac_geometry_covers_exact_crop": true,
+        "usgs_stac_receipt": {
+          "url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l1/items/LC08_L1GT_178025_20180103_20200902_02_T2",
+          "http_status": 200,
+          "content_type": "application/geo+json; charset=utf-8",
+          "response_bytes": 27764,
+          "response_sha256": "bdba5daeb39cffd8fec225bb38e2f39530413a04e5ec43bcc8e6da39397b4fcf"
+        }
+      },
+      {
+        "esri_raster_id": 1647605,
+        "scene_id": "LC08_L1TP_177025_20180112_20200902_02_T1",
+        "capture_time_utc": "2018-01-12T08:24:32.659429Z",
+        "platform": "LANDSAT_8",
+        "collection_tier": "T1",
+        "esri_cloud_fraction": 0.6559,
+        "usgs_scene_cloud_percent": 65.59,
+        "usgs_land_cloud_percent": 65.59,
+        "esri_within_exact_crop_metadata": true,
+        "usgs_stac_geometry_covers_exact_crop": true,
+        "usgs_stac_receipt": {
+          "url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l1/items/LC08_L1TP_177025_20180112_20200902_02_T1",
+          "http_status": 200,
+          "content_type": "application/geo+json; charset=utf-8",
+          "response_bytes": 28040,
+          "response_sha256": "e85a292d4aaa3f86cc8e14cc9140a27208084a48d6fa8e4f536e3014f5746da1"
+        }
+      },
+      {
+        "esri_raster_id": 1647619,
+        "scene_id": "LC08_L1TP_177026_20180112_20200902_02_T1",
+        "capture_time_utc": "2018-01-12T08:24:56.546232Z",
+        "platform": "LANDSAT_8",
+        "collection_tier": "T1",
+        "esri_cloud_fraction": 0.5625,
+        "usgs_scene_cloud_percent": 56.25,
+        "usgs_land_cloud_percent": 56.25,
+        "esri_within_exact_crop_metadata": true,
+        "usgs_stac_geometry_covers_exact_crop": true,
+        "usgs_stac_receipt": {
+          "url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l1/items/LC08_L1TP_177026_20180112_20200902_02_T1",
+          "http_status": 200,
+          "content_type": "application/geo+json; charset=utf-8",
+          "response_bytes": 28041,
+          "response_sha256": "cfc3fa92a9cf9c35d60e25343a40c69606cef625aece39094d88c9f2a1b8a648"
+        },
+        "locked_preview_metadata": {
+          "url": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer/exportImage?bbox=699740%2C5499080%2C700380%2C5499720&bboxSR=32636&imageSR=32636&size=43%2C43&format=png24&interpolation=RSP_NearestNeighbor&mosaicRule=%7B%22mosaicMethod%22%3A%22esriMosaicLockRaster%22%2C%22lockRasterIds%22%3A%5B1647619%5D%2C%22mosaicOperation%22%3A%22MT_FIRST%22%7D&f=json",
+          "http_status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "response_bytes": 387,
+          "response_sha256": "abcf8c95de89b9b112bcfb0bd2349990ea5fa2d8027cf7934b234b1362362e69",
+          "bounds_epsg32636": [
+            699740.0,
+            5499080.0,
+            700380.0,
+            5499720.0
+          ],
+          "width": 43,
+          "height": 43,
+          "returned_temporary_png_url": true,
+          "image_requested": false
+        }
+      },
+      {
+        "esri_raster_id": 1662180,
+        "scene_id": "LC08_L1GT_178025_20180119_20200902_02_T2",
+        "capture_time_utc": "2018-01-19T08:30:39.873464Z",
+        "platform": "LANDSAT_8",
+        "collection_tier": "T2",
+        "esri_cloud_fraction": 1,
+        "usgs_scene_cloud_percent": 100,
+        "usgs_land_cloud_percent": 100,
+        "esri_within_exact_crop_metadata": true,
+        "usgs_stac_geometry_covers_exact_crop": true,
+        "usgs_stac_receipt": {
+          "url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l1/items/LC08_L1GT_178025_20180119_20200902_02_T2",
+          "http_status": 200,
+          "content_type": "application/geo+json; charset=utf-8",
+          "response_bytes": 27752,
+          "response_sha256": "bebb98d5fdc9c8ab4d6e6ce6f02a465418deb5291e3f562b6355b69cc2d2fe43"
+        }
+      },
+      {
+        "esri_raster_id": 1646937,
+        "scene_id": "LC08_L1GT_177025_20180128_20200902_02_T2",
+        "capture_time_utc": "2018-01-28T08:24:23.514897Z",
+        "platform": "LANDSAT_8",
+        "collection_tier": "T2",
+        "esri_cloud_fraction": 1,
+        "usgs_scene_cloud_percent": 100,
+        "usgs_land_cloud_percent": 100,
+        "esri_within_exact_crop_metadata": true,
+        "usgs_stac_geometry_covers_exact_crop": true,
+        "usgs_stac_receipt": {
+          "url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l1/items/LC08_L1GT_177025_20180128_20200902_02_T2",
+          "http_status": 200,
+          "content_type": "application/geo+json; charset=utf-8",
+          "response_bytes": 27762,
+          "response_sha256": "52b1ee00682a7e57f854552d636b2b0c1f28a0341ab66949a677af37d5bdaf4b"
+        }
+      },
+      {
+        "esri_raster_id": 1646946,
+        "scene_id": "LC08_L1GT_177026_20180128_20200902_02_T2",
+        "capture_time_utc": "2018-01-28T08:24:47.401701Z",
+        "platform": "LANDSAT_8",
+        "collection_tier": "T2",
+        "esri_cloud_fraction": 1,
+        "usgs_scene_cloud_percent": 100,
+        "usgs_land_cloud_percent": 100,
+        "esri_within_exact_crop_metadata": true,
+        "usgs_stac_geometry_covers_exact_crop": true,
+        "usgs_stac_receipt": {
+          "url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l1/items/LC08_L1GT_177026_20180128_20200902_02_T2",
+          "http_status": 200,
+          "content_type": "application/geo+json; charset=utf-8",
+          "response_bytes": 27756,
+          "response_sha256": "971b53303b390ff866ee8c85f576555a3507000700e812f7bf37c579ef33ec24"
+        }
+      },
+      {
+        "esri_raster_id": 1662181,
+        "scene_id": "LC08_L1GT_178025_20180204_20200902_02_T2",
+        "capture_time_utc": "2018-02-04T08:30:30.737468Z",
+        "platform": "LANDSAT_8",
+        "collection_tier": "T2",
+        "esri_cloud_fraction": 1,
+        "usgs_scene_cloud_percent": 100,
+        "usgs_land_cloud_percent": 100,
+        "esri_within_exact_crop_metadata": true,
+        "usgs_stac_geometry_covers_exact_crop": true,
+        "usgs_stac_receipt": {
+          "url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l1/items/LC08_L1GT_178025_20180204_20200902_02_T2",
+          "http_status": 200,
+          "content_type": "application/geo+json; charset=utf-8",
+          "response_bytes": 27761,
+          "response_sha256": "bae70d34f51c7b8361f391f16435dacd174cccd9dc82c64019f099987fb52780"
+        }
+      },
+      {
+        "esri_raster_id": 1646938,
+        "scene_id": "LC08_L1GT_177025_20180213_20200902_02_T2",
+        "capture_time_utc": "2018-02-13T08:24:17.239363Z",
+        "platform": "LANDSAT_8",
+        "collection_tier": "T2",
+        "esri_cloud_fraction": 1,
+        "usgs_scene_cloud_percent": 100,
+        "usgs_land_cloud_percent": 100,
+        "esri_within_exact_crop_metadata": true,
+        "usgs_stac_geometry_covers_exact_crop": true,
+        "usgs_stac_receipt": {
+          "url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l1/items/LC08_L1GT_177025_20180213_20200902_02_T2",
+          "http_status": 200,
+          "content_type": "application/geo+json; charset=utf-8",
+          "response_bytes": 27755,
+          "response_sha256": "c039f159dadccd2730ff12a281fe21285dcfd1591ace628d7f41b93ce18b9e08"
+        }
+      },
+      {
+        "esri_raster_id": 1646947,
+        "scene_id": "LC08_L1GT_177026_20180213_20200902_02_T2",
+        "capture_time_utc": "2018-02-13T08:24:41.126166Z",
+        "platform": "LANDSAT_8",
+        "collection_tier": "T2",
+        "esri_cloud_fraction": 1,
+        "usgs_scene_cloud_percent": 100,
+        "usgs_land_cloud_percent": 100,
+        "esri_within_exact_crop_metadata": true,
+        "usgs_stac_geometry_covers_exact_crop": true,
+        "usgs_stac_receipt": {
+          "url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l1/items/LC08_L1GT_177026_20180213_20200902_02_T2",
+          "http_status": 200,
+          "content_type": "application/geo+json; charset=utf-8",
+          "response_bytes": 27758,
+          "response_sha256": "8e530dbfa4dcc8e136b170a15ab3666312d7af7f52981a9882d8ed9bbe6c1e55"
+        }
+      },
+      {
+        "esri_raster_id": 1662897,
+        "scene_id": "LC08_L1TP_178025_20180220_20200902_02_T1",
+        "capture_time_utc": "2018-02-20T08:30:25.360775Z",
+        "platform": "LANDSAT_8",
+        "collection_tier": "T1",
+        "esri_cloud_fraction": 0.7196,
+        "usgs_scene_cloud_percent": 71.96,
+        "usgs_land_cloud_percent": 71.96,
+        "esri_within_exact_crop_metadata": true,
+        "usgs_stac_geometry_covers_exact_crop": true,
+        "usgs_stac_receipt": {
+          "url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l1/items/LC08_L1TP_178025_20180220_20200902_02_T1",
+          "http_status": 200,
+          "content_type": "application/geo+json; charset=utf-8",
+          "response_bytes": 28029,
+          "response_sha256": "d992c54f5184e7bf8d15d79a33c6d8fb5ccc4a655453e15ea60ad5b279c9d300"
+        },
+        "locked_preview_metadata": {
+          "url": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer/exportImage?bbox=699740%2C5499080%2C700380%2C5499720&bboxSR=32636&imageSR=32636&size=43%2C43&format=png24&interpolation=RSP_NearestNeighbor&mosaicRule=%7B%22mosaicMethod%22%3A%22esriMosaicLockRaster%22%2C%22lockRasterIds%22%3A%5B1662897%5D%2C%22mosaicOperation%22%3A%22MT_FIRST%22%7D&f=json",
+          "http_status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "response_bytes": 387,
+          "response_sha256": "87c03e64aa873e486ea8ff9e583d991bfffda2eb8d5a404427032f7cfb7bea9d",
+          "bounds_epsg32636": [
+            699740.0,
+            5499080.0,
+            700380.0,
+            5499720.0
+          ],
+          "width": 43,
+          "height": 43,
+          "returned_temporary_png_url": true,
+          "image_requested": false
+        }
+      },
+      {
+        "esri_raster_id": 1646939,
+        "scene_id": "LC08_L1GT_177025_20180301_20200902_02_T2",
+        "capture_time_utc": "2018-03-01T08:24:10.262882Z",
+        "platform": "LANDSAT_8",
+        "collection_tier": "T2",
+        "esri_cloud_fraction": 1,
+        "usgs_scene_cloud_percent": 100,
+        "usgs_land_cloud_percent": 100,
+        "esri_within_exact_crop_metadata": true,
+        "usgs_stac_geometry_covers_exact_crop": true,
+        "usgs_stac_receipt": {
+          "url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l1/items/LC08_L1GT_177025_20180301_20200902_02_T2",
+          "http_status": 200,
+          "content_type": "application/geo+json; charset=utf-8",
+          "response_bytes": 27754,
+          "response_sha256": "e4bc9d0c83392474fa09f3785a7274a9a7e639e30997db5e424d6793218638ef"
+        }
+      },
+      {
+        "esri_raster_id": 1646948,
+        "scene_id": "LC08_L1GT_177026_20180301_20200902_02_T2",
+        "capture_time_utc": "2018-03-01T08:24:34.141214Z",
+        "platform": "LANDSAT_8",
+        "collection_tier": "T2",
+        "esri_cloud_fraction": 0.9999,
+        "usgs_scene_cloud_percent": 99.99,
+        "usgs_land_cloud_percent": 99.99,
+        "esri_within_exact_crop_metadata": true,
+        "usgs_stac_geometry_covers_exact_crop": true,
+        "usgs_stac_receipt": {
+          "url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l1/items/LC08_L1GT_177026_20180301_20200902_02_T2",
+          "http_status": 200,
+          "content_type": "application/geo+json; charset=utf-8",
+          "response_bytes": 27759,
+          "response_sha256": "bd45771f4c8a7f8f69eaf13faaec2957123517fa8b4a6a7df2b263ea31b78070"
+        }
+      },
+      {
+        "esri_raster_id": 1662182,
+        "scene_id": "LC08_L1GT_178025_20180308_20200901_02_T2",
+        "capture_time_utc": "2018-03-08T08:30:17.136636Z",
+        "platform": "LANDSAT_8",
+        "collection_tier": "T2",
+        "esri_cloud_fraction": 1,
+        "usgs_scene_cloud_percent": 100,
+        "usgs_land_cloud_percent": 100,
+        "esri_within_exact_crop_metadata": true,
+        "usgs_stac_geometry_covers_exact_crop": true,
+        "usgs_stac_receipt": {
+          "url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l1/items/LC08_L1GT_178025_20180308_20200901_02_T2",
+          "http_status": 200,
+          "content_type": "application/geo+json; charset=utf-8",
+          "response_bytes": 27758,
+          "response_sha256": "543c354b09ab19793a72b90ca15794fac80d4c38d37c0398aadb8173b3643504"
+        }
+      }
+    ]
+  },
+  "airbus_archive": {
+    "v28_record_count": 0,
+    "date_scope": "2017-12-28 through 2018-03-13 inclusive, exact crop.",
+    "platform_searches": [
+      {
+        "query_id": "site-01-airbus-9",
+        "query_url": "https://portal.intelligence-airbusds.com/arcgis/rest/services/OneAtlas/OADConstellationArchive/MapServer/9/query?where=acquisitiondate+%3E%3D+DATE+%272017-12-28%27+AND+acquisitiondate+%3C+DATE+%272018-03-14%27&geometry=699740.0%2C5499080.0%2C700380.0%2C5499720.0&geometryType=esriGeometryEnvelope&inSR=32636&outSR=32636&spatialRel=esriSpatialRelIntersects&outFields=%2A&returnGeometry=true&f=geojson&resultRecordCount=100&orderByFields=acquisitiondate+ASC",
+        "archived_response_path": "Docs/Reviews/ValidationUnseenSitesV28/reference_retry/raw/site-01-airbus-9.response",
+        "archived_response_sha256": "5c389083e7dcd785c3d685329fa703d8b676340c14265fa2c63f7f930705dc80",
+        "archive_records": [],
+        "live_disposition": {
+          "status": "archived_records_reproduced",
+          "url": "https://portal.intelligence-airbusds.com/arcgis/rest/services/OneAtlas/OADConstellationArchive/MapServer/9/query?where=acquisitiondate+%3E%3D+DATE+%272017-12-28%27+AND+acquisitiondate+%3C+DATE+%272018-03-14%27&geometry=699740.0%2C5499080.0%2C700380.0%2C5499720.0&geometryType=esriGeometryEnvelope&inSR=32636&outSR=32636&spatialRel=esriSpatialRelIntersects&outFields=%2A&returnGeometry=true&f=geojson&resultRecordCount=100&orderByFields=acquisitiondate+ASC",
+          "http_status": 200,
+          "content_type": "application/geo+json;charset=UTF-8",
+          "response_bytes": 99,
+          "response_sha256": "5c389083e7dcd785c3d685329fa703d8b676340c14265fa2c63f7f930705dc80"
+        }
+      },
+      {
+        "query_id": "site-01-airbus-14",
+        "query_url": "https://portal.intelligence-airbusds.com/arcgis/rest/services/OneAtlas/OADConstellationArchive/MapServer/14/query?where=acquisitiondate+%3E%3D+DATE+%272017-12-28%27+AND+acquisitiondate+%3C+DATE+%272018-03-14%27&geometry=699740.0%2C5499080.0%2C700380.0%2C5499720.0&geometryType=esriGeometryEnvelope&inSR=32636&outSR=32636&spatialRel=esriSpatialRelIntersects&outFields=%2A&returnGeometry=true&f=geojson&resultRecordCount=100&orderByFields=acquisitiondate+ASC",
+        "archived_response_path": "Docs/Reviews/ValidationUnseenSitesV28/reference_retry/raw/site-01-airbus-14.response",
+        "archived_response_sha256": "5c389083e7dcd785c3d685329fa703d8b676340c14265fa2c63f7f930705dc80",
+        "archive_records": [],
+        "live_disposition": {
+          "status": "archived_records_reproduced",
+          "url": "https://portal.intelligence-airbusds.com/arcgis/rest/services/OneAtlas/OADConstellationArchive/MapServer/14/query?where=acquisitiondate+%3E%3D+DATE+%272017-12-28%27+AND+acquisitiondate+%3C+DATE+%272018-03-14%27&geometry=699740.0%2C5499080.0%2C700380.0%2C5499720.0&geometryType=esriGeometryEnvelope&inSR=32636&outSR=32636&spatialRel=esriSpatialRelIntersects&outFields=%2A&returnGeometry=true&f=geojson&resultRecordCount=100&orderByFields=acquisitiondate+ASC",
+          "http_status": 200,
+          "content_type": "application/geo+json;charset=UTF-8",
+          "response_bytes": 99,
+          "response_sha256": "5c389083e7dcd785c3d685329fa703d8b676340c14265fa2c63f7f930705dc80"
+        }
+      }
+    ]
+  },
+  "wayback": {
+    "sampled_capture_date": "2011-09-20",
+    "reference_window_role": "Historical context only.",
+    "capture_explanation": "https://www.esri.com/arcgis-blog/products/arcgis-living-atlas/imagery/wayback-with-world-imagery-metadata",
+    "public_display_terms": "https://github.com/Esri/wayback-core#licensing",
+    "sampled_releases": [
+      {
+        "query_id": "site-01-wayback-2017_r21",
+        "query_url": "https://metadata.maptiles.arcgis.com/arcgis/rest/services/World_Imagery_Metadata_2017_r21/MapServer/6/query?where=1%3D1&geometry=%7B%22xmin%22%3A699740.0%2C%22ymin%22%3A5499080.0%2C%22xmax%22%3A700380.0%2C%22ymax%22%3A5499720.0%2C%22spatialReference%22%3A%7B%22wkid%22%3A32636%7D%7D&geometryType=esriGeometryEnvelope&inSR=32636&spatialRel=esriSpatialRelWithin&outFields=OBJECTID%2CSRC_DATE2%2CNICE_DESC%2CSRC_DESC%2CSAMP_RES%2CSRC_ACC&returnGeometry=false&f=json",
+        "archived_response_path": "Docs/Reviews/ValidationUnseenSitesV28/reference_retry/raw/site-01-wayback-2017_r21.response",
+        "archived_response_sha256": "164303a8539d51e7e9d481780ac1e4a456b2d9f3eb80f2d085ad2561226416eb",
+        "archive_records": [
+          {
+            "feature_index": 0,
+            "object_id": 219491,
+            "capture_date_utc": "2011-09-20",
+            "release_date": "2018-01-08",
+            "capture_in_reference_window": false,
+            "capture_on_or_before_release": true,
+            "source": "DigitalGlobe",
+            "sensor": "WV01",
+            "sampling_m": 0.5,
+            "accuracy_m": 10.199999809265137,
+            "full_crop_coverage": true,
+            "coverage_basis": "provider Within query on projected crop",
+            "access": "public Wayback display metadata; image use terms and pixels unexamined"
+          }
+        ],
+        "live_disposition": {
+          "status": "request_failed",
+          "error_type": "TimeoutError"
+        }
+      },
+      {
+        "query_id": "site-01-wayback-2018_r01",
+        "query_url": "https://metadata.maptiles.arcgis.com/arcgis/rest/services/World_Imagery_Metadata_2018_r01/MapServer/6/query?where=1%3D1&geometry=%7B%22xmin%22%3A699740.0%2C%22ymin%22%3A5499080.0%2C%22xmax%22%3A700380.0%2C%22ymax%22%3A5499720.0%2C%22spatialReference%22%3A%7B%22wkid%22%3A32636%7D%7D&geometryType=esriGeometryEnvelope&inSR=32636&spatialRel=esriSpatialRelWithin&outFields=OBJECTID%2CSRC_DATE2%2CNICE_DESC%2CSRC_DESC%2CSAMP_RES%2CSRC_ACC&returnGeometry=false&f=json",
+        "archived_response_path": "Docs/Reviews/ValidationUnseenSitesV28/reference_retry/raw/site-01-wayback-2018_r01.response",
+        "archived_response_sha256": "4c09067e5aead1cbcf426985beba8f7a627d3bfa4da7b7594c32cb368cbf6816",
+        "archive_records": [
+          {
+            "feature_index": 0,
+            "object_id": 320105,
+            "capture_date_utc": "2011-09-20",
+            "release_date": "2018-01-31",
+            "capture_in_reference_window": false,
+            "capture_on_or_before_release": true,
+            "source": "DigitalGlobe",
+            "sensor": "WV01",
+            "sampling_m": 0.5,
+            "accuracy_m": 10.199999809265137,
+            "full_crop_coverage": true,
+            "coverage_basis": "provider Within query on projected crop",
+            "access": "public Wayback display metadata; image use terms and pixels unexamined"
+          }
+        ],
+        "live_disposition": {
+          "status": "request_failed",
+          "error_type": "TimeoutError"
+        }
+      },
+      {
+        "query_id": "site-01-wayback-2018_r03",
+        "query_url": "https://metadata.maptiles.arcgis.com/arcgis/rest/services/World_Imagery_Metadata_2018_r03/MapServer/6/query?where=1%3D1&geometry=%7B%22xmin%22%3A699740.0%2C%22ymin%22%3A5499080.0%2C%22xmax%22%3A700380.0%2C%22ymax%22%3A5499720.0%2C%22spatialReference%22%3A%7B%22wkid%22%3A32636%7D%7D&geometryType=esriGeometryEnvelope&inSR=32636&spatialRel=esriSpatialRelWithin&outFields=OBJECTID%2CSRC_DATE2%2CNICE_DESC%2CSRC_DESC%2CSAMP_RES%2CSRC_ACC&returnGeometry=false&f=json",
+        "archived_response_path": "Docs/Reviews/ValidationUnseenSitesV28/reference_retry/raw/site-01-wayback-2018_r03.response",
+        "archived_response_sha256": "6c3db708efba378666251a12650b8a2d2e349b45efe51d80b34ced5238e18b14",
+        "archive_records": [
+          {
+            "feature_index": 0,
+            "object_id": 546993,
+            "capture_date_utc": "2011-09-20",
+            "release_date": "2018-03-14",
+            "capture_in_reference_window": false,
+            "capture_on_or_before_release": true,
+            "source": "DigitalGlobe",
+            "sensor": "WV01",
+            "sampling_m": 0.5,
+            "accuracy_m": 10.199999809265137,
+            "full_crop_coverage": true,
+            "coverage_basis": "provider Within query on projected crop",
+            "access": "public Wayback display metadata; image use terms and pixels unexamined"
+          }
+        ],
+        "live_disposition": {
+          "status": "request_failed",
+          "error_type": "TimeoutError"
+        }
+      }
+    ]
+  },
+  "disposition": {
+    "status": "weak_metadata_alternative",
+    "reasons": [
+      "The least cloudy V28 Sentinel-2 pair is 12 January to 6 February 2018, with scene cloud 59.4713% and 75.2523%. It has no archived earlier same-orbit control date.",
+      "Both Sentinel-2 options with an earlier stable-only control date use 22 January as the first endpoint at 100% scene cloud.",
+      "The lowest-cloud covering pre-date Landsat scene is 56.25% scene cloud on 12 January. The five covering Landsat scenes from 28 January through 13 February have 100% scene cloud.",
+      "The later 20 February Landsat record is 71.96% scene cloud and follows both proposed post dates.",
+      "The archived Airbus search returned no scene and the sampled high-resolution Wayback source predates the comparison window by more than six years."
+    ],
+    "forest_before": null,
+    "opening_after": null,
+    "control_forest_class": null,
+    "first_visible_interval": null
+  },
+  "reference_imagery_fetched": false,
+  "satellite_pixel_reads": 0,
+  "labels_approved": 0
+}
