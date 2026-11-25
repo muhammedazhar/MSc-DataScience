@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "command": "preflight",
+  "artifact_sha256": {
+    "catalogue_item.json": "f7d43d4640760d52035cc5b151f73842164868fe08d9d4bd919523e2c236dcb8",
+    "preflight.json": "463f2320092ff920f7fd032157bfbfdd45073263b782670bf8c616a76cc81ba1",
+    "raw/listing.xml": "4f0cb798736203597b0c3d6c60587e8b48d406cf98a383af07b596e4445c672f",
+    "raw/product.xml": "676d725a0125c7ce36257891e439589ec4bc19b8f690267a2460d67c1cc6e39e",
+    "raw/tile.xml": "8f0ea44c2e8732359d7d0e7c6caf48a1c486940a4ce92b2593e821c1764aa107",
+    "requests.json": "6c63cf626d14a616956169955218a6ea592ebe1d422615713675339bbb8325ad"
+  },
+  "satellite_pixel_reads": 0,
+  "resources": {
+    "logical_cpu_count": 11,
+    "machine_ram_gib": 18.0,
+    "worker_peak_rss_mib_sampled": 58.5,
+    "worker_high_water_rss_mib": 63.28,
+    "minimum_available_gib_sampled": 4.06,
+    "elapsed_seconds": 1.02,
+    "worker_limit_mib": 512,
+    "minimum_available_gib_limit": 1.5,
+    "runtime_limit_seconds": 300,
+    "workers": 1,
+    "native_thread_limit": 1,
+    "nice_increment": 10,
+    "gdal_cache_mib": 0,
+    "warp_memory_mib": 0,
+    "gpu_used": false,
+    "monitor_interval_seconds": 0.25
+  }
+}

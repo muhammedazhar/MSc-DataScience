@@ -1,0 +1,88 @@
+{
+  "status": "passed",
+  "schema_version": 29,
+  "protocol_sha256": "eeac602d5a866d1d3d972f197821a389bbeb7236d563d666acd827d4772c9298",
+  "native_grid_10m": {
+    "ulx": 600000.0,
+    "uly": 5600040.0,
+    "xdim": 10.0,
+    "ydim": -10.0,
+    "width": 10980,
+    "height": 10980,
+    "transform": [
+      10.0,
+      0.0,
+      600000.0,
+      0.0,
+      -10.0,
+      5600040.0
+    ],
+    "bounds": [
+      600000.0,
+      5490240.0,
+      709800.0,
+      5600040.0
+    ]
+  },
+  "scene_reports": {
+    "2018-05-10": {
+      "scene_id": "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+      "role": "earlier_control_observation",
+      "preflight_sha256": "463f2320092ff920f7fd032157bfbfdd45073263b782670bf8c616a76cc81ba1",
+      "files": 58,
+      "listed_bytes": 511349457,
+      "replayed_requests": 4
+    },
+    "2018-05-30": {
+      "scene_id": "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+      "role": "before_observation",
+      "preflight_sha256": "4e9a1b759e888c886d0a651155861587daeed7a7ff43e5f3a5944259faf31cf9",
+      "files": 58,
+      "listed_bytes": 526754551,
+      "replayed_requests": 4
+    },
+    "2018-06-04": {
+      "scene_id": "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147",
+      "role": "after_observation",
+      "preflight_sha256": "e5454ea8405183f6c0267a54bc4764fb3eaf648f2ce84c3737f66f35331477b3",
+      "files": 58,
+      "listed_bytes": 524534456,
+      "replayed_requests": 4
+    }
+  },
+  "listed_files": 174,
+  "disk_budget": {
+    "measured_free_bytes": 65099870208,
+    "complete_payload_bytes": 1562638464,
+    "largest_asset_bytes": 122387498,
+    "current_metadata_artifact_bytes": 1790774,
+    "future_two_copy_staging_plus_temporary_bytes": 3249455200,
+    "minimum_free_reserve_bytes": 2147483648,
+    "sufficient_for_conservative_future_acquisition": true,
+    "imagery_acquisition_executed": false
+  },
+  "worker_results": {
+    "2018-05-10": {
+      "worker_high_water_rss_mib": 63.28,
+      "minimum_available_gib_sampled": 4.06,
+      "elapsed_seconds": 1.02
+    },
+    "2018-05-30": {
+      "worker_high_water_rss_mib": 65.09,
+      "minimum_available_gib_sampled": 3.88,
+      "elapsed_seconds": 1.01
+    },
+    "2018-06-04": {
+      "worker_high_water_rss_mib": 64.64,
+      "minimum_available_gib_sampled": 3.94,
+      "elapsed_seconds": 1.02
+    }
+  },
+  "live_native_request_count": 12,
+  "live_metadata_response_bytes": 1616035,
+  "replayed_live_requests_without_network": 12,
+  "catalogue_and_projected_full_margin_verified": true,
+  "imagery_transfer_executed": false,
+  "labels_approved": 0,
+  "already_present_scene_ids": []
+}

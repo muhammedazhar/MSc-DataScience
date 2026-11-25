@@ -1,0 +1,113 @@
+{
+  "provider": [
+    {
+      "method": "GET",
+      "url": "https://sentinel-s2-l1c.s3.amazonaws.com/?list-type=2&prefix=tiles%2F36%2FU%2FXA%2F2018%2F6%2F4%2F0%2F&max-keys=300",
+      "request_headers": {
+        "Accept-Encoding": "identity",
+        "User-Agent": "COMP1252-source-metadata/13"
+      },
+      "artifact": "raw/listing.xml",
+      "status": 200,
+      "response_headers": {
+        "x-amz-id-2": "PZy/2mDOiLZ45mGZ6GfxErWDs5GRHoNV5SrS9bIclDQRNqkUn131OWtPwLRIesJ4q8hRpAdFwkPrYAxtavfPijAn7Xvm5ve6",
+        "x-amz-request-id": "2C6ZZ10K8JTTA9BK",
+        "Server": "AmazonS3",
+        "Date": "Wed, 25 Nov 2026 10:49:09 GMT",
+        "x-amz-bucket-region": "eu-central-1",
+        "Content-Type": "application/xml",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close"
+      },
+      "bytes": 25243,
+      "sha256": "701cd680ec5f010e8dfae8e22ec4432b1adaa82d549d7a839fb48faf2a1afad7",
+      "verified": true
+    },
+    {
+      "method": "HEAD",
+      "url": "https://sentinel-s2-l1c.s3.amazonaws.com/products/2018/6/4/S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147/metadata.xml",
+      "request_headers": {
+        "Accept-Encoding": "identity",
+        "User-Agent": "COMP1252-source-metadata/13"
+      },
+      "artifact": null,
+      "status": 200,
+      "response_headers": {
+        "x-amz-id-2": "uoDrJ6zkecAZdBsttS5iVuiS7Z9UFbKPoEDE4iP5dFmpKrqQYBlTFRVH30oVdC+pM2LIS+OR7AhcstOXiOsx1dap98hnfbyc",
+        "x-amz-request-id": "2C6WFV4V740D03FS",
+        "Server": "AmazonS3",
+        "Date": "Wed, 25 Nov 2026 10:49:09 GMT",
+        "Last-Modified": "Mon, 04 Jun 2018 21:54:25 GMT",
+        "ETag": "\"79e32ed8f773ac147cbb9b02a127f8a3\"",
+        "Accept-Ranges": "bytes",
+        "Content-Length": "44799",
+        "Content-Type": "application/xml",
+        "Connection": "close"
+      },
+      "pin": {
+        "size": 44799,
+        "etag": "\"79e32ed8f773ac147cbb9b02a127f8a3\""
+      },
+      "verified": true
+    },
+    {
+      "method": "GET",
+      "url": "https://sentinel-s2-l1c.s3.amazonaws.com/products/2018/6/4/S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147/metadata.xml",
+      "request_headers": {
+        "Accept-Encoding": "identity",
+        "User-Agent": "COMP1252-source-metadata/13",
+        "If-Match": "\"79e32ed8f773ac147cbb9b02a127f8a3\""
+      },
+      "artifact": "raw/product.xml",
+      "status": 200,
+      "response_headers": {
+        "x-amz-id-2": "Mq1NX/x2DcYPYAS7GR5mlzny0XGPcU5/UHbVVqsZ9PC0X41xYxPVgO8aqYWnR9RR7bJFgrGfUkVoUTUvGELeLK+FQ/U0h5hP",
+        "x-amz-request-id": "2C6MRHW88QJ3980E",
+        "Server": "AmazonS3",
+        "Date": "Wed, 25 Nov 2026 10:49:09 GMT",
+        "Last-Modified": "Mon, 04 Jun 2018 21:54:25 GMT",
+        "ETag": "\"79e32ed8f773ac147cbb9b02a127f8a3\"",
+        "Accept-Ranges": "bytes",
+        "Content-Type": "application/xml",
+        "Content-Length": "44799",
+        "Connection": "close"
+      },
+      "bytes": 44799,
+      "sha256": "84d45bbadf42a3dbb4d3730315bde84819be8ae0a8f6292ac38845f9effd8966",
+      "md5": "79e32ed8f773ac147cbb9b02a127f8a3",
+      "if_match_verified": true,
+      "content_length_verified": true,
+      "verified": true
+    },
+    {
+      "method": "GET",
+      "url": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/U/XA/2018/6/4/0/metadata.xml",
+      "request_headers": {
+        "Accept-Encoding": "identity",
+        "User-Agent": "COMP1252-source-metadata/13",
+        "If-Match": "\"de5e49a51de60431b765a74fcf127283\""
+      },
+      "artifact": "raw/tile.xml",
+      "status": 200,
+      "response_headers": {
+        "x-amz-id-2": "McDTu976k9vK9k9Mu9Mdfa/5b0T9d8ftFzuM6n1CCpO5TfFxlQ6DfPZ8bP9E+HCl2hnqGK2YkjXYAfSF6XHgogZbo59/yic6",
+        "x-amz-request-id": "2C6Z1ZG36HF0MP57",
+        "Server": "AmazonS3",
+        "Date": "Wed, 25 Nov 2026 10:49:09 GMT",
+        "Last-Modified": "Mon, 04 Jun 2018 21:54:25 GMT",
+        "ETag": "\"de5e49a51de60431b765a74fcf127283\"",
+        "x-amz-storage-class": "INTELLIGENT_TIERING",
+        "Accept-Ranges": "bytes",
+        "Content-Type": "application/xml",
+        "Content-Length": "468725",
+        "Connection": "close"
+      },
+      "bytes": 468725,
+      "sha256": "42d0d8c8bb2c40e10d0c1a64643018f306927da22dc8e42c3333d9dabeed0db4",
+      "md5": "de5e49a51de60431b765a74fcf127283",
+      "if_match_verified": true,
+      "content_length_verified": true,
+      "verified": true
+    }
+  ]
+}
