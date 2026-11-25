@@ -25,4 +25,10 @@ Sentinel-2 preflight pending. The two crop requests are capped at 64 KiB
 each. Use one nice +10 CPU worker, one native thread, 512 MiB RSS and
 1.5 GiB of available memory. The raw crops and boards stay local.
 
-The two bounded downloads, offline replay and visual review are pending.
+The guarded worker retrieved the two crops in 3,645 and 2,851 bytes.
+The [packet receipts](../Reviews/ValidationSite02ReferenceV34/packet/packet.json)
+bind the exact source crops, masks and boards. The
+[offline replay](../Reviews/ValidationSite02ReferenceV34/packet_verification.json)
+reproduced both boards and the packet byte for byte. Peak RSS was
+144.81 MiB for preparation and 139.61 MiB for replay. Visual review is
+pending.
