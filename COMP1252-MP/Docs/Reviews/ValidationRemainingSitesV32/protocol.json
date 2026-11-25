@@ -1,0 +1,49 @@
+{
+  "schema_version": 32,
+  "scope": "Metadata-only comparison of the two untouched V28 sites and their six exact comparison options.",
+  "site_order": [
+    "site-01",
+    "site-02"
+  ],
+  "pair_option_counts": {
+    "site-01": 4,
+    "site-02": 2
+  },
+  "frozen_group_by_site": {
+    "site-01": "group-c4f441ae55f683f915fa",
+    "site-02": "group-d75dc0544bf1a0e519ad"
+  },
+  "excluded_visual_group_id": "group-a85fa2022a25e1a72e2c",
+  "resources": {
+    "workers": 1,
+    "native_threads": 1,
+    "nice_increment": 10,
+    "gpu_used": false,
+    "worker_rss_mib": 512,
+    "available_memory_reserve_gib": 1.5,
+    "max_seconds_per_worker": 300
+  },
+  "comparison_rules": [
+    "Retain V28 exact grid, 1200 m QA margin, source compatibility, group, target and fixed control geometry.",
+    "Prefer an independently dated, accessible reference captured at or before the Sentinel-2 before image, with target and control coverage. Record actual capture dates, resolution and access limitations.",
+    "Retain all exact V28 alternatives with nominal later follow-up. Use scene cloud as a risk indicator; do not infer crop clarity from it.",
+    "Prefer a fixed control with a complete context isolated from catalogue events and any mapped disturbances. Treat absent map features and missing historical vectors as unknown class evidence.",
+    "Separate a fixed candidate for bounded evidence gathering from acquisition readiness. Metadata by itself approves neither forest class nor transition timing."
+  ],
+  "imagery_acquisition_in_scope": false,
+  "reference_preview_pixels_in_scope": false,
+  "labels_approved": 0,
+  "input_sha256": {
+    "Docs/Reviews/ValidationUnseenSitesV28/protocol.json": "db0ebb25384afb57470c8841a74eb13d050f904e0e10124d9ea4be6cd7ebff99",
+    "Docs/Reviews/ValidationUnseenSitesV28/plan/plan.json": "ba49ec9165937064d787e9941a5609511d86cfa035ab006cb01dbe597aeaf07d",
+    "Docs/Reviews/ValidationUnseenSitesV28/plan/metadata.json": "fba50b9426cc0ad24576f9f310574110b341e4ee03f414cda48a2045d9d264d0",
+    "Docs/Reviews/ValidationUnseenSitesV28/sentinel/sentinel.json": "c64dd5420a2c345cc677c5ab78bc27e68cd124bfeedb24c1cd3bdb7c35b98a1c",
+    "Docs/Reviews/ValidationUnseenSitesV28/sentinel/metadata.json": "07aab754a558c427953edd3dd0ecd4ec6921786b11e5774b2d9a29772c47cdf8",
+    "Docs/Reviews/ValidationUnseenSitesV28/reference_retry/references.json": "3707990d11a4f15116faad734d1ab44158bbb303c96067749b4ca8e52a64a75a",
+    "Docs/Reviews/ValidationUnseenSitesV28/reference_retry/metadata.json": "8da00e55ad60e32046e6006d3fb09cfbbe3e2b5fa9a3b517f3ebf23aa1e9cde1",
+    "Docs/Reviews/ValidationUnseenSitesV28/checks/final_integrity.json": "ddb7bdae254a6c2a9f9d449b72137544f1dc0e71e3cdaed04e5f1f8eaa5d8338",
+    "Docs/Reviews/ValidationSite03ReviewV31/reviews.json": "33dcdfa534f372d7e8aa11d0ad772774364c0b8b93c47478768b2abd3c8dd4c8",
+    "Docs/Reviews/ValidationSite03ReviewV31/final_integrity.json": "0d20e15aab1ed44400cb8be3d847e8cf442ace75a32e040dae2684671f76fa9d",
+    "Solutions/inventory_unseen_validation_sites.py": "075b8416e46059321870101c8049a769f37c5e7b7de44dc410adffb456b0c97c"
+  }
+}
