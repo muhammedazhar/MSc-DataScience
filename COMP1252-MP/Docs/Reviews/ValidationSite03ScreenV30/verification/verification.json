@@ -1,0 +1,23 @@
+{
+  "execution_status": "completed",
+  "protocol_sha256": "bb3f0da4e7831646673d8884528a117995c189c37de3163bbeedbd3502021776",
+  "checks": {
+    "exact_lineage": true,
+    "cumulative_targets": true,
+    "safe_archived_cache_bindings": true,
+    "numeric_qa_outcomes": true,
+    "qa_masks": true,
+    "anchor_contexts": true,
+    "three_date_control_context": true,
+    "candidate_gate": true
+  },
+  "pairs_replayed": 1,
+  "cache_bindings_replayed": 3,
+  "verified_screen_metadata_sha256": "c38f1409dc59cccee8f6fd9702c69eb9e41e7da44798ef6c2479170782ff74fd",
+  "review_candidate_pair_ids": [
+    "derived-site03-891e388f6c6aaee1a9ea"
+  ],
+  "control_qa_status": "clear_on_all_three_dates",
+  "cloud_model_executions": 0,
+  "source_jp2_window_reads": 0
+}

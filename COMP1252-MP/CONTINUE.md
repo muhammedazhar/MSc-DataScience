@@ -5,7 +5,7 @@ status, then the latest handoff before edits. Commit every completed verified
 logical change with the handoff updated and push to the SAME branch. This entry
 point works for Codex, Gemini Antigravity or another agent without chat history.
 
-Current V30 site-03 acquisition and crop quality screening:
+Completed V30 site-03 acquisition and crop quality screening:
 **`Docs/Handoffs/2026-11-25-site-03-acquisition-qa.md`**.
 Completed V29 site-03 native Level-1C preflight:
 **`Docs/Handoffs/2026-11-25-site-03-native-preflight.md`**.
@@ -197,7 +197,12 @@ possible matched control using 10 and 30 May. A 23 May SPOT-7 archive lead
 covers the crop, and a 3 June Landsat record provides coarse in-window context.
 The metadata and offline replays are archived. V29 verified the native Level-1C
 XML and 58 file pins for 10 May, 30 May and 4 June, totaling 1,562,638,464 bytes.
-The site-03 acquisition, reference access and crop QA remain pending.
+V30 acquired and verified all 174 files. The 30 May to 4 June site-03 pair
+passed automated QA with zero unusable pixels in the crop, target and both
+target contexts. The fixed control and its context passed on all three dates.
+Offline replay verified the result. Next, check all 27 input channels and
+review the target and control without model predictions, with independent
+reference access and class confirmation still pending.
 
 Use one nice +10 CPU worker, native/Torch threads 1, no GPU, unchanged
 `validate_sample.run_guarded`, 512 MiB RSS and 1.5 GiB available-system-memory

@@ -1,0 +1,43 @@
+{
+  "execution_status": "completed",
+  "protocol_sha256": "bb3f0da4e7831646673d8884528a117995c189c37de3163bbeedbd3502021776",
+  "pinned_source_files_verified": 12,
+  "implementation_pins_verified": 77,
+  "published_file_receipts_reconciled_and_stat_checked": 174,
+  "published_bytes": 1562638464,
+  "prior_source_file_stats_verified_by_each_guarded_phase": 2494,
+  "offline_replay_checks_passed": 8,
+  "review_candidate_pair_ids": [
+    "derived-site03-891e388f6c6aaee1a9ea"
+  ],
+  "control_clear_observation_count": 3,
+  "control_class_status": "unknown",
+  "validation_eligible": false,
+  "labels_approved": 0,
+  "guard_limits_verified": true,
+  "regression_tests": {
+    "passed": 394,
+    "device": "cpu",
+    "native_threads": 1,
+    "local_metadata_sha256": "c0d1bdb379ba2889e51ab951a3bac2d9b3d5f880544fc5160c06d93f018f50c9"
+  },
+  "git_index_sha256": {
+    "lineage/lineage.json": "53c2c9fd9d7138b48e1b09e037d4b1b2bf314868b0dfc185d6390599af1e16a0",
+    "lineage/metadata.json": "a0df724e3cd08bc2e188801c591e75c5c8237b0c0e04631235e58ed5390dec72",
+    "protocol.json": "bb3f0da4e7831646673d8884528a117995c189c37de3163bbeedbd3502021776",
+    "publication/2018-05-10/download.json": "62e92091d4ee1555fe4c9b2dcce9a1d0746a36e166598fd8d12cf34932658d42",
+    "publication/2018-05-10/metadata.json": "e14ff2a155b2328d8d85de4ec7e0d9b1cd18c345cb8fdf9eee21f2cde0769d9c",
+    "publication/2018-05-30/download.json": "3caf1d7277324c853f8e46bb432b617ac752e4617cc48d2faee12dbc1cd68716",
+    "publication/2018-05-30/metadata.json": "8aa04e47dee94e70d987c9254af6de7a3388602006efd5ede59bb483001d15cc",
+    "publication/2018-06-04/download.json": "dbf7e562cafdba8f6612c05c05c0f1bb2900299b0c54d89cac55075ff96c8074",
+    "publication/2018-06-04/metadata.json": "cedfa44db8339fe6f10ba695a5f14961a72ccb7f132d141bc3234bd1c63e0e68",
+    "screen/cache_evidence/6583e2b8dca6efdc1717a8d68a73971f1839e10c0b2b6a5d2d119eb005d51bed.npz": "fa0b615ac22ba0e702a1bc2726e961f8146ff8560118e27eb3958a1da5d51029",
+    "screen/cache_evidence/c610c059558c3148943d2ff4f7757cee6a2c85bf4d9cf8d1fd8cb54ab3707572.npz": "35fcfde28848b5c1c59911eed591efd6d5119d920429dbd4dfda2f433da32313",
+    "screen/cache_evidence/f4fe92b8161a31aed98a2fa2099940498433894bf5c2da490fcba3bd03c7cdb6.npz": "f62c7ab8b03731fa1ec80458d3b0bcba0effc09be8e9fbcd28b8e438ed8c40dd",
+    "screen/masks/derived-site03-891e388f6c6aaee1a9ea.tif": "268651e2bce641f9842289d30cd4a37aca862a9f77c77d4c18abca15a352f96c",
+    "screen/metadata.json": "c38f1409dc59cccee8f6fd9702c69eb9e41e7da44798ef6c2479170782ff74fd",
+    "screen/screen.json": "db6d8c02b09b7b9bd8c48679e735e3e97c85282ac6ee1b11fea1b259f0302a02",
+    "verification/metadata.json": "43dcd60ddfa546fa43f94b067507181efbc1d8b815cc2ff2e72ce8789f7c5011",
+    "verification/verification.json": "34e6dbbba75110b52f2c72bea75b5edac2879c7e680c1abf4196ad1d8946d151"
+  }
+}

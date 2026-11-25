@@ -1,0 +1,50 @@
+{
+  "schema_version": 30,
+  "execution_status": "completed",
+  "mode": "verify",
+  "protocol_sha256": "bb3f0da4e7831646673d8884528a117995c189c37de3163bbeedbd3502021776",
+  "artifact_sha256": {
+    "verification.json": "34e6dbbba75110b52f2c72bea75b5edac2879c7e680c1abf4196ad1d8946d151"
+  },
+  "labels_approved": 0,
+  "forest_model_executions": 0,
+  "visually_reviewed": false,
+  "prior_source_file_stat_count": 2494,
+  "checks": {
+    "exact_lineage": true,
+    "cumulative_targets": true,
+    "safe_archived_cache_bindings": true,
+    "numeric_qa_outcomes": true,
+    "qa_masks": true,
+    "anchor_contexts": true,
+    "three_date_control_context": true,
+    "candidate_gate": true
+  },
+  "pairs_replayed": 1,
+  "cache_bindings_replayed": 3,
+  "verified_screen_metadata_sha256": "c38f1409dc59cccee8f6fd9702c69eb9e41e7da44798ef6c2479170782ff74fd",
+  "review_candidate_pair_ids": [
+    "derived-site03-891e388f6c6aaee1a9ea"
+  ],
+  "control_qa_status": "clear_on_all_three_dates",
+  "cloud_model_executions": 0,
+  "source_jp2_window_reads": 0,
+  "resources": {
+    "logical_cpu_count": 11,
+    "machine_ram_gib": 18.0,
+    "worker_peak_rss_mib_sampled": 145.7,
+    "worker_high_water_rss_mib": 148.98,
+    "minimum_available_gib_sampled": 4.69,
+    "elapsed_seconds": 1.28,
+    "worker_limit_mib": 512,
+    "minimum_available_gib_limit": 1.5,
+    "runtime_limit_seconds": 300,
+    "workers": 1,
+    "native_thread_limit": 1,
+    "nice_increment": 10,
+    "gdal_cache_mib": 32,
+    "warp_memory_mib": 16,
+    "gpu_used": false,
+    "monitor_interval_seconds": 0.25
+  }
+}

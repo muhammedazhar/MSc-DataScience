@@ -41,4 +41,41 @@ have 335 and 231 pixels. The 256-pixel proposed control has a 400-pixel context.
 The source checks verified 174 new receipts and 2,494 prior file fingerprints.
 Lineage preparation peaked at 149.48 MiB and read zero image band windows.
 
-Crop and control QA and offline replay are pending.
+## Verified automatic screening
+
+The [screen report](../Reviews/ValidationSite03ScreenV30/screen/screen.json)
+retains `derived-site03-891e388f6c6aaee1a9ea` for separate visual review. The
+automatic screen reported zero unusable pixels in the full 4,096-pixel crop,
+the 177-pixel new-loss target, and the 335- and 231-pixel target contexts on
+both dates. Cached RGB and NDVI values were finite in both target contexts.
+
+| Control observation | Unusable in control (256 pixels) | Unusable in full context (400 pixels) |
+| --- | ---: | ---: |
+| 2018-05-10 | 0 | 0 |
+| 2018-05-30 | 0 | 0 |
+| 2018-06-04 | 0 | 0 |
+
+Cached RGB and NDVI values were finite throughout the control and its context.
+The control's class remains unknown. The automated checks covered cloud,
+cloud buffer, shadow risk, haze risk and invalid pixels under the frozen rules.
+
+The [offline replay](../Reviews/ValidationSite03ScreenV30/verification/verification.json)
+matched the exact lineage, target geometry, QA masks, numeric results, context
+checks and review shortlist using the three archived cache snapshots. Live
+screening used 33 band windows and three cloud classifier calls. Replay read
+zero original image windows and made zero cloud classifier calls. Screening
+took 9.42 s with 340.00 MiB peak sampled RSS and 4.58 GiB minimum available
+memory. Replay took 1.28 s with 148.98 MiB peak worker RSS. The
+[integrity check](../Reviews/ValidationSite03ScreenV30/final_integrity.json)
+binds the evidence archived in Git. All 394 existing tests passed under
+the CPU guard.
+
+## Remaining work
+
+Check all 27 feature channels in the fixed target and control contexts, then
+review the two target endpoints and the three control observations without
+seeing forest-model predictions. Investigate access to the independent
+reference leads from V28 before drawing a class or timing conclusion. The
+five-day span is a candidate comparison window. Visual class, validation
+eligibility and the first-visible interval remain unresolved. No label or
+forest-model output was added in V30.
