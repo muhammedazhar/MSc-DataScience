@@ -5,7 +5,7 @@ status, then the latest handoff before edits. Commit every completed verified
 logical change with the handoff updated and push to the SAME branch. This entry
 point works for Codex, Gemini Antigravity or another agent without chat history.
 
-Current V34 site-02 bounded Landsat reference review:
+Completed V34 site-02 bounded Landsat reference review:
 **`Docs/Handoffs/2026-11-25-site-02-landsat-review.md`**.
 Completed V33 site-01 bounded Landsat reference review:
 **`Docs/Handoffs/2026-11-25-site-01-landsat-review.md`**.
@@ -230,6 +230,13 @@ control inconclusive on both dates. The nominated pair remains pending
 and did not advance to native preflight. Future visual-exposure exclusions
 include `group-c4f441ae55f683f915fa`. There are no new labels or
 first-visible interval.
+
+V34 reviewed the two site-02 Landsat crops and replayed both boards byte
+for byte. Neither date resolves the target's class or the fixed control.
+The reserve remains pending before native preflight. The original V28
+three-site shortlist is visually exhausted. Use the V34 list of ten
+visual-exposure exclusions when considering new groups. There are still
+zero approved held-out labels.
 
 Use one nice +10 CPU worker, native/Torch threads 1, no GPU, unchanged
 `validate_sample.run_guarded`, 512 MiB RSS and 1.5 GiB available-system-memory

@@ -1,5 +1,8 @@
 # Site-02 bounded Landsat reference review
 
+V34 is complete. Both site-02 reference crops are inconclusive at the
+target and the fixed control. The Sentinel-2 reserve remains pending.
+
 Use `codex/curated-deforestation-pilot` and push verified checkpoints on
 the same branch. Following the site-01 disposition, advance the untouched
 V32 reserve to a small independent reference review. The
@@ -30,5 +33,23 @@ The [packet receipts](../Reviews/ValidationSite02ReferenceV34/packet/packet.json
 bind the exact source crops, masks and boards. The
 [offline replay](../Reviews/ValidationSite02ReferenceV34/packet_verification.json)
 reproduced both boards and the packet byte for byte. Peak RSS was
-144.81 MiB for preparation and 139.61 MiB for replay. Visual review is
-pending.
+144.81 MiB for preparation and 139.61 MiB for replay.
+
+## Visual disposition
+
+Two reviewers found mottled veiling and a diffuse dark streak across the
+November target. A dark patch reaches into the November control. In the
+January crop, a broad smooth dark area coincides with the target and pale
+cover obscures the control. The
+[visual review](../Reviews/ValidationSite02ReferenceV34/visual_review.md)
+and [disposition](../Reviews/ValidationSite02ReferenceV34/reviews.json)
+retain all observations and the two dates. Add
+`group-d75dc0544bf1a0e519ad` to future visual-exposure exclusions.
+
+All 394 existing tests passed. The
+[integrity check](../Reviews/ValidationSite02ReferenceV34/final_integrity.json)
+binds the indexed evidence and local previews. No native Sentinel-2
+preflight or scene transfer occurred. No held-out labels or first-visible
+interval were approved. The three groups on the original V28 shortlist
+have now been visually examined. Future candidate selection must use the
+updated exposure history and seek a clearer dated before reference.

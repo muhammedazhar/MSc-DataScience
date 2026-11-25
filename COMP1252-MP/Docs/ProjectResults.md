@@ -110,6 +110,15 @@ diffuse bright bands left the earlier forest, later opening and control
 unresolved. Site-01 stayed pending before Sentinel-2 preflight.
 [Site-01 reference review](Reviews/ValidationSite01ReferenceV33/visual_review.md)
 
+### Site-02 reserve candidate
+
+The two dated site-02 Landsat crops had diffuse veiling and weak ground
+detail at the target and the fixed control. The reserve stayed pending
+before Sentinel-2 preflight. All three V28 sites have been visually
+examined and no candidate from that shortlist has approved held-out
+labels or a new first-visible interval.
+[Site-02 reference review](Reviews/ValidationSite02ReferenceV34/visual_review.md)
+
 ## Observational case study
 
 Area B provides the strongest observation in the supplementary 2018 reviews.

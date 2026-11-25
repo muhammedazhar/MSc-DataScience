@@ -1,0 +1,145 @@
+{
+  "schema_version": 34,
+  "status": "bounded_reference_review_inconclusive",
+  "site_id": "site-02",
+  "event_id": "event-ef1031ed1843d87d64e1",
+  "group_id": "group-d75dc0544bf1a0e519ad",
+  "sentinel_pair": {
+    "v28_rank_at_site": 1,
+    "before": {
+      "date": "2017-11-16",
+      "catalogue_time_utc": "2017-11-16T08:54:42.947000Z",
+      "item_id": "S2A_36UXA_20171116_0_L1C",
+      "item_sha256": "afdff81c9471d93f804ecbd9bd25c4b9e899f403a0cc411dd5ba8c78f97a8b02",
+      "scene_id": "S2A_MSIL1C_20171116T085231_N0206_R107_T36UXA_20171116T105520",
+      "catalogue_cloud_percent": 71.0987,
+      "raw_page": "Docs/Reviews/ValidationUnseenSitesV28/sentinel/catalogue/site-02/raw/page-01.json",
+      "raw_page_sha256": "f3aef1c151af30a8e92b0df9b1982eac9bc90d4e9fdfef95495a287157fccba6"
+    },
+    "after": {
+      "date": "2017-12-06",
+      "catalogue_time_utc": "2017-12-06T08:53:34.464000Z",
+      "item_id": "S2A_36UXA_20171206_0_L1C",
+      "item_sha256": "b455babfb67adee664713f9d4b6d38224d359e5f1afe2dc4b7e2401d54bd138f",
+      "scene_id": "S2A_MSIL1C_20171206T085331_N0206_R107_T36UXA_20171206T172644",
+      "catalogue_cloud_percent": 68.0326,
+      "raw_page": "Docs/Reviews/ValidationUnseenSitesV28/sentinel/catalogue/site-02/raw/page-01.json",
+      "raw_page_sha256": "f3aef1c151af30a8e92b0df9b1982eac9bc90d4e9fdfef95495a287157fccba6"
+    },
+    "interval_days": 20,
+    "relative_orbit": 107,
+    "processing_baseline": "02.06",
+    "earlier_stable_only_options": [],
+    "later_metadata_scene_ids": [
+      "S2B_MSIL1C_20171211T085339_N0206_R107_T36UXA_20171211T104822",
+      "S2B_MSIL1C_20180110T085329_N0206_R107_T36UXA_20180110T113039"
+    ],
+    "followup_status": "retained_unselected"
+  },
+  "fixed_alternative_control": {
+    "row": 5,
+    "col": 45,
+    "width": 16,
+    "height": 16,
+    "pixels": 256,
+    "bounds": [
+      677870.0,
+      5563850.0,
+      678030.0,
+      5564010.0
+    ],
+    "crs": "EPSG:32636",
+    "context_bounds": [
+      677850.0,
+      5563830.0,
+      678050.0,
+      5564030.0
+    ],
+    "context_width": 20,
+    "context_height": 20,
+    "context_pixels": 400,
+    "context_radius_pixels": 2,
+    "catalogue_exclusion_margin_metres": 20,
+    "control_class_status": "unreviewed",
+    "pixel_qa_status": "unassessed",
+    "independent_site": false,
+    "evaluation_approved": false
+  },
+  "reviewers": 2,
+  "view_order": [
+    "landsat-plain.png",
+    "landsat-outlined.png"
+  ],
+  "view_sha256": {
+    "landsat-plain.png": "57cadee7554475c660665ad78d7a1c4d4b759b158cae65aaf6722fb745cf447a",
+    "landsat-outlined.png": "09b137f12d78135e9f5b2cb0543178556a6cfa7f3771b1ed14256e2f7d370aca"
+  },
+  "prior_manual_exposed_group_ids": [
+    "group-0d4c6841d965abf62969",
+    "group-45f0c39e787ca8622918",
+    "group-594ecdcf428fc819f662",
+    "group-646504159ec8034a1565",
+    "group-6bef49e5258e9f579324",
+    "group-96c27871459d03c08bcc",
+    "group-a177948c08d55f377549",
+    "group-a85fa2022a25e1a72e2c",
+    "group-c4f441ae55f683f915fa"
+  ],
+  "new_manual_exposed_group_ids": [
+    "group-d75dc0544bf1a0e519ad"
+  ],
+  "manual_exposed_group_ids": [
+    "group-0d4c6841d965abf62969",
+    "group-45f0c39e787ca8622918",
+    "group-594ecdcf428fc819f662",
+    "group-646504159ec8034a1565",
+    "group-6bef49e5258e9f579324",
+    "group-96c27871459d03c08bcc",
+    "group-a177948c08d55f377549",
+    "group-a85fa2022a25e1a72e2c",
+    "group-c4f441ae55f683f915fa",
+    "group-d75dc0544bf1a0e519ad"
+  ],
+  "observations": [
+    {
+      "date": "2017-11-16",
+      "scene_id": "LC08_L1TP_178025_20171116_20200902_02_T1",
+      "target_visibility": "inconclusive_mottled_veiling",
+      "target_observation": "Diffuse pale veiling and an oblique dark streak leave weak ground detail. Earlier forest and any existing opening remain uncertain.",
+      "control_visibility": "inconclusive_mottled_veiling",
+      "control_observation": "A dark patch enters the northeast of the pale mottled square. The source and the class of the whole square and context are unresolved."
+    },
+    {
+      "date": "2018-01-03",
+      "scene_id": "LC08_L1GT_178025_20180103_20200902_02_T2",
+      "target_visibility": "inconclusive_diffuse_dark_area",
+      "target_observation": "The target lies within a broad smooth dark area without a distinguishable localized opening.",
+      "control_visibility": "inconclusive_pale_cover",
+      "control_observation": "Pale cover leaves minimal canopy detail across the square and context."
+    }
+  ],
+  "reference_limits": [
+    "The PNGs are pan-sharpened RGB displays. Cloud, shadow, snow and illumination can produce ambiguous patterns.",
+    "The Tier 2 later crop follows the 6 December endpoint by 28 days and carries geometric uncertainty.",
+    "Earlier forest, later clearing and the full control class are unresolved."
+  ],
+  "earlier_forest_supported": null,
+  "later_opening_supported": null,
+  "stable_control_supported": null,
+  "first_visible_deforestation_interval": null,
+  "labels_approved": 0,
+  "validation_eligible": false,
+  "native_sentinel_preflight": "pending_inconclusive_reference_evidence",
+  "full_scene_acquisition": false,
+  "sentinel_pixel_reads": 0,
+  "forest_model_executions": 0,
+  "all_v28_shortlisted_groups_visually_exposed": true,
+  "evidence_sha256": {
+    "protocol.json": "054ae28c612d5c2f9a6717ddc62ca587af2d69159168f9dec39f539cd5507ba6",
+    "late-access.json": "0795d5c96da3a1b8d655c69cbfac8fc77dc43623ca7aee318a700e0686bd8cfa",
+    "packet/packet.json": "5fd0e45ef9d4d8b06809bb00d8ff82aba919255f08ecdd2c0d06198497f8baae",
+    "packet/metadata.json": "25e092af293111c2c5c0ba98cbce8f389549e593ef7bb39c3d1a0c0fb9b55f1c",
+    "packet_verification.json": "bdcfe2e9c217fb812409ff9dabf9aef4cc8b3cf7db46a9d1f485e859038c1954",
+    "visual_review.md": "65005550e3f9eb0401970b8b4fc500675a8cd590945820ae503fbc8513889449"
+  }
+}

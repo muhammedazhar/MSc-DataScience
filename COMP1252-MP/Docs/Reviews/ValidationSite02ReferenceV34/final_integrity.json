@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "schema_version": 34,
+  "site_id": "site-02",
+  "locked_landsat_previews_verified": 2,
+  "reference_preview_bytes": 6496,
+  "boards_replayed_byte_identical": 2,
+  "tests_passed": 394,
+  "test_run_metadata_sha256": "858af372ef66821acb4ae2562dff45e2388cc17f409582565bc0e7284f3ffcff",
+  "guard_limits_verified": true,
+  "pinned_local_catalogue_sha256": "06a1090c8451d670929163ff7be067d63454cb1893a3e8cbee97519fbb69cbce",
+  "review_status": "bounded_reference_review_inconclusive",
+  "native_sentinel_preflight": "pending_inconclusive_reference_evidence",
+  "all_v28_shortlisted_groups_visually_exposed": true,
+  "full_scene_acquisition": false,
+  "labels_approved": 0,
+  "git_index_sha256": {
+    "late-access.json": "0795d5c96da3a1b8d655c69cbfac8fc77dc43623ca7aee318a700e0686bd8cfa",
+    "packet/metadata.json": "25e092af293111c2c5c0ba98cbce8f389549e593ef7bb39c3d1a0c0fb9b55f1c",
+    "packet/packet.json": "5fd0e45ef9d4d8b06809bb00d8ff82aba919255f08ecdd2c0d06198497f8baae",
+    "packet_verification.json": "bdcfe2e9c217fb812409ff9dabf9aef4cc8b3cf7db46a9d1f485e859038c1954",
+    "protocol.json": "054ae28c612d5c2f9a6717ddc62ca587af2d69159168f9dec39f539cd5507ba6",
+    "reviews.json": "580d0aeeff5d146e740c12d6790a4039bb8bd0774bc8c2f125d76debbd9a85ac",
+    "visual_review.md": "65005550e3f9eb0401970b8b4fc500675a8cd590945820ae503fbc8513889449"
+  }
+}
