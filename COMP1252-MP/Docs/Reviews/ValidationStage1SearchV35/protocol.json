@@ -1,0 +1,75 @@
+{
+  "schema_version": 35,
+  "scope": "Find a viable new held-out case using small independent dated references.",
+  "maximum_eligible_sites": 29,
+  "group_count": 14,
+  "manual_exposed_groups_excluded": 10,
+  "resources": {
+    "workers": 1,
+    "native_threads": 1,
+    "nice_increment": 10,
+    "gpu_used": false,
+    "worker_rss_mib": 512,
+    "available_memory_reserve_gib": 1.5,
+    "max_seconds_per_worker": 300
+  },
+  "reference_dates": "From 30 days before the annotation image through 45 days after. Compare actual capture dates.",
+  "reference_rank": [
+    "Cover the exact fixed crop and have both dated before and later previews.",
+    "Prefer lower maximum and before scene cloud, then Tier 1, interval and stable identifiers.",
+    "Compare newest Sentinel-2 metadata for up to three distinct groups at a time.",
+    "Freeze promising raster IDs and control geometry before opening each two-date preview.",
+    "Local visibility, earlier forest, later clearing and whole-control stability guide advancement."
+  ],
+  "frame": "Retain previous results and full frozen split and QA margins. Native Sentinel-2 source preflight belongs to stage 2.",
+  "input_sha256": {
+    "v28_protocol": {
+      "path": "Docs/Reviews/ValidationUnseenSitesV28/protocol.json",
+      "sha256": "db0ebb25384afb57470c8841a74eb13d050f904e0e10124d9ea4be6cd7ebff99"
+    },
+    "v28_plan": {
+      "path": "Docs/Reviews/ValidationUnseenSitesV28/plan/plan.json",
+      "sha256": "ba49ec9165937064d787e9941a5609511d86cfa035ab006cb01dbe597aeaf07d"
+    },
+    "v28_plan_metadata": {
+      "path": "Docs/Reviews/ValidationUnseenSitesV28/plan/metadata.json",
+      "sha256": "fba50b9426cc0ad24576f9f310574110b341e4ee03f414cda48a2045d9d264d0"
+    },
+    "v28_integrity": {
+      "path": "Docs/Reviews/ValidationUnseenSitesV28/checks/final_integrity.json",
+      "sha256": "ddb7bdae254a6c2a9f9d449b72137544f1dc0e71e3cdaed04e5f1f8eaa5d8338"
+    },
+    "exposure_history": {
+      "path": "Docs/Reviews/ValidationSite02ReferenceV34/reviews.json",
+      "sha256": "580d0aeeff5d146e740c12d6790a4039bb8bd0774bc8c2f125d76debbd9a85ac"
+    },
+    "v34_integrity": {
+      "path": "Docs/Reviews/ValidationSite02ReferenceV34/final_integrity.json",
+      "sha256": "6ba6a923bca8862ffff2f13ce5c4fc759f8a8607ff43160079f53d7d1f50ff51"
+    },
+    "implementation": {
+      "path": "Solutions/run_stage1_site_search.py",
+      "sha256": "bee8aa12aa340de064f8280e98c78d937822c778bf26f956ab885383f4a2b2b3"
+    },
+    "roster_implementation": {
+      "path": "Solutions/plan_stage1_site_roster.py",
+      "sha256": "5406a26017afc88a1dd10f3fab2a2cdc43794f63aef33a522834c4e75f1aa7d7"
+    },
+    "reference_implementation": {
+      "path": "Solutions/search_stage1_landsat.py",
+      "sha256": "a4f242e675bd655b9a7f8712e6958f8aacceb5d79a8bd534fd743a1a5e4c3a52"
+    },
+    "frozen_catalogue_worker": {
+      "path": "Solutions/inventory_unseen_validation_sites.py",
+      "sha256": "075b8416e46059321870101c8049a769f37c5e7b7de44dc410adffb456b0c97c"
+    },
+    "frozen_reference_worker": {
+      "path": "Solutions/inventory_unseen_validation_references.py",
+      "sha256": "86e4fa87a705cfa509f51ee63d31202be4d626ff133e81863cd596c14b8156d4"
+    },
+    "resource_guard": {
+      "path": "Solutions/validate_sample.py",
+      "sha256": "475f641ed582af37eedc2ee9e94065e280202db08eb381441e1403c3eb001fba"
+    }
+  }
+}
