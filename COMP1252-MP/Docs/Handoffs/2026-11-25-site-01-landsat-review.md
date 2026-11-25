@@ -22,4 +22,9 @@ can only corroborate the later appearance. The Sentinel-2 after date
 remains 6 February. Support from both Landsat views is required before
 the conditional native Sentinel-2 metadata preflight.
 
-The guarded downloads, offline replay and visual review are pending.
+The guarded worker retrieved the 12 January and 20 February crops in
+3,067 and 3,850 bytes. The [packet receipts](../Reviews/ValidationSite01ReferenceV33/packet/packet.json)
+bind both scene-locked PNGs, the exact geometry and the review boards.
+The [offline replay](../Reviews/ValidationSite01ReferenceV33/packet_verification.json)
+reproduced the boards and packet byte for byte. Peak RSS was 131.81 MiB
+for preparation and 130.41 MiB for replay. The visual review is pending.

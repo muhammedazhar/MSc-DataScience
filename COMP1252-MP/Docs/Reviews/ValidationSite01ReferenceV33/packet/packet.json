@@ -1,0 +1,128 @@
+{
+  "schema_version": 33,
+  "site_id": "site-01",
+  "group_id": "group-c4f441ae55f683f915fa",
+  "event_id": "event-20011c5fc8f074541ee2",
+  "grid": {
+    "crs": "EPSG:32636",
+    "transform": [
+      10.0,
+      0.0,
+      699740.0,
+      0.0,
+      -10.0,
+      5499720.0
+    ],
+    "width": 64,
+    "height": 64,
+    "bounds": [
+      699740.0,
+      5499080.0,
+      700380.0,
+      5499720.0
+    ]
+  },
+  "control": {
+    "row": 44,
+    "col": 41,
+    "width": 16,
+    "height": 16,
+    "pixels": 256,
+    "bounds": [
+      700150.0,
+      5499120.0,
+      700310.0,
+      5499280.0
+    ],
+    "crs": "EPSG:32636",
+    "context_bounds": [
+      700130.0,
+      5499100.0,
+      700330.0,
+      5499300.0
+    ],
+    "context_width": 20,
+    "context_height": 20,
+    "context_pixels": 400,
+    "context_radius_pixels": 2,
+    "catalogue_exclusion_margin_metres": 20,
+    "control_class_status": "unreviewed",
+    "pixel_qa_status": "unassessed",
+    "independent_site": false,
+    "evaluation_approved": false
+  },
+  "sentinel_pair": {
+    "v28_rank_at_site": 1,
+    "before": {
+      "date": "2018-01-12",
+      "catalogue_time_utc": "2018-01-12T08:43:15.461000Z",
+      "item_id": "S2A_36UXA_20180112_0_L1C",
+      "item_sha256": "bb62b3f761059c4457f7fdbd3028b4390979f0f4ed148d95c6d046fddb167832",
+      "scene_id": "S2A_MSIL1C_20180112T084321_N0206_R064_T36UXA_20180112T111338",
+      "catalogue_cloud_percent": 59.4713,
+      "raw_page": "Docs/Reviews/ValidationUnseenSitesV28/sentinel/catalogue/site-01/raw/page-02.json",
+      "raw_page_sha256": "5149a3ca409d94ab1e28779848e5e09a5ad71dc2e653c9032ea3b47877737d4e"
+    },
+    "after": {
+      "date": "2018-02-06",
+      "catalogue_time_utc": "2018-02-06T08:42:29.401000Z",
+      "item_id": "S2B_36UXA_20180206_0_L1C",
+      "item_sha256": "bff2a247db959e5e73637895d223d347a52031cf430e93b2cd14b3caf541f05e",
+      "scene_id": "S2B_MSIL1C_20180206T084129_N0206_R064_T36UXA_20180206T122659",
+      "catalogue_cloud_percent": 75.2523,
+      "raw_page": "Docs/Reviews/ValidationUnseenSitesV28/sentinel/catalogue/site-01/raw/page-01.json",
+      "raw_page_sha256": "8826ac1cbe96d178f438e180cfa6649b0fe3219f7cd1deb5f0445132b7e0d782"
+    },
+    "interval_days": 25,
+    "relative_orbit": 64,
+    "processing_baseline": "02.06",
+    "earlier_stable_only_options": [],
+    "later_metadata_scene_ids": [
+      "S2A_MSIL1C_20180221T083951_N0206_R064_T36UXA_20180221T122952",
+      "S2B_MSIL1C_20180308T083759_N0206_R064_T36UXA_20180308T104832",
+      "S2A_MSIL1C_20180313T083731_N0206_R064_T36UXA_20180313T105413"
+    ],
+    "followup_status": "nominated_for_bounded_reference_review"
+  },
+  "source_preview_size_pixels": [
+    43,
+    43
+  ],
+  "display_resampling": "nearest",
+  "mask_sha256": {
+    "earlier_annotation": "452b9bae08ad48864f0696df9e2819aae052a8cee26eb83ad27d65de95858a45",
+    "target": "2f984c2be534dd9c2490aef3ea1fdd19dad66ce91fd21ee88ad3c0f1c6f390ed",
+    "control_context": "37d917f24854ad4082afb1050d49cbde98df59b50c20fcb02c584faa5254364a",
+    "control": "de02a93d47c43bc6ba41800af780101869ef278e607fe06b3db4ff5c21addfe0"
+  },
+  "receipts": [
+    {
+      "scene_id": "LC08_L1TP_177026_20180112_20200902_02_T1",
+      "capture_time_utc": "2018-01-12T08:24:56.546232Z",
+      "source_url": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer/exportImage?bbox=699740%2C5499080%2C700380%2C5499720&bboxSR=32636&imageSR=32636&size=43%2C43&format=png24&interpolation=RSP_NearestNeighbor&mosaicRule=%7B%22mosaicMethod%22%3A%22esriMosaicLockRaster%22%2C%22lockRasterIds%22%3A%5B1647619%5D%2C%22mosaicOperation%22%3A%22MT_FIRST%22%7D&f=image",
+      "usgs_item_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l1/items/LC08_L1TP_177026_20180112_20200902_02_T1",
+      "scene_cloud_percent": 56.25,
+      "filename": "landsat-2018-01-12.png",
+      "bytes": 3067,
+      "sha256": "77289b9265242b2f8e497b926d5aee65ffcd87211844cbf673238faad1e4adbd"
+    },
+    {
+      "scene_id": "LC08_L1TP_178025_20180220_20200902_02_T1",
+      "capture_time_utc": "2018-02-20T08:30:25.360775Z",
+      "source_url": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer/exportImage?bbox=699740%2C5499080%2C700380%2C5499720&bboxSR=32636&imageSR=32636&size=43%2C43&format=png24&interpolation=RSP_NearestNeighbor&mosaicRule=%7B%22mosaicMethod%22%3A%22esriMosaicLockRaster%22%2C%22lockRasterIds%22%3A%5B1662897%5D%2C%22mosaicOperation%22%3A%22MT_FIRST%22%7D&f=image",
+      "usgs_item_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l1/items/LC08_L1TP_178025_20180220_20200902_02_T1",
+      "scene_cloud_percent": 71.96,
+      "filename": "landsat-2018-02-20.png",
+      "bytes": 3850,
+      "sha256": "96b42238e1eeec13439bed1d0417d345d438c37cacd10e60969a00f058db6d67"
+    }
+  ],
+  "view_order": [
+    "landsat-plain.png",
+    "landsat-outlined.png"
+  ],
+  "boards_sha256": {
+    "landsat-plain.png": "20976acceceaaca0d9d3a82f5105b22a23c55378f1ad249fdbacb5585eacf776",
+    "landsat-outlined.png": "d53150da991fa9f22d2e18891044d276895ea14510b247b54d5c24337c8036c7"
+  }
+}
