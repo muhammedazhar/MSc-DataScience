@@ -1,0 +1,15 @@
+{
+  "execution_status": "completed",
+  "audit_metadata_sha256": "835890d1366552e18d6f6934f846e7d7c4112d8d9d2d8f18806fef370524e97b",
+  "verified_artifact_sha256": {
+    "audit.json": "2ad6862ac9966ec48234beb7aa31b0339f5f9fb92a6fe04cf3f059881dddbc9f",
+    "control-baseline-features.npz": "dc68f0b2c07b66a922e95c43cd387cc9eb4069426cc0787bd98df4788e279300",
+    "target-endpoint-features.npz": "629d9b13e643d5d4efcd4b56edc3a8c2909771bde7fd441e2b9238f27101c01b"
+  },
+  "tensors_replayed": 2,
+  "feature_channels_and_values": "passed",
+  "frozen_roi_and_context_completeness": "passed",
+  "target_inputs_complete": true,
+  "control_inputs_complete": true,
+  "feature_band_window_requests": 0
+}

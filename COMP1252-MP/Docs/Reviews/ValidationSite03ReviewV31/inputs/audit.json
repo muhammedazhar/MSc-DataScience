@@ -1,0 +1,360 @@
+{
+  "schema_version": 31,
+  "pair_id": "derived-site03-891e388f6c6aaee1a9ea",
+  "grid": {
+    "crs": "EPSG:32636",
+    "transform": [
+      10.0,
+      0.0,
+      621400.0,
+      0.0,
+      -10.0,
+      5562300.0
+    ],
+    "width": 64,
+    "height": 64,
+    "bounds": [
+      621400.0,
+      5561660.0,
+      622040.0,
+      5562300.0
+    ]
+  },
+  "control": {
+    "row": 2,
+    "col": 2,
+    "width": 16,
+    "height": 16,
+    "pixels": 256,
+    "bounds": [
+      621420.0,
+      5562120.0,
+      621580.0,
+      5562280.0
+    ],
+    "crs": "EPSG:32636",
+    "context_bounds": [
+      621400.0,
+      5562100.0,
+      621600.0,
+      5562300.0
+    ],
+    "context_width": 20,
+    "context_height": 20,
+    "context_pixels": 400,
+    "context_radius_pixels": 2,
+    "catalogue_exclusion_margin_metres": 20,
+    "control_class_status": "unreviewed",
+    "pixel_qa_status": "unassessed",
+    "independent_site": false,
+    "evaluation_approved": false
+  },
+  "architecture": {
+    "spatial_receptive_field_pixels": 5,
+    "context_radius_pixels": 2,
+    "parameter_count": 2545,
+    "global_context_operations": false,
+    "factory_sha256": "259f367ddc613b0095a93ddcf7b9ae8f0a14553fa4fc5fc28665c76ae6059995"
+  },
+  "channels": [
+    "pre_B02",
+    "pre_B03",
+    "pre_B04",
+    "pre_B08",
+    "pre_B8A",
+    "pre_B11",
+    "pre_B12",
+    "pre_NDVI",
+    "pre_NDMI",
+    "post_B02",
+    "post_B03",
+    "post_B04",
+    "post_B08",
+    "post_B8A",
+    "post_B11",
+    "post_B12",
+    "post_NDVI",
+    "post_NDMI",
+    "difference_B02",
+    "difference_B03",
+    "difference_B04",
+    "difference_B08",
+    "difference_B8A",
+    "difference_B11",
+    "difference_B12",
+    "difference_NDVI",
+    "difference_NDMI"
+  ],
+  "pairs": {
+    "control_baseline": {
+      "pre_date": "2018-05-10",
+      "post_date": "2018-05-30",
+      "pre_scene_id": "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+      "post_scene_id": "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+      "feature_values_sha256": "bb6b75fee2c59cbf054799865ad04bd2e1492717214497c2675993f00b8456e6",
+      "feature_valid_sha256": "3431383721510cf1c211de027cf958c183e16db5fabb6b230eb284c85e196aa9",
+      "finite_crop_pixels": 4096,
+      "contexts": {
+        "control": {
+          "roi_pixels": 256,
+          "context_pixels": 400,
+          "full_context_inside_grid": true,
+          "dates": {
+            "pre": {
+              "roi_unusable_pixels": 0,
+              "context_unusable_pixels": 0,
+              "context_components": {
+                "cloud": 0,
+                "cloud_buffer": 0,
+                "shadow_risk": 0,
+                "haze_risk": 0,
+                "invalid": 0
+              }
+            },
+            "post": {
+              "roi_unusable_pixels": 0,
+              "context_unusable_pixels": 0,
+              "context_components": {
+                "cloud": 0,
+                "cloud_buffer": 0,
+                "shadow_risk": 0,
+                "haze_risk": 0,
+                "invalid": 0
+              }
+            }
+          },
+          "invalid_or_nonfinite_context_pixels": 0,
+          "context_clear": true,
+          "nonfinite_by_channel": {
+            "pre_B02": 0,
+            "pre_B03": 0,
+            "pre_B04": 0,
+            "pre_B08": 0,
+            "pre_B8A": 0,
+            "pre_B11": 0,
+            "pre_B12": 0,
+            "pre_NDVI": 0,
+            "pre_NDMI": 0,
+            "post_B02": 0,
+            "post_B03": 0,
+            "post_B04": 0,
+            "post_B08": 0,
+            "post_B8A": 0,
+            "post_B11": 0,
+            "post_B12": 0,
+            "post_NDVI": 0,
+            "post_NDMI": 0,
+            "difference_B02": 0,
+            "difference_B03": 0,
+            "difference_B04": 0,
+            "difference_B08": 0,
+            "difference_B8A": 0,
+            "difference_B11": 0,
+            "difference_B12": 0,
+            "difference_NDVI": 0,
+            "difference_NDMI": 0
+          }
+        }
+      }
+    },
+    "target_endpoints": {
+      "pre_date": "2018-05-30",
+      "post_date": "2018-06-04",
+      "pre_scene_id": "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+      "post_scene_id": "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147",
+      "feature_values_sha256": "c327933541a2fb0dda0713f95b75bbf5179ab66dcc2eaa9754e941f81fcb73d1",
+      "feature_valid_sha256": "3431383721510cf1c211de027cf958c183e16db5fabb6b230eb284c85e196aa9",
+      "finite_crop_pixels": 4096,
+      "contexts": {
+        "target": {
+          "roi_pixels": 177,
+          "context_pixels": 335,
+          "full_context_inside_grid": true,
+          "dates": {
+            "pre": {
+              "roi_unusable_pixels": 0,
+              "context_unusable_pixels": 0,
+              "context_components": {
+                "cloud": 0,
+                "cloud_buffer": 0,
+                "shadow_risk": 0,
+                "haze_risk": 0,
+                "invalid": 0
+              }
+            },
+            "post": {
+              "roi_unusable_pixels": 0,
+              "context_unusable_pixels": 0,
+              "context_components": {
+                "cloud": 0,
+                "cloud_buffer": 0,
+                "shadow_risk": 0,
+                "haze_risk": 0,
+                "invalid": 0
+              }
+            }
+          },
+          "invalid_or_nonfinite_context_pixels": 0,
+          "context_clear": true,
+          "nonfinite_by_channel": {
+            "pre_B02": 0,
+            "pre_B03": 0,
+            "pre_B04": 0,
+            "pre_B08": 0,
+            "pre_B8A": 0,
+            "pre_B11": 0,
+            "pre_B12": 0,
+            "pre_NDVI": 0,
+            "pre_NDMI": 0,
+            "post_B02": 0,
+            "post_B03": 0,
+            "post_B04": 0,
+            "post_B08": 0,
+            "post_B8A": 0,
+            "post_B11": 0,
+            "post_B12": 0,
+            "post_NDVI": 0,
+            "post_NDMI": 0,
+            "difference_B02": 0,
+            "difference_B03": 0,
+            "difference_B04": 0,
+            "difference_B08": 0,
+            "difference_B8A": 0,
+            "difference_B11": 0,
+            "difference_B12": 0,
+            "difference_NDVI": 0,
+            "difference_NDMI": 0
+          }
+        },
+        "eroded_interior": {
+          "roi_pixels": 115,
+          "context_pixels": 231,
+          "full_context_inside_grid": true,
+          "dates": {
+            "pre": {
+              "roi_unusable_pixels": 0,
+              "context_unusable_pixels": 0,
+              "context_components": {
+                "cloud": 0,
+                "cloud_buffer": 0,
+                "shadow_risk": 0,
+                "haze_risk": 0,
+                "invalid": 0
+              }
+            },
+            "post": {
+              "roi_unusable_pixels": 0,
+              "context_unusable_pixels": 0,
+              "context_components": {
+                "cloud": 0,
+                "cloud_buffer": 0,
+                "shadow_risk": 0,
+                "haze_risk": 0,
+                "invalid": 0
+              }
+            }
+          },
+          "invalid_or_nonfinite_context_pixels": 0,
+          "context_clear": true,
+          "nonfinite_by_channel": {
+            "pre_B02": 0,
+            "pre_B03": 0,
+            "pre_B04": 0,
+            "pre_B08": 0,
+            "pre_B8A": 0,
+            "pre_B11": 0,
+            "pre_B12": 0,
+            "pre_NDVI": 0,
+            "pre_NDMI": 0,
+            "post_B02": 0,
+            "post_B03": 0,
+            "post_B04": 0,
+            "post_B08": 0,
+            "post_B8A": 0,
+            "post_B11": 0,
+            "post_B12": 0,
+            "post_NDVI": 0,
+            "post_NDMI": 0,
+            "difference_B02": 0,
+            "difference_B03": 0,
+            "difference_B04": 0,
+            "difference_B08": 0,
+            "difference_B8A": 0,
+            "difference_B11": 0,
+            "difference_B12": 0,
+            "difference_NDVI": 0,
+            "difference_NDMI": 0
+          }
+        },
+        "control": {
+          "roi_pixels": 256,
+          "context_pixels": 400,
+          "full_context_inside_grid": true,
+          "dates": {
+            "pre": {
+              "roi_unusable_pixels": 0,
+              "context_unusable_pixels": 0,
+              "context_components": {
+                "cloud": 0,
+                "cloud_buffer": 0,
+                "shadow_risk": 0,
+                "haze_risk": 0,
+                "invalid": 0
+              }
+            },
+            "post": {
+              "roi_unusable_pixels": 0,
+              "context_unusable_pixels": 0,
+              "context_components": {
+                "cloud": 0,
+                "cloud_buffer": 0,
+                "shadow_risk": 0,
+                "haze_risk": 0,
+                "invalid": 0
+              }
+            }
+          },
+          "invalid_or_nonfinite_context_pixels": 0,
+          "context_clear": true,
+          "nonfinite_by_channel": {
+            "pre_B02": 0,
+            "pre_B03": 0,
+            "pre_B04": 0,
+            "pre_B08": 0,
+            "pre_B8A": 0,
+            "pre_B11": 0,
+            "pre_B12": 0,
+            "pre_NDVI": 0,
+            "pre_NDMI": 0,
+            "post_B02": 0,
+            "post_B03": 0,
+            "post_B04": 0,
+            "post_B08": 0,
+            "post_B8A": 0,
+            "post_B11": 0,
+            "post_B12": 0,
+            "post_NDVI": 0,
+            "post_NDMI": 0,
+            "difference_B02": 0,
+            "difference_B03": 0,
+            "difference_B04": 0,
+            "difference_B08": 0,
+            "difference_B8A": 0,
+            "difference_B11": 0,
+            "difference_B12": 0,
+            "difference_NDVI": 0,
+            "difference_NDMI": 0
+          }
+        }
+      }
+    }
+  },
+  "shared_observation_valid_pixels_compared": 4096,
+  "all_27_channels_checked": true,
+  "target_inputs_complete": true,
+  "control_inputs_complete": true,
+  "control_class_status": "unknown",
+  "labels_approved": 0,
+  "validation_eligible": false,
+  "v30_final_integrity_sha256": "df49d8214a05601fcc74582595e7135e0a18ad70db07a4c8225c227d25325d2e"
+}

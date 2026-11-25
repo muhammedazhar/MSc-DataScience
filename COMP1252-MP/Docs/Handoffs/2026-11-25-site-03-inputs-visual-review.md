@@ -21,4 +21,17 @@ control to remain consistent with forest across all three observations.
 Investigate traceable dated reference access from V28. Preserve class
 uncertainty and record visual exposure separately from validation status.
 
-Feature processing, visual inspection and the reference disposition are pending.
+## Verified inputs and packet
+
+The [feature audit](../Reviews/ValidationSite03ReviewV31/inputs/audit.json)
+found all 27 channels finite on both target contexts and the control context
+on its two pairs. The [replay](../Reviews/ValidationSite03ReviewV31/input_verification/verification.json)
+matched both tensors and all context checks. Feature extraction used 28
+bounded band windows and peaked at 188.45 MiB. Its replay used zero original
+band windows and peaked at 152.41 MiB.
+
+The [packet](../Reviews/ValidationSite03ReviewV31/packet/packet.json) and its
+[replay](../Reviews/ValidationSite03ReviewV31/packet_verification/metadata.json)
+bind all six boards and their V30 archive evidence. Packet preparation and
+byte-identical replay used no original band windows and peaked at 146.50
+and 145.12 MiB. Visual inspection and reference disposition are pending.

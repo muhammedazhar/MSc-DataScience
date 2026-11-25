@@ -1,0 +1,37 @@
+{
+  "schema_version": 31,
+  "protocol_sha256": "71cf5962241e20822873531023caae61dcba7992fdb500033ad16744e99a8251",
+  "execution_status": "completed",
+  "mode": "verify",
+  "source_jp2_reads": 0,
+  "model_executions": 0,
+  "labels_approved": 0,
+  "verified_artifact_sha256": {
+    "control-ndvi.png": "938c9fc4e1869ebc7db8893f7d09178c4a2df440e9519cd1370d97e340b75013",
+    "control-rgb-outlined.png": "1624edd19ed9d87e782ad57a654c1ec1d6c74ca52359e57e9b360e967c91dde0",
+    "control-rgb-plain.png": "71ac8fb13811118a649e36dda4cc63d1dc357e1c2cfa2541da777235b66063e9",
+    "packet.json": "9604878b170bdab530bf98c06727ba25d0777e1d969a3599784320a6089b5678",
+    "target-ndvi.png": "78ef34ba27104138ed1bd051551bf4681ce4642ca9cbab551251834470c03d17",
+    "target-rgb-outlined.png": "ec39acc7469fe4feb3fddb3c930ccc3effa06a852b6407bd2fd7e78aaccaf9be",
+    "target-rgb-plain.png": "70c5d25b0ad5c155499a78702bacf85ff25079ae07bf872b27865d7f893de68e"
+  },
+  "verified_packet_metadata_sha256": "ec5b2e427d4cccbd8095c82811faeef3d1e6d524675d1c3aa6247116011eab6c",
+  "resources": {
+    "logical_cpu_count": 11,
+    "machine_ram_gib": 18.0,
+    "worker_peak_rss_mib_sampled": 143.0,
+    "worker_high_water_rss_mib": 145.12,
+    "minimum_available_gib_sampled": 4.41,
+    "elapsed_seconds": 1.02,
+    "worker_limit_mib": 512,
+    "minimum_available_gib_limit": 1.5,
+    "runtime_limit_seconds": 300,
+    "workers": 1,
+    "native_thread_limit": 1,
+    "nice_increment": 10,
+    "gdal_cache_mib": 16,
+    "warp_memory_mib": 0,
+    "gpu_used": false,
+    "monitor_interval_seconds": 0.25
+  }
+}
