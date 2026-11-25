@@ -5,8 +5,9 @@ status, then the latest handoff before edits. Commit every completed verified
 logical change with the handoff updated and push to the SAME branch. This entry
 point works for Codex, Gemini Antigravity or another agent without chat history.
 
-Current V27 Ukraine acquisition, screening and results closeout:
+Completed V27 Ukraine acquisition, screening and results closeout:
 **`Docs/Handoffs/2026-11-24-2019-validation-closeout.md`**.
+Read **`Docs/ProjectResults.md`** for the verified study results and limits.
 Completed bounding-box Sentinel-2 downloader:
 **`Docs/Handoffs/2026-11-24-bounding-box-downloader.md`**.
 Completed V26 2019 Sentinel-2 native metadata preflight:
@@ -173,8 +174,16 @@ V26 verified native L1C XML and all 58 required file listings for each of the
 four candidates. All crops and QA margins are covered. The listed total is
 2,208,628,047 bytes. The guarded offline recheck and replay passed. The native
 and catalogue sensing timestamps are preserved separately, with all exact
-scene identities and UTC dates in agreement. A future bounded acquisition
-phase should pin its exact roster and recheck disk before any imagery transfer.
+scene identities and UTC dates in agreement. V27 used those manifests for
+bounded acquisition.
+
+V27 downloaded the four verified scenes with `Solutions/download.py` and
+published all 232 files. Frozen QA excluded three prior crops for cloud or
+its buffer. The 3 March crop had suspected haze over the target context and
+failed the review gate. All four QA masks and all eight cache bindings replayed.
+There are zero approved held-out labels and no new timing interval. The 394-test
+suite and independent frozen training verification passed. Use the final report
+and closeout handoff for the supported research conclusions.
 
 Use one nice +10 CPU worker, native/Torch threads 1, no GPU, unchanged
 `validate_sample.run_guarded`, 512 MiB RSS and 1.5 GiB available-system-memory

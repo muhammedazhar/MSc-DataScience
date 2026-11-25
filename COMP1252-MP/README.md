@@ -3,6 +3,9 @@
 For continuation with Codex, Gemini Antigravity or another coding agent, start
 with [CONTINUE.md](./CONTINUE.md) on `codex/curated-deforestation-pilot`.
 
+The [project results report](./Docs/ProjectResults.md) summarizes the verified
+training diagnostic, held-out screening and provisional Area B timing result.
+
 Read thee [Contribution Guidelines](./Docs/Guides/Contributions.md) to know how to contribute to the project. To run this project onto your local machine, go to the [Environment Setup](./Docs/Guides/EnvironmentSetup.md) page to setup the environment for the project.
 
 The [single-sample validation guide](./Docs/Guides/SingleSampleValidation.md)

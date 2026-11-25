@@ -74,6 +74,13 @@ the original 13-case fit and the final checkpoint at its frozen threshold.
 [Tests](../Reviews/Validation2019ScreenV27/checks/test_run/metadata.json) ·
 [Training verification](../Reviews/Validation2019ScreenV27/checks/training_verification/report.md).
 
-Both 2019 first-visible intervals and held-out accuracy remain unresolved.
-There are zero approved validation labels. The project results report is
-the remaining closeout artifact.
+## Project results
+
+The [project results report](../ProjectResults.md) records the reproducible
+pipeline, verified training fit, held-out screening outcomes and the Area B
+case study. The report supports the provisional lower-opening expansion
+interval (6 July, 31 July] 2018. Both 2019 first-visible intervals and held-out
+accuracy remain unresolved. The study produced zero approved validation
+labels. The [integrity receipt](../Reviews/Validation2019ScreenV27/checks/final_integrity.json)
+binds all closeout checks. Acquisition, screening, replay and reporting are
+complete for this roster.
