@@ -1,0 +1,3897 @@
+{
+  "schema_version": 28,
+  "protocol_sha256": "ff187a64c82cd47012ba7ce9b317ab328c5f9962e4f94570607fa88ef663479a",
+  "sites": [
+    {
+      "site_id": "site-17",
+      "query": {
+        "url": "https://earth-search.aws.element84.com/v1/search",
+        "collection": "sentinel-2-l1c",
+        "page_limit": 50,
+        "maximum_pages": 4,
+        "maximum_response_bytes": 2097152,
+        "timeout_seconds": 12,
+        "stac_datetime": "2018-03-23T00:00:00Z/2018-06-06T23:59:59.999999Z"
+      },
+      "limits": {
+        "crs": "EPSG:32636",
+        "core_union_bounds": [
+          607360.0,
+          5556400.0,
+          608000.0,
+          5557040.0
+        ],
+        "qa_context_union_bounds": [
+          606160.0,
+          5555200.0,
+          609200.0,
+          5558240.0
+        ]
+      },
+      "provider_matched": 61,
+      "pagination_complete": true,
+      "pages": [
+        {
+          "response": "raw/page-01.json",
+          "sha256": "514ccfc139bb21863bd632195a11c16615b067c0b85c1e61d577d58b806c2ea7",
+          "bytes": 529249,
+          "request": {
+            "url": "https://earth-search.aws.element84.com/v1/search",
+            "method": "POST",
+            "body": {
+              "collections": [
+                "sentinel-2-l1c"
+              ],
+              "datetime": "2018-03-23T00:00:00Z/2018-06-06T23:59:59.999999Z",
+              "bbox": [
+                34.48562713070717,
+                50.138968629955606,
+                34.52902527004342,
+                50.16685252731987
+              ],
+              "limit": 50
+            }
+          },
+          "returned_items": 50
+        },
+        {
+          "response": "raw/page-02.json",
+          "sha256": "a98f6b168e8cb7d24e76f6c840b485543e55fb983aead7eb6fa9d7ae24c41645",
+          "bytes": 116933,
+          "request": {
+            "url": "https://earth-search.aws.element84.com/v1/search",
+            "method": "POST",
+            "body": {
+              "datetime": "2018-03-23T00:00:00Z/2018-06-06T23:59:59.999999Z",
+              "collections": [
+                "sentinel-2-l1c"
+              ],
+              "bbox": [
+                34.48562713070717,
+                50.138968629955606,
+                34.52902527004342,
+                50.16685252731987
+              ],
+              "limit": 50,
+              "next": "2018-04-07T08:45:31.098000Z,S2B_36UWA_20180407_0_L1C,sentinel-2-l1c"
+            }
+          },
+          "returned_items": 11
+        },
+        {
+          "response": "raw/page-03.json",
+          "sha256": "2ae9c578bf21a46c2dce8611b1b8604edcebb0b86c086b8f75019b7413d06fc2",
+          "bytes": 275,
+          "request": {
+            "url": "https://earth-search.aws.element84.com/v1/search",
+            "method": "POST",
+            "body": {
+              "datetime": "2018-03-23T00:00:00Z/2018-06-06T23:59:59.999999Z",
+              "collections": [
+                "sentinel-2-l1c"
+              ],
+              "next": "2018-03-23T08:44:37.330000Z,S2A_36UWA_20180323_0_L1C,sentinel-2-l1c",
+              "bbox": [
+                34.48562713070717,
+                50.138968629955606,
+                34.52902527004342,
+                50.16685252731987
+              ],
+              "limit": 50
+            }
+          },
+          "returned_items": 0
+        }
+      ],
+      "items": [
+        {
+          "item_id": "S2A_36UWA_20180323_0_L1C",
+          "item_sha256": "c1fb149c91612802938ed5b8b11cfba4dfd95e770de755592ad75c4db9e37201",
+          "occurrence_pages": [
+            2
+          ],
+          "catalogue_cloud_percent": 100,
+          "blockers": [
+            "different_native_tile"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180323T083621_N0206_R064_T36UWA_20180323T105303",
+          "acquisition_date": "2018-03-23",
+          "tile": "36UWA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/WA/2018/3/23/0/",
+          "product_key": "products/2018/3/23/S2A_MSIL1C_20180323T083621_N0206_R064_T36UWA_20180323T105303/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UWA_20180326_0_L1C",
+          "item_sha256": "4e6916d2efaf1c8523e1729b74d648449bff8ac7585e675e88cf4201bacbbf09",
+          "occurrence_pages": [
+            2
+          ],
+          "catalogue_cloud_percent": 0,
+          "blockers": [
+            "different_native_tile"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UWA_20180326T124052",
+          "acquisition_date": "2018-03-26",
+          "tile": "36UWA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/WA/2018/3/26/0/",
+          "product_key": "products/2018/3/26/S2A_MSIL1C_20180326T084601_N0206_R107_T36UWA_20180326T124052/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UWA_20180326_1_L1C",
+          "item_sha256": "66df49cd1356525d1178efbf3826b6af50aa6a8b4c1542e0c0c2f9da127acf6e",
+          "occurrence_pages": [
+            2
+          ],
+          "catalogue_cloud_percent": 0,
+          "blockers": [
+            "This QA reader requires a legacy Level-1C GML product below baseline 04.00"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          }
+        },
+        {
+          "item_id": "S2A_36UWA_20180405_0_L1C",
+          "item_sha256": "b2b8120199a42a81c763622da624e097b00fb5b665922b734f72e70c2a5b8c3a",
+          "occurrence_pages": [
+            2
+          ],
+          "catalogue_cloud_percent": 62.9445,
+          "blockers": [
+            "different_native_tile"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180405T084601_N0206_R107_T36UWA_20180407T161935",
+          "acquisition_date": "2018-04-05",
+          "tile": "36UWA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/WA/2018/4/5/0/",
+          "product_key": "products/2018/4/5/S2A_MSIL1C_20180405T084601_N0206_R107_T36UWA_20180407T161935/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UWA_20180412_0_L1C",
+          "item_sha256": "1d35cd7942debd70afd41fa32507cf51c59d7af1a99d924bdc564037e83c791e",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 32.3011,
+          "blockers": [
+            "different_native_tile"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180412T083651_N0206_R064_T36UWA_20180412T104659",
+          "acquisition_date": "2018-04-12",
+          "tile": "36UWA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/WA/2018/4/12/0/",
+          "product_key": "products/2018/4/12/S2A_MSIL1C_20180412T083651_N0206_R064_T36UWA_20180412T104659/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UWA_20180415_0_L1C",
+          "item_sha256": "cde54ce491ffd006bef11ee2c998606dbede7641c75c596caefc74f4ed4e8832",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 3.1501,
+          "blockers": [
+            "different_native_tile"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180415T084601_N0206_R107_T36UWA_20180415T110649",
+          "acquisition_date": "2018-04-15",
+          "tile": "36UWA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/WA/2018/4/15/0/",
+          "product_key": "products/2018/4/15/S2A_MSIL1C_20180415T084601_N0206_R107_T36UWA_20180415T110649/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UWA_20180422_0_L1C",
+          "item_sha256": "9d2a715b7ade942699e1837fad3d8011becdebd84482192d54dcd2827324fde2",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 1.5083,
+          "blockers": [
+            "different_native_tile"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180422T083601_N0206_R064_T36UWA_20180422T104356",
+          "acquisition_date": "2018-04-22",
+          "tile": "36UWA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/WA/2018/4/22/0/",
+          "product_key": "products/2018/4/22/S2A_MSIL1C_20180422T083601_N0206_R064_T36UWA_20180422T104356/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UWA_20180425_0_L1C",
+          "item_sha256": "35ba591db24bd6eecb13c8be464a2bcf844a66ea591649f18ca02b2d18058278",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 66.0718,
+          "blockers": [
+            "different_native_tile"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180425T084641_N0206_R107_T36UWA_20180425T124243",
+          "acquisition_date": "2018-04-25",
+          "tile": "36UWA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/WA/2018/4/25/0/",
+          "product_key": "products/2018/4/25/S2A_MSIL1C_20180425T084641_N0206_R107_T36UWA_20180425T124243/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UWA_20180425_1_L1C",
+          "item_sha256": "f1c053b149dc16f6d486c025cc932290d4c3123138f18b0b7f98d489b3705588",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 81.0755471946012,
+          "blockers": [
+            "This QA reader requires a legacy Level-1C GML product below baseline 04.00"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          }
+        },
+        {
+          "item_id": "S2A_36UWA_20180502_0_L1C",
+          "item_sha256": "fca2fa9ee57e80f6d2a52ff4b0a8ab7df31f8f6e100f642d461c015b7e0b2759",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0,
+          "blockers": [
+            "different_native_tile"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180502T083601_N0206_R064_T36UWA_20180502T122811",
+          "acquisition_date": "2018-05-02",
+          "tile": "36UWA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/WA/2018/5/2/0/",
+          "product_key": "products/2018/5/2/S2A_MSIL1C_20180502T083601_N0206_R064_T36UWA_20180502T122811/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UWA_20180505_0_L1C",
+          "item_sha256": "7e55285b0621b0239f09a4cdf189d400cae1fbc9890fbfb56262c8c8240dc931",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 5.7315,
+          "blockers": [
+            "different_native_tile"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180505T084601_N0206_R107_T36UWA_20180505T100835",
+          "acquisition_date": "2018-05-05",
+          "tile": "36UWA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/WA/2018/5/5/0/",
+          "product_key": "products/2018/5/5/S2A_MSIL1C_20180505T084601_N0206_R107_T36UWA_20180505T100835/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UWA_20180515_0_L1C",
+          "item_sha256": "a043e15b423aba8c8d8bd0bf6cb60146f973c1d82af221283112f01f561d55b4",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 7.1677,
+          "blockers": [
+            "different_native_tile"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180515T084601_N0206_R107_T36UWA_20180515T110238",
+          "acquisition_date": "2018-05-15",
+          "tile": "36UWA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/WA/2018/5/15/0/",
+          "product_key": "products/2018/5/15/S2A_MSIL1C_20180515T084601_N0206_R107_T36UWA_20180515T110238/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UWA_20180522_0_L1C",
+          "item_sha256": "935b8c2cba518d77bffc8c2df938c59bdc94a7853e1f11715b95ded8dad7e4c5",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 50.5964,
+          "blockers": [
+            "different_native_tile"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180522T083601_N0206_R064_T36UWA_20180522T105656",
+          "acquisition_date": "2018-05-22",
+          "tile": "36UWA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/WA/2018/5/22/0/",
+          "product_key": "products/2018/5/22/S2A_MSIL1C_20180522T083601_N0206_R064_T36UWA_20180522T105656/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UWA_20180525_0_L1C",
+          "item_sha256": "443eed835bcd6af967362315ddcaf4613fc70a696180795ef421c6577ed0985f",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 1.0394,
+          "blockers": [
+            "different_native_tile"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180525T084601_N0206_R107_T36UWA_20180525T110427",
+          "acquisition_date": "2018-05-25",
+          "tile": "36UWA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/WA/2018/5/25/0/",
+          "product_key": "products/2018/5/25/S2A_MSIL1C_20180525T084601_N0206_R107_T36UWA_20180525T110427/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UWA_20180525_1_L1C",
+          "item_sha256": "a6c16d9b2aeaf2bfabb9bd5a8d3e9565682b08b084c9b10c6f6baede8e8fc939",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0.887336140225149,
+          "blockers": [
+            "This QA reader requires a legacy Level-1C GML product below baseline 04.00"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          }
+        },
+        {
+          "item_id": "S2A_36UWA_20180601_0_L1C",
+          "item_sha256": "d8b85cfa466310bcc42c847a20872a3a021b03e829833c06f95978813894d359",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0,
+          "blockers": [
+            "different_native_tile"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180601T083651_N0206_R064_T36UWA_20180601T105454",
+          "acquisition_date": "2018-06-01",
+          "tile": "36UWA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/WA/2018/6/1/0/",
+          "product_key": "products/2018/6/1/S2A_MSIL1C_20180601T083651_N0206_R064_T36UWA_20180601T105454/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UWA_20180601_1_L1C",
+          "item_sha256": "195437a89dca10f09b6d02cae6bc16d2a7385a3682a3fe3b4baf1791f7c55161",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0,
+          "blockers": [
+            "This QA reader requires a legacy Level-1C GML product below baseline 04.00"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          }
+        },
+        {
+          "item_id": "S2A_36UWA_20180604_0_L1C",
+          "item_sha256": "1e815535a80e313754262090f414504fbd861fe829e18ed306da58f60b482eac",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 8.0856,
+          "blockers": [
+            "different_native_tile"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180604T084601_N0206_R107_T36UWA_20180604T110147",
+          "acquisition_date": "2018-06-04",
+          "tile": "36UWA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/WA/2018/6/4/0/",
+          "product_key": "products/2018/6/4/S2A_MSIL1C_20180604T084601_N0206_R107_T36UWA_20180604T110147/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UWA_20180604_1_L1C",
+          "item_sha256": "d937b078ccd2e0ac8623edee29bad94d3b245f6dc39813eb23880e071f21cc72",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 9.11221595150647,
+          "blockers": [
+            "This QA reader requires a legacy Level-1C GML product below baseline 04.00"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          }
+        },
+        {
+          "item_id": "S2A_36UXA_20180323_0_L1C",
+          "item_sha256": "a67fe34857a4447ad194a14a56fe2ca1d1503b67ba495f8377afeee8f1bcc479",
+          "occurrence_pages": [
+            2
+          ],
+          "catalogue_cloud_percent": 85.9781,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180323T083621_N0206_R064_T36UXA_20180323T105303",
+          "acquisition_date": "2018-03-23",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/3/23/0/",
+          "product_key": "products/2018/3/23/S2A_MSIL1C_20180323T083621_N0206_R064_T36UXA_20180323T105303/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20180323_1_L1C",
+          "item_sha256": "6a8860bfe6a762eafbbe096508ac515bac69acbe999bd78be6b584edbedb1c4b",
+          "occurrence_pages": [
+            2
+          ],
+          "catalogue_cloud_percent": 84.65481202783,
+          "blockers": [
+            "This QA reader requires a legacy Level-1C GML product below baseline 04.00"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          }
+        },
+        {
+          "item_id": "S2A_36UXA_20180326_0_L1C",
+          "item_sha256": "ea0c6e92bd40eb190b103c361da0771b19c325e9a044a198b7f3014f27e88fc4",
+          "occurrence_pages": [
+            2
+          ],
+          "catalogue_cloud_percent": 0,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052",
+          "acquisition_date": "2018-03-26",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/3/26/0/",
+          "product_key": "products/2018/3/26/S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20180326_1_L1C",
+          "item_sha256": "7e00fc4d6b79cf21e32f53406606fbe243ac39e48f48794d5a263503560a77d8",
+          "occurrence_pages": [
+            2
+          ],
+          "catalogue_cloud_percent": 0,
+          "blockers": [
+            "This QA reader requires a legacy Level-1C GML product below baseline 04.00"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          }
+        },
+        {
+          "item_id": "S2A_36UXA_20180405_0_L1C",
+          "item_sha256": "52ef16aac43195f015e1c6bd3ea997c3d6d95fb922465add0eec75159c4496d0",
+          "occurrence_pages": [
+            2
+          ],
+          "catalogue_cloud_percent": 12.4589,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935",
+          "acquisition_date": "2018-04-05",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/4/5/0/",
+          "product_key": "products/2018/4/5/S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20180412_0_L1C",
+          "item_sha256": "46d91b5c307b0e9ae368cf126488760a95801a11f2778b0bea4b4a6883ddc533",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 61.7957,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180412T083651_N0206_R064_T36UXA_20180412T104659",
+          "acquisition_date": "2018-04-12",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/4/12/0/",
+          "product_key": "products/2018/4/12/S2A_MSIL1C_20180412T083651_N0206_R064_T36UXA_20180412T104659/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20180415_0_L1C",
+          "item_sha256": "a0e45c3066a73344897b3aa6243bd9e309db58822c7601757a61ba85158e7c07",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180415T084601_N0206_R107_T36UXA_20180415T110649",
+          "acquisition_date": "2018-04-15",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/4/15/0/",
+          "product_key": "products/2018/4/15/S2A_MSIL1C_20180415T084601_N0206_R107_T36UXA_20180415T110649/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20180422_0_L1C",
+          "item_sha256": "cce436746809a07cf0b9a06932acb5395869fa86d30dc09a77d50c6c52368677",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 3.3076,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180422T083601_N0206_R064_T36UXA_20180422T104356",
+          "acquisition_date": "2018-04-22",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/4/22/0/",
+          "product_key": "products/2018/4/22/S2A_MSIL1C_20180422T083601_N0206_R064_T36UXA_20180422T104356/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20180425_0_L1C",
+          "item_sha256": "26eb57a5bc156c171a90de30f4375ba85416b612b1207249ea00dbf3f451d79e",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 67.456,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243",
+          "acquisition_date": "2018-04-25",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/4/25/0/",
+          "product_key": "products/2018/4/25/S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20180425_1_L1C",
+          "item_sha256": "7e5bb623450966010d86c615ad5cfa82d9d755862b4168cb88710dcca0e24ddf",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 74.5725255641133,
+          "blockers": [
+            "This QA reader requires a legacy Level-1C GML product below baseline 04.00"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          }
+        },
+        {
+          "item_id": "S2A_36UXA_20180502_0_L1C",
+          "item_sha256": "67569dc515ccf32cf8736be6f6e2182c8828fea06e4a788518f0198b7ef32be0",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180502T083601_N0206_R064_T36UXA_20180502T122811",
+          "acquisition_date": "2018-05-02",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/5/2/0/",
+          "product_key": "products/2018/5/2/S2A_MSIL1C_20180502T083601_N0206_R064_T36UXA_20180502T122811/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20180505_0_L1C",
+          "item_sha256": "73788acdcf2c86c54a29f3cf9a4b479803734b6da0724e2b0dbdc5e85e56ad82",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 11.9513,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+          "acquisition_date": "2018-05-05",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/5/5/0/",
+          "product_key": "products/2018/5/5/S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20180515_0_L1C",
+          "item_sha256": "3d4f7d9f883787314d5d390b7037e281b6263d0d838259f21da0e6917b530617",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 3.8859,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+          "acquisition_date": "2018-05-15",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/5/15/0/",
+          "product_key": "products/2018/5/15/S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20180522_0_L1C",
+          "item_sha256": "a1b9332af63bddf655cd56f367db69d50c2f9acc1cb6734c4eb3078df5c63c78",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 40.5023,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180522T083601_N0206_R064_T36UXA_20180522T105656",
+          "acquisition_date": "2018-05-22",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/5/22/0/",
+          "product_key": "products/2018/5/22/S2A_MSIL1C_20180522T083601_N0206_R064_T36UXA_20180522T105656/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20180525_0_L1C",
+          "item_sha256": "432e8991673e4ccc90446e9b164d2cbcef777f5b325727a8a5d7074304830933",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 34.4569,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+          "acquisition_date": "2018-05-25",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/5/25/0/",
+          "product_key": "products/2018/5/25/S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20180525_1_L1C",
+          "item_sha256": "87474abf8c4899efc21e5b127a87416a6dbe88bc93594cab1cf359dabe7fff99",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 26.6352258493106,
+          "blockers": [
+            "This QA reader requires a legacy Level-1C GML product below baseline 04.00"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          }
+        },
+        {
+          "item_id": "S2A_36UXA_20180601_0_L1C",
+          "item_sha256": "88e295c5d4b859b6d087d68cbfee36a33a082cdbc4c22d8fa34deb6856ce0914",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180601T083651_N0206_R064_T36UXA_20180601T105454",
+          "acquisition_date": "2018-06-01",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/6/1/0/",
+          "product_key": "products/2018/6/1/S2A_MSIL1C_20180601T083651_N0206_R064_T36UXA_20180601T105454/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20180601_1_L1C",
+          "item_sha256": "164b3f93bb0459c9c3cad5c5a83743587db81f7c871a01b587cfbb3bb42849a0",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0.0212009913703007,
+          "blockers": [
+            "This QA reader requires a legacy Level-1C GML product below baseline 04.00"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          }
+        },
+        {
+          "item_id": "S2A_36UXA_20180604_0_L1C",
+          "item_sha256": "f48448eeee7f18be2a847a2928ea36e1dff17410aa838d4774e3f00b7aaa1c42",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0.3764,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147",
+          "acquisition_date": "2018-06-04",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/6/4/0/",
+          "product_key": "products/2018/6/4/S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20180604_1_L1C",
+          "item_sha256": "e6023301af26ec99285e784a6b233247c403c5208195837a109601993a518ddc",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0.436403695936504,
+          "blockers": [
+            "This QA reader requires a legacy Level-1C GML product below baseline 04.00"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          }
+        },
+        {
+          "item_id": "S2B_36UWA_20180331_0_L1C",
+          "item_sha256": "3beb259859a34ed8983560635a432f25996680a637335c12da7dc8fc85ab8f79",
+          "occurrence_pages": [
+            2
+          ],
+          "catalogue_cloud_percent": 99.782,
+          "blockers": [
+            "different_native_tile"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UWA_20180331T105527",
+          "acquisition_date": "2018-03-31",
+          "tile": "36UWA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/WA/2018/3/31/0/",
+          "product_key": "products/2018/3/31/S2B_MSIL1C_20180331T084559_N0206_R107_T36UWA_20180331T105527/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UWA_20180407_0_L1C",
+          "item_sha256": "13f353ee59333c39b38202bfba30fb6c6b5988931a724274cdf89de45a71f016",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0,
+          "blockers": [
+            "different_native_tile"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20180407T083559_N0206_R064_T36UWA_20180407T123555",
+          "acquisition_date": "2018-04-07",
+          "tile": "36UWA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/WA/2018/4/7/0/",
+          "product_key": "products/2018/4/7/S2B_MSIL1C_20180407T083559_N0206_R064_T36UWA_20180407T123555/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UWA_20180410_0_L1C",
+          "item_sha256": "2729a7ce180bbe0c0319b02425c7f26e1afec64f16e4aef4f3fb77548b6469c4",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0,
+          "blockers": [
+            "different_native_tile"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20180410T084559_N0206_R107_T36UWA_20180410T114307",
+          "acquisition_date": "2018-04-10",
+          "tile": "36UWA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/WA/2018/4/10/0/",
+          "product_key": "products/2018/4/10/S2B_MSIL1C_20180410T084559_N0206_R107_T36UWA_20180410T114307/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UWA_20180420_0_L1C",
+          "item_sha256": "14fbeb618daf6e7373360466073fbce80655efe25d306289b638df9ec0976f22",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0.1642,
+          "blockers": [
+            "different_native_tile"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20180420T084559_N0206_R107_T36UWA_20180420T101821",
+          "acquisition_date": "2018-04-20",
+          "tile": "36UWA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/WA/2018/4/20/0/",
+          "product_key": "products/2018/4/20/S2B_MSIL1C_20180420T084559_N0206_R107_T36UWA_20180420T101821/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UWA_20180430_0_L1C",
+          "item_sha256": "df302f6bc546a69646604a46d57d44bb49d04bab36e5e21baeccfd4f80beba99",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0,
+          "blockers": [
+            "different_native_tile"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20180430T084559_N0206_R107_T36UWA_20180430T101717",
+          "acquisition_date": "2018-04-30",
+          "tile": "36UWA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/WA/2018/4/30/0/",
+          "product_key": "products/2018/4/30/S2B_MSIL1C_20180430T084559_N0206_R107_T36UWA_20180430T101717/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UWA_20180507_0_L1C",
+          "item_sha256": "3a78bf2c08380d16f5bb752f8e25f218c888e9ef18ef28b9388779ccafadd84f",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 24.3493,
+          "blockers": [
+            "different_native_tile"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20180507T083559_N0206_R064_T36UWA_20180507T105016",
+          "acquisition_date": "2018-05-07",
+          "tile": "36UWA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/WA/2018/5/7/0/",
+          "product_key": "products/2018/5/7/S2B_MSIL1C_20180507T083559_N0206_R064_T36UWA_20180507T105016/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UWA_20180510_0_L1C",
+          "item_sha256": "988a47b42beeb568013a7ab5c1cdac652b6315d2f1ba328554e02f001103c00f",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0.0047,
+          "blockers": [
+            "different_native_tile"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20180510T084559_N0206_R107_T36UWA_20180510T113930",
+          "acquisition_date": "2018-05-10",
+          "tile": "36UWA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/WA/2018/5/10/0/",
+          "product_key": "products/2018/5/10/S2B_MSIL1C_20180510T084559_N0206_R107_T36UWA_20180510T113930/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UWA_20180517_0_L1C",
+          "item_sha256": "591a2bb5db4b783425f7c76d60c84fcb828f4f52d8d1408bd3ddba9df3a4dad7",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 45.4066,
+          "blockers": [
+            "different_native_tile"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20180517T083559_N0206_R064_T36UWA_20180517T113030",
+          "acquisition_date": "2018-05-17",
+          "tile": "36UWA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/WA/2018/5/17/0/",
+          "product_key": "products/2018/5/17/S2B_MSIL1C_20180517T083559_N0206_R064_T36UWA_20180517T113030/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UWA_20180530_0_L1C",
+          "item_sha256": "e7d225408598ceedfd2e406812e583d922f39b40aed81d9aae5cf0c6a4d647c7",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0,
+          "blockers": [
+            "different_native_tile"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20180530T084559_N0206_R107_T36UWA_20180530T105442",
+          "acquisition_date": "2018-05-30",
+          "tile": "36UWA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/WA/2018/5/30/0/",
+          "product_key": "products/2018/5/30/S2B_MSIL1C_20180530T084559_N0206_R107_T36UWA_20180530T105442/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UWA_20180606_0_L1C",
+          "item_sha256": "92b70b0214a2aae87060f755263d96fc1a241ec672b7a032bc3479fc5ef2bc79",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 43.0684,
+          "blockers": [
+            "different_native_tile"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20180606T084009_N0206_R064_T36UWA_20180606T123007",
+          "acquisition_date": "2018-06-06",
+          "tile": "36UWA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/WA/2018/6/6/0/",
+          "product_key": "products/2018/6/6/S2B_MSIL1C_20180606T084009_N0206_R064_T36UWA_20180606T123007/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UWA_20180606_1_L1C",
+          "item_sha256": "851ebf913e17bf65291ccee2b384df888e06891de24aa763f795cd6a84ee1772",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 64.6214240612801,
+          "blockers": [
+            "This QA reader requires a legacy Level-1C GML product below baseline 04.00"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          }
+        },
+        {
+          "item_id": "S2B_36UXA_20180331_0_L1C",
+          "item_sha256": "b41fb88dfb5875533d1b248b03bd01247a07bdb8dd91819e238f22430255d118",
+          "occurrence_pages": [
+            2
+          ],
+          "catalogue_cloud_percent": 99.8039,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527",
+          "acquisition_date": "2018-03-31",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/3/31/0/",
+          "product_key": "products/2018/3/31/S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UXA_20180407_0_L1C",
+          "item_sha256": "14f51f2b73632ee1ae517d5b0c29618ef57f437378bcf1124d088a6b5ca1c281",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0.0229,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20180407T083559_N0206_R064_T36UXA_20180407T123555",
+          "acquisition_date": "2018-04-07",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/4/7/0/",
+          "product_key": "products/2018/4/7/S2B_MSIL1C_20180407T083559_N0206_R064_T36UXA_20180407T123555/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UXA_20180410_0_L1C",
+          "item_sha256": "716744b9053ed093c5f6758bf065e53dbf6e51f56e3a34b21763569f96402cb8",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20180410T084559_N0206_R107_T36UXA_20180410T114307",
+          "acquisition_date": "2018-04-10",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/4/10/0/",
+          "product_key": "products/2018/4/10/S2B_MSIL1C_20180410T084559_N0206_R107_T36UXA_20180410T114307/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UXA_20180420_0_L1C",
+          "item_sha256": "7d2c8fc3f9679c613720a2e6b1c2d2dd019a25a26c333e8b575fe5819f161a90",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0.2149,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20180420T084559_N0206_R107_T36UXA_20180420T101821",
+          "acquisition_date": "2018-04-20",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/4/20/0/",
+          "product_key": "products/2018/4/20/S2B_MSIL1C_20180420T084559_N0206_R107_T36UXA_20180420T101821/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UXA_20180430_0_L1C",
+          "item_sha256": "713ebe73930d59b39f6a85062c4fd54fed7259fbc0e0ca1318b12058f9ed51d6",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+          "acquisition_date": "2018-04-30",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/4/30/0/",
+          "product_key": "products/2018/4/30/S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UXA_20180507_0_L1C",
+          "item_sha256": "ebe49a94c3fda16b50928c8662d08abc170941a62134e7497c4654a8db5ae3fb",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 13.1948,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20180507T083559_N0206_R064_T36UXA_20180507T105016",
+          "acquisition_date": "2018-05-07",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/5/7/0/",
+          "product_key": "products/2018/5/7/S2B_MSIL1C_20180507T083559_N0206_R064_T36UXA_20180507T105016/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UXA_20180510_0_L1C",
+          "item_sha256": "61893a0b3e48173e89470967fbd64f88a5d77b84394e615ec121684e6adbde5e",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+          "acquisition_date": "2018-05-10",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/5/10/0/",
+          "product_key": "products/2018/5/10/S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UXA_20180517_0_L1C",
+          "item_sha256": "14424f169b2694d4efbbaf7366b60620b7f6483dbce7cfc2f62cb775a40c8d36",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 75.5614,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20180517T083559_N0206_R064_T36UXA_20180517T113030",
+          "acquisition_date": "2018-05-17",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/5/17/0/",
+          "product_key": "products/2018/5/17/S2B_MSIL1C_20180517T083559_N0206_R064_T36UXA_20180517T113030/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UXA_20180530_0_L1C",
+          "item_sha256": "c7439d3f4f5159a6f77ad9d18cc537ef705499301f7d243b053fcec0a5d3e345",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+          "acquisition_date": "2018-05-30",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/5/30/0/",
+          "product_key": "products/2018/5/30/S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UXA_20180606_0_L1C",
+          "item_sha256": "71ea7b56101adb7e824d632b227f86af6b4a0a58b3c9486159d0beaefb37199a",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 82.757,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20180606T084009_N0206_R064_T36UXA_20180606T123007",
+          "acquisition_date": "2018-06-06",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/6/6/0/",
+          "product_key": "products/2018/6/6/S2B_MSIL1C_20180606T084009_N0206_R064_T36UXA_20180606T123007/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UXA_20180606_1_L1C",
+          "item_sha256": "51c80cfdd004adff93829eec6dc288e001937d8eff241dd0932b2c1b0fbc6c0c",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 89.4610767714772,
+          "blockers": [
+            "This QA reader requires a legacy Level-1C GML product below baseline 04.00"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          }
+        }
+      ],
+      "comparison_options": [
+        {
+          "pre_date": "2018-04-15",
+          "post_date": "2018-04-30",
+          "pre_scene_id": "S2A_MSIL1C_20180415T084601_N0206_R107_T36UXA_20180415T110649",
+          "post_scene_id": "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+          "interval_days": 15,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            0,
+            0
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            },
+            {
+              "date": "2018-03-31",
+              "scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527"
+            },
+            {
+              "date": "2018-04-05",
+              "scene_id": "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935"
+            },
+            {
+              "date": "2018-04-10",
+              "scene_id": "S2B_MSIL1C_20180410T084559_N0206_R107_T36UXA_20180410T114307"
+            }
+          ]
+        },
+        {
+          "pre_date": "2018-04-10",
+          "post_date": "2018-04-30",
+          "pre_scene_id": "S2B_MSIL1C_20180410T084559_N0206_R107_T36UXA_20180410T114307",
+          "post_scene_id": "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+          "interval_days": 20,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            0,
+            0
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            },
+            {
+              "date": "2018-03-31",
+              "scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527"
+            },
+            {
+              "date": "2018-04-05",
+              "scene_id": "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935"
+            }
+          ]
+        },
+        {
+          "pre_date": "2018-04-07",
+          "post_date": "2018-05-02",
+          "pre_scene_id": "S2B_MSIL1C_20180407T083559_N0206_R064_T36UXA_20180407T123555",
+          "post_scene_id": "S2A_MSIL1C_20180502T083601_N0206_R064_T36UXA_20180502T122811",
+          "interval_days": 25,
+          "relative_orbit": 64,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            0.0229,
+            0
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20180507T083559_N0206_R064_T36UXA_20180507T105016",
+            "S2B_MSIL1C_20180517T083559_N0206_R064_T36UXA_20180517T113030",
+            "S2A_MSIL1C_20180522T083601_N0206_R064_T36UXA_20180522T105656",
+            "S2A_MSIL1C_20180601T083651_N0206_R064_T36UXA_20180601T105454",
+            "S2B_MSIL1C_20180606T084009_N0206_R064_T36UXA_20180606T123007"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-23",
+              "scene_id": "S2A_MSIL1C_20180323T083621_N0206_R064_T36UXA_20180323T105303"
+            }
+          ]
+        },
+        {
+          "pre_date": "2018-04-20",
+          "post_date": "2018-04-30",
+          "pre_scene_id": "S2B_MSIL1C_20180420T084559_N0206_R107_T36UXA_20180420T101821",
+          "post_scene_id": "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+          "interval_days": 10,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            0.2149,
+            0
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            },
+            {
+              "date": "2018-03-31",
+              "scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527"
+            },
+            {
+              "date": "2018-04-05",
+              "scene_id": "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935"
+            },
+            {
+              "date": "2018-04-10",
+              "scene_id": "S2B_MSIL1C_20180410T084559_N0206_R107_T36UXA_20180410T114307"
+            },
+            {
+              "date": "2018-04-15",
+              "scene_id": "S2A_MSIL1C_20180415T084601_N0206_R107_T36UXA_20180415T110649"
+            }
+          ]
+        },
+        {
+          "pre_date": "2018-04-07",
+          "post_date": "2018-04-22",
+          "pre_scene_id": "S2B_MSIL1C_20180407T083559_N0206_R064_T36UXA_20180407T123555",
+          "post_scene_id": "S2A_MSIL1C_20180422T083601_N0206_R064_T36UXA_20180422T104356",
+          "interval_days": 15,
+          "relative_orbit": 64,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            0.0229,
+            3.3076
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20180502T083601_N0206_R064_T36UXA_20180502T122811",
+            "S2B_MSIL1C_20180507T083559_N0206_R064_T36UXA_20180507T105016",
+            "S2B_MSIL1C_20180517T083559_N0206_R064_T36UXA_20180517T113030",
+            "S2A_MSIL1C_20180522T083601_N0206_R064_T36UXA_20180522T105656",
+            "S2A_MSIL1C_20180601T083651_N0206_R064_T36UXA_20180601T105454",
+            "S2B_MSIL1C_20180606T084009_N0206_R064_T36UXA_20180606T123007"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-23",
+              "scene_id": "S2A_MSIL1C_20180323T083621_N0206_R064_T36UXA_20180323T105303"
+            }
+          ]
+        },
+        {
+          "pre_date": "2018-04-05",
+          "post_date": "2018-04-30",
+          "pre_scene_id": "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935",
+          "post_scene_id": "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+          "interval_days": 25,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            12.4589,
+            0
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            },
+            {
+              "date": "2018-03-31",
+              "scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527"
+            }
+          ]
+        },
+        {
+          "pre_date": "2018-04-12",
+          "post_date": "2018-05-02",
+          "pre_scene_id": "S2A_MSIL1C_20180412T083651_N0206_R064_T36UXA_20180412T104659",
+          "post_scene_id": "S2A_MSIL1C_20180502T083601_N0206_R064_T36UXA_20180502T122811",
+          "interval_days": 20,
+          "relative_orbit": 64,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            61.7957,
+            0
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20180507T083559_N0206_R064_T36UXA_20180507T105016",
+            "S2B_MSIL1C_20180517T083559_N0206_R064_T36UXA_20180517T113030",
+            "S2A_MSIL1C_20180522T083601_N0206_R064_T36UXA_20180522T105656",
+            "S2A_MSIL1C_20180601T083651_N0206_R064_T36UXA_20180601T105454",
+            "S2B_MSIL1C_20180606T084009_N0206_R064_T36UXA_20180606T123007"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-23",
+              "scene_id": "S2A_MSIL1C_20180323T083621_N0206_R064_T36UXA_20180323T105303"
+            },
+            {
+              "date": "2018-04-07",
+              "scene_id": "S2B_MSIL1C_20180407T083559_N0206_R064_T36UXA_20180407T123555"
+            }
+          ]
+        },
+        {
+          "pre_date": "2018-04-12",
+          "post_date": "2018-04-22",
+          "pre_scene_id": "S2A_MSIL1C_20180412T083651_N0206_R064_T36UXA_20180412T104659",
+          "post_scene_id": "S2A_MSIL1C_20180422T083601_N0206_R064_T36UXA_20180422T104356",
+          "interval_days": 10,
+          "relative_orbit": 64,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            61.7957,
+            3.3076
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20180502T083601_N0206_R064_T36UXA_20180502T122811",
+            "S2B_MSIL1C_20180507T083559_N0206_R064_T36UXA_20180507T105016",
+            "S2B_MSIL1C_20180517T083559_N0206_R064_T36UXA_20180517T113030",
+            "S2A_MSIL1C_20180522T083601_N0206_R064_T36UXA_20180522T105656",
+            "S2A_MSIL1C_20180601T083651_N0206_R064_T36UXA_20180601T105454",
+            "S2B_MSIL1C_20180606T084009_N0206_R064_T36UXA_20180606T123007"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-23",
+              "scene_id": "S2A_MSIL1C_20180323T083621_N0206_R064_T36UXA_20180323T105303"
+            },
+            {
+              "date": "2018-04-07",
+              "scene_id": "S2B_MSIL1C_20180407T083559_N0206_R064_T36UXA_20180407T123555"
+            }
+          ]
+        },
+        {
+          "pre_date": "2018-04-15",
+          "post_date": "2018-04-25",
+          "pre_scene_id": "S2A_MSIL1C_20180415T084601_N0206_R107_T36UXA_20180415T110649",
+          "post_scene_id": "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243",
+          "interval_days": 10,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            0,
+            67.456
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            },
+            {
+              "date": "2018-03-31",
+              "scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527"
+            },
+            {
+              "date": "2018-04-05",
+              "scene_id": "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935"
+            },
+            {
+              "date": "2018-04-10",
+              "scene_id": "S2B_MSIL1C_20180410T084559_N0206_R107_T36UXA_20180410T114307"
+            }
+          ]
+        },
+        {
+          "pre_date": "2018-04-10",
+          "post_date": "2018-04-25",
+          "pre_scene_id": "S2B_MSIL1C_20180410T084559_N0206_R107_T36UXA_20180410T114307",
+          "post_scene_id": "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243",
+          "interval_days": 15,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            0,
+            67.456
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            },
+            {
+              "date": "2018-03-31",
+              "scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527"
+            },
+            {
+              "date": "2018-04-05",
+              "scene_id": "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935"
+            }
+          ]
+        },
+        {
+          "pre_date": "2018-03-26",
+          "post_date": "2018-04-25",
+          "pre_scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052",
+          "post_scene_id": "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243",
+          "interval_days": 30,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            0,
+            67.456
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": []
+        },
+        {
+          "pre_date": "2018-04-20",
+          "post_date": "2018-04-25",
+          "pre_scene_id": "S2B_MSIL1C_20180420T084559_N0206_R107_T36UXA_20180420T101821",
+          "post_scene_id": "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243",
+          "interval_days": 5,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            0.2149,
+            67.456
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            },
+            {
+              "date": "2018-03-31",
+              "scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527"
+            },
+            {
+              "date": "2018-04-05",
+              "scene_id": "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935"
+            },
+            {
+              "date": "2018-04-10",
+              "scene_id": "S2B_MSIL1C_20180410T084559_N0206_R107_T36UXA_20180410T114307"
+            },
+            {
+              "date": "2018-04-15",
+              "scene_id": "S2A_MSIL1C_20180415T084601_N0206_R107_T36UXA_20180415T110649"
+            }
+          ]
+        },
+        {
+          "pre_date": "2018-04-05",
+          "post_date": "2018-04-25",
+          "pre_scene_id": "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935",
+          "post_scene_id": "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243",
+          "interval_days": 20,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            12.4589,
+            67.456
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            },
+            {
+              "date": "2018-03-31",
+              "scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527"
+            }
+          ]
+        },
+        {
+          "pre_date": "2018-03-23",
+          "post_date": "2018-04-22",
+          "pre_scene_id": "S2A_MSIL1C_20180323T083621_N0206_R064_T36UXA_20180323T105303",
+          "post_scene_id": "S2A_MSIL1C_20180422T083601_N0206_R064_T36UXA_20180422T104356",
+          "interval_days": 30,
+          "relative_orbit": 64,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            85.9781,
+            3.3076
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20180502T083601_N0206_R064_T36UXA_20180502T122811",
+            "S2B_MSIL1C_20180507T083559_N0206_R064_T36UXA_20180507T105016",
+            "S2B_MSIL1C_20180517T083559_N0206_R064_T36UXA_20180517T113030",
+            "S2A_MSIL1C_20180522T083601_N0206_R064_T36UXA_20180522T105656",
+            "S2A_MSIL1C_20180601T083651_N0206_R064_T36UXA_20180601T105454",
+            "S2B_MSIL1C_20180606T084009_N0206_R064_T36UXA_20180606T123007"
+          ],
+          "stable_only_earlier_scene_options": []
+        },
+        {
+          "pre_date": "2018-03-31",
+          "post_date": "2018-04-30",
+          "pre_scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527",
+          "post_scene_id": "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+          "interval_days": 30,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            99.8039,
+            0
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            }
+          ]
+        },
+        {
+          "pre_date": "2018-03-31",
+          "post_date": "2018-04-25",
+          "pre_scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527",
+          "post_scene_id": "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243",
+          "interval_days": 25,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            99.8039,
+            67.456
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "site_id": "site-21",
+      "query": {
+        "url": "https://earth-search.aws.element84.com/v1/search",
+        "collection": "sentinel-2-l1c",
+        "page_limit": 50,
+        "maximum_pages": 4,
+        "maximum_response_bytes": 2097152,
+        "timeout_seconds": 12,
+        "stac_datetime": "2018-03-23T00:00:00Z/2018-06-06T23:59:59.999999Z"
+      },
+      "limits": {
+        "crs": "EPSG:32636",
+        "core_union_bounds": [
+          631640.0,
+          5565640.0,
+          632280.0,
+          5566280.0
+        ],
+        "qa_context_union_bounds": [
+          630440.0,
+          5564440.0,
+          633480.0,
+          5567480.0
+        ]
+      },
+      "provider_matched": 31,
+      "pagination_complete": true,
+      "pages": [
+        {
+          "response": "raw/page-01.json",
+          "sha256": "6edbe88848a48e67df4cc45807354a0178e1be2e5b8c6072a5da0a06ea99df84",
+          "bytes": 328206,
+          "request": {
+            "url": "https://earth-search.aws.element84.com/v1/search",
+            "method": "POST",
+            "body": {
+              "collections": [
+                "sentinel-2-l1c"
+              ],
+              "datetime": "2018-03-23T00:00:00Z/2018-06-06T23:59:59.999999Z",
+              "bbox": [
+                34.82840941373822,
+                50.21706032421993,
+                34.872067932182766,
+                50.24506539306953
+              ],
+              "limit": 50
+            }
+          },
+          "returned_items": 31
+        },
+        {
+          "response": "raw/page-02.json",
+          "sha256": "cdafa52759a113b12f4d1b3db8f5b7585de5efbd0111041fc36a556c6c21c190",
+          "bytes": 275,
+          "request": {
+            "url": "https://earth-search.aws.element84.com/v1/search",
+            "method": "POST",
+            "body": {
+              "datetime": "2018-03-23T00:00:00Z/2018-06-06T23:59:59.999999Z",
+              "collections": [
+                "sentinel-2-l1c"
+              ],
+              "bbox": [
+                34.82840941373822,
+                50.21706032421993,
+                34.872067932182766,
+                50.24506539306953
+              ],
+              "limit": 50,
+              "next": "2018-03-23T08:44:37.330000Z,S2A_36UXA_20180323_0_L1C,sentinel-2-l1c"
+            }
+          },
+          "returned_items": 0
+        }
+      ],
+      "items": [
+        {
+          "item_id": "S2A_36UXA_20180323_0_L1C",
+          "item_sha256": "a67fe34857a4447ad194a14a56fe2ca1d1503b67ba495f8377afeee8f1bcc479",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 85.9781,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180323T083621_N0206_R064_T36UXA_20180323T105303",
+          "acquisition_date": "2018-03-23",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/3/23/0/",
+          "product_key": "products/2018/3/23/S2A_MSIL1C_20180323T083621_N0206_R064_T36UXA_20180323T105303/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20180323_1_L1C",
+          "item_sha256": "6a8860bfe6a762eafbbe096508ac515bac69acbe999bd78be6b584edbedb1c4b",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 84.65481202783,
+          "blockers": [
+            "This QA reader requires a legacy Level-1C GML product below baseline 04.00"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          }
+        },
+        {
+          "item_id": "S2A_36UXA_20180326_0_L1C",
+          "item_sha256": "ea0c6e92bd40eb190b103c361da0771b19c325e9a044a198b7f3014f27e88fc4",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052",
+          "acquisition_date": "2018-03-26",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/3/26/0/",
+          "product_key": "products/2018/3/26/S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20180326_1_L1C",
+          "item_sha256": "7e00fc4d6b79cf21e32f53406606fbe243ac39e48f48794d5a263503560a77d8",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0,
+          "blockers": [
+            "This QA reader requires a legacy Level-1C GML product below baseline 04.00"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          }
+        },
+        {
+          "item_id": "S2A_36UXA_20180405_0_L1C",
+          "item_sha256": "52ef16aac43195f015e1c6bd3ea997c3d6d95fb922465add0eec75159c4496d0",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 12.4589,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935",
+          "acquisition_date": "2018-04-05",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/4/5/0/",
+          "product_key": "products/2018/4/5/S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20180412_0_L1C",
+          "item_sha256": "46d91b5c307b0e9ae368cf126488760a95801a11f2778b0bea4b4a6883ddc533",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 61.7957,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180412T083651_N0206_R064_T36UXA_20180412T104659",
+          "acquisition_date": "2018-04-12",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/4/12/0/",
+          "product_key": "products/2018/4/12/S2A_MSIL1C_20180412T083651_N0206_R064_T36UXA_20180412T104659/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20180415_0_L1C",
+          "item_sha256": "a0e45c3066a73344897b3aa6243bd9e309db58822c7601757a61ba85158e7c07",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180415T084601_N0206_R107_T36UXA_20180415T110649",
+          "acquisition_date": "2018-04-15",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/4/15/0/",
+          "product_key": "products/2018/4/15/S2A_MSIL1C_20180415T084601_N0206_R107_T36UXA_20180415T110649/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20180422_0_L1C",
+          "item_sha256": "cce436746809a07cf0b9a06932acb5395869fa86d30dc09a77d50c6c52368677",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 3.3076,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180422T083601_N0206_R064_T36UXA_20180422T104356",
+          "acquisition_date": "2018-04-22",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/4/22/0/",
+          "product_key": "products/2018/4/22/S2A_MSIL1C_20180422T083601_N0206_R064_T36UXA_20180422T104356/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20180425_0_L1C",
+          "item_sha256": "26eb57a5bc156c171a90de30f4375ba85416b612b1207249ea00dbf3f451d79e",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 67.456,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243",
+          "acquisition_date": "2018-04-25",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/4/25/0/",
+          "product_key": "products/2018/4/25/S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20180425_1_L1C",
+          "item_sha256": "7e5bb623450966010d86c615ad5cfa82d9d755862b4168cb88710dcca0e24ddf",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 74.5725255641133,
+          "blockers": [
+            "This QA reader requires a legacy Level-1C GML product below baseline 04.00"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          }
+        },
+        {
+          "item_id": "S2A_36UXA_20180502_0_L1C",
+          "item_sha256": "67569dc515ccf32cf8736be6f6e2182c8828fea06e4a788518f0198b7ef32be0",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180502T083601_N0206_R064_T36UXA_20180502T122811",
+          "acquisition_date": "2018-05-02",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/5/2/0/",
+          "product_key": "products/2018/5/2/S2A_MSIL1C_20180502T083601_N0206_R064_T36UXA_20180502T122811/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20180505_0_L1C",
+          "item_sha256": "73788acdcf2c86c54a29f3cf9a4b479803734b6da0724e2b0dbdc5e85e56ad82",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 11.9513,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+          "acquisition_date": "2018-05-05",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/5/5/0/",
+          "product_key": "products/2018/5/5/S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20180515_0_L1C",
+          "item_sha256": "3d4f7d9f883787314d5d390b7037e281b6263d0d838259f21da0e6917b530617",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 3.8859,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+          "acquisition_date": "2018-05-15",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/5/15/0/",
+          "product_key": "products/2018/5/15/S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20180522_0_L1C",
+          "item_sha256": "a1b9332af63bddf655cd56f367db69d50c2f9acc1cb6734c4eb3078df5c63c78",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 40.5023,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180522T083601_N0206_R064_T36UXA_20180522T105656",
+          "acquisition_date": "2018-05-22",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/5/22/0/",
+          "product_key": "products/2018/5/22/S2A_MSIL1C_20180522T083601_N0206_R064_T36UXA_20180522T105656/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20180525_0_L1C",
+          "item_sha256": "432e8991673e4ccc90446e9b164d2cbcef777f5b325727a8a5d7074304830933",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 34.4569,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+          "acquisition_date": "2018-05-25",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/5/25/0/",
+          "product_key": "products/2018/5/25/S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20180525_1_L1C",
+          "item_sha256": "87474abf8c4899efc21e5b127a87416a6dbe88bc93594cab1cf359dabe7fff99",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 26.6352258493106,
+          "blockers": [
+            "This QA reader requires a legacy Level-1C GML product below baseline 04.00"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          }
+        },
+        {
+          "item_id": "S2A_36UXA_20180601_0_L1C",
+          "item_sha256": "88e295c5d4b859b6d087d68cbfee36a33a082cdbc4c22d8fa34deb6856ce0914",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180601T083651_N0206_R064_T36UXA_20180601T105454",
+          "acquisition_date": "2018-06-01",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/6/1/0/",
+          "product_key": "products/2018/6/1/S2A_MSIL1C_20180601T083651_N0206_R064_T36UXA_20180601T105454/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20180601_1_L1C",
+          "item_sha256": "164b3f93bb0459c9c3cad5c5a83743587db81f7c871a01b587cfbb3bb42849a0",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0.0212009913703007,
+          "blockers": [
+            "This QA reader requires a legacy Level-1C GML product below baseline 04.00"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          }
+        },
+        {
+          "item_id": "S2A_36UXA_20180604_0_L1C",
+          "item_sha256": "f48448eeee7f18be2a847a2928ea36e1dff17410aa838d4774e3f00b7aaa1c42",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0.3764,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147",
+          "acquisition_date": "2018-06-04",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/6/4/0/",
+          "product_key": "products/2018/6/4/S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20180604_1_L1C",
+          "item_sha256": "e6023301af26ec99285e784a6b233247c403c5208195837a109601993a518ddc",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0.436403695936504,
+          "blockers": [
+            "This QA reader requires a legacy Level-1C GML product below baseline 04.00"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          }
+        },
+        {
+          "item_id": "S2B_36UXA_20180331_0_L1C",
+          "item_sha256": "b41fb88dfb5875533d1b248b03bd01247a07bdb8dd91819e238f22430255d118",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 99.8039,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527",
+          "acquisition_date": "2018-03-31",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/3/31/0/",
+          "product_key": "products/2018/3/31/S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UXA_20180407_0_L1C",
+          "item_sha256": "14f51f2b73632ee1ae517d5b0c29618ef57f437378bcf1124d088a6b5ca1c281",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0.0229,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20180407T083559_N0206_R064_T36UXA_20180407T123555",
+          "acquisition_date": "2018-04-07",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/4/7/0/",
+          "product_key": "products/2018/4/7/S2B_MSIL1C_20180407T083559_N0206_R064_T36UXA_20180407T123555/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UXA_20180410_0_L1C",
+          "item_sha256": "716744b9053ed093c5f6758bf065e53dbf6e51f56e3a34b21763569f96402cb8",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20180410T084559_N0206_R107_T36UXA_20180410T114307",
+          "acquisition_date": "2018-04-10",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/4/10/0/",
+          "product_key": "products/2018/4/10/S2B_MSIL1C_20180410T084559_N0206_R107_T36UXA_20180410T114307/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UXA_20180420_0_L1C",
+          "item_sha256": "7d2c8fc3f9679c613720a2e6b1c2d2dd019a25a26c333e8b575fe5819f161a90",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0.2149,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20180420T084559_N0206_R107_T36UXA_20180420T101821",
+          "acquisition_date": "2018-04-20",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/4/20/0/",
+          "product_key": "products/2018/4/20/S2B_MSIL1C_20180420T084559_N0206_R107_T36UXA_20180420T101821/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UXA_20180430_0_L1C",
+          "item_sha256": "713ebe73930d59b39f6a85062c4fd54fed7259fbc0e0ca1318b12058f9ed51d6",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+          "acquisition_date": "2018-04-30",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/4/30/0/",
+          "product_key": "products/2018/4/30/S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UXA_20180507_0_L1C",
+          "item_sha256": "ebe49a94c3fda16b50928c8662d08abc170941a62134e7497c4654a8db5ae3fb",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 13.1948,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20180507T083559_N0206_R064_T36UXA_20180507T105016",
+          "acquisition_date": "2018-05-07",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/5/7/0/",
+          "product_key": "products/2018/5/7/S2B_MSIL1C_20180507T083559_N0206_R064_T36UXA_20180507T105016/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UXA_20180510_0_L1C",
+          "item_sha256": "61893a0b3e48173e89470967fbd64f88a5d77b84394e615ec121684e6adbde5e",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+          "acquisition_date": "2018-05-10",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/5/10/0/",
+          "product_key": "products/2018/5/10/S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UXA_20180517_0_L1C",
+          "item_sha256": "14424f169b2694d4efbbaf7366b60620b7f6483dbce7cfc2f62cb775a40c8d36",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 75.5614,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20180517T083559_N0206_R064_T36UXA_20180517T113030",
+          "acquisition_date": "2018-05-17",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/5/17/0/",
+          "product_key": "products/2018/5/17/S2B_MSIL1C_20180517T083559_N0206_R064_T36UXA_20180517T113030/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UXA_20180530_0_L1C",
+          "item_sha256": "c7439d3f4f5159a6f77ad9d18cc537ef705499301f7d243b053fcec0a5d3e345",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+          "acquisition_date": "2018-05-30",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/5/30/0/",
+          "product_key": "products/2018/5/30/S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UXA_20180606_0_L1C",
+          "item_sha256": "71ea7b56101adb7e824d632b227f86af6b4a0a58b3c9486159d0beaefb37199a",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 82.757,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20180606T084009_N0206_R064_T36UXA_20180606T123007",
+          "acquisition_date": "2018-06-06",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/6/6/0/",
+          "product_key": "products/2018/6/6/S2B_MSIL1C_20180606T084009_N0206_R064_T36UXA_20180606T123007/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UXA_20180606_1_L1C",
+          "item_sha256": "51c80cfdd004adff93829eec6dc288e001937d8eff241dd0932b2c1b0fbc6c0c",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 89.4610767714772,
+          "blockers": [
+            "This QA reader requires a legacy Level-1C GML product below baseline 04.00"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          }
+        }
+      ],
+      "comparison_options": [
+        {
+          "pre_date": "2018-04-15",
+          "post_date": "2018-04-30",
+          "pre_scene_id": "S2A_MSIL1C_20180415T084601_N0206_R107_T36UXA_20180415T110649",
+          "post_scene_id": "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+          "interval_days": 15,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            0,
+            0
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            },
+            {
+              "date": "2018-03-31",
+              "scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527"
+            },
+            {
+              "date": "2018-04-05",
+              "scene_id": "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935"
+            },
+            {
+              "date": "2018-04-10",
+              "scene_id": "S2B_MSIL1C_20180410T084559_N0206_R107_T36UXA_20180410T114307"
+            }
+          ]
+        },
+        {
+          "pre_date": "2018-04-10",
+          "post_date": "2018-04-30",
+          "pre_scene_id": "S2B_MSIL1C_20180410T084559_N0206_R107_T36UXA_20180410T114307",
+          "post_scene_id": "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+          "interval_days": 20,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            0,
+            0
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            },
+            {
+              "date": "2018-03-31",
+              "scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527"
+            },
+            {
+              "date": "2018-04-05",
+              "scene_id": "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935"
+            }
+          ]
+        },
+        {
+          "pre_date": "2018-04-07",
+          "post_date": "2018-05-02",
+          "pre_scene_id": "S2B_MSIL1C_20180407T083559_N0206_R064_T36UXA_20180407T123555",
+          "post_scene_id": "S2A_MSIL1C_20180502T083601_N0206_R064_T36UXA_20180502T122811",
+          "interval_days": 25,
+          "relative_orbit": 64,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            0.0229,
+            0
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20180507T083559_N0206_R064_T36UXA_20180507T105016",
+            "S2B_MSIL1C_20180517T083559_N0206_R064_T36UXA_20180517T113030",
+            "S2A_MSIL1C_20180522T083601_N0206_R064_T36UXA_20180522T105656",
+            "S2A_MSIL1C_20180601T083651_N0206_R064_T36UXA_20180601T105454",
+            "S2B_MSIL1C_20180606T084009_N0206_R064_T36UXA_20180606T123007"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-23",
+              "scene_id": "S2A_MSIL1C_20180323T083621_N0206_R064_T36UXA_20180323T105303"
+            }
+          ]
+        },
+        {
+          "pre_date": "2018-04-20",
+          "post_date": "2018-04-30",
+          "pre_scene_id": "S2B_MSIL1C_20180420T084559_N0206_R107_T36UXA_20180420T101821",
+          "post_scene_id": "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+          "interval_days": 10,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            0.2149,
+            0
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            },
+            {
+              "date": "2018-03-31",
+              "scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527"
+            },
+            {
+              "date": "2018-04-05",
+              "scene_id": "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935"
+            },
+            {
+              "date": "2018-04-10",
+              "scene_id": "S2B_MSIL1C_20180410T084559_N0206_R107_T36UXA_20180410T114307"
+            },
+            {
+              "date": "2018-04-15",
+              "scene_id": "S2A_MSIL1C_20180415T084601_N0206_R107_T36UXA_20180415T110649"
+            }
+          ]
+        },
+        {
+          "pre_date": "2018-04-07",
+          "post_date": "2018-04-22",
+          "pre_scene_id": "S2B_MSIL1C_20180407T083559_N0206_R064_T36UXA_20180407T123555",
+          "post_scene_id": "S2A_MSIL1C_20180422T083601_N0206_R064_T36UXA_20180422T104356",
+          "interval_days": 15,
+          "relative_orbit": 64,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            0.0229,
+            3.3076
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20180502T083601_N0206_R064_T36UXA_20180502T122811",
+            "S2B_MSIL1C_20180507T083559_N0206_R064_T36UXA_20180507T105016",
+            "S2B_MSIL1C_20180517T083559_N0206_R064_T36UXA_20180517T113030",
+            "S2A_MSIL1C_20180522T083601_N0206_R064_T36UXA_20180522T105656",
+            "S2A_MSIL1C_20180601T083651_N0206_R064_T36UXA_20180601T105454",
+            "S2B_MSIL1C_20180606T084009_N0206_R064_T36UXA_20180606T123007"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-23",
+              "scene_id": "S2A_MSIL1C_20180323T083621_N0206_R064_T36UXA_20180323T105303"
+            }
+          ]
+        },
+        {
+          "pre_date": "2018-04-05",
+          "post_date": "2018-04-30",
+          "pre_scene_id": "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935",
+          "post_scene_id": "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+          "interval_days": 25,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            12.4589,
+            0
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            },
+            {
+              "date": "2018-03-31",
+              "scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527"
+            }
+          ]
+        },
+        {
+          "pre_date": "2018-04-12",
+          "post_date": "2018-05-02",
+          "pre_scene_id": "S2A_MSIL1C_20180412T083651_N0206_R064_T36UXA_20180412T104659",
+          "post_scene_id": "S2A_MSIL1C_20180502T083601_N0206_R064_T36UXA_20180502T122811",
+          "interval_days": 20,
+          "relative_orbit": 64,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            61.7957,
+            0
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20180507T083559_N0206_R064_T36UXA_20180507T105016",
+            "S2B_MSIL1C_20180517T083559_N0206_R064_T36UXA_20180517T113030",
+            "S2A_MSIL1C_20180522T083601_N0206_R064_T36UXA_20180522T105656",
+            "S2A_MSIL1C_20180601T083651_N0206_R064_T36UXA_20180601T105454",
+            "S2B_MSIL1C_20180606T084009_N0206_R064_T36UXA_20180606T123007"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-23",
+              "scene_id": "S2A_MSIL1C_20180323T083621_N0206_R064_T36UXA_20180323T105303"
+            },
+            {
+              "date": "2018-04-07",
+              "scene_id": "S2B_MSIL1C_20180407T083559_N0206_R064_T36UXA_20180407T123555"
+            }
+          ]
+        },
+        {
+          "pre_date": "2018-04-12",
+          "post_date": "2018-04-22",
+          "pre_scene_id": "S2A_MSIL1C_20180412T083651_N0206_R064_T36UXA_20180412T104659",
+          "post_scene_id": "S2A_MSIL1C_20180422T083601_N0206_R064_T36UXA_20180422T104356",
+          "interval_days": 10,
+          "relative_orbit": 64,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            61.7957,
+            3.3076
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20180502T083601_N0206_R064_T36UXA_20180502T122811",
+            "S2B_MSIL1C_20180507T083559_N0206_R064_T36UXA_20180507T105016",
+            "S2B_MSIL1C_20180517T083559_N0206_R064_T36UXA_20180517T113030",
+            "S2A_MSIL1C_20180522T083601_N0206_R064_T36UXA_20180522T105656",
+            "S2A_MSIL1C_20180601T083651_N0206_R064_T36UXA_20180601T105454",
+            "S2B_MSIL1C_20180606T084009_N0206_R064_T36UXA_20180606T123007"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-23",
+              "scene_id": "S2A_MSIL1C_20180323T083621_N0206_R064_T36UXA_20180323T105303"
+            },
+            {
+              "date": "2018-04-07",
+              "scene_id": "S2B_MSIL1C_20180407T083559_N0206_R064_T36UXA_20180407T123555"
+            }
+          ]
+        },
+        {
+          "pre_date": "2018-04-15",
+          "post_date": "2018-04-25",
+          "pre_scene_id": "S2A_MSIL1C_20180415T084601_N0206_R107_T36UXA_20180415T110649",
+          "post_scene_id": "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243",
+          "interval_days": 10,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            0,
+            67.456
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            },
+            {
+              "date": "2018-03-31",
+              "scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527"
+            },
+            {
+              "date": "2018-04-05",
+              "scene_id": "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935"
+            },
+            {
+              "date": "2018-04-10",
+              "scene_id": "S2B_MSIL1C_20180410T084559_N0206_R107_T36UXA_20180410T114307"
+            }
+          ]
+        },
+        {
+          "pre_date": "2018-04-10",
+          "post_date": "2018-04-25",
+          "pre_scene_id": "S2B_MSIL1C_20180410T084559_N0206_R107_T36UXA_20180410T114307",
+          "post_scene_id": "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243",
+          "interval_days": 15,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            0,
+            67.456
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            },
+            {
+              "date": "2018-03-31",
+              "scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527"
+            },
+            {
+              "date": "2018-04-05",
+              "scene_id": "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935"
+            }
+          ]
+        },
+        {
+          "pre_date": "2018-03-26",
+          "post_date": "2018-04-25",
+          "pre_scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052",
+          "post_scene_id": "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243",
+          "interval_days": 30,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            0,
+            67.456
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": []
+        },
+        {
+          "pre_date": "2018-04-20",
+          "post_date": "2018-04-25",
+          "pre_scene_id": "S2B_MSIL1C_20180420T084559_N0206_R107_T36UXA_20180420T101821",
+          "post_scene_id": "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243",
+          "interval_days": 5,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            0.2149,
+            67.456
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            },
+            {
+              "date": "2018-03-31",
+              "scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527"
+            },
+            {
+              "date": "2018-04-05",
+              "scene_id": "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935"
+            },
+            {
+              "date": "2018-04-10",
+              "scene_id": "S2B_MSIL1C_20180410T084559_N0206_R107_T36UXA_20180410T114307"
+            },
+            {
+              "date": "2018-04-15",
+              "scene_id": "S2A_MSIL1C_20180415T084601_N0206_R107_T36UXA_20180415T110649"
+            }
+          ]
+        },
+        {
+          "pre_date": "2018-04-05",
+          "post_date": "2018-04-25",
+          "pre_scene_id": "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935",
+          "post_scene_id": "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243",
+          "interval_days": 20,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            12.4589,
+            67.456
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            },
+            {
+              "date": "2018-03-31",
+              "scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527"
+            }
+          ]
+        },
+        {
+          "pre_date": "2018-03-23",
+          "post_date": "2018-04-22",
+          "pre_scene_id": "S2A_MSIL1C_20180323T083621_N0206_R064_T36UXA_20180323T105303",
+          "post_scene_id": "S2A_MSIL1C_20180422T083601_N0206_R064_T36UXA_20180422T104356",
+          "interval_days": 30,
+          "relative_orbit": 64,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            85.9781,
+            3.3076
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20180502T083601_N0206_R064_T36UXA_20180502T122811",
+            "S2B_MSIL1C_20180507T083559_N0206_R064_T36UXA_20180507T105016",
+            "S2B_MSIL1C_20180517T083559_N0206_R064_T36UXA_20180517T113030",
+            "S2A_MSIL1C_20180522T083601_N0206_R064_T36UXA_20180522T105656",
+            "S2A_MSIL1C_20180601T083651_N0206_R064_T36UXA_20180601T105454",
+            "S2B_MSIL1C_20180606T084009_N0206_R064_T36UXA_20180606T123007"
+          ],
+          "stable_only_earlier_scene_options": []
+        },
+        {
+          "pre_date": "2018-03-31",
+          "post_date": "2018-04-30",
+          "pre_scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527",
+          "post_scene_id": "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+          "interval_days": 30,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            99.8039,
+            0
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            }
+          ]
+        },
+        {
+          "pre_date": "2018-03-31",
+          "post_date": "2018-04-25",
+          "pre_scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527",
+          "post_scene_id": "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243",
+          "interval_days": 25,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            99.8039,
+            67.456
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "site_id": "site-27",
+      "query": {
+        "url": "https://earth-search.aws.element84.com/v1/search",
+        "collection": "sentinel-2-l1c",
+        "page_limit": 50,
+        "maximum_pages": 4,
+        "maximum_response_bytes": 2097152,
+        "timeout_seconds": 12,
+        "stac_datetime": "2017-07-26T00:00:00Z/2017-10-09T23:59:59.999999Z"
+      },
+      "limits": {
+        "crs": "EPSG:32636",
+        "core_union_bounds": [
+          694040.0,
+          5524920.0,
+          694680.0,
+          5525560.0
+        ],
+        "qa_context_union_bounds": [
+          692840.0,
+          5523720.0,
+          695880.0,
+          5526760.0
+        ]
+      },
+      "provider_matched": 21,
+      "pagination_complete": true,
+      "pages": [
+        {
+          "response": "raw/page-01.json",
+          "sha256": "0f7f9a91f9d98bd88bb797dadfed4b6f981884f71a0c909ce3af206ac76596bb",
+          "bytes": 222422,
+          "request": {
+            "url": "https://earth-search.aws.element84.com/v1/search",
+            "method": "POST",
+            "body": {
+              "collections": [
+                "sentinel-2-l1c"
+              ],
+              "datetime": "2017-07-26T00:00:00Z/2017-10-09T23:59:59.999999Z",
+              "bbox": [
+                35.68176483973452,
+                49.83387569054514,
+                35.725527477942116,
+                49.862173665632326
+              ],
+              "limit": 50
+            }
+          },
+          "returned_items": 21
+        },
+        {
+          "response": "raw/page-02.json",
+          "sha256": "ed4a24c63858b4462097c35ff6276961568290db707c301264018893f18b4671",
+          "bytes": 275,
+          "request": {
+            "url": "https://earth-search.aws.element84.com/v1/search",
+            "method": "POST",
+            "body": {
+              "datetime": "2017-07-26T00:00:00Z/2017-10-09T23:59:59.999999Z",
+              "collections": [
+                "sentinel-2-l1c"
+              ],
+              "bbox": [
+                35.68176483973452,
+                49.83387569054514,
+                35.725527477942116,
+                49.862173665632326
+              ],
+              "limit": 50,
+              "next": "2017-07-26T08:36:55.575000Z,S2A_36UXA_20170726_0_L1C,sentinel-2-l1c"
+            }
+          },
+          "returned_items": 0
+        }
+      ],
+      "items": [
+        {
+          "item_id": "S2A_36UXA_20170726_0_L1C",
+          "item_sha256": "652a71f06a8c35a271f46e88ed59947e703e7b99acb625d13243f661af35c8d9",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 20.7331,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20170726T083601_N0205_R064_T36UXA_20170726T083655",
+          "acquisition_date": "2017-07-26",
+          "tile": "36UXA",
+          "processing_baseline": "02.05",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2017/7/26/0/",
+          "product_key": "products/2017/7/26/S2A_MSIL1C_20170726T083601_N0205_R064_T36UXA_20170726T083655/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20170729_0_L1C",
+          "item_sha256": "4425387e48429a7f661eb82f9e04fb7df80135f2ffe249c9c82333d39af252ba",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 88.1352,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20170729T085021_N0205_R107_T36UXA_20170729T085325",
+          "acquisition_date": "2017-07-29",
+          "tile": "36UXA",
+          "processing_baseline": "02.05",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2017/7/29/0/",
+          "product_key": "products/2017/7/29/S2A_MSIL1C_20170729T085021_N0205_R107_T36UXA_20170729T085325/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20170805_0_L1C",
+          "item_sha256": "4d7331707ffbd935cab35f0bd6e1837eb39c54c9010917d1da242973f4b4d758",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 2.6691,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20170805T084021_N0205_R064_T36UXA_20170805T084026",
+          "acquisition_date": "2017-08-05",
+          "tile": "36UXA",
+          "processing_baseline": "02.05",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2017/8/5/0/",
+          "product_key": "products/2017/8/5/S2A_MSIL1C_20170805T084021_N0205_R064_T36UXA_20170805T084026/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20170808_0_L1C",
+          "item_sha256": "2c26b32a04e1572993ce2293948267ba3bb065aa784dada3fae473d030a37f16",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 13.4316,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20170808T084601_N0205_R107_T36UXA_20170808T085345",
+          "acquisition_date": "2017-08-08",
+          "tile": "36UXA",
+          "processing_baseline": "02.05",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2017/8/8/0/",
+          "product_key": "products/2017/8/8/S2A_MSIL1C_20170808T084601_N0205_R107_T36UXA_20170808T085345/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20170815_0_L1C",
+          "item_sha256": "484676c8a7f475448301112526342211ffd1ef5a8ab59fb13a342263a217cddf",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 10.8742,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20170815T083601_N0205_R064_T36UXA_20170815T083905",
+          "acquisition_date": "2017-08-15",
+          "tile": "36UXA",
+          "processing_baseline": "02.05",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2017/8/15/0/",
+          "product_key": "products/2017/8/15/S2A_MSIL1C_20170815T083601_N0205_R064_T36UXA_20170815T083905/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20170818_0_L1C",
+          "item_sha256": "86d3ebdd5b8f0351529915840e59d4d5c9482b928f0d5b889943dbf12ee0a93d",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20170818T085021_N0205_R107_T36UXA_20170818T085017",
+          "acquisition_date": "2017-08-18",
+          "tile": "36UXA",
+          "processing_baseline": "02.05",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2017/8/18/0/",
+          "product_key": "products/2017/8/18/S2A_MSIL1C_20170818T085021_N0205_R107_T36UXA_20170818T085017/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20170825_0_L1C",
+          "item_sha256": "0fc2c414cca0742d90d0cebca66efb8bae616352a6db9a412fc3821bfcb209fa",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 9.0774,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20170825T084011_N0205_R064_T36UXA_20170825T084014",
+          "acquisition_date": "2017-08-25",
+          "tile": "36UXA",
+          "processing_baseline": "02.05",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2017/8/25/0/",
+          "product_key": "products/2017/8/25/S2A_MSIL1C_20170825T084011_N0205_R064_T36UXA_20170825T084014/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20170828_0_L1C",
+          "item_sha256": "bd63c1f60b8e83c53e3cf920aea0d317cd62346a090366869d48f064018855ba",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 14.6262,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20170828T084601_N0205_R107_T36UXA_20170828T085434",
+          "acquisition_date": "2017-08-28",
+          "tile": "36UXA",
+          "processing_baseline": "02.05",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2017/8/28/0/",
+          "product_key": "products/2017/8/28/S2A_MSIL1C_20170828T084601_N0205_R107_T36UXA_20170828T085434/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20170907_0_L1C",
+          "item_sha256": "7303b50caa3066f9503ddf9b4f17dace87a744b89a420da8f9e69e26d2402eef",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 74.2821,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20170907T085011_N0205_R107_T36UXA_20170907T085314",
+          "acquisition_date": "2017-09-07",
+          "tile": "36UXA",
+          "processing_baseline": "02.05",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2017/9/7/0/",
+          "product_key": "products/2017/9/7/S2A_MSIL1C_20170907T085011_N0205_R107_T36UXA_20170907T085314/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20170914_0_L1C",
+          "item_sha256": "b2b4ce2c156acebe169db0562933ebcd88e4f3aefe8a16081ab48612654aca12",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 74.6787,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20170914T084011_N0205_R064_T36UXA_20170914T084017",
+          "acquisition_date": "2017-09-14",
+          "tile": "36UXA",
+          "processing_baseline": "02.05",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2017/9/14/0/",
+          "product_key": "products/2017/9/14/S2A_MSIL1C_20170914T084011_N0205_R064_T36UXA_20170914T084017/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20170917_0_L1C",
+          "item_sha256": "ec389dbd6df1adf96a745a15dc7001225b3f1a507762351210965fc8c7ec514a",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0.0577,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20170917T084611_N0205_R107_T36UXA_20170917T085448",
+          "acquisition_date": "2017-09-17",
+          "tile": "36UXA",
+          "processing_baseline": "02.05",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2017/9/17/0/",
+          "product_key": "products/2017/9/17/S2A_MSIL1C_20170917T084611_N0205_R107_T36UXA_20170917T085448/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20170924_0_L1C",
+          "item_sha256": "8d53093b0518bbac12de713c1961ff2edb57158e1782ec3e9f7ef2c85c3cb519",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 81.7696,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20170924T083701_N0205_R064_T36UXA_20170924T083955",
+          "acquisition_date": "2017-09-24",
+          "tile": "36UXA",
+          "processing_baseline": "02.05",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2017/9/24/0/",
+          "product_key": "products/2017/9/24/S2A_MSIL1C_20170924T083701_N0205_R064_T36UXA_20170924T083955/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20170927_0_L1C",
+          "item_sha256": "dc03eb0de2f28a13cd0b6fbd3ae64c2a33574fba01dcf63eba3a14e84168db5f",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 58.7652,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20170927T085011_N0205_R107_T36UXA_20170927T085338",
+          "acquisition_date": "2017-09-27",
+          "tile": "36UXA",
+          "processing_baseline": "02.05",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2017/9/27/0/",
+          "product_key": "products/2017/9/27/S2A_MSIL1C_20170927T085011_N0205_R107_T36UXA_20170927T085338/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20171007_0_L1C",
+          "item_sha256": "a2063171cf31edaf88b15538f8c2ca8f9db507235ff65965474e1ebf4623915d",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 57.8977,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20171007T084831_N0205_R107_T36UXA_20171007T084832",
+          "acquisition_date": "2017-10-07",
+          "tile": "36UXA",
+          "processing_baseline": "02.05",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2017/10/7/0/",
+          "product_key": "products/2017/10/7/S2A_MSIL1C_20171007T084831_N0205_R107_T36UXA_20171007T084832/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UXA_20170731_0_L1C",
+          "item_sha256": "8aaab2213a051ec7a113790babaefafdf220aef355112711022a2f330a88c531",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0.0286,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20170731T084009_N0205_R064_T36UXA_20170731T084012",
+          "acquisition_date": "2017-07-31",
+          "tile": "36UXA",
+          "processing_baseline": "02.05",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2017/7/31/0/",
+          "product_key": "products/2017/7/31/S2B_MSIL1C_20170731T084009_N0205_R064_T36UXA_20170731T084012/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UXA_20170731_1_L1C",
+          "item_sha256": "6d3c47286333ac71560b4e695eb7955c723770eb8c09b108495eee85990fb8f5",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0.0286,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20170731T084009_N0208_R064_T36UXA_20191219T153204",
+          "acquisition_date": "2017-07-31",
+          "tile": "36UXA",
+          "processing_baseline": "02.08",
+          "relative_orbit": 64,
+          "sequence": "1",
+          "tile_prefix": "tiles/36/U/XA/2017/7/31/1/",
+          "product_key": "products/2017/7/31/S2B_MSIL1C_20170731T084009_N0208_R064_T36UXA_20191219T153204/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UXA_20170803_0_L1C",
+          "item_sha256": "a3c22ad0fedd0ebf58e411729dd1f5058a20b0209b260cfd6ff074597dca9104",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0.0951,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20170803T084559_N0205_R107_T36UXA_20170803T085516",
+          "acquisition_date": "2017-08-03",
+          "tile": "36UXA",
+          "processing_baseline": "02.05",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2017/8/3/0/",
+          "product_key": "products/2017/8/3/S2B_MSIL1C_20170803T084559_N0205_R107_T36UXA_20170803T085516/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UXA_20170813_0_L1C",
+          "item_sha256": "491559120e42b92fbbe1f45f897e3eb6e5cfc5286984293c00055adc6ff82394",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20170813T085019_N0205_R107_T36UXA_20170813T085353",
+          "acquisition_date": "2017-08-13",
+          "tile": "36UXA",
+          "processing_baseline": "02.05",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2017/8/13/0/",
+          "product_key": "products/2017/8/13/S2B_MSIL1C_20170813T085019_N0205_R107_T36UXA_20170813T085353/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UXA_20170820_0_L1C",
+          "item_sha256": "02dea42c527957520371e258766fc9fbf51a4972eaa2f39be6471dc27da06a99",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20170820T084009_N0205_R064_T36UXA_20170820T084010",
+          "acquisition_date": "2017-08-20",
+          "tile": "36UXA",
+          "processing_baseline": "02.05",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2017/8/20/0/",
+          "product_key": "products/2017/8/20/S2B_MSIL1C_20170820T084009_N0205_R064_T36UXA_20170820T084010/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UXA_20170909_0_L1C",
+          "item_sha256": "e90ff102ef7ec1a27f66a5de5344bba895fa66bd951c60252ef4f197f6e0fae7",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 2.106,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20170909T084009_N0205_R064_T36UXA_20170909T084055",
+          "acquisition_date": "2017-09-09",
+          "tile": "36UXA",
+          "processing_baseline": "02.05",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2017/9/9/0/",
+          "product_key": "products/2017/9/9/S2B_MSIL1C_20170909T084009_N0205_R064_T36UXA_20170909T084055/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UXA_20170912_0_L1C",
+          "item_sha256": "d863ebb492d9c0b5f27870223539a4d27c0f8a94aeb922e01d40b35e9b2ed096",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 0,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20170912T084549_N0205_R107_T36UXA_20170912T085508",
+          "acquisition_date": "2017-09-12",
+          "tile": "36UXA",
+          "processing_baseline": "02.05",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2017/9/12/0/",
+          "product_key": "products/2017/9/12/S2B_MSIL1C_20170912T084549_N0205_R107_T36UXA_20170912T085508/metadata.xml"
+        }
+      ],
+      "comparison_options": [
+        {
+          "pre_date": "2017-08-20",
+          "post_date": "2017-08-25",
+          "pre_scene_id": "S2B_MSIL1C_20170820T084009_N0205_R064_T36UXA_20170820T084010",
+          "post_scene_id": "S2A_MSIL1C_20170825T084011_N0205_R064_T36UXA_20170825T084014",
+          "interval_days": 5,
+          "relative_orbit": 64,
+          "processing_baseline": "02.05",
+          "catalogue_cloud_percent": [
+            0,
+            9.0774
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20170909T084009_N0205_R064_T36UXA_20170909T084055",
+            "S2A_MSIL1C_20170914T084011_N0205_R064_T36UXA_20170914T084017",
+            "S2A_MSIL1C_20170924T083701_N0205_R064_T36UXA_20170924T083955"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2017-07-26",
+              "scene_id": "S2A_MSIL1C_20170726T083601_N0205_R064_T36UXA_20170726T083655"
+            },
+            {
+              "date": "2017-07-31",
+              "scene_id": "S2B_MSIL1C_20170731T084009_N0205_R064_T36UXA_20170731T084012"
+            },
+            {
+              "date": "2017-08-05",
+              "scene_id": "S2A_MSIL1C_20170805T084021_N0205_R064_T36UXA_20170805T084026"
+            },
+            {
+              "date": "2017-08-15",
+              "scene_id": "S2A_MSIL1C_20170815T083601_N0205_R064_T36UXA_20170815T083905"
+            }
+          ]
+        },
+        {
+          "pre_date": "2017-07-31",
+          "post_date": "2017-08-25",
+          "pre_scene_id": "S2B_MSIL1C_20170731T084009_N0205_R064_T36UXA_20170731T084012",
+          "post_scene_id": "S2A_MSIL1C_20170825T084011_N0205_R064_T36UXA_20170825T084014",
+          "interval_days": 25,
+          "relative_orbit": 64,
+          "processing_baseline": "02.05",
+          "catalogue_cloud_percent": [
+            0.0286,
+            9.0774
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20170909T084009_N0205_R064_T36UXA_20170909T084055",
+            "S2A_MSIL1C_20170914T084011_N0205_R064_T36UXA_20170914T084017",
+            "S2A_MSIL1C_20170924T083701_N0205_R064_T36UXA_20170924T083955"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2017-07-26",
+              "scene_id": "S2A_MSIL1C_20170726T083601_N0205_R064_T36UXA_20170726T083655"
+            }
+          ]
+        },
+        {
+          "pre_date": "2017-08-05",
+          "post_date": "2017-08-25",
+          "pre_scene_id": "S2A_MSIL1C_20170805T084021_N0205_R064_T36UXA_20170805T084026",
+          "post_scene_id": "S2A_MSIL1C_20170825T084011_N0205_R064_T36UXA_20170825T084014",
+          "interval_days": 20,
+          "relative_orbit": 64,
+          "processing_baseline": "02.05",
+          "catalogue_cloud_percent": [
+            2.6691,
+            9.0774
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20170909T084009_N0205_R064_T36UXA_20170909T084055",
+            "S2A_MSIL1C_20170914T084011_N0205_R064_T36UXA_20170914T084017",
+            "S2A_MSIL1C_20170924T083701_N0205_R064_T36UXA_20170924T083955"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2017-07-26",
+              "scene_id": "S2A_MSIL1C_20170726T083601_N0205_R064_T36UXA_20170726T083655"
+            },
+            {
+              "date": "2017-07-31",
+              "scene_id": "S2B_MSIL1C_20170731T084009_N0205_R064_T36UXA_20170731T084012"
+            }
+          ]
+        },
+        {
+          "pre_date": "2017-08-15",
+          "post_date": "2017-08-25",
+          "pre_scene_id": "S2A_MSIL1C_20170815T083601_N0205_R064_T36UXA_20170815T083905",
+          "post_scene_id": "S2A_MSIL1C_20170825T084011_N0205_R064_T36UXA_20170825T084014",
+          "interval_days": 10,
+          "relative_orbit": 64,
+          "processing_baseline": "02.05",
+          "catalogue_cloud_percent": [
+            10.8742,
+            9.0774
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20170909T084009_N0205_R064_T36UXA_20170909T084055",
+            "S2A_MSIL1C_20170914T084011_N0205_R064_T36UXA_20170914T084017",
+            "S2A_MSIL1C_20170924T083701_N0205_R064_T36UXA_20170924T083955"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2017-07-26",
+              "scene_id": "S2A_MSIL1C_20170726T083601_N0205_R064_T36UXA_20170726T083655"
+            },
+            {
+              "date": "2017-07-31",
+              "scene_id": "S2B_MSIL1C_20170731T084009_N0205_R064_T36UXA_20170731T084012"
+            },
+            {
+              "date": "2017-08-05",
+              "scene_id": "S2A_MSIL1C_20170805T084021_N0205_R064_T36UXA_20170805T084026"
+            }
+          ]
+        },
+        {
+          "pre_date": "2017-08-18",
+          "post_date": "2017-08-28",
+          "pre_scene_id": "S2A_MSIL1C_20170818T085021_N0205_R107_T36UXA_20170818T085017",
+          "post_scene_id": "S2A_MSIL1C_20170828T084601_N0205_R107_T36UXA_20170828T085434",
+          "interval_days": 10,
+          "relative_orbit": 107,
+          "processing_baseline": "02.05",
+          "catalogue_cloud_percent": [
+            0,
+            14.6262
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20170907T085011_N0205_R107_T36UXA_20170907T085314",
+            "S2B_MSIL1C_20170912T084549_N0205_R107_T36UXA_20170912T085508",
+            "S2A_MSIL1C_20170917T084611_N0205_R107_T36UXA_20170917T085448",
+            "S2A_MSIL1C_20170927T085011_N0205_R107_T36UXA_20170927T085338",
+            "S2A_MSIL1C_20171007T084831_N0205_R107_T36UXA_20171007T084832"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2017-07-29",
+              "scene_id": "S2A_MSIL1C_20170729T085021_N0205_R107_T36UXA_20170729T085325"
+            },
+            {
+              "date": "2017-08-03",
+              "scene_id": "S2B_MSIL1C_20170803T084559_N0205_R107_T36UXA_20170803T085516"
+            },
+            {
+              "date": "2017-08-08",
+              "scene_id": "S2A_MSIL1C_20170808T084601_N0205_R107_T36UXA_20170808T085345"
+            },
+            {
+              "date": "2017-08-13",
+              "scene_id": "S2B_MSIL1C_20170813T085019_N0205_R107_T36UXA_20170813T085353"
+            }
+          ]
+        },
+        {
+          "pre_date": "2017-08-13",
+          "post_date": "2017-08-28",
+          "pre_scene_id": "S2B_MSIL1C_20170813T085019_N0205_R107_T36UXA_20170813T085353",
+          "post_scene_id": "S2A_MSIL1C_20170828T084601_N0205_R107_T36UXA_20170828T085434",
+          "interval_days": 15,
+          "relative_orbit": 107,
+          "processing_baseline": "02.05",
+          "catalogue_cloud_percent": [
+            0,
+            14.6262
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20170907T085011_N0205_R107_T36UXA_20170907T085314",
+            "S2B_MSIL1C_20170912T084549_N0205_R107_T36UXA_20170912T085508",
+            "S2A_MSIL1C_20170917T084611_N0205_R107_T36UXA_20170917T085448",
+            "S2A_MSIL1C_20170927T085011_N0205_R107_T36UXA_20170927T085338",
+            "S2A_MSIL1C_20171007T084831_N0205_R107_T36UXA_20171007T084832"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2017-07-29",
+              "scene_id": "S2A_MSIL1C_20170729T085021_N0205_R107_T36UXA_20170729T085325"
+            },
+            {
+              "date": "2017-08-03",
+              "scene_id": "S2B_MSIL1C_20170803T084559_N0205_R107_T36UXA_20170803T085516"
+            },
+            {
+              "date": "2017-08-08",
+              "scene_id": "S2A_MSIL1C_20170808T084601_N0205_R107_T36UXA_20170808T085345"
+            }
+          ]
+        },
+        {
+          "pre_date": "2017-08-03",
+          "post_date": "2017-08-28",
+          "pre_scene_id": "S2B_MSIL1C_20170803T084559_N0205_R107_T36UXA_20170803T085516",
+          "post_scene_id": "S2A_MSIL1C_20170828T084601_N0205_R107_T36UXA_20170828T085434",
+          "interval_days": 25,
+          "relative_orbit": 107,
+          "processing_baseline": "02.05",
+          "catalogue_cloud_percent": [
+            0.0951,
+            14.6262
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20170907T085011_N0205_R107_T36UXA_20170907T085314",
+            "S2B_MSIL1C_20170912T084549_N0205_R107_T36UXA_20170912T085508",
+            "S2A_MSIL1C_20170917T084611_N0205_R107_T36UXA_20170917T085448",
+            "S2A_MSIL1C_20170927T085011_N0205_R107_T36UXA_20170927T085338",
+            "S2A_MSIL1C_20171007T084831_N0205_R107_T36UXA_20171007T084832"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2017-07-29",
+              "scene_id": "S2A_MSIL1C_20170729T085021_N0205_R107_T36UXA_20170729T085325"
+            }
+          ]
+        },
+        {
+          "pre_date": "2017-08-08",
+          "post_date": "2017-08-28",
+          "pre_scene_id": "S2A_MSIL1C_20170808T084601_N0205_R107_T36UXA_20170808T085345",
+          "post_scene_id": "S2A_MSIL1C_20170828T084601_N0205_R107_T36UXA_20170828T085434",
+          "interval_days": 20,
+          "relative_orbit": 107,
+          "processing_baseline": "02.05",
+          "catalogue_cloud_percent": [
+            13.4316,
+            14.6262
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20170907T085011_N0205_R107_T36UXA_20170907T085314",
+            "S2B_MSIL1C_20170912T084549_N0205_R107_T36UXA_20170912T085508",
+            "S2A_MSIL1C_20170917T084611_N0205_R107_T36UXA_20170917T085448",
+            "S2A_MSIL1C_20170927T085011_N0205_R107_T36UXA_20170927T085338",
+            "S2A_MSIL1C_20171007T084831_N0205_R107_T36UXA_20171007T084832"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2017-07-29",
+              "scene_id": "S2A_MSIL1C_20170729T085021_N0205_R107_T36UXA_20170729T085325"
+            },
+            {
+              "date": "2017-08-03",
+              "scene_id": "S2B_MSIL1C_20170803T084559_N0205_R107_T36UXA_20170803T085516"
+            }
+          ]
+        },
+        {
+          "pre_date": "2017-07-26",
+          "post_date": "2017-08-25",
+          "pre_scene_id": "S2A_MSIL1C_20170726T083601_N0205_R064_T36UXA_20170726T083655",
+          "post_scene_id": "S2A_MSIL1C_20170825T084011_N0205_R064_T36UXA_20170825T084014",
+          "interval_days": 30,
+          "relative_orbit": 64,
+          "processing_baseline": "02.05",
+          "catalogue_cloud_percent": [
+            20.7331,
+            9.0774
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20170909T084009_N0205_R064_T36UXA_20170909T084055",
+            "S2A_MSIL1C_20170914T084011_N0205_R064_T36UXA_20170914T084017",
+            "S2A_MSIL1C_20170924T083701_N0205_R064_T36UXA_20170924T083955"
+          ],
+          "stable_only_earlier_scene_options": []
+        },
+        {
+          "pre_date": "2017-07-29",
+          "post_date": "2017-08-28",
+          "pre_scene_id": "S2A_MSIL1C_20170729T085021_N0205_R107_T36UXA_20170729T085325",
+          "post_scene_id": "S2A_MSIL1C_20170828T084601_N0205_R107_T36UXA_20170828T085434",
+          "interval_days": 30,
+          "relative_orbit": 107,
+          "processing_baseline": "02.05",
+          "catalogue_cloud_percent": [
+            88.1352,
+            14.6262
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20170907T085011_N0205_R107_T36UXA_20170907T085314",
+            "S2B_MSIL1C_20170912T084549_N0205_R107_T36UXA_20170912T085508",
+            "S2A_MSIL1C_20170917T084611_N0205_R107_T36UXA_20170917T085448",
+            "S2A_MSIL1C_20170927T085011_N0205_R107_T36UXA_20170927T085338",
+            "S2A_MSIL1C_20171007T084831_N0205_R107_T36UXA_20171007T084832"
+          ],
+          "stable_only_earlier_scene_options": []
+        }
+      ]
+    }
+  ],
+  "rank_rule": "Later compatible follow-up availability, then lowest maximum and total scene cloud percent, earliest post, shorter interval and exact product IDs.",
+  "scope": "Catalogue evidence only. Scene cloud and footprint do not establish crop clarity.",
+  "acquisition_roster_selected": false,
+  "labels_approved": 0
+}

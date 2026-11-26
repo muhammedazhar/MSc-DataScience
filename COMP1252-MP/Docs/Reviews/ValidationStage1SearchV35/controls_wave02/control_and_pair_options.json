@@ -1,0 +1,2490 @@
+{
+  "schema_version": 35,
+  "sites": [
+    {
+      "site_id": "site-17",
+      "control": {
+        "site_id": "site-17",
+        "event_id": "event-438947b8a3fe8a2d1738",
+        "map_receipt": {
+          "url": "https://api.openstreetmap.org/api/0.6/map.json?bbox=34.497042%2C50.146307%2C34.517601%2C50.159517",
+          "bbox_wgs84": [
+            34.497042,
+            50.146307,
+            34.517601,
+            50.159517
+          ],
+          "map_pad_metres": 400,
+          "max_response_bytes": 2097152,
+          "timeout_seconds": 12,
+          "status": "success",
+          "observed_at_utc": "2026-11-26T21:44:41+00:00",
+          "provider_payload_bytes": 99848,
+          "provider_payload_sha256": "d7f55516d892af62d9911421e06c948f5a613516c0381f93c5263573b0428968",
+          "snapshot": "raw/site-17-osm-map.json",
+          "snapshot_sha256": "24329f6f35d3d92403d4a1f02390f0536737148a728b07031e7e925b7aa4695b"
+        },
+        "disposition": "alternate_geometry",
+        "original_control": {
+          "row": 2,
+          "col": 2,
+          "width": 16,
+          "height": 16,
+          "pixels": 256,
+          "bounds": [
+            607380.0,
+            5556860.0,
+            607540.0,
+            5557020.0
+          ],
+          "crs": "EPSG:32636",
+          "context_bounds": [
+            607360.0,
+            5556840.0,
+            607560.0,
+            5557040.0
+          ],
+          "context_width": 20,
+          "context_height": 20,
+          "context_pixels": 400,
+          "context_radius_pixels": 2,
+          "catalogue_exclusion_margin_metres": 20,
+          "control_class_status": "unreviewed",
+          "pixel_qa_status": "unassessed",
+          "independent_site": false,
+          "evaluation_approved": false
+        },
+        "original_map_evidence": {
+          "mapped_road_crosses_context": true,
+          "nearest_mapped_road_metres": 0.0,
+          "mapped_roads_within_20m": [
+            {
+              "id": 181576589,
+              "mapped_tags": {
+                "highway": "track"
+              },
+              "last_edit_utc": "2012-12-24T18:57:29Z"
+            }
+          ],
+          "mapped_woodland_covers_context": true,
+          "mapped_woodland_boundary_within_20m": false,
+          "mapped_nonwood_within_20m": false
+        },
+        "alternate_control": {
+          "row": 2,
+          "col": 6,
+          "width": 16,
+          "height": 16,
+          "pixels": 256,
+          "bounds": [
+            607420.0,
+            5556860.0,
+            607580.0,
+            5557020.0
+          ],
+          "crs": "EPSG:32636",
+          "context_bounds": [
+            607400.0,
+            5556840.0,
+            607600.0,
+            5557040.0
+          ],
+          "context_width": 20,
+          "context_height": 20,
+          "context_pixels": 400,
+          "context_radius_pixels": 2,
+          "catalogue_exclusion_margin_metres": 20,
+          "control_class_status": "unreviewed",
+          "pixel_qa_status": "unassessed",
+          "independent_site": false,
+          "evaluation_approved": false
+        },
+        "selected_control": {
+          "row": 2,
+          "col": 6,
+          "width": 16,
+          "height": 16,
+          "pixels": 256,
+          "bounds": [
+            607420.0,
+            5556860.0,
+            607580.0,
+            5557020.0
+          ],
+          "crs": "EPSG:32636",
+          "context_bounds": [
+            607400.0,
+            5556840.0,
+            607600.0,
+            5557040.0
+          ],
+          "context_width": 20,
+          "context_height": 20,
+          "context_pixels": 400,
+          "context_radius_pixels": 2,
+          "catalogue_exclusion_margin_metres": 20,
+          "control_class_status": "unreviewed",
+          "pixel_qa_status": "unassessed",
+          "independent_site": false,
+          "evaluation_approved": false
+        },
+        "selected_map_evidence": {
+          "mapped_road_crosses_context": false,
+          "nearest_mapped_road_metres": 27.737,
+          "mapped_roads_within_20m": [],
+          "mapped_woodland_covers_context": true,
+          "mapped_woodland_boundary_within_20m": false,
+          "mapped_nonwood_within_20m": false
+        },
+        "roads_checked": 6,
+        "woodland_ways_checked": 1,
+        "nonwood_ways_checked": 2,
+        "incomplete_way_ids": [],
+        "uninterpreted_relation_ids": [],
+        "control_class_status": "unverified",
+        "scope": "Current OSM vector screening. Incomplete ways and relations remain unassessed. Absence of mapped exclusions and edit dates do not establish forest class or its history.",
+        "attribution": "\u00a9 OpenStreetMap contributors, https://www.openstreetmap.org/copyright"
+      },
+      "sentinel_options": [
+        {
+          "pre_date": "2018-04-10",
+          "post_date": "2018-04-30",
+          "pre_scene_id": "S2B_MSIL1C_20180410T084559_N0206_R107_T36UXA_20180410T114307",
+          "post_scene_id": "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+          "interval_days": 20,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            0,
+            0
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            },
+            {
+              "date": "2018-03-31",
+              "scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527"
+            },
+            {
+              "date": "2018-04-05",
+              "scene_id": "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935"
+            }
+          ],
+          "site_id": "site-17",
+          "group_id": "group-fc6c1169dafd8f14645f",
+          "sentinel_minus_landsat_before_days": 1,
+          "sentinel_minus_landsat_after_days": -11,
+          "date_gap_notes": {
+            "before": "landsat_earlier",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            0,
+            1,
+            1,
+            11,
+            0,
+            20,
+            "S2B_MSIL1C_20180410T084559_N0206_R107_T36UXA_20180410T114307",
+            "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717"
+          ]
+        },
+        {
+          "pre_date": "2018-04-15",
+          "post_date": "2018-04-30",
+          "pre_scene_id": "S2A_MSIL1C_20180415T084601_N0206_R107_T36UXA_20180415T110649",
+          "post_scene_id": "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+          "interval_days": 15,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            0,
+            0
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            },
+            {
+              "date": "2018-03-31",
+              "scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527"
+            },
+            {
+              "date": "2018-04-05",
+              "scene_id": "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935"
+            },
+            {
+              "date": "2018-04-10",
+              "scene_id": "S2B_MSIL1C_20180410T084559_N0206_R107_T36UXA_20180410T114307"
+            }
+          ],
+          "site_id": "site-17",
+          "group_id": "group-fc6c1169dafd8f14645f",
+          "sentinel_minus_landsat_before_days": 6,
+          "sentinel_minus_landsat_after_days": -11,
+          "date_gap_notes": {
+            "before": "landsat_earlier",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            0,
+            1,
+            6,
+            11,
+            0,
+            15,
+            "S2A_MSIL1C_20180415T084601_N0206_R107_T36UXA_20180415T110649",
+            "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717"
+          ]
+        },
+        {
+          "pre_date": "2018-04-07",
+          "post_date": "2018-05-02",
+          "pre_scene_id": "S2B_MSIL1C_20180407T083559_N0206_R064_T36UXA_20180407T123555",
+          "post_scene_id": "S2A_MSIL1C_20180502T083601_N0206_R064_T36UXA_20180502T122811",
+          "interval_days": 25,
+          "relative_orbit": 64,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            0.0229,
+            0
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20180507T083559_N0206_R064_T36UXA_20180507T105016",
+            "S2B_MSIL1C_20180517T083559_N0206_R064_T36UXA_20180517T113030",
+            "S2A_MSIL1C_20180522T083601_N0206_R064_T36UXA_20180522T105656",
+            "S2A_MSIL1C_20180601T083651_N0206_R064_T36UXA_20180601T105454",
+            "S2B_MSIL1C_20180606T084009_N0206_R064_T36UXA_20180606T123007"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-23",
+              "scene_id": "S2A_MSIL1C_20180323T083621_N0206_R064_T36UXA_20180323T105303"
+            }
+          ],
+          "site_id": "site-17",
+          "group_id": "group-fc6c1169dafd8f14645f",
+          "sentinel_minus_landsat_before_days": -2,
+          "sentinel_minus_landsat_after_days": -9,
+          "date_gap_notes": {
+            "before": "landsat_later",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            0.0229,
+            0,
+            2,
+            9,
+            0.0229,
+            25,
+            "S2B_MSIL1C_20180407T083559_N0206_R064_T36UXA_20180407T123555",
+            "S2A_MSIL1C_20180502T083601_N0206_R064_T36UXA_20180502T122811"
+          ]
+        },
+        {
+          "pre_date": "2018-04-20",
+          "post_date": "2018-04-30",
+          "pre_scene_id": "S2B_MSIL1C_20180420T084559_N0206_R107_T36UXA_20180420T101821",
+          "post_scene_id": "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+          "interval_days": 10,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            0.2149,
+            0
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            },
+            {
+              "date": "2018-03-31",
+              "scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527"
+            },
+            {
+              "date": "2018-04-05",
+              "scene_id": "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935"
+            },
+            {
+              "date": "2018-04-10",
+              "scene_id": "S2B_MSIL1C_20180410T084559_N0206_R107_T36UXA_20180410T114307"
+            },
+            {
+              "date": "2018-04-15",
+              "scene_id": "S2A_MSIL1C_20180415T084601_N0206_R107_T36UXA_20180415T110649"
+            }
+          ],
+          "site_id": "site-17",
+          "group_id": "group-fc6c1169dafd8f14645f",
+          "sentinel_minus_landsat_before_days": 11,
+          "sentinel_minus_landsat_after_days": -11,
+          "date_gap_notes": {
+            "before": "landsat_earlier",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            0.2149,
+            1,
+            11,
+            11,
+            0.2149,
+            10,
+            "S2B_MSIL1C_20180420T084559_N0206_R107_T36UXA_20180420T101821",
+            "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717"
+          ]
+        },
+        {
+          "pre_date": "2018-04-07",
+          "post_date": "2018-04-22",
+          "pre_scene_id": "S2B_MSIL1C_20180407T083559_N0206_R064_T36UXA_20180407T123555",
+          "post_scene_id": "S2A_MSIL1C_20180422T083601_N0206_R064_T36UXA_20180422T104356",
+          "interval_days": 15,
+          "relative_orbit": 64,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            0.0229,
+            3.3076
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20180502T083601_N0206_R064_T36UXA_20180502T122811",
+            "S2B_MSIL1C_20180507T083559_N0206_R064_T36UXA_20180507T105016",
+            "S2B_MSIL1C_20180517T083559_N0206_R064_T36UXA_20180517T113030",
+            "S2A_MSIL1C_20180522T083601_N0206_R064_T36UXA_20180522T105656",
+            "S2A_MSIL1C_20180601T083651_N0206_R064_T36UXA_20180601T105454",
+            "S2B_MSIL1C_20180606T084009_N0206_R064_T36UXA_20180606T123007"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-23",
+              "scene_id": "S2A_MSIL1C_20180323T083621_N0206_R064_T36UXA_20180323T105303"
+            }
+          ],
+          "site_id": "site-17",
+          "group_id": "group-fc6c1169dafd8f14645f",
+          "sentinel_minus_landsat_before_days": -2,
+          "sentinel_minus_landsat_after_days": -19,
+          "date_gap_notes": {
+            "before": "landsat_later",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            3.3076,
+            0,
+            2,
+            19,
+            0.0229,
+            15,
+            "S2B_MSIL1C_20180407T083559_N0206_R064_T36UXA_20180407T123555",
+            "S2A_MSIL1C_20180422T083601_N0206_R064_T36UXA_20180422T104356"
+          ]
+        },
+        {
+          "pre_date": "2018-04-05",
+          "post_date": "2018-04-30",
+          "pre_scene_id": "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935",
+          "post_scene_id": "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+          "interval_days": 25,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            12.4589,
+            0
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            },
+            {
+              "date": "2018-03-31",
+              "scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527"
+            }
+          ],
+          "site_id": "site-17",
+          "group_id": "group-fc6c1169dafd8f14645f",
+          "sentinel_minus_landsat_before_days": -4,
+          "sentinel_minus_landsat_after_days": -11,
+          "date_gap_notes": {
+            "before": "landsat_later",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            12.4589,
+            0,
+            4,
+            11,
+            12.4589,
+            25,
+            "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935",
+            "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717"
+          ]
+        },
+        {
+          "pre_date": "2018-04-12",
+          "post_date": "2018-05-02",
+          "pre_scene_id": "S2A_MSIL1C_20180412T083651_N0206_R064_T36UXA_20180412T104659",
+          "post_scene_id": "S2A_MSIL1C_20180502T083601_N0206_R064_T36UXA_20180502T122811",
+          "interval_days": 20,
+          "relative_orbit": 64,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            61.7957,
+            0
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20180507T083559_N0206_R064_T36UXA_20180507T105016",
+            "S2B_MSIL1C_20180517T083559_N0206_R064_T36UXA_20180517T113030",
+            "S2A_MSIL1C_20180522T083601_N0206_R064_T36UXA_20180522T105656",
+            "S2A_MSIL1C_20180601T083651_N0206_R064_T36UXA_20180601T105454",
+            "S2B_MSIL1C_20180606T084009_N0206_R064_T36UXA_20180606T123007"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-23",
+              "scene_id": "S2A_MSIL1C_20180323T083621_N0206_R064_T36UXA_20180323T105303"
+            },
+            {
+              "date": "2018-04-07",
+              "scene_id": "S2B_MSIL1C_20180407T083559_N0206_R064_T36UXA_20180407T123555"
+            }
+          ],
+          "site_id": "site-17",
+          "group_id": "group-fc6c1169dafd8f14645f",
+          "sentinel_minus_landsat_before_days": 3,
+          "sentinel_minus_landsat_after_days": -9,
+          "date_gap_notes": {
+            "before": "landsat_earlier",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            61.7957,
+            1,
+            3,
+            9,
+            61.7957,
+            20,
+            "S2A_MSIL1C_20180412T083651_N0206_R064_T36UXA_20180412T104659",
+            "S2A_MSIL1C_20180502T083601_N0206_R064_T36UXA_20180502T122811"
+          ]
+        },
+        {
+          "pre_date": "2018-04-12",
+          "post_date": "2018-04-22",
+          "pre_scene_id": "S2A_MSIL1C_20180412T083651_N0206_R064_T36UXA_20180412T104659",
+          "post_scene_id": "S2A_MSIL1C_20180422T083601_N0206_R064_T36UXA_20180422T104356",
+          "interval_days": 10,
+          "relative_orbit": 64,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            61.7957,
+            3.3076
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20180502T083601_N0206_R064_T36UXA_20180502T122811",
+            "S2B_MSIL1C_20180507T083559_N0206_R064_T36UXA_20180507T105016",
+            "S2B_MSIL1C_20180517T083559_N0206_R064_T36UXA_20180517T113030",
+            "S2A_MSIL1C_20180522T083601_N0206_R064_T36UXA_20180522T105656",
+            "S2A_MSIL1C_20180601T083651_N0206_R064_T36UXA_20180601T105454",
+            "S2B_MSIL1C_20180606T084009_N0206_R064_T36UXA_20180606T123007"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-23",
+              "scene_id": "S2A_MSIL1C_20180323T083621_N0206_R064_T36UXA_20180323T105303"
+            },
+            {
+              "date": "2018-04-07",
+              "scene_id": "S2B_MSIL1C_20180407T083559_N0206_R064_T36UXA_20180407T123555"
+            }
+          ],
+          "site_id": "site-17",
+          "group_id": "group-fc6c1169dafd8f14645f",
+          "sentinel_minus_landsat_before_days": 3,
+          "sentinel_minus_landsat_after_days": -19,
+          "date_gap_notes": {
+            "before": "landsat_earlier",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            61.7957,
+            1,
+            3,
+            19,
+            61.7957,
+            10,
+            "S2A_MSIL1C_20180412T083651_N0206_R064_T36UXA_20180412T104659",
+            "S2A_MSIL1C_20180422T083601_N0206_R064_T36UXA_20180422T104356"
+          ]
+        },
+        {
+          "pre_date": "2018-04-05",
+          "post_date": "2018-04-25",
+          "pre_scene_id": "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935",
+          "post_scene_id": "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243",
+          "interval_days": 20,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            12.4589,
+            67.456
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            },
+            {
+              "date": "2018-03-31",
+              "scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527"
+            }
+          ],
+          "site_id": "site-17",
+          "group_id": "group-fc6c1169dafd8f14645f",
+          "sentinel_minus_landsat_before_days": -4,
+          "sentinel_minus_landsat_after_days": -16,
+          "date_gap_notes": {
+            "before": "landsat_later",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            67.456,
+            0,
+            4,
+            16,
+            12.4589,
+            20,
+            "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935",
+            "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243"
+          ]
+        },
+        {
+          "pre_date": "2018-03-26",
+          "post_date": "2018-04-25",
+          "pre_scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052",
+          "post_scene_id": "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243",
+          "interval_days": 30,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            0,
+            67.456
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [],
+          "site_id": "site-17",
+          "group_id": "group-fc6c1169dafd8f14645f",
+          "sentinel_minus_landsat_before_days": -14,
+          "sentinel_minus_landsat_after_days": -16,
+          "date_gap_notes": {
+            "before": "landsat_later",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            67.456,
+            0,
+            14,
+            16,
+            0,
+            30,
+            "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052",
+            "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243"
+          ]
+        },
+        {
+          "pre_date": "2018-04-10",
+          "post_date": "2018-04-25",
+          "pre_scene_id": "S2B_MSIL1C_20180410T084559_N0206_R107_T36UXA_20180410T114307",
+          "post_scene_id": "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243",
+          "interval_days": 15,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            0,
+            67.456
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            },
+            {
+              "date": "2018-03-31",
+              "scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527"
+            },
+            {
+              "date": "2018-04-05",
+              "scene_id": "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935"
+            }
+          ],
+          "site_id": "site-17",
+          "group_id": "group-fc6c1169dafd8f14645f",
+          "sentinel_minus_landsat_before_days": 1,
+          "sentinel_minus_landsat_after_days": -16,
+          "date_gap_notes": {
+            "before": "landsat_earlier",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            67.456,
+            1,
+            1,
+            16,
+            0,
+            15,
+            "S2B_MSIL1C_20180410T084559_N0206_R107_T36UXA_20180410T114307",
+            "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243"
+          ]
+        },
+        {
+          "pre_date": "2018-04-15",
+          "post_date": "2018-04-25",
+          "pre_scene_id": "S2A_MSIL1C_20180415T084601_N0206_R107_T36UXA_20180415T110649",
+          "post_scene_id": "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243",
+          "interval_days": 10,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            0,
+            67.456
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            },
+            {
+              "date": "2018-03-31",
+              "scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527"
+            },
+            {
+              "date": "2018-04-05",
+              "scene_id": "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935"
+            },
+            {
+              "date": "2018-04-10",
+              "scene_id": "S2B_MSIL1C_20180410T084559_N0206_R107_T36UXA_20180410T114307"
+            }
+          ],
+          "site_id": "site-17",
+          "group_id": "group-fc6c1169dafd8f14645f",
+          "sentinel_minus_landsat_before_days": 6,
+          "sentinel_minus_landsat_after_days": -16,
+          "date_gap_notes": {
+            "before": "landsat_earlier",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            67.456,
+            1,
+            6,
+            16,
+            0,
+            10,
+            "S2A_MSIL1C_20180415T084601_N0206_R107_T36UXA_20180415T110649",
+            "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243"
+          ]
+        },
+        {
+          "pre_date": "2018-04-20",
+          "post_date": "2018-04-25",
+          "pre_scene_id": "S2B_MSIL1C_20180420T084559_N0206_R107_T36UXA_20180420T101821",
+          "post_scene_id": "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243",
+          "interval_days": 5,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            0.2149,
+            67.456
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            },
+            {
+              "date": "2018-03-31",
+              "scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527"
+            },
+            {
+              "date": "2018-04-05",
+              "scene_id": "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935"
+            },
+            {
+              "date": "2018-04-10",
+              "scene_id": "S2B_MSIL1C_20180410T084559_N0206_R107_T36UXA_20180410T114307"
+            },
+            {
+              "date": "2018-04-15",
+              "scene_id": "S2A_MSIL1C_20180415T084601_N0206_R107_T36UXA_20180415T110649"
+            }
+          ],
+          "site_id": "site-17",
+          "group_id": "group-fc6c1169dafd8f14645f",
+          "sentinel_minus_landsat_before_days": 11,
+          "sentinel_minus_landsat_after_days": -16,
+          "date_gap_notes": {
+            "before": "landsat_earlier",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            67.456,
+            1,
+            11,
+            16,
+            0.2149,
+            5,
+            "S2B_MSIL1C_20180420T084559_N0206_R107_T36UXA_20180420T101821",
+            "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243"
+          ]
+        },
+        {
+          "pre_date": "2018-03-23",
+          "post_date": "2018-04-22",
+          "pre_scene_id": "S2A_MSIL1C_20180323T083621_N0206_R064_T36UXA_20180323T105303",
+          "post_scene_id": "S2A_MSIL1C_20180422T083601_N0206_R064_T36UXA_20180422T104356",
+          "interval_days": 30,
+          "relative_orbit": 64,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            85.9781,
+            3.3076
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20180502T083601_N0206_R064_T36UXA_20180502T122811",
+            "S2B_MSIL1C_20180507T083559_N0206_R064_T36UXA_20180507T105016",
+            "S2B_MSIL1C_20180517T083559_N0206_R064_T36UXA_20180517T113030",
+            "S2A_MSIL1C_20180522T083601_N0206_R064_T36UXA_20180522T105656",
+            "S2A_MSIL1C_20180601T083651_N0206_R064_T36UXA_20180601T105454",
+            "S2B_MSIL1C_20180606T084009_N0206_R064_T36UXA_20180606T123007"
+          ],
+          "stable_only_earlier_scene_options": [],
+          "site_id": "site-17",
+          "group_id": "group-fc6c1169dafd8f14645f",
+          "sentinel_minus_landsat_before_days": -17,
+          "sentinel_minus_landsat_after_days": -19,
+          "date_gap_notes": {
+            "before": "landsat_later",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            85.9781,
+            0,
+            17,
+            19,
+            85.9781,
+            30,
+            "S2A_MSIL1C_20180323T083621_N0206_R064_T36UXA_20180323T105303",
+            "S2A_MSIL1C_20180422T083601_N0206_R064_T36UXA_20180422T104356"
+          ]
+        },
+        {
+          "pre_date": "2018-03-31",
+          "post_date": "2018-04-30",
+          "pre_scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527",
+          "post_scene_id": "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+          "interval_days": 30,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            99.8039,
+            0
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            }
+          ],
+          "site_id": "site-17",
+          "group_id": "group-fc6c1169dafd8f14645f",
+          "sentinel_minus_landsat_before_days": -9,
+          "sentinel_minus_landsat_after_days": -11,
+          "date_gap_notes": {
+            "before": "landsat_later",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            99.8039,
+            0,
+            9,
+            11,
+            99.8039,
+            30,
+            "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527",
+            "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717"
+          ]
+        },
+        {
+          "pre_date": "2018-03-31",
+          "post_date": "2018-04-25",
+          "pre_scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527",
+          "post_scene_id": "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243",
+          "interval_days": 25,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            99.8039,
+            67.456
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            }
+          ],
+          "site_id": "site-17",
+          "group_id": "group-fc6c1169dafd8f14645f",
+          "sentinel_minus_landsat_before_days": -9,
+          "sentinel_minus_landsat_after_days": -16,
+          "date_gap_notes": {
+            "before": "landsat_later",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            99.8039,
+            0,
+            9,
+            16,
+            99.8039,
+            25,
+            "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527",
+            "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243"
+          ]
+        }
+      ]
+    },
+    {
+      "site_id": "site-21",
+      "control": {
+        "site_id": "site-21",
+        "event_id": "event-1fcafbe67d63cd9d0a20",
+        "map_receipt": {
+          "url": "https://api.openstreetmap.org/api/0.6/map.json?bbox=34.839893%2C50.224431%2C34.860575%2C50.237698",
+          "bbox_wgs84": [
+            34.839893,
+            50.224431,
+            34.860575,
+            50.237698
+          ],
+          "map_pad_metres": 400,
+          "max_response_bytes": 2097152,
+          "timeout_seconds": 12,
+          "status": "success",
+          "observed_at_utc": "2026-11-26T21:44:42+00:00",
+          "provider_payload_bytes": 80261,
+          "provider_payload_sha256": "d12136a64c8923ea9efa1187846a2809a92e76f1d25a0d5de958451528565ce1",
+          "snapshot": "raw/site-21-osm-map.json",
+          "snapshot_sha256": "cc2f51fc5e5aed9da6da68a4fde50258a1b68e809e45c0ecff24fb316b079757"
+        },
+        "disposition": "original_geometry_retained",
+        "original_control": {
+          "row": 2,
+          "col": 43,
+          "width": 16,
+          "height": 16,
+          "pixels": 256,
+          "bounds": [
+            632070.0,
+            5566100.0,
+            632230.0,
+            5566260.0
+          ],
+          "crs": "EPSG:32636",
+          "context_bounds": [
+            632050.0,
+            5566080.0,
+            632250.0,
+            5566280.0
+          ],
+          "context_width": 20,
+          "context_height": 20,
+          "context_pixels": 400,
+          "context_radius_pixels": 2,
+          "catalogue_exclusion_margin_metres": 20,
+          "control_class_status": "unreviewed",
+          "pixel_qa_status": "unassessed",
+          "independent_site": false,
+          "evaluation_approved": false
+        },
+        "original_map_evidence": {
+          "mapped_road_crosses_context": false,
+          "nearest_mapped_road_metres": 490.653,
+          "mapped_roads_within_20m": [],
+          "mapped_woodland_covers_context": false,
+          "mapped_woodland_boundary_within_20m": false,
+          "mapped_nonwood_within_20m": false
+        },
+        "alternate_control": null,
+        "selected_control": {
+          "row": 2,
+          "col": 43,
+          "width": 16,
+          "height": 16,
+          "pixels": 256,
+          "bounds": [
+            632070.0,
+            5566100.0,
+            632230.0,
+            5566260.0
+          ],
+          "crs": "EPSG:32636",
+          "context_bounds": [
+            632050.0,
+            5566080.0,
+            632250.0,
+            5566280.0
+          ],
+          "context_width": 20,
+          "context_height": 20,
+          "context_pixels": 400,
+          "context_radius_pixels": 2,
+          "catalogue_exclusion_margin_metres": 20,
+          "control_class_status": "unreviewed",
+          "pixel_qa_status": "unassessed",
+          "independent_site": false,
+          "evaluation_approved": false
+        },
+        "selected_map_evidence": {
+          "mapped_road_crosses_context": false,
+          "nearest_mapped_road_metres": 490.653,
+          "mapped_roads_within_20m": [],
+          "mapped_woodland_covers_context": false,
+          "mapped_woodland_boundary_within_20m": false,
+          "mapped_nonwood_within_20m": false
+        },
+        "roads_checked": 4,
+        "woodland_ways_checked": 0,
+        "nonwood_ways_checked": 0,
+        "incomplete_way_ids": [],
+        "uninterpreted_relation_ids": [
+          3174752
+        ],
+        "control_class_status": "unverified",
+        "scope": "Current OSM vector screening. Incomplete ways and relations remain unassessed. Absence of mapped exclusions and edit dates do not establish forest class or its history.",
+        "attribution": "\u00a9 OpenStreetMap contributors, https://www.openstreetmap.org/copyright"
+      },
+      "sentinel_options": [
+        {
+          "pre_date": "2018-04-10",
+          "post_date": "2018-04-30",
+          "pre_scene_id": "S2B_MSIL1C_20180410T084559_N0206_R107_T36UXA_20180410T114307",
+          "post_scene_id": "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+          "interval_days": 20,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            0,
+            0
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            },
+            {
+              "date": "2018-03-31",
+              "scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527"
+            },
+            {
+              "date": "2018-04-05",
+              "scene_id": "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935"
+            }
+          ],
+          "site_id": "site-21",
+          "group_id": "group-0dd86fabc23ecd52c606",
+          "sentinel_minus_landsat_before_days": 1,
+          "sentinel_minus_landsat_after_days": -11,
+          "date_gap_notes": {
+            "before": "landsat_earlier",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            0,
+            1,
+            1,
+            11,
+            0,
+            20,
+            "S2B_MSIL1C_20180410T084559_N0206_R107_T36UXA_20180410T114307",
+            "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717"
+          ]
+        },
+        {
+          "pre_date": "2018-04-15",
+          "post_date": "2018-04-30",
+          "pre_scene_id": "S2A_MSIL1C_20180415T084601_N0206_R107_T36UXA_20180415T110649",
+          "post_scene_id": "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+          "interval_days": 15,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            0,
+            0
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            },
+            {
+              "date": "2018-03-31",
+              "scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527"
+            },
+            {
+              "date": "2018-04-05",
+              "scene_id": "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935"
+            },
+            {
+              "date": "2018-04-10",
+              "scene_id": "S2B_MSIL1C_20180410T084559_N0206_R107_T36UXA_20180410T114307"
+            }
+          ],
+          "site_id": "site-21",
+          "group_id": "group-0dd86fabc23ecd52c606",
+          "sentinel_minus_landsat_before_days": 6,
+          "sentinel_minus_landsat_after_days": -11,
+          "date_gap_notes": {
+            "before": "landsat_earlier",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            0,
+            1,
+            6,
+            11,
+            0,
+            15,
+            "S2A_MSIL1C_20180415T084601_N0206_R107_T36UXA_20180415T110649",
+            "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717"
+          ]
+        },
+        {
+          "pre_date": "2018-04-07",
+          "post_date": "2018-05-02",
+          "pre_scene_id": "S2B_MSIL1C_20180407T083559_N0206_R064_T36UXA_20180407T123555",
+          "post_scene_id": "S2A_MSIL1C_20180502T083601_N0206_R064_T36UXA_20180502T122811",
+          "interval_days": 25,
+          "relative_orbit": 64,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            0.0229,
+            0
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20180507T083559_N0206_R064_T36UXA_20180507T105016",
+            "S2B_MSIL1C_20180517T083559_N0206_R064_T36UXA_20180517T113030",
+            "S2A_MSIL1C_20180522T083601_N0206_R064_T36UXA_20180522T105656",
+            "S2A_MSIL1C_20180601T083651_N0206_R064_T36UXA_20180601T105454",
+            "S2B_MSIL1C_20180606T084009_N0206_R064_T36UXA_20180606T123007"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-23",
+              "scene_id": "S2A_MSIL1C_20180323T083621_N0206_R064_T36UXA_20180323T105303"
+            }
+          ],
+          "site_id": "site-21",
+          "group_id": "group-0dd86fabc23ecd52c606",
+          "sentinel_minus_landsat_before_days": -2,
+          "sentinel_minus_landsat_after_days": -9,
+          "date_gap_notes": {
+            "before": "landsat_later",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            0.0229,
+            0,
+            2,
+            9,
+            0.0229,
+            25,
+            "S2B_MSIL1C_20180407T083559_N0206_R064_T36UXA_20180407T123555",
+            "S2A_MSIL1C_20180502T083601_N0206_R064_T36UXA_20180502T122811"
+          ]
+        },
+        {
+          "pre_date": "2018-04-20",
+          "post_date": "2018-04-30",
+          "pre_scene_id": "S2B_MSIL1C_20180420T084559_N0206_R107_T36UXA_20180420T101821",
+          "post_scene_id": "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+          "interval_days": 10,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            0.2149,
+            0
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            },
+            {
+              "date": "2018-03-31",
+              "scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527"
+            },
+            {
+              "date": "2018-04-05",
+              "scene_id": "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935"
+            },
+            {
+              "date": "2018-04-10",
+              "scene_id": "S2B_MSIL1C_20180410T084559_N0206_R107_T36UXA_20180410T114307"
+            },
+            {
+              "date": "2018-04-15",
+              "scene_id": "S2A_MSIL1C_20180415T084601_N0206_R107_T36UXA_20180415T110649"
+            }
+          ],
+          "site_id": "site-21",
+          "group_id": "group-0dd86fabc23ecd52c606",
+          "sentinel_minus_landsat_before_days": 11,
+          "sentinel_minus_landsat_after_days": -11,
+          "date_gap_notes": {
+            "before": "landsat_earlier",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            0.2149,
+            1,
+            11,
+            11,
+            0.2149,
+            10,
+            "S2B_MSIL1C_20180420T084559_N0206_R107_T36UXA_20180420T101821",
+            "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717"
+          ]
+        },
+        {
+          "pre_date": "2018-04-07",
+          "post_date": "2018-04-22",
+          "pre_scene_id": "S2B_MSIL1C_20180407T083559_N0206_R064_T36UXA_20180407T123555",
+          "post_scene_id": "S2A_MSIL1C_20180422T083601_N0206_R064_T36UXA_20180422T104356",
+          "interval_days": 15,
+          "relative_orbit": 64,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            0.0229,
+            3.3076
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20180502T083601_N0206_R064_T36UXA_20180502T122811",
+            "S2B_MSIL1C_20180507T083559_N0206_R064_T36UXA_20180507T105016",
+            "S2B_MSIL1C_20180517T083559_N0206_R064_T36UXA_20180517T113030",
+            "S2A_MSIL1C_20180522T083601_N0206_R064_T36UXA_20180522T105656",
+            "S2A_MSIL1C_20180601T083651_N0206_R064_T36UXA_20180601T105454",
+            "S2B_MSIL1C_20180606T084009_N0206_R064_T36UXA_20180606T123007"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-23",
+              "scene_id": "S2A_MSIL1C_20180323T083621_N0206_R064_T36UXA_20180323T105303"
+            }
+          ],
+          "site_id": "site-21",
+          "group_id": "group-0dd86fabc23ecd52c606",
+          "sentinel_minus_landsat_before_days": -2,
+          "sentinel_minus_landsat_after_days": -19,
+          "date_gap_notes": {
+            "before": "landsat_later",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            3.3076,
+            0,
+            2,
+            19,
+            0.0229,
+            15,
+            "S2B_MSIL1C_20180407T083559_N0206_R064_T36UXA_20180407T123555",
+            "S2A_MSIL1C_20180422T083601_N0206_R064_T36UXA_20180422T104356"
+          ]
+        },
+        {
+          "pre_date": "2018-04-05",
+          "post_date": "2018-04-30",
+          "pre_scene_id": "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935",
+          "post_scene_id": "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+          "interval_days": 25,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            12.4589,
+            0
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            },
+            {
+              "date": "2018-03-31",
+              "scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527"
+            }
+          ],
+          "site_id": "site-21",
+          "group_id": "group-0dd86fabc23ecd52c606",
+          "sentinel_minus_landsat_before_days": -4,
+          "sentinel_minus_landsat_after_days": -11,
+          "date_gap_notes": {
+            "before": "landsat_later",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            12.4589,
+            0,
+            4,
+            11,
+            12.4589,
+            25,
+            "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935",
+            "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717"
+          ]
+        },
+        {
+          "pre_date": "2018-04-12",
+          "post_date": "2018-05-02",
+          "pre_scene_id": "S2A_MSIL1C_20180412T083651_N0206_R064_T36UXA_20180412T104659",
+          "post_scene_id": "S2A_MSIL1C_20180502T083601_N0206_R064_T36UXA_20180502T122811",
+          "interval_days": 20,
+          "relative_orbit": 64,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            61.7957,
+            0
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20180507T083559_N0206_R064_T36UXA_20180507T105016",
+            "S2B_MSIL1C_20180517T083559_N0206_R064_T36UXA_20180517T113030",
+            "S2A_MSIL1C_20180522T083601_N0206_R064_T36UXA_20180522T105656",
+            "S2A_MSIL1C_20180601T083651_N0206_R064_T36UXA_20180601T105454",
+            "S2B_MSIL1C_20180606T084009_N0206_R064_T36UXA_20180606T123007"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-23",
+              "scene_id": "S2A_MSIL1C_20180323T083621_N0206_R064_T36UXA_20180323T105303"
+            },
+            {
+              "date": "2018-04-07",
+              "scene_id": "S2B_MSIL1C_20180407T083559_N0206_R064_T36UXA_20180407T123555"
+            }
+          ],
+          "site_id": "site-21",
+          "group_id": "group-0dd86fabc23ecd52c606",
+          "sentinel_minus_landsat_before_days": 3,
+          "sentinel_minus_landsat_after_days": -9,
+          "date_gap_notes": {
+            "before": "landsat_earlier",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            61.7957,
+            1,
+            3,
+            9,
+            61.7957,
+            20,
+            "S2A_MSIL1C_20180412T083651_N0206_R064_T36UXA_20180412T104659",
+            "S2A_MSIL1C_20180502T083601_N0206_R064_T36UXA_20180502T122811"
+          ]
+        },
+        {
+          "pre_date": "2018-04-12",
+          "post_date": "2018-04-22",
+          "pre_scene_id": "S2A_MSIL1C_20180412T083651_N0206_R064_T36UXA_20180412T104659",
+          "post_scene_id": "S2A_MSIL1C_20180422T083601_N0206_R064_T36UXA_20180422T104356",
+          "interval_days": 10,
+          "relative_orbit": 64,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            61.7957,
+            3.3076
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20180502T083601_N0206_R064_T36UXA_20180502T122811",
+            "S2B_MSIL1C_20180507T083559_N0206_R064_T36UXA_20180507T105016",
+            "S2B_MSIL1C_20180517T083559_N0206_R064_T36UXA_20180517T113030",
+            "S2A_MSIL1C_20180522T083601_N0206_R064_T36UXA_20180522T105656",
+            "S2A_MSIL1C_20180601T083651_N0206_R064_T36UXA_20180601T105454",
+            "S2B_MSIL1C_20180606T084009_N0206_R064_T36UXA_20180606T123007"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-23",
+              "scene_id": "S2A_MSIL1C_20180323T083621_N0206_R064_T36UXA_20180323T105303"
+            },
+            {
+              "date": "2018-04-07",
+              "scene_id": "S2B_MSIL1C_20180407T083559_N0206_R064_T36UXA_20180407T123555"
+            }
+          ],
+          "site_id": "site-21",
+          "group_id": "group-0dd86fabc23ecd52c606",
+          "sentinel_minus_landsat_before_days": 3,
+          "sentinel_minus_landsat_after_days": -19,
+          "date_gap_notes": {
+            "before": "landsat_earlier",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            61.7957,
+            1,
+            3,
+            19,
+            61.7957,
+            10,
+            "S2A_MSIL1C_20180412T083651_N0206_R064_T36UXA_20180412T104659",
+            "S2A_MSIL1C_20180422T083601_N0206_R064_T36UXA_20180422T104356"
+          ]
+        },
+        {
+          "pre_date": "2018-04-05",
+          "post_date": "2018-04-25",
+          "pre_scene_id": "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935",
+          "post_scene_id": "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243",
+          "interval_days": 20,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            12.4589,
+            67.456
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            },
+            {
+              "date": "2018-03-31",
+              "scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527"
+            }
+          ],
+          "site_id": "site-21",
+          "group_id": "group-0dd86fabc23ecd52c606",
+          "sentinel_minus_landsat_before_days": -4,
+          "sentinel_minus_landsat_after_days": -16,
+          "date_gap_notes": {
+            "before": "landsat_later",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            67.456,
+            0,
+            4,
+            16,
+            12.4589,
+            20,
+            "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935",
+            "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243"
+          ]
+        },
+        {
+          "pre_date": "2018-03-26",
+          "post_date": "2018-04-25",
+          "pre_scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052",
+          "post_scene_id": "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243",
+          "interval_days": 30,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            0,
+            67.456
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [],
+          "site_id": "site-21",
+          "group_id": "group-0dd86fabc23ecd52c606",
+          "sentinel_minus_landsat_before_days": -14,
+          "sentinel_minus_landsat_after_days": -16,
+          "date_gap_notes": {
+            "before": "landsat_later",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            67.456,
+            0,
+            14,
+            16,
+            0,
+            30,
+            "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052",
+            "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243"
+          ]
+        },
+        {
+          "pre_date": "2018-04-10",
+          "post_date": "2018-04-25",
+          "pre_scene_id": "S2B_MSIL1C_20180410T084559_N0206_R107_T36UXA_20180410T114307",
+          "post_scene_id": "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243",
+          "interval_days": 15,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            0,
+            67.456
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            },
+            {
+              "date": "2018-03-31",
+              "scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527"
+            },
+            {
+              "date": "2018-04-05",
+              "scene_id": "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935"
+            }
+          ],
+          "site_id": "site-21",
+          "group_id": "group-0dd86fabc23ecd52c606",
+          "sentinel_minus_landsat_before_days": 1,
+          "sentinel_minus_landsat_after_days": -16,
+          "date_gap_notes": {
+            "before": "landsat_earlier",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            67.456,
+            1,
+            1,
+            16,
+            0,
+            15,
+            "S2B_MSIL1C_20180410T084559_N0206_R107_T36UXA_20180410T114307",
+            "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243"
+          ]
+        },
+        {
+          "pre_date": "2018-04-15",
+          "post_date": "2018-04-25",
+          "pre_scene_id": "S2A_MSIL1C_20180415T084601_N0206_R107_T36UXA_20180415T110649",
+          "post_scene_id": "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243",
+          "interval_days": 10,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            0,
+            67.456
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            },
+            {
+              "date": "2018-03-31",
+              "scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527"
+            },
+            {
+              "date": "2018-04-05",
+              "scene_id": "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935"
+            },
+            {
+              "date": "2018-04-10",
+              "scene_id": "S2B_MSIL1C_20180410T084559_N0206_R107_T36UXA_20180410T114307"
+            }
+          ],
+          "site_id": "site-21",
+          "group_id": "group-0dd86fabc23ecd52c606",
+          "sentinel_minus_landsat_before_days": 6,
+          "sentinel_minus_landsat_after_days": -16,
+          "date_gap_notes": {
+            "before": "landsat_earlier",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            67.456,
+            1,
+            6,
+            16,
+            0,
+            10,
+            "S2A_MSIL1C_20180415T084601_N0206_R107_T36UXA_20180415T110649",
+            "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243"
+          ]
+        },
+        {
+          "pre_date": "2018-04-20",
+          "post_date": "2018-04-25",
+          "pre_scene_id": "S2B_MSIL1C_20180420T084559_N0206_R107_T36UXA_20180420T101821",
+          "post_scene_id": "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243",
+          "interval_days": 5,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            0.2149,
+            67.456
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            },
+            {
+              "date": "2018-03-31",
+              "scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527"
+            },
+            {
+              "date": "2018-04-05",
+              "scene_id": "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935"
+            },
+            {
+              "date": "2018-04-10",
+              "scene_id": "S2B_MSIL1C_20180410T084559_N0206_R107_T36UXA_20180410T114307"
+            },
+            {
+              "date": "2018-04-15",
+              "scene_id": "S2A_MSIL1C_20180415T084601_N0206_R107_T36UXA_20180415T110649"
+            }
+          ],
+          "site_id": "site-21",
+          "group_id": "group-0dd86fabc23ecd52c606",
+          "sentinel_minus_landsat_before_days": 11,
+          "sentinel_minus_landsat_after_days": -16,
+          "date_gap_notes": {
+            "before": "landsat_earlier",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            67.456,
+            1,
+            11,
+            16,
+            0.2149,
+            5,
+            "S2B_MSIL1C_20180420T084559_N0206_R107_T36UXA_20180420T101821",
+            "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243"
+          ]
+        },
+        {
+          "pre_date": "2018-03-23",
+          "post_date": "2018-04-22",
+          "pre_scene_id": "S2A_MSIL1C_20180323T083621_N0206_R064_T36UXA_20180323T105303",
+          "post_scene_id": "S2A_MSIL1C_20180422T083601_N0206_R064_T36UXA_20180422T104356",
+          "interval_days": 30,
+          "relative_orbit": 64,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            85.9781,
+            3.3076
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20180502T083601_N0206_R064_T36UXA_20180502T122811",
+            "S2B_MSIL1C_20180507T083559_N0206_R064_T36UXA_20180507T105016",
+            "S2B_MSIL1C_20180517T083559_N0206_R064_T36UXA_20180517T113030",
+            "S2A_MSIL1C_20180522T083601_N0206_R064_T36UXA_20180522T105656",
+            "S2A_MSIL1C_20180601T083651_N0206_R064_T36UXA_20180601T105454",
+            "S2B_MSIL1C_20180606T084009_N0206_R064_T36UXA_20180606T123007"
+          ],
+          "stable_only_earlier_scene_options": [],
+          "site_id": "site-21",
+          "group_id": "group-0dd86fabc23ecd52c606",
+          "sentinel_minus_landsat_before_days": -17,
+          "sentinel_minus_landsat_after_days": -19,
+          "date_gap_notes": {
+            "before": "landsat_later",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            85.9781,
+            0,
+            17,
+            19,
+            85.9781,
+            30,
+            "S2A_MSIL1C_20180323T083621_N0206_R064_T36UXA_20180323T105303",
+            "S2A_MSIL1C_20180422T083601_N0206_R064_T36UXA_20180422T104356"
+          ]
+        },
+        {
+          "pre_date": "2018-03-31",
+          "post_date": "2018-04-30",
+          "pre_scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527",
+          "post_scene_id": "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+          "interval_days": 30,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            99.8039,
+            0
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            }
+          ],
+          "site_id": "site-21",
+          "group_id": "group-0dd86fabc23ecd52c606",
+          "sentinel_minus_landsat_before_days": -9,
+          "sentinel_minus_landsat_after_days": -11,
+          "date_gap_notes": {
+            "before": "landsat_later",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            99.8039,
+            0,
+            9,
+            11,
+            99.8039,
+            30,
+            "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527",
+            "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717"
+          ]
+        },
+        {
+          "pre_date": "2018-03-31",
+          "post_date": "2018-04-25",
+          "pre_scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527",
+          "post_scene_id": "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243",
+          "interval_days": 25,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            99.8039,
+            67.456
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+            "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+            "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+            "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+            "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+            "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+            "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2018-03-26",
+              "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+            }
+          ],
+          "site_id": "site-21",
+          "group_id": "group-0dd86fabc23ecd52c606",
+          "sentinel_minus_landsat_before_days": -9,
+          "sentinel_minus_landsat_after_days": -16,
+          "date_gap_notes": {
+            "before": "landsat_later",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            99.8039,
+            0,
+            9,
+            16,
+            99.8039,
+            25,
+            "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527",
+            "S2A_MSIL1C_20180425T084641_N0206_R107_T36UXA_20180425T124243"
+          ]
+        }
+      ]
+    },
+    {
+      "site_id": "site-27",
+      "control": {
+        "site_id": "site-27",
+        "event_id": "event-131b45a1727c7aaf1091",
+        "map_receipt": {
+          "url": "https://api.openstreetmap.org/api/0.6/map.json?bbox=35.693276%2C49.841323%2C35.714007%2C49.854729",
+          "bbox_wgs84": [
+            35.693276,
+            49.841323,
+            35.714007,
+            49.854729
+          ],
+          "map_pad_metres": 400,
+          "max_response_bytes": 2097152,
+          "timeout_seconds": 12,
+          "status": "success",
+          "observed_at_utc": "2026-11-26T21:44:43+00:00",
+          "provider_payload_bytes": 264529,
+          "provider_payload_sha256": "becdb731194fc54e3a05564c5f93ba9137f7eb7bb96ee7c446cffed9323a0b8b",
+          "snapshot": "raw/site-27-osm-map.json",
+          "snapshot_sha256": "6cac9812cce8dd89afa909a874369920b4062dec4b552e2f2c8e42740b207446"
+        },
+        "disposition": "original_geometry_retained",
+        "original_control": {
+          "row": 2,
+          "col": 2,
+          "width": 16,
+          "height": 16,
+          "pixels": 256,
+          "bounds": [
+            694060.0,
+            5525380.0,
+            694220.0,
+            5525540.0
+          ],
+          "crs": "EPSG:32636",
+          "context_bounds": [
+            694040.0,
+            5525360.0,
+            694240.0,
+            5525560.0
+          ],
+          "context_width": 20,
+          "context_height": 20,
+          "context_pixels": 400,
+          "context_radius_pixels": 2,
+          "catalogue_exclusion_margin_metres": 20,
+          "control_class_status": "unreviewed",
+          "pixel_qa_status": "unassessed",
+          "independent_site": false,
+          "evaluation_approved": false
+        },
+        "original_map_evidence": {
+          "mapped_road_crosses_context": false,
+          "nearest_mapped_road_metres": 113.524,
+          "mapped_roads_within_20m": [],
+          "mapped_woodland_covers_context": true,
+          "mapped_woodland_boundary_within_20m": false,
+          "mapped_nonwood_within_20m": false
+        },
+        "alternate_control": null,
+        "selected_control": {
+          "row": 2,
+          "col": 2,
+          "width": 16,
+          "height": 16,
+          "pixels": 256,
+          "bounds": [
+            694060.0,
+            5525380.0,
+            694220.0,
+            5525540.0
+          ],
+          "crs": "EPSG:32636",
+          "context_bounds": [
+            694040.0,
+            5525360.0,
+            694240.0,
+            5525560.0
+          ],
+          "context_width": 20,
+          "context_height": 20,
+          "context_pixels": 400,
+          "context_radius_pixels": 2,
+          "catalogue_exclusion_margin_metres": 20,
+          "control_class_status": "unreviewed",
+          "pixel_qa_status": "unassessed",
+          "independent_site": false,
+          "evaluation_approved": false
+        },
+        "selected_map_evidence": {
+          "mapped_road_crosses_context": false,
+          "nearest_mapped_road_metres": 113.524,
+          "mapped_roads_within_20m": [],
+          "mapped_woodland_covers_context": true,
+          "mapped_woodland_boundary_within_20m": false,
+          "mapped_nonwood_within_20m": false
+        },
+        "roads_checked": 23,
+        "woodland_ways_checked": 6,
+        "nonwood_ways_checked": 28,
+        "incomplete_way_ids": [],
+        "uninterpreted_relation_ids": [],
+        "control_class_status": "unverified",
+        "scope": "Current OSM vector screening. Incomplete ways and relations remain unassessed. Absence of mapped exclusions and edit dates do not establish forest class or its history.",
+        "attribution": "\u00a9 OpenStreetMap contributors, https://www.openstreetmap.org/copyright"
+      },
+      "sentinel_options": [
+        {
+          "pre_date": "2017-08-20",
+          "post_date": "2017-08-25",
+          "pre_scene_id": "S2B_MSIL1C_20170820T084009_N0205_R064_T36UXA_20170820T084010",
+          "post_scene_id": "S2A_MSIL1C_20170825T084011_N0205_R064_T36UXA_20170825T084014",
+          "interval_days": 5,
+          "relative_orbit": 64,
+          "processing_baseline": "02.05",
+          "catalogue_cloud_percent": [
+            0,
+            9.0774
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20170909T084009_N0205_R064_T36UXA_20170909T084055",
+            "S2A_MSIL1C_20170914T084011_N0205_R064_T36UXA_20170914T084017",
+            "S2A_MSIL1C_20170924T083701_N0205_R064_T36UXA_20170924T083955"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2017-07-26",
+              "scene_id": "S2A_MSIL1C_20170726T083601_N0205_R064_T36UXA_20170726T083655"
+            },
+            {
+              "date": "2017-07-31",
+              "scene_id": "S2B_MSIL1C_20170731T084009_N0205_R064_T36UXA_20170731T084012"
+            },
+            {
+              "date": "2017-08-05",
+              "scene_id": "S2A_MSIL1C_20170805T084021_N0205_R064_T36UXA_20170805T084026"
+            },
+            {
+              "date": "2017-08-15",
+              "scene_id": "S2A_MSIL1C_20170815T083601_N0205_R064_T36UXA_20170815T083905"
+            }
+          ],
+          "site_id": "site-27",
+          "group_id": "group-31678e7ebbac75b69d80",
+          "sentinel_minus_landsat_before_days": -1,
+          "sentinel_minus_landsat_after_days": -28,
+          "date_gap_notes": {
+            "before": "landsat_later",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            9.0774,
+            0,
+            1,
+            28,
+            0,
+            5,
+            "S2B_MSIL1C_20170820T084009_N0205_R064_T36UXA_20170820T084010",
+            "S2A_MSIL1C_20170825T084011_N0205_R064_T36UXA_20170825T084014"
+          ]
+        },
+        {
+          "pre_date": "2017-08-05",
+          "post_date": "2017-08-25",
+          "pre_scene_id": "S2A_MSIL1C_20170805T084021_N0205_R064_T36UXA_20170805T084026",
+          "post_scene_id": "S2A_MSIL1C_20170825T084011_N0205_R064_T36UXA_20170825T084014",
+          "interval_days": 20,
+          "relative_orbit": 64,
+          "processing_baseline": "02.05",
+          "catalogue_cloud_percent": [
+            2.6691,
+            9.0774
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20170909T084009_N0205_R064_T36UXA_20170909T084055",
+            "S2A_MSIL1C_20170914T084011_N0205_R064_T36UXA_20170914T084017",
+            "S2A_MSIL1C_20170924T083701_N0205_R064_T36UXA_20170924T083955"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2017-07-26",
+              "scene_id": "S2A_MSIL1C_20170726T083601_N0205_R064_T36UXA_20170726T083655"
+            },
+            {
+              "date": "2017-07-31",
+              "scene_id": "S2B_MSIL1C_20170731T084009_N0205_R064_T36UXA_20170731T084012"
+            }
+          ],
+          "site_id": "site-27",
+          "group_id": "group-31678e7ebbac75b69d80",
+          "sentinel_minus_landsat_before_days": -16,
+          "sentinel_minus_landsat_after_days": -28,
+          "date_gap_notes": {
+            "before": "landsat_later",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            9.0774,
+            0,
+            16,
+            28,
+            2.6691,
+            20,
+            "S2A_MSIL1C_20170805T084021_N0205_R064_T36UXA_20170805T084026",
+            "S2A_MSIL1C_20170825T084011_N0205_R064_T36UXA_20170825T084014"
+          ]
+        },
+        {
+          "pre_date": "2017-07-31",
+          "post_date": "2017-08-25",
+          "pre_scene_id": "S2B_MSIL1C_20170731T084009_N0205_R064_T36UXA_20170731T084012",
+          "post_scene_id": "S2A_MSIL1C_20170825T084011_N0205_R064_T36UXA_20170825T084014",
+          "interval_days": 25,
+          "relative_orbit": 64,
+          "processing_baseline": "02.05",
+          "catalogue_cloud_percent": [
+            0.0286,
+            9.0774
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20170909T084009_N0205_R064_T36UXA_20170909T084055",
+            "S2A_MSIL1C_20170914T084011_N0205_R064_T36UXA_20170914T084017",
+            "S2A_MSIL1C_20170924T083701_N0205_R064_T36UXA_20170924T083955"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2017-07-26",
+              "scene_id": "S2A_MSIL1C_20170726T083601_N0205_R064_T36UXA_20170726T083655"
+            }
+          ],
+          "site_id": "site-27",
+          "group_id": "group-31678e7ebbac75b69d80",
+          "sentinel_minus_landsat_before_days": -21,
+          "sentinel_minus_landsat_after_days": -28,
+          "date_gap_notes": {
+            "before": "landsat_later",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            9.0774,
+            0,
+            21,
+            28,
+            0.0286,
+            25,
+            "S2B_MSIL1C_20170731T084009_N0205_R064_T36UXA_20170731T084012",
+            "S2A_MSIL1C_20170825T084011_N0205_R064_T36UXA_20170825T084014"
+          ]
+        },
+        {
+          "pre_date": "2017-08-15",
+          "post_date": "2017-08-25",
+          "pre_scene_id": "S2A_MSIL1C_20170815T083601_N0205_R064_T36UXA_20170815T083905",
+          "post_scene_id": "S2A_MSIL1C_20170825T084011_N0205_R064_T36UXA_20170825T084014",
+          "interval_days": 10,
+          "relative_orbit": 64,
+          "processing_baseline": "02.05",
+          "catalogue_cloud_percent": [
+            10.8742,
+            9.0774
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20170909T084009_N0205_R064_T36UXA_20170909T084055",
+            "S2A_MSIL1C_20170914T084011_N0205_R064_T36UXA_20170914T084017",
+            "S2A_MSIL1C_20170924T083701_N0205_R064_T36UXA_20170924T083955"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2017-07-26",
+              "scene_id": "S2A_MSIL1C_20170726T083601_N0205_R064_T36UXA_20170726T083655"
+            },
+            {
+              "date": "2017-07-31",
+              "scene_id": "S2B_MSIL1C_20170731T084009_N0205_R064_T36UXA_20170731T084012"
+            },
+            {
+              "date": "2017-08-05",
+              "scene_id": "S2A_MSIL1C_20170805T084021_N0205_R064_T36UXA_20170805T084026"
+            }
+          ],
+          "site_id": "site-27",
+          "group_id": "group-31678e7ebbac75b69d80",
+          "sentinel_minus_landsat_before_days": -6,
+          "sentinel_minus_landsat_after_days": -28,
+          "date_gap_notes": {
+            "before": "landsat_later",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            10.8742,
+            0,
+            6,
+            28,
+            10.8742,
+            10,
+            "S2A_MSIL1C_20170815T083601_N0205_R064_T36UXA_20170815T083905",
+            "S2A_MSIL1C_20170825T084011_N0205_R064_T36UXA_20170825T084014"
+          ]
+        },
+        {
+          "pre_date": "2017-08-18",
+          "post_date": "2017-08-28",
+          "pre_scene_id": "S2A_MSIL1C_20170818T085021_N0205_R107_T36UXA_20170818T085017",
+          "post_scene_id": "S2A_MSIL1C_20170828T084601_N0205_R107_T36UXA_20170828T085434",
+          "interval_days": 10,
+          "relative_orbit": 107,
+          "processing_baseline": "02.05",
+          "catalogue_cloud_percent": [
+            0,
+            14.6262
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20170907T085011_N0205_R107_T36UXA_20170907T085314",
+            "S2B_MSIL1C_20170912T084549_N0205_R107_T36UXA_20170912T085508",
+            "S2A_MSIL1C_20170917T084611_N0205_R107_T36UXA_20170917T085448",
+            "S2A_MSIL1C_20170927T085011_N0205_R107_T36UXA_20170927T085338",
+            "S2A_MSIL1C_20171007T084831_N0205_R107_T36UXA_20171007T084832"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2017-07-29",
+              "scene_id": "S2A_MSIL1C_20170729T085021_N0205_R107_T36UXA_20170729T085325"
+            },
+            {
+              "date": "2017-08-03",
+              "scene_id": "S2B_MSIL1C_20170803T084559_N0205_R107_T36UXA_20170803T085516"
+            },
+            {
+              "date": "2017-08-08",
+              "scene_id": "S2A_MSIL1C_20170808T084601_N0205_R107_T36UXA_20170808T085345"
+            },
+            {
+              "date": "2017-08-13",
+              "scene_id": "S2B_MSIL1C_20170813T085019_N0205_R107_T36UXA_20170813T085353"
+            }
+          ],
+          "site_id": "site-27",
+          "group_id": "group-31678e7ebbac75b69d80",
+          "sentinel_minus_landsat_before_days": -3,
+          "sentinel_minus_landsat_after_days": -25,
+          "date_gap_notes": {
+            "before": "landsat_later",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            14.6262,
+            0,
+            3,
+            25,
+            0,
+            10,
+            "S2A_MSIL1C_20170818T085021_N0205_R107_T36UXA_20170818T085017",
+            "S2A_MSIL1C_20170828T084601_N0205_R107_T36UXA_20170828T085434"
+          ]
+        },
+        {
+          "pre_date": "2017-08-13",
+          "post_date": "2017-08-28",
+          "pre_scene_id": "S2B_MSIL1C_20170813T085019_N0205_R107_T36UXA_20170813T085353",
+          "post_scene_id": "S2A_MSIL1C_20170828T084601_N0205_R107_T36UXA_20170828T085434",
+          "interval_days": 15,
+          "relative_orbit": 107,
+          "processing_baseline": "02.05",
+          "catalogue_cloud_percent": [
+            0,
+            14.6262
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20170907T085011_N0205_R107_T36UXA_20170907T085314",
+            "S2B_MSIL1C_20170912T084549_N0205_R107_T36UXA_20170912T085508",
+            "S2A_MSIL1C_20170917T084611_N0205_R107_T36UXA_20170917T085448",
+            "S2A_MSIL1C_20170927T085011_N0205_R107_T36UXA_20170927T085338",
+            "S2A_MSIL1C_20171007T084831_N0205_R107_T36UXA_20171007T084832"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2017-07-29",
+              "scene_id": "S2A_MSIL1C_20170729T085021_N0205_R107_T36UXA_20170729T085325"
+            },
+            {
+              "date": "2017-08-03",
+              "scene_id": "S2B_MSIL1C_20170803T084559_N0205_R107_T36UXA_20170803T085516"
+            },
+            {
+              "date": "2017-08-08",
+              "scene_id": "S2A_MSIL1C_20170808T084601_N0205_R107_T36UXA_20170808T085345"
+            }
+          ],
+          "site_id": "site-27",
+          "group_id": "group-31678e7ebbac75b69d80",
+          "sentinel_minus_landsat_before_days": -8,
+          "sentinel_minus_landsat_after_days": -25,
+          "date_gap_notes": {
+            "before": "landsat_later",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            14.6262,
+            0,
+            8,
+            25,
+            0,
+            15,
+            "S2B_MSIL1C_20170813T085019_N0205_R107_T36UXA_20170813T085353",
+            "S2A_MSIL1C_20170828T084601_N0205_R107_T36UXA_20170828T085434"
+          ]
+        },
+        {
+          "pre_date": "2017-08-08",
+          "post_date": "2017-08-28",
+          "pre_scene_id": "S2A_MSIL1C_20170808T084601_N0205_R107_T36UXA_20170808T085345",
+          "post_scene_id": "S2A_MSIL1C_20170828T084601_N0205_R107_T36UXA_20170828T085434",
+          "interval_days": 20,
+          "relative_orbit": 107,
+          "processing_baseline": "02.05",
+          "catalogue_cloud_percent": [
+            13.4316,
+            14.6262
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20170907T085011_N0205_R107_T36UXA_20170907T085314",
+            "S2B_MSIL1C_20170912T084549_N0205_R107_T36UXA_20170912T085508",
+            "S2A_MSIL1C_20170917T084611_N0205_R107_T36UXA_20170917T085448",
+            "S2A_MSIL1C_20170927T085011_N0205_R107_T36UXA_20170927T085338",
+            "S2A_MSIL1C_20171007T084831_N0205_R107_T36UXA_20171007T084832"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2017-07-29",
+              "scene_id": "S2A_MSIL1C_20170729T085021_N0205_R107_T36UXA_20170729T085325"
+            },
+            {
+              "date": "2017-08-03",
+              "scene_id": "S2B_MSIL1C_20170803T084559_N0205_R107_T36UXA_20170803T085516"
+            }
+          ],
+          "site_id": "site-27",
+          "group_id": "group-31678e7ebbac75b69d80",
+          "sentinel_minus_landsat_before_days": -13,
+          "sentinel_minus_landsat_after_days": -25,
+          "date_gap_notes": {
+            "before": "landsat_later",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            14.6262,
+            0,
+            13,
+            25,
+            13.4316,
+            20,
+            "S2A_MSIL1C_20170808T084601_N0205_R107_T36UXA_20170808T085345",
+            "S2A_MSIL1C_20170828T084601_N0205_R107_T36UXA_20170828T085434"
+          ]
+        },
+        {
+          "pre_date": "2017-08-03",
+          "post_date": "2017-08-28",
+          "pre_scene_id": "S2B_MSIL1C_20170803T084559_N0205_R107_T36UXA_20170803T085516",
+          "post_scene_id": "S2A_MSIL1C_20170828T084601_N0205_R107_T36UXA_20170828T085434",
+          "interval_days": 25,
+          "relative_orbit": 107,
+          "processing_baseline": "02.05",
+          "catalogue_cloud_percent": [
+            0.0951,
+            14.6262
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20170907T085011_N0205_R107_T36UXA_20170907T085314",
+            "S2B_MSIL1C_20170912T084549_N0205_R107_T36UXA_20170912T085508",
+            "S2A_MSIL1C_20170917T084611_N0205_R107_T36UXA_20170917T085448",
+            "S2A_MSIL1C_20170927T085011_N0205_R107_T36UXA_20170927T085338",
+            "S2A_MSIL1C_20171007T084831_N0205_R107_T36UXA_20171007T084832"
+          ],
+          "stable_only_earlier_scene_options": [
+            {
+              "date": "2017-07-29",
+              "scene_id": "S2A_MSIL1C_20170729T085021_N0205_R107_T36UXA_20170729T085325"
+            }
+          ],
+          "site_id": "site-27",
+          "group_id": "group-31678e7ebbac75b69d80",
+          "sentinel_minus_landsat_before_days": -18,
+          "sentinel_minus_landsat_after_days": -25,
+          "date_gap_notes": {
+            "before": "landsat_later",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            14.6262,
+            0,
+            18,
+            25,
+            0.0951,
+            25,
+            "S2B_MSIL1C_20170803T084559_N0205_R107_T36UXA_20170803T085516",
+            "S2A_MSIL1C_20170828T084601_N0205_R107_T36UXA_20170828T085434"
+          ]
+        },
+        {
+          "pre_date": "2017-07-26",
+          "post_date": "2017-08-25",
+          "pre_scene_id": "S2A_MSIL1C_20170726T083601_N0205_R064_T36UXA_20170726T083655",
+          "post_scene_id": "S2A_MSIL1C_20170825T084011_N0205_R064_T36UXA_20170825T084014",
+          "interval_days": 30,
+          "relative_orbit": 64,
+          "processing_baseline": "02.05",
+          "catalogue_cloud_percent": [
+            20.7331,
+            9.0774
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20170909T084009_N0205_R064_T36UXA_20170909T084055",
+            "S2A_MSIL1C_20170914T084011_N0205_R064_T36UXA_20170914T084017",
+            "S2A_MSIL1C_20170924T083701_N0205_R064_T36UXA_20170924T083955"
+          ],
+          "stable_only_earlier_scene_options": [],
+          "site_id": "site-27",
+          "group_id": "group-31678e7ebbac75b69d80",
+          "sentinel_minus_landsat_before_days": -26,
+          "sentinel_minus_landsat_after_days": -28,
+          "date_gap_notes": {
+            "before": "landsat_later",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            20.7331,
+            0,
+            26,
+            28,
+            20.7331,
+            30,
+            "S2A_MSIL1C_20170726T083601_N0205_R064_T36UXA_20170726T083655",
+            "S2A_MSIL1C_20170825T084011_N0205_R064_T36UXA_20170825T084014"
+          ]
+        },
+        {
+          "pre_date": "2017-07-29",
+          "post_date": "2017-08-28",
+          "pre_scene_id": "S2A_MSIL1C_20170729T085021_N0205_R107_T36UXA_20170729T085325",
+          "post_scene_id": "S2A_MSIL1C_20170828T084601_N0205_R107_T36UXA_20170828T085434",
+          "interval_days": 30,
+          "relative_orbit": 107,
+          "processing_baseline": "02.05",
+          "catalogue_cloud_percent": [
+            88.1352,
+            14.6262
+          ],
+          "later_metadata_scene_ids": [
+            "S2A_MSIL1C_20170907T085011_N0205_R107_T36UXA_20170907T085314",
+            "S2B_MSIL1C_20170912T084549_N0205_R107_T36UXA_20170912T085508",
+            "S2A_MSIL1C_20170917T084611_N0205_R107_T36UXA_20170917T085448",
+            "S2A_MSIL1C_20170927T085011_N0205_R107_T36UXA_20170927T085338",
+            "S2A_MSIL1C_20171007T084831_N0205_R107_T36UXA_20171007T084832"
+          ],
+          "stable_only_earlier_scene_options": [],
+          "site_id": "site-27",
+          "group_id": "group-31678e7ebbac75b69d80",
+          "sentinel_minus_landsat_before_days": -23,
+          "sentinel_minus_landsat_after_days": -25,
+          "date_gap_notes": {
+            "before": "landsat_later",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            88.1352,
+            0,
+            23,
+            25,
+            88.1352,
+            30,
+            "S2A_MSIL1C_20170729T085021_N0205_R107_T36UXA_20170729T085325",
+            "S2A_MSIL1C_20170828T084601_N0205_R107_T36UXA_20170828T085434"
+          ]
+        }
+      ]
+    }
+  ]
+}

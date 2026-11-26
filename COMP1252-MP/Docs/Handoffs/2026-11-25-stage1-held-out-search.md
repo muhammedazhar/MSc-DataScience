@@ -100,4 +100,11 @@ The [second batch](../Reviews/ValidationStage1SearchV35/wave-02.json)
 retains sites 17, 21 and 27 in three different groups outside the first
 batch. Favor the first two for same-path, low-cloud references and keep
 site-27 as a leaf-on reserve. Recheck each exact crop's dates, map
-control and Landsat access before opening a preview.
+control and Landsat access before opening a preview. The
+[Sentinel-2 replay](../Reviews/ValidationStage1SearchV35/sentinel_wave02_replay/verification.json)
+verified 113 items and 42 compatible options. The
+[map checks](../Reviews/ValidationStage1SearchV35/controls_wave02/control_and_pair_options.json)
+retain the original site-21 and site-27 squares and a 16 × 16 mapped
+alternative at site-17. The site-17 and site-27 full contexts lie within
+mapped woodland. All three current map snapshots replayed. Locked
+Landsat access and the visual dispositions are pending.
