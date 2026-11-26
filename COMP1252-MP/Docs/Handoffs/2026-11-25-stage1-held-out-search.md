@@ -130,4 +130,11 @@ keeps the case pending.
 
 The leaf-on site-27 [packet](../Reviews/ValidationStage1SearchV35/candidates/site-27/packet.json)
 and [offline replay](../Reviews/ValidationStage1SearchV35/candidates/site-27/verification.json)
-bind 7,975 bytes of dated previews. The visual disposition is pending.
+bind 7,975 bytes of dated previews. The main opening is visible in both
+images. The tiny target sits on its shoulder where alignment and mixed
+pixels confound possible edge expansion. The control looks vegetated in
+September, with canopy obscured or uncertain in August. The
+[site-27 review](../Reviews/ValidationStage1SearchV35/candidates/site-27/review.json)
+keeps the case pending. Neither batch has advanced a candidate. Check
+the availability of finer dated control evidence for site-09 before
+closing the current checkpoint.

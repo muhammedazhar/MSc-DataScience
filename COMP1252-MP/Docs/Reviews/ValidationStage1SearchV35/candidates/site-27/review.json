@@ -1,0 +1,36 @@
+{
+  "schema_version": 35,
+  "site_id": "site-27",
+  "group_id": "group-31678e7ebbac75b69d80",
+  "event_id": "event-131b45a1727c7aaf1091",
+  "reviewers": 2,
+  "view_order": [
+    "landsat-plain.png",
+    "landsat-outlined.png"
+  ],
+  "view_sha256": {
+    "landsat-plain.png": "7c2bf0cdf9691fc43e812423b3c0e455b753c75a156df4799bab4a8cf7a68dc9",
+    "landsat-outlined.png": "00757fd71aecec6d4f427d0338414100186c1de566ebb8fd4bc1e6463a44a4f0"
+  },
+  "suitable_for_stage_2": false,
+  "labels_approved": 0,
+  "first_visible_deforestation_interval": null,
+  "evidence_sha256": {
+    "packet.json": "c1f21930a05ca7fd8c65c9eccef958871917069b9388fcbf6245b399d1711e93",
+    "metadata.json": "2ffd453e10dc42b2744338bb6123b3b029cf3c2e309f643d2fd5b691eedf386e",
+    "verification.json": "7f6ed3f22b857bdf664cff6c93085d8c9046591f9300aa420c318418786a2a06"
+  },
+  "status": "preexisting_opening_edge_and_control_unresolved",
+  "observations": [
+    {
+      "date": "2017-08-21",
+      "target": "The prominent central opening is present before the comparison. The small target falls on its southern or right shoulder and spans mixed light, tan and olive tones.",
+      "control": "Gray-lavender veiling and mixed tones leave canopy uncertain across the northern and central context."
+    },
+    {
+      "date": "2017-09-22",
+      "target": "Brightness reaches some upper pixels on the existing opening shoulder, with muted tones remaining along the outer edge. Coarse colour sampling and alignment leave expansion unconfirmed.",
+      "control": "The square and context look mainly green to olive with no obvious new opening."
+    }
+  ]
+}
