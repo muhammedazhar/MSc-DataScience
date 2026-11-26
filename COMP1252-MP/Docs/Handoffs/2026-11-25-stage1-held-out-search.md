@@ -67,4 +67,11 @@ On site-07, two reviewers saw a pale patch over much of the target on
 continuous forest remains unverified. The fixed control is mostly pale
 and north of a sharp landscape boundary. Neither date establishes stable
 canopy in the square. The [disposition](../Reviews/ValidationStage1SearchV35/candidates/site-07/review.json)
-keeps site-07 pending. Review the already pinned site-09 prospect next.
+keeps site-07 pending.
+
+Site-09 uses the already pinned 27 May and 30 July 2018 reference crops
+and the mapped 16 × 16 alternate control. Two crops totaling 8,293 bytes
+were retrieved. The
+[packet](../Reviews/ValidationStage1SearchV35/candidates/site-09/packet.json)
+and [offline replay](../Reviews/ValidationStage1SearchV35/candidates/site-09/verification.json)
+verify the fixed imagery and both boards. The visual disposition is pending.
