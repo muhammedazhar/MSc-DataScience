@@ -1,0 +1,36 @@
+{
+  "schema_version": 35,
+  "site_id": "site-06",
+  "group_id": "group-fcc40a27555bfbdb9f67",
+  "event_id": "event-b83ef590046f2221e99a",
+  "status": "opening_already_visible_before_and_control_class_unresolved",
+  "reviewers": 2,
+  "view_order": [
+    "landsat-plain.png",
+    "landsat-outlined.png"
+  ],
+  "view_sha256": {
+    "landsat-plain.png": "74b60f691aa5fb3e93f67d8d9239ecc80903cf23e83f128d64ae0b9e0f37e7d7",
+    "landsat-outlined.png": "c489065cbb7bec36838d3453343cabfc9fdc3fa8654fcf691a2eb2ad4b1952af"
+  },
+  "observations": [
+    {
+      "date": "2018-04-09",
+      "target": "A pale diagonal strip already aligns with much of the target, particularly its southwest and centre. A parallel pale area farther south is also visible.",
+      "control": "The small fixed square is relatively dark with internal tones and edge variation. Its uniform forest class remains unresolved."
+    },
+    {
+      "date": "2018-05-11",
+      "target": "The same strip is brighter and more continuous toward the northeast. Surrounding pink-brown cover turns broadly green, leaving fine edge or widening changes ambiguous.",
+      "control": "The full context remains relatively dark, with a darker patch and edge variation. Landsat sampling leaves the class unconfirmed."
+    }
+  ],
+  "suitable_for_stage_2": false,
+  "labels_approved": 0,
+  "first_visible_deforestation_interval": null,
+  "evidence_sha256": {
+    "packet.json": "f1547e47c988c3de3787c43ba03699d0db1e3eeae112b56f04978250ea534703",
+    "metadata.json": "0dc48fe623c7362fb770d5aea74513ea88f1bdd62e6a1a98ffd6edadeeadbbbe",
+    "verification.json": "886cda59541193d07f117aa47e4550f4e0d6986fd451f5b6990e7771edd350d4"
+  }
+}

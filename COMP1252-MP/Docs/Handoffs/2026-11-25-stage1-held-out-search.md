@@ -87,4 +87,17 @@ the full context of its mapped 8 × 8 alternate control. The
 [packet](../Reviews/ValidationStage1SearchV35/candidates/site-06/packet.json)
 binds 8,700 bytes of raw previews and the exact
 [offline board replay](../Reviews/ValidationStage1SearchV35/candidates/site-06/verification.json).
-The visual disposition is pending.
+Both reviewers saw the pale diagonal opening already present over much
+of the target on 9 April. The later opening is brighter and more
+continuous, and the surrounding colours also change. The small control
+remains relatively dark, with forest class unresolved at Landsat
+sampling. The [disposition](../Reviews/ValidationStage1SearchV35/candidates/site-06/review.json)
+keeps site-06 pending.
+
+## Second batch
+
+The [second batch](../Reviews/ValidationStage1SearchV35/wave-02.json)
+retains sites 17, 21 and 27 in three different groups outside the first
+batch. Favor the first two for same-path, low-cloud references and keep
+site-27 as a leaf-on reserve. Recheck each exact crop's dates, map
+control and Landsat access before opening a preview.
