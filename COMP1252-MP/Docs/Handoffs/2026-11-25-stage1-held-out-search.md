@@ -110,4 +110,7 @@ mapped woodland. All three current map snapshots replayed. The
 [source access checks](../Reviews/ValidationStage1SearchV35/reference_access_wave02.json)
 verified all six exact 43 × 43 Landsat locks and USGS source identities.
 The three candidate protocols freeze the second-batch geometry and dates.
-Site-17 is first for visual review.
+Site-17 is first for visual review. Its two crops total 7,929 bytes.
+The [packet](../Reviews/ValidationStage1SearchV35/candidates/site-17/packet.json)
+and [offline replay](../Reviews/ValidationStage1SearchV35/candidates/site-17/verification.json)
+bind the 9 April and 11 May views. The visual disposition is pending.
