@@ -126,4 +126,8 @@ brightest May area is largely inside the earlier pink footprint. Some
 brightness reaches the candidate edge. Full-target forest conversion and
 stable forest class in the mixed control remain unresolved. The
 [site-21 review](../Reviews/ValidationStage1SearchV35/candidates/site-21/review.json)
-keeps the case pending. Review the leaf-on site-27 prospect next.
+keeps the case pending.
+
+The leaf-on site-27 [packet](../Reviews/ValidationStage1SearchV35/candidates/site-27/packet.json)
+and [offline replay](../Reviews/ValidationStage1SearchV35/candidates/site-27/verification.json)
+bind 7,975 bytes of dated previews. The visual disposition is pending.
