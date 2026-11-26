@@ -1,0 +1,138 @@
+{
+  "schema_version": 35,
+  "site_id": "site-09",
+  "checked_on_client_date": "2026-11-26",
+  "crop_crs": "EPSG:32636",
+  "crop_bounds": [
+    621960.0,
+    5563580.0,
+    622600.0,
+    5564220.0
+  ],
+  "control_bounds": [
+    622240.0,
+    5564040.0,
+    622400.0,
+    5564200.0
+  ],
+  "control_context_bounds": [
+    622220.0,
+    5564020.0,
+    622420.0,
+    5564220.0
+  ],
+  "source_pins": {
+    "Docs/Reviews/ValidationUnseenSitesV28/references/raw/wayback-config.response": "d637e43e81490fb0516b4c6b96704f2455ead97acaa75e2d91b8b0c6e6e913d1",
+    "Docs/Reviews/ValidationStage1SearchV35/candidate_protocols/site-09.json": "c987b701916a5dd3ee276950d0187a984e1692ccfc928489cf6fd88b5335016a"
+  },
+  "metadata_requests": 8,
+  "imagery_bytes_downloaded": 0,
+  "releases": [
+    {
+      "release_title": "World Imagery (Wayback 2018-05-16)",
+      "mosaic_tile_release_id": 32337,
+      "mosaic_tile_template": "https://wayback.maptiles.arcgis.com/arcgis/rest/services/World_Imagery/WMTS/1.0.0/default028mm/MapServer/tile/32337/{level}/{row}/{col}",
+      "metadata_query_receipt": {
+        "url": "https://metadata.maptiles.arcgis.com/arcgis/rest/services/World_Imagery_Metadata_2018_r07/MapServer/6/query?where=1%3D1&geometry=%7B%22xmin%22%3A621960.0%2C%22ymin%22%3A5563580.0%2C%22xmax%22%3A622600.0%2C%22ymax%22%3A5564220.0%2C%22spatialReference%22%3A%7B%22wkid%22%3A32636%7D%7D&geometryType=esriGeometryEnvelope&inSR=32636&spatialRel=esriSpatialRelWithin&outFields=OBJECTID%2CSRC_DATE2%2CNICE_DESC%2CSRC_DESC%2CSAMP_RES%2CSRC_ACC&returnGeometry=false&f=json",
+        "http_status": 200,
+        "bytes": 797,
+        "sha256": "5ab4911f39c6e18323f1058865872ec2fd6237606f8f1bca3388c5d8d8933f74"
+      },
+      "source_object_id": 503312,
+      "actual_capture_date_utc": "2012-09-13",
+      "sensor": "WV02",
+      "source": "DigitalGlobe",
+      "reported_sampling_m": 0.5,
+      "reported_accuracy_m": 10.2,
+      "covers_frozen_crop_and_control_context": true,
+      "geometry_basis": "provider Within query on entire frozen EPSG:32636 crop"
+    },
+    {
+      "release_title": "World Imagery (Wayback 2018-08-15)",
+      "mosaic_tile_release_id": 1858,
+      "mosaic_tile_template": "https://wayback.maptiles.arcgis.com/arcgis/rest/services/World_Imagery/WMTS/1.0.0/default028mm/MapServer/tile/1858/{level}/{row}/{col}",
+      "metadata_query_receipt": {
+        "url": "https://metadata.maptiles.arcgis.com/arcgis/rest/services/World_Imagery_Metadata_2018_r11/MapServer/6/query?where=1%3D1&geometry=%7B%22xmin%22%3A621960.0%2C%22ymin%22%3A5563580.0%2C%22xmax%22%3A622600.0%2C%22ymax%22%3A5564220.0%2C%22spatialReference%22%3A%7B%22wkid%22%3A32636%7D%7D&geometryType=esriGeometryEnvelope&inSR=32636&spatialRel=esriSpatialRelWithin&outFields=OBJECTID%2CSRC_DATE2%2CNICE_DESC%2CSRC_DESC%2CSAMP_RES%2CSRC_ACC&returnGeometry=false&f=json",
+        "http_status": 200,
+        "bytes": 797,
+        "sha256": "2db8de993f25c5ab58b0d24bcb2c7f006bf27ea39a9a31b333ea5c5c039c865e"
+      },
+      "source_object_id": 798825,
+      "actual_capture_date_utc": "2012-09-13",
+      "sensor": "WV02",
+      "source": "DigitalGlobe",
+      "reported_sampling_m": 0.5,
+      "reported_accuracy_m": 10.2,
+      "covers_frozen_crop_and_control_context": true,
+      "geometry_basis": "provider Within query on entire frozen EPSG:32636 crop"
+    },
+    {
+      "release_title": "World Imagery (Wayback 2020-11-18)",
+      "mosaic_tile_release_id": 20753,
+      "mosaic_tile_template": "https://wayback.maptiles.arcgis.com/arcgis/rest/services/World_Imagery/WMTS/1.0.0/default028mm/MapServer/tile/20753/{level}/{row}/{col}",
+      "metadata_query_receipt": {
+        "url": "https://metadata.maptiles.arcgis.com/arcgis/rest/services/World_Imagery_Metadata_2020_r15/MapServer/6/query?where=1%3D1&geometry=%7B%22xmin%22%3A621960.0%2C%22ymin%22%3A5563580.0%2C%22xmax%22%3A622600.0%2C%22ymax%22%3A5564220.0%2C%22spatialReference%22%3A%7B%22wkid%22%3A32636%7D%7D&geometryType=esriGeometryEnvelope&inSR=32636&spatialRel=esriSpatialRelWithin&outFields=OBJECTID%2CSRC_DATE2%2CNICE_DESC%2CSRC_DESC%2CSAMP_RES%2CSRC_ACC&returnGeometry=false&f=json",
+        "http_status": 200,
+        "bytes": 791,
+        "sha256": "34cef3fcd12e02d4044c0e0e580b42e89cecfccf6cf1cff8daa0e5a4a646fa71"
+      },
+      "source_object_id": 2390861,
+      "actual_capture_date_utc": "2015-07-04",
+      "sensor": "GE01",
+      "source": "Maxar",
+      "reported_sampling_m": 1.2,
+      "reported_accuracy_m": 8.47,
+      "covers_frozen_crop_and_control_context": true,
+      "geometry_basis": "provider Within query on entire frozen EPSG:32636 crop"
+    },
+    {
+      "release_title": "World Imagery (Wayback 2021-12-21)",
+      "mosaic_tile_release_id": 26120,
+      "mosaic_tile_template": "https://wayback.maptiles.arcgis.com/arcgis/rest/services/World_Imagery/WMTS/1.0.0/default028mm/MapServer/tile/26120/{level}/{row}/{col}",
+      "metadata_query_receipt": {
+        "url": "https://metadata.maptiles.arcgis.com/arcgis/rest/services/World_Imagery_Metadata_2021_r17/MapServer/6/query?where=1%3D1&geometry=%7B%22xmin%22%3A621960.0%2C%22ymin%22%3A5563580.0%2C%22xmax%22%3A622600.0%2C%22ymax%22%3A5564220.0%2C%22spatialReference%22%3A%7B%22wkid%22%3A32636%7D%7D&geometryType=esriGeometryEnvelope&inSR=32636&spatialRel=esriSpatialRelWithin&outFields=OBJECTID%2CSRC_DATE2%2CNICE_DESC%2CSRC_DESC%2CSAMP_RES%2CSRC_ACC&returnGeometry=false&f=json",
+        "http_status": 200,
+        "bytes": 774,
+        "sha256": "8e583f58eba169eff70f5e8ce223f9b29b465e1c6e4589fe20d3afe2ff6c292a"
+      },
+      "source_object_id": 1102921,
+      "actual_capture_date_utc": "2015-07-04",
+      "sensor": "GE01",
+      "source": "Maxar",
+      "reported_sampling_m": 0.5,
+      "reported_accuracy_m": 5.0,
+      "covers_frozen_crop_and_control_context": true,
+      "geometry_basis": "provider Within query on entire frozen EPSG:32636 crop"
+    }
+  ],
+  "geometry_attempts": [
+    {
+      "mosaic_tile_release_id": 32337,
+      "url": "https://metadata.maptiles.arcgis.com/arcgis/rest/services/World_Imagery_Metadata_2018_r07/MapServer/6/query?where=1%3D1&geometry=%7B%22xmin%22%3A621960.0%2C%22ymin%22%3A5563580.0%2C%22xmax%22%3A622600.0%2C%22ymax%22%3A5564220.0%2C%22spatialReference%22%3A%7B%22wkid%22%3A32636%7D%7D&geometryType=esriGeometryEnvelope&inSR=32636&outSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CSRC_DATE2%2CNICE_DESC%2CSRC_DESC%2CSAMP_RES%2CSRC_ACC&returnGeometry=true&geometryPrecision=7&resultRecordCount=20&f=geojson",
+      "status": "response_exceeds_512_kib"
+    },
+    {
+      "mosaic_tile_release_id": 1858,
+      "url": "https://metadata.maptiles.arcgis.com/arcgis/rest/services/World_Imagery_Metadata_2018_r11/MapServer/6/query?where=1%3D1&geometry=%7B%22xmin%22%3A621960.0%2C%22ymin%22%3A5563580.0%2C%22xmax%22%3A622600.0%2C%22ymax%22%3A5564220.0%2C%22spatialReference%22%3A%7B%22wkid%22%3A32636%7D%7D&geometryType=esriGeometryEnvelope&inSR=32636&outSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CSRC_DATE2%2CNICE_DESC%2CSRC_DESC%2CSAMP_RES%2CSRC_ACC&returnGeometry=true&geometryPrecision=7&resultRecordCount=20&f=geojson",
+      "status": "read_timeout"
+    },
+    {
+      "mosaic_tile_release_id": 20753,
+      "url": "https://metadata.maptiles.arcgis.com/arcgis/rest/services/World_Imagery_Metadata_2020_r15/MapServer/6/query?where=1%3D1&geometry=%7B%22xmin%22%3A621960.0%2C%22ymin%22%3A5563580.0%2C%22xmax%22%3A622600.0%2C%22ymax%22%3A5564220.0%2C%22spatialReference%22%3A%7B%22wkid%22%3A32636%7D%7D&geometryType=esriGeometryEnvelope&inSR=32636&outSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CSRC_DATE2%2CNICE_DESC%2CSRC_DESC%2CSAMP_RES%2CSRC_ACC&returnGeometry=true&geometryPrecision=7&resultRecordCount=20&f=geojson",
+      "status": "verified",
+      "http_status": 200,
+      "bytes": 450718,
+      "sha256": "3c1957968fce626e3ca79556c75ee8e831264193745e6874164f9001bdcee108",
+      "source_object_id": 2390861,
+      "projected_polygon_covers_crop": true,
+      "projected_polygon_covers_control": true,
+      "projected_polygon_covers_control_context": true
+    },
+    {
+      "mosaic_tile_release_id": 26120,
+      "url": "https://metadata.maptiles.arcgis.com/arcgis/rest/services/World_Imagery_Metadata_2021_r17/MapServer/6/query?where=1%3D1&geometry=%7B%22xmin%22%3A621960.0%2C%22ymin%22%3A5563580.0%2C%22xmax%22%3A622600.0%2C%22ymax%22%3A5564220.0%2C%22spatialReference%22%3A%7B%22wkid%22%3A32636%7D%7D&geometryType=esriGeometryEnvelope&inSR=32636&outSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CSRC_DATE2%2CNICE_DESC%2CSRC_DESC%2CSAMP_RES%2CSRC_ACC&returnGeometry=true&geometryPrecision=7&resultRecordCount=20&f=geojson",
+      "status": "response_exceeds_512_kib"
+    }
+  ],
+  "interpretation": "The four Wayback releases contain two historical source dates, 2012-09-13 and 2015-07-04. These checks establish spatial metadata only. None of the sampled sources dates to the 2018 comparison period. The two 2015 releases report different sampling metadata. The source control class and 2018 stability remain unresolved."
+}

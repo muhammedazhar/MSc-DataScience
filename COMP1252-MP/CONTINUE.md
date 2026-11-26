@@ -5,7 +5,7 @@ status, then the latest handoff before edits. Commit every completed verified
 logical change with the handoff updated and push to the SAME branch. This entry
 point works for Codex, Gemini Antigravity or another agent without chat history.
 
-Current V35 stage 1 held-out candidate search:
+V35 stage 1 search checkpoint:
 **`Docs/Handoffs/2026-11-25-stage1-held-out-search.md`**.
 Completed V34 site-02 bounded Landsat reference review:
 **`Docs/Handoffs/2026-11-25-site-02-landsat-review.md`**.
@@ -239,6 +239,15 @@ The reserve remains pending before native preflight. The original V28
 three-site shortlist is visually exhausted. Use the V34 list of ten
 visual-exposure exclusions when considering new groups. There are still
 zero approved held-out labels.
+
+V35 reconstructed all 29 eligible events in 14 unreviewed groups and
+reviewed six fixed candidate pairs across two batches. No case has
+enough earlier forest, later opening and control evidence to advance.
+Site-09 remains the strongest target lead. Its control class remains
+unresolved, and the sampled finer reference releases use 2012 or 2015
+captures. Eight groups remain unreviewed after this checkpoint. Use the
+16 exposed groups in the V35 result for future searches. Native
+Sentinel-2 metadata preflight and full scene acquisition are pending.
 
 Use one nice +10 CPU worker, native/Torch threads 1, no GPU, unchanged
 `validate_sample.run_guarded`, 512 MiB RSS and 1.5 GiB available-system-memory

@@ -1,5 +1,8 @@
 # Stage 1 held-out candidate search
 
+This checkpoint closes two search batches. Stage 1 is pending because
+the reviewed evidence has not produced a viable target and control together.
+
 Continue on `codex/curated-deforestation-pilot` and push verified checkpoints
 on that branch. The user requested the four remaining stages one at a time.
 This stage searches for a usable case in the unreviewed V28 groups.
@@ -135,6 +138,30 @@ images. The tiny target sits on its shoulder where alignment and mixed
 pixels confound possible edge expansion. The control looks vegetated in
 September, with canopy obscured or uncertain in August. The
 [site-27 review](../Reviews/ValidationStage1SearchV35/candidates/site-27/review.json)
-keeps the case pending. Neither batch has advanced a candidate. Check
-the availability of finer dated control evidence for site-09 before
-closing the current checkpoint.
+keeps the case pending.
+
+## Stage 1 checkpoint
+
+Site-09 remains the strongest target lead. Its later opening is visible,
+while the fixed control shows a persistent tonal division. Four
+[Wayback metadata checks](../Reviews/ValidationStage1SearchV35/candidates/site-09/wayback-metadata.json)
+over the exact crop found captures from 2012 and 2015. The release
+dates fall in 2018, 2020 and 2021. The actual source dates leave forest
+class around the 2018 site-09 comparison unresolved.
+
+The [result](../Reviews/ValidationStage1SearchV35/result.json) records six
+candidate dispositions and 16 visually exposed groups for future searches.
+Eight unreviewed groups remain in the roster. Among those groups the
+lowest maximum catalogue cloud for a before/later Tier 1 pair is 32.81%.
+Those figures leave local clarity unknown. The most targeted missing
+evidence is a clearer dated look at site-09's fixed control during or
+near 2018, or a better supported before image for an untouched case.
+The fixed site-09 Sentinel-2 interval stays 1–21 June 2018.
+
+Both batches replayed all 211 Sentinel-2 items, 96 compatible options
+and six map checks. The two-crop packets for the six sites contained
+49,287 bytes total. All 394 tests passed under the guard. The
+[integrity check](../Reviews/ValidationStage1SearchV35/final_integrity.json)
+binds the archive, local crop hashes and verified branch evidence.
+Native source preflight and full-scene acquisition have yet to begin.
+No labels or first-visible deforestation interval were approved.

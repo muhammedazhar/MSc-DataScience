@@ -1,0 +1,213 @@
+{
+  "schema_version": 35,
+  "status": "stage_1_pending_no_case_advanced",
+  "eligible_events_catalogued": 29,
+  "unreviewed_groups_catalogued_at_start": 14,
+  "reviewed_candidates": [
+    {
+      "site_id": "site-07",
+      "group_id": "group-c1c9dc8e308782fcc260",
+      "event_id": "event-a3966652e7cd9105f122",
+      "status": "earlier_cover_and_control_unresolved",
+      "suitable_for_stage_2": false
+    },
+    {
+      "site_id": "site-09",
+      "group_id": "group-faa31cc6bc71cba37762",
+      "event_id": "event-1ee8b8a224bc94cafa9c",
+      "status": "plausible_target_transition_control_unresolved",
+      "suitable_for_stage_2": false
+    },
+    {
+      "site_id": "site-06",
+      "group_id": "group-fcc40a27555bfbdb9f67",
+      "event_id": "event-b83ef590046f2221e99a",
+      "status": "opening_already_visible_before_and_control_class_unresolved",
+      "suitable_for_stage_2": false
+    },
+    {
+      "site_id": "site-17",
+      "group_id": "group-fc6c1169dafd8f14645f",
+      "event_id": "event-438947b8a3fe8a2d1738",
+      "status": "earlier_forest_and_control_unresolved",
+      "suitable_for_stage_2": false
+    },
+    {
+      "site_id": "site-21",
+      "group_id": "group-0dd86fabc23ecd52c606",
+      "event_id": "event-1fcafbe67d63cd9d0a20",
+      "status": "possible_edge_expansion_control_unresolved",
+      "suitable_for_stage_2": false
+    },
+    {
+      "site_id": "site-27",
+      "group_id": "group-31678e7ebbac75b69d80",
+      "event_id": "event-131b45a1727c7aaf1091",
+      "status": "preexisting_opening_edge_and_control_unresolved",
+      "suitable_for_stage_2": false
+    }
+  ],
+  "prior_manual_exposed_group_ids": [
+    "group-0d4c6841d965abf62969",
+    "group-45f0c39e787ca8622918",
+    "group-594ecdcf428fc819f662",
+    "group-646504159ec8034a1565",
+    "group-6bef49e5258e9f579324",
+    "group-96c27871459d03c08bcc",
+    "group-a177948c08d55f377549",
+    "group-a85fa2022a25e1a72e2c",
+    "group-c4f441ae55f683f915fa",
+    "group-d75dc0544bf1a0e519ad"
+  ],
+  "new_manual_exposed_group_ids": [
+    "group-0dd86fabc23ecd52c606",
+    "group-31678e7ebbac75b69d80",
+    "group-c1c9dc8e308782fcc260",
+    "group-faa31cc6bc71cba37762",
+    "group-fc6c1169dafd8f14645f",
+    "group-fcc40a27555bfbdb9f67"
+  ],
+  "manual_exposed_group_ids": [
+    "group-0d4c6841d965abf62969",
+    "group-0dd86fabc23ecd52c606",
+    "group-31678e7ebbac75b69d80",
+    "group-45f0c39e787ca8622918",
+    "group-594ecdcf428fc819f662",
+    "group-646504159ec8034a1565",
+    "group-6bef49e5258e9f579324",
+    "group-96c27871459d03c08bcc",
+    "group-a177948c08d55f377549",
+    "group-a85fa2022a25e1a72e2c",
+    "group-c1c9dc8e308782fcc260",
+    "group-c4f441ae55f683f915fa",
+    "group-d75dc0544bf1a0e519ad",
+    "group-faa31cc6bc71cba37762",
+    "group-fc6c1169dafd8f14645f",
+    "group-fcc40a27555bfbdb9f67"
+  ],
+  "unreviewed_group_metadata": [
+    {
+      "group_id": "group-649475dd5c798f778987",
+      "best_tier1_metadata_site_id": "site-15",
+      "minimum_maximum_pair_scene_cloud_percent": 32.81
+    },
+    {
+      "group_id": "group-c9f42c2e8cda2d638544",
+      "best_tier1_metadata_site_id": "site-29",
+      "minimum_maximum_pair_scene_cloud_percent": 49.57
+    },
+    {
+      "group_id": "group-2bd8cabc1e40523db92f",
+      "best_tier1_metadata_site_id": "site-11",
+      "minimum_maximum_pair_scene_cloud_percent": 71.96
+    },
+    {
+      "group_id": "group-39a6ef5f87367c9d5722",
+      "best_tier1_metadata_site_id": "site-05",
+      "minimum_maximum_pair_scene_cloud_percent": 71.96
+    },
+    {
+      "group_id": "group-5891bafbec8c19a07e4f",
+      "best_tier1_metadata_site_id": "site-08",
+      "minimum_maximum_pair_scene_cloud_percent": 71.96
+    },
+    {
+      "group_id": "group-58c8214410b5de7faec0",
+      "best_tier1_metadata_site_id": "site-12",
+      "minimum_maximum_pair_scene_cloud_percent": 71.96
+    },
+    {
+      "group_id": "group-af07e3eb3bd273b4056f",
+      "best_tier1_metadata_site_id": null,
+      "minimum_maximum_pair_scene_cloud_percent": null
+    },
+    {
+      "group_id": "group-f371dfc127137992adf9",
+      "best_tier1_metadata_site_id": null,
+      "minimum_maximum_pair_scene_cloud_percent": null
+    }
+  ],
+  "strongest_target_lead": {
+    "site_id": "site-09",
+    "reference_opening_evidence": "plausible later opening",
+    "control_class_status": "unresolved_persistent_tonal_division",
+    "fixed_sentinel_pair": {
+      "pre_date": "2018-06-01",
+      "post_date": "2018-06-21",
+      "pre_scene_id": "S2A_MSIL1C_20180601T083651_N0206_R064_T36UXA_20180601T105454",
+      "post_scene_id": "S2A_MSIL1C_20180621T083651_N0206_R064_T36UXA_20180621T105649",
+      "interval_days": 20,
+      "relative_orbit": 64,
+      "processing_baseline": "02.06",
+      "catalogue_cloud_percent": [
+        0,
+        0
+      ],
+      "later_metadata_scene_ids": [
+        "S2B_MSIL1C_20180626T083559_N0206_R064_T36UXA_20180626T105145",
+        "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXA_20180701T104347",
+        "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXA_20180706T123246",
+        "S2B_MSIL1C_20180716T084009_N0206_R064_T36UXA_20180716T122805",
+        "S2A_MSIL1C_20180721T083601_N0206_R064_T36UXA_20180721T105541",
+        "S2B_MSIL1C_20180726T084009_N0206_R064_T36UXA_20180726T104227",
+        "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233",
+        "S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757"
+      ],
+      "stable_only_earlier_scene_options": [
+        {
+          "date": "2018-05-22",
+          "scene_id": "S2A_MSIL1C_20180522T083601_N0206_R064_T36UXA_20180522T105656"
+        }
+      ],
+      "site_id": "site-09",
+      "group_id": "group-faa31cc6bc71cba37762",
+      "sentinel_minus_landsat_before_days": 5,
+      "sentinel_minus_landsat_after_days": -39,
+      "date_gap_notes": {
+        "before": "landsat_earlier",
+        "after": "landsat_later",
+        "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+      },
+      "score": [
+        0,
+        1,
+        5,
+        39,
+        0,
+        20,
+        "S2A_MSIL1C_20180601T083651_N0206_R064_T36UXA_20180601T105454",
+        "S2A_MSIL1C_20180621T083651_N0206_R064_T36UXA_20180621T105649"
+      ],
+      "endpoints": {
+        "before": {
+          "item_id": "S2A_36UXA_20180601_0_L1C",
+          "item_sha256": "88e295c5d4b859b6d087d68cbfee36a33a082cdbc4c22d8fa34deb6856ce0914",
+          "catalogue_time_utc": "2018-06-01T08:42:45.630000Z",
+          "raw_page": {
+            "path": "Docs/Reviews/ValidationStage1SearchV35/sentinel/catalogue/site-09/raw/page-01.json",
+            "sha256": "4a62b696d7e8089241aeaf4036ac0dd0946ed361ccb19fc48be642f708254a6f"
+          }
+        },
+        "after": {
+          "item_id": "S2A_36UXA_20180621_0_L1C",
+          "item_sha256": "60358f382e934fcf6bca60d080bc8887df9de531de6bf4e0ee15dfb2daa2fc4e",
+          "catalogue_time_utc": "2018-06-21T08:36:46.458000Z",
+          "raw_page": {
+            "path": "Docs/Reviews/ValidationStage1SearchV35/sentinel/catalogue/site-09/raw/page-01.json",
+            "sha256": "4a62b696d7e8089241aeaf4036ac0dd0946ed361ccb19fc48be642f708254a6f"
+          }
+        }
+      }
+    },
+    "finer_metadata_capture_dates": [
+      "2012-09-13",
+      "2015-07-04"
+    ],
+    "finer_metadata_sha256": "93f18c756d03979fb3fc7c097055dd9a9874b75f6315c511da9e3407cc1b3d24"
+  },
+  "stage_2_ready_case_ids": [],
+  "native_preflight_executed": false,
+  "full_sentinel_scene_downloaded": false,
+  "labels_approved": 0,
+  "first_visible_deforestation_interval": null
+}
