@@ -1,0 +1,36 @@
+{
+  "schema_version": 35,
+  "site_id": "site-21",
+  "group_id": "group-0dd86fabc23ecd52c606",
+  "event_id": "event-1fcafbe67d63cd9d0a20",
+  "reviewers": 2,
+  "view_order": [
+    "landsat-plain.png",
+    "landsat-outlined.png"
+  ],
+  "view_sha256": {
+    "landsat-plain.png": "ae35fa9cd59a288be0ac26797a440266047e824ae59331458458f2c1e40188af",
+    "landsat-outlined.png": "690370e2a23f734af88d4f1e5cc1064d33afb7c5fa2a1c0cce321e600a11ac02"
+  },
+  "suitable_for_stage_2": false,
+  "labels_approved": 0,
+  "first_visible_deforestation_interval": null,
+  "evidence_sha256": {
+    "packet.json": "419d0aac9a67f2eb1ffa753d2951f917dd4243c05605f6e1871b80bc419a01e7",
+    "metadata.json": "27bf1ffc5a0a667bec06bc41db66849024cf0ed19c15448ec5de1c0eceeacb57",
+    "verification.json": "4e58824477e453de2f7a81c018359b9e80aad49742ab28e306e0ae644d8750fa"
+  },
+  "status": "possible_edge_expansion_control_unresolved",
+  "observations": [
+    {
+      "date": "2018-04-09",
+      "target": "The narrow target lies beside an existing pale opening and is mostly dark mauve-brown, with mixed edges and uncertain earlier canopy.",
+      "control": "The northeastern square and halo are internally mixed in colour and texture."
+    },
+    {
+      "date": "2018-05-11",
+      "target": "The opening brightens mainly within the prior annotation and reaches parts of the adjacent target edge. Much of the outer edge and south stays darker.",
+      "control": "No broad opening appears within the square. Mixed texture and colour leave whole-square forest unresolved."
+    }
+  ]
+}

@@ -122,4 +122,8 @@ keeps the case pending.
 Site-21's [packet](../Reviews/ValidationStage1SearchV35/candidates/site-21/packet.json)
 and [replay](../Reviews/ValidationStage1SearchV35/candidates/site-21/verification.json)
 bind the two fixed views and their 8,453 bytes of source previews. The
-visual disposition is pending.
+brightest May area is largely inside the earlier pink footprint. Some
+brightness reaches the candidate edge. Full-target forest conversion and
+stable forest class in the mixed control remain unresolved. The
+[site-21 review](../Reviews/ValidationStage1SearchV35/candidates/site-21/review.json)
+keeps the case pending. Review the leaf-on site-27 prospect next.
