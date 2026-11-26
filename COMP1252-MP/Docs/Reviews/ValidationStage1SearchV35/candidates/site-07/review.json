@@ -1,0 +1,36 @@
+{
+  "schema_version": 35,
+  "site_id": "site-07",
+  "group_id": "group-c1c9dc8e308782fcc260",
+  "event_id": "event-a3966652e7cd9105f122",
+  "status": "earlier_cover_and_control_unresolved",
+  "reviewers": 2,
+  "view_order": [
+    "landsat-plain.png",
+    "landsat-outlined.png"
+  ],
+  "view_sha256": {
+    "landsat-plain.png": "e1f90ffd5924cd97b29f5a9059b252c72a41a3ac8e37e7564a669d2e995ac2e2",
+    "landsat-outlined.png": "2d8aceda8d322dcd8ed2746982b113b9af8e625c907a72ed5bbfd363781dcb0e"
+  },
+  "observations": [
+    {
+      "date": "2017-08-19",
+      "target": "A pale, elongated patch occupies much of the fixed target before the comparison. Its cover and whether it is already open remain uncertain.",
+      "control": "Most of the square is in a pale block north of the straight boundary. A strip of green at its margin leaves cover mixed or ambiguous."
+    },
+    {
+      "date": "2017-09-20",
+      "target": "A conspicuous brighter opening occupies much of the same footprint. Earlier continuous forest is unresolved.",
+      "control": "The square remains in a muted pale block. Uniform stable forest is unsupported."
+    }
+  ],
+  "suitable_for_stage_2": false,
+  "labels_approved": 0,
+  "first_visible_deforestation_interval": null,
+  "evidence_sha256": {
+    "packet.json": "fec8592c496024604b30aef77b9007a3c55564044de2365c19df5c42d2be6ff4",
+    "metadata.json": "257707570504cd0a61794b2e9b21d787fb405a68b2ce23ee78e8c0de78d29350",
+    "verification.json": "39c40ffb815343d2873e826929670e42314ce2024daa03dcd067d425abb95023"
+  }
+}

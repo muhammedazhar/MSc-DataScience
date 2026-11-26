@@ -60,4 +60,11 @@ reproduced both boards byte for byte offline. Its
 [packet receipts](../Reviews/ValidationStage1SearchV35/candidates/site-07/packet.json)
 and [replay](../Reviews/ValidationStage1SearchV35/candidates/site-07/verification.json)
 bind the exact files and masks. Peak RSS was 146.28 MiB for preparation
-and 137.50 MiB for replay. The visual disposition is pending.
+and 137.50 MiB for replay.
+
+On site-07, two reviewers saw a pale patch over much of the target on
+19 August. The same footprint is brighter on 20 September, so earlier
+continuous forest remains unverified. The fixed control is mostly pale
+and north of a sharp landscape boundary. Neither date establishes stable
+canopy in the square. The [disposition](../Reviews/ValidationStage1SearchV35/candidates/site-07/review.json)
+keeps site-07 pending. Review the already pinned site-09 prospect next.
