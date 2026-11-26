@@ -106,5 +106,8 @@ verified 113 items and 42 compatible options. The
 [map checks](../Reviews/ValidationStage1SearchV35/controls_wave02/control_and_pair_options.json)
 retain the original site-21 and site-27 squares and a 16 × 16 mapped
 alternative at site-17. The site-17 and site-27 full contexts lie within
-mapped woodland. All three current map snapshots replayed. Locked
-Landsat access and the visual dispositions are pending.
+mapped woodland. All three current map snapshots replayed. The
+[source access checks](../Reviews/ValidationStage1SearchV35/reference_access_wave02.json)
+verified all six exact 43 × 43 Landsat locks and USGS source identities.
+The three candidate protocols freeze the second-batch geometry and dates.
+Site-17 is first for visual review.

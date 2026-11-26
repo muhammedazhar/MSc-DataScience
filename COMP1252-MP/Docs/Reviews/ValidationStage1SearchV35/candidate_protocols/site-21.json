@@ -1,0 +1,334 @@
+{
+  "schema_version": 35,
+  "site": {
+    "site_id": "site-21",
+    "event_id": "event-1fcafbe67d63cd9d0a20",
+    "group_id": "group-0dd86fabc23ecd52c606",
+    "tile": "36UXA",
+    "annotation_date": "2018-04-22",
+    "annotation_flags": [],
+    "blockers": [],
+    "control_opportunity": {
+      "row": 2,
+      "col": 43,
+      "width": 16,
+      "height": 16,
+      "pixels": 256,
+      "bounds": [
+        632070.0,
+        5566100.0,
+        632230.0,
+        5566260.0
+      ],
+      "crs": "EPSG:32636",
+      "context_bounds": [
+        632050.0,
+        5566080.0,
+        632250.0,
+        5566280.0
+      ],
+      "context_width": 20,
+      "context_height": 20,
+      "context_pixels": 400,
+      "context_radius_pixels": 2,
+      "catalogue_exclusion_margin_metres": 20,
+      "control_class_status": "unreviewed",
+      "pixel_qa_status": "unassessed",
+      "independent_site": false,
+      "evaluation_approved": false
+    },
+    "anchor_pixels": 46,
+    "positive_target_pixels": 43,
+    "positive_interior_pixels": 9,
+    "anchor_two_pixel_context_inside_crop": true,
+    "positive_interior_sha256": "40fd1e78a75afad671fe07e49eca99b9dda3c031759d17e8bb3b316fda3c9ad9",
+    "disposition": "eligible_outside_bounded_roster",
+    "split": "validation",
+    "grid": {
+      "crs": "EPSG:32636",
+      "transform": [
+        10.0,
+        0.0,
+        631640.0,
+        0.0,
+        -10.0,
+        5566280.0
+      ],
+      "width": 64,
+      "height": 64,
+      "bounds": [
+        631640.0,
+        5565640.0,
+        632280.0,
+        5566280.0
+      ]
+    },
+    "qa_context_bounds": [
+      630440.0,
+      5564440.0,
+      633480.0,
+      5567480.0
+    ],
+    "event_bounds": [
+      631926.2981009772,
+      5565888.581206719,
+      631999.638872853,
+      5566014.590292296
+    ],
+    "frozen_group_footprint_bounds": [
+      631621.7404722148,
+      5565601.802591064,
+      632301.7404722148,
+      5566281.802591064
+    ],
+    "core_bounds_wgs84": [
+      34.84563722902693,
+      50.22811668244702,
+      34.85482849549574,
+      50.2340124867866
+    ],
+    "qa_context_bounds_wgs84": [
+      34.82840941373822,
+      50.21706032421993,
+      34.872067932182766,
+      50.24506539306953
+    ],
+    "comparison_start_inclusive": "2018-03-23",
+    "comparison_end_inclusive": "2018-05-02",
+    "reference_start_inclusive": "2018-03-23",
+    "reference_end_inclusive": "2018-06-06",
+    "post_date": "2018-04-22",
+    "post_date_role": "reference release anchor only",
+    "temporal_source_ids": [
+      "36UXA_time-dependent"
+    ],
+    "native_grid_scene_id": "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233",
+    "native_grid_bounds": [
+      600000.0,
+      5490240.0,
+      709800.0,
+      5600040.0
+    ],
+    "context_event_ids": [
+      "event-1fcafbe67d63cd9d0a20",
+      "event-3e906be8c19b20f6cc42",
+      "event-a311835f47e6ce0cfcb2",
+      "event-dd1ece9af04162a03c3a",
+      "event-e3507cb95abdc7f40046"
+    ],
+    "prior_temporal_context_event_ids": [
+      "event-a311835f47e6ce0cfcb2",
+      "event-e3507cb95abdc7f40046"
+    ],
+    "eroded_support_pixels": 9
+  },
+  "control": {
+    "row": 2,
+    "col": 43,
+    "width": 16,
+    "height": 16,
+    "pixels": 256,
+    "bounds": [
+      632070.0,
+      5566100.0,
+      632230.0,
+      5566260.0
+    ],
+    "crs": "EPSG:32636",
+    "context_bounds": [
+      632050.0,
+      5566080.0,
+      632250.0,
+      5566280.0
+    ],
+    "context_width": 20,
+    "context_height": 20,
+    "context_pixels": 400,
+    "context_radius_pixels": 2,
+    "catalogue_exclusion_margin_metres": 20,
+    "control_class_status": "unreviewed",
+    "pixel_qa_status": "unassessed",
+    "independent_site": false,
+    "evaluation_approved": false
+  },
+  "sentinel_pair": {
+    "pre_date": "2018-04-10",
+    "post_date": "2018-04-30",
+    "pre_scene_id": "S2B_MSIL1C_20180410T084559_N0206_R107_T36UXA_20180410T114307",
+    "post_scene_id": "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717",
+    "interval_days": 20,
+    "relative_orbit": 107,
+    "processing_baseline": "02.06",
+    "catalogue_cloud_percent": [
+      0,
+      0
+    ],
+    "later_metadata_scene_ids": [
+      "S2A_MSIL1C_20180505T084601_N0206_R107_T36UXA_20180505T100835",
+      "S2B_MSIL1C_20180510T084559_N0206_R107_T36UXA_20180510T113930",
+      "S2A_MSIL1C_20180515T084601_N0206_R107_T36UXA_20180515T110238",
+      "S2A_MSIL1C_20180525T084601_N0206_R107_T36UXA_20180525T110427",
+      "S2B_MSIL1C_20180530T084559_N0206_R107_T36UXA_20180530T105442",
+      "S2A_MSIL1C_20180604T084601_N0206_R107_T36UXA_20180604T110147"
+    ],
+    "stable_only_earlier_scene_options": [
+      {
+        "date": "2018-03-26",
+        "scene_id": "S2A_MSIL1C_20180326T084601_N0206_R107_T36UXA_20180326T124052"
+      },
+      {
+        "date": "2018-03-31",
+        "scene_id": "S2B_MSIL1C_20180331T084559_N0206_R107_T36UXA_20180331T105527"
+      },
+      {
+        "date": "2018-04-05",
+        "scene_id": "S2A_MSIL1C_20180405T084601_N0206_R107_T36UXA_20180407T161935"
+      }
+    ],
+    "site_id": "site-21",
+    "group_id": "group-0dd86fabc23ecd52c606",
+    "sentinel_minus_landsat_before_days": 1,
+    "sentinel_minus_landsat_after_days": -11,
+    "date_gap_notes": {
+      "before": "landsat_earlier",
+      "after": "landsat_later",
+      "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+    },
+    "score": [
+      0,
+      1,
+      1,
+      11,
+      0,
+      20,
+      "S2B_MSIL1C_20180410T084559_N0206_R107_T36UXA_20180410T114307",
+      "S2B_MSIL1C_20180430T084559_N0206_R107_T36UXA_20180430T101717"
+    ],
+    "endpoints": {
+      "before": {
+        "item_id": "S2B_36UXA_20180410_0_L1C",
+        "item_sha256": "716744b9053ed093c5f6758bf065e53dbf6e51f56e3a34b21763569f96402cb8",
+        "catalogue_time_utc": "2018-04-10T08:45:56.457000Z",
+        "raw_page": {
+          "path": "Docs/Reviews/ValidationStage1SearchV35/sentinel_wave02/catalogue/site-21/raw/page-01.json",
+          "sha256": "6edbe88848a48e67df4cc45807354a0178e1be2e5b8c6072a5da0a06ea99df84"
+        }
+      },
+      "after": {
+        "item_id": "S2B_36UXA_20180430_0_L1C",
+        "item_sha256": "713ebe73930d59b39f6a85062c4fd54fed7259fbc0e0ca1318b12058f9ed51d6",
+        "catalogue_time_utc": "2018-04-30T08:45:57.458000Z",
+        "raw_page": {
+          "path": "Docs/Reviews/ValidationStage1SearchV35/sentinel_wave02/catalogue/site-21/raw/page-01.json",
+          "sha256": "6edbe88848a48e67df4cc45807354a0178e1be2e5b8c6072a5da0a06ea99df84"
+        }
+      }
+    }
+  },
+  "sources": [
+    {
+      "scene_id": "LC08_L1TP_178025_20180409_20201015_02_T1",
+      "esri_raster_id": 1662899,
+      "capture_time_utc": "2018-04-09T08:30:01.457451Z",
+      "caption": "9 April 2018",
+      "tier": "T1",
+      "scene_cloud_percent": 1.65,
+      "usgs_item_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l1/items/LC08_L1TP_178025_20180409_20201015_02_T1",
+      "locked_preview_metadata": {
+        "url": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer/exportImage?bbox=631640.0%2C5565640.0%2C632280.0%2C5566280.0&bboxSR=32636&imageSR=32636&size=43%2C43&format=png24&interpolation=RSP_NearestNeighbor&mosaicRule=%7B%22mosaicMethod%22%3A%22esriMosaicLockRaster%22%2C%22lockRasterIds%22%3A%5B1662899%5D%2C%22mosaicOperation%22%3A%22MT_FIRST%22%7D&f=json",
+        "bounds_epsg32636": [
+          631640,
+          5565640,
+          632280,
+          5566280
+        ]
+      }
+    },
+    {
+      "scene_id": "LC08_L1TP_178025_20180511_20200901_02_T1",
+      "esri_raster_id": 1662901,
+      "capture_time_utc": "2018-05-11T08:29:42.633428Z",
+      "caption": "11 May 2018",
+      "tier": "T1",
+      "scene_cloud_percent": 0.03,
+      "usgs_item_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l1/items/LC08_L1TP_178025_20180511_20200901_02_T1",
+      "locked_preview_metadata": {
+        "url": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer/exportImage?bbox=631640.0%2C5565640.0%2C632280.0%2C5566280.0&bboxSR=32636&imageSR=32636&size=43%2C43&format=png24&interpolation=RSP_NearestNeighbor&mosaicRule=%7B%22mosaicMethod%22%3A%22esriMosaicLockRaster%22%2C%22lockRasterIds%22%3A%5B1662901%5D%2C%22mosaicOperation%22%3A%22MT_FIRST%22%7D&f=json",
+        "bounds_epsg32636": [
+          631640,
+          5565640,
+          632280,
+          5566280
+        ]
+      }
+    }
+  ],
+  "resources": {
+    "workers": 1,
+    "native_threads": 1,
+    "nice_increment": 10,
+    "gpu_used": false,
+    "worker_rss_mib": 512,
+    "available_memory_reserve_gib": 1.5,
+    "max_seconds_per_worker": 300
+  },
+  "max_bytes_per_image": 65536,
+  "preview_size_pixels": [
+    43,
+    43
+  ],
+  "view_order": [
+    "landsat-plain.png",
+    "landsat-outlined.png"
+  ],
+  "input_sha256": {
+    "catalogue": {
+      "path": "Datasets/AnnotationAudit/v1/annotations_clean.geojson",
+      "sha256": "06a1090c8451d670929163ff7be067d63454cb1893a3e8cbee97519fbb69cbce"
+    },
+    "roster": {
+      "path": "Docs/Reviews/ValidationStage1SearchV35/roster/roster.json",
+      "sha256": "b9564b8c1e83dde0d8b38b2863f0ab311b932a26e9d9bb7bf07bbfb7ff5d4ed1"
+    },
+    "reference_access": {
+      "path": "Docs/Reviews/ValidationStage1SearchV35/reference_access_wave02.json",
+      "sha256": "4bd5097d53d7ccae6f2644e826f1b78800e889681433fcac5ef91a5434736405"
+    },
+    "reference_roster": {
+      "path": "Docs/Reviews/ValidationStage1SearchV35/wave-02.json",
+      "sha256": "c3715890503b2b27aa7925fa19502af81f35cf292df8dd2f10b0c04df600f8b3"
+    },
+    "metadata_options": {
+      "path": "Docs/Reviews/ValidationStage1SearchV35/controls_wave02/control_and_pair_options.json",
+      "sha256": "5685350c2f3aee277aabd70c5585d374a0915bf7b13d79c2ead62267b0a756a3"
+    },
+    "sentinel_archive": {
+      "path": "Docs/Reviews/ValidationStage1SearchV35/sentinel_wave02/metadata.json",
+      "sha256": "ab06095137a6543d3b73bebc029b95650c193c05e15a2540cf854c0c55846213"
+    },
+    "sentinel_replay": {
+      "path": "Docs/Reviews/ValidationStage1SearchV35/sentinel_wave02_replay/verification.json",
+      "sha256": "d4c5e682f2cca3d73b11069a0633a6b86c2efcf0a39c4e77fe927d62e79f525b"
+    },
+    "map_replay": {
+      "path": "Docs/Reviews/ValidationStage1SearchV35/controls_wave02_replay/verification.json",
+      "sha256": "9e2acbdfb2b99f39a1d5fb883c23fb4f2e4a474574abce8f73e794cc83f45312"
+    },
+    "annotated_renderer": {
+      "path": "Solutions/prepare_stage1_candidate_review.py",
+      "sha256": "a6a7e99507c3ebdd48291dde30b48c31a7c2d94335aa6865302ab177a96b07d0"
+    },
+    "reference_helpers": {
+      "path": "Solutions/prepare_site01_reference_review.py",
+      "sha256": "a112ca3e13fca7c41e3fe8521d2be9dcba63a121ab3adcd8829f7119a2124b49"
+    },
+    "renderer_helpers": {
+      "path": "Solutions/prepare_july_visual_review.py",
+      "sha256": "6650036b87ecfa8f7eaeb2820746cfeb203b6fbe0def06c1bf68bf2e3aa30568"
+    },
+    "resource_guard": {
+      "path": "Solutions/validate_sample.py",
+      "sha256": "475f641ed582af37eedc2ee9e94065e280202db08eb381441e1403c3eb001fba"
+    }
+  }
+}
