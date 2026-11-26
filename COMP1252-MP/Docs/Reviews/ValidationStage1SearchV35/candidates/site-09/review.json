@@ -1,0 +1,37 @@
+{
+  "schema_version": 35,
+  "site_id": "site-09",
+  "group_id": "group-faa31cc6bc71cba37762",
+  "event_id": "event-1ee8b8a224bc94cafa9c",
+  "status": "plausible_target_transition_control_unresolved",
+  "reviewers": 2,
+  "view_order": [
+    "landsat-plain.png",
+    "landsat-outlined.png"
+  ],
+  "view_sha256": {
+    "landsat-plain.png": "653f5e23f39c324e9cb91817d2bb8085f9d7bd7c56792af56a6588224e9f99d2",
+    "landsat-outlined.png": "f2085295d125d1af11b330e69266a17dda513df7c24f78578b769aab5464c71b"
+  },
+  "observations": [
+    {
+      "date": "2018-05-27",
+      "target": "The proposed target largely follows a dark irregular strip. A small pale patch is already visible beside the western notch, and the eastern margin contacts a bright plot.",
+      "control": "A persistent light-green to dark east-west division crosses the fixed control and full context. The class of the west side and boundary is unresolved."
+    },
+    {
+      "date": "2018-07-30",
+      "target": "A bright L-shaped opening follows the upper and eastern sections and the lower lobe of the target. This supports a plausible localized transition over the reference interval.",
+      "control": "No broad opening appears in the square, but the internal tonal division persists and uniform forest remains ambiguous."
+    }
+  ],
+  "later_reference_offset_days_from_fixed_sentinel_after": 39,
+  "suitable_for_stage_2": false,
+  "labels_approved": 0,
+  "first_visible_deforestation_interval": null,
+  "evidence_sha256": {
+    "packet.json": "901a91f4bd75ad4caed547937eadeb3a6e451590a23fa6624ec16ab7bff6cd9e",
+    "metadata.json": "f01ca811c9a14408bfe22c02b45dbe54092583bbf7ddbd2448119a053d912980",
+    "verification.json": "03521e9d3546da9dc5651dca604d28fea94c71a06cc228d0a87109bea7a84c02"
+  }
+}

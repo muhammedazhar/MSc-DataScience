@@ -74,4 +74,11 @@ and the mapped 16 × 16 alternate control. Two crops totaling 8,293 bytes
 were retrieved. The
 [packet](../Reviews/ValidationStage1SearchV35/candidates/site-09/packet.json)
 and [offline replay](../Reviews/ValidationStage1SearchV35/candidates/site-09/verification.json)
-verify the fixed imagery and both boards. The visual disposition is pending.
+verify the fixed imagery and both boards. Both reviewers saw a later pale,
+L-shaped opening over much of the earlier dark strip. A pale patch was
+already visible beside the western notch, and some target margins appear
+mixed. The fixed control is broadly stable but has a persistent tonal
+division. Whole-control forest remains unresolved. The
+[site-09 disposition](../Reviews/ValidationStage1SearchV35/candidates/site-09/review.json)
+retains it as a target prospect pending control evidence. Review the
+already pinned site-06 prospect next.
