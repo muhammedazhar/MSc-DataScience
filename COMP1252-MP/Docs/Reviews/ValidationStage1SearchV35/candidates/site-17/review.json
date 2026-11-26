@@ -1,0 +1,36 @@
+{
+  "schema_version": 35,
+  "site_id": "site-17",
+  "group_id": "group-fc6c1169dafd8f14645f",
+  "event_id": "event-438947b8a3fe8a2d1738",
+  "reviewers": 2,
+  "view_order": [
+    "landsat-plain.png",
+    "landsat-outlined.png"
+  ],
+  "view_sha256": {
+    "landsat-plain.png": "396d6aed239ec23aba69c5cf979fcccb94ca3d2a7906f35c59dc8ced3241d849",
+    "landsat-outlined.png": "16d9331f365b290ed5367bd2eec2821190115c57a02ee835e71567d6789d7f93"
+  },
+  "suitable_for_stage_2": false,
+  "labels_approved": 0,
+  "first_visible_deforestation_interval": null,
+  "evidence_sha256": {
+    "packet.json": "0bb635b9d463c013a26bd5bbf977a9ab2fdd654ca7854d94dd5b77ca4d7b20f5",
+    "metadata.json": "3f9e1dd4359ad97ebffd557c48c923c691deefaefb0101c6d8669a3b5d571d0f",
+    "verification.json": "6ce8f2d3b6b3c5fb5d693ccb1025a9a7219c445b03251a6f4ac4021cf6f44a07"
+  },
+  "status": "earlier_forest_and_control_unresolved",
+  "observations": [
+    {
+      "date": "2018-04-09",
+      "target": "Muted grey, tan and pink within the narrow footprint. Pale ground touches the north end and nearby corridor. Earlier canopy is unclear.",
+      "control": "Muted grey-pink cover leaves whole-control class unresolved."
+    },
+    {
+      "date": "2018-05-11",
+      "target": "A bright north-south strip follows the footprint. Large changes in surrounding colour limit interpretation as a new forest opening.",
+      "control": "Dark mottled cover with greener tones near the eastern edge. No new opening is evident, but the entire square remains unresolved."
+    }
+  ]
+}

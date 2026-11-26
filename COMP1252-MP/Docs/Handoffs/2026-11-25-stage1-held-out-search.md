@@ -113,4 +113,8 @@ The three candidate protocols freeze the second-batch geometry and dates.
 Site-17 is first for visual review. Its two crops total 7,929 bytes.
 The [packet](../Reviews/ValidationStage1SearchV35/candidates/site-17/packet.json)
 and [offline replay](../Reviews/ValidationStage1SearchV35/candidates/site-17/verification.json)
-bind the 9 April and 11 May views. The visual disposition is pending.
+bind the 9 April and 11 May views. A bright strip broadly follows the
+target in May. Muted earlier cover and strong changes in surrounding
+colour leave earlier forest and control class unresolved. The
+[site-17 review](../Reviews/ValidationStage1SearchV35/candidates/site-17/review.json)
+keeps the case pending. Review the fixed site-21 pair next.
