@@ -80,5 +80,11 @@ already visible beside the western notch, and some target margins appear
 mixed. The fixed control is broadly stable but has a persistent tonal
 division. Whole-control forest remains unresolved. The
 [site-09 disposition](../Reviews/ValidationStage1SearchV35/candidates/site-09/review.json)
-retains it as a target prospect pending control evidence. Review the
-already pinned site-06 prospect next.
+retains it as a target prospect pending control evidence.
+
+Site-06 uses the pinned 9 April and 11 May 2018 reference crops and
+the full context of its mapped 8 × 8 alternate control. The
+[packet](../Reviews/ValidationStage1SearchV35/candidates/site-06/packet.json)
+binds 8,700 bytes of raw previews and the exact
+[offline board replay](../Reviews/ValidationStage1SearchV35/candidates/site-06/verification.json).
+The visual disposition is pending.
