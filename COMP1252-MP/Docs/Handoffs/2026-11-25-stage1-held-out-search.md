@@ -117,4 +117,9 @@ bind the 9 April and 11 May views. A bright strip broadly follows the
 target in May. Muted earlier cover and strong changes in surrounding
 colour leave earlier forest and control class unresolved. The
 [site-17 review](../Reviews/ValidationStage1SearchV35/candidates/site-17/review.json)
-keeps the case pending. Review the fixed site-21 pair next.
+keeps the case pending.
+
+Site-21's [packet](../Reviews/ValidationStage1SearchV35/candidates/site-21/packet.json)
+and [replay](../Reviews/ValidationStage1SearchV35/candidates/site-21/verification.json)
+bind the two fixed views and their 8,453 bytes of source previews. The
+visual disposition is pending.
