@@ -1,0 +1,164 @@
+{
+  "schema_version": 35,
+  "site_id": "site-07",
+  "group_id": "group-c1c9dc8e308782fcc260",
+  "event_id": "event-a3966652e7cd9105f122",
+  "grid": {
+    "crs": "EPSG:32636",
+    "transform": [
+      10.0,
+      0.0,
+      621300.0,
+      0.0,
+      -10.0,
+      5569900.0
+    ],
+    "width": 64,
+    "height": 64,
+    "bounds": [
+      621300.0,
+      5569260.0,
+      621940.0,
+      5569900.0
+    ]
+  },
+  "control": {
+    "row": 2,
+    "col": 2,
+    "width": 16,
+    "height": 16,
+    "pixels": 256,
+    "bounds": [
+      621320.0,
+      5569720.0,
+      621480.0,
+      5569880.0
+    ],
+    "crs": "EPSG:32636",
+    "context_bounds": [
+      621300.0,
+      5569700.0,
+      621500.0,
+      5569900.0
+    ],
+    "context_width": 20,
+    "context_height": 20,
+    "context_pixels": 400,
+    "context_radius_pixels": 2,
+    "catalogue_exclusion_margin_metres": 20,
+    "control_class_status": "unreviewed",
+    "pixel_qa_status": "unassessed",
+    "independent_site": false,
+    "evaluation_approved": false
+  },
+  "sentinel_pair": {
+    "pre_date": "2017-08-18",
+    "post_date": "2017-09-12",
+    "pre_scene_id": "S2A_MSIL1C_20170818T085021_N0205_R107_T36UXA_20170818T085017",
+    "post_scene_id": "S2B_MSIL1C_20170912T084549_N0205_R107_T36UXA_20170912T085508",
+    "interval_days": 25,
+    "relative_orbit": 107,
+    "processing_baseline": "02.05",
+    "catalogue_cloud_percent": [
+      0,
+      0
+    ],
+    "later_metadata_scene_ids": [
+      "S2A_MSIL1C_20170917T084611_N0205_R107_T36UXA_20170917T085448",
+      "S2A_MSIL1C_20170927T085011_N0205_R107_T36UXA_20170927T085338",
+      "S2A_MSIL1C_20171007T084831_N0205_R107_T36UXA_20171007T084832",
+      "S2B_MSIL1C_20171022T084959_N0205_R107_T36UXA_20171022T085001"
+    ],
+    "stable_only_earlier_scene_options": [
+      {
+        "date": "2017-08-13",
+        "scene_id": "S2B_MSIL1C_20170813T085019_N0205_R107_T36UXA_20170813T085353"
+      }
+    ],
+    "site_id": "site-07",
+    "group_id": "group-c1c9dc8e308782fcc260",
+    "sentinel_minus_landsat_before_days": -1,
+    "sentinel_minus_landsat_after_days": -8,
+    "date_gap_notes": {
+      "before": "landsat_later",
+      "after": "landsat_later",
+      "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+    },
+    "score": [
+      0,
+      0,
+      1,
+      8,
+      0,
+      25,
+      "S2A_MSIL1C_20170818T085021_N0205_R107_T36UXA_20170818T085017",
+      "S2B_MSIL1C_20170912T084549_N0205_R107_T36UXA_20170912T085508"
+    ],
+    "endpoints": {
+      "before": {
+        "item_id": "S2A_36UXA_20170818_0_L1C",
+        "item_sha256": "86d3ebdd5b8f0351529915840e59d4d5c9482b928f0d5b889943dbf12ee0a93d",
+        "catalogue_time_utc": "2017-08-18T08:50:17.456000Z",
+        "raw_page": {
+          "path": "Docs/Reviews/ValidationStage1SearchV35/sentinel/catalogue/site-07/raw/page-01.json",
+          "sha256": "b35177873bae113f426e59edd462b86f5b1c399c6865372872dd41b851108591"
+        }
+      },
+      "after": {
+        "item_id": "S2B_36UXA_20170912_0_L1C",
+        "item_sha256": "d863ebb492d9c0b5f27870223539a4d27c0f8a94aeb922e01d40b35e9b2ed096",
+        "catalogue_time_utc": "2017-09-12T08:55:08.667000Z",
+        "raw_page": {
+          "path": "Docs/Reviews/ValidationStage1SearchV35/sentinel/catalogue/site-07/raw/page-01.json",
+          "sha256": "b35177873bae113f426e59edd462b86f5b1c399c6865372872dd41b851108591"
+        }
+      }
+    }
+  },
+  "source_preview_size_pixels": [
+    43,
+    43
+  ],
+  "display_resampling": "nearest",
+  "mask_sha256": {
+    "anchor": "6112df4db25d90aee2227dd1b4195988eb06ca386fc48a8c14b9a28ecc79caa6",
+    "target": "6112df4db25d90aee2227dd1b4195988eb06ca386fc48a8c14b9a28ecc79caa6",
+    "interior": "09ad3dec1d82d70d7a2667d8c9d4c16fe89b803fe58c9ad6ff152751b31c901d",
+    "earlier_annotation": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7",
+    "target_context": "dfe6311ac371ff3f225bae6680e289cdba9f320944b44e3e8b0d959bfd99a3c1",
+    "control": "735e65f2e0de93ca25623d1aa9c389c9ecd35882d501381aa8eadcb7db600bbd",
+    "control_context": "343d6375491164c7cfc23e1abd953b2efb4ee5234468ef3cc057db6ff278962f"
+  },
+  "receipts": [
+    {
+      "scene_id": "LC08_L1TP_179025_20170819_20200903_02_T1",
+      "capture_time_utc": "2017-08-19T08:36:53.701064Z",
+      "source_url": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer/exportImage?bbox=621300.0%2C5569260.0%2C621940.0%2C5569900.0&bboxSR=32636&imageSR=32636&size=43%2C43&format=png24&interpolation=RSP_NearestNeighbor&mosaicRule=%7B%22mosaicMethod%22%3A%22esriMosaicLockRaster%22%2C%22lockRasterIds%22%3A%5B2394362%5D%2C%22mosaicOperation%22%3A%22MT_FIRST%22%7D&f=image",
+      "usgs_item_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l1/items/LC08_L1TP_179025_20170819_20200903_02_T1",
+      "tier": "T1",
+      "scene_cloud_percent": 0,
+      "filename": "landsat-2017-08-19.png",
+      "bytes": 4101,
+      "sha256": "682e97a6a3539e852836b55ac377b8493ddcd315be1b5a7f7a7ab2f5c40c2cf8"
+    },
+    {
+      "scene_id": "LC08_L1TP_179025_20170920_20200903_02_T1",
+      "capture_time_utc": "2017-09-20T08:36:59.087392Z",
+      "source_url": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer/exportImage?bbox=621300.0%2C5569260.0%2C621940.0%2C5569900.0&bboxSR=32636&imageSR=32636&size=43%2C43&format=png24&interpolation=RSP_NearestNeighbor&mosaicRule=%7B%22mosaicMethod%22%3A%22esriMosaicLockRaster%22%2C%22lockRasterIds%22%3A%5B2394364%5D%2C%22mosaicOperation%22%3A%22MT_FIRST%22%7D&f=image",
+      "usgs_item_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l1/items/LC08_L1TP_179025_20170920_20200903_02_T1",
+      "tier": "T1",
+      "scene_cloud_percent": 6.23,
+      "filename": "landsat-2017-09-20.png",
+      "bytes": 3836,
+      "sha256": "059eb5631faa983431e3606d2357f5a4e7f2a6a6dd36e7928ccf6e9ae1870097"
+    }
+  ],
+  "view_order": [
+    "landsat-plain.png",
+    "landsat-outlined.png"
+  ],
+  "boards_sha256": {
+    "landsat-plain.png": "e1f90ffd5924cd97b29f5a9059b252c72a41a3ac8e37e7564a669d2e995ac2e2",
+    "landsat-outlined.png": "2d8aceda8d322dcd8ed2746982b113b9af8e625c907a72ed5bbfd363781dcb0e"
+  }
+}

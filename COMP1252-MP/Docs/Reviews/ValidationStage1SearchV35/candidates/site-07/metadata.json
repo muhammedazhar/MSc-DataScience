@@ -1,0 +1,35 @@
+{
+  "schema_version": 35,
+  "execution_status": "completed",
+  "mode": "prepare",
+  "protocol_sha256": "524cc963bf3f1fddd42724b204e06a1b7fa2709a51d4934500abeb466f61e519",
+  "sentinel_jp2_reads": 0,
+  "model_executions": 0,
+  "labels_approved": 0,
+  "image_requests": 2,
+  "artifact_sha256": {
+    "landsat-2017-08-19.png": "682e97a6a3539e852836b55ac377b8493ddcd315be1b5a7f7a7ab2f5c40c2cf8",
+    "landsat-2017-09-20.png": "059eb5631faa983431e3606d2357f5a4e7f2a6a6dd36e7928ccf6e9ae1870097",
+    "landsat-outlined.png": "2d8aceda8d322dcd8ed2746982b113b9af8e625c907a72ed5bbfd363781dcb0e",
+    "landsat-plain.png": "e1f90ffd5924cd97b29f5a9059b252c72a41a3ac8e37e7564a669d2e995ac2e2",
+    "packet.json": "fec8592c496024604b30aef77b9007a3c55564044de2365c19df5c42d2be6ff4"
+  },
+  "resources": {
+    "logical_cpu_count": 11,
+    "machine_ram_gib": 18.0,
+    "worker_peak_rss_mib_sampled": 137.8,
+    "worker_high_water_rss_mib": 146.28,
+    "minimum_available_gib_sampled": 3.88,
+    "elapsed_seconds": 4.58,
+    "worker_limit_mib": 512,
+    "minimum_available_gib_limit": 1.5,
+    "runtime_limit_seconds": 120,
+    "workers": 1,
+    "native_thread_limit": 1,
+    "nice_increment": 10,
+    "gdal_cache_mib": 16,
+    "warp_memory_mib": 0,
+    "gpu_used": false,
+    "monitor_interval_seconds": 0.25
+  }
+}

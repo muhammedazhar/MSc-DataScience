@@ -53,4 +53,11 @@ candidate from 18 August to 12 September 2017. The independent before
 reference is one day after the Sentinel-2 before image. The independent
 later reference is eight days after its later image. The sighted
 transition window will depend on the images actually reviewed.
-The stage-one visual disposition is pending.
+The [access checks](../Reviews/ValidationStage1SearchV35/reference_access_wave01.json)
+confirm all six Tier 1 Landsat records and exact locked crop routes.
+Site-07's guarded packet retrieved two crops totaling 7,937 bytes and
+reproduced both boards byte for byte offline. Its
+[packet receipts](../Reviews/ValidationStage1SearchV35/candidates/site-07/packet.json)
+and [replay](../Reviews/ValidationStage1SearchV35/candidates/site-07/verification.json)
+bind the exact files and masks. Peak RSS was 146.28 MiB for preparation
+and 137.50 MiB for replay. The visual disposition is pending.
