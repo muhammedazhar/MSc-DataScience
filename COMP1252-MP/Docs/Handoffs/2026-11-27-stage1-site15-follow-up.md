@@ -62,3 +62,10 @@ Keep the fixed square and its disposition. A separate geometry search
 will check for any alternative within the same frozen crop. Satellite
 confirmation would still be needed for a new candidate. [JAXA product](https://www.eorc.jaxa.jp/ALOS/en/dataset/fnf_e.htm)
 · [Planetary Computer collection](https://planetarycomputer.microsoft.com/api/stac/v1/collections/alos-fnf-mosaic).
+
+The [alternate search protocol](../Reviews/ValidationStage1SearchV35/candidates/site-09/radar-alternate-protocol-v36.json)
+keeps the original 64 × 64 crop and target. It searches the same sizes
+and row/column order as V28. Each new candidate context must fall
+inside cells classified as forest in all three annual maps and pass
+the archived catalogue and map barriers. Prior squares stay in the
+record. A new square must have distinct geometry. The search is pending.

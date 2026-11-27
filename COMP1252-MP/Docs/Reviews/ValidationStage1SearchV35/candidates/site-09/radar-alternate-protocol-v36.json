@@ -1,0 +1,75 @@
+{
+  "schema_version": 36,
+  "site_id": "site-09",
+  "scope": "One separate alternate control search within the unchanged site-09 crop.",
+  "resources": {
+    "workers": 1,
+    "native_threads": 1,
+    "nice_increment": 10,
+    "gpu_used": false,
+    "worker_rss_mib": 512,
+    "available_memory_reserve_gib": 1.5,
+    "max_seconds_per_worker": 300
+  },
+  "max_bytes_per_crop": 65536,
+  "crop_api": {
+    "native_window_col_start_row_start_width_height": [
+      3191,
+      3520,
+      43,
+      28
+    ],
+    "native_context_cover_wgs84": [
+      34.70911111111111,
+      50.211555555555556,
+      34.718666666666664,
+      50.217777777777776
+    ]
+  },
+  "rule": [
+    "Preserve the original crop, target, map barrier and geographic split.",
+    "Use one bounded native window for each of 2017, 2018 and 2019.",
+    "Search descending sizes 16, 12 and 8, then ascending row and column.",
+    "Require the entire two-pixel context to lie in cells classified as forest in all three annual maps.",
+    "Reject repeats of either prior control geometry. Archive prior outcomes.",
+    "Review independent dated optical evidence separately for any selected square."
+  ],
+  "input_sha256": {
+    "site_protocol": {
+      "path": "Docs/Reviews/ValidationStage1SearchV35/candidate_protocols/site-09.json",
+      "sha256": "c987b701916a5dd3ee276950d0187a984e1692ccfc928489cf6fd88b5335016a"
+    },
+    "radar_metadata": {
+      "path": "Docs/Reviews/ValidationStage1SearchV35/candidates/site-09/radar-metadata-v36.json",
+      "sha256": "5c853ac2e8e65e980003bf9e29b87fc3b728b0413cc91930df043f1e8b53b813"
+    },
+    "map_snapshot": {
+      "path": "Docs/Reviews/ValidationStage1SearchV35/controls/raw/site-09-osm-map.json",
+      "sha256": "87e4d22958df94528ccd7f47854949e9fb6898407fd90c4acb455b53dd1739af"
+    },
+    "previous_control_disposition": {
+      "path": "Docs/Reviews/ValidationStage1SearchV35/candidates/site-09/radar-control-v36.json",
+      "sha256": "4f3f8a81b513943891043d613dd783c90abf9fe6b4cd5a944f7e8c84fb1cbf08"
+    },
+    "implementation": {
+      "path": "Solutions/search_site09_radar_alternate.py",
+      "sha256": "23c3ec745abcc7ff1277d68de8bcea366574f2032d0bf8d974ab1ca4a0937a82"
+    },
+    "geometry_helper": {
+      "path": "Solutions/propose_site09_radar_alternate.py",
+      "sha256": "d3e0dd7644696e1d611fc17599c594ca1b2b4f942de1393750f2c4c950a8655f"
+    },
+    "crop_helper": {
+      "path": "Solutions/check_site09_radar_control.py",
+      "sha256": "de473a57a5406ee53847042f2e17998928b571e11a2d4cc45004a65701f6523a"
+    },
+    "map_helper": {
+      "path": "Solutions/check_stage1_control_map.py",
+      "sha256": "f0b8db9fa068d8c9f8d5b8bb3ccc23ad62aacabc1062734ebfb980920cd6155a"
+    },
+    "resource_guard": {
+      "path": "Solutions/validate_sample.py",
+      "sha256": "475f641ed582af37eedc2ee9e94065e280202db08eb381441e1403c3eb001fba"
+    }
+  }
+}
