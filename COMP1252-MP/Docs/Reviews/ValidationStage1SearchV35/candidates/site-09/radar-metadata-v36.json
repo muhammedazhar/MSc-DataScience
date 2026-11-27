@@ -1,0 +1,229 @@
+{
+  "schema_version": 36,
+  "status": "metadata_verified_crop_unrequested",
+  "checked_on_client_date": "2026-11-27",
+  "site_id": "site-09",
+  "control_crs": "EPSG:32636",
+  "control_bounds": [
+    622240.0,
+    5564040.0,
+    622400.0,
+    5564200.0
+  ],
+  "control_context_bounds": [
+    622220.0,
+    5564020.0,
+    622420.0,
+    5564220.0
+  ],
+  "context_envelope_wgs84": [
+    34.71310890305407,
+    50.215677119905756,
+    34.715975397876655,
+    50.21751641464689
+  ],
+  "metadata_requests": [
+    {
+      "url": "https://planetarycomputer.microsoft.com/api/stac/v1/search?collections=alos-fnf-mosaic&bbox=34.713108903%2C50.215677120%2C34.715975398%2C50.217516415&datetime=2017-01-01T00%3A00%3A00Z%2F2019-12-31T23%3A59%3A59Z&limit=10",
+      "http_status": 200,
+      "bytes": 8686,
+      "sha256": "f61b757f9cedf1c0e5b37275d7c30f493b4cf91a376e1a0a29ec7cd5bb9b89d4"
+    },
+    {
+      "url": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/alos-fnf-mosaic",
+      "http_status": 200,
+      "bytes": 4437,
+      "sha256": "480b79ed1215b896d52eb3eaa889242c49984486fbd6e40093495003d7c1cd58"
+    },
+    {
+      "url": "https://planetarycomputer.microsoft.com/api/data/v1/openapi.json",
+      "http_status": 200,
+      "bytes": 437402,
+      "sha256": "170a901e8f356b5f1d2c339d74da50f069cae6504eea0b109ba5630dca91d1d8"
+    }
+  ],
+  "source_pins": {
+    "candidate_protocols/site-09.json": "c987b701916a5dd3ee276950d0187a984e1692ccfc928489cf6fd88b5335016a"
+  },
+  "collection": {
+    "id": "alos-fnf-mosaic",
+    "title": "ALOS Forest/Non-Forest Annual Mosaic",
+    "catalogue_license_field": "proprietary",
+    "source_catalogue": "https://planetarycomputer.microsoft.com/dataset/alos-fnf-mosaic",
+    "producer_documentation": "https://www.eorc.jaxa.jp/ALOS/en/dataset/fnf_e.htm",
+    "provider_access_documentation": "https://planetarycomputer.microsoft.com/docs/concepts/sas/",
+    "source_sensor": "JAXA ALOS-2 PALSAR-2 L-band SAR",
+    "class_asset": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "raster_bands": [
+        {
+          "nodata": 0,
+          "data_type": "uint8"
+        }
+      ],
+      "classes": [
+        {
+          "name": "no_data",
+          "value": 0,
+          "description": "No data"
+        },
+        {
+          "name": "forest (>90%)",
+          "value": 1,
+          "description": "Forest (>90% canopy cover)"
+        },
+        {
+          "name": "forest (10-90%)",
+          "value": 2,
+          "description": "Forest (10-90% canopy cover)"
+        },
+        {
+          "name": "non_forest",
+          "value": 3,
+          "description": "Non-forest"
+        },
+        {
+          "name": "water",
+          "value": 4,
+          "description": "Water"
+        }
+      ]
+    }
+  },
+  "items": [
+    {
+      "item_id": "N51E034_17_FNF",
+      "stac_item_url": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/alos-fnf-mosaic/items/N51E034_17_FNF",
+      "bbox_wgs84": [
+        34.0,
+        50.0,
+        35.0,
+        51.0
+      ],
+      "time_start_utc": "2017-01-01T00:00:00.000000Z",
+      "time_end_utc": "2017-12-31T23:59:59.000000Z",
+      "projection_epsg": 4326,
+      "native_shape": [
+        4500,
+        4500
+      ],
+      "native_transform": [
+        0.00022222222222222223,
+        0.0,
+        34.0,
+        0.0,
+        -0.00022222222222222223,
+        51.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "asset_key": "C",
+      "asset_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "asset_unsigned_url": "https://pceo.blob.core.windows.net/palsar/v200/alos_fnf_mosaic/2017/N55E030/N51E034_17_C.tif"
+    },
+    {
+      "item_id": "N51E034_18_FNF",
+      "stac_item_url": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/alos-fnf-mosaic/items/N51E034_18_FNF",
+      "bbox_wgs84": [
+        34.0,
+        50.0,
+        35.0,
+        51.0
+      ],
+      "time_start_utc": "2018-01-01T00:00:00.000000Z",
+      "time_end_utc": "2018-12-31T23:59:59.000000Z",
+      "projection_epsg": 4326,
+      "native_shape": [
+        4500,
+        4500
+      ],
+      "native_transform": [
+        0.00022222222222222223,
+        0.0,
+        34.0,
+        0.0,
+        -0.00022222222222222223,
+        51.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "asset_key": "C",
+      "asset_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "asset_unsigned_url": "https://pceo.blob.core.windows.net/palsar/v200/alos_fnf_mosaic/2018/N55E030/N51E034_18_C.tif"
+    },
+    {
+      "item_id": "N51E034_19_FNF",
+      "stac_item_url": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/alos-fnf-mosaic/items/N51E034_19_FNF",
+      "bbox_wgs84": [
+        34.0,
+        50.0,
+        35.0,
+        51.0
+      ],
+      "time_start_utc": "2019-01-01T00:00:00.000000Z",
+      "time_end_utc": "2019-12-31T23:59:59.000000Z",
+      "projection_epsg": 4326,
+      "native_shape": [
+        4500,
+        4500
+      ],
+      "native_transform": [
+        0.00022222222222222223,
+        0.0,
+        34.0,
+        0.0,
+        -0.00022222222222222223,
+        51.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "asset_key": "C",
+      "asset_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "asset_unsigned_url": "https://pceo.blob.core.windows.net/palsar/v200/alos_fnf_mosaic/2019/N55E030/N51E034_19_C.tif"
+    }
+  ],
+  "crop_api": {
+    "route": "/api/data/v1/item/bbox/{minx},{miny},{maxx},{maxy}/{width}x{height}.{format}",
+    "documented_query_parameters": [
+      "collection",
+      "item",
+      "assets",
+      "coord_crs",
+      "dst_crs",
+      "resampling",
+      "reproject",
+      "return_mask"
+    ],
+    "native_context_cover_wgs84": [
+      34.71288888888889,
+      50.215555555555554,
+      34.716,
+      50.217555555555556
+    ],
+    "native_context_cover_size": [
+      14,
+      9
+    ],
+    "native_window_col_start_row_start_width_height": [
+      3208,
+      3521,
+      14,
+      9
+    ],
+    "native_window_example_unrequested": "https://planetarycomputer.microsoft.com/api/data/v1/item/bbox/34.71288888888889,50.215555555555554,34.716,50.217555555555556/14x9.tif?collection=alos-fnf-mosaic&item=N51E034_18_FNF&assets=C&coord_crs=EPSG%3A4326&dst_crs=EPSG%3A4326&resampling=nearest&reproject=nearest&return_mask=false",
+    "utm_context_example_unrequested": "https://planetarycomputer.microsoft.com/api/data/v1/item/bbox/622220.0,5564020.0,622420.0,5564220.0/20x20.tif?collection=alos-fnf-mosaic&item=N51E034_18_FNF&assets=C&coord_crs=EPSG%3A32636&dst_crs=EPSG%3A32636&resampling=nearest&reproject=nearest&return_mask=false",
+    "interpretation": "The native-grid example covers the projected context. Apply the fixed control and context footprints to the cells separately. UTM output is resampled categorical data, so 10 m output pixels do not represent independent native observations."
+  },
+  "limits": [
+    "The annual STAC date range is a product interval. It does not date the actual SAR acquisition at the control.",
+    "The producer combines target-year and preceding-year SAR data for the four-class map. Adjacent year labels have overlapping input years.",
+    "An annual classified mosaic from an independent radar sensor can corroborate broad canopy or a class boundary. It cannot establish complete stable forest between the two specific 2018 dates or serve as ground truth for the fixed 10 m labels.",
+    "Producer downloads require registration. Planetary Computer exposes anonymous STAC and offers anonymous token issuance when needed. The metadata check did not request a token or verify response availability for the crop endpoint."
+  ],
+  "imagery_bytes_downloaded": 0,
+  "crop_requests_made": 0,
+  "tokens_requested": 0
+}

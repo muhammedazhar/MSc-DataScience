@@ -1,0 +1,37 @@
+{
+  "schema_version": 36,
+  "site_id": "site-15",
+  "group_id": "group-649475dd5c798f778987",
+  "event_id": "event-74c52b3eaa94e8ad3a39",
+  "status": "no_coherent_transition_control_unresolved",
+  "reviewers": 2,
+  "view_order": [
+    "landsat-plain.png",
+    "landsat-outlined.png"
+  ],
+  "view_sha256": {
+    "landsat-plain.png": "2a4425474d6be0da64e74c69c953dba7acc3cc4b7aa762dd2c97723005194610",
+    "landsat-outlined.png": "fe3e7d044eea4c6d1436ec6a3faf478a8642960c13910320be65ab5b654fd2c0"
+  },
+  "observations": [
+    {
+      "date": "2017-11-16",
+      "target": "Muted olive, mauve and pink-gray tones occur across the narrow target. A pale patch reaches it from the north. Continuous earlier forest is unresolved.",
+      "control": "The alternate northeastern control and context cross a green-to-mauve boundary and include dark patches on the west."
+    },
+    {
+      "date": "2018-01-10",
+      "target": "The same pale patch persists and is slightly stronger. Ground landmarks align and no coherent new opening is identifiable.",
+      "control": "The internal tonal boundary persists without a discrete opening. Homogeneous forest across the full context remains unresolved."
+    }
+  ],
+  "suitable_for_stage_2": false,
+  "labels_approved": 0,
+  "first_visible_deforestation_interval": null,
+  "later_reference_offset_days_from_fixed_sentinel_after": 35,
+  "evidence_sha256": {
+    "packet.json": "d8c32c4917267c8754a8f0d2b1ee8e2b2ca68c1ad72599c0cee66a82104f862e",
+    "metadata.json": "2f8e64175812d54ea4411397482b624abe7ac0a7cc56638926392bd425913e11",
+    "verification.json": "fd213ffb3b23b9ce2d675f287ca613e92467a86a3b449b710b250c58eb5eb16b"
+  }
+}

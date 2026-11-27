@@ -1,0 +1,38 @@
+{
+  "schema_version": 36,
+  "site_id": "site-09",
+  "scope": "Annual independent radar classification as supporting control context evidence.",
+  "resources": {
+    "workers": 1,
+    "native_threads": 1,
+    "nice_increment": 10,
+    "gpu_used": false,
+    "worker_rss_mib": 512,
+    "available_memory_reserve_gib": 1.5,
+    "max_seconds_per_worker": 300
+  },
+  "max_bytes_per_crop": 65536,
+  "interpretation": "Corroborate broad forest or nonforest patterns across years for the fixed control. Annual composites and coarse mixed cells leave date-specific and exact forest class uncertain.",
+  "input_sha256": {
+    "radar_metadata": {
+      "path": "Docs/Reviews/ValidationStage1SearchV35/candidates/site-09/radar-metadata-v36.json",
+      "sha256": "5c853ac2e8e65e980003bf9e29b87fc3b728b0413cc91930df043f1e8b53b813"
+    },
+    "control_protocol": {
+      "path": "Docs/Reviews/ValidationStage1SearchV35/candidate_protocols/site-09.json",
+      "sha256": "c987b701916a5dd3ee276950d0187a984e1692ccfc928489cf6fd88b5335016a"
+    },
+    "previous_review": {
+      "path": "Docs/Reviews/ValidationStage1SearchV35/candidates/site-09/review.json",
+      "sha256": "6525af97cbd6ccf9b1a73fee6057d41339500283c66cdc33eff06c5f3ea41a7d"
+    },
+    "implementation": {
+      "path": "Solutions/check_site09_radar_control.py",
+      "sha256": "de473a57a5406ee53847042f2e17998928b571e11a2d4cc45004a65701f6523a"
+    },
+    "resource_guard": {
+      "path": "Solutions/validate_sample.py",
+      "sha256": "475f641ed582af37eedc2ee9e94065e280202db08eb381441e1403c3eb001fba"
+    }
+  }
+}

@@ -33,5 +33,24 @@ bytes. The
 [packet](../Reviews/ValidationStage1SearchV35/candidates/site-15/packet.json)
 and [replay](../Reviews/ValidationStage1SearchV35/candidates/site-15/verification.json)
 verify the exact source crops and both review boards. Peak worker RSS
-was 119.34 MiB for preparation and 129.61 MiB for replay. Image review
-is pending.
+was 119.34 MiB for preparation and 129.61 MiB for replay.
+
+Both reviewers found a pale patch reaching into the target on both
+dates and no coherent later opening. The alternate control straddles
+a persistent green-to-mauve boundary. Earlier forest and stable forest
+cover across the whole square remain unresolved. The
+[site-15 disposition](../Reviews/ValidationStage1SearchV35/candidates/site-15/review.json)
+keeps the case pending and adds its group to the exposure history.
+
+## Site-09 annual radar control check
+
+Site-09 remains the strongest target lead. The
+[radar metadata](../Reviews/ValidationStage1SearchV35/candidates/site-09/radar-metadata-v36.json)
+identifies three public JAXA PALSAR-2 forest-map items, from 2017, 2018
+and 2019. The
+[protocol](../Reviews/ValidationStage1SearchV35/candidates/site-09/radar-protocol-v36.json)
+fixes a 14 × 9 cell native window and the existing control and context
+polygons. Compare area-weighted published classes over the exact areas.
+Annual class maps can corroborate forest or a mixed pattern. Their
+sampling and composite dates leave canopy at specific dates uncertain.
+The bounded radar crop and replay are pending.
