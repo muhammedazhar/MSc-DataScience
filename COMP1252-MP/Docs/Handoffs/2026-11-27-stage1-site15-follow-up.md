@@ -28,4 +28,10 @@ retains the original control disposition and selects the alternate
 the nearest mapped road. The [locked source receipts](../Reviews/ValidationStage1SearchV35/reference_access_wave03.json)
 confirm both exact 43 × 43 Landsat extents. The
 [candidate protocol](../Reviews/ValidationStage1SearchV35/candidate_protocols/site-15.json)
-fixes the sources and geometry. Image review is pending.
+fixes the sources and geometry. The two guarded previews total 8,375
+bytes. The
+[packet](../Reviews/ValidationStage1SearchV35/candidates/site-15/packet.json)
+and [replay](../Reviews/ValidationStage1SearchV35/candidates/site-15/verification.json)
+verify the exact source crops and both review boards. Peak worker RSS
+was 119.34 MiB for preparation and 129.61 MiB for replay. Image review
+is pending.
