@@ -68,4 +68,14 @@ keeps the original 64 × 64 crop and target. It searches the same sizes
 and row/column order as V28. Each new candidate context must fall
 inside cells classified as forest in all three annual maps and pass
 the archived catalogue and map barriers. Prior squares stay in the
-record. A new square must have distinct geometry. The search is pending.
+record. A new square must have distinct geometry.
+
+The [replayed search](../Reviews/ValidationStage1SearchV35/candidates/site-09/radar-alternate-v36.json)
+selected a separate 12 × 12 square at zero-based row 2, column 46,
+with a complete 16 × 16 context. The bounds are
+`[622420, 5564080, 622540, 5564200]` in EPSG:32636. The full context
+is supported by forest classes in all three annual maps under the
+pinned constraints. The
+[optical protocol](../Reviews/ValidationStage1SearchV35/candidates/site-09/alternate-optical-v36/site-09.json)
+fixes the separate control and reuses the two verified V35 Landsat
+crops for review without another download. Optical review is pending.

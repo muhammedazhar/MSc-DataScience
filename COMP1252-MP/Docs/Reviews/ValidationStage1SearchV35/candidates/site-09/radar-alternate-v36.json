@@ -1,0 +1,96 @@
+{
+  "schema_version": 36,
+  "site_id": "site-09",
+  "group_id": "group-faa31cc6bc71cba37762",
+  "grid": {
+    "crs": "EPSG:32636",
+    "transform": [
+      10.0,
+      0.0,
+      621960.0,
+      0.0,
+      -10.0,
+      5564220.0
+    ],
+    "width": 64,
+    "height": 64,
+    "bounds": [
+      621960.0,
+      5563580.0,
+      622600.0,
+      5564220.0
+    ]
+  },
+  "previous_control_contexts": [
+    [
+      621960.0,
+      5564020.0,
+      622160.0,
+      5564220.0
+    ],
+    [
+      622220.0,
+      5564020.0,
+      622420.0,
+      5564220.0
+    ]
+  ],
+  "forest_on_all_three_maps_area_m2": 231652.2274,
+  "forest_on_all_three_maps_mask_sha256": "8ddc7cc127c97d7790826325e3bca9d2ac26b8a73e12eaf787702b7749760f26",
+  "selected_control": {
+    "row": 2,
+    "col": 46,
+    "width": 12,
+    "height": 12,
+    "pixels": 144,
+    "bounds": [
+      622420.0,
+      5564080.0,
+      622540.0,
+      5564200.0
+    ],
+    "crs": "EPSG:32636",
+    "context_bounds": [
+      622400.0,
+      5564060.0,
+      622560.0,
+      5564220.0
+    ],
+    "context_width": 16,
+    "context_height": 16,
+    "context_pixels": 256,
+    "context_radius_pixels": 2,
+    "catalogue_exclusion_margin_metres": 20,
+    "control_class_status": "unreviewed",
+    "pixel_qa_status": "unassessed",
+    "independent_site": false,
+    "evaluation_approved": false
+  },
+  "recorded_assets": [
+    {
+      "item_id": "N51E034_17_FNF",
+      "url": "https://planetarycomputer.microsoft.com/api/data/v1/item/bbox/34.70911111111111,50.211555555555556,34.718666666666664,50.217777777777776/43x28.tif?collection=alos-fnf-mosaic&item=N51E034_17_FNF&assets=C&coord_crs=EPSG%3A4326&dst_crs=EPSG%3A4326&resampling=nearest&reproject=nearest&return_mask=false",
+      "filename": "N51E034_17_FNF.tif",
+      "bytes": 1570,
+      "sha256": "f82dd3c71d26773628b3c1b46b4bd74c456a88e46cb0dbdf7be5a5966e863ee5",
+      "native_classes_sha256": "18340ac8ac472b25323eb452f4b4d6f9966c9d52f63477d7ff73c82551173544"
+    },
+    {
+      "item_id": "N51E034_18_FNF",
+      "url": "https://planetarycomputer.microsoft.com/api/data/v1/item/bbox/34.70911111111111,50.211555555555556,34.718666666666664,50.217777777777776/43x28.tif?collection=alos-fnf-mosaic&item=N51E034_18_FNF&assets=C&coord_crs=EPSG%3A4326&dst_crs=EPSG%3A4326&resampling=nearest&reproject=nearest&return_mask=false",
+      "filename": "N51E034_18_FNF.tif",
+      "bytes": 1570,
+      "sha256": "26e669bcfc08820e486ad307819e62527fcc71825ed773af95ff9dd76b0ac636",
+      "native_classes_sha256": "37def73ea13a1d6c50e081d4aa1a7c164c2ac68ec91c660d6f05d11056516210"
+    },
+    {
+      "item_id": "N51E034_19_FNF",
+      "url": "https://planetarycomputer.microsoft.com/api/data/v1/item/bbox/34.70911111111111,50.211555555555556,34.718666666666664,50.217777777777776/43x28.tif?collection=alos-fnf-mosaic&item=N51E034_19_FNF&assets=C&coord_crs=EPSG%3A4326&dst_crs=EPSG%3A4326&resampling=nearest&reproject=nearest&return_mask=false",
+      "filename": "N51E034_19_FNF.tif",
+      "bytes": 1570,
+      "sha256": "042756e1d36ac4e2c9a3b900ce8c138fe2af47ba2574e7a5fb919606ffa8d575",
+      "native_classes_sha256": "977cf732b85464dde697fd43b72821e84a7a0b06e90dae6d910458d04a055f2c"
+    }
+  ],
+  "labels_approved": 0
+}
