@@ -1,0 +1,67 @@
+{
+  "schema_version": 35,
+  "continuation_checkpoint": 36,
+  "protocol_sha256": "ff187a64c82cd47012ba7ce9b317ab328c5f9962e4f94570607fa88ef663479a",
+  "sentinel_site_ids": [
+    "site-15"
+  ],
+  "third_batch": [
+    {
+      "site_id": "site-15",
+      "group_id": "group-649475dd5c798f778987",
+      "before": {
+        "feature_index": 4,
+        "object_id": 2392213,
+        "scene_id": "LC08_L1TP_178026_20171116_20200902_02_T1",
+        "capture_date_utc": "2017-11-16",
+        "capture_in_reference_window": true,
+        "full_crop_coverage": true,
+        "coverage_basis": "provider Within query on projected crop",
+        "panchromatic_sampling_m": 15,
+        "multispectral_sampling_m": 30,
+        "reference_role": "coarse_context_only",
+        "access": "public catalogue metadata; pixels unexamined",
+        "esri_cloud_fraction": 0.0061,
+        "scene_cloud_percent": 0.61,
+        "capture_timestamp_utc": "2017-11-16T08:31:17Z",
+        "correction": "L1TP",
+        "collection_tier": "T1",
+        "usgs_item_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l1/items/LC08_L1TP_178026_20171116_20200902_02_T1",
+        "locked_preview_metadata_url": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer/exportImage?bbox=619400.0%2C5509500.0%2C620040.0%2C5510140.0&bboxSR=32636&imageSR=32636&size=43%2C43&format=png24&interpolation=RSP_NearestNeighbor&mosaicRule=%7B%22mosaicMethod%22%3A%22esriMosaicLockRaster%22%2C%22lockRasterIds%22%3A%5B2392213%5D%2C%22mosaicOperation%22%3A%22MT_FIRST%22%7D&f=json",
+        "role_relative_to_annotation": "before_annotation"
+      },
+      "after": {
+        "feature_index": 14,
+        "object_id": 1682375,
+        "scene_id": "LC08_L1TP_179025_20180110_20200902_02_T1",
+        "capture_date_utc": "2018-01-10",
+        "capture_in_reference_window": true,
+        "full_crop_coverage": true,
+        "coverage_basis": "provider Within query on projected crop",
+        "panchromatic_sampling_m": 15,
+        "multispectral_sampling_m": 30,
+        "reference_role": "coarse_context_only",
+        "access": "public catalogue metadata; pixels unexamined",
+        "esri_cloud_fraction": 0.3281,
+        "scene_cloud_percent": 32.81,
+        "capture_timestamp_utc": "2018-01-10T08:36:55Z",
+        "correction": "L1TP",
+        "collection_tier": "T1",
+        "usgs_item_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l1/items/LC08_L1TP_179025_20180110_20200902_02_T1",
+        "locked_preview_metadata_url": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer/exportImage?bbox=619400.0%2C5509500.0%2C620040.0%2C5510140.0&bboxSR=32636&imageSR=32636&size=43%2C43&format=png24&interpolation=RSP_NearestNeighbor&mosaicRule=%7B%22mosaicMethod%22%3A%22esriMosaicLockRaster%22%2C%22lockRasterIds%22%3A%5B1682375%5D%2C%22mosaicOperation%22%3A%22MT_FIRST%22%7D&f=json",
+        "role_relative_to_annotation": "on_or_after_annotation"
+      },
+      "frozen_interior_pixels": 29,
+      "selection_reason": "Lowest maximum scene cloud among remaining Tier 1 before/later pairs in the archived V35 windows."
+    }
+  ],
+  "review_order": [
+    "site-15"
+  ],
+  "archive_sha256": {
+    "result.json": "16b4bb4e93bee07286c095c9e5a8b9e7fd9dcf9bcfd9b7e21dd6e52c93646a40",
+    "final_integrity.json": "cd264d4880bb4c2324cfdc9c45c7591f4e3993320e6dde3164ae5a9c0f94fcb0",
+    "roster/roster.json": "b9564b8c1e83dde0d8b38b2863f0ab311b932a26e9d9bb7bf07bbfb7ff5d4ed1",
+    "references/landsat.json": "2459b60efef1fd8a40fc87b283707cc3c3c6ffd41355063a6aad396ce3f97ebd"
+  }
+}
