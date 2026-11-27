@@ -78,4 +78,7 @@ is supported by forest classes in all three annual maps under the
 pinned constraints. The
 [optical protocol](../Reviews/ValidationStage1SearchV35/candidates/site-09/alternate-optical-v36/site-09.json)
 fixes the separate control and reuses the two verified V35 Landsat
-crops for review without another download. Optical review is pending.
+crops for review without another download. The
+[packet](../Reviews/ValidationStage1SearchV35/candidates/site-09/alternate-optical-v36/packet.json)
+and [replay](../Reviews/ValidationStage1SearchV35/candidates/site-09/alternate-optical-v36/verification.json)
+bind the alternate views. Optical review is pending.

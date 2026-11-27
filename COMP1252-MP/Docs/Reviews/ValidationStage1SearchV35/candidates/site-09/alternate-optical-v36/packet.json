@@ -1,0 +1,168 @@
+{
+  "schema_version": 35,
+  "site_id": "site-09",
+  "group_id": "group-faa31cc6bc71cba37762",
+  "event_id": "event-1ee8b8a224bc94cafa9c",
+  "grid": {
+    "crs": "EPSG:32636",
+    "transform": [
+      10.0,
+      0.0,
+      621960.0,
+      0.0,
+      -10.0,
+      5564220.0
+    ],
+    "width": 64,
+    "height": 64,
+    "bounds": [
+      621960.0,
+      5563580.0,
+      622600.0,
+      5564220.0
+    ]
+  },
+  "control": {
+    "row": 2,
+    "col": 46,
+    "width": 12,
+    "height": 12,
+    "pixels": 144,
+    "bounds": [
+      622420.0,
+      5564080.0,
+      622540.0,
+      5564200.0
+    ],
+    "crs": "EPSG:32636",
+    "context_bounds": [
+      622400.0,
+      5564060.0,
+      622560.0,
+      5564220.0
+    ],
+    "context_width": 16,
+    "context_height": 16,
+    "context_pixels": 256,
+    "context_radius_pixels": 2,
+    "catalogue_exclusion_margin_metres": 20,
+    "control_class_status": "unreviewed",
+    "pixel_qa_status": "unassessed",
+    "independent_site": false,
+    "evaluation_approved": false
+  },
+  "sentinel_pair": {
+    "pre_date": "2018-06-01",
+    "post_date": "2018-06-21",
+    "pre_scene_id": "S2A_MSIL1C_20180601T083651_N0206_R064_T36UXA_20180601T105454",
+    "post_scene_id": "S2A_MSIL1C_20180621T083651_N0206_R064_T36UXA_20180621T105649",
+    "interval_days": 20,
+    "relative_orbit": 64,
+    "processing_baseline": "02.06",
+    "catalogue_cloud_percent": [
+      0,
+      0
+    ],
+    "later_metadata_scene_ids": [
+      "S2B_MSIL1C_20180626T083559_N0206_R064_T36UXA_20180626T105145",
+      "S2A_MSIL1C_20180701T083601_N0206_R064_T36UXA_20180701T104347",
+      "S2B_MSIL1C_20180706T083559_N0206_R064_T36UXA_20180706T123246",
+      "S2B_MSIL1C_20180716T084009_N0206_R064_T36UXA_20180716T122805",
+      "S2A_MSIL1C_20180721T083601_N0206_R064_T36UXA_20180721T105541",
+      "S2B_MSIL1C_20180726T084009_N0206_R064_T36UXA_20180726T104227",
+      "S2A_MSIL1C_20180731T083601_N0206_R064_T36UXA_20180731T110233",
+      "S2B_MSIL1C_20180805T083559_N0206_R064_T36UXA_20180805T123757"
+    ],
+    "stable_only_earlier_scene_options": [
+      {
+        "date": "2018-05-22",
+        "scene_id": "S2A_MSIL1C_20180522T083601_N0206_R064_T36UXA_20180522T105656"
+      }
+    ],
+    "site_id": "site-09",
+    "group_id": "group-faa31cc6bc71cba37762",
+    "sentinel_minus_landsat_before_days": 5,
+    "sentinel_minus_landsat_after_days": -39,
+    "date_gap_notes": {
+      "before": "landsat_earlier",
+      "after": "landsat_later",
+      "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+    },
+    "score": [
+      0,
+      1,
+      5,
+      39,
+      0,
+      20,
+      "S2A_MSIL1C_20180601T083651_N0206_R064_T36UXA_20180601T105454",
+      "S2A_MSIL1C_20180621T083651_N0206_R064_T36UXA_20180621T105649"
+    ],
+    "endpoints": {
+      "before": {
+        "item_id": "S2A_36UXA_20180601_0_L1C",
+        "item_sha256": "88e295c5d4b859b6d087d68cbfee36a33a082cdbc4c22d8fa34deb6856ce0914",
+        "catalogue_time_utc": "2018-06-01T08:42:45.630000Z",
+        "raw_page": {
+          "path": "Docs/Reviews/ValidationStage1SearchV35/sentinel/catalogue/site-09/raw/page-01.json",
+          "sha256": "4a62b696d7e8089241aeaf4036ac0dd0946ed361ccb19fc48be642f708254a6f"
+        }
+      },
+      "after": {
+        "item_id": "S2A_36UXA_20180621_0_L1C",
+        "item_sha256": "60358f382e934fcf6bca60d080bc8887df9de531de6bf4e0ee15dfb2daa2fc4e",
+        "catalogue_time_utc": "2018-06-21T08:36:46.458000Z",
+        "raw_page": {
+          "path": "Docs/Reviews/ValidationStage1SearchV35/sentinel/catalogue/site-09/raw/page-01.json",
+          "sha256": "4a62b696d7e8089241aeaf4036ac0dd0946ed361ccb19fc48be642f708254a6f"
+        }
+      }
+    }
+  },
+  "source_preview_size_pixels": [
+    43,
+    43
+  ],
+  "display_resampling": "nearest",
+  "mask_sha256": {
+    "anchor": "709aff7748a0ab9bcf3a4ad4e767546589343773410b45e63af3eb3ed090c481",
+    "target": "709aff7748a0ab9bcf3a4ad4e767546589343773410b45e63af3eb3ed090c481",
+    "interior": "e97e67b715b189da40b3c7a119c3010c728140ddb4e068fd1c099e4cd1ebd64e",
+    "earlier_annotation": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7",
+    "target_context": "e7d66364bede2cd3d55ef18ee9a6bd5b0df85032cbe3c0746dae5d5a7100921f",
+    "control": "b2316b1a2063d4418026f4444919a045287782e0dae56339b618caa11bfdafb6",
+    "control_context": "6a227abbb7e2b594225d970f3f388d3f6858841cba32fa869fb2e2c6d14e64a9"
+  },
+  "receipts": [
+    {
+      "scene_id": "LC08_L1TP_178025_20180527_20200901_02_T1",
+      "capture_time_utc": "2018-05-27T08:29:30.234363Z",
+      "source_url": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer/exportImage?bbox=621960.0%2C5563580.0%2C622600.0%2C5564220.0&bboxSR=32636&imageSR=32636&size=43%2C43&format=png24&interpolation=RSP_NearestNeighbor&mosaicRule=%7B%22mosaicMethod%22%3A%22esriMosaicLockRaster%22%2C%22lockRasterIds%22%3A%5B1662902%5D%2C%22mosaicOperation%22%3A%22MT_FIRST%22%7D&f=image",
+      "usgs_item_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l1/items/LC08_L1TP_178025_20180527_20200901_02_T1",
+      "tier": "T1",
+      "scene_cloud_percent": 0.02,
+      "filename": "landsat-2018-05-27.png",
+      "bytes": 4233,
+      "sha256": "beb74886c6bf44aa1860e91653445b749506effb708bb284bfbf47d7c1dbf90a"
+    },
+    {
+      "scene_id": "LC08_L1TP_178025_20180730_20200831_02_T1",
+      "capture_time_utc": "2018-07-30T08:29:55.582778Z",
+      "source_url": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer/exportImage?bbox=621960.0%2C5563580.0%2C622600.0%2C5564220.0&bboxSR=32636&imageSR=32636&size=43%2C43&format=png24&interpolation=RSP_NearestNeighbor&mosaicRule=%7B%22mosaicMethod%22%3A%22esriMosaicLockRaster%22%2C%22lockRasterIds%22%3A%5B1662906%5D%2C%22mosaicOperation%22%3A%22MT_FIRST%22%7D&f=image",
+      "usgs_item_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l1/items/LC08_L1TP_178025_20180730_20200831_02_T1",
+      "tier": "T1",
+      "scene_cloud_percent": 2.97,
+      "filename": "landsat-2018-07-30.png",
+      "bytes": 4060,
+      "sha256": "5b144d237671ca948f575c4be0e016e84b635566d4864bd3c0f3ed2a8da2b58d"
+    }
+  ],
+  "view_order": [
+    "landsat-plain.png",
+    "landsat-outlined.png"
+  ],
+  "boards_sha256": {
+    "landsat-plain.png": "653f5e23f39c324e9cb91817d2bb8085f9d7bd7c56792af56a6588224e9f99d2",
+    "landsat-outlined.png": "ef193ebfe987f42b26034a5ba3eb5f8fec4dd026ebeaca468daa0ed2900fb503"
+  }
+}
