@@ -1,0 +1,130 @@
+{
+  "schema_version": 35,
+  "checked_on_client_date": "2026-11-27",
+  "scope": "Metadata verification for the two best Tier 1 site-15 references on the fixed V35 crop.",
+  "identity_basis": "Exact canonical USGS LC08 item ID, Tier 1 collection, matching capture timestamp and scene cloud, and crop-covering source footprint.",
+  "metadata_requests": 4,
+  "imagery_bytes_downloaded": 0,
+  "source_pins": {
+    "roster/roster.json": "b9564b8c1e83dde0d8b38b2863f0ab311b932a26e9d9bb7bf07bbfb7ff5d4ed1",
+    "references/landsat.json": "2459b60efef1fd8a40fc87b283707cc3c3c6ffd41355063a6aad396ce3f97ebd",
+    "result.json": "16b4bb4e93bee07286c095c9e5a8b9e7fd9dcf9bcfd9b7e21dd6e52c93646a40",
+    "wave-03.json": "e3d187d0348c8094b53ee49b29a9d7e7e74f2ebd94ba6c1a9b22bd2a7894662f"
+  },
+  "summary": {
+    "verified_records": 2,
+    "fixed_records": 2
+  },
+  "records": [
+    {
+      "site_id": "site-15",
+      "group_id": "group-649475dd5c798f778987",
+      "role": "before",
+      "scene_id": "LC08_L1TP_178026_20171116_20200902_02_T1",
+      "archive_object_id": 2392213,
+      "catalogue_timestamp_utc": "2017-11-16T08:31:17Z",
+      "catalogue_scene_cloud_percent": 0.61,
+      "catalogue_collection_tier": "T1",
+      "sampling_m": {
+        "pan": 15,
+        "multispectral": 30
+      },
+      "usgs_item_receipt": {
+        "url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l1/items/LC08_L1TP_178026_20171116_20200902_02_T1",
+        "http_status": 200,
+        "content_type": "application/geo+json",
+        "response_date": "Fri, 27 Nov 2026 17:14:08 GMT",
+        "bytes": 28030,
+        "sha256": "0ba951de9eabd682723734fdb17a0e16b70c9a9c54ab254701eedbefca9aaf84"
+      },
+      "usgs_item_id": "LC08_L1TP_178026_20171116_20200902_02_T1",
+      "usgs_item_title": null,
+      "capture_timestamp_utc": "2017-11-16T08:31:17.288643Z",
+      "usgs_minus_esri_timestamp_seconds": 0.288643,
+      "usgs_scene_cloud_percent": 0.61,
+      "usgs_collection_tier": "T1",
+      "usgs_stac_footprint_covers_crop": true,
+      "locked_public_export_metadata": {
+        "receipt": {
+          "url": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer/exportImage?bbox=619400.0%2C5509500.0%2C620040.0%2C5510140.0&bboxSR=32636&imageSR=32636&size=43%2C43&format=png24&interpolation=RSP_NearestNeighbor&mosaicRule=%7B%22mosaicMethod%22%3A%22esriMosaicLockRaster%22%2C%22lockRasterIds%22%3A%5B2392213%5D%2C%22mosaicOperation%22%3A%22MT_FIRST%22%7D&f=json",
+          "http_status": 200,
+          "content_type": "application/json",
+          "response_date": "Fri, 27 Nov 2026 17:14:11 GMT",
+          "bytes": 387,
+          "sha256": "0b3af87d8ac09590e3944d5141cebce083d0e46d825574b9fd6cb1ed8f85de69"
+        },
+        "extent": {
+          "xmin": 619400,
+          "ymin": 5509500,
+          "xmax": 620040,
+          "ymax": 5510140,
+          "spatialReference": {
+            "wkid": 32636,
+            "latestWkid": 32636
+          }
+        },
+        "width": 43,
+        "height": 43,
+        "provider_returned_ephemeral_image_url": true,
+        "ephemeral_provider_url_followed": false
+      },
+      "issues": [],
+      "access_status": "metadata_and_locked_export_verified"
+    },
+    {
+      "site_id": "site-15",
+      "group_id": "group-649475dd5c798f778987",
+      "role": "after",
+      "scene_id": "LC08_L1TP_179025_20180110_20200902_02_T1",
+      "archive_object_id": 1682375,
+      "catalogue_timestamp_utc": "2018-01-10T08:36:55Z",
+      "catalogue_scene_cloud_percent": 32.81,
+      "catalogue_collection_tier": "T1",
+      "sampling_m": {
+        "pan": 15,
+        "multispectral": 30
+      },
+      "usgs_item_receipt": {
+        "url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l1/items/LC08_L1TP_179025_20180110_20200902_02_T1",
+        "http_status": 200,
+        "content_type": "application/geo+json",
+        "response_date": "Fri, 27 Nov 2026 17:14:11 GMT",
+        "bytes": 28037,
+        "sha256": "ee8c3cbf26a495e2854f532f088c04d360bbdbc4b74524a402a4a354f76b1859"
+      },
+      "usgs_item_id": "LC08_L1TP_179025_20180110_20200902_02_T1",
+      "usgs_item_title": null,
+      "capture_timestamp_utc": "2018-01-10T08:36:55.219478Z",
+      "usgs_minus_esri_timestamp_seconds": 0.219478,
+      "usgs_scene_cloud_percent": 32.81,
+      "usgs_collection_tier": "T1",
+      "usgs_stac_footprint_covers_crop": true,
+      "locked_public_export_metadata": {
+        "receipt": {
+          "url": "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_PanSharpened/ImageServer/exportImage?bbox=619400.0%2C5509500.0%2C620040.0%2C5510140.0&bboxSR=32636&imageSR=32636&size=43%2C43&format=png24&interpolation=RSP_NearestNeighbor&mosaicRule=%7B%22mosaicMethod%22%3A%22esriMosaicLockRaster%22%2C%22lockRasterIds%22%3A%5B1682375%5D%2C%22mosaicOperation%22%3A%22MT_FIRST%22%7D&f=json",
+          "http_status": 200,
+          "content_type": "application/json",
+          "response_date": "Fri, 27 Nov 2026 17:14:14 GMT",
+          "bytes": 387,
+          "sha256": "5f0ce6af665657ec191c932549b6cdc802ce2ed0a4e810547a91726897880edc"
+        },
+        "extent": {
+          "xmin": 619400,
+          "ymin": 5509500,
+          "xmax": 620040,
+          "ymax": 5510140,
+          "spatialReference": {
+            "wkid": 32636,
+            "latestWkid": 32636
+          }
+        },
+        "width": 43,
+        "height": 43,
+        "provider_returned_ephemeral_image_url": true,
+        "ephemeral_provider_url_followed": false
+      },
+      "issues": [],
+      "access_status": "metadata_and_locked_export_verified"
+    }
+  ]
+}

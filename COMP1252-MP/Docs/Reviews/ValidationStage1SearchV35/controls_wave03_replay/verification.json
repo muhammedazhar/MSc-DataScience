@@ -1,0 +1,8 @@
+{
+  "schema_version": 35,
+  "network_requests": 0,
+  "verified_map_snapshot_sha256": {
+    "raw/site-15-osm-map.json": "2d7eb95baff21e0f08e6dba1c2c0d6e27589a43cc740059577bd065e211ed06d"
+  },
+  "mapped_controls_replayed": 1
+}

@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "protocol_sha256": "ff187a64c82cd47012ba7ce9b317ab328c5f9962e4f94570607fa88ef663479a",
+  "replayed_archive_sha256": "1998f88efa68c8cb1a08f00bb61b029aeb8d28785d87904c8f9b7b9787905588",
+  "network_requests": 0,
+  "items_replayed": 10
+}

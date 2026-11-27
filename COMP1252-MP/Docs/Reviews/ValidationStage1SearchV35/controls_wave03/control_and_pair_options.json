@@ -1,0 +1,242 @@
+{
+  "schema_version": 35,
+  "sites": [
+    {
+      "site_id": "site-15",
+      "control": {
+        "site_id": "site-15",
+        "event_id": "event-74c52b3eaa94e8ad3a39",
+        "map_receipt": {
+          "url": "https://api.openstreetmap.org/api/0.6/map.json?bbox=34.651013%2C49.722339%2C34.671429%2C49.735574",
+          "bbox_wgs84": [
+            34.651013,
+            49.722339,
+            34.671429,
+            49.735574
+          ],
+          "map_pad_metres": 400,
+          "max_response_bytes": 2097152,
+          "timeout_seconds": 12,
+          "status": "success",
+          "observed_at_utc": "2026-11-27T17:14:00+00:00",
+          "provider_payload_bytes": 212652,
+          "provider_payload_sha256": "9bdf82b115d4d2f907700b6a0f6249e9674b475f2cef37410d9bec3a211f4693",
+          "snapshot": "raw/site-15-osm-map.json",
+          "snapshot_sha256": "2d7eb95baff21e0f08e6dba1c2c0d6e27589a43cc740059577bd065e211ed06d"
+        },
+        "disposition": "alternate_geometry",
+        "original_control": {
+          "row": 2,
+          "col": 2,
+          "width": 16,
+          "height": 16,
+          "pixels": 256,
+          "bounds": [
+            619420.0,
+            5509960.0,
+            619580.0,
+            5510120.0
+          ],
+          "crs": "EPSG:32636",
+          "context_bounds": [
+            619400.0,
+            5509940.0,
+            619600.0,
+            5510140.0
+          ],
+          "context_width": 20,
+          "context_height": 20,
+          "context_pixels": 400,
+          "context_radius_pixels": 2,
+          "catalogue_exclusion_margin_metres": 20,
+          "control_class_status": "unreviewed",
+          "pixel_qa_status": "unassessed",
+          "independent_site": false,
+          "evaluation_approved": false
+        },
+        "original_map_evidence": {
+          "mapped_road_crosses_context": true,
+          "nearest_mapped_road_metres": 0.0,
+          "mapped_roads_within_20m": [
+            {
+              "id": 868229681,
+              "mapped_tags": {
+                "highway": "track"
+              },
+              "last_edit_utc": "2023-02-26T09:15:22Z"
+            },
+            {
+              "id": 875569756,
+              "mapped_tags": {
+                "highway": "track"
+              },
+              "last_edit_utc": "2023-02-26T09:15:22Z"
+            },
+            {
+              "id": 875570250,
+              "mapped_tags": {
+                "highway": "track"
+              },
+              "last_edit_utc": "2020-11-21T19:16:54Z"
+            }
+          ],
+          "mapped_woodland_covers_context": false,
+          "mapped_woodland_boundary_within_20m": false,
+          "mapped_nonwood_within_20m": false
+        },
+        "alternate_control": {
+          "row": 2,
+          "col": 44,
+          "width": 16,
+          "height": 16,
+          "pixels": 256,
+          "bounds": [
+            619840.0,
+            5509960.0,
+            620000.0,
+            5510120.0
+          ],
+          "crs": "EPSG:32636",
+          "context_bounds": [
+            619820.0,
+            5509940.0,
+            620020.0,
+            5510140.0
+          ],
+          "context_width": 20,
+          "context_height": 20,
+          "context_pixels": 400,
+          "context_radius_pixels": 2,
+          "catalogue_exclusion_margin_metres": 20,
+          "control_class_status": "unreviewed",
+          "pixel_qa_status": "unassessed",
+          "independent_site": false,
+          "evaluation_approved": false
+        },
+        "selected_control": {
+          "row": 2,
+          "col": 44,
+          "width": 16,
+          "height": 16,
+          "pixels": 256,
+          "bounds": [
+            619840.0,
+            5509960.0,
+            620000.0,
+            5510120.0
+          ],
+          "crs": "EPSG:32636",
+          "context_bounds": [
+            619820.0,
+            5509940.0,
+            620020.0,
+            5510140.0
+          ],
+          "context_width": 20,
+          "context_height": 20,
+          "context_pixels": 400,
+          "context_radius_pixels": 2,
+          "catalogue_exclusion_margin_metres": 20,
+          "control_class_status": "unreviewed",
+          "pixel_qa_status": "unassessed",
+          "independent_site": false,
+          "evaluation_approved": false
+        },
+        "selected_map_evidence": {
+          "mapped_road_crosses_context": false,
+          "nearest_mapped_road_metres": 24.356,
+          "mapped_roads_within_20m": [],
+          "mapped_woodland_covers_context": false,
+          "mapped_woodland_boundary_within_20m": false,
+          "mapped_nonwood_within_20m": false
+        },
+        "roads_checked": 27,
+        "woodland_ways_checked": 0,
+        "nonwood_ways_checked": 1,
+        "incomplete_way_ids": [],
+        "uninterpreted_relation_ids": [
+          2444072
+        ],
+        "control_class_status": "unverified",
+        "scope": "Current OSM vector screening. Incomplete ways and relations remain unassessed. Absence of mapped exclusions and edit dates do not establish forest class or its history.",
+        "attribution": "\u00a9 OpenStreetMap contributors, https://www.openstreetmap.org/copyright"
+      },
+      "sentinel_options": [
+        {
+          "pre_date": "2017-11-16",
+          "post_date": "2017-12-06",
+          "pre_scene_id": "S2A_MSIL1C_20171116T085231_N0206_R107_T36UXA_20171116T105520",
+          "post_scene_id": "S2A_MSIL1C_20171206T085331_N0206_R107_T36UXA_20171206T172644",
+          "interval_days": 20,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            71.0987,
+            68.0326
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20171211T085339_N0206_R107_T36UXA_20171211T104822",
+            "S2B_MSIL1C_20180110T085329_N0206_R107_T36UXA_20180110T113039"
+          ],
+          "stable_only_earlier_scene_options": [],
+          "site_id": "site-15",
+          "group_id": "group-649475dd5c798f778987",
+          "sentinel_minus_landsat_before_days": 0,
+          "sentinel_minus_landsat_after_days": -35,
+          "date_gap_notes": {
+            "before": "same_day",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            71.0987,
+            0,
+            0,
+            35,
+            71.0987,
+            20,
+            "S2A_MSIL1C_20171116T085231_N0206_R107_T36UXA_20171116T105520",
+            "S2A_MSIL1C_20171206T085331_N0206_R107_T36UXA_20171206T172644"
+          ]
+        },
+        {
+          "pre_date": "2017-11-18",
+          "post_date": "2017-11-28",
+          "pre_scene_id": "S2B_MSIL1C_20171118T084229_N0206_R064_T36UXA_20171118T122446",
+          "post_scene_id": "S2B_MSIL1C_20171128T084259_N0206_R064_T36UXA_20171129T140038",
+          "interval_days": 10,
+          "relative_orbit": 64,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            87.3738,
+            66.6819
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20171218T084339_N0206_R064_T36UXA_20171218T103922",
+            "S2A_MSIL1C_20180112T084321_N0206_R064_T36UXA_20180112T111338"
+          ],
+          "stable_only_earlier_scene_options": [],
+          "site_id": "site-15",
+          "group_id": "group-649475dd5c798f778987",
+          "sentinel_minus_landsat_before_days": 2,
+          "sentinel_minus_landsat_after_days": -43,
+          "date_gap_notes": {
+            "before": "landsat_earlier",
+            "after": "landsat_later",
+            "basis": "UTC date comparison. Same-day endpoints may differ in acquisition time."
+          },
+          "score": [
+            87.3738,
+            1,
+            2,
+            43,
+            87.3738,
+            10,
+            "S2B_MSIL1C_20171118T084229_N0206_R064_T36UXA_20171118T122446",
+            "S2B_MSIL1C_20171128T084259_N0206_R064_T36UXA_20171129T140038"
+          ]
+        }
+      ]
+    }
+  ]
+}

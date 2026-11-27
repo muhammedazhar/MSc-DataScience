@@ -1,0 +1,326 @@
+{
+  "schema_version": 28,
+  "protocol_sha256": "ff187a64c82cd47012ba7ce9b317ab328c5f9962e4f94570607fa88ef663479a",
+  "sites": [
+    {
+      "site_id": "site-15",
+      "query": {
+        "url": "https://earth-search.aws.element84.com/v1/search",
+        "collection": "sentinel-2-l1c",
+        "page_limit": 50,
+        "maximum_pages": 4,
+        "maximum_response_bytes": 2097152,
+        "timeout_seconds": 12,
+        "stac_datetime": "2017-10-29T00:00:00Z/2018-01-12T23:59:59.999999Z"
+      },
+      "limits": {
+        "crs": "EPSG:32636",
+        "core_union_bounds": [
+          619400.0,
+          5509500.0,
+          620040.0,
+          5510140.0
+        ],
+        "qa_context_union_bounds": [
+          618200.0,
+          5508300.0,
+          621240.0,
+          5511340.0
+        ]
+      },
+      "provider_matched": 10,
+      "pagination_complete": true,
+      "pages": [
+        {
+          "response": "raw/page-01.json",
+          "sha256": "42960a932d220cd6717e06304c1dee4149e30c6e54c6080ae8ec50acf246c3e1",
+          "bytes": 106525,
+          "request": {
+            "url": "https://earth-search.aws.element84.com/v1/search",
+            "method": "POST",
+            "body": {
+              "collections": [
+                "sentinel-2-l1c"
+              ],
+              "datetime": "2017-10-29T00:00:00Z/2018-01-12T23:59:59.999999Z",
+              "bbox": [
+                34.63967708499238,
+                49.714986864280924,
+                34.68277404778583,
+                49.74292336943735
+              ],
+              "limit": 50
+            }
+          },
+          "returned_items": 10
+        },
+        {
+          "response": "raw/page-02.json",
+          "sha256": "1d606567e27bebd6e2b3bd2af5041cd863bb533bb853e736eac648ce8e481fb5",
+          "bytes": 275,
+          "request": {
+            "url": "https://earth-search.aws.element84.com/v1/search",
+            "method": "POST",
+            "body": {
+              "datetime": "2017-10-29T00:00:00Z/2018-01-12T23:59:59.999999Z",
+              "collections": [
+                "sentinel-2-l1c"
+              ],
+              "bbox": [
+                34.63967708499238,
+                49.714986864280924,
+                34.68277404778583,
+                49.74292336943735
+              ],
+              "limit": 50,
+              "next": "2017-11-16T08:54:42.947000Z,S2A_36UXA_20171116_0_L1C,sentinel-2-l1c"
+            }
+          },
+          "returned_items": 0
+        }
+      ],
+      "items": [
+        {
+          "item_id": "S2A_36UXA_20171116_0_L1C",
+          "item_sha256": "afdff81c9471d93f804ecbd9bd25c4b9e899f403a0cc411dd5ba8c78f97a8b02",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 71.0987,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20171116T085231_N0206_R107_T36UXA_20171116T105520",
+          "acquisition_date": "2017-11-16",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2017/11/16/0/",
+          "product_key": "products/2017/11/16/S2A_MSIL1C_20171116T085231_N0206_R107_T36UXA_20171116T105520/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20171206_0_L1C",
+          "item_sha256": "b455babfb67adee664713f9d4b6d38224d359e5f1afe2dc4b7e2401d54bd138f",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 68.0326,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20171206T085331_N0206_R107_T36UXA_20171206T172644",
+          "acquisition_date": "2017-12-06",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2017/12/6/0/",
+          "product_key": "products/2017/12/6/S2A_MSIL1C_20171206T085331_N0206_R107_T36UXA_20171206T172644/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20180112_0_L1C",
+          "item_sha256": "bb62b3f761059c4457f7fdbd3028b4390979f0f4ed148d95c6d046fddb167832",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 59.4713,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2A_MSIL1C_20180112T084321_N0206_R064_T36UXA_20180112T111338",
+          "acquisition_date": "2018-01-12",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/1/12/0/",
+          "product_key": "products/2018/1/12/S2A_MSIL1C_20180112T084321_N0206_R064_T36UXA_20180112T111338/metadata.xml"
+        },
+        {
+          "item_id": "S2A_36UXA_20180112_1_L1C",
+          "item_sha256": "4cb95d41ca4c4893417c6beaf6a4a6bc575a8e050bc58ef76a9edd84dc198825",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 53.2484995073009,
+          "blockers": [
+            "This QA reader requires a legacy Level-1C GML product below baseline 04.00"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          }
+        },
+        {
+          "item_id": "S2B_36UXA_20171118_0_L1C",
+          "item_sha256": "6168808d8744e8bb26b3bbdab87dcd40372bbfcd1893f65c4d5bc416341a5939",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 87.3738,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20171118T084229_N0206_R064_T36UXA_20171118T122446",
+          "acquisition_date": "2017-11-18",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2017/11/18/0/",
+          "product_key": "products/2017/11/18/S2B_MSIL1C_20171118T084229_N0206_R064_T36UXA_20171118T122446/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UXA_20171128_0_L1C",
+          "item_sha256": "eb8b891909dd6a93ddf652712c1d1615c81f288ef741a7250fac5d5b52133977",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 66.6819,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20171128T084259_N0206_R064_T36UXA_20171129T140038",
+          "acquisition_date": "2017-11-28",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2017/11/28/0/",
+          "product_key": "products/2017/11/28/S2B_MSIL1C_20171128T084259_N0206_R064_T36UXA_20171129T140038/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UXA_20171211_0_L1C",
+          "item_sha256": "d82b72043803eb17cf1e592c01fbeec2ca8358645ae34ef6a4c4065a1439be49",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 44.4619,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20171211T085339_N0206_R107_T36UXA_20171211T104822",
+          "acquisition_date": "2017-12-11",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2017/12/11/0/",
+          "product_key": "products/2017/12/11/S2B_MSIL1C_20171211T085339_N0206_R107_T36UXA_20171211T104822/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UXA_20171218_0_L1C",
+          "item_sha256": "d1f4df3cf210a52c81d216206aa46d9326069bb12a555a7bf9a9a6d6bb41af88",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 100,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20171218T084339_N0206_R064_T36UXA_20171218T103922",
+          "acquisition_date": "2017-12-18",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 64,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2017/12/18/0/",
+          "product_key": "products/2017/12/18/S2B_MSIL1C_20171218T084339_N0206_R064_T36UXA_20171218T103922/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UXA_20180110_0_L1C",
+          "item_sha256": "68395a496e1cbfffd0ba91ec76fcab50c910f9cd046363c160972939afc4e665",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 38.3129,
+          "blockers": [],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          },
+          "scene_id": "S2B_MSIL1C_20180110T085329_N0206_R107_T36UXA_20180110T113039",
+          "acquisition_date": "2018-01-10",
+          "tile": "36UXA",
+          "processing_baseline": "02.06",
+          "relative_orbit": 107,
+          "sequence": "0",
+          "tile_prefix": "tiles/36/U/XA/2018/1/10/0/",
+          "product_key": "products/2018/1/10/S2B_MSIL1C_20180110T085329_N0206_R107_T36UXA_20180110T113039/metadata.xml"
+        },
+        {
+          "item_id": "S2B_36UXA_20180110_1_L1C",
+          "item_sha256": "3b84a2e4fc4691a647efa13a30e6b0d06fd805456eec0607a6df1df0ea730934",
+          "occurrence_pages": [
+            1
+          ],
+          "catalogue_cloud_percent": 29.1350111243469,
+          "blockers": [
+            "This QA reader requires a legacy Level-1C GML product below baseline 04.00"
+          ],
+          "catalogue_footprint": {
+            "core": true,
+            "qa_context": true
+          }
+        }
+      ],
+      "comparison_options": [
+        {
+          "pre_date": "2017-11-16",
+          "post_date": "2017-12-06",
+          "pre_scene_id": "S2A_MSIL1C_20171116T085231_N0206_R107_T36UXA_20171116T105520",
+          "post_scene_id": "S2A_MSIL1C_20171206T085331_N0206_R107_T36UXA_20171206T172644",
+          "interval_days": 20,
+          "relative_orbit": 107,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            71.0987,
+            68.0326
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20171211T085339_N0206_R107_T36UXA_20171211T104822",
+            "S2B_MSIL1C_20180110T085329_N0206_R107_T36UXA_20180110T113039"
+          ],
+          "stable_only_earlier_scene_options": []
+        },
+        {
+          "pre_date": "2017-11-18",
+          "post_date": "2017-11-28",
+          "pre_scene_id": "S2B_MSIL1C_20171118T084229_N0206_R064_T36UXA_20171118T122446",
+          "post_scene_id": "S2B_MSIL1C_20171128T084259_N0206_R064_T36UXA_20171129T140038",
+          "interval_days": 10,
+          "relative_orbit": 64,
+          "processing_baseline": "02.06",
+          "catalogue_cloud_percent": [
+            87.3738,
+            66.6819
+          ],
+          "later_metadata_scene_ids": [
+            "S2B_MSIL1C_20171218T084339_N0206_R064_T36UXA_20171218T103922",
+            "S2A_MSIL1C_20180112T084321_N0206_R064_T36UXA_20180112T111338"
+          ],
+          "stable_only_earlier_scene_options": []
+        }
+      ]
+    }
+  ],
+  "rank_rule": "Later compatible follow-up availability, then lowest maximum and total scene cloud percent, earliest post, shorter interval and exact product IDs.",
+  "scope": "Catalogue evidence only. Scene cloud and footprint do not establish crop clarity.",
+  "acquisition_roster_selected": false,
+  "labels_approved": 0
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 35,
+  "mode": "sentinel",
+  "execution_status": "completed",
+  "protocol_sha256": "ff187a64c82cd47012ba7ce9b317ab328c5f9962e4f94570607fa88ef663479a",
+  "artifact_sha256": {
+    "catalogue/site-15/raw/page-01.json": "42960a932d220cd6717e06304c1dee4149e30c6e54c6080ae8ec50acf246c3e1",
+    "catalogue/site-15/raw/page-02.json": "1d606567e27bebd6e2b3bd2af5041cd863bb533bb853e736eac648ce8e481fb5",
+    "catalogue/site-15/raw/request-01.json": "a27c4f9f4cd961ccb65f9a98a9782a702fe8c296e28ece9d3366c6f5cb20fa3f",
+    "catalogue/site-15/raw/request-02.json": "008316130d2e17afc507dcd27ffcabc028bcf4cfdbb39912c1b84b90579bbb42",
+    "sentinel.json": "acdd49e16510b2bf4474ae768c01c427dfca6d3c0e1b7f3eb103501b78b8d2d8"
+  },
+  "satellite_pixel_reads": 0,
+  "image_asset_downloads": 0,
+  "model_executions": 0,
+  "labels_approved": 0,
+  "resources": {
+    "logical_cpu_count": 11,
+    "machine_ram_gib": 18.0,
+    "worker_peak_rss_mib_sampled": 50.5,
+    "worker_high_water_rss_mib": 60.14,
+    "minimum_available_gib_sampled": 3.15,
+    "elapsed_seconds": 1.78,
+    "worker_limit_mib": 512,
+    "minimum_available_gib_limit": 1.5,
+    "runtime_limit_seconds": 300,
+    "workers": 1,
+    "native_thread_limit": 1,
+    "nice_increment": 10,
+    "gdal_cache_mib": 0,
+    "warp_memory_mib": 0,
+    "gpu_used": false,
+    "monitor_interval_seconds": 0.25
+  }
+}
