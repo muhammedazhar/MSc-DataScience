@@ -53,4 +53,12 @@ fixes a 14 × 9 cell native window and the existing control and context
 polygons. Compare area-weighted published classes over the exact areas.
 Annual class maps can corroborate forest or a mixed pattern. Their
 sampling and composite dates leave canopy at specific dates uncertain.
-The bounded radar crop and replay are pending.
+The three crops total 1,476 bytes and replayed offline. The
+[class summaries](../Reviews/ValidationStage1SearchV35/candidates/site-09/radar-control-v36.json)
+show non-forest in 11.8230%, 16.3065% and 13.4386% of the fixed square
+for 2017, 2018 and 2019. The associated full contexts show the same
+mixed classification. This supports the existing control ambiguity.
+Keep the fixed square and its disposition. A separate geometry search
+will check for any alternative within the same frozen crop. Satellite
+confirmation would still be needed for a new candidate. [JAXA product](https://www.eorc.jaxa.jp/ALOS/en/dataset/fnf_e.htm)
+· [Planetary Computer collection](https://planetarycomputer.microsoft.com/api/stac/v1/collections/alos-fnf-mosaic).

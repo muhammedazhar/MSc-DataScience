@@ -1,0 +1,675 @@
+{
+  "schema_version": 36,
+  "site_id": "site-09",
+  "control": {
+    "row": 2,
+    "col": 28,
+    "width": 16,
+    "height": 16,
+    "pixels": 256,
+    "bounds": [
+      622240.0,
+      5564040.0,
+      622400.0,
+      5564200.0
+    ],
+    "crs": "EPSG:32636",
+    "context_bounds": [
+      622220.0,
+      5564020.0,
+      622420.0,
+      5564220.0
+    ],
+    "context_width": 20,
+    "context_height": 20,
+    "context_pixels": 400,
+    "context_radius_pixels": 2,
+    "catalogue_exclusion_margin_metres": 20,
+    "control_class_status": "unreviewed",
+    "pixel_qa_status": "unassessed",
+    "independent_site": false,
+    "evaluation_approved": false
+  },
+  "source_crs": "EPSG:4326",
+  "source_window": [
+    14,
+    9
+  ],
+  "scope": "Area-weighted intersections of the annual radar classes with the exact frozen UTM areas.",
+  "records": [
+    {
+      "item_id": "N51E034_17_FNF",
+      "item_metadata_url": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/alos-fnf-mosaic/items/N51E034_17_FNF",
+      "capture_year": "2017",
+      "request_url": "https://planetarycomputer.microsoft.com/api/data/v1/item/bbox/34.71288888888889,50.215555555555554,34.716,50.217555555555556/14x9.tif?collection=alos-fnf-mosaic&item=N51E034_17_FNF&assets=C&coord_crs=EPSG%3A4326&dst_crs=EPSG%3A4326&resampling=nearest&reproject=nearest&return_mask=false",
+      "file": "N51E034_17_FNF.tif",
+      "bytes": 492,
+      "sha256": "ca0ae774f152b5da5e1a7f6be3238d028bf0231b85cc00fda0fc1b4e86c0976b",
+      "classes_native_grid": [
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          3,
+          2,
+          2,
+          1,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          1,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          3,
+          1,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          3,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1
+        ]
+      ],
+      "areas": {
+        "control": {
+          "no_data": {
+            "cells": 0,
+            "area_m2": 0.0,
+            "area_percent": 0.0
+          },
+          "dense_forest": {
+            "cells": 8,
+            "area_m2": 2366.87,
+            "area_percent": 9.2456
+          },
+          "forest": {
+            "cells": 61,
+            "area_m2": 20206.4421,
+            "area_percent": 78.9314
+          },
+          "non_forest": {
+            "cells": 8,
+            "area_m2": 3026.6879,
+            "area_percent": 11.823
+          },
+          "water": {
+            "cells": 0,
+            "area_m2": 0.0,
+            "area_percent": 0.0
+          }
+        },
+        "full_context": {
+          "no_data": {
+            "cells": 0,
+            "area_m2": 0.0,
+            "area_percent": 0.0
+          },
+          "dense_forest": {
+            "cells": 12,
+            "area_m2": 3905.7276,
+            "area_percent": 9.7643
+          },
+          "forest": {
+            "cells": 98,
+            "area_m2": 32678.1242,
+            "area_percent": 81.6953
+          },
+          "non_forest": {
+            "cells": 9,
+            "area_m2": 3416.1482,
+            "area_percent": 8.5404
+          },
+          "water": {
+            "cells": 0,
+            "area_m2": 0.0,
+            "area_percent": 0.0
+          }
+        }
+      }
+    },
+    {
+      "item_id": "N51E034_18_FNF",
+      "item_metadata_url": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/alos-fnf-mosaic/items/N51E034_18_FNF",
+      "capture_year": "2018",
+      "request_url": "https://planetarycomputer.microsoft.com/api/data/v1/item/bbox/34.71288888888889,50.215555555555554,34.716,50.217555555555556/14x9.tif?collection=alos-fnf-mosaic&item=N51E034_18_FNF&assets=C&coord_crs=EPSG%3A4326&dst_crs=EPSG%3A4326&resampling=nearest&reproject=nearest&return_mask=false",
+      "file": "N51E034_18_FNF.tif",
+      "bytes": 492,
+      "sha256": "03425127cb205fd164fd9eb889b57d908c0fb4afa4cecf880bd35a80decee972",
+      "classes_native_grid": [
+        [
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          2,
+          2,
+          2,
+          1,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          3,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          3,
+          3,
+          3,
+          2,
+          2,
+          3,
+          3,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          3,
+          3,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      ],
+      "areas": {
+        "control": {
+          "no_data": {
+            "cells": 0,
+            "area_m2": 0.0,
+            "area_percent": 0.0
+          },
+          "dense_forest": {
+            "cells": 1,
+            "area_m2": 391.8833,
+            "area_percent": 1.5308
+          },
+          "forest": {
+            "cells": 64,
+            "area_m2": 21033.6638,
+            "area_percent": 82.1627
+          },
+          "non_forest": {
+            "cells": 12,
+            "area_m2": 4174.4529,
+            "area_percent": 16.3065
+          },
+          "water": {
+            "cells": 0,
+            "area_m2": 0.0,
+            "area_percent": 0.0
+          }
+        },
+        "full_context": {
+          "no_data": {
+            "cells": 0,
+            "area_m2": 0.0,
+            "area_percent": 0.0
+          },
+          "dense_forest": {
+            "cells": 3,
+            "area_m2": 913.5927,
+            "area_percent": 2.284
+          },
+          "forest": {
+            "cells": 98,
+            "area_m2": 32529.8043,
+            "area_percent": 81.3245
+          },
+          "non_forest": {
+            "cells": 18,
+            "area_m2": 6556.603,
+            "area_percent": 16.3915
+          },
+          "water": {
+            "cells": 0,
+            "area_m2": 0.0,
+            "area_percent": 0.0
+          }
+        }
+      }
+    },
+    {
+      "item_id": "N51E034_19_FNF",
+      "item_metadata_url": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/alos-fnf-mosaic/items/N51E034_19_FNF",
+      "capture_year": "2019",
+      "request_url": "https://planetarycomputer.microsoft.com/api/data/v1/item/bbox/34.71288888888889,50.215555555555554,34.716,50.217555555555556/14x9.tif?collection=alos-fnf-mosaic&item=N51E034_19_FNF&assets=C&coord_crs=EPSG%3A4326&dst_crs=EPSG%3A4326&resampling=nearest&reproject=nearest&return_mask=false",
+      "file": "N51E034_19_FNF.tif",
+      "bytes": 492,
+      "sha256": "d0bdd2d22d1861ced8b08c221078ad1dc6622f573f569febcaa3a73ba2f54065",
+      "classes_native_grid": [
+        [
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          2,
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          3,
+          2,
+          3,
+          2,
+          2,
+          2,
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          3,
+          2,
+          2,
+          2,
+          1,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          3,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          3,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1
+        ]
+      ],
+      "areas": {
+        "control": {
+          "no_data": {
+            "cells": 0,
+            "area_m2": 0.0,
+            "area_percent": 0.0
+          },
+          "dense_forest": {
+            "cells": 7,
+            "area_m2": 1922.7613,
+            "area_percent": 7.5108
+          },
+          "forest": {
+            "cells": 61,
+            "area_m2": 20236.9484,
+            "area_percent": 79.0506
+          },
+          "non_forest": {
+            "cells": 9,
+            "area_m2": 3440.2902,
+            "area_percent": 13.4386
+          },
+          "water": {
+            "cells": 0,
+            "area_m2": 0.0,
+            "area_percent": 0.0
+          }
+        },
+        "full_context": {
+          "no_data": {
+            "cells": 0,
+            "area_m2": 0.0,
+            "area_percent": 0.0
+          },
+          "dense_forest": {
+            "cells": 13,
+            "area_m2": 4220.8475,
+            "area_percent": 10.5521
+          },
+          "forest": {
+            "cells": 92,
+            "area_m2": 30759.9467,
+            "area_percent": 76.8999
+          },
+          "non_forest": {
+            "cells": 14,
+            "area_m2": 5019.2058,
+            "area_percent": 12.548
+          },
+          "water": {
+            "cells": 0,
+            "area_m2": 0.0,
+            "area_percent": 0.0
+          }
+        }
+      }
+    }
+  ],
+  "labels_approved": 0
+}
